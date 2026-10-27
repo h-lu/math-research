@@ -1,0 +1,1354 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{paper/figures/}{../../paper/figures/}{../figures/}}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+% Single-file editor previews allow explicit draft placeholders.
+% A build with \def\RewriteRelease{1} fails if either figure is missing.
+\newif\ifrewritefiguredraft
+\ifdefined\RewriteRelease\rewritefiguredraftfalse
+\else\rewritefiguredrafttrue\fi
+\newcommand{\missingrewritefigure}[1]{%
+  \ifrewritefiguredraft
+    \PackageWarning{rewrite}{Draft placeholder for missing figure #1}%
+    \fbox{\parbox[c][0.22\textheight][c]{0.88\textwidth}{\centering
+      DRAFT: figure file \texttt{#1} is not available in this preview.}}%
+  \else
+    \PackageError{rewrite}{Missing figure #1}%
+      {Build from the repository root or supply the figure before release.}%
+  \fi}
+\newcommand{\includerewritefigure}[1]{%
+  \IfFileExists{paper/figures/#1}
+    {\includegraphics[width=\textwidth]{paper/figures/#1}}{%
+  \IfFileExists{../figures/#1}
+    {\includegraphics[width=\textwidth]{../figures/#1}}{%
+  \IfFileExists{#1}
+    {\includegraphics[width=\textwidth]{#1}}{\missingrewritefigure{#1}}}}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Ranexp}{\mathbb R_{\mathrm{an},\exp}}
+\newcommand{\interior}{\operatorname{int}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\sinhc}{\operatorname{sinhc}}
+\DeclareMathOperator{\diag}{diag}
+
+\title{Beyond Tonnelier's conjectured bound: six cycles and uniform finiteness
+in continuous piecewise-affine Li\'enard systems}
+\author{Haibo Lu\\
+Shanghai Institute of Technology, Shanghai 201418, People's Republic of China\\
+\texttt{luhaibo1985@gmail.com}\\
+ORCID: 0009-0000-2717-5968}
+\date{October 3, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the continuous piecewise-affine Li\'enard system
+\(\dot x=F(x)-y,\ \dot y=x\), and show that breakpoint complexity
+ensures uniform finiteness but does not give Tonnelier's conjectured
+upper bound.  For an explicit continuous piecewise-affine function \(F\)
+with rational parameters and three genuine breakpoints, we certify at least
+six distinct hyperbolic limit cycles of the corresponding system.
+All four affine parts are of
+focus type, and the six cycles are transverse to every switching line they
+meet and persist under small parameter perturbations.  Five follow the
+same full switching itinerary, exhibiting multiple fixed points within
+one analytic return branch.  Independently, for each fixed \(n\), we
+prove a uniform finite bound on geometrically isolated periodic orbits
+for the entire family with at most \(n\) breakpoints, including grazing
+cycles, with no restriction on the spectral type of the affine parts.
+The proof encodes each periodic orbit
+by at most \(2n+2\) affine flights and uniformly bounds each oscillatory
+phase, so that the resulting family of periodic-orbit markers is definable
+in \(\Ranexp\).
+The resulting bound is non-effective.  Finally, adapting an
+outer-breakpoint construction to the certified seed yields at least
+\(n+3\) hyperbolic limit cycles for every \(n\ge3\), with all slopes
+in \((-2,2)\).
+\end{abstract}
+
+\section{Introduction and main results}
+
+We consider
+\begin{equation}\label{eq:system}
+ \dot x=F(x)-y,\qquad \dot y=x,
+\end{equation}
+where \(F:\R\to\R\) is continuous and piecewise affine.  A genuine
+breakpoint is a point at which the adjacent slopes differ; it need not
+be a local extremum.  A limit cycle is a geometrically isolated
+periodic orbit, counted without multiplicity.  After translating \(y\),
+we impose \(F(0)=0\), so the origin is the unique equilibrium.  Let
+\(H_c(n)\) be the supremum of the number of
+limit cycles among functions with exactly \(n\) genuine breakpoints.
+
+Two questions should be distinguished.  The sharp counting problem asks
+how many limit cycles can occur at a prescribed number of breakpoints.
+The uniform finiteness problem asks whether their number is bounded
+independently of the coefficients and breakpoint positions once the
+number of breakpoints is fixed.
+
+For the continuous class, Tonnelier proposed an upper bound by the
+number of breakpoints \cite[Conjecture 2]{tonnelier}.  For two breakpoints,
+\(H_c(2)=2\) \cite{twofold}, and the construction of
+Chen--Li--Zhang--Zhang gives \(H_c(n)\ge n\) for arbitrary \(n\)
+\cite{clzz}.  For \(n\ge3\), the continuous upper-bound problem is stated
+as open in \cite{clzz}.  The present results
+separate the two roles of breakpoint complexity: the proposed estimate
+fails already at three breakpoints, whereas a bound depending only on
+that number exists over the entire parameter space.
+
+Our first main result is a robust counterexample within the all-focus
+class.  Our second establishes uniform finiteness over the full parameter
+space, independently of that construction.  The third propagates the
+certified seed to larger breakpoint numbers.
+
+\begin{theorem}[A robust six-cycle example]\label{thm:six}
+There is a continuous piecewise-affine function with rational parameters
+and exactly three genuine breakpoints whose system \eqref{eq:system} has
+at least six distinct hyperbolic limit cycles.  All four affine zones are
+of focus type, and the six cycles are transverse to every switching line
+they meet.  Five of the six cycles follow the same full switching
+itinerary.  These cycles, their switching itineraries and their stability
+persist on an open neighbourhood of the parameter point in the
+seven-dimensional normalised parameter space.
+\end{theorem}
+
+\begin{theorem}[Uniform finiteness at fixed complexity]\label{thm:finite}
+For every fixed integer \(n\ge0\), there is a finite integer \(N_n\) such
+that every system \eqref{eq:system} with a continuous piecewise-affine
+function \(F\) having at most \(n\) breakpoints has at most \(N_n\)
+geometrically isolated periodic orbits.  The bound is uniform in all slopes, intercepts,
+breakpoint positions and orbit amplitudes.  It is non-effective in the
+present proof.
+\end{theorem}
+
+\begin{theorem}[Lower bounds with more breakpoints]\label{thm:lower}
+For every \(n\ge3\), there is a system with exactly \(n\) genuine
+breakpoints, all slopes in \((-2,2)\), and at least \(n+3\) distinct
+hyperbolic cycles transverse to all switching lines they meet.  Hence
+\[
+                 n+3\le H_c(n)\le N_n<\infty\qquad(n\ge3).
+\]
+\end{theorem}
+
+The results distinguish two sources of cycle complexity.  A switching
+itinerary records the order of events, but enumerating itineraries does
+not bound the number of fixed points of an individual return branch.
+The five full-itinerary cycles make this distinction explicit within a
+continuous system with a unique equilibrium.  At the same time, excursion
+geometry bounds the number of affine flights needed to describe a periodic
+orbit, and the location of the equilibria of the affine extensions bounds
+the oscillatory phase of each flight.  These bounds yield uniform
+finiteness without a uniform bound on orbit amplitude or flight time.
+
+Panazzolo's bounded-spiraling framework provides definability for flows
+restricted to suitable composable cell lists
+\cite[Theorem~1.2]{panazzolo}; his Section~5.5 formulates uniform finiteness
+questions for semi-limit cycles in continuous piecewise-linear families.
+The additional task here is to obtain a finite collection of descriptions
+that covers every periodic orbit uniformly over the full Li\'enard
+parameter space.  We accomplish this by bounding both the number of
+flights and the oscillatory phase of each flight, including trajectories
+with grazing contacts.  This yields a uniformly definable family of
+periodic-orbit markers and hence a uniform bound for geometrically isolated
+periodic orbits in this Li\'enard subclass.
+
+Carmona, Fern\'andez-S\'anchez, and Novaes obtained the bound \(L^*\le8\)
+for isolated crossing periodic solutions in two-zone planar piecewise-linear
+systems separated by a straight line \cite{carmona}.  Bravo and
+Trinidad-Forte proved finiteness for non-autonomous scalar piecewise-linear
+equations on a cylinder, with bounds depending on the number of regions
+and the degree of the trigonometric coefficients \cite{bravo}.  Here we
+treat continuous piecewise-affine Li\'enard systems with an arbitrary
+fixed number of breakpoints, including grazing periodic orbits.
+
+Two further consequences concern the return gain and parameter dependence.
+Corollary~\ref{cor:gain-oscillation} uses the alternating stability of the
+certified cycles to obtain extrema of the logarithmic return gain with
+alternating positive and negative values on the common branch.
+Corollary~\ref{cor:parameter-cells} gives a finite partition of parameter
+space with continuous ordered isolated-cycle markers and constant cycle
+count on each cell; the count changes only finitely often along each
+definable one-parameter path.
+
+Section~\ref{sec:geometry} fixes the section coordinates and affine-flow
+conventions.  Section~\ref{sec:six} gives the exact system, the shooting
+certificate, persistence and the common analytic branch.
+Section~\ref{sec:finite} encodes every periodic orbit by a bounded list of
+affine flights and applies the uniform fibre theorem for \(\Ranexp\).
+Section~\ref{sec:lower} adapts the outer-breakpoint construction of
+Chen--Li--Zhang--Zhang \cite{clzz}, preserving hyperbolicity and
+transversality in the regime \(|m_j|<2\).
+Appendix~\ref{app:action} derives the action identity on the full-itinerary
+branch; Appendix~\ref{app:supplement} lists the interval input.
+
+\section{Excursion geometry and affine flight maps}\label{sec:geometry}
+
+We first record the geometric properties used in both main proofs.  The
+upper and lower axis intersections provide unique orbit markers, while the
+bound on contacts with vertical lines controls the length of the later
+flight coding.
+
+For a periodic orbit write its upper and lower intersections with the
+\(y\)-axis as \((0,s)\) and \((0,-r)\), respectively.  Let \(P_+(s)\)
+and \(Q(r)\) denote the first return maps on the upper and lower
+half-axes, respectively.  The following
+elementary fact is the geometric basis for both the shooting labels and
+the finite coding.
+
+\begin{lemma}[Axis sections and vertical contacts]\label{lem:geometry}
+Every nonconstant periodic orbit has exactly one intersection with each
+open half of the \(y\)-axis, one positive maximum and one negative minimum
+of \(x\), and at most two contacts with any vertical line, counting a
+tangency once.
+\end{lemma}
+\begin{proof}
+The orbit is a Jordan curve by uniqueness.  Since
+\(\int_0^T x(t)\,dt=0\), it visits both half-planes.  Away from the
+origin, the axis is crossed transversely because \(\dot x=-y\).  On an
+oriented Jordan curve, transverse intersections, ordered along the
+\(y\)-axis, alternate between entering and leaving the interior.
+All lower-axis crossings
+have the same direction, and so do all upper-axis crossings; hence each
+open half-axis contains at most one intersection.  Since the orbit visits
+both half-planes, crossings in both directions occur, and hence each open
+half-axis is met exactly once.
+
+At an \(x\)-critical point \(x(t_0)=b\ne0\), one has \(y(t_0)=F(b)\).
+Since \(\dot x(t_0)=0\), we have \(x(t_0+\tau)-b=o(\tau)\).
+Local Lipschitz continuity of \(F\), together with \(\dot y(t_0)=b\),
+then gives, also when \(b\) is a breakpoint,
+\[
+ \dot x(t_0+\tau)=-b\tau+o(\tau),\qquad
+ x(t_0+\tau)=b-\tfrac12b\tau^2+o(\tau^2).
+\]
+Thus \(\dot x\) crosses strictly from positive to negative at a contact
+on the positive excursion and in the reverse direction on the negative
+excursion.  There can be only
+one of each; otherwise a second crossing would require the opposite
+direction in between.  The same sign argument gives the vertical-line
+bound, including at a breakpoint.
+\end{proof}
+
+For ordered breakpoints \(\xi_1<\cdots<\xi_n\) and slopes
+\(m_0,\ldots,m_n\), use the continuous hinge parametrisation
+\begin{equation}\label{eq:hinge}
+ F_\vartheta(x)=m_0x+\sum_{j=1}^n(m_j-m_{j-1})
+ \bigl((x-\xi_j)_+-(-\xi_j)_+\bigr),\qquad u_+=\max(u,0).
+\end{equation}
+The normalisation \(F_\vartheta(0)=0\) removes the additive constant
+in \(F\), while the breakpoint positions and slopes remain free parameters.
+In a zone where \(F(x)=mx+b\), the
+physical flow is
+\begin{equation}\label{eq:physical-flow}
+ \Phi_{m,b}(t,z)=q+e^{A_mt}(z-q),\quad
+ q=(0,b),\quad A_m=\begin{pmatrix}m&-1\\1&0\end{pmatrix}.
+\end{equation}
+For velocity \(v=F(x)-y\), \(\dot x=v\), \(\dot v=mv-x\) almost
+everywhere.  In the oscillatory regime \(|m|<2\), with
+\(a=m/2\), \(\omega=\sqrt{1-a^2}\),
+\begin{equation}\label{eq:velocity-flow}
+ \Psi_m^t=e^{at}
+ \begin{pmatrix}
+ \cos(\omega t)-a\sin(\omega t)/\omega&\sin(\omega t)/\omega\\
+ -\sin(\omega t)/\omega&\cos(\omega t)+a\sin(\omega t)/\omega
+ \end{pmatrix}.
+\end{equation}
+The velocity vector field can jump at a switch, while the physical vector
+field is continuous; variational calculations across switches are made in
+physical coordinates.
+
+\section{A robust counterexample with three breakpoints}\label{sec:six}
+
+We construct the six-cycle example by validating six zeros of suitable
+shooting equations.  The same computation verifies their itineraries and
+hyperbolicity, after which persistence follows from the implicit-function
+theorem.
+
+\subsection{The exact system and the six certified cycles}
+
+In system \eqref{eq:system}, take \(F=F_{\vartheta_*}\) as defined by
+\eqref{eq:hinge}, with
+\begin{equation}\label{eq:seed}
+\begin{aligned}
+ (\xi_1,\xi_2,\xi_3)&=(-4.568454409748787,-1,4.697723054757359),\\
+ (m_0,m_1,m_2,m_3)&=(1.7852068867006083,-0.5628649147225554,\\
+ &\hspace{28mm}0.31155696868477084,-1.785205933274595).
+\end{aligned}
+\end{equation}
+Every displayed decimal in \eqref{eq:seed} is an exact rational number.
+Denote this parameter point by \(\vartheta_*\).
+The adjacent slopes are distinct and lie in \((-2,2)\), so there are
+three genuine breakpoints and four focus zones.
+
+Table~\ref{tab:six} records the six certified cycles, labelled
+\(\Gamma_1,\ldots,\Gamma_6\) in increasing upper-section coordinate
+\(s_i^*\).  The following subsections establish their existence,
+distinctness and stability.  One cycle uses the short itinerary; five
+cycles traverse all four zones with the same full itinerary, specified
+in \eqref{eq:charts}.  Here \(\chi\) denotes the divergence integral
+over one minimal period.
+\begin{table}[H]
+\centering
+\begin{tabular}{rlll}
+\toprule
+cycle&upper coordinate (approx.)&strict interval for $\chi$&stability\\\midrule
+1&5.7038049296&$(-0.414496,-0.414495)$&attracting\\
+2&5.9550028751&$(0.040280,0.040281)$&repelling\\
+3&6.1572916585&$(-0.009958,-0.009957)$&attracting\\
+4&6.5817617853&$(0.007095,0.007096)$&repelling\\
+5&18.7923449781&$(-0.000234,-0.000233)$&attracting\\
+6&168.8220183797&$(0.00001595,0.00001596)$&repelling\\
+\bottomrule
+\end{tabular}
+\caption{Approximate section coordinates and rigorous enclosures of the
+characteristic exponents for the six cycles.  Cycle 1 has the short
+itinerary; cycles 2--6 have the full itinerary.}
+\label{tab:six}
+\end{table}
+
+Figure~\ref{fig:six-return}(a) shows the short orbit
+\(\Gamma_1\) and the full-itinerary orbit \(\Gamma_4\) in physical
+coordinates.  All six cycles are shown in
+Figure~\ref{fig:six-atlas}, Appendix~\ref{app:portraits}.
+
+\begin{figure}[tbp]
+\centering
+\includerewritefigure{six-cycle-geometry-return.pdf}
+\caption{Numerical trajectories and upper-section return displacement
+for \eqref{eq:seed}. (a) The short orbit \(\Gamma_1\) and full orbit
+\(\Gamma_4\) in physical coordinates. (b,c) The five certified full-itinerary
+zeros of \(\Delta_+=P_+-s\); panel (c) uses a logarithmic horizontal
+axis. Blue solid curves and filled markers denote attracting cycles;
+orange dashed curves and open markers denote repelling cycles.}
+\label{fig:six-return}
+\end{figure}
+
+\subsection{Shooting equations and interval validation}
+
+For a list of prescribed nodes \(a_0,\ldots,a_k\) and slopes
+\(\sigma_1,\ldots,\sigma_k\), start with \(v_0=-s\) and set
+\[
+ (X_j,v_j)=\Psi_{\sigma_j}^{t_j}(a_{j-1},v_{j-1}).
+\]
+The unknown vector is \(z=(s,t_1,\ldots,t_k)\), and the residual is
+\begin{equation}\label{eq:residual}
+ \mathcal R(z)=(X_1-a_1,\ldots,X_k-a_k,v_k+s).
+\end{equation}
+The short and full charts are
+\begin{equation}\label{eq:charts}
+\begin{aligned}
+ k=3:&\quad(\sigma_j)=(m_2,m_1,m_2),\quad (a_j)=(0,\xi_2,\xi_2,0),\\
+ k=7:&\quad(\sigma_j)=(m_2,m_1,m_0,m_1,m_2,m_3,m_2),\\
+ &\quad(a_j)=(0,\xi_2,\xi_1,\xi_1,\xi_2,\xi_3,\xi_3,0).
+\end{aligned}
+\end{equation}
+
+These shooting flights are split only at the prescribed nodes.  A flight
+may cross the \(y\)-axis in its interior; the half-plane coding in
+Section~\ref{sec:finite} subdivides it there.
+
+\paragraph{Validation of the shooting zeros.}
+We use the following contraction criterion for interval validation
+\cite[Section 13]{rump}.  Let \(X\subset B\)
+be nonempty closed bounded boxes in the same finite-dimensional space,
+let \(z_0\in B\), and suppose that \(\mathcal R\) is \(C^1\) on a
+neighbourhood of \(B\).  Let \(\mathcal J\) enclose
+\(D\mathcal R(z)\) for every \(z\in B\), and let \(C\) be a fixed square
+matrix.  If
+\begin{equation}\label{eq:validation}
+ K\subset\interior X,\qquad
+ \sup_{J\in\mathcal J}\|I-CJ\|_\infty<1,
+\end{equation}
+where \(K\) encloses
+\[
+ z_0-C\mathcal R(z_0)+(I-C\mathcal J)(B-z_0),
+\]
+then \(\mathcal R\) has a unique zero in \(X\), lying in its interior.
+Indeed, for \(T(z)=z-C\mathcal R(z)\) and \(z\in X\), the segment from
+\(z_0\) to \(z\) is contained in \(B\), so the integral mean-value
+formula gives \(T(z)\in K\).  The second inequality makes \(T\) a
+contraction on \(X\) and makes \(C\) invertible by the Neumann series;
+fixed points of \(T\) are therefore exactly zeros of \(\mathcal R\).
+
+For cycle \(i\), the entry \(i\) of \texttt{krawczyk\_centers} in
+S1's \texttt{six-cycle-001.json} is an exact rational vector
+\(c_i=(\bar s_i,\bar t_{i1},\ldots,\bar t_{ik_i})\), with \(k_1=3\) and
+\(k_i=7\) for \(i\ge2\).  The shooting box is
+\(X_i=c_i+[-10^{-25},10^{-25}]^{k_i+1}\).  It encloses the section
+coordinate and flight times, with all system parameters fixed at
+\(\vartheta_*\).
+Arb real-ball arithmetic \cite{arb} supplies directed enclosures at
+480-bit precision.  For each exact box \(X\), an outward enclosure \(B\)
+contains its rational endpoints, \(z_0\) is the exact dyadic midpoint
+of \(B\), and the preconditioner \(C\) is a fixed dyadic matrix.
+Automatic differentiation supplies \(\mathcal J\), and strict inclusion
+is checked against the exact rational endpoints of \(X\).
+
+\paragraph{Validation of the prescribed trajectories.}
+For every flight, interval enclosures on 512 closed time cells cover the
+entire normalised interval \([0,1]\).
+On a monotone flight, a strict velocity sign
+verifies monotonicity.  On a flight returning to the same switch, initial
+and final blocks have outward and inward velocity, respectively; the
+remaining cells lie strictly on the required side.  Endpoint blocks use
+the exact endpoint equations, forward at departure and backward at arrival.
+The final flight of the short chart starts at \(\xi_2\), crosses the
+lower half-axis, turns in zone \(2\), and
+reaches the upper-axis section with \(v<0\).  Its initial block has
+\(v>0\); all remaining cells have \(x>\xi_2\), and every cell has
+\(x<\xi_3\).  The other short turning flight also stays to the right
+of \(\xi_1\), so the short orbit reaches neither outer breakpoint.
+Every switching velocity is separated from zero.  The minima
+\(d_{\min}\) and \(u_{\min}\) below range only over the cells where the corresponding
+position or velocity inequality is imposed.  The certified bounds are
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\toprule
+quantity&notation&strict bound\\\midrule
+contraction defect&$q_{\max}$&$<7.3\cdot10^{-17}$\\
+inclusion margin&$\eta_{\min}$&$>9.99\cdot10^{-26}$\\
+position clearance&$d_{\min}$&$>0.0489$\\
+signed velocity&$u_{\min}$&$>0.000614$\\
+switching speed&$v_{\min}$&$>0.8084293584$\\
+\bottomrule
+\end{tabular}
+\caption{Bounds used by the six-cycle interval certificate.}
+\label{tab:bounds}
+\end{table}
+
+Let
+\[
+ z_i^*=(s_i^*,t_{i1}^*,\ldots,t_{ik_i}^*)\in\interior X_i
+\]
+be the unique zero certified by \eqref{eq:validation}.  Its upper-section
+coordinate is recorded in Table~\ref{tab:six}.  The upper-axis boxes are
+disjoint, so Lemma~\ref{lem:geometry} gives six distinct geometric orbits.
+
+\begin{proposition}[Certified periodic-orbit data]\label{prop:certified-data}
+For the exact seed \eqref{eq:seed}, each of the six boxes \(X_i\)
+defined above contains a unique zero of its shooting residual.  The
+corresponding flight segments satisfy the prescribed first-event and
+switching-velocity inequalities, and the six upper-section coordinates are
+pairwise distinct.  The first box uses the short chart and the other five use the
+same full chart.
+\end{proposition}
+
+The interval construction above proves the proposition: strict inclusion
+and contraction give the six zeros, while the cell checks and endpoint
+blocks identify each zero with a complete trajectory.
+
+\subsection{Hyperbolicity and persistence}
+
+Each certified closed trajectory crosses \(x=\xi_2\) exactly twice,
+and the first-event inequalities exclude any further contact with this
+line.  Its primitive periodic orbit crosses the same line transversely,
+so it has at least two crossings; Lemma~\ref{lem:geometry} gives at
+most two.  The shooting trajectory therefore traverses one minimal
+period.  In particular, the sum of its prescribed flight times is the
+minimal period, and the certified divergence integral is its
+characteristic exponent.
+
+At a transverse switch the physical vector field is continuous, so the
+saltation matrix is the identity.  The variational fundamental matrices
+therefore compose without an additional jump factor.  In physical
+coordinates, Liouville's formula and the tangent multiplier one give
+\begin{equation}\label{eq:multiplier}
+                       \mu=\exp(\chi).
+\end{equation}
+The strict intervals in Table~\ref{tab:six} avoid zero, so all six
+cycles are hyperbolic.
+
+All event equations are analytic at the certified crossings.  Their time
+derivatives are the nonzero crossing velocities, so the analytic implicit
+function theorem continues the flight times in the seven normalised
+parameters.  If \(P_i(s,\vartheta)\) denotes the continued local return,
+then at the seed
+\[
+ P_i(s_i^*,\vartheta_*)-s_i^*=0,\qquad
+ \partial_s(P_i-s)(s_i^*,\vartheta_*)=\mu_i-1\ne0.
+\]
+A second application of the theorem continues the six roots in disjoint
+section intervals.  Intersecting the six parameter neighbourhoods and
+shrinking it if necessary keeps the slopes in \((-2,2)\), the breakpoints
+ordered and genuine, and the multipliers on their original sides of one.
+This proves Theorem~\ref{thm:six}.
+
+\subsection{Coexisting cycles on one analytic return branch}
+
+The five full-itinerary cycles lie on a common analytic return branch.
+The essential point is that increasing the section amplitude increases
+both excursions, so the conditions for visiting all switches hold on
+one interval.
+
+\begin{lemma}[The common full-itinerary branch]\label{lem:common-branch}
+For the seed \eqref{eq:seed}, let \(J\) be the set of upper-section
+amplitudes for which the first-return trajectory crosses all three
+switching lines twice and transversely.  Then \(J\) is an open interval
+containing \([s_2^*,s_6^*]\), and \(P_+\) is analytic on \(J\).
+\end{lemma}
+\begin{proof}
+Put \(M=\max_j|m_j|<2\).  In \((x,v)\) coordinates the polar angle
+obeys, almost everywhere,
+\[
+ \dot\theta=-1+\frac{m(x)xv}{x^2+v^2},\qquad
+ -1-\frac M2\le\dot\theta\le-1+\frac M2<0.
+\]
+Every axis half-return is therefore finite.  Denote the right
+half-return from \((0,-r)\) to \((0,R(r))\) in physical coordinates
+by \(R(r)>0\).  Since \(\dot y=x>0\) on this half-arc, it is a
+graph \(x=h_r(y)>0\) between its endpoints.  Distinct half-arcs
+cannot meet by uniqueness, including at a common upper endpoint.
+If \(r_2>r_1\), then
+\(h_{r_2}(-r_1)>h_{r_1}(-r_1)=0\).  Were
+\(R(r_2)<R(r_1)\), the ordering would reverse at \(y=R(r_2)\),
+forcing an intersection.  Thus \(R(r_2)>R(r_1)\), and
+\(h_{r_2}>h_{r_1}\) throughout the smaller graph's domain.  In
+particular its maximal excursion \(M_R(r)=\max h_r\) is strictly
+increasing.
+
+Applying the same argument to the reflected system with
+\(\widetilde F(X)=-F(-X)\), obtained by \((X,Y)=(-x,-y)\), gives a
+strictly increasing left half-return \(L(s)\) from \((0,s)\) to
+\((0,-L(s))\), with strictly increasing excursion
+\(M_L(s)\).  These functions are continuous by continuous dependence
+and the transverse axis crossings.  The upper return is
+\(P_+=R\circ L\), so both \(M_L(s)\) and \(M_R(L(s))\) increase
+strictly.  Each half-arc has exactly one turning point: at \(v=0\),
+\(\dot v=-x\), so all such crossings have the same direction.
+Consequently a negative switch is crossed twice transversely precisely
+when \(M_L(s)>|\xi_i|\), and a positive switch precisely when
+\(M_R(L(s))>\xi_i\).  Each condition defines an open terminal
+interval; their intersection is the full-itinerary interval \(J\)
+containing the five certified full orbits.  On \(J\) the six switch
+hits and the axis return are transverse.  At each hit the time
+derivative of the event equation is its nonzero crossing velocity.
+The seven affine hitting maps, their crossing velocities and \(P_+\)
+are therefore analytic by the implicit-function theorem.
+\end{proof}
+
+\begin{corollary}[Robust alternating gain extrema]
+\label{cor:gain-oscillation}
+There are an open neighbourhood \(V\) of \(\vartheta_*\) and an interval
+\(K\subset(0,\infty)\) on which the full-itinerary upper return
+\(P_+(s,\vartheta)\) is analytic for \(\vartheta\in V\).  The continued
+roots \(s_2(\vartheta)<\cdots<s_6(\vartheta)\) lie in \(K\).
+For every \(\vartheta\in V\), put
+\(G(s,\vartheta)=\log(P_+(s,\vartheta)/s)\).  There exist points
+\(u_j\in(s_{j+1}(\vartheta),s_{j+2}(\vartheta))\), \(1\le j\le4\),
+such that
+\begin{equation}\label{eq:alternating-critical-values}
+ \partial_sG(u_j,\vartheta)=0,\qquad
+                  (-1)^{j+1}G(u_j,\vartheta)>0.
+\end{equation}
+The critical points are chosen separately for each parameter value and
+need not be nondegenerate.
+\end{corollary}
+\begin{proof}
+By Lemma~\ref{lem:common-branch}, the full-itinerary domain \(J\) is
+an open interval containing \([s_2^*,s_6^*]\).
+Choose a compact interval \([a,b]\subset J\) with
+these roots in its interior.  Its switch hits and axis returns are
+transverse.  The analytic event equations and their first-event
+conditions therefore persist on a common parameter neighbourhood by
+compactness.  After shrinking this neighbourhood, they define the
+full-itinerary return on \(K=(a,b)\), with all five continued roots
+inside \(K\).
+
+At each root, the return multiplier gives
+\begin{equation}\label{eq:gain-root-derivative}
+ \partial_sG(s_i(\vartheta),\vartheta)
+ =\frac{\partial_sP_+(s_i(\vartheta),\vartheta)-1}{s_i(\vartheta)}
+ =\frac{e^{\chi_i(\vartheta)}-1}{s_i(\vartheta)},\qquad 2\le i\le6.
+\end{equation}
+Table~\ref{tab:six} and persistence give the signs \((+,-,+,-,+)\).
+For \(j=1,3\), \(G\) is positive immediately to the right of
+\(s_{j+1}(\vartheta)\), while both endpoint values on
+\([s_{j+1}(\vartheta),s_{j+2}(\vartheta)]\) vanish.  A positive
+maximum is therefore attained at an interior critical point.
+For \(j=2,4\), the same argument gives an interior negative minimum.
+This proves \eqref{eq:alternating-critical-values}.  Additional zeros
+between the specified roots do not affect this argument.
+\end{proof}
+
+The common itinerary fixes event order but not residence times.  If
+\(t_1,\ldots,t_7\) are the full-flight times, the divergence integral
+along one return is
+\begin{equation}\label{eq:chi-flight}
+ \chi(s)=m_2(t_1+t_5+t_7)+m_1(t_2+t_4)+m_0t_3+m_3t_6.
+\end{equation}
+Away from a fixed point this is a return divergence integral; at a fixed
+point it is the characteristic exponent.  On \(J\), the logarithmic
+return gain admits the decomposition
+\[
+ G(s)=\log\frac{P_+(s)}s
+     =2\pi q(m_2)+A_1(s)+A_2(s)+A_3(s),
+ \qquad q(m)=\frac m{\sqrt{4-m^2}}.
+\]
+Here \(A_i(s)\) is the net invariant jump at the two crossings of the
+\(i\)-th switching line.  Appendix~\ref{app:action} defines these
+actions and derives the identity and their variation directions
+\((+,-,-)\) for \eqref{eq:seed}.  The action identity identifies
+competing amplitude-dependent contributions along the common itinerary.
+The certified roots establish that these contributions balance
+repeatedly; their individual variation signs alone do not force the
+observed number of roots.
+
+Sharp counting therefore requires control of the zeros within individual
+itinerary branches.  The next section obtains a uniform bound for isolated
+periodic orbits through a finite encoding of their trajectories.
+
+\section{Uniform finiteness from bounded-flight coding}\label{sec:finite}
+
+Fix \(n\).  Use the parameter space
+\[
+ \mathcal P_n=\{(\xi_1,\ldots,\xi_n,m_0,\ldots,m_n):
+                      \xi_1<\cdots<\xi_n\}
+\]
+and allow zero slope jumps; this represents systems with fewer than
+\(n\) genuine breakpoints by inserting auxiliary slots.
+
+The proof has two geometric inputs: a uniform bound on the number of
+affine flights in one periodic orbit, and a uniform bound on the
+oscillatory phase of each flight.  We encode these flights with
+first-event conditions and prove that the codes describe exactly the
+periodic orbits.  Their unique lower-axis markers then form a definable
+family, to which uniform finiteness applies.
+
+In this section, a coding flight is a segment between consecutive
+contacts with the breakpoint lines or the \(y\)-axis.  Unlike the
+shooting flights of Section~\ref{sec:six}, each such segment lies in a
+fixed open half-plane except at its endpoints.  For the certified seed,
+inserting the intermediate lower-axis crossing refines the three- and
+seven-flight shooting charts into four- and eight-flight codes,
+respectively.
+
+\begin{lemma}[Uniform phase bound for half-plane flights]
+\label{lem:phase-bound}
+Let \(|m|<2\), \(\omega=\sqrt{1-m^2/4}\), and \(T>0\).
+Suppose a nonconstant trajectory of the affine field
+\(\dot x=mx+b-y\), \(\dot y=x\) remains in one open half-plane
+\(x>0\) or \(x<0\) for \(0<t<T\), with both endpoints in its
+closure.  Then \(\omega T\le\pi\).
+\end{lemma}
+\begin{proof}
+The equilibrium of this affine extension is \((0,b)\).  At phase
+\(\pi\), the linear flow satisfies
+\[
+ e^{A_m\pi/\omega}=-e^{m\pi/(2\omega)}I.
+\]
+If \(x(0)\ne0\), this gives
+\(x(\pi/\omega)=-e^{m\pi/(2\omega)}x(0)\), which lies in the
+opposite half-plane.  Thus \(T<\pi/\omega\).  If \(x(0)=0\), put
+\(v_0=b-y(0)\).  Nonconstancy gives \(v_0\ne0\), and
+\[
+ x(t)=e^{mt/2}\frac{v_0}{\omega}\sin(\omega t).
+\]
+The first positive-time axis contact has phase \(\pi\), so
+\(T\le\pi/\omega\) in this case as well.
+\end{proof}
+
+This is a bound on phase, not on flight time: \(\pi/\omega\) need
+not remain bounded as \(|m|\to2\).  On the domains needed for these
+half-plane flights, the flow in a zone has the finite spectral form
+\begin{equation}\label{eq:all-flows}
+e^{A_mt}=\begin{cases}
+e^{at}\{\cos(\omega t)I+t\sinc(\omega t)B_m\},&m^2<4,\quad0\le\omega t\le\pi,\\
+e^{at}(I+tB_m),&m^2=4,\\
+e^{at}\{\cosh(\rho t)I+t\sinhc(\rho t)B_m\},&m^2>4,
+\end{cases}
+\end{equation}
+Here \(t\ge0\), \(a=m/2\), \(B_m=A_m-aI\),
+\(\omega=\sqrt{1-a^2}\) when \(|m|<2\), and
+\(\rho=\sqrt{a^2-1}\) in the node case.  The quotients
+\(\sinc u=\sin u/u\) and \(\sinhc u=\sinh u/u\) take the value one
+at zero.  Lemma~\ref{lem:phase-bound} restricts the trigonometric
+arguments to \([0,\pi]\).  Restricted analytic functions and the
+exponential therefore make the resulting partial flow definable in
+\(\Ranexp\), including the repeated-root and node cases.  Together
+with the flight-count bound from Lemma~\ref{lem:geometry}, this is the
+geometric step needed for the following proposition.
+
+\begin{proposition}[Definability of periodic-orbit markers]
+\label{prop:definable-markers}
+For fixed \(n\), the set
+\[
+ \mathcal Z_n=\bigl\{(\vartheta,r)\in\mathcal P_n\times(0,\infty):
+ (0,-r)\text{ lies on a nonconstant periodic orbit of }F_\vartheta\bigr\}
+\]
+is definable in \(\Ranexp\), uniformly in all slopes, ordered breakpoint
+positions, and amplitudes.
+\end{proposition}
+
+We prove the proposition by encoding periodic orbits with the following
+cell and first-event predicates.  The construction uses the
+phase-restricted affine flows in \eqref{eq:all-flows}.
+Let \(I_0=(-\infty,\xi_1)\),
+\(I_j=(\xi_j,\xi_{j+1})\) for \(1\le j<n\), and
+\(I_n=(\xi_n,\infty)\), with the evident convention for \(n=0\).  Put
+\[
+ C_{j,\varepsilon}(\vartheta)=
+ \{(x,y):x\in I_j,\ \varepsilon x>0\},
+ \qquad \varepsilon\in\{-1,+1\}.
+\]
+For fixed parameters its closure is expressed inside the same definable
+structure by
+\[
+ z\in\overline{C_{j,\varepsilon}(\vartheta)}
+ \Longleftrightarrow
+ \forall\delta>0\ \exists w\in C_{j,\varepsilon}(\vartheta)
+ \quad\|w-z\|^2<\delta^2.
+\]
+Write \(\operatorname{Flow}_j(\vartheta;t,z,w)\) for the graph of the
+appropriate branch of \eqref{eq:physical-flow} and \eqref{eq:all-flows}.
+Endpoint matching alone is insufficient: an affine segment may leave
+its assigned zone before reaching the prescribed endpoint.  We therefore
+require every intermediate point to remain in the corresponding open cell.
+Define \(\operatorname{Flight}_{j,\varepsilon}(\vartheta;z,z',t)\) by
+\begin{equation}\label{eq:flight-predicate}
+\begin{gathered}
+t>0,\quad z,z'\in\overline{C_{j,\varepsilon}(\vartheta)},\quad
+\operatorname{Flow}_j(\vartheta;t,z,z'),\\
+\forall u\ \bigl(0<u<t\Longrightarrow
+ \exists w\,[\operatorname{Flow}_j(\vartheta;u,z,w)\ \wedge
+ w\in C_{j,\varepsilon}(\vartheta)]\bigr).
+\end{gathered}
+\end{equation}
+The final-time spectral condition makes all intermediate times admissible;
+the last line is the first-event guard and ensures that no switching line
+or the axis is met in the interior of a flight.
+
+By Lemma~\ref{lem:geometry}, a periodic orbit records at most two contacts
+with each breakpoint line and one upper-axis crossing.  Coincident events
+are merged, so the number \(M\) of positive-duration flights satisfies
+\begin{equation}\label{eq:flight-count}
+                              M\le 2n+2.
+\end{equation}
+Let \(\mathcal B_\vartheta\) be the union of the axis and the breakpoint
+lines.  Fix integers \(2\le M\le2n+2\), \(1\le h<M\), and
+\(0\le j_i\le n\).  A code consists of \(r,s>0\), times \(t_i>0\), and
+nodes \(z_0,\ldots,z_M\), satisfying
+\begin{equation}\label{eq:code}
+\begin{gathered}
+r>0,\quad z_0=z_M=(0,-r),\quad z_h=(0,s),\\
+z_i\in\mathcal B_\vartheta\quad(1\le i<M),\qquad
+x(z_i)=0\ \Longleftrightarrow\ i=h\quad(1\le i<M),\\
+\operatorname{Flight}_{j_i,\varepsilon_i}
+       (\vartheta;z_{i-1},z_i,t_i)\quad(1\le i\le M),\\
+\varepsilon_i=+1\ (i\le h),\qquad \varepsilon_i=-1\ (i>h).
+\end{gathered}
+\end{equation}
+Here \(h\) marks the upper-axis crossing and \(j_i\) identifies the
+zone of the \(i\)-th flight.  There are finitely many choices of these
+indices.  Projecting their finite union to \((\vartheta,r)\), eliminating
+the times, intermediate nodes and upper coordinate, gives a definable
+set.  The next lemma identifies this projection with \(\mathcal Z_n\).
+
+\begin{lemma}\label{lem:equivalence}
+The pair \((\vartheta,r)\) admits a code \eqref{eq:code} if and only if
+\((0,-r)\) lies on a nonconstant periodic orbit.
+\end{lemma}
+\begin{proof}
+A periodic orbit supplies its contact list and hence a code by
+\eqref{eq:flight-count}.  Consecutive events have positive separation;
+the intervening trajectory lies in one open cell, and its oscillatory
+phase, when \(|m|<2\), is bounded by Lemma~\ref{lem:phase-bound}.  The
+positive excursion precedes the negative one, as prescribed in
+\eqref{eq:code}.
+
+Conversely, concatenate the flights of a code.  The first-event guards
+identify each affine field with the global field on the open flight.
+At the endpoints, continuity of \(F\) makes the derivatives agree with
+the physical field, including at cyclic closure.  The concatenation is
+therefore a \(C^1\) solution and uniqueness makes it the actual orbit.
+It has positive duration and avoids the equilibrium.  There is no
+interior axis contact except the single upper-axis node, so it describes
+one circuit.  Projection to the unique lower-axis coordinate identifies
+codes for the same orbit.
+\end{proof}
+
+\paragraph{Boundary and degenerate cases.}
+A grazing contact separates two consecutive positive-duration flights
+in the same cell.  A switch at zero is merged with the axis event and adds
+no extra node.  Zero slope jumps merely insert auxiliary slots without
+changing the field.  Empty cells contribute no flights because their
+fixed-parameter closures are empty, and \(m^2=4\) uses the repeated-root
+branch of \eqref{eq:all-flows}.  Centres and period annuli contribute
+intervals of periodic markers, whose points are not isolated.  The
+condition \(r>0\) and the open-cell guards exclude the equilibrium,
+also when it lies on a switch.
+
+\begin{lemma}[Uniform fibre-component bound]\label{lem:fibre-components}
+For every definable family \(Z\subset P\times\R\) in the o-minimal
+structure \(\Ranexp\), there is an integer \(B_Z\) such that every fibre
+\(Z_p\) has at most \(B_Z\) connected components
+\cite[Section~4.4]{vdm}.
+\end{lemma}
+\begin{proof}
+Take a cylindrical cell decomposition compatible with \(Z\), with
+the last coordinate as the fibre coordinate.  The fibre of each cell
+is empty, a point, or an interval.  Hence the total number of cells
+bounds the number of connected components of every fibre.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:definable-markers} and
+Theorem~\ref{thm:finite}]
+The finite definable union and projection above, together with
+Lemma~\ref{lem:equivalence}, prove the marker proposition.
+
+\emph{From isolated markers to isolated periodic orbits.}
+For fixed parameters, geometric isolation of a periodic orbit is
+equivalent to isolation of its lower-axis marker in
+\((\mathcal Z_n)_\vartheta\).  Indeed, \(\dot x=r>0\) at
+\((0,-r)\), so transversality and continuous dependence give a local
+return for nearby section coordinates, including when the given orbit
+grazes a switching line.  Any nearby periodic coordinate
+must be a fixed point of this local return, since
+Lemma~\ref{lem:geometry} excludes multiple lower-axis crossings in one
+circuit.  Continuous dependence then makes the corresponding closed
+orbits close.  Conversely, periodic orbits sufficiently close to the
+given orbit meet its transverse section at nearby coordinates.
+Thus accumulation of periodic markers and accumulation of periodic
+orbits are equivalent here.  A continuous local return suffices for this
+argument.
+
+The structure \(\Ranexp\) is o-minimal
+\cite[Corollary 5.13]{dmm}; Lemma~\ref{lem:fibre-components} gives a
+constant \(B_n\) with
+\[
+ \#\pi_0((\mathcal Z_n)_\vartheta)\le B_n
+ \quad\text{for every }\vartheta.
+\]
+Consequently the number of isolated periodic orbits is at most \(B_n\),
+which proves Theorem~\ref{thm:finite}.  For \(n=0\), the normalised
+linear system has no isolated cycles.
+\end{proof}
+
+\subsection{Isolated markers and parameter dependence}
+
+\begin{corollary}[Finite parameter cells and definable scans]
+\label{cor:parameter-cells}
+For fixed \(n\), the parameter space \(\mathcal P_n\) has a finite
+partition into definable cells \(C\) such that each \(C\) has an integer
+\(k_C\ge0\) and, when \(k_C>0\), continuous definable functions
+\[
+ r_{C,1}<\cdots<r_{C,k_C}:C\longrightarrow(0,\infty)
+\]
+whose values are exactly the lower-axis markers of all geometrically
+isolated periodic orbits.  In particular, their number is \(k_C\)
+throughout \(C\).  Along any continuous \(\Ranexp\)-definable path
+\(\gamma:T\to\mathcal P_n\), where \(T\subset\R\) is an interval,
+this count is constant on a finite partition of \(T\) into points and
+intervals.  Neither the parameter space nor \(T\) need be bounded.
+\end{corollary}
+\begin{proof}
+Define the fibre-isolated marker set \(\mathcal I_n\) by
+\begin{equation}\label{eq:isolated-markers}
+\begin{aligned}
+ (\vartheta,r)\in\mathcal I_n\quad\Longleftrightarrow\quad
+ &(\vartheta,r)\in\mathcal Z_n\ \text{ and }\ \exists\varepsilon>0\\
+ &\forall u>0\,
+ \bigl[((\vartheta,u)\in\mathcal Z_n\ \wedge\ |u-r|<\varepsilon)
+                                  \Longrightarrow u=r\bigr].
+\end{aligned}
+\end{equation}
+It is definable by Proposition~\ref{prop:definable-markers}; the isolation
+equivalence just proved identifies its fibres with the isolated cycles.
+Each fibre is finite by Theorem~\ref{thm:finite}.  Apply cylindrical
+cell decomposition with the marker coordinate last
+\cite[Section~4.2]{vdm}, compatibly with \(\mathcal I_n\) and
+\(\mathcal P_n\times\R\).  Over a parameter cell \(C\), no band cell
+can belong to \(\mathcal I_n\), since it would have an interval fibre.
+The remaining cells are graphs of continuous definable functions on
+\(C\).  They are disjoint and hence can be ordered as displayed; they
+exhaust \(\mathcal I_n\) over \(C\).  If there are none, \(k_C=0\).
+Finally, each \(\gamma^{-1}(C)\) is definable in one real variable and
+thus is a finite union of points and intervals.  Refining these finitely
+many sets proves the assertion about the path.
+\end{proof}
+
+In particular, the isolated-cycle count changes only finitely many times
+along any affine parameter path contained in \(\mathcal P_n\).
+The cell decomposition is non-effective.
+
+\section{Propagating the six-cycle construction}\label{sec:lower}
+
+We adapt the outer-breakpoint construction of Chen--Li--Zhang--Zhang
+\cite[Section 3.1]{clzz} to the certified six-cycle seed.  The construction
+preserves a prescribed finite collection of hyperbolic cycles and adds an
+outer cycle; a common-slope perturbation, as in the rotated-family theory
+\cite{ctz}, ensures hyperbolicity and transversality of the resulting
+family.  Iterating the increment from the three-breakpoint seed yields
+the lower bound \(H_c(n)\ge n+3\) for \(n\ge3\).
+
+\begin{proposition}[Outer-breakpoint increment]\label{prop:increment}
+Suppose that \(F(0)=0\), that \(F\) has exactly \(q\) genuine
+breakpoints, and that all its slopes lie in \((-2,2)\).  Given
+\(k\ge1\) hyperbolic cycles, there is another such function with exactly
+\(q+1\) genuine breakpoints, nearby continuations of the chosen cycles,
+and an additional hyperbolic cycle outside them.  All \(k+1\) cycles
+can be made transverse to the switching lines they meet.
+\end{proposition}
+
+\subsection{Global return and gain at infinity}
+
+Use lower-axis coordinates and write \(D_F(r)=Q_F(r)-r\).  In velocity
+coordinates \((x,v)\), with \(M=\max|m_j|<2\),
+\begin{equation}\label{eq:polar}
+ \dot\theta=-1+\frac{m(x)xv}{x^2+v^2}\le-1+M/2<0,\qquad
+ \frac d{dt}\log\sqrt{x^2+v^2}=\frac{m(x)v^2}{x^2+v^2}.
+\end{equation}
+The initial point \((x,y)=(0,-r)\) is \((x,v)=(0,r)\).  Its radius
+cannot vanish in finite time, and its first full clockwise turn takes
+time between \(2\pi/(1+M/2)\) and \(2\pi/(1-M/2)\).  Thus the
+lower return is defined for every \(r>0\).
+
+Let \(m_-,m_+\) be the tail slopes and define
+\(F_\infty(X)=m_-X\) for \(X\le0\) and \(F_\infty(X)=m_+X\)
+for \(X\ge0\).  Since \(F-F_\infty\) is bounded,
+\[
+ \sup_X|F(rX)/r-F_\infty(X)|\le C_F/r\longrightarrow0.
+\]
+Under the physical scaling \((x,y)=r(X,Y)\), the vector fields have a
+common Lipschitz constant.  Gronwall's inequality therefore gives
+convergence of the trajectories from \((0,-1)\) on bounded time
+intervals.  Scaled velocities and lifted angles converge as well, and
+the strict angular bound in \eqref{eq:polar} makes the first full-turn
+times converge.  The homogeneous half-plane of slope \(m\) contributes
+the gain \(\exp(\pi m/\sqrt{4-m^2})\), whence
+\begin{equation}\label{eq:gain}
+ \lim_{r\to\infty}\frac{Q_F(r)}r
+ =\rho(m_-,m_+),\quad
+ \rho(u,w)=\exp\!\left(\frac{\pi u}{\sqrt{4-u^2}}+
+                         \frac{\pi w}{\sqrt{4-w^2}}\right).
+\end{equation}
+For fixed \(u\), \(\log\rho(u,w)\) increases continuously from
+\(-\infty\) to \(+\infty\) as \(w\) traverses \((-2,2)\).
+
+\subsection{Common-slope regularisation}
+
+\begin{lemma}\label{lem:regularization}
+Let \(F_*:\R\to\R\) be continuous and piecewise affine, with
+\(F_*(0)=0\), finitely many fixed breakpoints, and slopes in \((-2,2)\).
+For \(F_\alpha=F_*+\alpha x\), restrict \(\alpha\) to a neighbourhood
+of zero in which the slopes remain in \((-2,2)\).  The lower return
+\(Q(r,\alpha)\) is defined for every \(r>0\), is jointly \(C^1\), and
+satisfies \eqref{eq:rotation}.  Moreover:
+\begin{enumerate}
+\item If \(D(r_-,0)D(r_+,0)<0\), where
+\(D(r,\alpha)=Q(r,\alpha)-r\) and \(0<r_-<r_+\), then for arbitrarily
+small \(\alpha\) the interval \((r_-,r_+)\) contains a fixed point and
+every fixed point in \([r_-,r_+]\) is hyperbolic.
+\item Any finite collection of hyperbolic cycles at \(\alpha=0\) has
+nearby hyperbolic continuations transverse to every switching line they
+meet for arbitrarily small suitable \(\alpha\).
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Global return follows from \eqref{eq:polar}.
+
+\paragraph{Step 1. \(C^1\) regularity across grazing contacts.}
+On a finite non-equilibrium trajectory
+segment, a switch contact is transverse or has the quadratic expansion
+in Lemma~\ref{lem:geometry}; a contact on the axis is transverse.
+There are consequently only finitely many contacts on the segment.
+Write \(z=(x,y)\) for a reference trajectory and \(z_h\) for the
+trajectory with initial-state and parameter perturbation
+\(h=(\delta z_0,\delta\alpha)\).  Set \(\delta z_h=z_h-z\), and define
+almost everywhere
+\[
+ \lambda(t)=F_*'(x(t))+\alpha,\qquad
+ L(t)=\begin{pmatrix}\lambda(t)&-1\\1&0\end{pmatrix}.
+\]
+The remainder \(R_h\) is specified by
+\[
+ \delta\dot z_h=L(t)\delta z_h+\delta\alpha(x(t),0)+R_h(t),\qquad
+ \delta z_h(0)=\delta z_0.
+\]
+Continuous dependence gives \(\delta z_h=O(\|h\|)\) uniformly on the
+segment.  Let \(E_h\) be the reference times at which \(x(t)\) lies
+within \(C\|h\|\) of a switch, with \(C\) large enough to cover the
+state variation.  Transverse and quadratic contacts give
+\(|E_h|=O(\|h\|^{1/2})\).  Outside \(E_h\), both trajectories lie in
+the same affine zone, so only the product
+\(\delta\alpha(x_h-x)\) contributes to \(R_h\).  The Lipschitz bound
+on \(F_*\) yields
+\[
+ |R_h(t)|\le C\|h\|\mathbf1_{E_h}(t)+C\|h\|^2,
+ \qquad \int|R_h(t)|\,dt=O(\|h\|^{3/2})=o(\|h\|).
+\]
+Variation of constants proves Fr\'echet differentiability.  For nearby
+reference trajectories, the bounded variational coefficients converge
+almost everywhere off the finite contact set, hence in \(L^1\).
+Their variational solutions therefore converge uniformly, proving
+continuity of the derivatives.  The terminal lower-axis crossing is
+transverse, so the implicit-function theorem gives a jointly \(C^1\)
+return.
+
+\paragraph{Step 2. Strict parameter monotonicity.}
+Let \(X_\alpha(x,y)=(F_*(x)+\alpha x-y,x)\).  For parameter variation
+\(\eta=\partial_\alpha z\) with the initial point fixed, the wedge
+\(W=\det(X_\alpha,\eta)\) satisfies
+\(W'=\lambda W-x^2\) and \(W(0)=0\).  At the return time, its value is
+\(-Q Q_\alpha\); variation of the return time adds a multiple of
+\(X_\alpha\) and does not change the wedge.  Applying the same argument
+to initial-section variation gives
+\begin{equation}\label{eq:rotation}
+\begin{aligned}
+ Q_\alpha(r,\alpha)&=\frac1{Q(r,\alpha)}
+ \int_0^T\exp\!\left(\int_t^T\lambda(u)\,du\right)x(t)^2\,dt>0,\\
+ Q_r(r,\alpha)&=\frac r{Q(r,\alpha)}
+ \exp\!\left(\int_0^T\lambda(t)\,dt\right)>0.
+\end{aligned}
+\end{equation}
+
+\paragraph{Step 3. Hyperbolic fixed points for regular parameter values.}
+Since \(D_\alpha=Q_\alpha>0\), the zero set is locally a graph
+\(\alpha=A(r)\).  On the compact amplitude interval in
+the first assertion, the endpoint signs persist for a sufficiently small
+closed parameter interval.  The zero set in this compact rectangle is
+covered by finitely many \(C^1\) graphs \(\alpha=A(r)\), and
+\[
+ A'(r)=-\frac{D_r(r,A(r))}{D_\alpha(r,A(r))}
+\]
+on each graph.  The critical values of a scalar \(C^1\) function form a
+null set: on compact subintervals, cover the critical set by intervals
+where \(|A'|<\varepsilon\), apply the mean value theorem, and then
+exhaust the domain.  Choose \(\alpha\) outside the finite union of these
+null sets.  Opposite endpoint signs give a zero; every zero in the
+interval has \(D_r=Q_r-1\ne0\).  Since \(Q_r>0\) and \(Q_r\ne1\),
+each such fixed point is hyperbolic.
+
+\paragraph{Step 4. Removal of grazing along hyperbolic branches.}
+For the second assertion, continue the chosen hyperbolic cycles on a
+common small parameter interval.  Now \(z(t,\alpha)\) follows a periodic
+orbit branch with period \(T(\alpha)\), so its parameter variation does
+not have fixed initial value.  Differentiating periodicity gives
+\(\eta(t+T)=\eta(t)-T'X_\alpha(t)\).  The wedge is therefore periodic
+and still satisfies \(W'=\lambda W-x^2\).  With
+\(\chi=\int_0^T\lambda(t)\,dt\), it follows that
+\[
+ W(t)=\frac{\displaystyle\int_t^{t+T}
+       \exp\!\left(\int_u^{t+T}\lambda(v)\,dv\right)x(u)^2\,du}
+                    {e^\chi-1}\ne0.
+\]
+Here hyperbolicity ensures \(e^\chi\ne1\).  At the unique positive or
+negative extremum \(b(\alpha)\) of \(x\), one has
+\(X_\alpha=(0,b)\), hence \(b'=-W/b\ne0\).  The derivative of this
+extremal value follows from uniqueness of the extremum and the uniform
+\(C^1\) expansion on a fixed phase interval.  On a sufficiently small
+continuation interval its sign is fixed.  Each extremum can therefore
+equal any fixed switch position at most once.  Avoiding finitely many
+such parameter values makes all chosen cycles transverse.
+\end{proof}
+
+\subsection{Proof of the increment and the lower bound}
+
+\begin{proof}[Proof of Proposition~\ref{prop:increment}]
+Order the lower-section coordinates of the selected cycles as
+\(0<r_1<\cdots<r_k\).  Hyperbolicity allows us to choose \(r_0>r_k\)
+sufficiently close to \(r_k\) with \(D_F(r_0)\ne0\).  Choose \(R>0\)
+larger than every existing breakpoint and every \(x\)-coordinate attained
+on the selected cycles or on the complete return trajectory from \(r_0\).
+For \(a\in(-2,2)\), different from the old right-tail slope \(m_+\), put
+\[
+             F_{R,a}(x)=F(x)+(a-m_+)(x-R)_+.
+\]
+There is exactly one new genuine breakpoint.  The selected cycles, their
+local return maps, and the complete return trajectory at \(r_0\) are
+unchanged; in particular, \(D_{R,a}(r_0)=D_F(r_0)\).  Choose \(a\)
+so that \(\rho(m_-,a)-1\) has sign opposite to \(D_F(r_0)\).
+Equation~\eqref{eq:gain} gives a finite \(r_*>r_0\) such that
+\[
+                  D_{R,a}(r_0)D_{R,a}(r_*)<0.
+\]
+
+Let \(\sigma_j\) be the slopes of \(F_{R,a}\) and put
+\(\delta=\min_j(2-|\sigma_j|)>0\).  For \(|\alpha|<\delta/2\),
+the function \(F_{R,a}+\alpha x\) keeps all slopes in \((-2,2)\)
+and preserves every slope jump.  Shrinking this parameter interval
+preserves both endpoint signs and continues the old cycles in disjoint
+section intervals below \(r_0\).  Lemma~\ref{lem:regularization} first
+provides an additional hyperbolic root in \((r_0,r_*)\); a further small
+shift makes these \(k+1\) cycles transverse while preserving their
+hyperbolicity and section order.  By Lemma~\ref{lem:geometry}, disjoint
+periodic orbits are Jordan curves containing the origin, and their
+section order makes them nested.  The additional cycle lies outside
+the continuations of the chosen cycles.
+\end{proof}
+
+Starting from Theorem~\ref{thm:six}, apply the proposition \(n-3\) times.
+Every step retains genuine breakpoints and slopes in \((-2,2)\), and
+increases the chosen number of hyperbolic transverse cycles by one,
+proving Theorem~\ref{thm:lower}.  At each step, the selected family contains
+three more cycles than the number of breakpoints, giving \(6+(n-3)=n+3\).
+
+\section{Consequences and open questions}
+
+The breakpoint count does not give the conjectured upper bound for limit
+cycles, even within the continuous all-focus class.  Five certified cycles
+coexist on one analytic return branch, showing that a fixed switching
+itinerary can support several distinct balances of contraction and
+expansion.
+
+Nevertheless, fixed breakpoint complexity gives a uniform finite bound
+over the full parameter space.  The decisive controls are the number of
+affine flights and their oscillatory phases, rather than uniform bounds
+on amplitudes or periods.  The six-cycle example and the finiteness theorem
+therefore describe complementary aspects of the same counting problem.
+The marker theorem also gives finite variation of the isolated-cycle count
+along each definable parameter path.
+
+The results leave open the sharp value of \(H_c(3)\), effective bounds for
+\(N_n\), and their growth with \(n\).  The present results give
+\[
+  6\le H_c(3)\le N_3<\infty,\qquad H_c(n)\ge n+3\quad(n\ge3).
+\]
+Analytic conditions ensuring the coexistence of several cycles within one
+switching itinerary would complement the certified construction.
+
+\appendix
+\section{Action balance on the full-itinerary branch}\label{app:action}
+
+Fix the all-focus seed \eqref{eq:seed}, and let \(J\) be the common
+full-itinerary interval from Lemma~\ref{lem:common-branch}.
+The origin lies in zone \(2\), so the winding contribution uses \(m_2\).
+
+Write \(p=v=F(x)-y\) for the velocity coordinate.  In a zone of slope
+\(m\), define
+\[
+ E_{m,x}(p)=p^2-mxp+x^2,\qquad q(m)=\frac m{\sqrt{4-m^2}}.
+\]
+Since \(|m|<2\), this energy is positive away from the origin.  Remove
+the ray \(\{(0,p):p\le0\}\) from the \((x,p)\)-plane, and let
+\(\phi_m(x,p)\) be the branch, with values in
+\((-5\pi/2,-\pi/2)\), of the argument of
+\[
+                 \sqrt{4-m^2}\,x+i(2p-mx).
+\]
+The preimage of the argument cut is the same removed ray for every
+\(m\).  Thus the values at both crossings of any switching line
+\(x=\xi_i\ne0\) use one branch, rather than independent flightwise
+lifts.  Along a flight, \(\dot x=p\) and \(\dot p=mp-x\), whence
+\[
+ \dot\phi_m=-\frac{\sqrt{4-m^2}}2,
+ \qquad \dot E_{m,x}(p)=mE_{m,x}(p).
+\]
+Consequently
+\begin{equation}\label{eq:focus-invariant}
+ I_m(x,p)=\frac12\log E_{m,x}(p)+q(m)\phi_m(x,p),
+ \qquad \partial_p I_m(x,p)=\frac p{E_{m,x}(p)},
+\end{equation}
+and \(I_m\) is constant on each flight.  At the upper-axis launch
+\(p=-s\), the trajectory enters \(x<0\) and the one-sided angle is
+\(-\pi/2\); at its return \(p=-P_+(s)\), it approaches from \(x>0\)
+with angle \(-5\pi/2\).  The intervening central flight crosses
+\(x=0\) with \(p>0\), away from the removed ray.
+
+The switch \(\xi_i\) separates slopes \(m_{i-1}\) and \(m_i\).
+Define
+\[
+                 J_i(p)=I_{m_i}(\xi_i,p)-I_{m_{i-1}}(\xi_i,p).
+\]
+Equation~\eqref{eq:focus-invariant} gives
+\begin{equation}\label{eq:action-jump-derivative}
+ J_i'(p)=\frac{\xi_i(m_i-m_{i-1})p^2}
+ {E_{m_{i-1},\xi_i}(p)E_{m_i,\xi_i}(p)}.
+\end{equation}
+Let \(p_i^+(s)>0\) and \(p_i^-(s)<0\) be the rightward and leftward
+crossing velocities, respectively, and put
+\[
+                    A_i(s)=J_i(p_i^+(s))-J_i(p_i^-(s)).
+\]
+Summing the invariant jumps over the six switch events leaves the
+endpoint change in zone \(2\).  The map
+\((x,p)\mapsto(\sqrt{4-m_2^2}x,2p-m_2x)\) has positive determinant
+and preserves the clockwise winding.  The endpoint change is therefore
+\(\log(P_+(s)/s)-2\pi q(m_2)\), so
+\begin{equation}\label{eq:action-balance}
+ G(s):=\log\frac{P_+(s)}s
+      =2\pi q(m_2)+A_1(s)+A_2(s)+A_3(s).
+\end{equation}
+
+To determine the variation of each action, let \(T_c(s)\) be the time
+of a transverse hit on a fixed switching line, and write \(y_c(s)\)
+and \(p_c(s)\) for its coordinates.  The section-hit derivative is
+\[
+ \frac{dy_c}{ds}
+ =\exp\!\left(\int_0^{T_c(s)}m(x(t;s))\,dt\right)\frac{-s}{p_c},
+ \qquad
+ \frac{dp_c}{ds}
+ =\exp\!\left(\int_0^{T_c(s)}m(x(t;s))\,dt\right)\frac{s}{p_c}.
+\]
+Indeed, the flow determinant is the exponential shown, and projection
+onto the hit section divides by its nonzero normal velocity \(p_c\).
+The second equality uses \(p_c=F(\xi_i)-y_c\).  Thus \(p_i^+\)
+increases and \(p_i^-\) decreases with \(s\).  Together with
+\eqref{eq:action-jump-derivative}, this proves
+\[
+              \operatorname{sgn}A_i'(s)
+              =\operatorname{sgn}[\xi_i(m_i-m_{i-1})].
+\]
+For \eqref{eq:seed} these signs are \((+,-,-)\), giving competing
+amplitude-dependent contributions within the same itinerary.
+
+For the derivative of the full return, let \(a_i\) and \(b_i\) be the
+slopes in the two zones adjacent to \(\xi_i\), on the sides nearer to
+and farther from the origin, respectively.
+Thus \((a_i,b_i)=(m_i,m_{i-1})\) when \(\xi_i<0\), and
+\((a_i,b_i)=(m_{i-1},m_i)\) when \(\xi_i>0\).  Let
+\(p_i^{\rm out}\) and \(p_i^{\rm in}\) denote the velocities pointing
+away from and toward the origin, and define
+\[
+ U_i=\frac{p_i^{\rm out}}{\xi_i}>0,
+ \qquad V_i=-\frac{p_i^{\rm in}}{\xi_i}>0.
+\]
+These normalisations apply on both sides: the outgoing velocity is
+\(p_i^-\) on the negative side and \(p_i^+\) on the positive side.
+Set
+\begin{equation}\label{eq:energy-ratio-appendix}
+ Q_i(s)=\frac{(U_i^2-a_iU_i+1)(V_i^2+b_iV_i+1)}
+ {(U_i^2-b_iU_i+1)(V_i^2+a_iV_i+1)},
+\end{equation}
+which is positive.  With \(T(s)\) denoting the total return time, write
+\(\chi(s)=\int_0^{T(s)}m(x(t;s))\,dt\), as in
+\eqref{eq:chi-flight}.  Integrating \(\dot E=mE\) on each of the
+seven flights and multiplying the resulting energy ratios cancels the
+intermediate endpoint energies and gives
+\begin{equation}\label{eq:energy-product-appendix}
+ e^{\chi(s)}=\left(\frac{P_+(s)}s\right)^2\prod_{i=1}^3Q_i(s).
+\end{equation}
+The section-hit derivatives likewise give
+\(P_+'(s)=e^{\chi(s)}s/P_+(s)\).  Hence, with
+\(B(s)=\sum_i\log Q_i(s)\) and \(\Delta_+(s)=P_+(s)-s\),
+\begin{equation}\label{eq:distortion-appendix}
+ e^{B(s)}=1+sG'(s),\qquad
+ \Delta_+'(s)=e^{G(s)+B(s)}-1.
+\end{equation}
+Thus \(B=0\) locates critical points of \(G\), rather than of
+\(\Delta_+\) away from fixed points.  At a fixed point \(G=0\), the
+signs of \(G'\), \(\Delta_+'\), and \(\chi\) agree.
+
+\section{Finite verification data}\label{app:supplement}
+
+The interval input is supplied separately as Supplement S1, version 1.0.0.
+The archive name is
+\begin{center}\texttt{S1-six-cycle-v1.0.0.zip}\end{center}
+Its top-level directory
+contains the following files:
+\begin{itemize}
+\item \texttt{six-cycle-001.json};
+\item \texttt{certify\_six\_cycle\_arb.py};
+\item \texttt{certify\_candidate\_arb.py};
+\item the directed report \texttt{six-cycle-480bit.json}.
+\end{itemize}
+The reference command is
+\begin{verbatim}
+python3 certify_six_cycle_arb.py six-cycle-001.json \
+  --precision 480 --radius 1e-25 --slices 512 \
+  --output certificate.json
+\end{verbatim}
+Run this command inside the extracted top-level directory.  The reference
+dependencies are \texttt{python-flint 0.9.0} and \texttt{mpmath 1.3.0};
+S1's \texttt{ENVIRONMENT.md} and \texttt{requirements.txt} give the
+environment details.  The command writes \texttt{certificate.json} and
+leaves the supplied reference report unchanged.
+All decimal inputs are interpreted as exact rational numbers.  Approximate
+calculations supply the centres and fixed preconditioners, while directed
+interval arithmetic verifies the inclusion, contraction, first-event and
+multiplier inequalities.
+
+\section{The six orbits at three scales}\label{app:portraits}
+
+Figure~\ref{fig:six-atlas} shows the six cycles at three spatial scales,
+reconstructed from the affine flight data.  Each panel uses equal scales
+on the coordinate axes, and all cycles retain their original physical
+coordinates.
+
+\begin{figure}[htbp]
+\centering
+\includerewritefigure{six-cycle-phase-atlas.pdf}
+\caption{Numerical reconstruction of the six certified cycles from the
+affine flight data.  The panels display successively larger physical
+scales; attracting and repelling cycles use solid blue and dashed orange
+curves.}
+\label{fig:six-atlas}
+\end{figure}
+
+\section*{Declaration on AI-assisted tools}
+
+The author used OpenAI Codex for research and writing assistance.
+The author reviewed all content,
+made the final editorial decisions, and takes full responsibility for the
+content of the article.
+
+\begin{thebibliography}{11}
+\raggedright
+\bibitem{tonnelier}
+A. Tonnelier, The McKean's caricature of the FitzHugh--Nagumo model I:
+The space-clamped system, \emph{SIAM J. Appl. Math.} \textbf{63} (2002),
+459--484.
+
+\bibitem{twofold}
+H. Chen, Z. Feng, M. Jia, and Y. Meng, Maximum number of limit cycles of
+the piecewise linear Li\'enard system with three zones,
+\emph{J. Lond. Math. Soc.} \textbf{113} (2026), e70430.
+
+\bibitem{clzz}
+H. Chen, Z. Li, R. Zhang, and X. Zhang, The number of limit cycles of
+piecewise linear Li\'enard systems, preprint (2026),
+\href{https://arxiv.org/abs/2608.19542v1}{arXiv:2608.19542v1}.
+
+\bibitem{ctz}
+H. Chen, Y. Tang, and W. Zhang, Limit cycles in a rotated family of
+generalized Li\'enard systems allowing for finitely many switching lines,
+\emph{Proc. Roy. Soc. Edinburgh Sect. A} \textbf{155} (2025), 2121--2149.
+
+\bibitem{panazzolo}
+D. Panazzolo, Tame semiflows for piecewise linear vector fields,
+\emph{Ann. Inst. Fourier} \textbf{52} (2002), 1593--1628.
+
+\bibitem{carmona}
+V. Carmona, F. Fern\'andez-S\'anchez, and D. D. Novaes, Uniform upper
+bound for the number of limit cycles of planar piecewise linear
+differential systems with two zones separated by a straight line,
+\emph{Applied Mathematics Letters} \textbf{137} (2023), 108501;
+\href{https://arxiv.org/abs/2210.12125v2}{arXiv:2210.12125v2}.
+
+\bibitem{bravo}
+J. L. Bravo and R. Trinidad-Forte, Finitude of limit cycles of linear
+piecewise ODEs in the cylinder, arXiv:2605.05805v1 [math.CA] (2026).
+
+\bibitem{dmm}
+L. van den Dries, A. Macintyre, and D. Marker, The elementary theory of
+restricted analytic fields with exponentiation, \emph{Ann. of Math.}
+\textbf{140} (1994), 183--205.
+
+\bibitem{vdm}
+L. van den Dries and C. Miller, Geometric categories and o-minimal
+structures, \emph{Duke Math. J.} \textbf{84} (1996), 497--540.
+For Sections 4.2 and 4.4 we use the
+\href{https://people.math.osu.edu/miller.1987/newg.pdf}{authors' revised text}
+of February 20, 2001.
+
+\bibitem{rump}
+S. M. Rump, Verification methods: Rigorous results using floating-point
+arithmetic, \emph{Acta Numer.} \textbf{19} (2010), 287--449.
+
+\bibitem{arb}
+F. Johansson, Arb: Efficient arbitrary-precision midpoint-radius interval
+arithmetic, \emph{IEEE Trans. Comput.} \textbf{66} (2017), 1281--1292.
+\end{thebibliography}
+\end{document}

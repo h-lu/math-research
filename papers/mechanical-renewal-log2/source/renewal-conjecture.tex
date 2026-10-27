@@ -1,0 +1,45 @@
+\section{An iterated renewal conjecture}\label{sec:conjecture}
+
+The preceding constructions suggest the following sufficient scheme for
+higher logarithmic powers. Its unresolved step is the simultaneous
+dynamical realization of new and inherited cycles at controlled degree.
+
+\begin{conjecture}[Iterated renewal]\label{conj:renewal}
+For each fixed integer $k\ge3$, there are integers $b,A\ge2$ and a
+constant $c>0$, all depending only on $k$, with the following property.
+For every integer $r\ge1$ there is a finite sequence of real planar
+polynomial fields $X_0,\ldots,X_r$. For $0\le j\le r$,
+$\deg X_j\le Ab^j-1$ and $X_j$ carries a selected finite family of $N_j$
+hyperbolic limit cycles. At each step $1\le j\le r$, this family contains
+the hyperbolic continuations of all $b^2$ pullback copies of each selected
+cycle of $X_{j-1}$ and at least $c b^{2j}j^{k-1}$ additional cycles.
+The pullback is separable of degree $b$, with $b$ real diffeomorphic
+inverse branches in each coordinate over the preceding configuration.
+All continued and additional cycles are pairwise distinct in $X_j$.
+\end{conjecture}
+
+The fields and auxiliary parameters may depend on the prescribed finite
+horizon $r$, as in Proposition~\ref{prop:mechanical-certificate}. The input fields
+are to be constructed as part of the sequence; the conjecture does not
+require an update accepting every polynomial input field. A hyperbolic
+continuation means that each selected pullback cycle persists hyperbolically
+along a deformation from the pullback field to $X_j$ through polynomial
+fields of degree at most $Ab^j-1$; its multiplier may vary.
+
+The claimed construction would give
+\[
+ N_j\ge b^2N_{j-1}+c b^{2j}j^{k-1},\qquad
+ \frac{N_r}{b^{2r}}\ge c\sum_{j=1}^rj^{k-1}\ge\frac{c}{k}r^k.
+\]
+For large $D$, taking $r=\lfloor\log_b((D+1)/A)\rfloor$ gives $Ab^r-1\le D$,
+$b^r>(D+1)/(Ab)$ and $r\sim\ln D/\ln b$. Thus the conjecture would imply
+\[
+ \Hhyp(D)\ge c_k D^2(\ln D)^k
+\]
+for some $c_k>0$ and all sufficiently large $D$. Degreewise existence of
+a field with a lower logarithmic power does not itself provide the
+renewal asserted in Conjecture~\ref{conj:renewal}: the new cycles must be
+created together with the retained copies at every stage without an
+additional degree cost that destroys the estimate. The constructions
+for one and two logarithms motivate this question; no such iterated
+realization for $k\ge3$ is proved here.

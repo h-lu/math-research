@@ -1,0 +1,705 @@
+\section{Compression and release with inherited memory}
+\label{sec:contact}
+The first touchdown may have positive, zero or negative $p$; subsequent
+touchdowns have $p<0$.  Their contact passages have the same two time
+scales.  Compression reduces the incoming $O(\delta)$ slip to
+$O(\eps)$ on the time scale $\eps/\sqrt\delta$; the normal motion
+then releases on the time scale $\eps$.  The friction tail contributes
+different errors to velocity and displacement, so we estimate its
+first two time moments.  A projection of the normal velocity removes
+the stiff slip derivative during release and carries the displacement
+and memory inherited from compression.  The comparison retains the
+finite incoming scale, including the case $p_{\rm in}=0$.
+
+\subsection{Incoming data and the finite-scale reference}
+
+Write $u_r=u_0-r$, where the belt offset $r$ is constant during the
+passage.  The determinant of $(p,u_0)$ with respect to $(\phi,\omega)$
+at $G$ is $a\cos\phi^*=35/136$.  Thus $(p,u_0,y,v)$ is another regular
+mechanical chart, on the same local branch as the chart in
+Section~\ref{sec:model}.  In particular, $b$ is a dependent function of
+these four coordinates.
+
+Fix $C_0,C_{\rm in},Z_*,\gamma_0>0$ and a compact set
+\begin{equation}
+ \mathcal K\Subset\{(\pi,Q,S):Q>0,\ S>0,\ \pi S<2hQ\}.
+ \label{con:input-compact}
+\end{equation}
+All constants below are uniform on these sets and on the mechanical
+and profile classes of Section~\ref{sec:model}.  We consider actual
+physical inputs at time $t_{\rm in}$ satisfying
+\begin{equation}
+ \begin{gathered}
+ p_{\rm in}=\pi\delta,\quad v_{\rm in}=-\delta^2Q,\quad
+ u_{r,\rm in}=\delta S,\quad
+ y_{\rm in}=z_{\rm in}=\eps\delta^2\zeta,\\
+ (\pi,Q,S)\in\mathcal K,\qquad 0<\eps\le C_0\delta^2,\\
+ |\zeta|\le Z_*,\quad Q-\zeta\ge\gamma_0,\quad
+ |X_{\rm in}-G|\le C_{\rm in}\delta.
+ \end{gathered}
+ \label{con:input}
+\end{equation}
+The inverse uses $u_0=u_r+r$; $b_{\rm in}$ is evaluated at this same
+state.  The mechanical localization in \eqref{con:input} implies
+$b_{\rm in}=O(\delta)$.  It allows $r=O(\delta)$, as needed at the
+first touchdown.  The smaller offset range used for subsequent returns
+will be imposed only in that application.
+
+Put
+\begin{equation}
+ \sigma=\sqrt\delta,\qquad e=\eps\delta^{-3/2},\qquad
+ \tau=e\sigma=\eps/\delta,\qquad
+ h_{\rm in}=\mu A(\phi_{\rm in})-B(\phi_{\rm in}).
+ \label{con:scales}
+\end{equation}
+Then $e\le C_0\sigma$, with no positive lower bound on $e$.
+Use compression time $s=\sigma(t-t_{\rm in})/\eps$ and variables
+\begin{equation}
+ (y,z)=\eps\delta^{3/2}(Y,Z),\qquad v=\delta^2V_c,
+ \qquad u_r=\delta U,\qquad L=Z-Y.
+ \label{con:compression-chart}
+\end{equation}
+The saturated reference is the signed linear system
+\begin{equation}
+ \begin{gathered}
+ \bar Y'=\bar V_c,\qquad \sigma\bar Z'=\bar Y-2\bar Z,
+ \qquad \bar L=\bar Z-\bar Y,\\
+ \bar V_c'=\pi\bar L,\qquad \bar U'=-h_{\rm in}\bar L,\\
+ (\bar Y,\bar Z,\bar V_c,\bar U)(0)
+       =(\sigma\zeta,\sigma\zeta,-Q,S).
+ \end{gathered}
+ \label{con:reference}
+\end{equation}
+We shall prove that its first arrest $T_\sigma$, defined by $\bar U=0$,
+occurs in positive force.  From that event the inherited normal
+reference is
+\begin{equation}
+ N_0'=A_DN_0,\quad
+ A_D=\begin{pmatrix}0&1&0\\-1/2&0&1/2\\1&0&-2\end{pmatrix},
+ \qquad N_0(0)=(\bar Y,\sigma\bar V_c,\bar Z)(T_\sigma).
+ \label{con:inherited-release}
+\end{equation}
+Here $N_0=(Y_0,V_0,Z_0)$ and its elapsed time is denoted by $\rho$.
+Its first force zero is $R_0$; its initial memory is the value
+$\bar Z(T_\sigma)$ inherited from compression.
+
+The zero-scale compression solves $y''=-\pi y/2$, $u'=hy/2$,
+with $(y,y',u)(0)=(0,-Q,S)$.  Its first arrest time and amplitude are
+\begin{equation}
+ \begin{gathered}
+ \xi_s=\begin{cases}
+ \sqrt{2/\pi}\arccos(1-\pi S/(hQ)),&\pi>0,\\
+ 2\sqrt{S/(hQ)},&\pi=0,\\
+ \sqrt{2/(-\pi)}\operatorname{arcosh}(1+(-\pi)S/(hQ)),&\pi<0,
+ \end{cases}
+ \qquad
+ A_s^2=\frac{QS}{h}-\frac{\pi S^2}{2h^2}>0,\\
+ (y,y',u)(\xi_s)=(-2A_s,-Q+\pi S/h,0).
+ \end{gathered}
+ \label{con:amplitude}
+\end{equation}
+The formulas extend smoothly through $\pi=0$.  For $\pi>0$ the strict
+inequality in \eqref{con:input-compact} says exactly that arrest
+precedes the first return of $y$ to zero.
+
+\begin{lemma}[Normal opening]\label{con:normal-opening}
+Let $n_\#'=A_Dn_\#$ and $n_\#(0)=(-2,0,-1)$.  Its force has a finite
+first zero $\rho_\#$, with
+\begin{equation}
+ Y_\#(\rho_\#)=Z_\#(\rho_\#)=-\gamma_\#<0,\qquad
+ V_\#(\rho_\#)=\nu_\#>\gamma_\#>0.
+ \label{con:canonical-release}
+\end{equation}
+\end{lemma}
+\begin{proof}
+While $L_\#=Z_\#-Y_\#>0$, $V_\#'=L_\#/2>0$.  If there were no
+force zero, $V_\#$ would eventually have a positive lower bound and
+$Y_\#$ would reach zero.  Before that point,
+$Z_\#(\rho)=-e^{-2\rho}+\int_0^\rho e^{-2(\rho-t)}Y_\#(t)\,dt<0$,
+which contradicts positive force at $Y_\#=0$.  Hence the first force
+zero is finite, occurs with $Y_\#=Z_\#<0$, and has $V_\#>0$.
+The identities
+$L_\#'=-Y_\#-2L_\#-V_\#$ and
+$L_\#''=-V_\#-2L_\#'-L_\#/2$ show that its derivative there is
+strictly negative: if it vanished, the second identity would make
+the force negative just before its first zero.  At the zero,
+$-L_\#'=V_\#+Z_\#=\nu_\#-\gamma_\#$.
+\end{proof}
+
+\begin{theorem}[Contact from a complete incoming state]
+\label{con:contact-release}
+For all sufficiently small $\delta$, every input \eqref{con:input}
+has the following contact passage. The constant $M_{\rm sl}$ is fixed
+independently of $\eps,\delta$.
+
+\smallskip\noindent
+\textup{(i) Compression to $w=M_{\rm sl}$.}
+Positive contact persists to the first descending section
+$w=u_r/\eps=M_{\rm sl}$. At this section,
+\begin{equation}
+ \begin{gathered}
+ L_{\rm sl}\ge\ell_a>0,\quad U'(s_{\rm sl})\le-g_a<0,\qquad
+ |s_{\rm sl}-T_\sigma|\le C(e+\tau),\\
+ |(Y,\sigma V_c,Z)(s_{\rm sl})-N_0(0)|\le Ce.
+ \end{gathered}
+ \label{con:M-admission}
+\end{equation}
+\smallskip\noindent
+\textup{(ii) Release and opening.}
+The passage then reaches its first release.
+There is a common bracket $0<r_-<R_0<r_+<R_*$ for the inherited first
+release.  In elapsed release time $\rho=(t-t_{\rm sl})/\eps$, set
+$v=\delta^{3/2}\widehat V$.  On every positive-contact prefix through
+the actual first force zero $R_\eps$,
+\begin{equation}
+ \begin{gathered}
+ |(Y,\widehat V,Z)-N_0|+|L-L_0|+|L'-L_0'|\le Ce,
+ \qquad L_0=Z_0-Y_0,\\
+ |R_\eps-R_0|+
+ |(Y,\widehat V,Z)(R_\eps)-N_0(R_0)|\le Ce,
+ \qquad R_\eps\in(r_-,r_+).
+ \end{gathered}
+ \label{con:release-comparison}
+\end{equation}
+At release, for common positive constants,
+\begin{equation}
+ y_L=z_L<0,\quad v_L>0,\quad
+ w_b\le u_{r,L}/\eps\le W_*,\qquad
+ v_L+z_L/\eps\ge \kappa_{\rm op}\delta^{3/2}>0.
+ \label{con:opening}
+\end{equation}
+\reservestatementspace
+\smallskip\noindent
+\textup{(iii) Physical state, time and leading increments.}
+Reconstruct a reference physical release in the same inverse chart by
+\begin{equation}
+ p_{L,0}=\pi\delta,\quad u_{r,L,0}=0,\quad u_{0,L,0}=r,
+ \quad y_{L,0}=z_{L,0}=0,\quad
+ v_{L,0}=\delta^{3/2}V_0(R_0).
+ \label{con:physical-reconstruction}
+\end{equation}
+With $\Delta$ denoting actual minus reconstructed values,
+\begin{equation}
+ |\Delta p_L|+|\Delta b_L|\le Ce\delta,\qquad
+ |\Delta u_{r,L}|+|\Delta v_L|\le Ce\delta^{3/2},\qquad
+ |y_L|+|z_L|\le Ce\delta^3.
+ \label{con:physical-errors}
+\end{equation}
+For $t_{L,0}=t_{\rm in}+(\eps/\sigma)T_\sigma+\eps R_0$,
+\begin{equation}
+ |t_{L,\eps}-t_{L,0}|
+ \le C\{(\eps/\sigma)(e+\tau)+\eps e\}\le C(C_0)\eps.
+ \label{con:release-clock}
+\end{equation}
+The entire physical contact prefix satisfies
+\begin{equation}
+ \begin{gathered}
+ t_L-t_{\rm in}\le C\eps/\sqrt\delta,\quad
+ \sup|\cX-G|\le C\delta,\quad
+ \sup|p-\pi\delta|\le Ce\delta,\quad \dot p<-a/2,\\
+ \sup(|y|+|z|)\le C\eps\delta^{3/2},\quad
+ \sup|v|\le C\delta^{3/2},\qquad
+ 0\le\int_{t_{\rm in}}^t\lambda_N\,dt\le C\delta.
+ \end{gathered}
+ \label{con:prefix}
+\end{equation}
+Finally, using the actual normalized inputs in \eqref{con:amplitude},
+\begin{equation}
+ \begin{aligned}
+ v_L&=\delta^{3/2}\{A_s\nu_\#+O(\sigma)\},&
+ y_L=z_L&=\eps\delta^{3/2}\{-A_s\gamma_\#+O(\sigma)\},\\
+ q_L-q_{\rm in}&=(\eps/\sigma)
+       \{\xi_s\dot q_{\rm in}+O(\sigma)\},&
+ p_L-p_{\rm in}&=(\eps/\sigma)\{-a\xi_s+O(\sigma)\},\\
+ \dot q_L-\dot q_{\rm in}&=\delta(S/h)(-5/4,1)^T+O(\delta^{3/2}),&
+ b_L-b_{\rm in}&=a\beta\delta S/h+O(\delta^{3/2}).
+ \end{aligned}
+ \label{con:leading-data}
+\end{equation}
+These estimates compare values of the actual compliant event map.
+\end{theorem}
+
+\subsection{Proof of the contact estimates}
+
+\begin{proof}[Proof of Theorem~\ref{con:contact-release}]
+We first obtain positive-force margins for the reference, then compare
+the physical compression up to a fixed small slip and along its
+descending tail.  The tail force enters velocity directly and position
+after one time integration; both of its time moments are needed.
+We then project out the stiff slip derivative during release, retaining
+the inherited displacement and memory, and reconstruct the physical
+state and its leading increments.
+
+\paragraph{Step 1: Positive reference compression.}
+The reference filter gives the exact formulas
+\begin{equation}
+ \begin{aligned}
+ R_f:=\bar Z-\bar Y/2
+ &=\tfrac12\sigma\zeta e^{-2s/\sigma}
+   -\tfrac12\int_0^s e^{-2(s-t)/\sigma}\bar V_c(t)\,dt,\\
+ \bar L(s)&=-\tfrac12\sigma\zeta(1-e^{-2s/\sigma})
+ -\tfrac12\int_0^s(1+e^{-2(s-t)/\sigma})\bar V_c(t)\,dt.
+ \end{aligned}
+ \label{con:filter}
+\end{equation}
+The kernel mass is at most $\sigma/2$.  Its integral form and
+Gronwall's inequality bound the reference on every fixed finite
+interval, uniformly in $\sigma$, and give $R_f=O(\sigma)$.
+Substituting $\bar L=-\bar Y/2+R_f$ gives an $O(\sigma)$ comparison
+with the zero-scale system in \eqref{con:amplitude}.  Compactness of
+$\mathcal K$ gives $0<T_-\le\xi_s\le T_+$, $A_s\ge A_->0$, and a
+common positive-force neighborhood of arrest.
+
+Positivity close to the initial force zero needs a separate estimate.
+Equation~\eqref{con:filter} first gives $|\bar L(s)|\le Cs$, hence
+$|\bar V_c(s)+Q|\le Cs^2$.  Choose a common small $s_0$ such that
+$\bar V_c\le-Q+\eta$ there, with
+$\eta\le\min(Q_-/2,\gamma_0/2)$.  The second formula then yields
+\begin{equation}
+ \bar L(s)\ge
+ \min\{(Q-\eta)/2,Q-\eta-\zeta\}s
+ \ge\min\{Q_-/4,\gamma_0/2\}s\quad(0<s\le s_0).
+ \label{con:initial-positive}
+\end{equation}
+Indeed, a negative coefficient of $\sigma(1-e^{-2s/\sigma})$ is
+bounded using $1-e^{-2s/\sigma}\le2s/\sigma$; a positive one is
+discarded.  Beyond $s_0$ the reduced positive force and the
+$O(\sigma)$ comparison exclude a force zero up to a fixed extension
+past arrest.  Thus $\bar L\ge\kappa_Ls$ on the required interval, for a common
+$\kappa_L>0$, and
+$\bar U'=-h_{\rm in}\bar L$ gives a unique first arrest with
+$T_\sigma=\xi_s+O(\sigma)$.
+
+The exact invariant gives
+$\bar V_c(T_\sigma)=-Q+\pi S/h_{\rm in}$.  An amplitude calculation
+which does not divide by $\pi$ is useful here.  Put
+$I(s)=\int_0^s\bar L\,dt$, so that
+$\bar V_c=-Q+\pi I$, $I'=-\bar Y/2+R_f$ and
+$I(T_\sigma)=S/h_{\rm in}$.  Integrating
+$2\bar Y\bar V_c=-4\bar V_c I'+4\bar V_cR_f$ gives
+\begin{equation}
+ \bar Y(T_\sigma)^2=\sigma^2\zeta^2+
+ \frac{4QS}{h_{\rm in}}-\frac{2\pi S^2}{h_{\rm in}^2}
+ +4\int_0^{T_\sigma}\bar V_cR_f\,ds.
+ \label{con:amplitude-identity}
+\end{equation}
+The force margin selects its negative square root.  Since
+$h_{\rm in}=h+O(\delta)$,
+\begin{equation}
+ N_0(0)=A_s(-2,0,-1)+O(\sigma).
+ \label{con:inherited-amplitude}
+\end{equation}
+Choose $0<u_a<S_-/4$ small enough that the entire reference segment
+$-u_a/2\le\bar U\le u_a$ lies in the above arrest neighborhood and
+has $\bar L\ge4\ell_a>0$, $-\bar U'\ge m_a>0$.  This choice uses
+the compact strict margin in \eqref{con:input-compact}.
+The fixed profile conditions give, on the mechanical chart,
+\begin{equation}
+ H_\theta(w,X):=\mu A\Phi_\theta(w)-B
+ \ge\kappa_H:=\mu A_{\min}\varkappa_{\rm sl}>0
+ \quad(w\ge M_{\rm sl}).
+ \label{con:tail-margin}
+\end{equation}
+Here $A_{\min}>0$ is the common lower bound of $A$ on the chart;
+monotonicity and (F3) give
+$\Phi_\theta(w)-B/(\mu A)\ge\varkappa_{\rm sl}$.
+
+\paragraph{Step 2: Compression to the small-slip section.}
+On positive contact the physical equations give exactly, with
+$F_\theta=1-\Phi_\theta$,
+\begin{equation}
+ \begin{aligned}
+ Y'&=V_c,&\sigma Z'&=Y-2Z,\\
+ V_c'&=(p/\delta)L+(e/\delta)b
+       +(\mu B/\delta)F_\theta(U/\tau)L,\\
+ U'&=ea_T-h(\phi)L+\mu AF_\theta(U/\tau)L,
+ \qquad h(\phi)=\mu A-B.
+ \end{aligned}
+ \label{con:actual-compression}
+\end{equation}
+Here $\lambda_N=e^{-1}L$, $dt/ds=e\delta$ and
+$u_r/\eps=U/\tau$.  The global memory row is instead
+$\sigma Z'=-Z-[Z-Y]_+$; we use the displayed contact row only up to
+its first force zero.  At the initial point $L'(0)=Q-\zeta>0$.
+
+For mechanical increments set
+$\chi=(q-q_{\rm in})/(e\delta)$ and
+$\mathcal V=(\dot q-\dot q_{\rm in})/\delta$.  The exact rows are
+\begin{equation}
+ \chi'=\dot q_{\rm in}+\delta\mathcal V,\qquad
+ \mathcal V'=eM^{-1}f+
+ M^{-1}(Q_N-\mu Q_T\Phi_\theta(U/\tau))L.
+ \label{con:mechanical-increments}
+\end{equation}
+On a bounded stopped interval with bounded $\int L$, these give
+$\chi,\mathcal V=O(1)$.  Smoothness of the physical chart then gives
+\begin{equation}
+ |b|\le C\delta,\quad |a_T|\le C,\qquad
+ |p-\pi\delta|+|h(\phi)-h_{\rm in}|\le Ce\delta s.
+ \label{con:coefficient-drift}
+\end{equation}
+In particular $p/\delta$ is allowed to vary by $O(e)$.
+
+First stop at $U=u_a$, positive-time force zero, a normal or mechanical
+box boundary, or the reference section bracket endpoint.  On this
+interval $U\ge u_a$, and (F4) gives
+$\delta^{-1}F_\theta(U/\tau)\le
+C\delta^{-1}e^{-\alpha u_a/\tau}\le C\tau^2/\delta=Ce^2\le Ce$.
+Subtract \eqref{con:reference} from \eqref{con:actual-compression}.
+The error has zero initial data and satisfies
+\begin{equation}
+ \begin{gathered}
+ E_Y'=E_{V_c},\quad \sigma E_Z'=E_Y-2E_Z,\quad
+ E_{V_c}'=\pi E_L+R_V,\quad E_U'=-h_{\rm in}E_L+R_U,\\
+ R_V=\frac{p-\pi\delta}{\delta}L+\frac e\delta b
+       +\frac{\mu B}{\delta}F_\theta(U/\tau)L,\qquad
+ R_U=ea_T-(h(\phi)-h_{\rm in})L+\mu AF_\theta(U/\tau)L.
+ \end{gathered}
+ \label{con:compression-error}
+\end{equation}
+Both residuals are $O(e)$.  The zero-data filter has mass at most
+$1/2$, so integration and Gronwall give
+\begin{equation}
+ |E_{V_c}(s)|+|E_U(s)|\le Ces,\qquad
+ |E_Y(s)|+|E_Z(s)|+|E_L(s)|\le Ces^2.
+ \label{con:initial-error}
+\end{equation}
+The quadratic force error and \eqref{con:initial-positive} exclude
+an immediate force zero; the later reference force margin excludes
+the others.  The estimates strictly improve the normal boxes,
+and \eqref{con:mechanical-increments} improves the mechanical boxes.
+The reference section bracket and its negative slip slope force the
+first descending section $U=u_a$.  There is no earlier $M_{\rm sl}$ section,
+since $u_a/\tau>M_{\rm sl}$ for small $\delta$.
+
+Let $s_a,\bar s_a$ be these actual and reference section times.
+They satisfy
+\begin{equation}
+ |s_a-\bar s_a|\le Ce,\qquad
+ E_a=(Y,Z,V_c,U)(s_a)-
+       (\bar Y,\bar Z,\bar V_c,\bar U)(\bar s_a)=O(e),
+ \qquad E_{a,U}=0.
+ \label{con:section-error}
+\end{equation}
+Only the reference is moved in this comparison.  Its derivative is
+bounded: for example
+$\bar Z'=-\zeta e^{-2s/\sigma}
++\sigma^{-1}\int_0^s e^{-2(s-t)/\sigma}\bar V_c(t)\,dt=O(1)$.
+
+\paragraph{Step 3: The descending friction tail.}
+On the tail compare times $s_a+\rho$ and $\bar s_a+\rho$.
+Put $w=U/\tau$ and $G_s=H_\theta(w,X)L-ea_T$.
+Stop at the first $w=M_{\rm sl}$, $L=\ell_a$, $G_s=g_a$, a box boundary,
+or the reference endpoint $\bar U=-u_a/2$.  Choose
+$0<g_a<\kappa_H\ell_a/4$ and then reduce $\delta$.  On every stopped
+prefix,
+\begin{equation}
+ U'=-G_s,\quad w'=-G_s/\tau,\qquad
+ G_s\ge(\kappa_H/2)L,\quad G_s\ge g_a,
+ \quad L/G_s\le2/\kappa_H.
+ \label{con:actual-tail}
+\end{equation}
+Integrating with respect to $U$ first gives $\int L\,d\rho\le C$.
+Consequently \eqref{con:mechanical-increments} and
+\eqref{con:coefficient-drift} hold with constants independent of the
+as yet unchosen unweighted $V_c$ box.
+
+For each stopped endpoint $\rho_b$, write $w_b'=w(\rho_b)\ge M_{\rm sl}$.
+The actual decreasing slip gives
+$d\rho=-\tau\,dw/G_s$ and
+$\rho_b-\rho(w)\le(\tau/g_a)(w-w_b')$.  Hence (F4) gives the two
+actual tail moments
+\begin{equation}
+ \begin{aligned}
+ I_0&=\int_0^{\rho_b}F_\theta(w)L\,d\rho
+       \le C\tau\int_{w_b'}^\infty e^{-\alpha w}\,dw\le C\tau,\\
+ I_1&=\int_0^{\rho_b}(\rho_b-\rho)F_\theta(w)L\,d\rho
+       \le C\tau^2\int_{w_b'}^\infty(w-w_b')e^{-\alpha w}\,dw
+       \le C\tau^2.
+ \end{aligned}
+ \label{con:tail-moments}
+\end{equation}
+These are changes of variable on the actual orbit.
+
+Let $S_\sigma$ be the propagator of the homogeneous system in
+\eqref{con:compression-error}, ordered as $(Y,Z,V_c,U)$.
+The filter mass and an integral Gronwall estimate give
+$\|S_\sigma(\rho)\|\le C$ on the fixed horizon.  For
+the column $v^{(c)}=S_\sigma(\rho)e_{V_c}$ the same argument, now with
+$v_Y^{(c)}(0)=v_Z^{(c)}(0)=v_U^{(c)}(0)=0$, gives
+$|v_{V_c}^{(c)}|\le C$ and
+$|v_Y^{(c)}|+|v_Z^{(c)}|+|v_U^{(c)}|\le C\rho$;
+also $S_\sigma(\rho)e_U=e_U$.  Duhamel's formula retains
+$S_\sigma(\rho_b)E_a$.  Applying these bounds to the two residual
+rows in \eqref{con:compression-error} gives
+\begin{equation}
+ \begin{aligned}
+ |E_{V_c}|&\le C(e+\delta^{-1}I_0)\le C(e+e/\sigma),\\
+ |\sigma E_{V_c}|+|E_Y|+|E_Z|+|E_U|
+ &\le C(e+\sigma\delta^{-1}I_0+\delta^{-1}I_1+I_0)\le Ce.
+ \end{aligned}
+ \label{con:weighted-tail}
+\end{equation}
+Here $\sigma\tau/\delta=e$, $\tau^2/\delta=e^2$, and $\tau\le e$.
+The first line need not be $O(e)$.
+
+The second line strictly improves the force and normal boxes, and
+\eqref{con:actual-tail} improves the descent margin.  The preceding
+impulse bound improves the mechanical boxes.  We may now choose the
+unweighted velocity radius larger than the reference bound plus
+$C(1+C_0)$, and reduce $\delta$ last.  This excludes its boundary
+by the first line.  If no $M_{\rm sl}$ event occurred by the reference endpoint,
+actual $U\ge\tau M_{\rm sl}>0$ would contradict $\bar U=-u_a/2$ and
+$E_U=O(e)$.  Thus $M_{\rm sl}$ is the first descending crossing and no release
+has preceded it.  The reference negative slip slope gives
+$|s_{\rm sl}-T_\sigma|\le C(e+\tau)$; moving only that reference gives
+\eqref{con:M-admission}.  All preceding estimates hold on every
+prefix, and $\int\lambda_N\,dt=\delta\int L\,ds\le C\delta$.
+
+\paragraph{Step 4: Projection through the first release.}
+
+By \eqref{con:inherited-amplitude} and Lemma~\ref{con:normal-opening},
+$N_0-A_sn_\#$ and its derivative are $O(\sigma)$ on a common finite
+interval.  Choose $r_-<\rho_\#<r_+<R_*$ so that, after reducing
+$\delta$, the inherited reference satisfies
+\begin{equation}
+ \begin{gathered}
+ L_0\ge m_{\rm pre}>0\ (0\le\rho\le r_-),\quad
+ L_0(r_+)\le-m_{\rm end}<0,\quad
+ L_0'\le-m_{\rm der}<0\ (r_-\le\rho\le r_+),\\
+ Y_0(R_0)=Z_0(R_0)\le-m_Y,
+ \quad V_0(R_0)\ge m_V,\quad
+ V_0(R_0)+Z_0(R_0)\ge m_{\rm der}.
+ \end{gathered}
+ \label{con:reference-release-margins}
+\end{equation}
+This proves that $R_0$ is the first root and $R_0=\rho_\#+O(\sigma)$.
+
+In actual release variables the exact positive-contact equations are
+\begin{equation}
+ \begin{aligned}
+ Y'&=\widehat V,& Z'&=Y-2Z,\\
+ \widehat V'&=eb+(C-\mu B\Phi_\theta(w))L,&
+ w'&=a_T+e^{-1}(B-\mu A\Phi_\theta(w))L,
+ \qquad w=u_r/\eps.
+ \end{aligned}
+ \label{con:actual-release}
+\end{equation}
+At $\rho=0$, $\widehat V=\sigma V_c(s_{\rm sl})$ and $w=M_{\rm sl}$.
+Stop at first force zero, $R_*$, or a normal or mechanical boundary.
+For $w\ge M_{\rm sl}$ the friction term is nonpositive, so
+$w\le W_*:=M_{\rm sl}+R_*\sup|a_T|$.  Since $B,a_T>0$ and
+$\Phi_\theta(0)=0$, a common $w_b\in(0,M_{\rm sl})$ satisfies
+$B-\mu A\Phi_\theta(w)\ge B_{\min}/2$ on $[0,w_b]$.
+The vector field there points upward, and hence $w_b\le w\le W_*$
+throughout the stopped interval.
+
+Set $\vartheta=B/A$ and $P=\widehat V-e\vartheta w$.
+The variable coefficients must be differentiated before estimating.
+The identity $C-B^2/A=1/2$ gives exactly
+\begin{equation}
+ \widetilde N=(Y,P,Z),\qquad
+ \widetilde N'=A_D\widetilde N+eF,\qquad
+ F=(\vartheta w,b-\vartheta a_T-\vartheta'w,0),
+ \quad \vartheta'=\eps\vartheta_\phi\dot\phi.
+ \label{con:projection}
+\end{equation}
+No derivative of $w$ remains.  On the stopped boxes $F$ is bounded.
+The original mechanical equation also gives, for every such prefix,
+\begin{equation}
+ |q-q_{\rm sl}|\le C\eps,\qquad
+ |\dot q-\dot q_{\rm sl}|\le C\eps+
+ C\delta^{3/2}\int_0^\rho L\,dt
+ \le C(\eps+\delta^{3/2}),
+ \label{con:release-mechanics}
+\end{equation}
+which strictly improves the mechanical box.
+The initial error is
+$\widetilde N(0)-N_0(0)=
+\{(Y,\widehat V,Z)(0)-N_0(0)\}-(0,e\vartheta(0)M_{\rm sl},0)=O(e)$.
+Duhamel's formula in \eqref{con:projection}, followed by
+$\widehat V=P+e\vartheta w$, proves the first line of
+\eqref{con:release-comparison} on every stopped prefix.  For the force
+derivative use $L'=Y-2Z-P-e\vartheta w$, which again contains no $w'$.
+This strictly improves the normal box.
+
+The first margin in \eqref{con:reference-release-margins} excludes
+an earlier force zero before $r_-$.  In the stopped bracket
+$L'\le-m_{\rm der}/2$; if positive contact persisted to $r_+$, its
+negative reference endpoint would give a contradiction.  The actual
+first zero is therefore in $(r_-,r_+)$, and
+$|L_0(R_\eps)|\le Ce$ gives $|R_\eps-R_0|\le Ce$.
+Moving only the reference proves the remaining event comparison.
+At this zero $Y=Z$ and
+$-L'=\widehat V+Z$, so
+$\dot g=v+z/\eps=\delta^{3/2}(\widehat V+Z)>0$.
+This proves \eqref{con:opening}, including the negative memory term.
+
+\paragraph{Step 5: Physical reconstruction and leading increments.}
+The physical reconstruction in \eqref{con:physical-reconstruction}
+uses zero physical displacement and memory, while
+\eqref{con:inherited-release} retains their complete scaled values.
+We have $u_{r,L}=\eps w=O(e\delta^{3/2})$ and
+$y_L=z_L=O(\eps\delta^{3/2})=O(e\delta^3)$.
+The $p$ drift through release is $O(\eps)$, and the common inverse
+chart gives
+$|\Delta b_L|\le C(|\Delta p_L|+|\Delta u_0|+|\Delta y_L|+
+|\Delta v_L|)$, with $\Delta u_0=\Delta u_r$.
+Thus \eqref{con:physical-errors} follows, with $b_L$ evaluated at
+the outgoing state in both passages.  The independent section and
+release clocks give \eqref{con:release-clock}.
+
+The compression increments, its bounded horizon and impulse, and
+\eqref{con:release-mechanics} prove every estimate in
+\eqref{con:prefix}; the release impulse is $O(\delta^{3/2})$.
+The velocity bound uses $|v|\le C\delta^2$ in compression and the
+release scale thereafter.  The full state includes the continuous
+memory coordinate at the joining point.  Finally
+$\dot p=p_\phi\omega=-a+O(\delta)$ throughout this same prefix.
+
+Integrating the compression slip row, using $U(s_{\rm sl})=\tau M_{\rm sl}$,
+\eqref{con:tail-moments} and \eqref{con:coefficient-drift}, gives
+\begin{equation}
+ \int_0^{s_{\rm sl}}L\,ds=S/h_{\rm in}+O(e),\qquad
+ \int_{t_{\rm in}}^{t_{\rm sl}}\lambda_N\,dt
+   =\delta S/h+O\{\delta(e+\delta)\}.
+ \label{con:compression-impulse}
+\end{equation}
+The discrepancy from saturated impulse is $\delta I_0=O(\delta\tau)$.
+The saturated direction at $G$ is $(-5/4,1)^T$ in generalized
+velocity, and $Q_{\rm sat}b(G)=a\beta$.
+The free-force impulse is $O(e\delta)$ and the release impulse is
+$O(\delta^{3/2})$.  These facts prove the velocity and $b$ rows of
+\eqref{con:leading-data}.  Integrating the configuration and $p$ rows,
+with $s_{\rm sl}=\xi_s+O(\sigma)$ and release duration $O(\eps)$, proves
+their rows.  The normal-state formulas in \eqref{con:leading-data} follow from
+\eqref{con:inherited-amplitude} and \eqref{con:release-comparison}.
+All constants, boxes and event brackets are chosen after the fixed
+classes and $C_0$, and the common scale cutoff is reduced last.
+\end{proof}
+
+\subsection{Parameter dependence of the contact reference}
+
+To differentiate the limiting return, we let the initial displacement
+and memory of the linear contact reference vary independently.
+
+\begin{lemma}[Parameter dependence of the limiting contact]
+\label{con:reference-regularity}
+In \eqref{con:reference}, replace $h_{\rm in}$ by an independent
+$h_0$ near $h$ and the initial data by $(y_0,z_0,-Q,S)$.
+On a neighborhood of the compact data
+$(0,\pi,h,0,0,Q,S)$, the first arrest, its inherited normal state,
+and the first inherited release have $C^2$ extensions in
+$(\sigma,\pi,h_0,y_0,z_0,Q,S)$ to $\sigma=0$, with uniform bounds
+through order two and continuous dependence on $\lambda$.
+If $\mathcal Q=V_0(R_0)$ denotes the release velocity, then
+\begin{equation}
+ \mathcal Q=
+ \nu_\#\sqrt{QS/h_0-\pi S^2/(2h_0^2)}
+       +O(\sigma+|y_0|+|z_0|).
+ \label{con:reference-amplitude-regularity}
+\end{equation}
+The same error bound holds after one derivative in
+$(\pi,h_0,Q,S)$; derivatives in $(\sigma,y_0,z_0)$ are uniformly
+bounded.  Compression on this auxiliary neighborhood is the signed
+linear continuation: its force need not be positive near time zero.
+Its arrest is the first zero of $U$, and the subsequent inherited
+release is the first zero of its normal force.  No physical closing
+condition is imposed on the auxiliary initial data.
+\end{lemma}
+\begin{proof}
+Set $R=\bar Z-\bar Y/2$.  The normal compression rows become
+\[
+ (Y,V,R)'=(V,-\pi Y/2+\pi R,-V/2-2R/\sigma).
+\]
+A slow invariant plane $R=mY+nV$ is determined by
+\[
+ 2m+\sigma\pi n(m-1/2)=0,\qquad
+ 2n+\sigma(m+\pi n^2+1/2)=0.
+\]
+The implicit function theorem gives analytic $m,n$, uniformly for
+$\pi$ in a neighborhood of its compact range, with
+$m=O(\sigma^2)$ and $n=-\sigma/4+O(\sigma^3)$.
+On this plane the matrix is
+$B_s=\left(\begin{smallmatrix}0&1\\-\pi/2+\pi m&\pi n\end{smallmatrix}\right)$.
+The remaining root is $\nu/\sigma$, where
+$\nu=-2+\sigma^2g$ and
+$\nu^2g+\pi(\nu+1)=0$.  Its eigenvector, normalized in the $R$ row,
+is $(-2\sigma^2g/\nu,-2\sigma g,1)^T$.
+Together with $(1,0,m)^T,(0,1,n)^T$ these columns form an analytic
+invertible matrix at $\sigma=0$.
+The exact solution thus consists of the analytic slow block
+$e^{B_ss}$ and a fast term proportional to $e^{\nu s/\sigma}$,
+with $\nu<-1$.  On every late interval $s\ge s_*>0$, that fast term
+and its derivatives of any fixed order extend flatly to zero.
+The slip row is integrated without dividing by $\pi$:
+$U'=h_0Y/2-h_0R$.  Its fast contribution contains
+$(\sigma/\nu)(e^{\nu s/\sigma}-1)$, which has the same smooth late
+extension.  No diagonalization of the slow block is required at
+$\pi=0$.
+
+At zero scale and $y_0=z_0=0$, the arrest has a common positive time
+and negative slip slope, by \eqref{con:amplitude}.  Its slip stays
+positive before a fixed arrest bracket.  Uniform convergence of the
+integrated solution on the whole preceding interval preserves this
+first-event property for the small independent perturbations.
+The implicit function theorem on the late bracket gives a $C^2$
+arrest and inherited state.  Lemma~\ref{con:normal-opening} and the
+linear formula $e^{A_D\rho}N_0(0)$ give the same conclusion for its
+first release, with the positive-force segment and transverse bracket
+preserved.  At $\sigma=y_0=z_0=0$ its velocity is exactly the first
+term of \eqref{con:reference-amplitude-regularity}.
+The bounded second derivatives and the mean value formula give both
+the value and the stated first-derivative bounds.
+\end{proof}
+
+For subsequent prepared touchdowns set
+\begin{equation}
+ \pi=-a,\quad Q=r_0W,\quad S=d_\lambda U^r,\quad
+ r_0=c_\lambda/3,\qquad
+ W=1+\delta^{1/3}\eta_W,\quad
+ U^r=1+\delta^{1/3}\eta_U.
+ \label{con:native-contact}
+\end{equation}
+The prepared cone retains its complete dependent acceleration
+coordinate, $|\zeta|\le Z_*$ and $r_0W-\zeta\ge\gamma_0$;
+its inverse is taken at $u_0=d_\lambda\delta U^r+r$ with
+$0\le r\le A_{\rm off}\delta^{4/3}$.
+These hypotheses give \eqref{con:input}.  The reference is exactly
+\eqref{con:reference} with its finite $h_{\rm in}$ and complete
+initial memory, so \eqref{con:physical-errors} applies to this same
+input and offset.
+For the tuned limiting reference define
+\begin{equation}
+ q_\lambda=\nu_\#
+ \sqrt{r_0d_\lambda/h+ad_\lambda^2/(2h^2)}>0.
+ \label{con:q-lambda}
+\end{equation}
+The analytic inverse of $p(\phi_\delta)=-a\delta$ gives
+$h_\delta=h+O(\delta)$ and $\delta h_\delta'=O(\delta)$.
+Lemma~\ref{con:reference-regularity}, restricted to
+$\sigma=\delta^{1/2}$, $h_0=h_\delta$,
+$y_0=z_0=\sigma\zeta$ and \eqref{con:native-contact}, gives
+\begin{equation}
+ \mathcal Q=q_\lambda+O_{C^1_*}(\delta^{1/3}),\qquad
+ |D_\xi\mathcal Q|\le C\delta^{1/3},\qquad
+ \xi=(\zeta,\eta_U,\eta_W).
+ \label{con:weighted-contact}
+\end{equation}
+Here $C^1_*$ uses $\delta\partial_\delta$ and $D_\xi$ on any fixed
+bounded auxiliary fibre set.  The chain includes both initial memory
+coordinates: its radial part is
+$(\sigma/2)\partial_\sigma+
+\delta h_\delta'\partial_{h_0}+
+(y_0/2)\partial_{y_0}+(z_0/2)\partial_{z_0}$, together with
+$\delta\partial_\delta Q$ and $\delta\partial_\delta S$ from
+\eqref{con:native-contact}.  Thus the reference is defined on the
+open neighbourhood needed for fibre differentiation, even where
+physical closing is not imposed.  The free-flight construction below
+will establish the complete weighted return factorization.
+
+The first physical touchdown uses the wider offset range
+$\delta=\sqrt\eps$, $r=k\delta$. Its complete input and the
+strict signed arrest margin are verified in
+Proposition~\ref{prep:first-flight}; later prepared inputs are
+verified in Section~\ref{sec:detuned-return}.

@@ -1,0 +1,383 @@
+\section{Selection by the residual entrance phase}
+\label{sec:contact-selection}
+
+Section~\ref{sec:graph} derives the entrance phase and its actual
+same-index accuracy; Section~\ref{sec:physical-paths} proves convergence
+and realization of the complete ordered paths. We now compare the
+surviving entrance difference with the actual fixed-angle stopping
+window. This gives one selection law, followed by its belt and profile
+applications.
+
+Fix $\lambda$, a sufficiently small $0<s\le s_0$, and put
+\[
+ A_0=9/32,\qquad \rho_c=3/4,\qquad
+ S_s=\mathcal S_\lambda(s)>0,\qquad d_*=F_\lambda^{-1}(s).
+\]
+The entrance constant $\chi_\lambda(\mathfrak a)$ is defined in
+\eqref{sel:chi}; it is continuous and bounded on the prescribed compact
+auxiliary classes.
+
+\subsection{Selection by the entrance constant}
+
+\begin{proposition}[Selection by the entrance constant]
+\label{sel:threshold-selection}
+\label{sel:auxiliary-chi}
+Under the standing hypotheses the following assertions hold.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item Let $\mathfrak K$ be any nonempty compact auxiliary class within
+the prescribed classes. For any $\chi_*\in\R$, define
+\begin{equation}
+ \eps_m(\chi_*)
+ =\exp\{-A_0^{-1}\rho_c^{-m}S_s+A_0^{-1}\chi_*\},
+ \qquad j=m+3.
+ \label{sel:threshold-sequence}
+\end{equation}
+This sequence strictly decreases to zero. For every fixed
+$\mathfrak a\in\mathfrak K$ with
+$\chi_\lambda(\mathfrak a)\ne\chi_*$, its eventual touchdown
+count and its terminal-pair and ordered-path limits are
+\[
+\begin{array}{c|c|c|c}
+ &N_s&\text{terminal pair}&\text{ordered path}\\ \hline
+ \chi_\lambda(\mathfrak a)<\chi_* &j&(d_*,3)
+   &\cW_{\lambda,\nu,s}(s,0)\\
+ \chi_\lambda(\mathfrak a)>\chi_* &j+1&(s,2)
+   &\cW_{\lambda,\nu,s}(s,2).
+\end{array}
+\]
+For every fixed $\Delta_\chi>0$, the index conclusions hold
+simultaneously for all sufficiently large $m$, and the parameter,
+ordered-path and Hausdorff limits are uniform, on each of the
+compact subclasses
+\[
+ \{\mathfrak a\in\mathfrak K:
+           \chi_\lambda(\mathfrak a)\le\chi_*-\Delta_\chi\},
+ \qquad
+ \{\mathfrak a\in\mathfrak K:
+           \chi_\lambda(\mathfrak a)\ge\chi_*+\Delta_\chi\}.
+\]
+Each incoming datum is compared with its own arc $I_{\lambda,\nu}$.
+No conclusion at equality is asserted.
+\item For any two fixed auxiliary labels
+$\mathfrak a_1,\mathfrak a_2$ in the prescribed classes with
+$\chi_\lambda(\mathfrak a_1)\ne\chi_\lambda(\mathfrak a_2)$,
+there is a positive compliance threshold, depending on this fixed
+pair, below which their two first section times cannot both occur
+after touchdown and at or before its following release.
+In particular there is no common compliance sequence selecting
+contact interiors for both labels, either in terminal parameters or
+in ordered paths, even at different phases.
+
+\item Suppose that, for a fixed label $\mathfrak a_0$ and
+$0<\alpha_0<2$, a sequence $\eps_m\downarrow0$ satisfies
+\[
+ f_{\eps_m}^{\mathfrak a_0}
+ \longrightarrow\cW_{\lambda,\nu_0,s}(s,\alpha_0)
+ \qquad\hbox{in }\dF.
+\]
+Along this same given sequence, every fixed label $\mathfrak a$ with
+unequal entrance constant has the following limits:
+\[
+\begin{array}{c|c}
+ &\text{terminal pair; ordered path}\\ \hline
+ \chi_\lambda(\mathfrak a)<\chi_\lambda(\mathfrak a_0)
+   &(d_*,3);\quad\cW_{\lambda,\nu,s}(s,0)\\
+ \chi_\lambda(\mathfrak a)>\chi_\lambda(\mathfrak a_0)
+   &(s,2);\quad\cW_{\lambda,\nu,s}(s,2).
+\end{array}
+\]
+This assertion uses the given reference sequence; it makes no
+claim about its touchdown count. The corresponding Hausdorff image
+convergence holds, and each path retains its own incoming arc
+$I_{\lambda,\nu}$.
+Equality of the entrance constants is necessary for common interior
+contact selection; its sufficiency is not determined by these estimates.
+\end{enumerate}
+\end{proposition}
+
+Taking $\chi_*>\max_{\mathfrak K}\chi_\lambda$ or
+$\chi_*<\min_{\mathfrak K}\chi_\lambda$ gives explicit common
+sequences for the admission or release endpoint, respectively.
+The threshold need not be attained by a label. These sequences use
+the exact phase at $s$, as the free-target sequence in
+Theorem~\ref{thm:common-free} uses the exact phase at its target.
+The scale comparison is
+\[
+ \eps\ll1/\log(1/\eps)\ll1:
+\]
+the retained entrance separation vanishes, but exceeds the actual
+contact stopping window. Figure~\ref{fig:selection-mechanism} shows
+the retained phase gap and the actual stopping window.
+\input{figures/selection_mechanism}
+
+The following two lemmas connect this phase comparison to actual
+stopping events and complete path limits.
+
+\begin{lemma}[Identification of an interior contact target]
+\label{sel:path-identification}
+For fixed labels, if $f_{\eps_m}\to\cW(s,\alpha)$ in $\dF$, with
+$0<\alpha<2$, then
+$(d_{\eps_m},\alpha_{\eps_m})\to(s,\alpha)$.
+\end{lemma}
+\begin{proof}
+Every subsequence has a further convergent terminal-pair subsequence,
+by Theorem~\ref{thm:whole}. If its limit is $(d,\beta)\in\mathcal A_s$,
+that theorem gives the path limit $\cW(d,\beta)$.
+Ordered convergence preserves endpoints, hence
+$\cC_d(\beta)=\cC_s(\alpha)$.
+An interior free endpoint has positive normal gap; on contact
+$y=z=0$. The two free endpoints are contact admission and release.
+The contact endpoint map is injective on $[0,2]$ by
+\eqref{gr:contact-injectivity}, including the arrest point $\beta=1$.
+An interior contact point is neither admission nor release, so neither
+free endpoint nor the repeated admission representation can give this
+endpoint. The only possible pair is $(s,\alpha)$, proving convergence
+of the full parameter sequence.
+\end{proof}
+
+\begin{lemma}[Endpoint test at a fixed touchdown index]
+\label{sel:endpoint-test}
+Suppose that along a compliance sequence the actual $j$th touchdown
+is defined within the common input domain, $j\to\infty$, and
+$\delta_j\to s$. If $(\delta_j-s)/\eps\to+\infty$, then
+$N_s=j$, the terminal pair tends to $(d_*,3)$ and the ordered path
+tends to $\cW_{\lambda,\nu,s}(s,0)$. If
+$(\delta_j-s)/\eps\to-\infty$, then $N_s=j+1$, the pair tends
+to $(s,2)$ and the path tends to $\cW_{\lambda,\nu,s}(s,2)$.
+The index assertions are eventual. All limits, including the
+Hausdorff image limits, are uniform on a compact auxiliary class
+whenever the hypotheses are uniform there.
+\end{lemma}
+\begin{proof}
+The growth bounds give a positive lower bound for the predecessor
+base. Its complete state tends to the graph by
+Lemma~\ref{path:stopped-cascade}; the actual return and strict
+increase of $F_\lambda$ then give
+$\delta_{j-1}\to F_\lambda^{-1}(s)=d_*<s$.
+For a positive gap at index $j$, the predecessor contact stays below
+the section: its base remains a fixed distance below $s$ and its
+contact drift is $O_s(\eps)$. Since $\delta_j>s$, the first
+crossing is in its following free flight, before touchdown $j$.
+Thus $N_s=j$ and $d_\eps\to d_*$. The unique solution of the
+reference section equation at $d_*$ is the free endpoint $3$.
+
+For a negative gap, contact $j$ changes the base coordinate by
+$O_s(\eps)$, less than $s-\delta_j$, so it cannot reach the
+section. Its input is below the inner cutoffs and has all the
+admission margins. Apply the actual return estimate at this input;
+its next output tends to $F_\lambda(s)>s$. The first crossing is
+in that free flight, with $N_s=j+1$, $d_\eps\to s$ and
+$\alpha_\eps>2$. The reference section equation at $s$ has the
+unique solution $2$ on $[2,3]$. This use of the next return requires
+no iteration at its output.
+
+Strict decrease \eqref{path:strict-p} and the original-prefix
+control in Lemma~\ref{path:first-section} exclude earlier crossings.
+Theorem~\ref{thm:whole} gives the path limits, using
+$\cW(d_*,3)=\cW(s,0)$ at admission. For uniform limits, all base
+bounds, contact drifts and complete-state budgets above are uniform.
+A varying-label subsequence can have only the stated unique free
+root. Match any fixed finite number of last returns uniformly and
+put the entire preceding cascade in its common small ball, as in
+\eqref{path:whole-error}. The incoming prefix is compared with its
+own $I_{\lambda,\nu}$. This gives uniform ordered convergence, and
+\eqref{eq:ps5-hausdorff} gives the uniform image convergence.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{sel:threshold-selection}]
+Write $L=\log(1/\eps)$. For \textup{(i)}, the exponent in
+\eqref{sel:threshold-sequence} strictly decreases to $-\infty$, and
+$A_0L=\rho_c^{-m}S_s-\chi_*$. The graph chain started at the actual
+$\delta_3^{\mathfrak a}$ has phase at $j=m+3$ equal to
+\[
+ S_s+\rho_c^m\{\chi_\lambda(\mathfrak a)-\chi_*
+                         +r_{\mathfrak a}(\eps_m)\}.
+\]
+The bounded entrance constants and uniform remainder in
+\eqref{sel:uniform-entry-phase} put these graph bases uniformly
+near $s$; all bases through $j$ are eventually below $3s/2$.
+Lemma~\ref{sel:sharp-phase} therefore continues the actual events
+through this same index for every label and gives
+\begin{equation}
+ \mathcal S_\lambda(\delta_j^{\mathfrak a})-S_s
+ =\rho_c^m\{\chi_\lambda(\mathfrak a)-\chi_*
+                        +r_{\mathfrak a}(\eps_m)\}
+                       +O(\eps_m^{3/32}).
+ \label{sel:threshold-phase}
+\end{equation}
+Here $\rho_c^m\sim S_s/(A_0L)$ and the last error is
+$o(\rho_c^m)$. On either compact subclass separated from $\chi_*$
+by $\Delta_\chi>0$, the phase difference has the sign of
+$\chi_\lambda(\mathfrak a)-\chi_*$ and absolute value between
+$c\Delta_\chi\rho_c^m$ and $C\rho_c^m$, uniformly.
+Strict decrease and the two-sided Lipschitz bound
+\eqref{gr:phase-bilip} give the opposite signed base gap of the
+same order. Since $\eps_m=o(\rho_c^m)$,
+Lemma~\ref{sel:endpoint-test} proves all index, terminal-pair and
+path assertions, including uniformity and image convergence.
+Every fixed unequal label belongs to such a separated subclass.
+At equality the sign is not determined.
+
+For the event exclusion in \textup{(ii)}, suppose instead that
+two fixed unequal labels both stop during contact along a common
+sequence tending to zero, at touchdown indices $j_1,j_2$.
+The contact window \eqref{eq:contact-stop-location} and the sharp phase
+give, for $i=1,2$,
+\[
+ \rho_c^{j_i-3}
+       \{A_0L+\chi_\lambda(\mathfrak a_i)+o(1)\}
+                =S_s+O_s(\eps^{3/32}).
+\]
+Thus $\rho_c^{j_i-3}A_0L\to S_s$. Division gives
+$\rho_c^{j_1-j_2}\to1$; because the index difference is an integer,
+eventually $j_1=j_2=j$. Subtracting the two equations gives
+\[
+ \rho_c^{j-3}
+ \{\chi_\lambda(\mathfrak a_1)-\chi_\lambda(\mathfrak a_2)+o(1)\}
+                   =O_s(\eps^{3/32}).
+\]
+Multiplication by $L$ contradicts
+$\rho_c^{j-3}L\to S_s/A_0>0$ and the unequal constants.
+Consequently the exclusion holds below a positive threshold for
+this fixed pair. Interior terminal-pair limits eventually give
+actual contact stops; Lemma~\ref{sel:path-identification} gives
+the same implication for interior ordered-path limits.
+
+For \textup{(iii)}, the identification lemma
+puts the $\mathfrak a_0$ stops in contact. Set
+$j=N_s^{\mathfrak a_0}-1$. Then
+\[
+ \delta_j^{\mathfrak a_0}=s+O_s(\eps),\qquad
+ \rho_c^{j-3}\sim\frac{S_s}{A_0L}.
+\]
+For any other fixed $\mathfrak a$, the graph chain started at its
+own actual $\delta_3^{\mathfrak a}$ has phase at this index tending
+to $S_s$. Its bases through $j$ are eventually below $3s/2$.
+The continuation in Lemma~\ref{sel:sharp-phase} therefore compares
+the actual events through the same index, even after that
+trajectory's observation time. Subtracting the reference relation
+gives
+\begin{equation}
+ \mathcal S_\lambda(\delta_j^{\mathfrak a})-S_s
+ =\frac{S_s}{A_0L}
+   \{\chi_\lambda(\mathfrak a)
+       -\chi_\lambda(\mathfrak a_0)+o(1)\}
+       +O_{\mathfrak a,\mathfrak a_0,s}(\eps^{3/32}).
+ \label{sel:separation}
+\end{equation}
+The signed base gap is opposite to the fixed entrance difference
+and has size $\Theta(L^{-1})$. Lemma~\ref{sel:endpoint-test} gives
+the terminal-pair and ordered-path limits in \textup{(iii)}, with
+the stated incoming arcs and image convergence. It is applied at the
+index fixed by the reference label, not at the prescribed index of
+\textup{(i)}, so no touchdown-count formula for the given sequence is
+asserted.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:contact-selection}]
+Proposition~\ref{loc:entrance} constructs the entrance constant from
+the physical preparation and proves its continuity and boundedness.
+The same-index comparison and actual stopping-window estimates lead
+to Proposition~\ref{sel:threshold-selection}. Its part
+\textup{(ii)} gives assertion \textup{(i)} of the theorem, and
+part \textup{(iii)} gives assertion \textup{(ii)}. The common compact classes
+and each label's incoming arc are exactly those of
+Section~\ref{sec:model}.
+\end{proof}
+
+\begin{remark}[Phase and stopping resolution]
+\label{sel:criterion}
+The integer-index argument uses the following general hypotheses.
+Let $L=\log(1/\eps)$, $A>0$, $S_*>0$ and $0<\rho<1$.
+Suppose that at the relevant integer event indices
+$n\in\mathbb N_0$, for each fixed label $\eta$,
+\[
+ P_n(\eps,\eta)
+   =\rho^n\{AL+\chi(\eta)+r_\eta(\eps)\}+R_n(\eps,\eta),
+ \qquad r_\eta\to0,\quad R_n=o(L^{-1}),
+\]
+where the estimate for $R_n$ is uniform over all relevant event
+indices for that fixed label. If the event requires
+$|P_n-S_*|\le w_\eta(\eps)=o(L^{-1})$, two fixed labels with
+unequal $\chi$ cannot both meet it for arbitrarily small common
+$\eps$. The ratio and subtraction argument in the proof of
+Proposition~\ref{sel:threshold-selection}\textup{(ii)} applies with
+$n_i$ in place of $j_i-3$.
+The actual preparation, same-index accuracy and stopping window
+needed here were established in Sections~\ref{sec:local-results}
+and~\ref{sec:graph}.
+\end{remark}
+
+\input{sections/entrance_phase}
+
+\begin{proof}[Proof of Corollary~\ref{cor:belt-contact-selection}]
+For the exclusion, take $\mathfrak a_i=(k_i,\theta,\nu,\mathbf n)$.
+Proposition~\ref{sel:entrance-phase} gives unequal entrance constants
+for distinct fixed $k_i$; Proposition~\ref{sel:auxiliary-chi}\textup{(ii)}
+therefore gives the event, terminal-pair and ordered-path exclusions.
+For a given reference sequence, apply Proposition~\ref{sel:auxiliary-chi}\textup{(iii)} with
+$\mathfrak a_0=(k_0,\theta,\nu,\mathbf n)$ and
+$\mathfrak a=(k,\theta,\nu,\mathbf n)$. The strict increase of
+$\chi_{\lambda,\theta}(k)$ gives admission for $k<k_0$ and release
+for $k>k_0$, with the same incoming arc and the corresponding
+Hausdorff image convergence.
+\end{proof}
+
+\input{sections/profile_response}
+\input{sections/profile_selection}
+
+\begin{proof}[Proof of Corollary~\ref{cor:friction-profile-selection}]
+Construct the curve at $\lambda_c$ by
+Proposition~\ref{sel:profile-response}, choose the common model
+range for this compact class, and restrict it as in
+\eqref{sel:profile-local-order}. Fix the labels in the corollary.
+Equation~\eqref{sel:profile-entrance-order} shows that their entrance
+constant strictly decreases with $\vartheta$. Apply
+Proposition~\ref{sel:auxiliary-chi}\textup{(ii)} with
+$\mathfrak a_i=(k,\vartheta_i,\nu,\mathbf n)$.
+Part \textup{(ii)} gives both the terminal-pair and ordered-path
+exclusions. For the given reference sequence,
+Proposition~\ref{sel:auxiliary-chi}\textup{(iii)} gives admission for
+$\vartheta>\vartheta_0$ and release for $\vartheta<\vartheta_0$.
+Theorem~\ref{thm:whole} supplies actual reference sequences, and
+the same comparison gives Hausdorff image convergence.
+\end{proof}
+
+\subsection{Return count and contact-root asymptotics}
+
+\begin{corollary}[Double-logarithmic return count]
+\label{sel:return-count}
+The actual touchdown count satisfies
+\begin{equation}
+ N_s(\eps)=\frac{\log\log(1/\eps)}{\log(4/3)}+O_s(1).
+ \label{sel:count}
+\end{equation}
+\end{corollary}
+\begin{proof}
+The last input belongs to $[c_s,s)$, on which the positive phase
+has fixed positive upper and lower bounds. Formula
+\eqref{sel:sharp-phase-formula} at $n=N_s-1$ therefore gives
+$\rho_c^{N_s-4}L\asymp_s1$. Taking logarithms proves the claim.
+\end{proof}
+
+For any actual contact-root family $\eps_j$ with the complete label
+fixed, write $C_R=C_R(\lambda,k,\theta)$ and let
+$j\to\infty$ be the contact number. The same formula and
+\eqref{eq:contact-stop-location} give
+\begin{align}
+ \log(1/\eps_j)
+ &=\tfrac{32}{9}\rho_c^{-(j-3)}\mathcal S_\lambda(s)
+       -\tfrac{32}{9}\chi_\lambda(\mathfrak a)+o(1),\nonumber\\
+ \eps_j
+ &=K_\lambda^{32/3}C_R^{-8/3}
+ \exp\{-\tfrac{32}{9}\rho_c^{-(j-3)}\mathcal S_\lambda(s)\}
+ (1+o(1)).
+ \label{sel:contact-roots}
+\end{align}
+Indeed $\rho_c^{-(j-3)}=O(L_j)$, so division of the shadow error
+costs only $O(L_j\eps_j^{3/32})=o(1)$.
+Different interior phases share this asymptotic formula; their
+individual selection is supplied by the actual scan of
+Lemma~\ref{path:continuous-sweep}.
+
+

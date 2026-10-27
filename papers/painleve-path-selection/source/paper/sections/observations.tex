@@ -1,0 +1,257 @@
+\section{Observation rules for complete paths}
+\label{sec:observations}
+
+Three observation rules act differently on a complete ordered path.
+A downstream angle retains a whole contact and a following free prefix;
+first hitting the contact angle cuts at admission and is discontinuous
+at that path; a fixed local patch crossed strictly by the contact selects
+any prescribed interior prefix.
+
+\input{figures/observation_rules}
+
+\subsection{Common paths beyond a complete contact}
+
+Write $f_\eps^\tau$ for the actual path stopped at its first crossing
+of $p=-a\tau$, with the same normalization of its parameter interval
+as in \eqref{eq:ps5-stop}. The return curve and phase are unchanged. Since $F_\lambda(s)>s$,
+there is $s<\sigma\le s_0$ with $\sigma<F_\lambda(s)$ for every
+$0<s<s_0$. After a common restriction with $2s\le s_0$ and
+$F_\lambda(s)>2s$, one may take $\sigma=2s$.
+
+\begin{corollary}[Common paths beyond a complete contact]
+\label{cor:common-downstream-contact}
+Fix $\lambda$ and $0<s<\sigma\le s_0$ with
+$\sigma<F_\lambda(s)$. The common sequence \eqref{eq:ps5-common}
+with target $d=s$ satisfies
+\[
+ \sup_{(k,\theta,\nu,\mathbf n)}
+ \dF\bigl(f_{\eps_m(s)}^\sigma,
+  \cW_{\lambda,\nu,\sigma}(s,j_\sigma(s))\bigr)\longrightarrow0.
+\]
+The corresponding image convergence is uniform in $\dH$.
+Here $2<j_\sigma(s)<3$, so the common limiting path includes
+the entire contact $\cC_{\lambda,s}|_{[0,2]}$ and a positive-length
+prefix of its following free flight.
+\end{corollary}
+
+\begin{proof}
+The inequalities on $\sigma$ give
+$F_\lambda^{-1}(\sigma)<s<\sigma$. Thus $d=s$ is an interior
+free target for the $\sigma$ section. Apply
+Theorem~\ref{thm:common-free} at that section. Its sequence depends
+on $\lambda,d$, but not on the section, so it is precisely
+\eqref{eq:ps5-common} with $d=s$. Strict decrease of $p$ along
+the free flight and $s<\sigma<F_\lambda(s)$ give
+$2<j_\sigma(s)<3$. The flight duration $T_s$ is positive, and
+the retained free duration $(j_\sigma(s)-2)T_s$ is therefore positive.
+\end{proof}
+
+\subsection{First-angle truncation}
+
+For an oriented path $g:[0,1]\to\R^5$ that starts above and reaches
+the section $p=-as$, define its first-hit truncation by
+\[
+ \mathcal T_s g
+   =g|_{[0,\tau_s(g)]},\qquad
+ \tau_s(g)=\min\{q\in[0,1]:p(g(q))=-as\},
+\]
+reparameterized onto $[0,1]$. This operation is well defined in the
+zero-distance quotient of \eqref{eq:ps5-frechet}. Indeed, two
+zero-distance paths admit a common representation
+$g\circ a=\widetilde g\circ b$, with $a,b$ continuous
+nondecreasing surjections. Such a representation is obtained by
+taking a limit of the increasing comparison graphs and
+parameterizing the limiting monotone relation by the sum of its
+coordinates. At the first section
+point of the common representation, $a$ and $b$ reach the first
+section parameters of $g$ and $\widetilde g$, respectively.
+Restricting $a,b$ there gives a common representation of their
+prefixes. Thus only inserted pauses can differ, and the prefixes
+have zero ordered distance.
+
+\begin{corollary}[Discontinuity of first-hit truncation]
+\label{cor:first-hit-discontinuity}
+Under the same restrictions on $\lambda,s,\sigma$, fix a complete
+label $\mathfrak l=(\lambda,k,\theta,\nu,\mathbf n)$ and put
+\[
+ \Gamma=\cW_{\lambda,\nu,\sigma}(s,j_\sigma(s)).
+\]
+There is a sequence $\eps_\ell\downarrow0$ for this label such that
+\[
+ \begin{split}
+ \dF(f_{\eps_\ell}^\sigma,\Gamma)&\longrightarrow0,\\
+ \dF(\mathcal T_s f_{\eps_\ell}^\sigma,
+       \cW_{\lambda,\nu,s}(s,2))&\longrightarrow0,
+ \end{split}
+\]
+whereas
+$\mathcal T_s\Gamma=\cW_{\lambda,\nu,s}(s,0)$ in the ordered
+quotient. These two stopped limit paths have different endpoints.
+Consequently $\mathcal T_s$ is discontinuous at $\Gamma$, even on
+the subspace consisting of $\Gamma$ and actual paths stopped at
+the $\sigma$ section.
+\end{corollary}
+
+\begin{proof}
+Choose $d_\ell\uparrow s$ with
+$F_\lambda^{-1}(\sigma)<d_\ell<s$. Each $d_\ell$ is an interior
+free target for both the $s$ and $\sigma$ sections. The explicit
+sequences supplied by Theorem~\ref{thm:common-free} at these two
+sections are identical:
+\[
+ \eps_m(d_\ell)=
+ \exp\{-\tfrac{32}{9}(3/4)^{-m}\mathcal S_\lambda(d_\ell)\}.
+\]
+For each $\ell$, take $m_\ell$ sufficiently large that both
+ordered-path errors are below $1/\ell$, and also that
+$\eps_{m_\ell}(d_\ell)<1/\ell$ and, when $\ell>1$,
+$\eps_{m_\ell}(d_\ell)<\eps_{m_{\ell-1}}(d_{\ell-1})/2$.
+Write $\eps_\ell=\eps_{m_\ell}(d_\ell)$.
+
+Continuous dependence of the finite-scale return curves and their
+free-section roots gives
+\[
+ j_\sigma(d_\ell)\longrightarrow j_\sigma(s),\qquad
+ j_s(d_\ell)\longrightarrow j_s(s)=2.
+\]
+The complete-path continuity proved after
+\eqref{path:whole-error}, applied separately at the fixed sections
+$s$ and $\sigma$, therefore gives
+\[
+ \begin{split}
+ \cW_{\lambda,\nu,\sigma}(d_\ell,j_\sigma(d_\ell))
+      &\longrightarrow\Gamma,\\
+ \cW_{\lambda,\nu,s}(d_\ell,j_s(d_\ell))
+      &\longrightarrow\cW_{\lambda,\nu,s}(s,2).
+ \end{split}
+\]
+The two diagonal error bounds prove the two asserted actual limits.
+The actual $s$ section is reached before the $\sigma$ section,
+and its prefix is exactly
+$\mathcal T_s f_{\eps_\ell}^\sigma=f_{\eps_\ell}^s$ in the
+ordered quotient.
+
+The incoming arc has $p\ge0$. Every return preceding the base $s$
+in $L_s$ has $p>-as$ except that the last reaches $-as$ at its
+final touchdown, the admission point $\cC_{\lambda,s}(0)$.
+Hence $\Gamma$ first reaches this section at that admission point,
+and its first-hit prefix is $\cW_{\lambda,\nu,s}(s,0)$.
+The admission slip is $U_s>0$ from \eqref{gr:embedding}, while
+the release slip is zero. In particular,
+\[
+ |\cC_{\lambda,s}(2)-\cC_{\lambda,s}(0)|
+   \ge \frac{U_s}{|\cos\phi_s|}>0.
+\]
+The ordered distance bounds the distance between terminal states,
+so the limits of the truncated paths and of the long paths cannot
+commute. This proves the claimed discontinuity.
+\end{proof}
+
+\subsection{Fixed local observation patches}
+
+The angular section contains the whole limiting contact. A local patch
+can cross it at any prescribed interior point: the next construction
+uses slip on compression, normal velocity on release, and the two
+one-sided crossings at arrest.
+
+\begin{corollary}[Common contact prefixes at a local observation surface]
+\label{cor:common-local-contact}
+Fix $\lambda$, $0<s<\sigma\le s_0$ with
+$\sigma<F_\lambda(s)$, and $\alpha_0\in(0,2)$. Put
+\[
+ X_*=\cC_{\lambda,s}(\alpha_0),\qquad
+ h_s=\mu A(\phi_s)-B(\phi_s)>0,
+\]
+and choose $c_\Sigma>as/h_s$. Define on physical states
+\[
+ u_0(\cX)=\omega\cos\phi+U_*,\qquad
+ \Psi(\cX)=v-c_\Sigma u_0(\cX).
+\]
+There is $r_\Sigma>0$ such that the closed observation patch
+\[
+ \Sigma=\{\cX:|\cX-X_*|\le r_\Sigma,\quad
+                         \Psi(\cX)=\Psi(X_*)\}
+\]
+has the following property. For all sufficiently large $m$, every
+actual trajectory at $\eps=\eps_m(s)$ in the prescribed compact auxiliary label class
+first meets $\Sigma$ before reaching $p=-a\sigma$, and this first
+meeting occurs during the actual contact whose base tends to $s$.
+If $f_\eps^\Sigma$ is the path stopped at this first meeting and
+reparameterized onto $[0,1]$, then
+along the common sequence \eqref{eq:ps5-common} with $d=s$,
+\[
+ \sup_{(k,\theta,\nu,\mathbf n)}
+ \dF\bigl(f_{\eps_m(s)}^\Sigma,
+             \cW_{\lambda,\nu,s}(s,\alpha_0)\bigr)
+       \longrightarrow0.
+\]
+The image convergence is also uniform in $\dH$. The patch is
+independent of $\eps$ and the auxiliary labels; each incoming datum
+retains its own arc $I_{\lambda,\nu}$.
+\end{corollary}
+
+\begin{proof}
+The exact contact formulas \eqref{gr:embedding} and
+\eqref{eq:ps2-reference-path} give, on compression,
+\[
+ \frac{\dd}{\dd\alpha}\Psi(\cC_{\lambda,s}(\alpha))
+       =(c_\Sigma-as/h_s)U_s>0\qquad(0<\alpha<1).
+\]
+On release $u_0=0$, and \eqref{loc:normal-reference} gives
+\[
+ \frac{\dd}{\dd\alpha}\Psi(\cC_{\lambda,s}(\alpha))
+   =\tfrac12s^{3/2}R_s
+      (Z_s-Y_s)((\alpha-1)R_s)>0\qquad(1<\alpha<2).
+\]
+The active force is positive before its first zero. These two
+formulas and the continuous join show that $\Psi$ is strictly
+increasing along the entire reference contact. At $\alpha_0=1$
+we use the two one-sided strict crossings.
+
+The compact tail $L_s$ meets $p=-as$ only at
+$\cC_{\lambda,s}(0)$, whose $\Psi$ value is smaller than
+$\Psi(X_*)$. Hence $X_*\notin L_s$. Choose $r_\Sigma>0$ so that the
+closed $2r_\Sigma$ ball about $X_*$ avoids $L_s$ and is contained in
+$\{p<0\}$. Every incoming arc lies in $\{p\ge0\}$, so this
+choice also separates the patch from all incoming arcs uniformly.
+
+Choose $\eta>0$ with
+$0<\alpha_-:=\alpha_0-\eta<\alpha_+:=\alpha_0+\eta<2$
+so small that $\cC_{\lambda,s}([\alpha_-,\alpha_+])$
+lies in the open $r_\Sigma$ ball. At the two ends $\Psi-\Psi(X_*)$
+has opposite signs. The earlier contact segment
+$\cC_{\lambda,s}([0,\alpha_-])$ has strictly smaller
+$\Psi$ value and is a positive distance from the closed patch.
+Together with the preceding tail and incoming-arc separation,
+this gives a uniform positive distance between $\Sigma$ and
+the entire preceding reference prefix.
+
+Corollary~\ref{cor:common-downstream-contact} and its ordered
+pairings give uniform convergence of the actual paths through
+this contact. More specifically,
+Lemma~\ref{path:ordered-return} pairs its compression and release
+with $\cC_{\lambda,s}|_{[0,2]}$, after using the convergence of
+the actual base to $s$. These pairings align the earlier prefixes
+as in the proof of Theorem~\ref{thm:whole}. Thus, for large $m$,
+the actual trajectory cannot meet $\Sigma$ before the paired
+point $\alpha_-$, while the whole paired bracket stays in the
+open $r_\Sigma$ ball and its end values of $\Psi-\Psi(X_*)$ have opposite
+signs. The intermediate value theorem supplies a meeting inside
+this bracket. Since $\Sigma$ is closed, the nonempty set of
+meeting times up to the end of the bracket is compact and has a
+first element. It lies between the paired points $\alpha_-$
+and $\alpha_+$, within this actual contact.
+
+Restrict the ordered pairings at that first meeting. Their
+errors tend to zero uniformly in the auxiliary labels, and the
+reference stopping parameter lies in
+$[\alpha_0-\eta,\alpha_0+\eta]$. Uniform continuity of
+$\cC_{\lambda,s}$, followed by $\eta\downarrow0$, proves the
+asserted prefix convergence. The image assertion follows from
+$\dH\le\dF$.
+\end{proof}
+
+Appendix~\ref{sec:accumulation-geometry} identifies the single
+terminal-parameter duplication and proves that the full-state accumulation
+families are circles. Appendix~\ref{sec:memory} records the interval of
+scaled effective-gap velocities above the release endpoint path.

@@ -1,0 +1,4238 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "scope": "finite discrete identities only; no analytic certification",
+  "range": {
+    "n_min": 2,
+    "n_max": 20000,
+    "explicit_pq_enumeration_through": 256,
+    "replication_degree_min": 0,
+    "replication_degree_max": 20000
+  },
+  "constants_approximate_descriptive_only": {
+    "mechanical_all_degree": "0.260171122625701",
+    "QinSun_subsequence": "0.0230148736025062",
+    "QinSun_direct_all_degree": "0.00255720817805624",
+    "QinSun_replication_all_degree": "0.0230148736025062",
+    "mechanical_divided_by_QinSun_subsequence": "11.3044775791152"
+  },
+  "mechanical_examples": [
+    {
+      "n": 2,
+      "binary": "10",
+      "prefixes": [
+        1,
+        2
+      ],
+      "depth": 1,
+      "degree": 3,
+      "certificate": 0,
+      "uniform_lower": "-80/3",
+      "intermediate_lower": "-80/3",
+      "profile_F": "0",
+      "profile_beta": "1/2",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "binary": "11",
+      "prefixes": [
+        1,
+        3
+      ],
+      "depth": 1,
+      "degree": 5,
+      "certificate": 4,
+      "uniform_lower": "-60",
+      "intermediate_lower": "-30",
+      "profile_F": "1/16",
+      "profile_beta": "7/18",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 3,
+          "eta": 1,
+          "field_degree": 5,
+          "birth": 4,
+          "total": 4,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "binary": "100",
+      "prefixes": [
+        1,
+        2,
+        4
+      ],
+      "depth": 2,
+      "degree": 7,
+      "certificate": 20,
+      "uniform_lower": "-80",
+      "intermediate_lower": "-80",
+      "profile_F": "0",
+      "profile_beta": "1/2",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "binary": "101",
+      "prefixes": [
+        1,
+        2,
+        5
+      ],
+      "depth": 2,
+      "degree": 9,
+      "certificate": 36,
+      "uniform_lower": "-125",
+      "intermediate_lower": "-217/3",
+      "profile_F": "1/32",
+      "profile_beta": "21/50",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 5,
+          "eta": 1,
+          "field_degree": 9,
+          "birth": 36,
+          "total": 36,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 6
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "binary": "111",
+      "prefixes": [
+        1,
+        3,
+        7
+      ],
+      "depth": 2,
+      "degree": 13,
+      "certificate": 92,
+      "uniform_lower": "-245",
+      "intermediate_lower": "-43",
+      "profile_F": "5/32",
+      "profile_beta": "29/98",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 3,
+          "eta": 1,
+          "field_degree": 5,
+          "birth": 4,
+          "total": 4,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 3,
+          "t": 7,
+          "eta": 1,
+          "field_degree": 13,
+          "birth": 76,
+          "total": 92,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 3,
+              "e": 0,
+              "modes": 12
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 1,
+              "modes": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "binary": "1000",
+      "prefixes": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "depth": 3,
+      "degree": 15,
+      "certificate": 244,
+      "uniform_lower": "-448/3",
+      "intermediate_lower": "-448/3",
+      "profile_F": "0",
+      "profile_beta": "1/2",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 4,
+          "t": 8,
+          "eta": 0,
+          "field_degree": 15,
+          "birth": 164,
+          "total": 244,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 4,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2,
+              "e": 0,
+              "modes": 8
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 0,
+              "modes": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "binary": "1111",
+      "prefixes": [
+        1,
+        3,
+        7,
+        15
+      ],
+      "depth": 3,
+      "degree": 29,
+      "certificate": 956,
+      "uniform_lower": "-525",
+      "intermediate_lower": "469",
+      "profile_F": "59/256",
+      "profile_beta": "107/450",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 3,
+          "eta": 1,
+          "field_degree": 5,
+          "birth": 4,
+          "total": 4,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 3,
+          "t": 7,
+          "eta": 1,
+          "field_degree": 13,
+          "birth": 76,
+          "total": 92,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 3,
+              "e": 0,
+              "modes": 12
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 1,
+              "modes": 5
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 7,
+          "t": 15,
+          "eta": 1,
+          "field_degree": 29,
+          "birth": 588,
+          "total": 956,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 7,
+              "e": 0,
+              "modes": 56
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 3,
+              "e": 1,
+              "modes": 27
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 3,
+              "modes": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "binary": "10000",
+      "prefixes": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "depth": 4,
+      "degree": 31,
+      "certificate": 1940,
+      "uniform_lower": "1024/3",
+      "intermediate_lower": "1024/3",
+      "profile_F": "0",
+      "profile_beta": "1/2",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 4,
+          "t": 8,
+          "eta": 0,
+          "field_degree": 15,
+          "birth": 164,
+          "total": 244,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 4,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2,
+              "e": 0,
+              "modes": 8
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 0,
+              "modes": 4
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 8,
+          "t": 16,
+          "eta": 0,
+          "field_degree": 31,
+          "birth": 964,
+          "total": 1940,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 8,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 4,
+              "e": 0,
+              "modes": 32
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 2,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 0,
+              "modes": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 31,
+      "binary": "11111",
+      "prefixes": [
+        1,
+        3,
+        7,
+        15,
+        31
+      ],
+      "depth": 4,
+      "degree": 61,
+      "certificate": 7324,
+      "uniform_lower": "3844/3",
+      "intermediate_lower": "16954/3",
+      "profile_F": "71/256",
+      "profile_beta": "393/1922",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 3,
+          "eta": 1,
+          "field_degree": 5,
+          "birth": 4,
+          "total": 4,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 3,
+          "t": 7,
+          "eta": 1,
+          "field_degree": 13,
+          "birth": 76,
+          "total": 92,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 3,
+              "e": 0,
+              "modes": 12
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 1,
+              "modes": 5
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 7,
+          "t": 15,
+          "eta": 1,
+          "field_degree": 29,
+          "birth": 588,
+          "total": 956,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 7,
+              "e": 0,
+              "modes": 56
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 3,
+              "e": 1,
+              "modes": 27
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 3,
+              "modes": 11
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 15,
+          "t": 31,
+          "eta": 1,
+          "field_degree": 61,
+          "birth": 3500,
+          "total": 7324,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 15,
+              "e": 0,
+              "modes": 240
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 7,
+              "e": 1,
+              "modes": 119
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 3,
+              "e": 3,
+              "modes": 57
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 7,
+              "modes": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 32,
+      "binary": "100000",
+      "prefixes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "depth": 5,
+      "degree": 63,
+      "certificate": 12756,
+      "uniform_lower": "6144",
+      "intermediate_lower": "6144",
+      "profile_F": "0",
+      "profile_beta": "1/2",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 4,
+          "t": 8,
+          "eta": 0,
+          "field_degree": 15,
+          "birth": 164,
+          "total": 244,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 4,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2,
+              "e": 0,
+              "modes": 8
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 0,
+              "modes": 4
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 8,
+          "t": 16,
+          "eta": 0,
+          "field_degree": 31,
+          "birth": 964,
+          "total": 1940,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 8,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 4,
+              "e": 0,
+              "modes": 32
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 2,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 0,
+              "modes": 8
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "s": 16,
+          "t": 32,
+          "eta": 0,
+          "field_degree": 63,
+          "birth": 4996,
+          "total": 12756,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 16,
+              "e": 0,
+              "modes": 256
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 8,
+              "e": 0,
+              "modes": 128
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 4,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 2,
+              "e": 0,
+              "modes": 32
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 1,
+              "e": 0,
+              "modes": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 64,
+      "binary": "1000000",
+      "prefixes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "depth": 6,
+      "degree": 127,
+      "certificate": 75348,
+      "uniform_lower": "143360/3",
+      "intermediate_lower": "143360/3",
+      "profile_F": "0",
+      "profile_beta": "1/2",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 4,
+          "t": 8,
+          "eta": 0,
+          "field_degree": 15,
+          "birth": 164,
+          "total": 244,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 4,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2,
+              "e": 0,
+              "modes": 8
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 0,
+              "modes": 4
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 8,
+          "t": 16,
+          "eta": 0,
+          "field_degree": 31,
+          "birth": 964,
+          "total": 1940,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 8,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 4,
+              "e": 0,
+              "modes": 32
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 2,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 0,
+              "modes": 8
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "s": 16,
+          "t": 32,
+          "eta": 0,
+          "field_degree": 63,
+          "birth": 4996,
+          "total": 12756,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 16,
+              "e": 0,
+              "modes": 256
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 8,
+              "e": 0,
+              "modes": 128
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 4,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 2,
+              "e": 0,
+              "modes": 32
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 1,
+              "e": 0,
+              "modes": 16
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "s": 32,
+          "t": 64,
+          "eta": 0,
+          "field_degree": 127,
+          "birth": 24324,
+          "total": 75348,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 32,
+              "e": 0,
+              "modes": 1024
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 16,
+              "e": 0,
+              "modes": 512
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 8,
+              "e": 0,
+              "modes": 256
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 4,
+              "e": 0,
+              "modes": 128
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 2,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 1,
+              "e": 0,
+              "modes": 32
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 100,
+      "binary": "1100100",
+      "prefixes": [
+        1,
+        3,
+        6,
+        12,
+        25,
+        50,
+        100
+      ],
+      "depth": 6,
+      "degree": 199,
+      "certificate": 187524,
+      "uniform_lower": "350000/3",
+      "intermediate_lower": "456848/3",
+      "profile_F": "21/256",
+      "profile_beta": "457/1250",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 3,
+          "eta": 1,
+          "field_degree": 5,
+          "birth": 4,
+          "total": 4,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 3,
+          "t": 6,
+          "eta": 0,
+          "field_degree": 11,
+          "birth": 56,
+          "total": 72,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 3,
+              "e": 0,
+              "modes": 9
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 1,
+              "modes": 4
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 6,
+          "t": 12,
+          "eta": 0,
+          "field_degree": 23,
+          "birth": 388,
+          "total": 676,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 6,
+              "e": 0,
+              "modes": 36
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 3,
+              "e": 0,
+              "modes": 18
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 2,
+              "modes": 8
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 12,
+          "t": 25,
+          "eta": 1,
+          "field_degree": 49,
+          "birth": 2356,
+          "total": 5060,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 12,
+              "e": 0,
+              "modes": 156
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 6,
+              "e": 0,
+              "modes": 78
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 3,
+              "e": 0,
+              "modes": 39
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 4,
+              "modes": 17
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "s": 25,
+          "t": 50,
+          "eta": 0,
+          "field_degree": 99,
+          "birth": 12040,
+          "total": 32280,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 25,
+              "e": 0,
+              "modes": 625
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 12,
+              "e": 1,
+              "modes": 312
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 6,
+              "e": 1,
+              "modes": 156
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 3,
+              "e": 1,
+              "modes": 78
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 1,
+              "e": 9,
+              "modes": 34
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "s": 50,
+          "t": 100,
+          "eta": 0,
+          "field_degree": 199,
+          "birth": 58404,
+          "total": 187524,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 50,
+              "e": 0,
+              "modes": 2500
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 25,
+              "e": 0,
+              "modes": 1250
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 12,
+              "e": 2,
+              "modes": 624
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 6,
+              "e": 2,
+              "modes": 312
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 3,
+              "e": 2,
+              "modes": 156
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 1,
+              "e": 18,
+              "modes": 68
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 256,
+      "binary": "100000000",
+      "prefixes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "depth": 8,
+      "degree": 511,
+      "certificate": 2185556,
+      "uniform_lower": "1703936",
+      "intermediate_lower": "1703936",
+      "profile_F": "0",
+      "profile_beta": "1/2",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 4,
+          "t": 8,
+          "eta": 0,
+          "field_degree": 15,
+          "birth": 164,
+          "total": 244,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 4,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2,
+              "e": 0,
+              "modes": 8
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 0,
+              "modes": 4
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 8,
+          "t": 16,
+          "eta": 0,
+          "field_degree": 31,
+          "birth": 964,
+          "total": 1940,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 8,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 4,
+              "e": 0,
+              "modes": 32
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 2,
+              "e": 0,
+              "modes": 16
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 0,
+              "modes": 8
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "s": 16,
+          "t": 32,
+          "eta": 0,
+          "field_degree": 63,
+          "birth": 4996,
+          "total": 12756,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 16,
+              "e": 0,
+              "modes": 256
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 8,
+              "e": 0,
+              "modes": 128
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 4,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 2,
+              "e": 0,
+              "modes": 32
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 1,
+              "e": 0,
+              "modes": 16
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "s": 32,
+          "t": 64,
+          "eta": 0,
+          "field_degree": 127,
+          "birth": 24324,
+          "total": 75348,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 32,
+              "e": 0,
+              "modes": 1024
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 16,
+              "e": 0,
+              "modes": 512
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 8,
+              "e": 0,
+              "modes": 256
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 4,
+              "e": 0,
+              "modes": 128
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 2,
+              "e": 0,
+              "modes": 64
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 1,
+              "e": 0,
+              "modes": 32
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "s": 64,
+          "t": 128,
+          "eta": 0,
+          "field_degree": 255,
+          "birth": 114180,
+          "total": 415572,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 64,
+              "e": 0,
+              "modes": 4096
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 32,
+              "e": 0,
+              "modes": 2048
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 16,
+              "e": 0,
+              "modes": 1024
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 8,
+              "e": 0,
+              "modes": 512
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 4,
+              "e": 0,
+              "modes": 256
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 2,
+              "e": 0,
+              "modes": 128
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 1,
+              "e": 0,
+              "modes": 64
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "s": 128,
+          "t": 256,
+          "eta": 0,
+          "field_degree": 511,
+          "birth": 523268,
+          "total": 2185556,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 128,
+              "e": 0,
+              "modes": 16384
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 64,
+              "e": 0,
+              "modes": 8192
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 32,
+              "e": 0,
+              "modes": 4096
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 16,
+              "e": 0,
+              "modes": 2048
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 8,
+              "e": 0,
+              "modes": 1024
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 4,
+              "e": 0,
+              "modes": 512
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 2,
+              "e": 0,
+              "modes": 256
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 1,
+              "e": 0,
+              "modes": 128
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 1000,
+      "binary": "1111101000",
+      "prefixes": [
+        1,
+        3,
+        7,
+        15,
+        31,
+        62,
+        125,
+        250,
+        500,
+        1000
+      ],
+      "depth": 9,
+      "degree": 1999,
+      "certificate": 40849108,
+      "uniform_lower": "104000000/3",
+      "intermediate_lower": "117734272/3",
+      "profile_F": "2379/8192",
+      "profile_beta": "6109/31250",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 3,
+          "eta": 1,
+          "field_degree": 5,
+          "birth": 4,
+          "total": 4,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 3,
+          "t": 7,
+          "eta": 1,
+          "field_degree": 13,
+          "birth": 76,
+          "total": 92,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 3,
+              "e": 0,
+              "modes": 12
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 1,
+              "modes": 5
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 7,
+          "t": 15,
+          "eta": 1,
+          "field_degree": 29,
+          "birth": 588,
+          "total": 956,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 7,
+              "e": 0,
+              "modes": 56
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 3,
+              "e": 1,
+              "modes": 27
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 3,
+              "modes": 11
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 15,
+          "t": 31,
+          "eta": 1,
+          "field_degree": 61,
+          "birth": 3500,
+          "total": 7324,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 15,
+              "e": 0,
+              "modes": 240
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 7,
+              "e": 1,
+              "modes": 119
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 3,
+              "e": 3,
+              "modes": 57
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 7,
+              "modes": 23
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "s": 31,
+          "t": 62,
+          "eta": 0,
+          "field_degree": 123,
+          "birth": 17960,
+          "total": 47256,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 31,
+              "e": 0,
+              "modes": 961
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 15,
+              "e": 1,
+              "modes": 480
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 7,
+              "e": 3,
+              "modes": 238
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 3,
+              "e": 7,
+              "modes": 114
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 1,
+              "e": 15,
+              "modes": 46
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "s": 62,
+          "t": 125,
+          "eta": 1,
+          "field_degree": 249,
+          "birth": 88740,
+          "total": 277764,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 62,
+              "e": 0,
+              "modes": 3906
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 31,
+              "e": 0,
+              "modes": 1953
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 15,
+              "e": 2,
+              "modes": 975
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 7,
+              "e": 6,
+              "modes": 483
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 3,
+              "e": 14,
+              "modes": 231
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 1,
+              "e": 30,
+              "modes": 93
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "s": 125,
+          "t": 250,
+          "eta": 0,
+          "field_degree": 499,
+          "birth": 417960,
+          "total": 1529016,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 125,
+              "e": 0,
+              "modes": 15625
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 62,
+              "e": 1,
+              "modes": 7812
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 31,
+              "e": 1,
+              "modes": 3906
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 15,
+              "e": 5,
+              "modes": 1950
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 7,
+              "e": 13,
+              "modes": 966
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 3,
+              "e": 29,
+              "modes": 462
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 1,
+              "e": 61,
+              "modes": 186
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "s": 250,
+          "t": 500,
+          "eta": 0,
+          "field_degree": 999,
+          "birth": 1922852,
+          "total": 8038916,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 250,
+              "e": 0,
+              "modes": 62500
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 125,
+              "e": 0,
+              "modes": 31250
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 62,
+              "e": 2,
+              "modes": 15624
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 31,
+              "e": 2,
+              "modes": 7812
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 15,
+              "e": 10,
+              "modes": 3900
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 7,
+              "e": 26,
+              "modes": 1932
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 3,
+              "e": 58,
+              "modes": 924
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 1,
+              "e": 122,
+              "modes": 372
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "s": 500,
+          "t": 1000,
+          "eta": 0,
+          "field_degree": 1999,
+          "birth": 8693444,
+          "total": 40849108,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 500,
+              "e": 0,
+              "modes": 250000
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 250,
+              "e": 0,
+              "modes": 125000
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 125,
+              "e": 0,
+              "modes": 62500
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 62,
+              "e": 4,
+              "modes": 31248
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 31,
+              "e": 4,
+              "modes": 15624
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 15,
+              "e": 20,
+              "modes": 7800
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 7,
+              "e": 52,
+              "modes": 3864
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 3,
+              "e": 116,
+              "modes": 1848
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 1,
+              "e": 244,
+              "modes": 744
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10000,
+      "binary": "10011100010000",
+      "prefixes": [
+        1,
+        2,
+        4,
+        9,
+        19,
+        39,
+        78,
+        156,
+        312,
+        625,
+        1250,
+        2500,
+        5000,
+        10000
+      ],
+      "depth": 13,
+      "degree": 19999,
+      "certificate": 8643305300,
+      "uniform_lower": "23800000000/3",
+      "intermediate_lower": "8125164544",
+      "profile_F": "41001/1048576",
+      "profile_beta": "308623/781250",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 4,
+          "t": 9,
+          "eta": 1,
+          "field_degree": 17,
+          "birth": 212,
+          "total": 292,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 4,
+              "e": 0,
+              "modes": 20
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2,
+              "e": 0,
+              "modes": 10
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 0,
+              "modes": 5
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 9,
+          "t": 19,
+          "eta": 1,
+          "field_degree": 37,
+          "birth": 1356,
+          "total": 2524,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 9,
+              "e": 0,
+              "modes": 90
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 4,
+              "e": 1,
+              "modes": 44
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 2,
+              "e": 1,
+              "modes": 22
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 1,
+              "modes": 11
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "s": 19,
+          "t": 39,
+          "eta": 1,
+          "field_degree": 77,
+          "birth": 7324,
+          "total": 17420,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 19,
+              "e": 0,
+              "modes": 380
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 9,
+              "e": 1,
+              "modes": 189
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 4,
+              "e": 3,
+              "modes": 92
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 2,
+              "e": 3,
+              "modes": 46
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 1,
+              "e": 3,
+              "modes": 23
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "s": 39,
+          "t": 78,
+          "eta": 0,
+          "field_degree": 155,
+          "birth": 35624,
+          "total": 105304,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 39,
+              "e": 0,
+              "modes": 1521
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 19,
+              "e": 1,
+              "modes": 760
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 9,
+              "e": 3,
+              "modes": 378
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 4,
+              "e": 7,
+              "modes": 184
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 2,
+              "e": 7,
+              "modes": 92
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 1,
+              "e": 7,
+              "modes": 46
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "s": 78,
+          "t": 156,
+          "eta": 0,
+          "field_degree": 311,
+          "birth": 167332,
+          "total": 588548,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 78,
+              "e": 0,
+              "modes": 6084
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 39,
+              "e": 0,
+              "modes": 3042
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 19,
+              "e": 2,
+              "modes": 1520
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 9,
+              "e": 6,
+              "modes": 756
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 4,
+              "e": 14,
+              "modes": 368
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 2,
+              "e": 14,
+              "modes": 184
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 1,
+              "e": 14,
+              "modes": 92
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "s": 156,
+          "t": 312,
+          "eta": 0,
+          "field_degree": 623,
+          "birth": 767684,
+          "total": 3121876,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 156,
+              "e": 0,
+              "modes": 24336
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 78,
+              "e": 0,
+              "modes": 12168
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 39,
+              "e": 0,
+              "modes": 6084
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 19,
+              "e": 4,
+              "modes": 3040
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 9,
+              "e": 12,
+              "modes": 1512
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 4,
+              "e": 28,
+              "modes": 736
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 2,
+              "e": 28,
+              "modes": 368
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 1,
+              "e": 28,
+              "modes": 184
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "s": 312,
+          "t": 625,
+          "eta": 1,
+          "field_degree": 1249,
+          "birth": 3472580,
+          "total": 15960084,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 312,
+              "e": 0,
+              "modes": 97656
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 156,
+              "e": 0,
+              "modes": 48828
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 78,
+              "e": 0,
+              "modes": 24414
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 39,
+              "e": 0,
+              "modes": 12207
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 19,
+              "e": 8,
+              "modes": 6099
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 9,
+              "e": 24,
+              "modes": 3033
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 4,
+              "e": 56,
+              "modes": 1476
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 2,
+              "e": 56,
+              "modes": 738
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 1,
+              "e": 56,
+              "modes": 369
+            }
+          ]
+        },
+        {
+          "i": 10,
+          "s": 625,
+          "t": 1250,
+          "eta": 0,
+          "field_degree": 2499,
+          "birth": 15456904,
+          "total": 79297240,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 625,
+              "e": 0,
+              "modes": 390625
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 312,
+              "e": 1,
+              "modes": 195312
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 156,
+              "e": 1,
+              "modes": 97656
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 78,
+              "e": 1,
+              "modes": 48828
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 39,
+              "e": 1,
+              "modes": 24414
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 19,
+              "e": 17,
+              "modes": 12198
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 9,
+              "e": 49,
+              "modes": 6066
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 4,
+              "e": 113,
+              "modes": 2952
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 2,
+              "e": 113,
+              "modes": 1476
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 1,
+              "e": 113,
+              "modes": 738
+            }
+          ]
+        },
+        {
+          "i": 11,
+          "s": 1250,
+          "t": 2500,
+          "eta": 0,
+          "field_degree": 4999,
+          "birth": 68085796,
+          "total": 385274756,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1250,
+              "e": 0,
+              "modes": 1562500
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 625,
+              "e": 0,
+              "modes": 781250
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 312,
+              "e": 2,
+              "modes": 390624
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 156,
+              "e": 2,
+              "modes": 195312
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 78,
+              "e": 2,
+              "modes": 97656
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 39,
+              "e": 2,
+              "modes": 48828
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 19,
+              "e": 34,
+              "modes": 24396
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 9,
+              "e": 98,
+              "modes": 12132
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 4,
+              "e": 226,
+              "modes": 5904
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 2,
+              "e": 226,
+              "modes": 2952
+            },
+            {
+              "k": 10,
+              "A": 1024,
+              "d": 1,
+              "e": 226,
+              "modes": 1476
+            }
+          ]
+        },
+        {
+          "i": 12,
+          "s": 2500,
+          "t": 5000,
+          "eta": 0,
+          "field_degree": 9999,
+          "birth": 297359556,
+          "total": 1838458580,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2500,
+              "e": 0,
+              "modes": 6250000
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1250,
+              "e": 0,
+              "modes": 3125000
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 625,
+              "e": 0,
+              "modes": 1562500
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 312,
+              "e": 4,
+              "modes": 781248
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 156,
+              "e": 4,
+              "modes": 390624
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 78,
+              "e": 4,
+              "modes": 195312
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 39,
+              "e": 4,
+              "modes": 97656
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 19,
+              "e": 68,
+              "modes": 48792
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 9,
+              "e": 196,
+              "modes": 24264
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 4,
+              "e": 452,
+              "modes": 11808
+            },
+            {
+              "k": 10,
+              "A": 1024,
+              "d": 2,
+              "e": 452,
+              "modes": 5904
+            },
+            {
+              "k": 11,
+              "A": 2048,
+              "d": 1,
+              "e": 452,
+              "modes": 2952
+            }
+          ]
+        },
+        {
+          "i": 13,
+          "s": 5000,
+          "t": 10000,
+          "eta": 0,
+          "field_degree": 19999,
+          "birth": 1289470980,
+          "total": 8643305300,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 5000,
+              "e": 0,
+              "modes": 25000000
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2500,
+              "e": 0,
+              "modes": 12500000
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1250,
+              "e": 0,
+              "modes": 6250000
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 625,
+              "e": 0,
+              "modes": 3125000
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 312,
+              "e": 8,
+              "modes": 1562496
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 156,
+              "e": 8,
+              "modes": 781248
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 78,
+              "e": 8,
+              "modes": 390624
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 39,
+              "e": 8,
+              "modes": 195312
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 19,
+              "e": 136,
+              "modes": 97584
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 9,
+              "e": 392,
+              "modes": 48528
+            },
+            {
+              "k": 10,
+              "A": 1024,
+              "d": 4,
+              "e": 904,
+              "modes": 23616
+            },
+            {
+              "k": 11,
+              "A": 2048,
+              "d": 2,
+              "e": 904,
+              "modes": 11808
+            },
+            {
+              "k": 12,
+              "A": 4096,
+              "d": 1,
+              "e": 904,
+              "modes": 5904
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 20000,
+      "binary": "100111000100000",
+      "prefixes": [
+        1,
+        2,
+        4,
+        9,
+        19,
+        39,
+        78,
+        156,
+        312,
+        625,
+        1250,
+        2500,
+        5000,
+        10000,
+        20000
+      ],
+      "depth": 14,
+      "degree": 39999,
+      "certificate": 40131170644,
+      "uniform_lower": "37200000000",
+      "intermediate_lower": "113901974528/3",
+      "profile_F": "41001/1048576",
+      "profile_beta": "308623/781250",
+      "steps": [
+        {
+          "i": 1,
+          "s": 1,
+          "t": 2,
+          "eta": 0,
+          "field_degree": 3,
+          "birth": 0,
+          "total": 0,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1,
+              "e": 0,
+              "modes": 1
+            }
+          ]
+        },
+        {
+          "i": 2,
+          "s": 2,
+          "t": 4,
+          "eta": 0,
+          "field_degree": 7,
+          "birth": 20,
+          "total": 20,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2,
+              "e": 0,
+              "modes": 4
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1,
+              "e": 0,
+              "modes": 2
+            }
+          ]
+        },
+        {
+          "i": 3,
+          "s": 4,
+          "t": 9,
+          "eta": 1,
+          "field_degree": 17,
+          "birth": 212,
+          "total": 292,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 4,
+              "e": 0,
+              "modes": 20
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2,
+              "e": 0,
+              "modes": 10
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1,
+              "e": 0,
+              "modes": 5
+            }
+          ]
+        },
+        {
+          "i": 4,
+          "s": 9,
+          "t": 19,
+          "eta": 1,
+          "field_degree": 37,
+          "birth": 1356,
+          "total": 2524,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 9,
+              "e": 0,
+              "modes": 90
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 4,
+              "e": 1,
+              "modes": 44
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 2,
+              "e": 1,
+              "modes": 22
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1,
+              "e": 1,
+              "modes": 11
+            }
+          ]
+        },
+        {
+          "i": 5,
+          "s": 19,
+          "t": 39,
+          "eta": 1,
+          "field_degree": 77,
+          "birth": 7324,
+          "total": 17420,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 19,
+              "e": 0,
+              "modes": 380
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 9,
+              "e": 1,
+              "modes": 189
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 4,
+              "e": 3,
+              "modes": 92
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 2,
+              "e": 3,
+              "modes": 46
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 1,
+              "e": 3,
+              "modes": 23
+            }
+          ]
+        },
+        {
+          "i": 6,
+          "s": 39,
+          "t": 78,
+          "eta": 0,
+          "field_degree": 155,
+          "birth": 35624,
+          "total": 105304,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 39,
+              "e": 0,
+              "modes": 1521
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 19,
+              "e": 1,
+              "modes": 760
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 9,
+              "e": 3,
+              "modes": 378
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 4,
+              "e": 7,
+              "modes": 184
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 2,
+              "e": 7,
+              "modes": 92
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 1,
+              "e": 7,
+              "modes": 46
+            }
+          ]
+        },
+        {
+          "i": 7,
+          "s": 78,
+          "t": 156,
+          "eta": 0,
+          "field_degree": 311,
+          "birth": 167332,
+          "total": 588548,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 78,
+              "e": 0,
+              "modes": 6084
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 39,
+              "e": 0,
+              "modes": 3042
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 19,
+              "e": 2,
+              "modes": 1520
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 9,
+              "e": 6,
+              "modes": 756
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 4,
+              "e": 14,
+              "modes": 368
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 2,
+              "e": 14,
+              "modes": 184
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 1,
+              "e": 14,
+              "modes": 92
+            }
+          ]
+        },
+        {
+          "i": 8,
+          "s": 156,
+          "t": 312,
+          "eta": 0,
+          "field_degree": 623,
+          "birth": 767684,
+          "total": 3121876,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 156,
+              "e": 0,
+              "modes": 24336
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 78,
+              "e": 0,
+              "modes": 12168
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 39,
+              "e": 0,
+              "modes": 6084
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 19,
+              "e": 4,
+              "modes": 3040
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 9,
+              "e": 12,
+              "modes": 1512
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 4,
+              "e": 28,
+              "modes": 736
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 2,
+              "e": 28,
+              "modes": 368
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 1,
+              "e": 28,
+              "modes": 184
+            }
+          ]
+        },
+        {
+          "i": 9,
+          "s": 312,
+          "t": 625,
+          "eta": 1,
+          "field_degree": 1249,
+          "birth": 3472580,
+          "total": 15960084,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 312,
+              "e": 0,
+              "modes": 97656
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 156,
+              "e": 0,
+              "modes": 48828
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 78,
+              "e": 0,
+              "modes": 24414
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 39,
+              "e": 0,
+              "modes": 12207
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 19,
+              "e": 8,
+              "modes": 6099
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 9,
+              "e": 24,
+              "modes": 3033
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 4,
+              "e": 56,
+              "modes": 1476
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 2,
+              "e": 56,
+              "modes": 738
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 1,
+              "e": 56,
+              "modes": 369
+            }
+          ]
+        },
+        {
+          "i": 10,
+          "s": 625,
+          "t": 1250,
+          "eta": 0,
+          "field_degree": 2499,
+          "birth": 15456904,
+          "total": 79297240,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 625,
+              "e": 0,
+              "modes": 390625
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 312,
+              "e": 1,
+              "modes": 195312
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 156,
+              "e": 1,
+              "modes": 97656
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 78,
+              "e": 1,
+              "modes": 48828
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 39,
+              "e": 1,
+              "modes": 24414
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 19,
+              "e": 17,
+              "modes": 12198
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 9,
+              "e": 49,
+              "modes": 6066
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 4,
+              "e": 113,
+              "modes": 2952
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 2,
+              "e": 113,
+              "modes": 1476
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 1,
+              "e": 113,
+              "modes": 738
+            }
+          ]
+        },
+        {
+          "i": 11,
+          "s": 1250,
+          "t": 2500,
+          "eta": 0,
+          "field_degree": 4999,
+          "birth": 68085796,
+          "total": 385274756,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 1250,
+              "e": 0,
+              "modes": 1562500
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 625,
+              "e": 0,
+              "modes": 781250
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 312,
+              "e": 2,
+              "modes": 390624
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 156,
+              "e": 2,
+              "modes": 195312
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 78,
+              "e": 2,
+              "modes": 97656
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 39,
+              "e": 2,
+              "modes": 48828
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 19,
+              "e": 34,
+              "modes": 24396
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 9,
+              "e": 98,
+              "modes": 12132
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 4,
+              "e": 226,
+              "modes": 5904
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 2,
+              "e": 226,
+              "modes": 2952
+            },
+            {
+              "k": 10,
+              "A": 1024,
+              "d": 1,
+              "e": 226,
+              "modes": 1476
+            }
+          ]
+        },
+        {
+          "i": 12,
+          "s": 2500,
+          "t": 5000,
+          "eta": 0,
+          "field_degree": 9999,
+          "birth": 297359556,
+          "total": 1838458580,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 2500,
+              "e": 0,
+              "modes": 6250000
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 1250,
+              "e": 0,
+              "modes": 3125000
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 625,
+              "e": 0,
+              "modes": 1562500
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 312,
+              "e": 4,
+              "modes": 781248
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 156,
+              "e": 4,
+              "modes": 390624
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 78,
+              "e": 4,
+              "modes": 195312
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 39,
+              "e": 4,
+              "modes": 97656
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 19,
+              "e": 68,
+              "modes": 48792
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 9,
+              "e": 196,
+              "modes": 24264
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 4,
+              "e": 452,
+              "modes": 11808
+            },
+            {
+              "k": 10,
+              "A": 1024,
+              "d": 2,
+              "e": 452,
+              "modes": 5904
+            },
+            {
+              "k": 11,
+              "A": 2048,
+              "d": 1,
+              "e": 452,
+              "modes": 2952
+            }
+          ]
+        },
+        {
+          "i": 13,
+          "s": 5000,
+          "t": 10000,
+          "eta": 0,
+          "field_degree": 19999,
+          "birth": 1289470980,
+          "total": 8643305300,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 5000,
+              "e": 0,
+              "modes": 25000000
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 2500,
+              "e": 0,
+              "modes": 12500000
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 1250,
+              "e": 0,
+              "modes": 6250000
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 625,
+              "e": 0,
+              "modes": 3125000
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 312,
+              "e": 8,
+              "modes": 1562496
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 156,
+              "e": 8,
+              "modes": 781248
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 78,
+              "e": 8,
+              "modes": 390624
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 39,
+              "e": 8,
+              "modes": 195312
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 19,
+              "e": 136,
+              "modes": 97584
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 9,
+              "e": 392,
+              "modes": 48528
+            },
+            {
+              "k": 10,
+              "A": 1024,
+              "d": 4,
+              "e": 904,
+              "modes": 23616
+            },
+            {
+              "k": 11,
+              "A": 2048,
+              "d": 2,
+              "e": 904,
+              "modes": 11808
+            },
+            {
+              "k": 12,
+              "A": 4096,
+              "d": 1,
+              "e": 904,
+              "modes": 5904
+            }
+          ]
+        },
+        {
+          "i": 14,
+          "s": 10000,
+          "t": 20000,
+          "eta": 0,
+          "field_degree": 39999,
+          "birth": 5557949444,
+          "total": 40131170644,
+          "layers": [
+            {
+              "k": 0,
+              "A": 1,
+              "d": 10000,
+              "e": 0,
+              "modes": 100000000
+            },
+            {
+              "k": 1,
+              "A": 2,
+              "d": 5000,
+              "e": 0,
+              "modes": 50000000
+            },
+            {
+              "k": 2,
+              "A": 4,
+              "d": 2500,
+              "e": 0,
+              "modes": 25000000
+            },
+            {
+              "k": 3,
+              "A": 8,
+              "d": 1250,
+              "e": 0,
+              "modes": 12500000
+            },
+            {
+              "k": 4,
+              "A": 16,
+              "d": 625,
+              "e": 0,
+              "modes": 6250000
+            },
+            {
+              "k": 5,
+              "A": 32,
+              "d": 312,
+              "e": 16,
+              "modes": 3124992
+            },
+            {
+              "k": 6,
+              "A": 64,
+              "d": 156,
+              "e": 16,
+              "modes": 1562496
+            },
+            {
+              "k": 7,
+              "A": 128,
+              "d": 78,
+              "e": 16,
+              "modes": 781248
+            },
+            {
+              "k": 8,
+              "A": 256,
+              "d": 39,
+              "e": 16,
+              "modes": 390624
+            },
+            {
+              "k": 9,
+              "A": 512,
+              "d": 19,
+              "e": 272,
+              "modes": 195168
+            },
+            {
+              "k": 10,
+              "A": 1024,
+              "d": 9,
+              "e": 784,
+              "modes": 97056
+            },
+            {
+              "k": 11,
+              "A": 2048,
+              "d": 4,
+              "e": 1808,
+              "modes": 47232
+            },
+            {
+              "k": 12,
+              "A": 4096,
+              "d": 2,
+              "e": 1808,
+              "modes": 23616
+            },
+            {
+              "k": 13,
+              "A": 8192,
+              "d": 1,
+              "e": 1808,
+              "modes": 11808
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "degree_comparison": [
+    {
+      "D": 3,
+      "mechanical_n": 2,
+      "mechanical_degree": 3,
+      "mechanical_bound": 0,
+      "direct_seed_bound": 0,
+      "replication_bound": 0,
+      "chosen": null,
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0",
+        "direct_seed_bound": "0",
+        "replication_bound": "0"
+      }
+    },
+    {
+      "D": 5,
+      "mechanical_n": 3,
+      "mechanical_degree": 5,
+      "mechanical_bound": 4,
+      "direct_seed_bound": 0,
+      "replication_bound": 0,
+      "chosen": null,
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.0617691361447",
+        "direct_seed_bound": "0",
+        "replication_bound": "0"
+      }
+    },
+    {
+      "D": 7,
+      "mechanical_n": 4,
+      "mechanical_degree": 7,
+      "mechanical_bound": 20,
+      "direct_seed_bound": 0,
+      "replication_bound": 0,
+      "chosen": null,
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.107792451547",
+        "direct_seed_bound": "0",
+        "replication_bound": "0"
+      }
+    },
+    {
+      "D": 9,
+      "mechanical_n": 5,
+      "mechanical_degree": 9,
+      "mechanical_bound": 36,
+      "direct_seed_bound": 0,
+      "replication_bound": 0,
+      "chosen": null,
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.09205949441",
+        "direct_seed_bound": "0",
+        "replication_bound": "0"
+      }
+    },
+    {
+      "D": 13,
+      "mechanical_n": 7,
+      "mechanical_degree": 13,
+      "mechanical_bound": 92,
+      "direct_seed_bound": 0,
+      "replication_bound": 0,
+      "chosen": null,
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.0827453377774",
+        "direct_seed_bound": "0",
+        "replication_bound": "0"
+      }
+    },
+    {
+      "D": 15,
+      "mechanical_n": 8,
+      "mechanical_degree": 15,
+      "mechanical_bound": 244,
+      "direct_seed_bound": 0,
+      "replication_bound": 0,
+      "chosen": null,
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.147874703344",
+        "direct_seed_bound": "0",
+        "replication_bound": "0"
+      }
+    },
+    {
+      "D": 31,
+      "mechanical_n": 16,
+      "mechanical_degree": 31,
+      "mechanical_bound": 1940,
+      "direct_seed_bound": 80,
+      "replication_bound": 80,
+      "chosen": {
+        "r": 2,
+        "seed_degree": 31,
+        "seed_cycles": 80,
+        "m": 1,
+        "realized_degree": 31
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.171191026903",
+        "direct_seed_bound": "0.00705942378981",
+        "replication_bound": "0.00705942378981"
+      }
+    },
+    {
+      "D": 63,
+      "mechanical_n": 32,
+      "mechanical_degree": 63,
+      "mechanical_bound": 12756,
+      "direct_seed_bound": 80,
+      "replication_bound": 320,
+      "chosen": {
+        "r": 2,
+        "seed_degree": 31,
+        "seed_cycles": 80,
+        "m": 2,
+        "realized_degree": 63
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.187229940741",
+        "direct_seed_bound": "0.00117422352299",
+        "replication_bound": "0.00469689409197"
+      }
+    },
+    {
+      "D": 100,
+      "mechanical_n": 50,
+      "mechanical_degree": 99,
+      "mechanical_bound": 32280,
+      "direct_seed_bound": 80,
+      "replication_bound": 720,
+      "chosen": {
+        "r": 2,
+        "seed_degree": 31,
+        "seed_cycles": 80,
+        "m": 3,
+        "realized_degree": 95
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.152209639488",
+        "direct_seed_bound": "0.000377223394023",
+        "replication_bound": "0.00339501054621"
+      }
+    },
+    {
+      "D": 103,
+      "mechanical_n": 52,
+      "mechanical_degree": 103,
+      "mechanical_bound": 34948,
+      "direct_seed_bound": 2240,
+      "replication_bound": 2240,
+      "chosen": {
+        "r": 3,
+        "seed_degree": 103,
+        "seed_cycles": 2240,
+        "m": 1,
+        "realized_degree": 103
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.153355440985",
+        "direct_seed_bound": "0.00982935183145",
+        "replication_bound": "0.00982935183145"
+      }
+    },
+    {
+      "D": 319,
+      "mechanical_n": 160,
+      "mechanical_degree": 319,
+      "mechanical_bound": 652116,
+      "direct_seed_bound": 40256,
+      "replication_bound": 40256,
+      "chosen": {
+        "r": 4,
+        "seed_degree": 319,
+        "seed_cycles": 40256,
+        "m": 1,
+        "realized_degree": 319
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.192804015392",
+        "direct_seed_bound": "0.0119020518491",
+        "replication_bound": "0.0119020518491"
+      }
+    },
+    {
+      "D": 1000,
+      "mechanical_n": 500,
+      "mechanical_degree": 999,
+      "mechanical_bound": 8038916,
+      "direct_seed_bound": 597536,
+      "replication_bound": 597536,
+      "chosen": {
+        "r": 5,
+        "seed_degree": 967,
+        "seed_cycles": 597536,
+        "m": 1,
+        "realized_degree": 967
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.168470398766",
+        "direct_seed_bound": "0.0125224754428",
+        "replication_bound": "0.0125224754428"
+      }
+    },
+    {
+      "D": 1023,
+      "mechanical_n": 512,
+      "mechanical_degree": 1023,
+      "mechanical_bound": 11099476,
+      "direct_seed_bound": 597536,
+      "replication_bound": 597536,
+      "chosen": {
+        "r": 5,
+        "seed_degree": 967,
+        "seed_cycles": 597536,
+        "m": 1,
+        "realized_degree": 967
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.220812029453",
+        "direct_seed_bound": "0.0118873302516",
+        "replication_bound": "0.0118873302516"
+      }
+    },
+    {
+      "D": 10000,
+      "mechanical_n": 5000,
+      "mechanical_degree": 9999,
+      "mechanical_bound": 1838458580,
+      "direct_seed_bound": 99383840,
+      "replication_bound": 99383840,
+      "chosen": {
+        "r": 7,
+        "seed_degree": 8743,
+        "seed_cycles": 99383840,
+        "m": 1,
+        "realized_degree": 8743
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.216721745412",
+        "direct_seed_bound": "0.0117155966987",
+        "replication_bound": "0.0117155966987"
+      }
+    },
+    {
+      "D": 1000000,
+      "mechanical_n": 500000,
+      "mechanical_degree": 999999,
+      "mechanical_bound": 41159156683092,
+      "direct_seed_bound": 1656222944768,
+      "replication_bound": 2423704468736,
+      "chosen": {
+        "r": 10,
+        "seed_degree": 236191,
+        "seed_cycles": 151481529296,
+        "m": 4,
+        "realized_degree": 944767
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.215641621932",
+        "direct_seed_bound": "0.00867730611784",
+        "replication_bound": "0.012698305914"
+      }
+    },
+    {
+      "D": 1000000000,
+      "mechanical_n": 500000000,
+      "mechanical_degree": 999999999,
+      "mechanical_bound": 99250727911062852948,
+      "direct_seed_bound": 2125414156871341952,
+      "replication_bound": 5890751188653670496,
+      "chosen": {
+        "r": 15,
+        "seed_degree": 57395623,
+        "seed_cycles": 20383222106068064,
+        "m": 17,
+        "realized_degree": 975725607
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.231109237296",
+        "direct_seed_bound": "0.00494911075284",
+        "replication_bound": "0.0137168466465"
+      }
+    },
+    {
+      "D": 1000000000000,
+      "mechanical_n": 500000000000,
+      "mechanical_degree": 999999999999,
+      "mechanical_bound": 182650147214339764682839380,
+      "direct_seed_bound": 2074912290901057154037920,
+      "replication_bound": 11287115823872224467892640,
+      "chosen": {
+        "r": 21,
+        "seed_degree": 41841412807,
+        "seed_cycles": 21336702880665830752160,
+        "m": 23,
+        "realized_degree": 962352494583
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.239235793233",
+        "direct_seed_bound": "0.00271772728012",
+        "replication_bound": "0.0147839032632"
+      }
+    },
+    {
+      "D": 1000000000000000000,
+      "mechanical_n": 500000000000000000,
+      "mechanical_degree": 999999999999999999,
+      "mechanical_bound": 424065384340075818892431639473460434260,
+      "direct_seed_bound": 12953829738340025287108274298588266816,
+      "replication_bound": 28897168825347164249808331616481308672,
+      "chosen": {
+        "r": 33,
+        "seed_degree": 22236242266222087,
+        "seed_cycles": 14926223566811551781925791124215552,
+        "m": 44,
+        "realized_degree": 978394659713771871
+      },
+      "ratios_descriptive_only": {
+        "mechanical_bound": "0.246863246248",
+        "direct_seed_bound": "0.00754087595601",
+        "replication_bound": "0.0168220495401"
+      }
+    }
+  ]
+}

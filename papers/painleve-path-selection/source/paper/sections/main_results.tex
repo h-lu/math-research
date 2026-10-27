@@ -1,0 +1,283 @@
+\section{Complete paths and their selection}
+\label{sec:main-results}
+
+We stop the original trajectory at its first crossing of one fixed
+downstream section. The limiting object retains the incoming rigid
+arc, every return in an accumulating cascade and the final contact
+or flight prefix. Its contact pieces carry an order, although their
+physical durations vanish.
+
+\subsection{The curves and their topology}
+For continuous oriented curves $f,g:[0,1]\to\R^5$, put
+\begin{equation}
+ \dF(f,g)=\inf_{h\in\mathrm{Homeo}_+([0,1])}
+                 \sup_{q\in[0,1]}|f(h(q))-g(q)|.
+ \label{eq:ps5-frechet}
+\end{equation}
+We identify curves at zero distance. Pauses and constant pieces are
+therefore allowed. Equivalently, one can use two nondecreasing
+continuous surjections in the comparison: approximate a surjection
+$a$ by $(1-\eta)a+\eta\,\mathrm{id}$ and use uniform continuity,
+then compose the resulting homeomorphisms. For compact path images,
+\begin{equation}
+ \dH(A,B)=\max\{\sup_{x\in A}\inf_{y\in B}|x-y|,
+                    \sup_{y\in B}\inf_{x\in A}|x-y|\}
+ \le\dF(f,g),\quad A=f([0,1]),\ B=g([0,1]).
+ \label{eq:ps5-hausdorff}
+\end{equation}
+
+Write $I_{\lambda,\nu}$ for the prescribed saturated rigid incoming
+arc from $(\phi_\nu,0,\omega_\nu,0,0)$ to $G$, oriented in physical
+time. Appendix~\ref{sec:detuned-return} and Section~\ref{sec:graph} construct an
+exact limiting graph return $F=F_\lambda$ and its ordered one-return
+curve $\cC_{\lambda,d}:[0,3]\to\R^5$. The three parameter intervals
+describe saturated compression, inherited normal release and the
+following first free flight: $\alpha=0,1,2,3$ mark touchdown, slip
+arrest, release and the next touchdown, respectively.
+These are finite-scale curves, retaining
+their exact $\sqrt d$ dependence. They satisfy
+\begin{equation}
+ \cC_{\lambda,d}(3)=\cC_{\lambda,F(d)}(0),\qquad
+ \sup_{0\le\alpha\le3}|\cC_{\lambda,d}(\alpha)-G|
+                      \le C d^{3/4}.
+ \label{eq:ps5-joins}
+\end{equation}
+On contact $p(\cC_{\lambda,d}(\alpha))=-ad$; on the free part it
+strictly decreases from $-ad$ to $-aF(d)$. For fixed sufficiently
+small $s>0$, set $d_*=F^{-1}(s)$. There is consequently a unique
+continuous free-section parameter $j_s:[d_*,s]\to[2,3]$ with
+\begin{equation}
+ p(\cC_{\lambda,d}(j_s(d)))=-as,\qquad
+ j_s(d_*)=3,\quad j_s(s)=2.
+ \label{eq:path-free-section}
+\end{equation}
+The possible terminal data form the compact set
+\begin{equation}
+ \mathcal A_s=\{(d,j_s(d)):d_*\le d\le s\}
+                       \cup(\{s\}\times[0,2]).
+ \label{eq:ps5-domain}
+\end{equation}
+Its graph branch records free-flight stopping; the vertical segment
+records contact stopping.
+
+For $d\in[d_*,s]$, let $b_m=F^{-m}(d)$, $m\ge0$. These bases tend
+to zero. Define $L_d(0)=G$ and trace $\cC_{\lambda,b_m}$ linearly on
+$[2^{-m},2^{-(m-1)}]$ for $m\ge1$. The joins and bound in
+\eqref{eq:ps5-joins} give a continuous curve. The complete curves are
+\begin{equation}
+ \cW_{\lambda,\nu,s}(d,\alpha)
+   =I_{\lambda,\nu}\star L_d\star
+                   \cC_{\lambda,d}|_{[0,\alpha]},
+       \qquad(d,\alpha)\in\mathcal A_s.
+ \label{eq:ps5-whole}
+\end{equation}
+Here $\star$ preserves order and joins equal endpoints. One may assign
+one third of $[0,1]$ to each factor; a zero final prefix is constant.
+Its compact image is
+\begin{equation}
+ W_{\lambda,\nu,s}(d,\alpha)
+  =I_{\lambda,\nu}([0,1])\cup\{G\}
+    \cup\bigcup_{m\ge1}\cC_{\lambda,b_m}([0,3])
+    \cup\cC_{\lambda,d}([0,\alpha]).
+ \label{eq:ps5-whole-image}
+\end{equation}
+The parameter $\alpha$ records the order along each completed contact
+and free return.
+At admission the two terminal pairs represent one ordered path:
+$\cW_{\lambda,\nu,s}(d_*,3)=\cW_{\lambda,\nu,s}(s,0)$.
+Indeed, $F(d_*)=s$ identifies the final full return of the former
+with the last return already contained in $L_s$. Their parameter
+pairs remain distinct. Figure~\ref{fig:ordered-stopped-path} shows
+the order and terminal domain.
+\input{figures/path_geometry}
+
+
+\subsection{Classification, common selection and contact sensitivity}
+Let $t_n$ be the successive actual touchdowns after the critical
+release and put $\delta_n=-p(t_n)/a$ whenever $p(t_n)<0$. The second
+and subsequent touchdowns have this sign. Let $t_s$ denote the
+actual first crossing of $p=-as$. Existence of the required events
+is part of the following theorem. For sufficiently small compliance,
+put
+\begin{equation}
+ \begin{gathered}
+ N_s=\min\{n\ge3:\delta_n\ge s\},\qquad
+ d_\eps=\delta_{N_s-1},\qquad
+ \alpha_\eps=h_\eps^{-1}(t_s),\\
+ f_\eps(q)=\cX_\eps(t_s q),\qquad H_\eps=f_\eps([0,1]).
+ \end{gathered}
+ \label{eq:ps5-stop}
+\end{equation}
+The increasing pairing $h_\eps:[0,3]\to[t_{N_s-1},t_{N_s}]$
+is constructed in Lemma~\ref{path:ordered-return}. Its compression
+parameter is the fraction of actual normal impulse up to the first
+$u_r=M_{\rm sl}\eps$ event; the release parameter is the elapsed fraction
+from that event to the first force zero. The last interval uses
+elapsed free time. Thus $\alpha_\eps$ is read from the actual return
+containing the first section time.
+
+\begingroup
+\renewcommand{\thetheorem}{A}
+\begin{theorem}[Classification and actual realization]
+\label{thm:whole}
+Under the hypotheses of Section~\ref{sec:model}, there is a common
+$s_0>0$ such that, for every fixed $0<s\le s_0$ and all sufficiently
+small $\eps$, the original solution reaches its first section time
+$t_s$ transversely, and $N_s\to\infty$ as $\eps\downarrow0$.
+For each fixed
+complete label $\mathfrak l=(\lambda,k,\theta,\nu,\mathbf n)$, the
+family $f_\eps$ is relatively compact for \eqref{eq:ps5-frechet},
+and
+\[
+ \Clust_{\eps\downarrow0}(d_\eps,\alpha_\eps)=\mathcal A_s.
+\]
+Its ordered-path accumulation set is exactly
+\[
+ \{\cW_{\lambda,\nu,s}(d,\alpha):(d,\alpha)\in\mathcal A_s\}.
+\]
+Every listed curve is attained by an actual sequence of compliances
+with this label fixed. More precisely, for every sequence $\eps_i\downarrow0$ with
+$(d_{\eps_i},\alpha_{\eps_i})\to(d,\alpha)$, one has
+$(d,\alpha)\in\mathcal A_s$ and
+\begin{equation}
+ \dF(f_{\eps_i},\cW_{\lambda,\nu,s}(d,\alpha))\to0,\qquad
+ \dH(H_{\eps_i},W_{\lambda,\nu,s}(d,\alpha))\to0.
+ \label{eq:ps5-whole-limit}
+\end{equation}
+The Hausdorff accumulation set is exactly the corresponding image
+family in \eqref{eq:ps5-whole-image}.
+\end{theorem}
+\endgroup
+
+For fixed $\lambda,\nu,s$, this accumulation family is independent
+of the profile, belt coefficient and fast preparation within the
+prescribed classes. Its contact segment records every possible
+stopping point of the terminal contact. A specified free
+target has the stronger selection property below.
+
+\begingroup
+\renewcommand{\thetheorem}{B}
+\begin{theorem}[Common selection of a free target]
+\label{thm:common-free}
+With the compact classes and $s_0$ of Theorem~\ref{thm:whole}, fix
+$\lambda$, $0<s\le s_0$ and $d\in(d_*,s)$. The normalized graph phase
+$\mathcal S_\lambda$ gives the explicit sequence
+\begin{equation}
+ \eps_m(d)=\exp\{-\tfrac{32}{9}(3/4)^{-m}
+                                      \mathcal S_\lambda(d)\}.
+ \label{eq:ps5-common}
+\end{equation}
+Along it,
+\begin{equation}
+ \sup_{(k,\theta,\nu,\mathbf n)}
+ \left\{|(d_{\eps_m},\alpha_{\eps_m})-(d,j_s(d))|
+ +\dF(f_{\eps_m},\cW_{\lambda,\nu,s}(d,j_s(d)))\right\}\to0,
+ \label{eq:common-target-limit}
+\end{equation}
+where the supremum is over the prescribed compact auxiliary class.
+The corresponding Hausdorff image convergence is uniform as well.
+The two free endpoints $(d_*,3)$ and $(s,2)$ have the same
+uniform convergence along the explicit sequences in
+Proposition~\ref{sel:threshold-selection} below.
+\end{theorem}
+\endgroup
+
+The sequence fixes the target while the auxiliary labels vary;
+each incoming datum retains its own arc $I_{\lambda,\nu}$.
+The exact phase $\mathcal S_\lambda$ contains the finite-scale
+return information needed at the fixed section $s$.
+In particular, the explicit sequence uses this constructed phase;
+replacing it by $\log(K_\lambda^4/d)$ at fixed $d$ need not select
+the same target.
+
+\begingroup
+\renewcommand{\thetheorem}{C}
+\begin{theorem}[Contact selection by the entrance constant]
+\label{thm:contact-selection}
+Under the hypotheses of Section~\ref{sec:model}, fix $\lambda$ and
+$0<s\le s_0$ sufficiently small before taking the compliance limit.
+The original physical preparation determines a continuous bounded
+entrance constant $\chi_\lambda(\mathfrak a)$ for the prescribed
+auxiliary labels $\mathfrak a=(k,\theta,\nu,\mathbf n)$; its
+construction is given in Proposition~\ref{loc:entrance} and
+\eqref{sel:chi}.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item For every two fixed auxiliary labels
+$\mathfrak a_1,\mathfrak a_2$ with unequal entrance constants, there
+is $\eps_0>0$, depending on this pair and the fixed data, such that
+for $0<\eps<\eps_0$ their first section times cannot both satisfy
+\[
+ t_{j_i}^{\mathfrak a_i}<t_s^{\mathfrak a_i}
+       \le t_{L,j_i}^{\mathfrak a_i},\qquad i=1,2,
+\]
+where $t_{L,j_i}^{\mathfrak a_i}$ is the first release after
+touchdown $j_i$. Consequently no common compliance sequence selects
+contact-interior terminal pairs $(s,\alpha_i)$ for both labels,
+where $0<\alpha_i<2$, or the corresponding ordered paths
+$\cW_{\lambda,\nu_i,s}(s,\alpha_i)$, even when
+$\alpha_1\ne\alpha_2$.
+\item For one fixed auxiliary label $\mathfrak a_0$ and
+$0<\alpha_0<2$, suppose that a sequence $\eps_m\downarrow0$ satisfies
+\[
+ f_{\eps_m}^{\mathfrak a_0}
+   \longrightarrow\cW_{\lambda,\nu_0,s}(s,\alpha_0)
+   \qquad\hbox{in }\dF.
+\]
+Along this same given sequence, every other fixed label
+$\mathfrak a$ with $\chi_\lambda(\mathfrak a)
+<\chi_\lambda(\mathfrak a_0)$ has terminal-pair limit $(d_*,3)$
+and ordered-path limit $\cW_{\lambda,\nu,s}(s,0)$; if
+$\chi_\lambda(\mathfrak a)>\chi_\lambda(\mathfrak a_0)$, the limits
+are $(s,2)$ and $\cW_{\lambda,\nu,s}(s,2)$, respectively.
+The corresponding Hausdorff image convergence holds, and each
+incoming datum retains its own arc $I_{\lambda,\nu}$.
+\end{enumerate}
+Equality of entrance constants is necessary for common interior
+contact selection; these estimates do not establish sufficiency.
+\end{theorem}
+\endgroup
+
+\begin{corollary}[Belt-coefficient sensitivity]
+\label{cor:belt-contact-selection}
+Fix $\lambda,\theta,\nu,\mathbf n$ and a sufficiently small
+$0<s\le s_0$ under the hypotheses of Theorem~\ref{thm:whole}.
+The entrance constant $\chi_{\lambda,\theta}(k)$ is strictly increasing
+in $k$. Thus any two distinct fixed belt coefficients satisfy the
+exclusion in Theorem~\ref{thm:contact-selection}\textup{(i)}.
+Fix $k_0\in I$ and $0<\alpha<2$. Along any sequence
+$\eps_m\downarrow0$ for which
+$f_{\eps_m}^{(k_0)}\to\cW_{\lambda,\nu,s}(s,\alpha)$ in $\dF$,
+every other fixed $k\in I$ satisfies
+\[
+\begin{array}{c|c|c}
+ &\text{terminal pair limit}&\text{ordered-path limit}\\ \hline
+ k<k_0 &(d_*,3)&\cW(d_*,3)=\cW(s,0)\\
+ k>k_0 &(s,2)&\cW(s,2).
+\end{array}
+\]
+The corresponding Hausdorff image convergence also holds.
+\end{corollary}
+
+Proposition~\ref{sel:threshold-selection}\textup{(i)} gives the
+explicit threshold sequences and their touchdown counts in
+Section~\ref{sec:contact-selection}; its parts \textup{(ii)} and
+\textup{(iii)} prove Theorem~\ref{thm:contact-selection}.
+The belt corollary follows
+from the strict order of its entrance constant; the same selection
+law applies to the locally constructed profile curves in
+Corollary~\ref{cor:friction-profile-selection}. Section~\ref{sec:observations}
+explains how the observation rule changes common prefix selection.
+
+The complete physical path does not determine every additionally
+scaled observable: Corollary~\ref{cor:memory} realizes an interval of
+limiting effective-gap velocities $v+z/\eps$ above the same release
+endpoint path. Lemma~\ref{lem:terminal-separation} identifies the sole
+nontrivial duplication of terminal parameters, and
+Corollary~\ref{cor:accumulation-circle} obtains the corresponding
+quotient-circle description for terminal states, ordered paths and
+compact images, at fixed $\lambda,\nu,s$ in the full physical state.
+
+The proof must start with the original physical preparation and end
+with whole curves. We first state the entrance and return estimates,
+then obtain one precise comparison from the actual third touchdown.
+The realization and selection arguments use that same comparison.

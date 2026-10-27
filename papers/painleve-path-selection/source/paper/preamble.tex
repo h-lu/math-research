@@ -1,0 +1,54 @@
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\numberwithin{equation}{section}
+\usepackage[papersize={8.5in,11in},textwidth=6in,textheight=8in,centering]{geometry}
+\usepackage[expansion=false]{microtype}
+\usepackage{booktabs,array,enumitem,xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathreplacing}
+\usepackage[hidelinks]{hyperref}
+\input{metadata}
+\hypersetup{pdfauthor={Haibo Lu}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Pcal}{\mathcal P}
+\newcommand{\Kcal}{\mathcal K}
+\newcommand{\Fcal}{\mathcal F}
+\newcommand{\Tcal}{\mathcal T}
+\newcommand{\Wcal}{\mathcal W}
+\newcommand{\Ccal}{\mathcal C}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\TD}{\mathrm{TD}}
+\newcommand{\LO}{\mathrm{LO}}
+\newcommand{\Acc}{\operatorname*{Acc}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\reservestatementspace}{%
+  \par\ifdim\dimexpr\pagegoal-\pagetotal\relax<8\baselineskip
+  \newpage\fi}
+\renewcommand{\figurename}{Fig.}
+
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\cX}{\mathfrak X}
+\newcommand{\X}{\mathfrak X}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\dF}{d_{\mathrm F}}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\dH}{d_{\mathrm H}}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\Clust}{\operatorname{Clust}}
+\newcommand{\XiState}{\mathfrak X}

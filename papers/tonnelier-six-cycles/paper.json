@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "slug": "tonnelier-six-cycles",
+  "title": "Beyond Tonnelier's conjectured bound: six cycles and uniform finiteness in continuous piecewise-affine Liénard systems",
+  "authors": [
+    "Haibo Lu"
+  ],
+  "version": "2026-10-03",
+  "abstract": "At least six hyperbolic cycles at three breakpoints; uniform finiteness at each fixed breakpoint count and an n+3 lower bound. The sharp general count at three breakpoints remains open.",
+  "topics": [
+    "piecewise-affine systems",
+    "limit cycles"
+  ],
+  "doi": "10.5281/zenodo.23113416",
+  "rights": {
+    "license": "cc-by-4.0",
+    "note": "Existing paper license retained.",
+    "evidence": "https://zenodo.org/records/23113416"
+  },
+  "validation": {
+    "scope": "Directed-interval certificate for a fixed six-cycle witness; not rerun in this packaging pass.",
+    "formal_verification": false
+  },
+  "artifacts": [
+    {
+      "path": "paper.pdf",
+      "role": "author-manuscript",
+      "sha256": "5a54c4f5d1027db01d787a9ddffa3ec7221146140ea2d0d1d778f13eb00e7841"
+    },
+    {
+      "path": "repro/README.md",
+      "role": "reproducibility",
+      "sha256": "d54f6c0d174eb25ea38ea645b3b2ccae115e981575d7f8f8e5f9411e63bc461d"
+    },
+    {
+      "path": "repro/certify_candidate_arb.py",
+      "role": "reproducibility",
+      "sha256": "e0e3c48ae4c77f632f1cd8acff40170220aca0d2bf9d94cbd626da6210d19c78"
+    },
+    {
+      "path": "repro/certify_six_cycle_arb.py",
+      "role": "reproducibility",
+      "sha256": "4a73710a14ceb0a0ec40f6edfbcfe000d3705ca0e44c9af03e5ef42ad1176df7"
+    },
+    {
+      "path": "repro/requirements.txt",
+      "role": "reproducibility",
+      "sha256": "fe3c529e0b09ab1426504e95fa612469105f9c745647283a07040775a35dcc87"
+    },
+    {
+      "path": "repro/six-cycle-001.json",
+      "role": "reproducibility",
+      "sha256": "158a23a068bab67b9aa8d5d86a43a80cd79b6a76851181990706cc115f66fe5e"
+    },
+    {
+      "path": "repro/six-cycle-480bit.json",
+      "role": "reproducibility",
+      "sha256": "390ed4ae7bae0a7ce0b776ae8c9eb92d346dc5942964fd0d86b19d9a2af710ca"
+    },
+    {
+      "path": "source/BUILD.sh",
+      "role": "author-source",
+      "sha256": "72a16764c8df6b61827d040bd9981913dd77d90078f487f288ba8d3db1e57394"
+    },
+    {
+      "path": "source/README.md",
+      "role": "author-source",
+      "sha256": "d014d5c928ed654cc5db54798e6d95d6b16b13eaa038baf4412d6cfaccac2369"
+    },
+    {
+      "path": "source/paper/figures/six-cycle-geometry-return.pdf",
+      "role": "author-source",
+      "sha256": "5164410e34a14d7b736320a75878a14b945d82422ad223e7408f77e404f9967a"
+    },
+    {
+      "path": "source/paper/figures/six-cycle-phase-atlas.pdf",
+      "role": "author-source",
+      "sha256": "30888b57f258ffdd17725bd0a0d05107320a3a66b30250aa04b5848fe8efd72e"
+    },
+    {
+      "path": "source/paper/manuscript.tex",
+      "role": "author-source",
+      "sha256": "fdaeeeb4d9b63c018a428ece110181a30a0fc141dc934f9d8520f411e94dd70d"
+    }
+  ]
+}

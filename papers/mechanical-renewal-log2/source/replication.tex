@@ -1,0 +1,137 @@
+\section{Comparison with the preceding constructions}\label{sec:replication}
+
+\subsection{Two-source renewal and mechanical histories}\label{sec:scope}
+
+Both the renewal theorem of \cite[Proposition~4.1]{Lu2026} and the
+present construction use fourfold copying with two axis sources.
+The earlier theorem starts from an
+arbitrary polynomial field carrying a selected finite hyperbolic
+configuration. It transplants that configuration into the interior of a
+square and rebuilds the traces on two adjacent edges at a cost of two
+degrees. A signed tangency condition makes all simple source roots
+available for center creation. The classical fourfold transformation and
+two successive common perturbations then give the update stated in the
+introduction. The normalized number of new cycles per stage is of
+constant order, producing the single logarithm.
+
+Proposition~\ref{prop:mechanical-certificate} instead constructs the
+separable Hamiltonians and perturbing forms together. Its source at
+stage $i$ retains $i$ auxiliary birth levels, so the normalized new-zero
+count is of order $i$. Summation over the planar stages supplies the
+second logarithm. The future-degree allocation pays for this larger
+source. Exact cancellation uses a reflection fixing each new oval and
+reversing its orientation; exchanging two different ovals would only
+make their periods opposite. Small even additions preserve this
+cancellation while filling the intervening degrees.
+
+Thus the two results address different input classes as well as
+different quantitative bounds. The earlier renewal preserves a given
+arbitrary hyperbolic configuration. The present theorem improves the
+asymptotic count along an explicitly constructed near-Hamiltonian
+sequence; it does not assert the same improved update for arbitrary
+input fields. The proof constructs the auxiliary history and global
+form directly, without the transplantation or signed edge traces used
+in the earlier theorem.
+
+\subsection{The Qin--Sun construction and all-degree comparison}
+
+Qin--Sun's two logarithms arise from two 3-adic filtrations, one in each coordinate, in an
+anisotropic Chebyshev center grid, with a simultaneous choice of
+perturbation coefficients. Here they arise from the auxiliary mechanical
+history and the stages of planar renewal. The square-logarithmic order
+is therefore a prior result of Qin--Sun; the contribution here is the
+mechanical construction and the improved coefficient. To compare the
+coefficients over the same range of degrees, we first transfer their
+subsequence bound to all sufficiently large degrees.
+
+The required replication operation is due to
+Eshkobilov--Kadyrov--Mamayusupov
+\cite[Theorem~1, Lemma~2(4) and Section~6.3]{EKM2026}, whose
+time-change argument also preserves hyperbolicity. We record the form
+used here.
+
+\begin{lemma}\label{lem:replication}
+If a real polynomial field of degree at most $d$ has $N$ selected
+hyperbolic limit cycles, then for every integer $m\ge1$ there is a
+real polynomial field of degree at most $m(d+1)-1$ with at least
+$m^2N$ hyperbolic limit cycles.
+\end{lemma}
+\begin{proof}
+An affine change of coordinates places the selected compact cycles
+inside $(-1,1)^2$. Write the resulting field as $(P,Q)$ and let $T_m$
+be the first-kind Chebyshev polynomial. The polynomial field
+\[
+ \bigl(T_m'(y)P(T_m(x),T_m(y)),\,
+       T_m'(x)Q(T_m(x),T_m(y))\bigr)
+\]
+has the stated degree. Each of the $m^2$ open monotonicity rectangles
+maps diffeomorphically onto $(-1,1)^2$. Pushing the field forward gives
+the seed field multiplied by the nonvanishing scalar
+$T_m'(x)T_m'(y)$. Thus each selected cycle has one copy in every
+rectangle. A positive time change preserves its return map, and a
+negative time change replaces that map by its inverse. The multiplier
+is consequently either the original multiplier or its reciprocal;
+hyperbolicity persists in both cases.
+\end{proof}
+
+Combining the lemma with \eqref{eq:QS} gives the explicit bound
+\begin{equation}\label{eq:envelope}
+ \Hhyp(D)\ge B_{\mathrm{QS}}(D):=
+ \max_{\substack{r\ge2\\4\cdot3^r-5\le D}}
+ \left\lfloor\frac{D+1}{4\cdot3^r-4}\right\rfloor^2
+ \bigl[4r^2 3^{2r-2}-(3^r-1)^2\bigr]
+ \qquad(D\ge31).
+\end{equation}
+The case $m=1$ in Lemma~\ref{lem:replication} recovers each unreplicated
+seed; the factor in \eqref{eq:envelope} chooses the largest admissible $m$
+for each seed degree.
+
+\begin{proposition}\label{prop:QSall}
+For all sufficiently large integer $D$,
+\begin{equation}\label{eq:QSalltransfer}
+ \Hhyp(D)\ge\frac{D^2}{36(\ln3)^2}
+ \bigl[(\ln D)^2-2\ln D\ln\ln D\bigr]-O(D^2\ln D).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Put $S=D+1$ and choose $r$ maximal with
+$4\cdot3^r\le S/\ln S$. Then $q=3^r=\Theta(S/\ln S)$ and
+\[
+ r=\frac{\ln D-\ln\ln D+O(1)}{\ln3}.
+\]
+Set $m=\lfloor S/(4q-4)\rfloor$. This meets the degree bound and
+$mq=D/4+O(D/\ln D)$. Inserting these estimates in
+$m^2[(4/9)q^2r^2-(q-1)^2]$ gives \eqref{eq:QSalltransfer}; the
+remaining $(\ln\ln D)^2$ term is $O(\ln D)$.
+\end{proof}
+
+For clarity, the relevant coefficients are displayed in
+Table~\ref{tab:comparison}. Qin--Sun's direct all-degree formula
+\cite[Corollary~1.2 and Sections~6.2, 6.4]{QinSun2026} gives, for every $D\ge31$,
+\[
+ \Hhyp(D)\ge\frac{(D+5)^2}{324}
+ \left(\frac{\ln((D+5)/12)}{\ln3}\right)^2
+ -\frac{(D+1)^2}{16}.
+\]
+Its smaller coefficient comes from filling gaps between consecutive
+ternary seed degrees by monotonicity. Proposition~\ref{prop:QSall}
+is the consequence of their seeds and replication proved here, and is
+not a restatement of that corollary.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}p{.34\linewidth}p{.22\linewidth}p{.19\linewidth}p{.17\linewidth}@{}}
+\toprule
+Result & Degree range & Coefficient $c$ & Error factor\\
+\midrule
+Qin--Sun, Theorem 1.1 & $4\cdot3^r-5$, $r\ge2$ & $1/[36(\ln3)^2]$ & $\ln D$\\[3pt]
+Qin--Sun, Corollary 1.2 & Every $D\ge31$ & $1/[324(\ln3)^2]$ & $\ln D$\\[3pt]
+Qin--Sun + replication, Proposition~\ref{prop:QSall} & Every sufficiently large $D$ & $1/[36(\ln3)^2]$ & $\ln D\ln\ln D$\\[3pt]
+Mechanical renewal, Theorem~\ref{thm:main} & Every sufficiently large $D$ & $1/[8(\ln2)^2]$ & $\ln D$\\
+\bottomrule
+\end{tabular}
+\caption{Bounds of the form $\Hhyp(D)\ge cD^2(\ln D)^2$
+with remainder $O(D^2)$ times the displayed error factor. All degrees are total degrees of one real
+planar polynomial vector field; all counted cycles are hyperbolic.}
+\label{tab:comparison}
+\end{table}

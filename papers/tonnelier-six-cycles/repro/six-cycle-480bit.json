@@ -1,0 +1,660 @@
+{
+  "arithmetic": {
+    "acceptance_uses_binary_float": false,
+    "backend": "python-flint Arb directed real ball arithmetic",
+    "box_radius": "1e-25",
+    "decimal_parameters": "interpreted as exact rationals",
+    "flint_version": "3.6.0",
+    "normalized_time_slices": 512,
+    "precision_bits": 480,
+    "python_flint_version": "0.9.0"
+  },
+  "candidate_sha256": "68532fb1b909ab3801e0402c8079a9cfb517e5f89c6b51c3dbf7b55a62ac5194",
+  "checker_sha256": "4a73710a14ceb0a0ec40f6edfbcfe000d3705ca0e44c9af03e5ef42ad1176df7",
+  "claim": "At least six distinct hyperbolic limit cycles exist for the exact rational candidate parameters.",
+  "core_checker_sha256": "e0e3c48ae4c77f632f1cd8acff40170220aca0d2bf9d94cbd626da6210d19c78",
+  "cycles": [
+    {
+      "all_flight_times_positive": true,
+      "branch": {
+        "all_switches_transverse": true,
+        "characteristic_exponent_enclosure": "[-0.414495454839643653418793 +/- 5.82e-25]",
+        "characteristic_exponent_excludes_zero": true,
+        "endpoint_p_enclosures": [
+          "[-5.930158145900775064964628 +/- 7.24e-25]",
+          "[3.006872399156876681132171 +/- 5.11e-25]",
+          "[-5.70380492961585931344753 +/- 4.60e-24]"
+        ],
+        "first_event_branch_certified": true,
+        "floquet_multiplier_enclosure": "[0.6606735362619705333736317 +/- 8.68e-26]",
+        "floquet_multiplier_excludes_one": true,
+        "minimum_crossing_speed_lower_bound": "[3.00687239915687668113217048973032749 +/- 2.45e-36]",
+        "minimum_position_guard_lower_bound": "[0.0489602693065049719747776172802618499 +/- 3.72e-38]",
+        "minimum_velocity_guard_lower_bound": "[0.00546186350251093005859515585871392098 +/- 4.54e-39]",
+        "normalized_time_slices": 512,
+        "segments": [
+          {
+            "index": 0,
+            "time_enclosure": "[0.171518579741229655512685 +/- 5.80e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[5.70380458746390616768266916401598158 +/- 4.53e-36]"
+          },
+          {
+            "index": 1,
+            "position_guard_lower_bound": "[0.0489602693065049719747776172802618499 +/- 3.72e-38]",
+            "time_enclosure": "[2.761405778234969568610441 +/- 4.22e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.00546186351706284528696200766535454598 +/- 4.54e-39]"
+          },
+          {
+            "index": 2,
+            "position_guard_lower_bound": "[0.121133061900239948092693079333768734 +/- 2.82e-37]",
+            "time_enclosure": "[3.486890917092049570179732 +/- 4.62e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.0233025846196411223741471404776152864 +/- 4.16e-38]"
+          }
+        ]
+      },
+      "chart": "short",
+      "cycle": 1,
+      "itinerary": [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "krawczyk": {
+        "contraction_norm_strictly_below_one": true,
+        "defect_infinity_norm_upper_enclosure": "[1.04728668413617194301771476398582385e-23 +/- 1.19e-59]",
+        "dimension": 4,
+        "flight_count": 3,
+        "point_residual_max_abs_enclosure": "[4.51935391225425988236381838691394964e-94 +/- 2.41e-130]",
+        "strict_inclusion": true,
+        "strict_inclusion_margin_enclosure": "[1.000000000000000000000e-25 +/- 1.05e-48]",
+        "strict_inclusion_margin_lower_bound": "[9.99999999999999999999989527133022331e-26 +/- 9.4e-64]"
+      },
+      "positive_section_amplitude": true,
+      "section_amplitude_enclosure": "[5.703804929615859313447533 +/- 3.51e-25]"
+    },
+    {
+      "all_flight_times_positive": true,
+      "branch": {
+        "all_switches_transverse": true,
+        "characteristic_exponent_enclosure": "[0.040280541464108999979937 +/- 9.34e-25]",
+        "characteristic_exponent_excludes_zero": true,
+        "endpoint_p_enclosures": [
+          "[-6.184877294668453401453417 +/- 6.99e-25]",
+          "[-1.066991360126139014098938 +/- 6.47e-25]",
+          "[1.47531397861505595021576 +/- 5.55e-24]",
+          "[3.204666235254196653848280 +/- 9.13e-25]",
+          "[1.016087990931906654108977 +/- 8.75e-25]",
+          "[-0.80842935843720847705824 +/- 4.27e-24]",
+          "[-5.95500287512271700501100 +/- 2.21e-24]"
+        ],
+        "first_event_branch_certified": true,
+        "floquet_multiplier_enclosure": "[1.041102805732403156343480 +/- 9.34e-25]",
+        "floquet_multiplier_excludes_one": true,
+        "minimum_crossing_speed_lower_bound": "[0.808429358437208477058235731948354336 +/- 3.25e-37]",
+        "minimum_position_guard_lower_bound": "[0.0838841822310829761188822472327255159 +/- 3.33e-38]",
+        "minimum_velocity_guard_lower_bound": "[0.000614243371650713277756943910617431557 +/- 3.25e-40]",
+        "normalized_time_slices": 512,
+        "segments": [
+          {
+            "index": 0,
+            "time_enclosure": "[0.164401656640920804244758 +/- 5.92e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[5.95500254505803614331251375111894974 +/- 4.13e-36]"
+          },
+          {
+            "index": 1,
+            "time_enclosure": "[0.970126046659639412310478 +/- 3.66e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[1.06698888905958935445552406120380706 +/- 7.76e-38]"
+          },
+          {
+            "index": 2,
+            "position_guard_lower_bound": "[0.165416300396019455203964627101070635 +/- 2.27e-37]",
+            "time_enclosure": "[0.542965815378637393398148 +/- 3.50e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.000614243398544027478472839437924232608 +/- 2.44e-40]"
+          },
+          {
+            "index": 3,
+            "time_enclosure": "[1.261378418628693349232682 +/- 3.14e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[1.47326085206631373315299151322056176 +/- 3.30e-36]"
+          },
+          {
+            "index": 4,
+            "time_enclosure": "[1.817694250766029267751772 +/- 4.31e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[1.01552174130550788035442843683914947 +/- 4.49e-36]"
+          },
+          {
+            "index": 5,
+            "position_guard_lower_bound": "[0.0838841822310829761188822472327255159 +/- 3.33e-38]",
+            "time_enclosure": "[0.383645186767698651547631 +/- 1.60e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.00147048445418912034712542948682625551 +/- 3.60e-39]"
+          },
+          {
+            "index": 6,
+            "time_enclosure": "[1.265770661350276165771663 +/- 2.75e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[0.808424642926872622114056872243064730 +/- 1.86e-37]"
+          }
+        ]
+      },
+      "chart": "full",
+      "cycle": 2,
+      "itinerary": [
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "krawczyk": {
+        "contraction_norm_strictly_below_one": true,
+        "defect_infinity_norm_upper_enclosure": "[1.22998585020607330497808133015443354e-21 +/- 3.25e-58]",
+        "dimension": 8,
+        "flight_count": 7,
+        "point_residual_max_abs_enclosure": "[3.33143224107835911354069417017608342e-94 +/- 4.97e-130]",
+        "strict_inclusion": true,
+        "strict_inclusion_margin_enclosure": "[1.0000000000000000000e-25 +/- 1.23e-46]",
+        "strict_inclusion_margin_lower_bound": "[9.99999999999999999998770014135512591e-26 +/- 2.86e-62]"
+      },
+      "positive_section_amplitude": true,
+      "section_amplitude_enclosure": "[5.955002875122717005011001 +/- 5.33e-25]"
+    },
+    {
+      "all_flight_times_positive": true,
+      "branch": {
+        "all_switches_transverse": true,
+        "characteristic_exponent_enclosure": "[-0.009957796994931671222778 +/- 6.95e-25]",
+        "characteristic_exponent_excludes_zero": true,
+        "endpoint_p_enclosures": [
+          "[-6.389795657629944823777717 +/- 6.62e-25]",
+          "[-1.63550992164679114532142 +/- 4.04e-24]",
+          "[2.82437279869577948538877 +/- 8.52e-24]",
+          "[3.65740996422781672114503 +/- 5.63e-24]",
+          "[2.48654391556897131125660 +/- 5.89e-24]",
+          "[-1.531179937057286018982883 +/- 6.35e-25]",
+          "[-6.15729165851756795683553 +/- 3.59e-24]"
+        ],
+        "first_event_branch_certified": true,
+        "floquet_multiplier_enclosure": "[0.990091617709017800671323 +/- 7.28e-25]",
+        "floquet_multiplier_excludes_one": true,
+        "minimum_crossing_speed_lower_bound": "[1.53117993705728601898288245666275988 +/- 3.28e-36]",
+        "minimum_position_guard_lower_bound": "[0.392837794108769164387210257395263931 +/- 2.18e-37]",
+        "minimum_velocity_guard_lower_bound": "[0.00136525466490348894606813051208913151 +/- 3.69e-39]",
+        "normalized_time_slices": 512,
+        "segments": [
+          {
+            "index": 0,
+            "time_enclosure": "[0.159087603245111336439487 +/- 1.52e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[6.15729133742995724338882329608993458 +/- 3.49e-36]"
+          },
+          {
+            "index": 1,
+            "time_enclosure": "[0.875530332212418590804793 +/- 2.77e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[1.63550783942278041712746899106653563 +/- 3.61e-36]"
+          },
+          {
+            "index": 2,
+            "position_guard_lower_bound": "[0.485447146570605463836415627470037231 +/- 2.90e-37]",
+            "time_enclosure": "[0.910763793546711541511106 +/- 1.06e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.00136525472468239307603279451616438204 +/- 2.08e-39]"
+          },
+          {
+            "index": 3,
+            "time_enclosure": "[0.996588536142333571242505 +/- 3.15e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[2.82127190458399958357637547762526864 +/- 3.22e-36]"
+          },
+          {
+            "index": 4,
+            "time_enclosure": "[1.480822477395319755669425 +/- 5.21e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[2.48479627993207019612034895353226961 +/- 5.66e-37]"
+          },
+          {
+            "index": 5,
+            "position_guard_lower_bound": "[0.392837794108769164387210257395263931 +/- 2.18e-37]",
+            "time_enclosure": "[0.809634163315560283126880 +/- 1.99e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.00293648541374678858340311860762325599 +/- 5.50e-40]"
+          },
+          {
+            "index": 6,
+            "time_enclosure": "[1.130864553519885078767227 +/- 3.13e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[1.53117440559255827384711789447628603 +/- 2.23e-36]"
+          }
+        ]
+      },
+      "chart": "full",
+      "cycle": 3,
+      "itinerary": [
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "krawczyk": {
+        "contraction_norm_strictly_below_one": true,
+        "defect_infinity_norm_upper_enclosure": "[3.52229243061760293050249224003163874e-21 +/- 7.01e-58]",
+        "dimension": 8,
+        "flight_count": 7,
+        "point_residual_max_abs_enclosure": "[2.97572672586527587332002937957078378e-94 +/- 1.71e-130]",
+        "strict_inclusion": true,
+        "strict_inclusion_margin_enclosure": "[1.0000000000000000000e-25 +/- 3.53e-46]",
+        "strict_inclusion_margin_lower_bound": "[9.99999999999999999996477707517248325e-26 +/- 8.56e-63]"
+      },
+      "positive_section_amplitude": true,
+      "section_amplitude_enclosure": "[6.157291658517567956835533 +/- 4.49e-25]"
+    },
+    {
+      "all_flight_times_positive": true,
+      "branch": {
+        "all_switches_transverse": true,
+        "characteristic_exponent_enclosure": "[0.007095342114993894213824 +/- 7.54e-25]",
+        "characteristic_exponent_excludes_zero": true,
+        "endpoint_p_enclosures": [
+          "[-6.819265144834390658349712 +/- 8.00e-25]",
+          "[-2.50468187303102108042073 +/- 4.30e-24]",
+          "[6.7288172699849318004805 +/- 2.67e-23]",
+          "[6.20897516194004877534959 +/- 7.61e-24]",
+          "[6.4318678818480908802494 +/- 3.35e-23]",
+          "[-2.50002049971318160496685 +/- 2.44e-24]",
+          "[-6.58176178527788153957784 +/- 3.86e-24]"
+        ],
+        "first_event_branch_certified": true,
+        "floquet_multiplier_enclosure": "[1.007120573695121105952183 +/- 6.13e-25]",
+        "floquet_multiplier_excludes_one": true,
+        "minimum_crossing_speed_lower_bound": "[2.50002049971318160496684756869617991 +/- 4.02e-36]",
+        "minimum_position_guard_lower_bound": "[1.62012988510938634531336039627918502 +/- 2.40e-36]",
+        "minimum_velocity_guard_lower_bound": "[0.00228524591468923278422328716790089354 +/- 1.94e-39]",
+        "normalized_time_slices": 512,
+        "segments": [
+          {
+            "index": 0,
+            "time_enclosure": "[0.148986582465539317137132 +/- 3.15e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[6.58176148112249154478020097517552323 +/- 2.90e-36]"
+          },
+          {
+            "index": 1,
+            "time_enclosure": "[0.754017837337630141672874 +/- 3.30e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[2.50468025017742519102557797324808881 +/- 4.71e-36]"
+          },
+          {
+            "index": 2,
+            "position_guard_lower_bound": "[1.72352015430108104155117398624450947 +/- 4.08e-36]",
+            "time_enclosure": "[1.619627423681495303295889 +/- 2.75e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.00228524611484856164384361070216533450 +/- 3.88e-39]"
+          },
+          {
+            "index": 3,
+            "time_enclosure": "[0.539322636652948021776229 +/- 5.88e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[6.20537978964194484409349753381715569 +/- 2.50e-37]"
+          },
+          {
+            "index": 4,
+            "time_enclosure": "[0.847590696995155413589013 +/- 2.39e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[6.20896641440571051899996772461548702 +/- 2.79e-36]"
+          },
+          {
+            "index": 5,
+            "position_guard_lower_bound": "[1.62012988510938634531336039627918502 +/- 2.40e-36]",
+            "time_enclosure": "[1.551839852058756082095531 +/- 4.46e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[0.00549116848347722828199422115071307719 +/- 9.60e-40]"
+          },
+          {
+            "index": 6,
+            "time_enclosure": "[0.974346372316500611232934 +/- 1.19e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[2.50001463256001065718971796455127849 +/- 2.26e-36]"
+          }
+        ]
+      },
+      "chart": "full",
+      "cycle": 4,
+      "itinerary": [
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "krawczyk": {
+        "contraction_norm_strictly_below_one": true,
+        "defect_infinity_norm_upper_enclosure": "[6.80939933079724334237603154591801879e-21 +/- 1.96e-58]",
+        "dimension": 8,
+        "flight_count": 7,
+        "point_residual_max_abs_enclosure": "[2.55421094378518274402490533084236094e-94 +/- 3.62e-130]",
+        "strict_inclusion": true,
+        "strict_inclusion_margin_enclosure": "[1.0000000000000000000e-25 +/- 6.81e-46]",
+        "strict_inclusion_margin_lower_bound": "[9.99999999999999999993190600596871330e-26 +/- 4.22e-62]"
+      },
+      "positive_section_amplitude": true,
+      "section_amplitude_enclosure": "[6.581761785277881539577838 +/- 1.34e-25]"
+    },
+    {
+      "all_flight_times_positive": true,
+      "branch": {
+        "all_switches_transverse": true,
+        "characteristic_exponent_enclosure": "[-0.000233207892340263983918 +/- 6.12e-25]",
+        "characteristic_exponent_excludes_zero": true,
+        "endpoint_p_enclosures": [
+          "[-19.07756762172263561827826 +/- 4.24e-24]",
+          "[-16.50303924243970998778773 +/- 2.63e-24]",
+          "[4564.96198768995495040616 +/- 4.19e-21]",
+          "[4562.95560672384348989967 +/- 2.24e-21]",
+          "[4564.72846406879610636991 +/- 5.02e-21]",
+          "[-16.6978801961337198504465 +/- 2.13e-23]",
+          "[-18.7923449781351427266100 +/- 5.95e-23]"
+        ],
+        "first_event_branch_certified": true,
+        "floquet_multiplier_enclosure": "[0.999766819298506513143762 +/- 6.56e-25]",
+        "floquet_multiplier_excludes_one": true,
+        "minimum_crossing_speed_lower_bound": "[16.5030392424397099877877284363557127 +/- 4.63e-35]",
+        "minimum_position_guard_lower_bound": "[1780.01166915446290909574769655002889 +/- 3.88e-33]",
+        "minimum_velocity_guard_lower_bound": "[1.45610762502899065586819815457011203 +/- 1.56e-36]",
+        "normalized_time_slices": 512,
+        "segments": [
+          {
+            "index": 0,
+            "time_enclosure": "[0.052801194327605062754196 +/- 4.51e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[18.7923448054279167617958029165256250 +/- 3.82e-35]"
+          },
+          {
+            "index": 1,
+            "time_enclosure": "[0.200186398206743043948840 +/- 2.44e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[16.5030389928067729407340567282918095 +/- 7.07e-36]"
+          },
+          {
+            "index": 2,
+            "position_guard_lower_bound": "[1780.01166919424840591976479114417788 +/- 3.05e-33]",
+            "time_enclosure": "[6.602905973375821782430415 +/- 4.29e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[1.45610767015678665790798297303258554 +/- 3.47e-36]"
+          },
+          {
+            "index": 3,
+            "time_enclosure": "[0.000781876972174404118073 +/- 1.68e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[4562.95559423009726366852653869199958 +/- 6.70e-34]"
+          },
+          {
+            "index": 4,
+            "time_enclosure": "[0.001248448640916545299039 +/- 4.60e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[4562.95560177282989622164426605599261 +/- 1.66e-33]"
+          },
+          {
+            "index": 5,
+            "position_guard_lower_bound": "[1786.01564224108885026001185195587991 +/- 7.98e-34]",
+            "time_enclosure": "[6.595080294526419785946473 +/- 2.15e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[10.6122941512867830602214824127206425 +/- 4.99e-35]"
+          },
+          {
+            "index": 6,
+            "time_enclosure": "[0.263414093758489750113367 +/- 3.42e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[16.6978778201234018740927500332741570 +/- 1.14e-35]"
+          }
+        ]
+      },
+      "chart": "full",
+      "cycle": 5,
+      "itinerary": [
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "krawczyk": {
+        "contraction_norm_strictly_below_one": true,
+        "defect_infinity_norm_upper_enclosure": "[6.04188622993795793441323533858578954e-19 +/- 2.01e-55]",
+        "dimension": 8,
+        "flight_count": 7,
+        "point_residual_max_abs_enclosure": "[1.07627613505435471207289335945561128e-91 +/- 1.24e-128]",
+        "strict_inclusion": true,
+        "strict_inclusion_margin_enclosure": "[1.00000000000000000e-25 +/- 6.05e-44]",
+        "strict_inclusion_margin_lower_bound": "[9.99999999999999999395811363081007659e-26 +/- 2.82e-62]"
+      },
+      "positive_section_amplitude": true,
+      "section_amplitude_enclosure": "[18.792344978135142726609953 +/- 3.22e-25]"
+    },
+    {
+      "all_flight_times_positive": true,
+      "branch": {
+        "all_switches_transverse": true,
+        "characteristic_exponent_enclosure": "[1.5954868232511087796e-5 +/- 6.88e-25]",
+        "characteristic_exponent_excludes_zero": true,
+        "endpoint_p_enclosures": [
+          "[-169.13061726233250807769782 +/- 8.14e-24]",
+          "[-167.0628781453354780799826 +/- 2.77e-23]",
+          "[79898.9974551199508632544 +/- 3.45e-20]",
+          "[79896.9890216834884135840 +/- 5.67e-20]",
+          "[79898.7640551605158809549 +/- 6.66e-20]",
+          "[-167.292656337544919124920 +/- 9.83e-23]",
+          "[-168.822018379713956098432 +/- 1.93e-22]"
+        ],
+        "first_event_branch_certified": true,
+        "floquet_multiplier_enclosure": "[1.000015954995512098154972 +/- 8.33e-25]",
+        "floquet_multiplier_excludes_one": true,
+        "minimum_crossing_speed_lower_bound": "[167.062878145335478079982596946796652 +/- 2.92e-34]",
+        "minimum_position_guard_lower_bound": "[31256.1716525994908464700637717905010 +/- 2.14e-32]",
+        "minimum_velocity_guard_lower_bound": "[166.985133845410235794388088551067950 +/- 2.14e-34]",
+        "normalized_time_slices": 512,
+        "segments": [
+          {
+            "index": 0,
+            "time_enclosure": "[0.005917973447199742827228 +/- 3.59e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[168.822018183877705729576230952569019 +/- 1.71e-34]"
+          },
+          {
+            "index": 1,
+            "time_enclosure": "[0.021228037780773563016685 +/- 3.65e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[167.062877743190108581976189065799572 +/- 2.91e-34]"
+          },
+          {
+            "index": 2,
+            "position_guard_lower_bound": "[31256.1716532881782812450607924877456 +/- 3.85e-33]",
+            "time_enclosure": "[6.940182994897242863988955 +/- 1.08e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[166.985133838085530281722120528401757 +/- 2.93e-35]"
+          },
+          {
+            "index": 3,
+            "time_enclosure": "[4.4662628743326211222e-5 +/- 2.83e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[79896.9889250277666618424986948064644 +/- 7.13e-33]"
+          },
+          {
+            "index": 4,
+            "time_enclosure": "[7.1312571740715962402e-5 +/- 3.31e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[79896.9889355189561881816034930023223 +/- 6.86e-33]"
+          },
+          {
+            "index": 5,
+            "position_guard_lower_bound": "[31265.6456166019655210700667510932564 +/- 4.66e-32]",
+            "time_enclosure": "[6.939394000117800040551416 +/- 3.35e-25]",
+            "turn": true,
+            "velocity_guard_lower_bound": "[167.264536976006094502589432126099679 +/- 8.46e-35]"
+          },
+          {
+            "index": 6,
+            "time_enclosure": "[0.027951461646583310847275 +/- 2.92e-25]",
+            "turn": false,
+            "velocity_guard_lower_bound": "[167.292655434899244802133294981335177 +/- 4.17e-34]"
+          }
+        ]
+      },
+      "chart": "full",
+      "cycle": 6,
+      "itinerary": [
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "krawczyk": {
+        "contraction_norm_strictly_below_one": true,
+        "defect_infinity_norm_upper_enclosure": "[7.21995408255819595223293131760125534e-17 +/- 4.43e-53]",
+        "dimension": 8,
+        "flight_count": 7,
+        "point_residual_max_abs_enclosure": "[2.70347512033746166134598368398218389e-90 +/- 2.37e-126]",
+        "strict_inclusion": true,
+        "strict_inclusion_margin_enclosure": "[1.000000000000000e-25 +/- 7.23e-42]",
+        "strict_inclusion_margin_lower_bound": "[9.99999999999999927800457328351052177e-26 +/- 7.26e-63]"
+      },
+      "positive_section_amplitude": true,
+      "section_amplitude_enclosure": "[168.822018379713956098432095 +/- 3.80e-25]"
+    }
+  ],
+  "exact_parameters": {
+    "all_four_zones_focus_type": true,
+    "all_three_folds_genuine": true,
+    "breakpoints": [
+      "-4.568454409748787",
+      "-1",
+      "4.697723054757359"
+    ],
+    "continuous_at_switches_by_intercept_construction": true,
+    "intercepts_as_exact_fractions": [
+      "98526370922111040799659997774319/10000000000000000000000000000000",
+      "-5465136771295789/6250000000000000",
+      "0",
+      "123125142811180711655663983915207/12500000000000000000000000000000"
+    ],
+    "origin_zone": 2,
+    "slopes": [
+      "1.7852068867006083",
+      "-0.5628649147225554",
+      "0.31155696868477084",
+      "-1.785205933274595"
+    ]
+  },
+  "pairwise_disjoint_section_boxes": true,
+  "scope": "Existence, distinctness, prescribed first-event itineraries, switch transversality, and hyperbolicity are certified; this does not assert that there are exactly six cycles.",
+  "status": "rigorous-directed-ball-certificate-pass"
+}

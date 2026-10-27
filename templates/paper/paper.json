@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "slug": "replace-with-stable-slug",
+  "title": "Replace with exact manuscript title",
+  "authors": [
+    "Replace with author name"
+  ],
+  "version": "YYYY-MM-DD",
+  "abstract": "Describe only the conclusions actually stated in the manuscript.",
+  "topics": [],
+  "doi": null,
+  "rights": {
+    "license": null,
+    "evidence": null
+  },
+  "validation": {
+    "analytic_proof": "author manuscript",
+    "computational": "none recorded",
+    "formal_verification": "none recorded"
+  },
+  "artifacts": [
+    {
+      "path": "paper.pdf",
+      "role": "author-manuscript",
+      "sha256": "REPLACE"
+    }
+  ]
+}

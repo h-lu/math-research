@@ -1,0 +1,148 @@
+\subsection{Friction-profile response}
+\label{sec:profile-response}
+
+The belt order does not by itself establish sensitivity to the friction
+profile. That question is decided by the normalized critical passage.
+A slip level can be visited several times, so a change of the profile
+does not provide an independently chosen forcing at each visit.
+We use an incoming slip interval visited only once before first release
+and prove that its release-speed response cannot vanish in every
+admissible direction.
+
+\begin{proposition}[Profile response and entrance order]
+\label{sel:profile-response}
+Fix a mechanical parameter satisfying the critical-rate and sign
+conditions of Section~\ref{sec:model}, and an admissible $C^4$
+profile $\Phi^{\rm b}$. Write $q_{\rm in,\lambda}[\Phi]=q_{\rm in}$ for the
+normalized first-release velocity in Lemma~\ref{lem:critical-pullback}.
+There is $H>Q_\Phi$
+such that, for every nonempty open interval $J\subset(H,\infty)$,
+there are a nonzero $\psi\in C_c^\infty(J)$ and
+$\vartheta_{\max}>0$ for which
+\[
+ \{\Phi^{\rm b}+\vartheta\psi:
+                        |\vartheta|\le\vartheta_{\max}\}
+\]
+is an admissible compact profile class and
+$D_\Phi q_{\rm in,\lambda}[\Phi^{\rm b}](\psi)\ne0$.
+Constructing the curve at $\lambda_c=(7/3,0)$, we may orient it
+and choose a sufficiently small relative closed mechanical box
+$\Lambda_{\rm fr}$ about $\lambda_c$ and a closed parameter interval so that
+\begin{equation}
+ \partial_\vartheta q_{\rm in,\lambda}[\Phi_\vartheta]\ge c_{\rm fr}>0
+ \quad\text{on }\Lambda_{\rm fr}\times
+                   [-\vartheta_{\max},\vartheta_{\max}],
+ \qquad \Phi_\vartheta=\Phi^{\rm b}+\vartheta\psi.
+ \label{sel:profile-local-order}
+\end{equation}
+For each fixed $\lambda\in\Lambda_{\rm fr}$ and $k\in I$,
+$\chi_{\lambda,\vartheta}(k)$ strictly decreases with $\vartheta$.
+\end{proposition}
+\begin{proof}
+On the baseline critical contact write $L=Z-Y$, let $\tau_r$
+be its first release, and abbreviate $C=C_G$, $m=\mu A_G$ and
+$f=1-\Phi^{\rm b}$. The normalization gives $U\to+\infty$ and
+$U'\to-\gamma<0$ as $\tau\to-\infty$. Choose $\tau_0<\tau_r$
+with $U'<-\gamma/2$ on $(-\infty,\tau_0]$, and take
+\[
+ H>\max\{Q_\Phi,\max_{[\tau_0,\tau_r]}U\}.
+\]
+Every level $u>H$ is visited exactly once before first release;
+denote its inverse time by $\tau(u)$.
+
+Let $F_{\Phi^{\rm b}}$ be the contact extension of
+\eqref{ent:critical-field}, obtained by replacing $L_+$ by $L$.
+In state order $(Y,V,Z,U)$ put
+$A(\tau)=D_WF_{\Phi^{\rm b}}(\overline W(\tau))$ and solve
+\[
+ \zeta'=-A^T\zeta,\qquad
+ \zeta(\tau_r)=e_V=(0,1,0,0)^T,\qquad Q=C\zeta_V+m\zeta_U.
+\]
+For an admissible compactly supported variation,
+Lemma~\ref{lem:profile-variation} gives the exact response
+\begin{equation}
+ D_\Phi q_{\rm in,\lambda}[\Phi^{\rm b}](\psi)
+   =-\int_{-\infty}^{\tau_r}LQ\psi(U)\,d\tau.
+ \label{sel:profile-adjoint}
+\end{equation}
+A controllability calculation prevents $Q$ from vanishing on an
+interval. Indeed,
+\begin{equation}
+ \begin{gathered}
+ A=A_0+b_0r^T,\qquad
+ A_0=\begin{pmatrix}
+ 0&1&0&0\\0&0&0&0\\1&0&-2&0\\h&0&-h&0
+ \end{pmatrix},\\
+ b_0=(0,C,0,m)^T,\qquad r=(-f,0,f,f'L)^T,\qquad Q=b_0^T\zeta,
+ \\
+ \det[b_0,A_0b_0,A_0^2b_0,A_0^3b_0]=-hC^4\ne0.
+ \end{gathered}
+ \label{sel:profile-controllability}
+\end{equation}
+If $Q$ vanished on an open contact interval, then
+$\zeta'=-A_0^T\zeta$ there. Successive differentiation of
+$b_0^T\zeta=0$ would give
+$(A_0^jb_0)^T\zeta=0$ for $j=0,1,2,3$.
+The determinant in \eqref{sel:profile-controllability} would force
+$\zeta=0$, contradicting its nonzero terminal value by linear
+uniqueness. Thus $Q$ is not identically zero on any open contact
+interval; no analyticity is needed.
+
+Take a nonempty open $J\subset(H,\infty)$. Strict monotonicity,
+the mean-value theorem and continuity of the derivative give an open
+subinterval where $(\Phi^{\rm b})'>0$. Its time preimage contains
+a point with $Q\ne0$. We may therefore choose a closed $K\Subset J$
+on which $(\Phi^{\rm b})'$ has a positive lower bound and
+$Q(\tau(u))$ has a fixed nonzero sign. Changing variables in
+\eqref{sel:profile-adjoint} gives
+\[
+ D_\Phi q_{\rm in,\lambda}[\Phi^{\rm b}](\psi)
+   =-\int_K\frac{L(\tau(u))Q(\tau(u))}{|U'(\tau(u))|}
+                   \psi(u)\,du.
+\]
+A nonzero nonnegative smooth bump supported inside $K$ has nonzero
+response. Reverse its sign if needed to make the response positive.
+
+For sufficiently small $|\vartheta|\le\vartheta_{\max}$, the
+profile derivative stays positive on $K$, while the profile is
+unchanged elsewhere. Its zero, range and saturation limits are
+preserved. The core strip and (F3) are unchanged because
+$K\subset(Q_\Phi,\infty)$; (F4) holds with a common enlarged
+constant since the perturbation has fixed compact support. The
+closed parameter curve is continuous in the weighted $C^4$ metric,
+and hence compact.
+
+For the common mechanical range choose this curve first at
+$\lambda_c$. The model restrictions provide a common mechanical
+box for the fixed compact class. Uniform incoming tails give a common
+finite time before the support is reached. At each fixed $\lambda$,
+all profiles have exactly their baseline's state at that time, so
+their shape derivative starts at zero. The baseline state is
+continuous in $\lambda$ by Lemma~\ref{lem:critical-pullback}.
+Continuous dependence of the finite-time state and linear variation,
+together with the transverse first-release event, makes
+$\partial_\vartheta q_{\rm in,\lambda}[\Phi_\vartheta]$ jointly continuous
+in $(\lambda,\vartheta)$. Its positive value at $(\lambda_c,0)$
+gives \eqref{sel:profile-local-order} after restricting the box and
+parameter interval. No derivative with respect to $\lambda$ is needed.
+
+Finally keep $\lambda,k$ fixed, put $H_k=ak/\gamma$, and let
+$t=t(q)>0$ solve
+\[
+ ct^2+3\ell H_kt=6q,\qquad t_q=\frac6{2ct+3\ell H_k}>0.
+\]
+The first amplitude identity in the proof of
+Proposition~\ref{sel:entrance-phase} gives
+$A_{\rm reb}^2=d_\lambda B(t)/(2h^2)$, where
+\[
+ B(t)=\gamma H_kt^2+(2hc/3+ad_\lambda)t^3.
+\]
+As $R=\nu_\#A_{\rm reb}$ and $C_R=\sqrt{6R/c}$,
+\begin{equation}
+ \partial_q\chi=-\frac3{16}\frac{B'(t)}{B(t)}t_q<0.
+ \label{sel:profile-entrance-order}
+\end{equation}
+Here $\nu_\#$ and $K_\lambda$ are independent of the original
+profile. Combining \eqref{sel:profile-local-order} and
+\eqref{sel:profile-entrance-order} proves the strict entrance order.
+\end{proof}

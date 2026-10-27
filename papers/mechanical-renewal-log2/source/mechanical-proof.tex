@@ -1,0 +1,360 @@
+\section{A mechanical construction with a finite auxiliary history}
+\label{sec:mechanical}
+
+The construction uses an indefinite separable Hamiltonian.  Two new
+families of compact ovals occur near the coordinate axes after each
+quadratic fold.  The periods of each source form vanish on the opposite family by
+reflection.  The additional logarithm comes from an auxiliary mechanical
+history: at a given global stage, all earlier auxiliary birth levels
+contribute at the same leading order after their real copies are counted.
+For arbitrary degrees, the potentials are padded by small positive even
+monomials.  We fix the complete finite list of future auxiliary budgets
+before making these perturbations.
+
+The period calculation uses the monomial powers of
+\cite[p.~445]{LiLiLlibreZhang2001} and the outer-period asymptotics of
+\cite[Lemma~2.3]{HanRomanovski2011}. We give the required version for
+arbitrary even potentials, since each fold changes the potential.
+
+\begin{lemma}[Mechanical outer periods]\label{lem:mechanical-rank}
+Let $W$ be an even real polynomial of degree $2s$ with positive leading
+coefficient.  On the outer period annulus of
+$F(z,w)=z^2/2+W(w)$, the periods
+\[
+ I_{p,q}(h)=\oint_{F=h}z^{2p+1}w^{2q}\,dw,
+ \qquad p\geq0,\quad 0\leq q<s,
+\]
+are linearly independent for every finite collection of distinct pairs
+$(p,q)$.  A collection of $M$ such forms therefore has a linear
+combination with $M-1$ simple period zeros in any prescribed nonempty
+open interval of the outer annulus.
+\end{lemma}
+
+\begin{proof}
+Write the leading term of $W$ as $c w^{2s}$, $c>0$.  Scaling $w$ by
+$(h/c)^{1/(2s)}$ in the integral between the two outer turning points gives
+\[
+ I_{p,q}(h)\sim C_{p,q}
+ h^{p+1/2+(2q+1)/(2s)},\qquad C_{p,q}\ne0.
+\]
+For a consistent oval orientation the constants have a fixed sign:
+apart from that sign, the scaled integral is a positive multiple of
+$\int_{-1}^{1}(1-u^{2s})^{p+1/2}u^{2q}\,du$.
+The exponents are distinct, since their equality would imply
+$p-p'=-(q-q')/s$ with $|q-q'|<s$.  The term with greatest exponent
+excludes every nontrivial finite linear relation.  The periods are
+analytic on the connected outer energy interval, so their independence
+holds on each open subinterval.  Lemma~\ref{lem:jets} gives the stated
+simple zeros.  Each zero can be assigned a compact regular annular
+neighborhood and a positive $C^1$ persistence margin.
+\end{proof}
+
+Reflection cancellation of inherited periods is already used in the
+classical fourfold construction \cite[equation~(3.3)]{ChristopherLloyd1995}.
+The following observation records its persistence under the small
+Hamiltonian changes needed here.
+
+\begin{lemma}[Symmetry on continued ovals]\label{lem:continued-symmetry}
+Let $F$ be a smooth planar Hamiltonian satisfying $F\circ R=F$ on a
+neighborhood of a compact regular annular family, where $R$ is a
+coordinate reflection preserving each oval of the family.
+If $G\circ R=G$ and $G$ is sufficiently close to $F$ in $C^3$ on a
+slightly larger annulus, the nearby regular ovals of $G$ are also
+preserved by $R$.  If $R^*\alpha=\alpha$, the period of $\alpha$ on
+this entire nearby family is identically zero.
+\end{lemma}
+
+\begin{proof}
+Use the flow of $\nabla F/|\nabla F|^2$ to write an invariant annular
+collar as $(\theta,h)$ with $F=h$.  The flow is equivariant under $R$.
+For $G$ close to $F$, the equation $G(\theta,u)=h$ has a unique solution
+$u=u(\theta,h)$ in this collar, by the implicit function theorem.
+Uniqueness and $G\circ R=G$ make its closed normal graph invariant under
+$R$.  It is a regular closed level component, hence an actual periodic
+oval.  A reflection reverses its oval orientation, and consequently
+\[
+ \oint\alpha=\oint R^*\alpha=-\oint\alpha=0.
+\]
+This holds for every energy in an interval, so it includes the energy
+derivative of the period.  The same collar construction gives the
+$C^1$ continuity of periods used below, as in
+Lemma~\ref{lem:persistence}.
+\end{proof}
+
+\begin{proposition}[Mechanical renewal]\label{prop:mechanical-certificate}
+Fix an integer $n\geq2$ and put
+\[
+ \begin{gathered}
+ r=\lfloor\log_2 n\rfloor,\qquad
+ n_i=\left\lfloor\frac{n}{2^{r-i}}\right\rfloor
+ \quad(0\leq i\leq r),\\
+ \eta_i=n_i-2n_{i-1}\in\{0,1\}\quad(1\le i\le r).
+ \end{gathered}
+\]
+For $1\leq i\leq r$ and $0\leq k<i$, set
+$e_{i,k}=n_{i-1}\bmod 2^k$ and
+\begin{equation}\label{eq:mechanical-birth}
+ K_i=i(n_i^2-\eta_i)
+       -4\sum_{k=0}^{i-1}(e_{i,k}^2+\eta_i e_{i,k})
+       -4(2^i-1).
+\end{equation}
+There are even polynomials $U_r,V_r$ of degree $2n$ with positive
+leading coefficients and a polynomial one-form $\omega_r$ of degree
+at most $2n-1$ such that its period functions on compact regular annuli
+of $H_r(x,y)=U_r(x)-V_r(y)$ have at least
+\begin{equation}\label{eq:mechanical-total}
+ L(n)=\sum_{i=1}^{r}4^{r-i}K_i
+\end{equation}
+simple zeros with pairwise disjoint annular neighborhoods.
+In particular, there exists a real polynomial vector field of degree at
+most $2n-1$ having at least $L(n)$ hyperbolic limit cycles. The bound satisfies
+\begin{equation}\label{eq:finitebound}
+ L(n)\ge\frac12n^2r^2+\frac16n^2r-\frac{22}{3}n^2.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+We construct the Hamiltonian and form by a finite induction, retaining
+the auxiliary forms needed at later stages. The estimate
+\eqref{eq:finitebound} is proved in Section~\ref{sec:counting}.
+
+\paragraph{Auxiliary budgets.}
+For each future global stage $t\in\{1,\ldots,r\}$, we build an auxiliary
+form through levels $j=0,\ldots,t-1$ for each of the potentials $U_j$
+and $V_j$.  Denote either such form by
+\[
+ \Omega_j^{(t)}=\sum_{p\geq0}z^{2p+1}R_p(w)\,dw.
+\]
+The final pullback into a stage-$t$ axis source has degree at most
+$2(p+\deg R_p+1)$, so its endpoint budget is
+$p+\deg R_p\leq n_t-2$.  Reversing the remaining folds gives the
+budget at level $j$:
+\begin{equation}\label{eq:mechanical-future-budget}
+ p+2^{t-1-j}(\deg R_p+1)-1\leq n_t-2
+ \quad\text{for each nonzero }R_p.
+\end{equation}
+A fold $w\mapsto w^2-b$ replaces $R_p$ by
+$2wR_p(w^2-b)$, with
+$\deg(2wR_p(w^2-b))+1=2(\deg R_p+1)$ for $R_p\ne0$.
+Thus it preserves~\eqref{eq:mechanical-future-budget} at
+the next level.  A birth at level $\ell$ uses exactly the monomials
+\begin{equation}\label{eq:mechanical-birth-modes}
+ z^{2p+1}w^{2q}\,dw,\qquad
+ 0\leq q<n_\ell,\qquad
+ 0\leq p\leq n_t-1-2^{t-1-\ell}(2q+1).
+\end{equation}
+They satisfy the budget.  Their periods are independent by
+Lemma~\ref{lem:mechanical-rank}.
+
+Set $U_0(w)=V_0(w)=w^2$ and $\omega_0=0$.  For every label $t$,
+choose the level-zero auxiliary form in the span of the monomials
+\eqref{eq:mechanical-birth-modes}, with one fewer selected simple period
+zero than the dimension of that span, and with compact regular annular
+neighborhoods around those zeros.  For a one-dimensional
+space this requirement is empty.  The complete list of labels is fixed
+at this point.
+
+Suppose that stage $i-1$ has been completed.  Its data are the actual
+potentials, one global form and all its selected zeros, and the
+auxiliary forms $\Omega_{i-1}^{(t)}$ for $t\geq i$, separately for $U$
+and $V$.  Every selected zero has a compact regular annular neighborhood
+and a positive $C^1$ margin.  The list is finite.
+
+\paragraph{Real copies and the two mechanical sources.}
+Write $U=U_{i-1}$, $V=V_{i-1}$, and first consider
+\[
+ \widehat H_i(x,y)=U(x^2-a)-V(y^2-b),\qquad
+ \Phi(x,y)=(x^2-a,y^2-b).
+\]
+For sufficiently large positive $a,b$, the four real inverse branches
+of $\Phi$ cover all selected old global annuli.  They give four
+diffeomorphic copies of each old simple period zero for
+$\Phi^*\omega_{i-1}$, up to orientation.  The maps $(z,w)\mapsto(z,w^2-a)$ and
+$(z,w)\mapsto(z,w^2-b)$ likewise have two diffeomorphic inverse branches
+on the selected $U$- and $V$-auxiliary annuli, respectively. Pulling back
+the auxiliary forms preserves their period functions up to orientation,
+so every selected auxiliary zero has two simple copies.
+
+The current vertical source uses the already fixed $V$-auxiliary form
+$\Omega_{i-1,V}^{(i)}$.  Put
+\[
+ c_a=\sqrt{2U'(a)},\qquad z=c_a x,\qquad w=y^2-b.
+\]
+On either real $y$ branch the Hamiltonian deficit is exactly
+\begin{equation}\label{eq:mechanical-limit}
+ U(a)-\widehat H_i=K_a(z)+V(w),\qquad
+ K_a(z)=U(a)-U\left(-a+\frac{z^2}{2U'(a)}\right).
+\end{equation}
+Since $U$ is even with positive leading coefficient, $U'(a)>0$ for
+large $a$.  Taylor expansion gives $K_a(z)=z^2/2+o(1)$ in every fixed
+$C^j$ norm on compact $z$ intervals.  More precisely, if $d=\deg U$,
+the coefficient of $z^{2k}$ for $k\geq2$ is
+$O(a^{-(k-1)d})$. Every regular mechanical oval is individually fixed
+by $z\mapsto-z$: over its $w$ interval it consists of the two graphs
+$z=\pm\sqrt{2(h-V(w))}$ joined at their turning points. This holds
+also for a potential well centered at a nonzero value of $w$. The
+$C^j$ convergence of $K_a$ to $z^2/2$ gives continuations of the auxiliary
+ovals and their simple period zeros to \eqref{eq:mechanical-limit}, by
+Lemma~\ref{lem:persistence}. Lemma~\ref{lem:continued-symmetry} preserves
+the reflection symmetry of these continued ovals.  Pull back the fixed auxiliary form to
+the polynomial source
+\begin{equation}\label{eq:mechanical-vertical}
+ \alpha_V=
+ \sum_p(c_a x)^{2p+1}R_p(y^2-b)\,2y\,dy.
+\end{equation}
+Its periods on the two branches are $C^1$ close, up to orientation, to
+the selected auxiliary periods.  This produces two copies of every
+auxiliary simple zero.
+
+Interchanging $U,x,a$ with $V,y,b$ gives a horizontal source
+\begin{equation}\label{eq:mechanical-horizontal}
+ \alpha_U=
+ \sum_p(c_b y)^{2p+1}\widetilde R_p(x^2-a)\,2x\,dx,
+ \qquad c_b=\sqrt{2V'(b)},
+\end{equation}
+with two copies of the corresponding $U$-auxiliary zeros.
+The vertical approximation uses only large $a$ and fixed previous
+$V$-annuli; $b$ only has to cover their $w$ ranges.  The horizontal
+approximation uses large $b$ and fixed previous $U$-annuli, while $a$
+covers their $w$ ranges.  Thus these are compatible lower bounds on
+$a,b$.  In particular, no approximation is required near the new outer
+barriers created by the present folds.
+
+All these annuli can be made disjoint.  Old global copies have
+$|x|\sim\sqrt a$, $|y|\sim\sqrt b$; the vertical sources have
+$x=O(1/c_a)$ and $|y|\sim\sqrt b$; the horizontal sources have
+$y=O(1/c_b)$ and $|x|\sim\sqrt a$.  Within a source, disjointness
+comes from the selected auxiliary annular neighborhoods.  The ovals
+are genuine closed level components, obtained in regular annular
+collars; properness of the indefinite Hamiltonian is not needed.
+
+\paragraph{Positive even padding.}
+Fix such $a,b$, and define
+\begin{equation}\label{eq:mechanical-padded-potentials}
+ U_i(x)=U(x^2-a)+\epsilon x^{2n_i},\qquad
+ V_i(y)=V(y^2-b)+\delta y^{2n_i},\qquad H_i=U_i-V_i.
+\end{equation}
+If $\eta_i=0$, set $\epsilon=\delta=0$.  If $\eta_i=1$, choose both
+coefficients strictly positive and sufficiently small.  The resulting
+potentials have exact degree $2n_i$, are even, and have positive leading
+coefficients.
+
+The finite conditions on this choice are the persistence of the four
+old global copies, the two auxiliary copies for every label $t>i$,
+and the current vertical and horizontal source zeros for the fixed
+forms~\eqref{eq:mechanical-vertical} and
+\eqref{eq:mechanical-horizontal}.  All are conditions on already fixed
+compact sets and forms.  In vertical source coordinates the new error
+is exactly
+\[
+ -\epsilon(z/c_a)^{2n_i}+\delta(w+b)^{n_i}.
+\]
+For fixed $a,b,c_a$ its $C^3$ norm on each selected compact rectangle
+tends to zero with $(\epsilon,\delta)$.  In horizontal coordinates the
+error is $\epsilon(w+a)^{n_i}-\delta(z/c_b)^{2n_i}$ and has the same
+property.  The auxiliary and old global errors also tend to zero on
+their fixed collars.  Lemma~\ref{lem:persistence} therefore imposes
+only finitely many compatible upper bounds on the positive pair
+$(\epsilon,\delta)$.
+
+The continued vertical ovals are invariant under
+$R_x(x,y)=(-x,y)$, and the horizontal ovals under
+$R_y(x,y)=(x,-y)$, by Lemma~\ref{lem:continued-symmetry}.  Both
+reflections leave $H_i$ invariant.  Functoriality of pullback gives
+\[
+ R_x^*\Phi^*\omega_{i-1}=R_y^*\Phi^*\omega_{i-1}
+ =\Phi^*\omega_{i-1},\qquad
+ R_x^*\alpha_U=\alpha_U,\quad R_y^*\alpha_V=\alpha_V.
+\]
+Consequently, on the entire vertical annuli the periods of
+$\Phi^*\omega_{i-1}$ and $\alpha_U$ vanish exactly.  On the entire
+horizontal annuli the periods of $\Phi^*\omega_{i-1}$ and $\alpha_V$
+vanish exactly.  Padding changes the old copied periods by a small
+amount, but does not change any of these fresh-source identities.
+
+\paragraph{Auxiliary births and the global form.}
+With the padded potentials now fixed, complete the auxiliary forms for
+each remaining label $t>i$.  Start with the one-coordinate pullback of
+$\Omega_{i-1}^{(t)}$, whose selected simple zeros have survived.  On a
+new outer annulus of $z^2/2+U_i(w)$ or $z^2/2+V_i(w)$, this pulled form
+has identically zero period: it is invariant under $w\mapsto-w$,
+which reverses the oval orientation.  In the span of \eqref{eq:mechanical-birth-modes}, choose a fresh birth
+form with one fewer selected simple period zero than the dimension of
+that span. Add it to the pulled form with one sufficiently small nonzero
+scalar. The sum retains every selected inherited zero and supplies the
+chosen new simple zeros on an outer interval.
+For either padded potential $W=U_i$ or $V_i$, choose the new outer
+interval above all real critical values of $W$ and all values of
+$z^2/2+W(w)$ on the previously selected compact annular neighborhoods.
+Such an interval exists: these neighborhoods are finite in number and
+compact, and $W$ has positive leading coefficient. Each mechanical level
+there is a unique outer oval, so the new annular neighborhoods are disjoint
+from those previously selected. The degree $2n_i$ and positive leading
+coefficient give the required rank, however small the padding coefficient.
+The forms for different future stages are chosen independently; these
+choices change neither $H_i$ nor the current global form.
+
+Finally define the single global form
+\begin{equation}\label{eq:mechanical-global-form}
+ \omega_i=\Phi^*\omega_{i-1}
+                  +\lambda_V\alpha_V+\lambda_U\alpha_U.
+\end{equation}
+Choose two nonzero scalars sufficiently small to retain all four old
+global copies.  On a fresh vertical annulus its period is exactly
+$\lambda_V\oint\alpha_V$, and on a fresh horizontal annulus it is
+exactly $\lambda_U\oint\alpha_U$.  Thus all new zeros coexist for this
+same coefficient vector.  Each newly chosen scalar is fixed before
+the next stage: the resulting positive, possibly very small, simple-zero
+margins are added to the induction data.  No uniform margin over the
+future degree or over all polynomial budgets is required.  This completes the finite induction.
+
+\paragraph{Degrees and number of zeros.}
+For an auxiliary monomial with $w$-coefficient degree $d$, the vertical
+or horizontal source degree is at most
+\[
+ (2p+1)+2d+1=2(p+d+1).
+\]
+The final auxiliary budget for label $i$ is $p+d\leq n_i-2$, so each
+source has degree at most $2n_i-2$.  If
+$\deg\omega_{i-1}\leq2n_{i-1}-1$, then
+\[
+ \deg\Phi^*\omega_{i-1}
+ \leq2(2n_{i-1}-1)+1
+ =4n_{i-1}-1\leq2n_i-1.
+\]
+Also $\deg dH_i=2n_i-1$.  These estimates prove every required degree
+bound for~\eqref{eq:mechanical-global-form} and the final field.
+
+At stage $i$, put $s=n_{i-1}$, $N=n_i=2s+\eta_i$. For an auxiliary
+birth with $k$ remaining folds let $A=2^k$,
+$d=\lfloor s/A\rfloor$, and $e=s-Ad=e_{i,k}$.  Its actual birth
+half-degree is $d$.  The allowed modes in
+\eqref{eq:mechanical-birth-modes} number
+\[
+ M_k=\sum_{q=0}^{d-1}\{N-A(2q+1)\}
+     =d(N-Ad).
+\]
+All summands are positive: at the largest $q$, their value is
+$2e+\eta_i+A\geq1$.  In particular $M_k\geq1$.  The $A$ real
+copies contribute $A(M_k-1)$ simple zeros.  The exact identity
+\[
+ A M_k=(s-e)(s+\eta_i+e)
+       =s(s+\eta_i)-e^2-\eta_i e
+\]
+shows that four source copies give
+$4\sum_{k=0}^{i-1}A(M_k-1)=K_i$, as in
+\eqref{eq:mechanical-birth}.  This also proves $K_i\geq0$ and
+integrality. The selected-zero counts obey
+$L_0=0$, $L_i=4L_{i-1}+K_i$, yielding
+\eqref{eq:mechanical-total}.
+
+Write $\omega_r=P\,dx+Q\,dy$.  Lemma~\ref{lem:melnikov}, applied to
+the finite disjoint configuration, supplies one sufficiently small
+nonzero $\mu$ for which
+\[
+ X_\mu=( (H_r)_y-\mu Q,\,-(H_r)_x+\mu P )
+\]
+has a hyperbolic limit cycle near each selected simple period zero.
+This is one real polynomial vector field, of degree at most $2n-1$.
+\end{proof}
+

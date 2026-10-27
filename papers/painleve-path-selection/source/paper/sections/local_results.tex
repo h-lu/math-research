@@ -1,0 +1,401 @@
+\section{The original entrance and the complete local return}
+\label{sec:local-results}
+
+\input{sections/proof_route}
+\input{figures/entry_comparison}
+
+\subsection{Normalized touchdown coordinates and the finite-scale reference}
+
+The return sends an input scale $\delta$ to
+$D\asymp\delta^{3/4}$. Under the bounds below, its tangential
+correction has size $O(\delta)=O(D^{4/3})$. The normal correction
+has size $O(\delta D)=O(D^{7/3})$ after the actual touchdown equation
+eliminates the larger release-velocity terms. These cancellations,
+proved in Appendix~\ref{sec:detuned-return}, motivate the powers
+$4/3$ and $7/3$ in the normalized state.
+
+Use the slips $u_r,u_0=u_r+r$ defined in Section~\ref{sec:model},
+and put $r_0=c_\lambda/3$. At a touchdown with $p=-a\delta<0$, the independent coordinates are
+\begin{equation}
+ \begin{gathered}
+ y=z=\eps\delta^2\zeta,\qquad
+ u_r=d_\lambda\delta+d_\lambda\delta^{4/3}\eta_U^r,\qquad
+ v=-r_0\delta^2-r_0\delta^{7/3}\eta_W,\\
+ \xi^r=(\zeta,\eta_U^r,\eta_W),\qquad
+ W=1+\delta^{1/3}\eta_W.
+ \label{loc:tuple}
+ \end{gathered}
+\end{equation}
+If $p(\phi_\delta)=-a\delta$ on the chosen positive-cosine branch,
+the physical inverse is
+\begin{equation}
+ (\phi,y,\omega,v,z)
+ =\left(\phi_\delta,\eps\delta^2\zeta,
+       \frac{u_r+r-U_*}{\cos\phi_\delta},v,\eps\delta^2\zeta\right).
+ \label{loc:inverse}
+\end{equation}
+Thus $b$ and $\eta_B=(-b-c_\lambda\delta)/(c_\lambda\delta^{4/3})$
+are dependent coordinates. Fix a closed ball $\Kcal$ in the independent
+coordinates with $0$ and all $\xi_{*,\lambda}$ in its interior.
+Lemma~\ref{lem:td2-complete-preparation} bounds the original second-touchdown
+independent tuples uniformly. Choose $M_{\rm in}$ once so that its ball
+contains these tuples and $\Kcal$ strictly in its interior.
+This choice does not change the fixed slip threshold $M_{\rm sl}$.
+Fix $0<\gamma_{\rm cl}<\frac12\min_\lambda r_0$.
+The physical input domain is
+\begin{equation}
+ |\xi^r|\le M_{\rm in},\quad r_0W-\zeta\ge\gamma_{\rm cl}>0,
+ \quad 0<\eps\le C_0\delta^2,
+ \quad 0\le r\le A\delta^{4/3},\qquad e=\eps\delta^{-3/2}.
+ \label{loc:domain}
+\end{equation}
+The closing margin is $\dot z-v=\delta^2(r_0W-\zeta)$.
+There is no positive lower bound on $e$ or $r$.
+Taylor expansion in the chart $(p,y,u_0,v)$ gives
+\begin{equation}
+ \eta_B=\frac{g_b}{c_\lambda}
+       \left(\eta_U^r+\frac{r}{d_\lambda\delta^{4/3}}\right)
+       +O(\delta^{2/3}),\qquad g_b=-d_\lambda b_u(G),
+ \label{loc:dependent}
+\end{equation}
+where $b_u$ is the derivative with respect to $u_0$.
+The identity $-ab_p(G)+d_\lambda b_u(G)=-c_\lambda$ supplies the
+leading cancellation; see Lemma~\ref{ret:inverse}.
+
+The limiting return is defined at a fixed positive input scale
+$\delta$, with $\eps,r\to0$. Physical displacement and memory then
+vanish, but their normalized values still determine the release speed.
+The later expansion $\delta\downarrow0$ is used to construct the graph
+and its phase. To define this exact return $T_{0,\lambda}=(f_0,h_0)$,
+set $r=0$ and use identical values of the independent coordinates $\xi$.
+Put $\sigma=\sqrt\delta$ and
+$h_\delta=\mu A(\phi_\delta)-B(\phi_\delta)$.
+Use the compression clock $\tau_c=\sqrt\delta(t-t_{\rm in})/\eps$
+and scalings $(y,z)=\eps\delta^{3/2}(Y,Z)$, $v=\delta^2V_c$
+and $u_0=\delta\mathcal U$.
+With primes denoting $\tau_c$ derivatives, the saturated compression
+reference solves
+\begin{equation}
+ \begin{gathered}
+ Y'=V_c,\quad \sigma Z'=Y-2Z,\quad
+ V_c'=-a(Z-Y),\quad \mathcal U'=-h_\delta(Z-Y),\\
+ (Y,Z,V_c,\mathcal U)(0)=
+ (\sigma\zeta,\sigma\zeta,-r_0W,
+            d_\lambda(1+\delta^{1/3}\eta_U)).
+ \label{loc:compression}
+ \end{gathered}
+\end{equation}
+At its first arrest $\mathcal U=0$, switch to the elapsed release
+clock $\tau_r=(t-t_{\rm arrest})/\eps$ and velocity
+$v=\delta^{3/2}V$. Thus $V=\sqrt\delta V_c$ at arrest, while
+$Y$ and $Z$ keep their compression scalings. With primes now denoting
+$\tau_r$ derivatives, the inherited normal motion $N=(Y,V,Z)$ solves
+\begin{equation}
+ N'=A_DN,\qquad
+ A_D=\begin{pmatrix}0&1&0\\-1/2&0&1/2\\1&0&-2\end{pmatrix},
+ \qquad N(0)=(Y,\sigma V_c,Z)_{\rm arrest}.
+ \label{loc:normal-reference}
+\end{equation}
+If $R_0$ is its first force zero and $Q=V(R_0)$, reconstruct the
+physical release as
+$(p,y,u_0,v,z)=(-a\delta,0,0,\delta^{3/2}Q,0)$.
+Its exact free mechanical flow to the first subsequent touchdown
+defines $T_{0,\lambda}$. This retains the finite $\sqrt\delta$
+compression and its inherited memory; the zero physical memory is
+introduced only in the release reconstruction.
+
+For the initial state $(-2,0,-1)$,
+Lemma~\ref{con:normal-opening} gives $Y=Z=-\gamma_\#$ and
+$V=\nu_\#$ at the first release, with
+$\nu_\#>\gamma_\#>0$. Define
+\begin{equation}
+ \begin{gathered}
+ q_\lambda=\nu_\#\sqrt{r_0d_\lambda/h+ad_\lambda^2/(2h^2)},
+ \qquad K_\lambda=\sqrt{6q_\lambda/c_\lambda},\\
+ \varkappa_W=\tfrac12+\frac{3g_b}{2c_\lambda},\qquad
+ \xi_{*,\lambda}=K_\lambda^{-4/3}(0,-1,-\varkappa_W).
+ \label{loc:constants}
+ \end{gathered}
+\end{equation}
+
+\subsection{Preparation of the original trajectory}
+
+Preparation serves two purposes. Its third-touchdown state must be
+accurate enough for repeated return comparison and for the entrance
+phase in Section~\ref{sec:graph}. The whole preceding trajectory
+must also approach the prescribed incoming arc, so that later returns
+can be attached to it. We first record the state estimates and then
+the bounds on the intervening motion.
+
+The capture and critical-passage estimates give a first release with
+$v_r=\eps(q_{\rm in}+o(1))$, negative normal memory and a strict
+opening margin. Here $q_{\rm in}>0$ depends only on $(\lambda,\theta)$,
+while $p_r/\sqrt\eps\to H=ak/\gamma$ and
+$b_r/\sqrt\eps\to-\ell H$
+(Theorem~\ref{thm:detuned-release}). With $c=c_\lambda$, the
+preparation constants are
+\begin{equation}
+ \begin{gathered}
+ cT_f^2+3\ell HT_f=6q_{\rm in},\quad T_f>0,
+ \qquad \pi=H-aT_f,\\
+ S=d_\lambda T_f,\quad Q=T_f(\ell H/2+cT_f/3),\quad
+ A_{\rm reb}^2=QS/h-\pi S^2/(2h^2),\\
+ R=\nu_\#A_{\rm reb},\qquad C_R=\sqrt{6R/c}.
+ \label{loc:preparation-constants}
+ \end{gathered}
+\end{equation}
+The scale $r=k\sqrt\eps$ balances this first flight: with
+$t=\sqrt\eps\,T$, the terms $v_rt$, $b_rt^2/2$ and $-ct^3/6$
+in \eqref{prep:gap-expansion} all have order $\eps^{3/2}$.
+The smaller memory value still determines opening on $t=O(\eps)$
+through $q_{\rm in}+Y_r^0>0$. Thus the same original preparation
+supplies the positive release coefficient and inherited memory for
+both exceptional flights.
+At the first touchdown, $p_1=p(t_1)$ satisfies
+$p_1/\sqrt\eps\to\pi$. Here $\sqrt\eps$ is the preparation scale,
+and $\pi$ may be positive, zero or negative. Its arrest margin is
+\[
+ 2hQ-\pi S
+ =T_f\{\gamma H+(2hc/3+ad_\lambda)T_f\}>0.
+\]
+The signed contact theorem applies with $r=k\sqrt\eps$ and yields
+$v_L=\eps^{3/4}(R+o(1))$ and
+$y_L=z_L=-\eps^{7/4}(\gamma_\#A_{\rm reb}+o(1))$.
+In particular both $R$ and $R-\gamma_\#A_{\rm reb}$ have common
+positive lower bounds.
+
+The ensuing touchdown occurs after an elapsed time $T$ and has scale
+$D=-p(T)/a=C_R\eps^{3/8}(1+o(1))$. To obtain its complete tuple,
+one must eliminate the release velocity before dividing by the finer
+normal scale. A separate release-velocity approximation would be
+amplified by that division. At the actual root $y(T)=z(T)$, direct integration gives
+\begin{equation}
+ -v(T)-\frac c3D^2
+ =\frac{y_L-z(T)}T-\frac12b_LT+\frac c3(T^2-D^2)
+ -\frac1{2T}\int_0^T(T^2-t^2)(\dot b(t)+c)\,\dd t.
+ \label{loc:touchdown-cancellation}
+\end{equation}
+The tangential and acceleration numerators are $O(\sqrt\eps)$,
+and this normal numerator is $O(\eps^{7/8})$.
+Their denominators $D^{4/3},D^{4/3},D^{7/3}$ have exactly these
+orders. Thus the actual second touchdown has a bounded full tuple,
+negative memory, a strict closing margin, and
+$r/D^{4/3}=kC_R^{-4/3}(1+o(1))$; see
+Lemma~\ref{lem:td2-complete-preparation}.
+
+\begin{proposition}[The original prepared entrance]
+\label{loc:entrance}
+Under the standing model convention, all the following estimates are
+uniform on the prescribed compact label classes.
+The original trajectory has an admitted third touchdown with
+\begin{equation}
+ \begin{gathered}
+ \delta_2=C_R\eps^{3/8}(1+o(1)),\qquad
+ \delta_3\asymp\eps^{9/32},\quad
+ r/\delta_3^{4/3}=O(\eps^{1/8}),\\
+ \left|\log\frac{\delta_3}{K_\lambda\delta_2^{3/4}}\right|
+ +|\xi_3^r-\xi_{*,\lambda}|+
+ |\eta_{B,3}-(g_b/c)\eta_{U,*,\lambda}|
+ \le C\eps^{3/32}.
+ \label{loc:third-entry}
+ \end{gathered}
+\end{equation}
+Here $\eta_{U,*,\lambda}$ is the slip component of $\xi_{*,\lambda}$.
+The third touchdown retains the full cone, inverse branch, negative
+normal memory, strict closing margin and all inequalities of
+\eqref{loc:domain}, so it is a new admitted input. The preparation scale
+$\sqrt\eps$ is followed by touchdown scales $\eps^{3/8}$ and
+$\eps^{9/32}$; only at the last does the normalized state approach
+$\xi_{*,\lambda}$.
+All estimates are uniform on the fixed compact label classes and
+are obtained from the original physical initial state.
+
+
+The entrance constant
+\begin{equation}
+ \chi_\lambda(\mathfrak a)=\chi_{\lambda,\theta}(k)
+   =3\log K_\lambda-\tfrac34\log C_R(\lambda,k,\theta),
+ \qquad \mathfrak a=(k,\theta,\nu,\mathbf n),
+ \label{sel:chi}
+\end{equation}
+is continuous, bounded and independent of $\nu,\mathbf n$. Moreover,
+\begin{equation}
+ \log(K_\lambda^4/\delta_3^{\mathfrak a})
+ =\tfrac9{32}\log(1/\eps)+\chi_\lambda(\mathfrak a)
+                      +r_{\mathfrak a}^{\log}(\eps),
+ \qquad \sup_{\mathfrak a}|r_{\mathfrak a}^{\log}(\eps)|\to0.
+ \label{loc:log-entry}
+\end{equation}
+On each fixed closed incoming rigid subarc the original motion
+approaches that prescribed arc. For each fixed small $\eta>0$,
+its remaining prefix from $p=\eta$ through $\TD_3$ is contained in
+$G+B_{C\eta+o(1)}$ in the full physical state. The motion has positive
+$p$ up to the descending-slip threshold, and its mechanical distance
+from $G$ tends uniformly to zero from that threshold through $\TD_3$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:td2-complete-preparation} and
+Corollary~\ref{cor:original-to-td2} give the complete second input
+and its uniform scale asymptotic. Applying Theorems~\ref{thm:detuned-value-bridge}
+and~\ref{thm:detuned-output-admission} to this input, as in
+Corollary~\ref{cor:td3-admission}, gives \eqref{loc:third-entry}
+and the stated admissibility of the returned state.
+The normalized first-release data are continuous and have common
+positive margins by Lemma~\ref{lem:critical-pullback} and
+Theorem~\ref{thm:detuned-release}. The formulas
+\eqref{loc:preparation-constants} therefore give common positive
+bounds and continuity for $C_R$. Set
+\[
+ e_{\mathfrak a}(\eps)
+ =\log\frac{\delta_2^{\mathfrak a}}
+                 {C_R(\mathfrak a)\eps^{3/8}}.
+\]
+The second-touchdown root estimates are uniform, so
+$\sup_{\mathfrak a}|e_{\mathfrak a}|\to0$.
+Taking logarithms in \eqref{loc:third-entry} gives
+$r_{\mathfrak a}^{\log}=-\tfrac34 e_{\mathfrak a}
++O(\eps^{3/32})$, proving \eqref{loc:log-entry}.
+The second-touchdown remainder needs no specified rate.
+
+On a closed incoming arc $p\ge\eta$, the unilateral capture estimate
+in the proof of Lemma~\ref{lem:detuned-threshold} bounds the full scaled normal
+state through any initial departures and recontacts. Capture takes
+a common finite fast time, produces an $O(\eps)$ slow increment,
+and is followed by an $O(\eps)$ integrated slow-field discrepancy
+from the prescribed saturated rigid orbit; see
+\eqref{ent:fixed-initialization}. Gronwall's inequality gives convergence
+to that particular rigid subarc. Throughout it
+$|y|+|z|=O_\eta(\eps^2)$ and $|v|=O_\eta(\eps)$, so the fast
+excursion collapses to its original physical starting point.
+
+For the remaining incoming segment, the entry estimates
+\eqref{ent:safe-tracking} control the normal state and its effect
+on the slow variables up to the descending-slip threshold.
+They apply on every stopped interval before that threshold, including
+the final $p\asymp\sqrt\eps$ annulus. The weak-coordinate bounds
+and analytic chart put this segment in $G+B_{C\eta+o(1)}$; it remains
+at positive $p$ until that threshold. The stopped comparison in
+Theorem~\ref{thm:detuned-release} controls every prefix through its first
+force zero, with mechanical distance
+$O(\sqrt\eps+\eps(1+|\log\eps|))$ from $G$.
+Proposition~\ref{prep:first-flight} gives duration and mechanical state
+distance $O(\sqrt\eps)$ through the first exceptional touchdown.
+The ensuing contact uses the first application of
+Theorem~\ref{con:contact-release}, with scale $\sqrt\eps$ and
+$r=O(\sqrt\eps)$; its complete prefix bound is $O(\sqrt\eps)$.
+The second exceptional flight has duration and mechanical state
+distance from $G$ both $O(\eps^{3/8})$. The full-prefix estimates
+leading to Corollary~\ref{cor:original-to-td2} control these passages
+and supply the actual complete $\TD_2$ cone.
+Apply the contact prefix estimate \eqref{con:prefix} and
+Lemma~\ref{lem:paired-free-normalization} to the
+$\TD_2\to\TD_3$ return at $\delta_2\asymp\eps^{3/8}$.
+Its mechanical distance from $G$ is $O(\eps^{9/32})$ and its memory
+tends to zero. These bounds include both exceptional flights, their
+contacts and the passage to $\TD_3$, and prove the stated original-prefix
+localization.
+
+\end{proof}
+
+\subsection{The return estimate and its domains}
+
+Let $\|\cdot\|_{1,*}$ include values and first derivatives with
+respect to $\delta\partial_\delta$ and $\xi$.
+The following conclusions collect
+Proposition~\ref{prop:limiting-factorization} and
+Theorems~\ref{thm:detuned-value-bridge}--\ref{thm:detuned-output-admission}.
+Write the actual return as
+\[
+ T_{\eps,r}(\delta,\xi^r)=(D,\xi^{r,+})
+   =\bigl(f_{\eps,r}(\delta,\xi^r),h_{\eps,r}^r(\delta,\xi^r)\bigr).
+\]
+The reference derivatives construct the invariant graph; the value
+error controls the actual iterates; the output conditions allow the
+next return. All constants are uniform on the fixed compact model
+classes and the prescribed finite input bounds.
+
+\begin{proposition}[The complete local return]
+\label{loc:return}
+For sufficiently small $\delta$, the following statements hold.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \emph{Reference regularity.} On a bounded convex auxiliary fibre
+domain $\Omega$ containing the fixed independent input ball and $\Kcal$,
+the exact reference has a $C^1$ extension with
+\begin{equation}
+ \begin{aligned}
+ \left\|\log\frac{f_0}{K_\lambda\delta^{3/4}}\right\|_{1,*}
+       +\|h_0-\xi_{*,\lambda}\|_{1,*}&\le C\delta^{1/4},\\
+ |D_\xi\log f_0|+|D_\xi h_0|&\le C\delta^{1/3}.
+ \end{aligned}
+ \label{loc:factorization}
+\end{equation}
+The reference map and its state derivatives are jointly continuous in
+$\lambda$. The memory component of $h_0$ vanishes.
+\item \emph{Compliant value approximation.} On the physical domain
+\eqref{loc:domain},
+the actual first contact--flight return exists, retains its negative
+memory and transverse first-event margins, and satisfies
+\begin{equation}
+ \left|\log\frac{f_{\eps,r}(\delta,\xi^r)}{f_0(\delta,\xi^r)}\right|
+ +|h_{\eps,r}^r(\delta,\xi^r)-h_0(\delta,\xi^r)|
+ \le C(e+r/\delta).
+ \label{loc:value}
+\end{equation}
+\item \emph{Admissibility of the returned state.} There are common radii
+$0<\delta_{\rm reset}<\delta_{\rm g}<\delta_{\rm call}$ such that
+a physical input satisfying \eqref{loc:domain} with
+$\delta\le\delta_{\rm reset}$ has output $D$ satisfying
+\begin{equation}
+ \begin{gathered}
+ \delta<D<\delta_{\rm g},\quad \xi^{r,+}\in\operatorname{int}\Kcal,
+ \quad \eps<C_0D^2,\quad r\le AD^{4/3},\\
+ \left|\log\frac D{K_\lambda\delta^{3/4}}\right|
+       +|\xi^{r,+}-\xi_{*,\lambda}|
+       \le C(\delta^{1/4}+e+r/\delta).
+ \label{loc:admission}
+ \end{gathered}
+\end{equation}
+It has $u_r^+>0$, $v^+<0$, $y^+=z^+<0$, the same inverse branch,
+a bounded dependent coordinate and the strict closing margin.
+Another return requires $D\le\delta_{\rm reset}$.
+The outer radius may be reduced first, with the reset radius chosen
+afterwards.
+\end{enumerate}
+\end{proposition}
+
+The auxiliary extension in \eqref{loc:factorization} continues the
+signed linear reference even when initial force is negative.
+For physical inputs, the proof of \eqref{loc:value} first compares the
+actual return with a reference $R^r$ reconstructed at slip
+$u_{0,L}=r$. This costs $Ce$. The references $R^r$ and $T_0$ share
+the entire finite-scale compression and inherited release, and their
+free flights differ by $Cr/\delta$. Finally the actual output is
+recoded by
+\[
+ h_{\eps,r}^r=h_{\eps,r}^0-
+                  \frac{r}{d_\lambda D^{4/3}}(0,1,0).
+\]
+The paired free-flight estimate has already established
+$D^{4/3}\asymp\delta$, so this last cost is also $Cr/\delta$.
+The contact comparison retains both tail moments and the inherited
+normal state. In the elapsed release time $\rho$ of
+Appendix~\ref{sec:contact}, put $w=u_r/\eps$, $L=Z-Y$ and
+$\vartheta=B/A$. The normal-velocity projection is
+\[
+ \begin{gathered}
+ P=\widehat V-e\vartheta w,\qquad \widetilde N=(Y,P,Z),\\
+ \widetilde N'=A_D\widetilde N+eF,\qquad
+ F=(\vartheta w,b-\vartheta a_T-\vartheta'w,0).
+ \end{gathered}
+\]
+where primes denote $\rho$ derivatives and
+$\vartheta'=\eps\vartheta_\phi\dot\phi$.
+The exact identity $C-B^2/A=1/2$ cancels the term containing $w'$
+when the normal and slip equations are combined. Thus $F$ is bounded
+on the stopped boxes without estimating the stiff slip derivative.
+The full stopped-prefix estimates and first-release brackets are
+proved in \eqref{con:projection}--\eqref{con:release-mechanics}.
+Only the exact reference return is differentiated in
+\eqref{loc:factorization}; \eqref{loc:value} compares values of the
+actual compliant map.
+

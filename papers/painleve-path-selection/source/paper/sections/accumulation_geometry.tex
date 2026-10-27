@@ -1,0 +1,111 @@
+\section{Separation and the geometry of the accumulation families}
+\label{sec:accumulation-geometry}
+
+We first establish the single nontrivial identification for each of the
+terminal-state, ordered-path and compact-image parameterizations, then
+use continuity and compactness to identify their images with the
+quotient circle.
+
+\begin{lemma}[Separation of terminal states and path images]
+\label{lem:terminal-separation}
+Fix $\lambda,\nu$ and $0<s\le s_0$ as in
+Theorem~\ref{thm:whole}, and write $d_*=F_\lambda^{-1}(s)$.
+The terminal-state map
+\[
+ E_s:\mathcal A_s\longrightarrow\mathbb R^5,
+ \qquad E_s(d,\alpha)=\cC_{\lambda,d}(\alpha),
+\]
+is one-to-one except for
+\[
+ E_s(d_*,3)=E_s(s,0).
+\]
+The ordered-path and compact-image maps in
+\eqref{eq:ps5-whole}--\eqref{eq:ps5-whole-image}
+have exactly the same single nontrivial identification.
+\end{lemma}
+
+\begin{proof}
+The contact injectivity established in
+\eqref{gr:contact-injectivity} applies for every $0<s\le s_0$.
+It separates admission, the interior contact points and release.
+
+For $d_*<d<s$, the stopped endpoint lies strictly inside its first
+free flight and has $y>0$. Contact endpoints have $y=0$.
+Two free endpoints cannot coincide. Indeed, suppose
+\[
+ \Phi_{\rm f}(t_1;\mathcal R_{d_1})
+   =\Phi_{\rm f}(t_2;\mathcal R_{d_2}),
+ \qquad 0<t_i<T_{d_i},
+\]
+and take $t_1\le t_2$. Uniqueness for the autonomous free mechanical
+flow gives
+$\mathcal R_{d_1}=\Phi_{\rm f}(t_2-t_1;\mathcal R_{d_2})$.
+If $t_1<t_2$, the right side has $y>0$, whereas the left side has
+$y=0$. Hence $t_1=t_2$ and the release states agree. Their $p$ values
+give $d_1=d_2$, and strict decrease of $p$ on the free flight gives
+the same stopping point. At the free endpoints, graph invariance
+gives $\cC_{\lambda,d_*}(3)=\cC_{\lambda,s}(0)$, while
+$\cC_{\lambda,s}(2)$ is already the common point of the graph and
+vertical branches of $\mathcal A_s$. Injectivity of the contact curve
+now proves the assertion for $E_s$.
+
+The two descriptions $(d_*,3)$ and $(s,0)$ give the same ordered
+path, since the final return at $d_*$ is the last full return in
+$L_s$. Conversely, the ordered distance bounds the distance
+between terminal states. The terminal-state assertion therefore gives
+the assertion for ordered paths.
+
+For images, endpoint separation alone would not suffice. Put
+$\Sigma_s=\{\cX:p(\cX)=-as\}$. The incoming arc has $p\ge0$.
+When $d<s$, all completed earlier returns and the final contact have
+$p>-as$, and the last free prefix has strictly decreasing $p$.
+Consequently
+\[
+ W_{\lambda,\nu,s}(d,j_s(d))\cap\Sigma_s
+          =\{E_s(d,j_s(d))\},\qquad d_*\le d<s.
+\]
+For a contact prefix, the only earlier point on $\Sigma_s$ is its
+admission point: the last full return in $L_s$ ends there, and all
+other earlier points have $p>-as$. Hence
+\[
+ W_{\lambda,\nu,s}(s,\alpha)\cap\Sigma_s
+       =\cC_{\lambda,s}([0,\alpha]),\qquad0\le\alpha\le2.
+\]
+These sets are strictly nested as $\alpha$ increases, by contact
+injectivity. A contact prefix of positive length cannot have a
+singleton intersection with $\Sigma_s$. The case $\alpha=0$ has
+the same singleton as $(d_*,3)$; every interior free endpoint has
+$y>0$. Finally two free singletons coincide only in the already
+identified terminal-state cases. This proves separation of the
+compact images as well.
+\end{proof}
+
+\begin{corollary}[The accumulation families are topological circles]
+\label{cor:accumulation-circle}
+For fixed $\lambda,\nu,s$ as in Lemma~\ref{lem:terminal-separation},
+the terminal-state set, the ordered-path accumulation family with
+the distance \eqref{eq:ps5-frechet}, and the compact-image accumulation
+family with its Hausdorff distance are each homeomorphic to $S^1$.
+More precisely, their parameter space is
+\[
+ \mathcal A_s/\bigl((d_*,3)\sim(s,0)\bigr).
+\]
+These statements concern the full physical state
+$(\phi,y,\omega,v,z)$.
+\end{corollary}
+
+\begin{proof}
+The graph branch of $\mathcal A_s$ is an arc from $(d_*,3)$ to
+$(s,2)$, and its vertical branch is an arc from $(s,2)$ to $(s,0)$.
+Their only common point is $(s,2)$, so $\mathcal A_s$ is homeomorphic to a closed
+interval with endpoints $(d_*,3)$ and $(s,0)$. Identifying these
+endpoints gives $S^1$.
+
+The terminal-state map is continuous by the construction of the
+reference curves. The ordered-path map is continuous by the finite-final-part and
+small-tail argument following \eqref{path:whole-error}; image
+continuity follows from $\dH\le\dF$. Lemma~\ref{lem:terminal-separation} says that all three
+maps identify exactly the two interval endpoints. Each therefore
+induces a continuous bijection from the compact quotient circle to
+its image in a metric space, and is a homeomorphism.
+\end{proof}

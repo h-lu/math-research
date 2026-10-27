@@ -1,0 +1,214 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=29mm]{geometry}
+\usepackage{booktabs,array,enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Hhyp}{H_{\mathrm{hyp}}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\degform}{deg}
+\hypersetup{pdftitle={Mechanical renewal and D²(ln D)² lower bounds for Hilbert numbers},
+ pdfauthor={Haibo Lu},pdfsubject={Mechanical construction of hyperbolic limit cycles},
+ pdfkeywords={Hilbert number, polynomial vector field, Abelian integral, mechanical renewal}}
+\title{Mechanical renewal and $D^2(\ln D)^2$\\ lower bounds for Hilbert numbers}
+\author{Haibo Lu\\\small Shanghai Institute of Technology, Shanghai 201418, China\\
+  \small\texttt{luhaibo1985@gmail.com}}
+\date{24 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every sufficiently large integer $D$, we construct a real planar
+polynomial vector field of degree at most $D$ with at least
+$D^2(\ln D)^2/[8(\ln 2)^2]-O(D^2\ln D)$ hyperbolic limit cycles.
+Qin and Sun previously obtained the order $D^2(\ln D)^2$ through two
+3-adic filtrations on a Chebyshev center grid. We give a different construction based on
+auxiliary mechanical folds and planar fourfold renewal, improving the leading
+coefficient even after polynomial replication extends their subsequence
+coefficient to all sufficiently large degrees.
+The auxiliary folds contribute a logarithmic number of birth levels, while
+planar renewal supplies the second logarithm. Reflections cancel the inherited and opposite-axis periods on
+each new family, allowing all selected zeros to be realized by one polynomial
+perturbation. A triangular allocation of monomials closes the total-degree
+budget, while small even terms fill the intervening degrees. We give an
+explicit finite lower bound.
+\end{abstract}
+
+\section{The problem and the construction}
+
+For an integer $D\ge1$, consider real planar polynomial vector fields
+\begin{equation}\label{eq:field}
+ \dot x=P(x,y),\qquad \dot y=Q(x,y),\qquad
+ \max(\deg P,\deg Q)\le D.
+\end{equation}
+Let $H(D)$ be the supremum of the cardinalities of finite families of
+distinct limit cycles carried by a single field \eqref{eq:field}, and
+let $\Hhyp(D)$ be the same supremum counting only hyperbolic cycles.
+Thus $H(D)\ge\Hhyp(D)$. We ask how many cycles can be obtained at a fixed total-degree
+budget when an old configuration is copied and new cycles are inserted
+at each stage.
+
+Christopher--Lloyd \cite[Section~3]{ChristopherLloyd1995} introduced
+fourfold quadratic replication followed by new cycle nests near axis
+centers to obtain bounds of order $D^2\ln D$. Li--Chan--Chung
+\cite[Section~3, Remark~4 and Proposition~5]{LiChanChung2002}
+corrected the axial perturbations in that argument. Itenberg--Shustin
+\cite[Theorem~2.1]{ItenbergShustin2000} obtained an all-degree
+$D^2\ln D$ lower bound by a Viro-type gluing construction. Han--Li
+\cite[Lemma~2.6 and Theorem~2.1]{HanLi2012} developed a two-axis
+recursion: perturbing the second component by $x$ times an odd
+polynomial in $y$ creates nests near the nonzero $x$-axis centers;
+a smaller odd perturbation in the first component then creates nests
+near the $y$-axis centers while retaining the first nests. Their
+Theorem~1.3 gives the all-degree result
+\[
+ \liminf_{D\to\infty}\frac{H(D)}{D^2\ln D}\ge\frac1{2\ln2}.
+\]
+Their recurrence is stated for odd-multiplicity cycles, but its births
+in Lemma~2.6 are hyperbolic. Starting with no selected cycles in the
+Hamiltonian seeds of their Lemma~3.3, each finite iteration preserves
+hyperbolicity under the fourfold pullback and the subsequent small
+perturbations. Thus the same liminf bound holds for $\Hhyp$.
+
+Related mechanical ingredients also have direct precedents:
+Li--Li--Llibre--Zhang
+\cite[p.~445]{LiLiLlibreZhang2001} count two-index monomial periods
+under a triangular degree constraint for a homogeneous potential;
+Han--Romanovski \cite[Theorems~2.1 and 3.2]{HanRomanovski2011} combine
+one-coordinate doubling with new outer cycles in polynomial
+Li\'enard systems, already producing one logarithmic accumulation.
+
+The two-source renewal in \cite{Lu2026} gives
+$\Hhyp(D)\ge D^2\log_2D-O(D^2)$, where the subscript denotes the base.
+Qin--Sun \cite[Theorem~1.1 and Section~6.2]{QinSun2026} subsequently obtained a lower
+bound of order $D^2(\ln D)^2$. For every
+$r\ge2$ they construct a field of degree at most
+\begin{equation}\label{eq:QS}
+ d_r=4\cdot3^r-5
+ \quad\text{with at least}\quad
+ \ell_r=4r^2 3^{2r-2}-(3^r-1)^2
+\end{equation}
+hyperbolic limit cycles. The coefficient of $d_r^2(\ln d_r)^2$ is
+$c_{\mathrm{QS}}=1/[36(\ln3)^2]$. Their hierarchical Melnikov construction combines two
+3-adic filtrations, a local Cartesian-rank argument under sufficiently
+strong anisotropy, and a simultaneous choice of perturbation coefficients.
+Within the fourfold copying framework, we construct separable Hamiltonians
+and perturbing forms directly. We allocate the mechanical monomials
+according to their degrees after all remaining folds and use the resulting
+auxiliary history as a source at every planar renewal.
+This gives the same logarithmic order by a different source mechanism
+and improves the coefficient. The comparison with the two-source renewal
+also involves its input class: that step accepts an arbitrary selected
+hyperbolic configuration, whereas the present construction uses a
+specially built sequence of separable Hamiltonians. Section~\ref{sec:replication}
+compares both the mechanisms and the resulting bounds.
+
+Our main result holds for every sufficiently large integer degree.
+Throughout the paper, $\ln$ denotes the natural logarithm.
+
+\begin{theorem}\label{thm:main}
+There are absolute constants $C>0$ and $D_0$ such that, for every
+integer $D\ge D_0$, there exists a real planar polynomial vector field
+of degree at most $D$ having at least
+\[
+ \frac{D^2(\ln D)^2}{8(\ln2)^2}-CD^2\ln D
+\]
+distinct hyperbolic limit cycles. In particular,
+\begin{equation}\label{eq:asymptotic}
+ \Hhyp(D)\ge
+ \frac{D^2(\ln D)^2}{8(\ln2)^2}-O(D^2\ln D).
+\end{equation}
+\end{theorem}
+
+Proposition~\ref{prop:mechanical-certificate} gives an explicit finite lower bound
+$L(n)$ for every integer $n\ge2$, with field degree at most $2n-1$.
+On the dyadic sequence it simplifies to
+\begin{equation}\label{eq:dyadic}
+ L(2^r)=\frac{4^r r(r+1)}2-\frac83\,4^r+4\cdot2^r-\frac43,
+ \qquad r\ge1.
+\end{equation}
+For $r=2,3,4,5$, this gives at least $20,244,1940,12756$
+cycles at degrees $7,15,31,63$.
+
+The quantitative increment over \cite[Proposition~4.1]{Lu2026} comes
+from the source inserted at each stage. That renewal has degree bound $m^+\le2m+5$
+and count $N^+=4N+4(m+2)(m+1)$, whose normalized birth term stays of
+constant order. Here a mechanical Hamiltonian $z^2/2+V(w)$ undergoes
+its own sequence of $w$ folds: each fold doubles the earlier period
+zeros and creates a new outer family. We allow both the kinetic-coordinate exponent
+and the potential-variable exponent to vary. After accounting for the
+remaining real copies, each auxiliary birth level contributes at
+quadratic order within the final source budget.
+
+In the planar Hamiltonian $U(x)-V(y)$, the two-coordinate fold then
+produces four old copies and inserts this source near both axes.
+On the dyadic sequence, let $n_i=2^i$ and let $K_i$ denote the number
+of newly selected period zeros at stage $i$. Its $i$ auxiliary birth levels give
+$K_i=i n_i^2-4(2^i-1)$. If $L_i$ is the cumulative count, then $L_i=4L_{i-1}+K_i$, and
+the normalized count $L_i/n_i^2$ increases by
+$i+O(2^{-i})$, rather than by a constant, and summing over $i$ produces
+the second logarithm. The extra history supplies this factor $i$;
+the fold-weighted triangular allocation places the source within the
+Hamiltonian field degree $2n_i-1$ and yields the coefficient in
+\eqref{eq:asymptotic}.
+
+There are two obstacles to this counting argument. First, the new sources
+must coexist with the old ones in a single polynomial form. On every
+new axis oval a reflection reverses orientation while preserving both
+the old pullback form and the opposite-axis source. Their periods vanish
+identically there. The two new amplitudes can therefore be chosen small
+enough to preserve all old simple zeros without altering the desired new
+zeros. Second, the two uses of folding must fit the same total-degree
+budget. A mode born $k$ auxiliary folds earlier has degree in the potential variable
+$2^k(2q+1)-1$; allocating the kinetic-coordinate exponent against this exact cost
+closes the budget. To cover every integer degree we add small even
+terms to the potentials. We fix all future auxiliary budgets at the
+outset, so only finitely many already chosen zeros must survive each
+addition.
+
+For every integer $D\ge31$, Qin--Sun's direct all-degree corollary gives
+a lower bound with leading coefficient $c_{\mathrm{QS}}/9$ and retains
+the seed hyperbolicity
+\cite[Corollary~1.2 and Sections~6.2, 6.4]{QinSun2026}. Section~\ref{sec:replication}
+uses the replication of Eshkobilov--Kadyrov--Mamayusupov \cite{EKM2026}
+to recover $c_{\mathrm{QS}}$ for all sufficiently large degrees, with
+remainder $O(D^2\ln D\ln\ln D)$. Thus the ratio of the leading
+coefficients of the present construction and this all-degree consequence is
+\[
+ \frac{1/[8(\ln2)^2]}{1/[36(\ln3)^2]}
+ =\frac92\left(\frac{\ln3}{\ln2}\right)^2\approx11.3045.
+\]
+
+\input{prelim}
+\input{mechanical-proof}
+\input{counting}
+\input{replication}
+\input{renewal-conjecture}
+
+\section*{Reproducibility and use of AI}
+
+The accompanying program \texttt{repro/verify.py} checks the finite
+counts, degree inequalities and replication envelope by integer
+arithmetic. These checks supplement the analytic proofs above.
+
+OpenAI's ChatGPT and Codex were used to explore proof strategies,
+check calculations, develop verification scripts, and revise the text.
+The author is responsible for all mathematical claims and the final
+manuscript.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+

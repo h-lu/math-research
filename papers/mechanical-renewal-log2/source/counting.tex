@@ -1,0 +1,49 @@
+\section{The finite estimate and all degrees}\label{sec:counting}
+
+The construction gives $L_i=4L_{i-1}+K_i$, $L_0=0$, with
+$K_i$ as in \eqref{eq:mechanical-birth}; hence \eqref{eq:mechanical-total}. We now control the
+losses uniformly over all binary prefixes.
+Put $s=n_{i-1}$ and $A_*=2^{i-1}$. Since $A_*\le s<2A_*$,
+\begin{align}
+ \sum_{k=0}^{i-1}e_{i,k}^2
+ &\le (s-A_*)^2+\sum_{k=0}^{i-2}4^k
+ \le(s-A_*)^2+\frac{A_*^2}{3}
+ \le\frac{s^2}{3},\label{eq:residue-square}\\
+ \sum_{k=0}^{i-1}e_{i,k}
+ &\le 2^i-1-i.\label{eq:residue-linear}
+\end{align}
+The last inequality in \eqref{eq:residue-square} is equivalent to
+$(s-A_*)(s-2A_*)\le0$. Define
+\[
+ B_i=i\eta_i+4\eta_i\sum_{k=0}^{i-1}e_{i,k}+4(2^i-1).
+\]
+Because $4s^2\le n_i^2$, equation \eqref{eq:mechanical-birth} implies
+\begin{equation}\label{eq:countlower}
+ L(n)\ge\sum_{i=1}^r(i-1/3)4^{r-i}n_i^2
+             -\sum_{i=1}^r4^{r-i}B_i.
+\end{equation}
+The prefix identity $0\le n-2^{r-i}n_i<2^{r-i}$ gives
+\begin{align*}
+ \sum_{i=1}^r(i-1/3)4^{r-i}n_i^2
+ &\ge n^2\left(\frac{r^2}{2}+\frac r6\right)
+       -2n2^r\sum_{i=1}^{\infty}(i-1/3)2^{-i}\\
+ &=n^2\left(\frac{r^2}{2}+\frac r6\right)-\frac{10}{3}n2^r.
+\end{align*}
+By \eqref{eq:residue-linear} and $0\le\eta_i\le1$,
+\begin{align*}
+ \sum_{i=1}^r4^{r-i}B_i
+ &\le4^r\sum_{i=1}^{\infty}4^{-i}
+       \{i+4(2^i-1-i)+4(2^i-1)\}\\
+ &=4\cdot4^r.
+\end{align*}
+Substitution in \eqref{eq:countlower}, followed by $2^r\le n$, proves
+\eqref{eq:finitebound}. If $n=2^r$, all remainders and all $\eta_i$
+vanish. Summing $K_i=i4^i-4(2^i-1)$ gives \eqref{eq:dyadic}.
+
+For any integer $D\ge3$ take $n=\lfloor(D+1)/2\rfloor$.
+Then $2n-1\le D$, $n=D/2+O(1)$, and
+$r=(\ln D)/(\ln2)+O(1)$. Equation \eqref{eq:finitebound} yields
+\eqref{eq:asymptotic}. In particular the claimed coefficient is an
+all-degree lower bound, rather than only a subsequence coefficient.
+This completes the proof of Theorem~\ref{thm:main}.
+

@@ -1,0 +1,112 @@
+\section{Normal memory along the release endpoint path}
+\label{sec:memory}
+
+Corollary~\ref{cor:memory} refines the release-endpoint path limit by
+describing its scaled normal memory and effective-gap velocities.
+
+Let $R_s$ be the first release time of the exact inherited normal
+reference at scale $s$, and write its normalized coordinates as
+$(Y_s,V_s^{\rm n},Z_s)$. Define
+\begin{equation}
+ V_s=s^{3/2}V_s^{\rm n}(R_s),\qquad
+ M_s=s^{3/2}Z_s(R_s).
+ \label{eq:path-memory-constants}
+\end{equation}
+These constants retain the exact finite-$\sqrt s$ reference, and
+satisfy $M_s<0<V_s+M_s<V_s$.
+
+\begin{corollary}[Memory above one physical path]
+\label{cor:memory}
+For every fixed complete label and every
+$w\in[V_s+M_s,V_s]$, there is a sequence $\eps_i\downarrow0$
+such that $t_s$ lies strictly between release from the last contact, at $t_L$,
+and the ensuing touchdown,
+\[
+ \dF(f_{\eps_i},\cW_{\lambda,\nu,s}(s,2))\to0,
+ \qquad v(t_s)+z(t_s)/\eps_i\to w.
+\]
+For each fixed $0<\tau<\infty$, the value
+$w=V_s+M_s e^{-\tau}$ can be realized with the exact delay
+$t_s-t_L=\eps_i\tau$, and then
+\begin{equation}
+ (v(t_s),z(t_s)/\eps_i,\dot g(t_s))
+          \longrightarrow(V_s,M_s e^{-\tau},V_s+M_s e^{-\tau}).
+ \label{eq:path-memory-limits}
+\end{equation}
+\end{corollary}
+
+The memory coordinate vanishes in the physical path but its normalized
+value survives at release and decays on the fast time. Thus the same
+release endpoint path supports an interval of limiting effective-gap
+velocities.
+
+
+\begin{proof}[Proof of Corollary~\ref{cor:memory}]
+\label{path:memory-proof}
+Fix the complete label and $\tau\in(0,\infty)$.  On the actual
+sweep interval $J_j$ consider
+\[
+ t_{j,\tau}(\eps)=t_{L,j}(\eps)+\eps\tau,
+ \qquad G_{j,\tau}(\eps)
+     =p(\cX_\eps(t_{j,\tau}(\eps)))+as.
+\]
+The comparison on $[s/2,2s]$ gives a common positive lower bound
+$T_{\min}(s)$ for actual flight duration.  Thus, for large $j$,
+these times lie strictly after the actual first release and before
+the next first touchdown, throughout $J_j$.  The function is
+continuous, and bounded $\dot p$ gives
+\[
+ G_{j,\tau}(a_j)=as/2+O_{s,\tau}(a_j)>0,
+ \qquad G_{j,\tau}(c_j)=-as+O_{s,\tau}(c_j)<0.
+\]
+At an actual root, strict decrease of $p$ and the predecessor and
+successor bounds give $N_s=j+1$ and
+\begin{equation}
+ d_\eps\to s,\qquad t_s=t_L+\eps\tau,
+ \qquad \alpha_\eps=2+\eps\tau/T_\eps\longrightarrow2.
+ \label{path:release-delay-root}
+\end{equation}
+All these sequences have the same complete path limit
+$\cW_{\lambda,\nu,s}(s,2)$.
+
+At their moving first-release roots the complete normalized
+comparison \eqref{path:normalized-release} gives
+\begin{equation}
+ v_L\longrightarrow V_s=s^{3/2}V_s^{\rm n}(R_s),\qquad
+ z_L/\eps\longrightarrow M_s=s^{3/2}Z_s(R_s).
+ \label{path:memory-release-state}
+\end{equation}
+These are the exact finite-$\sqrt s$ inherited release data.
+The release margins imply $M_s<0<V_s+M_s<V_s$.
+In the actual free leg $z(t_s)/\eps=(z_L/\eps)e^{-\tau}$;
+the bounded free field and $\eps\tau\to0$ give $v(t_s)\to V_s$.
+Since $g=y-z$ and $\dot g=v+z/\eps$ in flight,
+\begin{equation}
+ (v(t_s),z(t_s)/\eps,\dot g(t_s))
+       \longrightarrow(V_s,M_se^{-\tau},V_s+M_se^{-\tau}).
+ \label{path:memory-observation}
+\end{equation}
+The scaled-memory assertion follows from
+\eqref{path:memory-release-state}, not merely from physical
+$z_L\to0$.
+
+For the lower endpoint take $\tau_i=1/i>0$ and choose a sufficiently
+late root from each fixed-$\tau_i$ sequence, with all path and
+normalized-state errors below $1/i$ and decreasing compliance.
+Every section remains strictly inside the free leg, and its fast
+delay tends to zero.  For the upper endpoint take
+$\tau_i\to\infty$, first fixed in each row, and choose roots so
+late that the same errors are below $1/i$ and
+\[
+ \eps_i\tau_i<1/i,\qquad
+ \eps_i\tau_i<T_{\min}(s)/2,\qquad
+ \eps_i<\eps_{i-1}/2.
+\]
+Exact exponential decay gives $z(t_s)/\eps_i\to0$, while the
+bounded mechanical field gives $v(t_s)\to V_s$ and
+$\alpha_{\eps_i}\to2$.  No comparison on an unbounded normal-time
+window is required.  Together with the finite positive delays,
+these diagonals realize the whole closed interval
+$[V_s+M_s,V_s]$ above the same whole physical path, with the
+section strictly in free flight at every chosen compliance.
+\end{proof}

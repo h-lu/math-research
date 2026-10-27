@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "slug": "painleve-path-selection",
+  "title": "Common free-flight selection and contact-phase sensitivity in a compliant Painlevé oscillator",
+  "authors": [
+    "Haibo Lu"
+  ],
+  "version": "2026-10-20",
+  "abstract": "Common free-flight selection and residual contact-phase sensitivity for complete stopped physical paths.",
+  "topics": [
+    "singular perturbations",
+    "Painlevé oscillator"
+  ],
+  "doi": null,
+  "rights": {
+    "license": null,
+    "note": "No new license is granted by this collection."
+  },
+  "validation": {
+    "scope": "Source/input and reference integrity checks; no numerical or proof-assistant certification is asserted.",
+    "formal_verification": false
+  },
+  "artifacts": [
+    {
+      "path": "paper.pdf",
+      "role": "author-manuscript",
+      "sha256": "c56f2b41122d89b55f85aea1706d5aefd1314f202ae771885629eb6a0afd14b7"
+    },
+    {
+      "path": "source/README.md",
+      "role": "author-source",
+      "sha256": "25a574479c0b69ac9250c1db7316944c6f7caa6b1180cc431c5a8566ffabedb2"
+    },
+    {
+      "path": "source/build.py",
+      "role": "author-source",
+      "sha256": "e7fc29b06fec3df60a88db51531824efb33f1ff77f7571bb46638e9f839ec12e"
+    },
+    {
+      "path": "source/paper/figures/entry_comparison.tex",
+      "role": "author-source",
+      "sha256": "398bb2cff3f5df10eafa3be633a9b53d6fe2063b9298bf012a65442a40676988"
+    },
+    {
+      "path": "source/paper/figures/observation_rules.tex",
+      "role": "author-source",
+      "sha256": "20fbee577e2aa02e0f8ac37993023c84d7f0b8a1afde11379dd38d73545bd094"
+    },
+    {
+      "path": "source/paper/figures/path_geometry.tex",
+      "role": "author-source",
+      "sha256": "7c0cf1ea37421e19084ac9444750810d85c5e17cdaf6866e32d3981905fc6415"
+    },
+    {
+      "path": "source/paper/figures/selection_mechanism.tex",
+      "role": "author-source",
+      "sha256": "6d6fe1cec951cd885b97317c2a895217610587dab73fcbbf6a4ecf814eb348c5"
+    },
+    {
+      "path": "source/paper/main.tex",
+      "role": "author-source",
+      "sha256": "f4d73764ea1f886a002475dad3e8a54de19d10f2806c7dca8cd1d6bb09b5dcf9"
+    },
+    {
+      "path": "source/paper/metadata.tex",
+      "role": "author-source",
+      "sha256": "6b56cd6ce24fc42c6c9d05783ef081494a5a832301e8bf06cf7ee3e62daa55d5"
+    },
+    {
+      "path": "source/paper/preamble.tex",
+      "role": "author-source",
+      "sha256": "311c7b9cf9983f0062b44fbe3b772b6e63c367effec2cab1935db298795f73b3"
+    },
+    {
+      "path": "source/paper/sections/abstract.tex",
+      "role": "author-source",
+      "sha256": "9f8fadf4f90434149b278880492a2564dbaf5ae8fba28ab6a7faa4aa49929e92"
+    },
+    {
+      "path": "source/paper/sections/accumulation_geometry.tex",
+      "role": "author-source",
+      "sha256": "9cf0556a08a51ed6992963b68d98e2a6e39fbe4c2fce9e81c73a3fd13fff1c7c"
+    },
+    {
+      "path": "source/paper/sections/comparison.tex",
+      "role": "author-source",
+      "sha256": "f370b25d50094ef4328467ebd9bb460ebe001e0d1b6a12cdcbac38027128abcf"
+    },
+    {
+      "path": "source/paper/sections/contact.tex",
+      "role": "author-source",
+      "sha256": "ff2588ae0941f0c835936b81c41605b0b58f90c5acd726cd4dd3143dff048200"
+    },
+    {
+      "path": "source/paper/sections/contact_selection.tex",
+      "role": "author-source",
+      "sha256": "81f5c5157c09f4b7ea394ccabe4edf6581983db9e1fdbf146dad91fba1d33794"
+    },
+    {
+      "path": "source/paper/sections/declarations.tex",
+      "role": "author-source",
+      "sha256": "0b66db61b51a443b7a4a31ada32a1cdb59aacefba3e81956246b92720f0eecfc"
+    },
+    {
+      "path": "source/paper/sections/discussion.tex",
+      "role": "author-source",
+      "sha256": "b0c787bda76498c82e3335448ae1282dee957c94679be9d11e56a71ac11ff44e"
+    },
+    {
+      "path": "source/paper/sections/entrance_phase.tex",
+      "role": "author-source",
+      "sha256": "a76dd06cd5ae83b96d1109eb9aafb14b82edd2d0a5d6ac43c398c47da14b4619"
+    },
+    {
+      "path": "source/paper/sections/entry.tex",
+      "role": "author-source",
+      "sha256": "e850a1cfd89073000b05d9b5a53bae6406533e82168810a7c7ff4760ddf43710"
+    },
+    {
+      "path": "source/paper/sections/graph.tex",
+      "role": "author-source",
+      "sha256": "70e2001dbde95072f737710e0f3ba6889384d559bace77502ac5b28068000d17"
+    },
+    {
+      "path": "source/paper/sections/introduction.tex",
+      "role": "author-source",
+      "sha256": "f01f4a5319859bc35bc504c7088600a7cb9f4b8d8f56345ce031530d02a2ec9c"
+    },
+    {
+      "path": "source/paper/sections/local_results.tex",
+      "role": "author-source",
+      "sha256": "21b0cb23fa214d1bd233c54d0b107ca60829d43dd81ba0bb7e110a6af37cb3d9"
+    },
+    {
+      "path": "source/paper/sections/main_results.tex",
+      "role": "author-source",
+      "sha256": "51303905b3f082142cdbf3e173083cc3ae94daeef70781e2eca1b730d12ab91b"
+    },
+    {
+      "path": "source/paper/sections/memory.tex",
+      "role": "author-source",
+      "sha256": "1fae46d90a08257fa14b2ef140fe535d481ab31544d1f3a155d94e5b616ca947"
+    },
+    {
+      "path": "source/paper/sections/model.tex",
+      "role": "author-source",
+      "sha256": "0543804f1e9f9f6ea754b2e8e879062a478a6fdc271e6dd3c74321cba3b7d59d"
+    },
+    {
+      "path": "source/paper/sections/observations.tex",
+      "role": "author-source",
+      "sha256": "e999aca0c13a8b4481a5d8ee71061af1bd850c062753cec5dee1774aa8c5ef79"
+    },
+    {
+      "path": "source/paper/sections/paths.tex",
+      "role": "author-source",
+      "sha256": "6985c254f680f0cd25bd83f2be05a7f304a94135bb80f1b2f2e8e5eff72b9319"
+    },
+    {
+      "path": "source/paper/sections/preparation.tex",
+      "role": "author-source",
+      "sha256": "72d964d4578c62c1e8c509ccf281f240704d10fafce55831848b0bf495608ac3"
+    },
+    {
+      "path": "source/paper/sections/profile_response.tex",
+      "role": "author-source",
+      "sha256": "a47faaae9862e598f628ce02cfdba8fcccc52d91770b978e363456d4962c2a5c"
+    },
+    {
+      "path": "source/paper/sections/profile_selection.tex",
+      "role": "author-source",
+      "sha256": "e70ba3f1f370288afb7efb16230bc459b4aab544c2ef74c4eb9e714feeaa0d83"
+    },
+    {
+      "path": "source/paper/sections/proof_route.tex",
+      "role": "author-source",
+      "sha256": "bce30787d3840490d23c607dc7c4429a2976f4f564dfa3993fa096e08c697356"
+    },
+    {
+      "path": "source/paper/sections/references.tex",
+      "role": "author-source",
+      "sha256": "410f80a700db5c79e8a19f32f6dcf17e3cd54391bfd2828df2d6ebd1d60b19f5"
+    },
+    {
+      "path": "source/paper/sections/return.tex",
+      "role": "author-source",
+      "sha256": "12a0901812c829e5a18e2af43f96a09bd20b5d4e5dc5431f246c2a9f8a96db41"
+    }
+  ]
+}

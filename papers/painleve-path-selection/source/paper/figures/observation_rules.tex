@@ -1,0 +1,66 @@
+% SCHEMATIC projection of one reference contact to (x=-p/a,Psi).
+% Other state coordinates are suppressed. No finite-epsilon contact is drawn.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[
+ x=1cm,y=1cm,font=\small,
+ every node/.style={inner sep=1.3pt},
+ arrow/.style={-{Latex[length=1.5mm,width=1mm]},line width=.5pt},
+ path/.style={draw=black,line width=.8pt},
+ section/.style={draw=black!50,densely dashed,line width=.55pt}
+]
+ \foreach \shift in {0,5.0,10.0}{
+  \begin{scope}[xshift=\shift cm]
+   \draw[arrow] (.15,.35) -- (4.35,.35) node[right] {$x$};
+   \draw[arrow] (.15,.35) -- (.15,3.80) node[above] {$\Psi$};
+   \draw[path] (.45,1.40) .. controls (.95,1.18) and (1.25,1.07) .. (1.75,1.02);
+   \draw[path] (1.75,1.02) -- (1.75,2.95);
+   \draw[arrow] (1.75,1.55) -- (1.75,2.35);
+   \draw[path,arrow] (1.75,2.95) .. controls (2.35,2.90) and (2.90,2.78) .. (3.75,2.70);
+   \draw[fill=white,line width=.7pt] (1.75,1.02) circle[radius=2pt];
+   \draw[fill=white,line width=.7pt] (1.75,2.95) circle[radius=2pt];
+   \node[below=3pt] at (1.75,.35) {$s$};
+  \end{scope}
+ }
+ \node[font=\small\bfseries] at (2.25,4.55) {(a) Downstream section};
+ \node[font=\small\bfseries] at (7.25,4.55) {(b) Fixed-angle first stop};
+ \node[font=\small\bfseries] at (12.25,4.55) {(c) Local crossed patch};
+ \draw[section] (3.35,.70) -- (3.35,3.70);
+ \node[below=3pt] at (3.35,.35) {$\sigma$};
+ \fill (3.35,2.74263) circle[radius=2pt];
+ \node[align=center] at (2.25,-.35)
+   {common $\varepsilon_m(s)$\\complete contact retained};
+ \draw[section] (6.75,.70) -- (6.75,3.70);
+ \node[anchor=west] at (7.02,1.02) {$\mathcal T_s\Gamma$};
+ \fill (6.67,2.87) rectangle (6.83,3.03);
+ \node[anchor=west,align=left] at (7.02,3.35)
+   {$\lim\mathcal T_s f_{\varepsilon_\ell}^{\sigma}$};
+ \node[align=center] at (7.25,-.35)
+   {a separate diagonal sequence\\first-hit limits differ};
+ \draw[draw=black!40,densely dotted,line width=.5pt]
+   (11.75,2.08) circle[radius=.50cm];
+ \draw[line width=.8pt] (11.25,2.08) -- (12.25,2.08);
+ \fill (11.75,2.08) circle[radius=2pt];
+ \node[anchor=west] at (12.48,2.08) {$\Sigma$};
+ \node[anchor=west] at (12.02,2.53) {$X_*$};
+ \node[anchor=east] at (11.43,1.70) {$\alpha_0$};
+ \node[align=center] at (12.25,-.35)
+   {the same common $\varepsilon_m(s)$\\prescribed interior prefix};
+\end{tikzpicture}
+\caption{Three observations of one limiting contact, schematically
+projected to $x=-p/a$ and $\Psi=v-c_\Sigma u_0$
+(Corollary~\ref{cor:common-local-contact}), with $s<\sigma<F_\lambda(s)$.
+Open circles mark admission and release; arrows indicate curve order.
+(a) A downstream section retains the whole contact along the common
+sequence $\varepsilon_m(s)$.
+(b) The limit path $\Gamma$ first reaches $x=s$ at admission, while
+actual first-stop paths from a separate diagonal sequence tend to
+release (square).
+(c) The fixed local patch crossed strictly at
+$X_*=\mathcal C_{\lambda,s}(\alpha_0)$ selects that prefix along the
+same sequence as (a). The dotted circle indicates localization only;
+the physical patch and its separation from earlier prefixes are
+established in full state space. Other coordinates and distinct
+incoming arcs are suppressed, not identified.}
+\label{fig:observation-rules}
+\end{figure}

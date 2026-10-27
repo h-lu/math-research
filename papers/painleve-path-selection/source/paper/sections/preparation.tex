@@ -1,0 +1,336 @@
+\section{The two preparatory flights}
+\label{sec:preparation}
+
+The first release has normal velocity of order $\eps$, and its flight
+ends on the scale $\sqrt\eps$. The ensuing contact amplifies the
+velocity to order $\eps^{3/4}$, so the next flight is longer, of
+order $\eps^{3/8}$. Both flights inherit a nonzero normal memory.
+We retain it in the initial opening layer and identify each actual
+first touchdown before normalizing its complete incoming state.
+
+Throughout $r=k\sqrt\eps=-\eta$ is the same physical belt offset
+and $u_r=u_0-r$ is the physical slip. The belt coefficient $k$,
+the remaining parameters and the initial preparation stay fixed.
+
+The scales established below distinguish the first signed contact
+from the recurring returns:
+\[
+\begin{array}{c|c|c}
+ \text{touchdown}&\text{incoming scale}&\text{offset ratio}\\ \hline
+ \TD_1&\sqrt\eps&r/\sqrt\eps=k\\
+ \TD_2&\delta_2\asymp\eps^{3/8}&r/\delta_2^{4/3}\asymp1\\
+ \TD_3&\delta_3\asymp\eps^{9/32}&r/\delta_3^{4/3}=O(\eps^{1/8})
+\end{array}
+\]
+The second touchdown has a bounded complete cone. One further actual
+return makes the offset ratio small and places the trajectory in the
+domain used for iteration.
+
+In a flight,
+\begin{equation}
+ \dot y=v,\quad\dot v=b(X),\quad\dot z=-z/\eps,
+ \quad\dot u_r=a_T(X),\qquad g=y-z.
+ \label{prep:free-field}
+\end{equation}
+
+\begin{lemma}[The gap of a local free extension]
+\label{lem:detuned-free-gap-expansion}
+Suppose $|X_L-G|\le C\rho$, $\rho\to0$, and $y_L=z_L$.
+On a common fixed local interval, the smooth free extension satisfies
+\begin{align}
+ p(t)&=p_L-at+O(\rho t+t^2),\qquad
+ b(t)=b_L-ct+O(\rho t+t^2),\nonumber\\
+ u_r(t)&=u_{r,L}+d_\lambda t+O(\rho t+t^2),\nonumber\\
+ v(t)&=v_L+b_Lt-ct^2/2+O(\rho t^2+t^3),
+ \label{prep:free-expansions}\\
+ g(t)&=z_L(1-e^{-t/\eps})+v_Lt+b_Lt^2/2-ct^3/6+\mathcal R(t),
+ \nonumber\\
+ |\mathcal R(t)|&\le C(\rho t^3+t^4),\qquad
+ |\mathcal R'(t)|\le C(\rho t^2+t^3).
+ \label{prep:gap-expansion}
+\end{align}
+If $\min\{v_L,v_L+z_L/\eps\}\ge v_*>0$, then
+\begin{equation}
+ \dot g(t)\ge v_*-C\rho t-Ct^2.
+ \label{prep:opening}
+\end{equation}
+The extension is the actual unilateral solution on every initial
+interval on which $g>0$.
+At any positive root $T$ of this free gap within the local interval,
+put $D=-p(T)/a$ and $H_b=\dot b+c$. Then
+\begin{equation}
+ -v(T)-\frac c3D^2=\frac{y_L-z(T)}T-\frac12b_LT+
+ \frac c3(T^2-D^2)-\frac1{2T}\int_0^T(T^2-t^2)H_b(t)\,dt.
+ \label{prep:touchdown-cancellation}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Stop at a common chart boundary. The bounded free field gives
+$|X(t)-G|\le C(\rho+t)$, which improves the stop on a smaller
+fixed time interval. Its critical rates give
+$\dot p=-a+O(\rho+t)$, $\dot b=-c+O(\rho+t)$ and
+$a_T=d_\lambda+O(\rho+t)$. Successive integrations give all the
+mechanical estimates and the gap remainder. The memory is exactly
+$z_Le^{-t/\eps}$. Moreover
+$v_L+(z_L/\eps)e^{-t/\eps}\ge\min(v_L,v_L+z_L/\eps)$,
+which proves \eqref{prep:opening}. While $g>0$ both contact forces
+vanish; uniqueness identifies the extension with the actual free leg.
+For the last identity integrate $\dot b=-c+H_b$ twice:
+\[
+ \begin{aligned}
+ v(T)&=v_L+b_LT-cT^2/2+\int_0^T(T-t)H_b(t)\,dt,\\
+ z(T)&=y_L+v_LT+b_LT^2/2-cT^3/6
+                  +\tfrac12\int_0^T(T-t)^2H_b(t)\,dt.
+ \end{aligned}
+\]
+Eliminate $v_L$ with the second equality, which is the actual root
+condition $y(T)=z(T)$. No asymptotic estimate is used in this identity.
+\end{proof}
+
+\subsection{The first touchdown and signed compression}
+
+Use the critical-release data of Theorem~\ref{thm:detuned-release}
+and put $s=\sqrt\eps$. Define
+\begin{equation}
+ H=ak/\gamma,\qquad q=q_{\rm in},\qquad
+ T_f=\frac{\sqrt{9\ell^2H^2+24cq}-3\ell H}{2c},\qquad
+ \pi=H-aT_f.
+ \label{prep:first-flight-data}
+\end{equation}
+Thus $cT_f^2+3\ell HT_f=6q$. These quantities have common finite
+bounds and $T_f,q,H$ have common positive lower bounds on the
+fixed compact label classes.
+
+\begin{proposition}[First flight and its amplified release]
+\label{prep:first-flight}
+The first free leg after the captured passage has a transverse first
+touchdown, at elapsed time $t_1$, with
+\begin{gather}
+ t_1/s\to T_f,\qquad p_1/s\to\pi,\qquad
+ b_1/s\to-\ell H-cT_f,\qquad u_{r,1}/s\to S:=d_\lambda T_f,\\
+ -v_1/\eps\to Q:=T_f(\ell H/2+cT_f/3)>0,\qquad
+ y_1=z_1=o(\eps^2),\qquad |X_1-G|=O(s).
+ \label{prep:first-touchdown}
+\end{gather}
+The subsequent contact has its first release with
+\begin{gather}
+ |X_L-G|=O(s),\qquad p_L,b_L=O(s),\qquad u_{r,L}=O(\eps),\\
+ v_L=\eps^{3/4}(R+o(1)),\qquad
+ y_L=z_L=\eps^{7/4}(Z+o(1))<0,
+ \label{prep:amplified-release}\\
+ R=A_s\nu_\#,\quad Z=-A_s\gamma_\#,\qquad
+ A_s^2=QS/h-\pi S^2/(2h^2)>0.
+ \label{prep:amplitude}
+\end{gather}
+In particular $R$ and $R+Z$ have common positive lower bounds.
+The first touchdown parameter $\pi$ may be positive, zero or negative.
+\end{proposition}
+\begin{proof}
+The release theorem gives $p_L/s\to H$, $b_L/s\to-\ell H$,
+$v_L/\eps\to q$ and a common positive opening margin
+$(v_L+z_L/\eps)/\eps$. Apply the free-gap lemma with $\rho=s$.
+For $t=s\tau$, uniformly on bounded intervals,
+\[
+ s^{-3}g(s\tau)\longrightarrow
+ P_f(\tau):=q\tau-\ell H\tau^2/2-c\tau^3/6.
+\]
+The normalized memory value is $O(s)$; away from $\tau=0$ its
+normalized derivative tends to zero exponentially. The opening
+estimate gives $\dot g>0$ on $0\le t\le s_0s$ for a common small
+$s_0>0$. The polynomial is positive until its unique positive zero
+$T_f$, where $P_f'(T_f)=-T_f(\ell H/2+cT_f/3)<0$.
+Choose a fixed small bracket with a common negative derivative
+margin. Uniform value convergence preserves positivity between the
+opening interval and the bracket and the opposite endpoint signs;
+uniform derivative convergence in the bracket gives exactly one zero.
+It is the actual first transverse touchdown. The mechanical expansions
+give \eqref{prep:first-touchdown}; exact memory decay gives, more
+precisely, $|z_1|\le C\eps^2e^{-c/\sqrt\eps}$ and makes
+$\dot g(t_1)$ have the same negative leading term as $v_1$.
+
+For the ensuing contact set $\delta=s$. Its exact normalized incoming
+data are $\pi_\eps=p_1/\delta$, $Q_\eps=-v_1/\delta^2$,
+$S_\eps=u_{r,1}/\delta$ and
+$\zeta_\eps=z_1/(\eps\delta^2)$.
+They converge to $(\pi,Q,S,0)$, and
+\[
+ 2hQ-\pi S
+ =T_f\{(h\ell-d_\lambda)H+(2hc/3+ad_\lambda)T_f\}>0,
+\]
+with a common strict margin since $h\ell-d_\lambda=\gamma>0$.
+Thus they lie in a fixed compact subset of the signed contact domain
+of Theorem~\ref{con:contact-release}; the incoming gap-closing margin
+also holds. Here $\eps/\delta^2=1$ and $r=k\delta$.
+That theorem, applied to this actual state, proves the first release,
+the complete normal memory and \eqref{prep:amplified-release}.
+Its normal reference has $\nu_\#>\gamma_\#>0$, giving the
+opening margin $R+Z>0$. The strict amplitude inequality and compactness
+bound $A_s$ away from zero. No new state has been prepared.
+\end{proof}
+
+At this first touchdown $r=k\delta$, so the signed contact theorem
+supplies the amplified release. The next flight brings the offset
+into the range $r\le A\delta^{4/3}$ required for recurring returns.
+
+\subsection{The second touchdown in complete coordinates}
+
+The normal displacement at the amplified release is too large to use
+the first-flight normalization. Its exact decay still ensures an
+initial free interval; on the longer flight the cubic acceleration
+term dominates the initial $O(\sqrt\eps)$ acceleration. At touchdown,
+the smaller fibre scale requires cancellation of the actual release
+velocity before division.
+
+\begin{lemma}[Complete preparation at the second touchdown]
+\label{lem:td2-complete-preparation}
+Suppose an actual release has $|X_L-G|=O(\sqrt\eps)$,
+$u_{r,L}=O(\eps)$ and satisfies \eqref{prep:amplified-release},
+with bounded $R,Z$ and common positive lower bounds for $R,R+Z$.
+Its next touchdown is the transverse first positive zero of the free
+gap. If $T$ is its elapsed time, $D=-p(T)/a$ and
+$C_R=\sqrt{6R/c}$, then
+\begin{gather}
+ T=\eps^{3/8}C_R(1+o(1)),\qquad D\sim T,\qquad
+ D-T=O(\sqrt\eps),\qquad v(T)/\eps^{3/4}\to-2R,
+ \label{prep:second-scale}\\
+ \eps/D^2=O(\eps^{1/4})\to0.
+\end{gather}
+Put $r_0=c/3$ and define the complete actual incoming coordinates
+\begin{gather}
+ U_2^r=\frac{u_r(T)}{d_\lambda D},\quad B_2=\frac{-b(T)}{cD},\quad
+ W_2=\frac{-v(T)}{r_0D^2},\quad
+ \zeta_2=\frac{z(T)}{\eps D^2},\\
+ \eta_{U,2}^r=\frac{U_2^r-1}{D^{1/3}},\quad
+ \eta_{B,2}=\frac{B_2-1}{D^{1/3}},\quad
+ \eta_{W,2}=\frac{W_2-1}{D^{1/3}},\qquad
+ \xi_2^r=(\zeta_2,\eta_{U,2}^r,\eta_{W,2}).
+ \label{prep:second-coordinates}
+\end{gather}
+There exist fixed constants $M_2<\infty$ and $\gamma_2>0$ such that
+\begin{gather}
+ |\xi_2^r|+|\eta_{B,2}|\le M_2,\qquad
+ r_0W_2-\zeta_2\ge\gamma_2,\qquad
+ (B_2,U_2^r,W_2)\to(1,1,1),\\
+ -Ce^{-c_1\eps^{-5/8}}\le\zeta_2<0,\qquad
+ \frac r{D^{4/3}}=\frac{k}{C_R^{4/3}}(1+o(1)).
+ \label{prep:complete-second-cone}
+\end{gather}
+The offset ratio has positive finite common upper and lower bounds.
+\end{lemma}
+\begin{proof}
+Put $P=\sqrt\eps$, $L=\eps^{3/8}$, so the release velocity scale
+is $L^2$ and its memory scale is $\eps L^2$. For $t=L\tau$,
+the free-gap lemma gives
+\[
+ L^{-3}g(L\tau)\longrightarrow R\tau-c\tau^3/6.
+\]
+The initial quadratic term is $O(P/L)$, memory value is
+$O(\eps/L)$ and the remainder is $O(P+L)$, all tending to zero.
+Away from zero the normalized memory derivative decays exponentially.
+On $0\le t\le s_0L$, \eqref{prep:opening} gives
+$\dot g\ge L^2\{m-Cs_0P/L-Cs_0^2\}>0$ after choosing $s_0$
+small and then $\eps$ small. The cubic has its unique positive zero
+$C_R$ with derivative $-2R$. Its positive interval, opposite root
+bracket signs and negative derivative margin transfer to the extension.
+Thus the bracket contains precisely its first zero and is an actual
+touchdown, with $T/L\to C_R$ and $v(T)/L^2\to-2R$.
+
+All finer estimates are on free prefixes. Stop at a chart boundary
+or $HL$, where $H>\sup C_R+1$ is fixed. The bounded free field
+gives $|X(t)-G|\le C(P+t)$, improving the chart stop; hence
+\begin{equation}
+ A_p:=\dot p+a=O(P+t),\quad H_b:=\dot b+c=O(P+t),\quad
+ \dot u_r-d_\lambda=O(P+t),\qquad 0\le t\le HL.
+ \label{prep:prefix-residuals}
+\end{equation}
+In particular $D-T=-p_L/a-a^{-1}\int_0^TA_p\,dt=O(P)$, since
+$T\asymp L$ and $L^2=o(P)$. This proves $D\sim T>0$.
+Retain the critical combinations
+\begin{equation}
+ J_U=u_r+(d_\lambda/a)p,\qquad J_B=-b+(c/a)p,\qquad
+ J_W=-v-(c/3)(p/a)^2.
+ \label{prep:critical-combinations}
+\end{equation}
+The free-field derivatives of $J_U$ and $J_B$ vanish at $G$, so integration with
+\eqref{prep:prefix-residuals} gives
+$J_U(T),J_B(T)=O(P+PT+T^2)=O(P)$.
+
+For $J_W=-v(T)-(c/3)D^2$, use
+\eqref{prep:touchdown-cancellation}, which eliminates the release
+velocity through the actual touchdown identity $y(T)=z(T)$.
+The four terms have sizes $O(\eps^{11/8})$,
+$O(\eps^{7/8})$, $O(\eps^{7/8})$ and $O(\eps^{9/8})$.
+For the last use the bound on every prefix:
+$C(PT^2+T^3)=O(\eps^{9/8})$. Therefore $J_W(T)=O(PL)$.
+No rate for the $o(1)$ in the release velocity is required.
+Only now divide, using the exact identities
+\[
+ \eta_{U,2}^r=\frac{J_U(T)}{d_\lambda D^{4/3}},\quad
+ \eta_{B,2}=\frac{J_B(T)}{cD^{4/3}},\quad
+ \eta_{W,2}=\frac{J_W(T)}{r_0D^{7/3}}.
+\]
+Their denominators are respectively of sizes $P,P,PL$.
+The three fibres are bounded and the three unscaled ratios tend to
+one. Finally $z(T)=z_Le^{-T/\eps}<0$ and
+$|z_L|/(\eps D^2)\le C$; since
+$T/\eps\ge c_1\eps^{-5/8}$, this proves the memory bound and
+the strict closing margin. The last offset identity follows from
+$D\sim C_R\eps^{3/8}$ and $r=k\sqrt\eps$.
+\end{proof}
+
+\begin{corollary}[The physical second touchdown]
+\label{cor:original-to-td2}
+The original physical trajectory has this complete second-touchdown
+state, with $\delta_2=D\asymp\eps^{3/8}$ and $p_2<0$.
+All bounds are uniform on its fixed compact label class, including
+labels for which the leading first-touchdown parameter $\pi$ vanishes.
+\end{corollary}
+\begin{proof}
+Proposition~\ref{prep:first-flight} supplies every release hypothesis
+of Lemma~\ref{lem:td2-complete-preparation}, including $u_{r,L}=O(\eps)$,
+negative memory, and the common $R,R+Z$ margins. The lemma applies
+to that same trajectory.
+\end{proof}
+
+\begin{corollary}[Entry to the recurring returns]
+\label{cor:td3-admission}
+Write $\eta_{U,*,\lambda}$ for the slip component of
+$\xi_{*,\lambda}$ and put
+$\eta_{B,*,\lambda}=(g_b/c)\eta_{U,*,\lambda}$, with
+$g_b=-d_\lambda b_u(G)$ as in Lemma~\ref{ret:inverse}.
+The next actual contact--flight return reaches $\TD_3$ with
+\begin{gather}
+ \delta_3\asymp\eps^{9/32},\qquad
+ \xi_3^r\in\operatorname{int}\Kcal,\qquad
+ r/\delta_3^{4/3}=O(\eps^{1/8}),\\
+ \left|\log\frac{\delta_3}{K_\lambda\delta_2^{3/4}}\right|
+ +|\xi_3^r-\xi_{*,\lambda}|+
+ |\eta_{B,3}-\eta_{B,*,\lambda}|
+ \le C(\eps^{3/32}+\eps^{7/16}+\eps^{1/8}).
+ \label{prep:third-entry-error}
+\end{gather}
+It retains the complete negative normal memory and every strict
+physical margin of Theorem~\ref{thm:detuned-output-admission}, and is an admissible
+input to a further return. In particular
+$\log(1/\delta_3)=(9/32)\log(1/\eps)+O(1)$ uniformly.
+\end{corollary}
+\begin{proof}
+Choose a fixed finite cone containing the full second-touchdown
+bounds, and fixed $A$ covering $r/\delta_2^{4/3}$.
+Since $\eps/\delta_2^2=O(\eps^{1/4})\to0$ and $\delta_2\to0$,
+Theorem~\ref{thm:detuned-output-admission} applies to this actual input for all
+sufficiently small $\eps$. Its three error terms are
+$\delta_2^{1/4}=O(\eps^{3/32})$,
+$\eps\delta_2^{-3/2}=O(\eps^{7/16})$, and
+$r/\delta_2=O(\eps^{1/8})$.
+It gives $\delta_3\asymp\delta_2^{3/4}$ before output admission.
+Lemma~\ref{ret:inverse} recovers the dependent acceleration from the
+actual output. Its additional terms are
+$O(r/\delta_3^{4/3})=O(\eps^{1/8})$ and
+$O(\delta_3^{2/3})=O(\eps^{3/16})$, within the displayed bound.
+The strict output cone and memory are supplied by that theorem.
+Since $\delta_3\to0$, the output eventually also satisfies its input
+cutoff, permitting the next actual return. The uniform positive upper
+and lower scale bounds prove the logarithmic statement, with the
+original labels and belt parameter on the same physical trajectory.
+\end{proof}

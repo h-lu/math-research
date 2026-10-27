@@ -1,0 +1,375 @@
+\subsection{Growth, the error budget and the first section}
+
+Fix all compact classes and the finite cones in
+Theorem~\ref{thm:detuned-output-admission}.  Reduce the graph outer radius first, and
+then take its compatible reset cutoff, so that
+\[
+ 0<\delta_{\rm reset}<\delta_{\rm g}<\delta_{\rm call},\qquad
+ q_{\rm g}:=(1+L_\Gamma)q<1,
+\]
+where $q<1$ is the full logarithmic contraction in
+\eqref{gr:contraction} and $L_\Gamma$ is the logarithmic Lipschitz
+constant of the graph on the outer interval.  Choose a fixed
+$\Delta<\delta_{\rm reset}$ below every inner input cutoff.  It is
+also chosen so small that
+\begin{equation}
+ c_D\Delta^{-1/4}>2,
+ \qquad c_D\delta^{3/4}\le\delta^+\le C_D\delta^{3/4}
+ \quad(0<\delta\le\Delta),
+ \label{path:growth-bounds}
+\end{equation}
+and the full-prefix tubes below lie in a common neighborhood
+$\mathcal U_G$ with $p_\phi\omega<-a/2$.  These choices precede the
+choice of the observation section.
+
+Write $\mathcal B_\lambda(d)$ for the value of the dependent
+coordinate $\eta_B=(-b-c_\lambda d)/(c_\lambda d^{4/3})$
+at the graph state $(d,\Gamma_\lambda(d))$. It is obtained by
+substituting that state into the physical inverse \eqref{loc:inverse}
+with $\eps=r=0$ and evaluating $b$. In the notation of
+Appendix~\ref{sec:detuned-return}, this is
+$\mathcal B_{0,0}(d,\Gamma_\lambda(d))$; the corresponding
+Lipschitz estimate is \eqref{ret:dependent-Lipschitz}.
+
+\begin{lemma}[Stopped cascade and its complete state budget]
+\label{path:stopped-cascade}
+For each fixed $0<h\le\Delta$, the actual returns from $\TD_3$ can
+be generated, on the original trajectory, up to
+\[
+ N_h=\min\{n\ge3:\delta_n\ge h\}.
+\]
+This index is finite, tends to infinity as $\eps\downarrow0$, and
+every input used before it is below the reset and inner cutoffs.
+The terminal output remains in the graph outer domain.  The complete
+cone, inverse branch, negative memory and strict first-event margins
+are retained.  Put
+\[
+ e_n=\eps\delta_n^{-3/2},\quad
+ \omega_n=e_n+r/\delta_n,\quad
+ B_n=\|\xi_n^r-\Gamma_\lambda(\delta_n)\|_\infty.
+\]
+For $3\le m\le N_h$,
+\begin{align}
+ B_m&\le q_{\rm g}^{m-3}B_3+
+       C\sum_{n=3}^{m-1}q_{\rm g}^{m-1-n}\omega_n,
+       \label{path:graph-budget}\\
+ \left|\log\frac{\delta_{n+1}}{F_\lambda(\delta_n)}\right|
+       &\le qB_n+C\omega_n\quad(3\le n<N_h),
+       \label{path:same-base-output}\\
+ \Omega_\eps:=\sup_{3\le n<N_h}\omega_n
+       &\le C(\eps^{37/64}+\eps^{7/32})\longrightarrow0.
+       \label{path:uniform-defect}
+\end{align}
+If an actual and a limiting chain are compared in full logarithmic
+state, their distance satisfies, through the first output at which
+either input chain leaves the common inner domain,
+\begin{equation}
+ E_m\le q^{m-3}E_3+
+          C\sum_{n=3}^{m-1}q^{m-1-n}\omega_n.
+ \label{path:two-chain-budget}
+\end{equation}
+At any sequence of positive-scale inputs whose indices tend to
+infinity, the dependent acceleration coordinate also tends to its
+graph value.  Thus this convergence concerns the complete normalized
+touchdown state, including memory.
+\end{lemma}
+
+\begin{proof}
+Proposition~\ref{loc:entrance} gives the actual entrance
+\begin{equation}
+ \delta_3\asymp\eps^{9/32},\qquad
+ \eps\le C_0\delta_3^2,\qquad
+ r\le A\delta_3^{4/3},\qquad
+ x_3=\tfrac9{32}\log(1/\eps)+O(1),
+ \quad x=\log(K_\lambda^4/\delta).
+ \label{path:entrance}
+\end{equation}
+The admissibility of the returned state in
+Theorem~\ref{thm:detuned-output-admission} and
+\eqref{path:growth-bounds} give strict scale growth.  Since $\eps$ and $r=k\sqrt\eps$ stay
+fixed on each trajectory, both admissibility inequalities propagate
+to the next input.  The return estimate is applied again when its new input
+is below $h\le\Delta$.  All events are the
+actual first release and subsequent first touchdown, with positive
+gap between them.  If there were infinitely many inputs below $h$,
+\eqref{path:growth-bounds} would give $\delta_n\ge2^{n-3}\delta_3$,
+a contradiction.  Conversely every fixed finite index has
+$\delta_n\to0$, by \eqref{path:entrance} and the growth upper bound.
+Consequently $N_h\to\infty$ uniformly on the compact classes.
+
+The direct value comparison in
+Theorem~\ref{thm:detuned-value-bridge} is made at identical values of the
+independent normalized touchdown coordinates and gives a logarithmic output defect at most
+$C\omega_n$.  Integrating the derivative bound for the limiting
+map along the logarithmic joining segment gives
+$E_{n+1}\le qE_n+C\omega_n$, and hence
+\eqref{path:two-chain-budget}.  Only the limiting map is
+differentiated.  To compare with the graph, take its input at the
+actual base $\delta_n$.  Graph invariance and the same argument give
+\[
+ \max\left\{
+ \left|\log\frac{\delta_{n+1}}{F_\lambda(\delta_n)}\right|,
+ \|\xi_{n+1}^r-\Gamma_\lambda(F_\lambda(\delta_n))\|_\infty
+ \right\}\le qB_n+C\omega_n.
+\]
+Both output bases are in the outer graph interval.  Correcting the
+graph base there costs $L_\Gamma(qB_n+C\omega_n)$, so
+$B_{n+1}\le q_{\rm g} B_n+C\omega_n$.  Iteration proves
+\eqref{path:graph-budget}.  The bounded entrance error and the two
+geometric sums give bounds independent of the number of returns.
+Scale growth also gives
+\[
+ \Omega_\eps\le\eps\delta_3^{-3/2}+r/\delta_3
+           \le C(\eps^{37/64}+\eps^{7/32}),
+\]
+which proves \eqref{path:uniform-defect}.
+
+To compare complete states, recover the acceleration row from the
+same physical inverse.
+At a common base $d$, the actual and graph arguments differ by
+\begin{equation}
+ \begin{split}
+ \Delta p&=0,\qquad
+ \Delta u_0=d_\lambda d^{4/3}
+       (\eta_U^r-\Gamma_U(d))+r,\\
+ \Delta v&=-r_0d^{7/3}(\eta_W-\Gamma_W(d)),\qquad
+ \Delta y=\eps d^2\zeta.
+ \end{split}
+ \label{path:inverse-arguments}
+\end{equation}
+Smoothness of that inverse and division by $c_\lambda d^{4/3}$ give
+\begin{equation}
+ |\eta_B-\mathcal B_\lambda(d)|
+ \le C\{B_n+r/d^{4/3}+\eps d^{2/3}|\zeta|\}.
+ \label{path:dependent-row}
+\end{equation}
+On any fixed positive-scale compact interval this tends to zero
+when $n\to\infty$ and $\eps\to0$.  The memory component of the graph vanishes,
+while the actual values at touchdown remain exactly
+$y=z=\eps d^2\zeta$.  No normal coordinate is reset.
+\end{proof}
+
+We record the prefix estimates needed to turn this state budget
+into a first-crossing and path argument.  The contact estimates
+\eqref{con:prefix}, followed by Lemma~\ref{lem:paired-free-normalization}, give,
+for every admitted input $\delta\le\Delta$ and every actual prefix,
+\begin{equation}
+ \begin{gathered}
+ \sup_{\rm contact}|X-G|\le C\delta,
+ \qquad t_L-t_{\rm TD}\le C\eps/\sqrt\delta,\\
+ \sup_{\rm contact}(|y|+|z|)\le C\eps\delta^{3/2}.
+ \end{gathered}
+ \label{path:contact-tube}
+\end{equation}
+\begin{equation}
+ \begin{gathered}
+ T:=t_+-t_L\le H\delta^{3/4},\qquad
+ |X(t_L+\ell)-G|\le C(\delta+\ell),\\
+ z(t_L+\ell)=z_Le^{-\ell/\eps}<0
+ \qquad(0\le\ell\le T).
+ \end{gathered}
+ \label{path:free-tube}
+\end{equation}
+In particular, since $|b_L|\le C\delta$ and
+$b(t_L+\ell)=O(\delta+\ell)$, integration of $\dot v=b$ and
+$\dot y=v$ gives
+\begin{equation}
+ \begin{split}
+ |z|/\eps&\le C\delta^{3/2},\qquad
+ |v|\le C(\delta^{3/2}+\delta\ell+\ell^2),\\
+ |y|&\le C(\eps\delta^{3/2}+\delta^{3/2}\ell
+                       +\delta\ell^2+\ell^3)\le C\delta^{9/4}.
+ \end{split}
+ \label{path:free-normal-tube}
+\end{equation}
+The contact velocity estimate uses $e/\sqrt\delta\le C_0$ in
+the weighted compression bounds.  Thus these estimates remain valid
+without a positive lower bound on $e$.
+
+\begin{lemma}[Original preparation and the first physical section]
+\label{path:first-section}
+The whole actual curve from time zero through $\TD_3$ tends to the
+prescribed incoming arc $I_{\lambda,\nu}$ in the completed ordered
+distance.
+
+There is a common $s_0>0$ such that for fixed $0<s\le s_0$ the
+first crossing $t_s$ of $p=-as$ from the original initial state
+exists and is transverse.  With $N=N_s$,
+\begin{equation}
+ t_{N-1}<t_s\le t_N,
+ \qquad c_s:=(s/C_D)^{4/3}\le d_\eps=\delta_{N-1}<s,
+ \label{path:section-location}
+\end{equation}
+and the complete same-base defect
+\begin{equation}
+ \kappa_\eps=
+ |\xi_{N-1}^r-\Gamma_\lambda(d_\eps)|+
+ |\eta_{B,N-1}-\mathcal B_\lambda(d_\eps)|\longrightarrow0.
+ \label{path:last-input}
+\end{equation}
+All statements here are uniform on the fixed compact label classes.
+\end{lemma}
+
+\begin{proof}
+Fix a small incoming cutoff $\eta>0$. Proposition~\ref{loc:entrance}
+gives convergence to the corresponding rigid prefix. Transverse
+alignment on that closed subarc gives an increasing pairing.
+The remaining rigid tail lies in $G+B_{C\eta}$, while the proposition
+puts the remaining original prefix through $\TD_3$ in
+$G+B_{C\eta+o(1)}$. Pair these tails in their order and then let
+$\eta\downarrow0$; this proves the ordered incoming limit.
+
+For the cascade up to $N_s$, take the supremum of the local bounds:
+\begin{equation}
+ \sup_{[t_3,t_N]}|X-G|\le Cs^{3/4},\qquad
+ \sup_{[t_3,t_N]}|z|/\eps\le Cs^{3/2}.
+ \label{path:common-tube}
+\end{equation}
+There is no sum over returns.  Choose $0<s_0<\Delta/2$ so this tube lies in
+$\mathcal U_G$.  The exact identity
+\begin{equation}
+ \dot p=p_\phi(\phi)\omega<-a/2
+ \label{path:strict-p}
+\end{equation}
+then holds on every contact and free prefix and at their joins.
+The entrance has $\delta_3<s$, whereas $\delta_N\ge s$, giving a
+unique crossing between the stated events.  On the original closed
+incoming prefix $p$ is positive; the part from its small cutoff to
+the threshold also has positive $p$.  From the threshold through
+$\TD_3$, Proposition~\ref{loc:entrance} gives $\sup|p|=o(1)$.  For fixed
+$s$, this excludes an earlier crossing of $-as$.  Hence the crossing
+is the first one from the original initial data.  Only after the
+tube has been established, integration of \eqref{path:strict-p}
+also gives $t_s-t_3\le2(s-\delta_3)$.
+
+The last growth upper bound gives $d_\eps\ge c_s$.  The last-input
+index tends to infinity, so \eqref{path:graph-budget} and
+\eqref{path:dependent-row} give \eqref{path:last-input} on
+$[c_s,s]$.
+\end{proof}
+
+\begin{corollary}[Localization of an actual contact stop]
+\label{cor:contact-location}
+Fix $0<s\le s_0$. If an actual touchdown generated by the return estimates has
+$\delta_j\in[s/2,2s]$ and the first section time satisfies
+$t_j<t_s\le t_{L,j}$, then
+\begin{equation}
+ 0<s-\delta_j\le C_s\eps,\qquad
+ 0<t_s-t_j\le C_s\eps.
+ \label{eq:contact-stop-location}
+\end{equation}
+The constant is uniform on the prescribed compact label classes.
+\end{corollary}
+
+\begin{proof}[Proof of Corollary~\ref{cor:contact-location}]
+On the fixed band $[s/2,2s]$, \eqref{path:contact-tube} gives
+$t_{L,j}-t_j\le C_s\eps$. Since $\dot p$ is bounded and satisfies
+\eqref{path:strict-p} throughout this contact,
+\[
+ 0<s-\delta_j=-\frac1a\int_{t_j}^{t_s}\dot p\,\dd t
+       \le C_s(t_s-t_j)\le C_s\eps.
+\]
+The same contact bound gives the asserted time estimate.
+\end{proof}
+
+
+For a first section time during contact $j$, Lemma~\ref{path:first-section}
+gives $j=N_s-1$ and $\delta_j\in[c_s,s)$. The same contact-time
+argument on this fixed positive band gives $s-\delta_j=O_s(\eps)$,
+so the input eventually lies in $[s/2,2s]$.
+Thus \eqref{eq:contact-stop-location} applies to every actual contact stop,
+without assuming the band in advance.
+
+\subsection{Sharp comparison from the actual third touchdown}
+
+Fix $\lambda$ and a compact auxiliary class $\mathfrak K$ within
+the standing ranges. Put $A_0=9/32$, $\rho_c=3/4$ and
+$L=\log(1/\eps)$. The scalar phase contracts by $\rho_c$;
+the complete-state contraction is $q=7/8$.
+The entrance state is already $O(\eps^{3/32})$ from the graph at
+its own base, so its complete-state budget resolves the residual
+entrance constant through all required returns.
+
+\begin{lemma}[Same-index phase accuracy]
+\label{sel:sharp-phase}
+Uniformly for $\mathfrak a\in\mathfrak K$ and
+$3\le n\le N_s^{\mathfrak a}$,
+\begin{equation}
+ \mathcal S_\lambda(\delta_n^{\mathfrak a})
+ =\rho_c^{n-3}\{A_0L+\chi_\lambda(\mathfrak a)+r_{\mathfrak a}(\eps)\}
+       +O(\eps^{3/32}),
+ \qquad L=\log(1/\eps),
+ \label{sel:sharp-phase-formula}
+\end{equation}
+where the entrance remainder satisfies
+$\sup_{\mathfrak a\in\mathfrak K}|r_{\mathfrak a}(\eps)|\to0$.
+The same comparison holds through any prescribed index $j=j(\eps)$
+whose graph chain started at the actual base $\delta_3^{\mathfrak a}$ has
+its $j$th base below $3s/2$, even if the observation time precedes $j$.
+\end{lemma}
+\begin{proof}
+The uniform logarithmic entrance in \eqref{loc:log-entry} and
+the exact-phase expansion give
+\begin{equation}
+ \mathcal S_\lambda(\delta_3^{\mathfrak a})
+ =A_0L+\chi_\lambda(\mathfrak a)+r_{\mathfrak a}(\eps),
+ \qquad
+ r_{\mathfrak a}=r_{\mathfrak a}^{\log}+O(\eps^{3/32}),
+ \label{sel:uniform-entry-phase}
+\end{equation}
+where the remainder tends to zero uniformly. We preserve its
+parameter dependence by starting at the actual base.
+
+Start the exact graph chain at the actual $\delta_3$, with fibre
+$\Gamma_\lambda(\delta_3)$. The sharp third-entry estimate
+\eqref{loc:third-entry} and the graph bound give
+\begin{equation}
+ E_3=B_3\le
+ |\xi_3^r-\xi_{*,\lambda}|+
+ |\Gamma_\lambda(\delta_3)-\xi_{*,\lambda}|
+ =O(\eps^{3/32}).
+ \label{sel:sharp-start}
+\end{equation}
+The equality $E_3=B_3$ uses the identical starting base. The
+two-chain budget \eqref{path:two-chain-budget} gives
+\[
+ E_n\le q^{n-3}B_3+
+ C\sum_{i=3}^{n-1}q^{n-1-i}\omega_i,
+ \qquad
+ \sup_i\omega_i\le C(\eps^{37/64}+\eps^{7/32}).
+\]
+The geometric sum is bounded by $8$. Thus
+\begin{equation}
+ E_n=O(\eps^{3/32})
+ \label{sel:sharp-shadow}
+\end{equation}
+through every comparison within those domains, without a factor counting the returns.
+All constants are common on $\mathfrak K$, since the entrance,
+return and graph bounds are common. In particular the bound persists
+at fixed positive scales.
+
+Let $\bar N_{2s}$ be the first graph index whose base is at least
+$2s$. Compare until $M=\min(N_s,\bar N_{2s})$. Before $M$ both
+inputs lie below $2s<\Delta$ and the inner cutoffs; the estimate
+also applies to their first output $M$ in the outer domain.
+If $\bar N_{2s}<N_s$, the graph base at $M$ is at least $2s$ while
+the actual base is less than $s$. Their logarithmic distance is then
+at least $\log2$, contradicting \eqref{sel:sharp-shadow}. Thus the
+comparison covers all $n\le N_s$. No further iteration at an output
+outside the input domain has been used.
+
+For the last assertion, generate the original trajectory until
+$N_{2s}$, as permitted by Lemma~\ref{path:stopped-cascade}.
+The graph bases through $j$ are below $3s/2$, since $F(d)>d$.
+If the actual chain reached $2s$ at or before $j$, its first such
+output would have logarithmic distance at least $\log(4/3)$ from
+the graph base. This again contradicts \eqref{sel:sharp-shadow}.
+The actual events through $j$ therefore exist and admit the stated
+comparison on the underlying trajectory.
+
+The graph phase at $n$ is exactly
+$\rho_c^{n-3}\mathcal S_\lambda(\delta_3)$.
+The two-sided bound \eqref{gr:phase-bilip} transfers the logarithmic
+base error \eqref{sel:sharp-shadow} to phase. Substitution of
+\eqref{sel:uniform-entry-phase} proves \eqref{sel:sharp-phase-formula}.
+\end{proof}

@@ -1,0 +1,472 @@
+\section{The return in normalized touchdown coordinates}
+\label{sec:detuned-return}
+The contact theorem gives a release with normal velocity of order
+$\delta^{3/2}$. The subsequent free gap is the integral of a normal
+acceleration whose leading rate is $-c$, so its next zero has time and
+scale of order $\delta^{3/4}$. To control the finer output fibres, we
+cancel the leading free-flight terms before normalizing. We then
+compare the compliant and reference returns at identical values of the
+independent coordinates, and establish weighted state derivatives for
+the exact reference return. These two estimates will control repeated
+returns.
+
+\subsection{Independent touchdown data and the physical inverse}
+\label{sec:touchdown-coordinates}
+
+Use the independent tuple \eqref{loc:tuple}, physical inverse
+\eqref{loc:inverse} and input bounds \eqref{loc:domain}, writing
+$c=c_\lambda$ and $\gamma=\gamma_{\rm cl}$.
+The body coordinates are recovered by
+\[
+ \psi=y-1+\cos\phi_\delta,\qquad
+ \dot\psi=v-\sin\phi_\delta\,\omega.
+\]
+For the inverse and comparison estimates below, the closing bound may
+be any fixed $\gamma>0$. Constants depend only on the fixed input
+bounds and compact model classes, with no positive lower bound on
+$e$ or $r$.
+
+\begin{lemma}[The dependent acceleration]
+\label{ret:inverse}
+On \eqref{loc:domain}, the physical inverse is $G+O(\delta)$ and
+\begin{equation}
+ \begin{aligned}
+ b&=-c\delta+d_\lambda b_u(G)\delta^{4/3}\eta_U^r+b_u(G)r+O(\delta^2),\\
+ \eta_B&=\frac{g_b}{c}
+       \left(\eta_U^r+\frac{r}{d_\lambda\delta^{4/3}}\right)
+       +O(\delta^{2/3}),\qquad g_b=-d_\lambda b_u(G).
+ \end{aligned}
+ \label{ret:inverse-expansion}
+\end{equation}
+In particular $|\eta_B|\le M_B$ for a common finite $M_B$ depending on
+$M_{\rm in},A$ and the compact model classes, after reducing the common
+scale cutoff. This bound is fixed before applying the contact theorem.
+\end{lemma}
+\begin{proof}
+In the analytic chart $(p,y,u_0,v)$ the free rates at $G$ are
+$(-a,0,d_\lambda,0)$. Therefore $F_{\rm free}b(G)=-c$ gives
+\begin{equation}
+ -a b_p(G)+d_\lambda b_u(G)=-c.\label{ret:rate-identity}
+\end{equation}
+Substitute \eqref{loc:tuple} with $u_0=u_r+r$ into the Taylor
+expansion of $b$. Here $p,u_0=O(\delta)$, $v=O(\delta^2)$ and
+$y=O(\delta^4)$; the remaining linear terms and quadratic remainder
+are $O(\delta^2)$, uniformly on the fixed domain. Equation
+\eqref{ret:rate-identity} yields the first formula, and division by
+$-c\delta^{4/3}$ yields the second. The explicit inverse gives the
+asserted bound on the mechanical state distance from $G$, together
+with common bounds on all derivatives used.
+\end{proof}
+
+The exact reference $T_{0,\lambda}=(f_{0,\lambda},h_{0,\lambda})$
+is defined by \eqref{loc:compression}--\eqref{loc:normal-reference}
+and the subsequent release reconstruction and free flight in
+Section~\ref{sec:local-results}. Write $Q=V(R_0)$ for its normal
+release amplitude. The actual return constructed below is
+$T_{\eps,r}=(f_{\eps,r},h_{\eps,r}^r)$.
+
+\subsection{The first free event and normalization}
+\label{sec:flight}
+
+The normal fibre has denominator $D^{7/3}\asymp\delta^{7/4}$,
+whereas its uncancelled velocity terms have size $\delta^{3/2}$.
+We eliminate the release velocity with the touchdown equation before
+dividing. For a free leg on its own elapsed release clock define
+\begin{equation}
+ \begin{gathered}
+ D=-p(T)/a,\qquad J_U=u_0(T)+(d_\lambda/a)p(T),\\
+ J_W=-v(T)-(c/3)D^2,\qquad
+ A_p=\dot p+a,\quad B_b=\dot b+c.
+ \end{gathered}\label{ret:critical-numerators}
+\end{equation}
+Integrating the free equations and using $y(T)=z(T)$ gives the exact
+identities
+\begin{align}
+ D-T&=-p_L/a-a^{-1}\int_0^T A_p(t)\dd t,
+ \label{ret:flight-offset}\\
+ J_U&=u_{0,L}+(d_\lambda/a)p_L+
+    \int_0^T\{a_T+(d_\lambda/a)\dot p\}\dd t,
+ \label{ret:slip-cancellation}
+\end{align}
+For the normal numerator use the exact identity
+\eqref{prep:touchdown-cancellation}, with $H_b=B_b$ and
+$J_W=-v(T)-(c/3)D^2$. Thus the actual release velocity is eliminated
+before either normalized output is formed.
+The tuned output fibres are
+\begin{equation}
+ \eta_U^+=\frac{J_U}{d_\lambda D^{4/3}},\qquad
+ \eta_W^+=\frac{J_W}{r_0D^{7/3}},\qquad
+ \zeta^+=\frac{z_Le^{-T/\eps}}{\eps D^2}.
+ \label{ret:normalization}
+\end{equation}
+For zero reference memory the last expression means $\zeta^+=0$.
+
+\begin{lemma}[Paired free flights]
+\label{lem:paired-free-normalization}
+Consider either the actual and reference releases of
+Theorem~\ref{con:contact-release} specialized by
+\eqref{con:native-contact} at the same native input and offset,
+or two exact releases with the same
+$p_L=-a\delta$, $y_L=z_L=0$, $v_L=\delta^{3/2}Q$ and slips
+$u_{0,L}=r,0$, where $Q$ lies in a fixed positive compact interval.
+Put $L=\delta^{3/4}$ and set $\vartheta=e$ in the first case and
+$\vartheta=r/\delta$ in the second. Both legs have first subsequent
+touchdowns, positive gap between events, and
+\begin{equation}
+ \begin{gathered}
+ T_i\asymp D_i\asymp L,\qquad
+ g_i'(T_i),v_i(T_i)\le-\kappa_f\delta^{3/2},\\
+ |\Delta T|+|\Delta D|\le C\vartheta L,\qquad
+ |\log(D_1/D_0)|+|\xi_1^{0,+}-\xi_0^{0,+}|\le C\vartheta.
+ \end{gathered}\label{ret:paired-values}
+\end{equation}
+On each full free prefix, $|X_i(\ell)-G|\le C(\delta+\ell)$ and
+$T_i\le HL$. In the actual leg
+\begin{equation}
+ z(\ell)=z_Le^{-\ell/\eps}<0,\qquad
+ |z(\ell)|/\eps\le C\delta^{3/2},\qquad
+ |\zeta^+|\le C\exp\{-\kappa_f/(eL)\}\le CeL.
+ \label{ret:free-memory}
+\end{equation}
+Here $\kappa_f>0$ is a common lower-bound constant. All output
+coordinates in \eqref{ret:paired-values} use $u_0$.
+\end{lemma}
+\begin{proof}
+The native contact estimate and the smooth inverse, respectively, give
+\begin{equation}
+ \begin{gathered}
+ |X_{L,i}-G|\le C\delta,\quad b_{L,i}=O(\delta),\quad
+ |\Delta p_L|+|\Delta u_0|+|\Delta b_L|\le C\vartheta\delta,\\
+ |\Delta v_L|\le C\vartheta\delta^{3/2},\quad
+ y_{L,0}=z_{L,0}=0,\quad y_{L,1}=z_{L,1},\quad
+ |z_{L,1}|\le C\vartheta\delta^3.
+ \end{gathered}\label{ret:paired-release-data}
+\end{equation}
+The actual release also has $|z_L|\le C\eps\delta^{3/2}$ and
+$v_L+z_L/\eps\ge \kappa_{\rm op}\delta^{3/2}$. In the second pair,
+$\Delta u_0=r$ and $\Delta b_L=O(r)$. Indeed, at fixed angle the
+body velocity differences are exactly
+\begin{equation}
+ \Delta\omega=r/\cos\phi_\delta,\qquad
+ \Delta\dot\psi=-r\tan\phi_\delta,
+ \quad \Delta b_L=b_u(G)r+O(r\delta+r^2).
+ \label{ret:body-shift}
+\end{equation}
+The two references have the same normal release coordinates, but
+different mechanical velocities.
+
+Stop the analytic free extensions at $HL$ or the chart boundary.
+Their common smooth field gives
+$|X_i(t)-G|\le C(\delta+t)$, excluding that boundary, and
+$|\Delta X(t)|\le C\vartheta\delta$ by Gronwall's inequality.
+Each residual $P\in\{A_p,B_b,a_T+(d_\lambda/a)\dot p\}$ vanishes at $G$,
+so $|P_i(t)|\le C(\delta+t)$ and
+$|\Delta P(t)|\le C\vartheta\delta$.
+The exact gap is
+\begin{equation}
+ g_i(t)=v_{L,i}t+z_{L,i}(1-e^{-t/\eps})
+                  +\int_0^t(t-s)b_i(s)\dd s.
+ \label{ret:exact-free-gap}
+\end{equation}
+The memory term is absent when $z_L=0$. Since $z_L<0$, its
+contribution is at least $(z_L/\eps)t$. The opening margin therefore
+gives $g_i(t)\ge t(\kappa_f\delta^{3/2}-C\delta t-Ct^2)>0$ for
+$0<t\le\eta L$, with fixed small $\eta>0$.
+On $\eta\le x\le H$,
+\[
+ \delta^{-9/4}g_i(Lx)
+ =Qx-cx^3/6+O_{C^1_x}(\delta^{1/4}+\vartheta).
+\]
+Here the differentiated memory is bounded using
+$e^{-\eta/(eL)}\le Ce$. The positive interior portion and a common
+transverse bracket about $\sqrt{6Q/c}$ identify the first zero.
+The release and field differences give
+\[
+ |\Delta g(t)|\le C\vartheta
+ (\delta^3+\delta^{3/2}t+\delta t^2)
+ \le C\vartheta\delta^{9/4}.
+\]
+Dividing at the transverse bracket and then moving the event in $p$
+proves the time, scale and logarithmic bounds. It also gives
+$u_0(T_i)=d_\lambda T_i+O(\delta+T_i^2)>0$; subtracting $r=O(\delta^{4/3})$
+preserves positive native slip.
+
+For the normalized rows, substitute $t=T_iq$ in each residual integral.
+The residuals there have size $O(L)$ and paired difference
+$O(\vartheta L)$, including the changed argument. Equation
+\eqref{ret:flight-offset} gives $H_i=D_i-T_i=O(\delta)$ and
+$\Delta H=O(\vartheta\delta)$. Thus
+$J_{U,i}=O(\delta)$ and $\Delta J_U=O(\vartheta\delta)$.
+In \eqref{prep:touchdown-cancellation} keep
+\[
+ T_i^2-D_i^2=-H_i(2T_i+H_i)
+\]
+before dividing. The $b_LT$ and squared-scale terms have size
+$O(\delta L)$ and difference $O(\vartheta\delta L)$.
+The last integral has paired difference $O(\vartheta L^3)$,
+and the memory term has size $O(\vartheta\delta^3/L)$.
+Since $L^2\le\delta$, these give
+$J_{W,i}=O(\delta L)$ and $\Delta J_W=O(\vartheta\delta L)$.
+For either exponent $\alpha=4/3,7/3$ use
+\begin{equation}
+ \frac{J_1}{D_1^\alpha}-\frac{J_0}{D_0^\alpha}
+ =\frac{\Delta J}{D_1^\alpha}
+  +\frac{J_0}{D_0^\alpha}
+       \{(D_1/D_0)^{-\alpha}-1\}.
+ \label{ret:two-denominators}
+\end{equation}
+Because $D_i^{4/3}\asymp\delta$ and
+$D_i^{7/3}\asymp\delta L$, this proves the fibre bound with their
+respective denominators. The exact memory formula and
+$D_i^2\asymp\delta^{3/2}$ prove \eqref{ret:free-memory}.
+\end{proof}
+
+\subsection{Weighted regularity of the exact limiting return}
+
+Use the constants \eqref{loc:constants} and the weighted norm of
+Section~\ref{sec:local-results}. Put
+$B_\lambda=-ab_p(G)=-c+g_b$ and
+$\mathscr D_\delta=\delta\partial_\delta$.
+The reference derivatives are needed on a bounded open fibre domain,
+including inputs outside the physical closing condition.
+
+\begin{proposition}[Weighted limiting factorization]
+\label{prop:limiting-factorization}
+Let $\Omega\Subset\Omega_1$ be fixed bounded convex open sets containing
+the independent input ball $|\xi|\le M_{\rm in}$ and the ball $\Kcal$
+specified in Proposition~\ref{loc:return}.
+On a common $(0,\delta_w]\times\overline\Omega$, the reference has
+the $C^1$ extension, weighted bounds \eqref{loc:factorization} and joint
+$\lambda$-continuity stated there. The memory component of $h_0$
+vanishes. Moreover,
+$f_0>\delta$ and
+$\mathscr D_\delta\log f_0=3/4+O(\delta^{1/4})$.
+\end{proposition}
+On the auxiliary domain this is the algebraic extension of the signed
+linear contact reference: compression is continued even if its force
+is initially negative. No physical contact assertion is made there.
+The actual return is used only under the closing condition in
+\eqref{loc:domain}.
+\begin{proof}
+Lemma~\ref{con:reference-regularity} treats
+the filter scale, frozen contact coefficients, initial normal
+displacement and filter datum, slip and incoming normal velocity as
+independent parameters. Restrict it to the native coefficient
+$\pi=-a$ and write the remaining parameters as
+$(\sigma,\widehat\delta,\alpha_U,\alpha_W,\beta_m)$, with
+$h_0=h_{\widehat\delta}$, initial displacement and filter datum both
+$\beta_m$, initial slip $d_\lambda(1+\alpha_U)$ and incoming speed
+$r_0(1+\alpha_W)$. Its first-arrest and first-release maps are $C^1$
+on a common neighborhood of zero in these independent parameters.
+In particular the normal
+release amplitude is $C^1$ there and has positive limit $q_\lambda$.
+These derivative bounds include the independent initial displacement
+and filter datum at $\sigma=0$; they do not use physical force
+positivity for arbitrary auxiliary data.
+Use the regularizing coordinate
+\begin{equation}
+ \rho=\delta^{1/12},\quad \sigma=\rho^6,\quad
+ \widehat\delta=\rho^{12},\quad
+ \alpha_i=\rho^4\eta_i,\quad \beta_m=\rho^6\zeta.
+ \label{ret:regularizing-scale}
+\end{equation}
+The chain rule, including the term
+$(\beta_m/2)\partial_{\beta_m}$ in $\mathscr D_\delta$, gives
+$\|Q-q_\lambda\|_{1,*}\le C\rho^4$ and
+$|D_\xi Q|\le C\rho^4$. Only the cutoff is reduced to cover the
+fixed $\Omega_1$.
+
+For an independent positive $Q_*$ near $q_\lambda$, reconstruct
+$X_L=(-a\rho^{12},0,0,\rho^{18}Q_*)$ in the chart
+$(p,y,u_0,v)$, centered at $G=0$. With $t=\rho^9s$ and
+$X=\rho^9\widehat X$, its free equation becomes
+$\widehat X_s=F_{\rm free}(\rho^9\widehat X)$ with initial state
+$(-a\rho^3,0,0,\rho^9Q_*)$. This equation extends smoothly to
+$\rho=0$. For every residual $P$ vanishing at $G$,
+\[
+ P(\rho^9\widehat X)=\rho^9
+       \int_0^1DP(t\rho^9\widehat X)\widehat X\dd t.
+\]
+This divided form controls its remainders and derivatives. In particular
+$b_L=\rho^{12}(B_\lambda+\rho^6B_1)$ and
+\begin{equation}
+ \rho^{-27}y(\rho^9s)
+ =Q_*s+\tfrac12\rho^3(B_\lambda+\rho^6B_1)s^2
+       -cs^3/6+\rho^9R_f,
+ \label{ret:regular-free-gap}
+\end{equation}
+with smooth bounded remainders on fixed $s$ intervals. The positive
+cubic root $\sqrt{6Q_*/c}$ has derivative denominator $-2Q_*$.
+The opening interval and positive intervening gap in the proof of
+Lemma~\ref{lem:paired-free-normalization} apply throughout this primitive domain;
+thus the implicit root is the first positive root. It has the form
+$S=\sqrt{6Q_*/c}+\rho^3S_1$. Integrating $p$ gives
+\begin{equation}
+ T_0=\rho^9S,\quad D_0=\rho^9\mathcal D,\quad
+ \mathcal D=S+\rho^3+\rho^9H_1,
+ \quad D_0-T_0=\rho^{12}(1+\rho^6H_1).
+ \label{ret:regular-free-scale}
+\end{equation}
+After substituting the $C^1$ contact amplitude $Q(\rho,\xi)$,
+$\mathcal D$ is bounded below and
+$\|\mathcal D-K_\lambda\|_{1,*}\le C\rho^3$,
+$|D_\xi\mathcal D|\le C\rho^4$.
+
+The two normal cancellations remain visible in
+\eqref{prep:touchdown-cancellation}: $D_0-T_0=\delta+O(\delta^{3/2})$
+and $b_L=B_\lambda\delta+O(\delta^{3/2})$ give
+\[
+ J_W=(-B_\lambda/2-2c/3)\delta D_0
+        +(B_\lambda/2+c/3)\delta^2+O(\delta^{9/4}).
+\]
+Using the divided remainders above makes this an identity with bounded
+$C^1$ remainder, rather than differentiation of an order estimate.
+Consequently there are bounded $C^1$ functions $U_1,W_1$ such that
+\begin{equation}
+ \begin{aligned}
+ \eta_{U,0}^+&=(-1+\rho^6U_1/d_\lambda)\mathcal D^{-4/3},\\
+ \eta_{W,0}^+&=-\varkappa_W\mathcal D^{-4/3}
+       +A_1\rho^3\mathcal D^{-7/3}
+       +\frac{\rho^6W_1}{r_0\mathcal D^{7/3}},
+ \quad A_1=1+\frac{B_\lambda}{2r_0},\qquad \zeta_0^+=0.
+ \end{aligned}\label{ret:regular-fibres}
+\end{equation}
+Their input-fibre dependence is only through $Q$. Product and chain
+rules prove \eqref{loc:factorization}; the radial derivative of
+$\log\rho^9$ is $3/4$.
+\end{proof}
+
+\subsection{A direct comparison at identical coordinate values}
+
+The actual inverse \eqref{loc:inverse} uses $u_0=u_r+r$,
+whereas $T_0(\delta,\xi^r)$ uses the tuned inverse at identical
+values of the independent coordinates. These are generally different
+physical touchdowns.
+We pass between their returns through a reference with the actual
+offset $r$, and recode the actual output after its scale is known.
+
+\begin{theorem}[Value comparison at matched normalized coordinates]
+\label{thm:detuned-value-bridge}
+For sufficiently small inputs in \eqref{loc:domain}, the actual first
+contact--flight return exists, has $D=f_{\eps,r}\asymp\delta^{3/4}$,
+and satisfies \eqref{loc:value}.
+The actual memory is the exact negative memory of
+\eqref{ret:free-memory}. The first events, their transverse margins,
+and all compact labels are retained.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{ret:inverse} places the actual input in a fixed finite
+physical cone, so the native specialization
+\eqref{con:native-contact} of Theorem~\ref{con:contact-release} applies.
+Reconstruct
+its reference release at $u_{0,L}=r$, with the same finite-$\sigma$
+compression and inherited release, and call its exact free return
+$R^r$. The first pair in Lemma~\ref{lem:paired-free-normalization} gives
+\[
+ |\log(f_{\eps,r}/f_{R^r})|
+       +|h_{\eps,r}^{0}-h_{R^r}^{0}|\le Ce.
+\]
+For fixed $\delta$ the frozen angle and $h_\delta$ do not depend on
+$r$. Hence $R^r$ and $T_0(\delta,\xi^r)$ share exactly the entire
+compression solution, inherited release, first release root and
+amplitude $Q$, not only their leading amplitudes. Their reconstructed
+slips are $r$ and $0$. The second free pair, including the $O(r)$ body
+and acceleration changes in \eqref{ret:body-shift}, gives
+\[
+ |\log(f_{R^r}/f_0)|+|h_{R^r}^{0}-h_0|\le Cr/\delta.
+\]
+In particular $\Delta b_LT=O(rL)$ is retained in the normal numerator
+before division by $D^{7/3}\asymp\delta L$.
+Finally recode only the actual output:
+\begin{equation}
+ h_{\eps,r}^r=h_{\eps,r}^0-
+               \frac{r}{d_\lambda D^{4/3}}(0,1,0).
+ \label{eq:dva-output-recoding}
+\end{equation}
+Its cost is $Cr/\delta$ because the paired free flights have already
+established $D^{4/3}\asymp\delta$. Summing these three comparisons
+proves the theorem.
+\end{proof}
+
+For complete physical-state comparisons, recover the acceleration
+from the same analytic inverse chart. Define
+\[
+ \mathcal B_{\eps,r}(s,\xi)=
+ -\frac{b(-as,\eps s^2\zeta,d_\lambda s+d_\lambda s^{4/3}\eta_U+r,
+                 -r_0s^2-r_0s^{7/3}\eta_W)+cs}{cs^{4/3}}.
+\]
+Taylor's formula and \eqref{ret:rate-identity} give the first four
+bounds below at $r=0$, together with the offset comparison in the
+last bound:
+\begin{equation}
+ |\partial_{\eta_U}\mathcal B|\le C,\quad
+ |\partial_{\eta_W}\mathcal B|\le Cs,\quad
+ |\partial_\zeta\mathcal B|\le C\eps s^{2/3},\quad
+ |s\partial_s\mathcal B|\le Cs^{2/3},\quad
+ |\mathcal B_{\eps,r}-\mathcal B_{\eps,0}|\le Cr/s^{4/3}.
+ \label{ret:dependent-Lipschitz}
+\end{equation}
+The radial derivative keeps $\eps,r$ fixed; its leading cancellation
+is exactly \eqref{ret:rate-identity}. Integrating these estimates on
+the logarithmic scale interval between the two output scales and on
+the bounded fibre segment gives
+$|\eta_B^+-\eta_{B,0}^+|\le C(e+r/\delta)$.
+The memory component of $h_0$ vanishes, so inserting the same
+$\eps$ into its inverse is exact. This recovery uses both output scales; the
+independent state remains $(\log\delta,\zeta,\eta_U^r,\eta_W)$.
+
+\subsection{Admissibility of the returned state}
+\label{sec:detuned-output-admission}
+
+For the already fixed closed ball $\Kcal$, put
+$d_\Kcal=\inf_\lambda\operatorname{dist}
+(\xi_{*,\lambda},\partial\Kcal)>0$, and retain
+$\gamma=\gamma_{\rm cl}$ and $M_{\rm in}$ from \eqref{loc:domain}.
+The ball and independent bound are fixed once and for all before
+the return estimates; the latter contains the second-touchdown tuples
+of \eqref{prep:complete-second-cone} and $\Kcal$ in its interior.
+The dependent acceleration is recovered from the physical inverse.
+
+\begin{theorem}[Admissibility of the returned state]
+\label{thm:detuned-output-admission}
+With these choices, the common radii, output bounds
+\eqref{loc:admission}, signs and inverse branch in
+Proposition~\ref{loc:return} hold, including its inner and outer
+domain qualifications and order of radius choices. The closing
+margin is $r_0W^+-\zeta^+>\gamma$, and the dependent acceleration
+is uniformly bounded as in Lemma~\ref{ret:inverse}.
+\end{theorem}
+\begin{proof}
+The compact classes, independent bound $M_{\rm in}$,
+$\Kcal,\Omega,\Omega_1,A,C_0,\gamma$ and inverse neighborhood are fixed.
+Lemma~\ref{ret:inverse} gives a finite $M_B$ depending on
+$M_{\rm in},A$ and the compact model classes. Choose a physical cone
+containing these independent and dependent bounds, and then obtain
+the contact, free and reference constants and a common
+$\delta_{\rm call}$. Choose any sufficiently small
+$\delta_{\rm g}<\delta_{\rm call}$ within the limiting domain, with
+$\delta_{\rm g}^{1/3}\sup_{\Kcal}(|\eta_U|+|\eta_W|)\le1/4$.
+Theorem~\ref{thm:detuned-value-bridge} and
+Proposition~\ref{prop:limiting-factorization} prove the estimate in
+\eqref{loc:admission}. Its error tends to zero uniformly because
+$e\le C_0\delta^{1/2}$ and $r/\delta\le A\delta^{1/3}$.
+Choose $\delta_{\rm reset}$ last, making this error less than
+$d_\Kcal/2$ and ensuring, for the common scale bounds
+$c_D\delta^{3/4}\le D\le C_D\delta^{3/4}$,
+$c_D\delta_{\rm reset}^{-1/4}>1$ and
+$C_D\delta_{\rm reset}^{3/4}<\delta_{\rm g}$.
+Then $D>\delta$, so the compliance and offset conditions propagate.
+The ratio bounds give $U^{r,+},W^+\ge3/4$ and hence the velocity
+signs. Since $\zeta^+<0$,
+$r_0W^+-\zeta^+\ge(3/4)\min r_0>\gamma$.
+The same inverse applies, and Lemma~\ref{ret:inverse} recovers its
+dependent coordinate on the enlarged output scale. The label and
+physical parameters were fixed throughout.
+\end{proof}
+
+The two smallness conditions in \eqref{loc:domain} have different
+roles: $\eps\le C_0\delta^2$ controls compliance, while
+$r\le A\delta^{4/3}$ bounds the dependent acceleration in the
+physical inverse. The first contact uses the broader range
+$\delta=\sqrt\eps$, $r=k\delta$ of the contact theorem; the two
+preparatory flights bring the same trajectory into \eqref{loc:domain}.

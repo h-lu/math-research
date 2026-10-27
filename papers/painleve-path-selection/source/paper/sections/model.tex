@@ -1,0 +1,240 @@
+\section{The physical model and prescribed initial data}
+\label{sec:model}
+
+\subsection{An independent belt parameter}
+The oscillator consists of two point masses joined by a rigid link.
+The upper mass moves vertically against a spring and damper; the lower
+mass can contact a belt moving to the left. In the nondimensional
+coordinates of \cite[Section~6.1]{NVC2018}, both masses and the link
+length are one. The link angle $\phi$ is measured from the downward
+vertical, and the upper mass is at height $1+\psi$ above the undeformed
+belt. A torsional spring acts on $\phi$. The observables $y$ and $u$
+below are the lower mass's height and its slip relative to the belt.
+Let $q=(\phi,\psi)^T$, $\omega=\dot\phi$, and define
+\begin{equation}
+ y=\psi+1-\cos\phi,\qquad v=\dot y,
+ \qquad u=\omega\cos\phi+U_b,\qquad U_b=3/5+\eta.
+ \label{eq:bd-observables}
+\end{equation}
+The belt detuning $\eta$ is independent of the mechanical parameters.
+We use the critical mechanical family of \cite[Section~6]{NVC2018}:
+\begin{gather}
+ M(\phi)\ddot q=f_{\beta,\kappa}(q,\dot q)
+                  +Q_N(\phi)\lambda_N+Q_T(\phi)\lambda_T,
+ \label{eq:bd-mechanics}\\
+ M=\begin{pmatrix}1&\sin\phi\\\sin\phi&2\end{pmatrix},
+ \quad Q_N=\binom{\sin\phi}{1},\quad Q_T=\binom{\cos\phi}{0},
+ \nonumber\\
+ f_{\beta,\kappa}=
+ \binom{-(\phi-\phi_0)-\sin\phi}
+       {-\kappa\psi-c_\psi\dot\psi-2-\cos\phi\,\omega^2},
+ \nonumber\\
+ \mu=25/12,\quad c_\psi=25(18-7\beta)/108,
+ \quad\phi_0=\phi^*+49/20-7\beta/12-9\kappa/50,
+ \nonumber\\
+ \quad (\cos\phi^*,\sin\phi^*)=(3/5,4/5).
+ \label{eq:bd-critical-family}
+\end{gather}
+The prescribed completion is
+\begin{equation}
+ \eps\dot z=-z-\eps^2\lambda_N,\qquad
+ \lambda_N=\eps^{-2}(z-y)_+,\qquad
+ \lambda_T=-\mu\Phi_\theta(u/\eps)\lambda_N.
+ \label{eq:bd-completion}
+\end{equation}
+Thus contact is determined by $g=y-z$, not by $y$ alone.
+In flight $z(t)=z_r e^{-(t-t_r)/\eps}$, and
+$\dot g=v+z/\eps$ at release. Every release below is the first
+zero of the active normal force on the stated continuous contact
+passage, and every touchdown is the first zero of the subsequent
+positive free gap. Initial capture may contain other contacts.
+
+Write $X=(\phi,y,\omega,v)$ and eliminate
+$\psi=y-1+\cos\phi$, $\dot\psi=v-\sin\phi\,\omega$.
+The free mechanical vector field and saturated contact field per unit
+normal force are
+\begin{equation}
+ F_{\rm free}=(\omega,v,(M^{-1}f)_1,b),\qquad
+ Q_{\rm sat}=(0,0,(M^{-1}(Q_N-\mu Q_T))_1,p),
+ \label{eq:bd-fields}
+\end{equation}
+where
+\begin{equation}
+ b=Q_N^TM^{-1}f+\cos\phi\,\omega^2,\qquad
+ a_T=Q_T^TM^{-1}f-\sin\phi\,\omega^2,
+ \qquad p=C-\mu B.
+ \label{eq:bd-free-accelerations}
+\end{equation}
+The exact contact equations for the observables are
+\begin{equation}
+ \dot v=b+(C-\mu B\Phi_\theta(u/\eps))\lambda_N,
+ \qquad
+ \dot u=a_T+(B-\mu A\Phi_\theta(u/\eps))\lambda_N.
+ \label{eq:bd-contact-accelerations}
+\end{equation}
+Direct inversion of $M$ gives
+\begin{equation}
+ A=\frac{2\cos^2\phi}{1+\cos^2\phi},\qquad
+ B=\frac{\sin\phi\cos\phi}{1+\cos^2\phi},\qquad
+ C=\frac1{1+\cos^2\phi},\qquad
+ D=C-B^2/A=\frac12.
+ \label{eq:bd-delassus}
+\end{equation}
+In particular the coefficient after eliminating tangential force is
+positive even when the saturated coefficient $p$ is zero or negative.
+The chart is restricted throughout so that $\cos\phi$ has a common
+positive lower bound.
+Since $p=C(\phi)-\mu B(\phi)$, the rate
+$p_\phi(G)=a$ below permits a further common restriction with
+$p_\phi>0$. Each observation section $p=-as$ then fixes one angle
+$\phi_s$ on this branch.
+
+\subsection{Critical rates and the working box}
+At $G=(\phi^*,0,-1,0)$ in the mechanical coordinates,
+$p=b=0$ and the tuned slip is zero. The detuned slip at $G$ is
+$\eta$. Substitution in \eqref{eq:bd-fields}--\eqref{eq:bd-delassus}
+gives
+\begin{gather}
+ A_G=9/17,\quad B_G=6/17,\quad C_G=25/34,\quad
+ h:=\mu A_G-B_G=3/4,\qquad a:=175/408,
+ \nonumber\\
+ F_{\rm free}p(G)=-a,\quad F_{\rm free}b(G)=-c_\lambda,
+ \quad a_T(G)=d_\lambda,\quad Q_{\rm sat}b(G)=a\beta,
+ \label{eq:bd-critical-rates}\\
+ c_\lambda=\frac{126765+61425\beta-30625\beta^2
+                    -(9450\beta+8262)\kappa}{55080},\qquad
+ d_\lambda=\frac{495-175\beta-54\kappa}{180},
+ \nonumber\\
+ \ell:=\lambda_*=\frac{c_\lambda}{a(\beta-1)},\qquad
+ g_*:=d_\lambda-h\ell
+       =\frac{55825\beta+17712\kappa-213390}{31500(\beta-1)}.
+ \label{eq:bd-incoming-rates}
+\end{gather}
+Here $\lambda=(\beta,\kappa)$; we also write $c=c_\lambda$
+and $\gamma=-g_*>0$. These formulas can be checked by differentiating the
+explicit fields in \eqref{eq:bd-fields}. At $G$ the added generalized
+acceleration is $(-5/4,1)$ in $(\ddot\phi,\ddot\psi)$, so its
+$(\dot\omega,\dot v)$ components are $(-5/4,0)$, and
+\begin{equation}
+ p_\phi(G)=a,\qquad
+ \det D_{(\phi,\omega)}(p,b)(G)=-6125\beta/41616.
+ \label{eq:bd-chart-determinant}
+\end{equation}
+Thus $(p,b,y,v)$ are analytic coordinates on a common neighborhood;
+write $\Xi(p,b,y,v)$ for their inverse mechanical chart.
+
+Fix a sufficiently small closed box $\Lambda$ about $(7/3,0)$ in
+the half-plane $\kappa\ge0$, with
+\begin{equation}
+ 2<\beta_-\le\beta\le\beta_+<5/2,
+ \qquad c,d_\lambda,\ell,-g_*>0,
+ \qquad |\det D_{(\phi,\omega)}(p,b)(G)|>0,
+ \label{eq:bd-box}
+\end{equation}
+all with common strict margins. Uniform statements use this compact
+box; its interior is relative to $\kappa\ge0$.
+The upper bound $\beta_+<5/2$ records the scope of the present proof.
+The coefficient $\beta$ is also the exponent in the incoming weak
+trace, as the scalar equation in Section~\ref{sec:entry}
+shows. We use the prescribed compact range \eqref{eq:bd-box} to
+construct the weak curve and obtain the common forcing bound
+\eqref{ent:forcing-domination} in the upstream normal-energy and
+weak-transport estimates. The strict sign and chart margins fix the
+event orientation and the common coordinate neighborhood.
+
+\subsection{Profiles and physical preparation}
+Let $\Theta$ be compact, and let $\theta\mapsto\Phi_\theta$ be
+continuous in the metric
+\begin{equation}
+ d_{\bar\alpha}(\Phi,\Psi)=
+ \max_{0\le j\le4}\sup_{q\in\R}
+ e^{\bar\alpha|q|}|\partial_q^j(\Phi-\Psi)(q)|,
+ \qquad 0<\alpha<\bar\alpha<2.
+ \label{eq:bd-profile-metric}
+\end{equation}
+Its image is compact in the affine space consisting of $\tanh$ plus
+functions with finite weighted norm. Fix a compact
+$I_s=[s_-,s_+]\Subset(-1,1)$ containing $B/(\mu A)$ on the
+working mechanical chart. The following bounds hold with common
+constants $0<M_{\rm sl}<Q_\Phi$, $m_\Phi,\varkappa_{\rm sl},C_\Phi>0$:
+\begin{enumerate}[label=\textup{(F\arabic*)}]
+\item $\Phi_\theta$ is strictly increasing, $\Phi_\theta(0)=0$,
+ has values in $(-1,1)$ and limits $\pm1$ at $\pm\infty$.
+\item $\Phi_\theta([-Q_\Phi,Q_\Phi])\supset I_s$,
+ $\Phi_\theta'\ge m_\Phi$ there, and its first four derivatives
+ are uniformly bounded there.
+\item $\Phi_\theta(M_{\rm sl})\ge s_++\varkappa_{\rm sl}$ and
+ $\Phi_\theta(-M_{\rm sl})\le s_--\varkappa_{\rm sl}$.
+\item For $q\ge M_{\rm sl}$,
+ \[
+ 1-\Phi_\theta(q)+\sum_{j=1}^4q^j|\Phi_\theta^{(j)}(q)|
+                 \le C_\Phi e^{-\alpha q},
+ \]
+ with the reflected bound on the negative tail.
+\end{enumerate}
+The slip threshold $M_{\rm sl}$ is fixed with the profile class and
+mechanical chart.
+Nonodd profiles are allowed. Each profile is fixed before taking
+the stiff limit. The family $\tanh(\theta q)$, $1\le\theta\le5/4$,
+is an example: all derivatives through order four are bounded by
+$C(1+|q|^4)e^{-2|q|}$ on the tails, as are the label derivatives
+up to an extra polynomial factor. This proves both (F4) and
+continuity in \eqref{eq:bd-profile-metric}; monotonicity gives the
+remaining conditions after the strip is chosen large enough.
+
+Choose a small fixed $p_0>0$ and a continuous compact family of
+saturated rigid data $(\phi_\nu,\omega_\nu)$ on $p=p_0$.
+Their positive-slip rigid orbits reach $G$ and have traces
+\begin{equation}
+ b_{{\rm rig},\nu}(p)=\bar b_\lambda(p)+C_1(\lambda,\nu)p^\beta
+                 +\mathcal R_C(p),\qquad
+ |\partial_p^j\mathcal R_C(p)|\le Cp^{\beta+1-j},\quad 0\le j\le3,
+ \label{eq:bd-prescribed-trace}
+\end{equation}
+where $\bar b_\lambda(p)=-\ell p+O(p^2)$ is the analytic weak
+curve constructed in Section~\ref{sec:entry}.
+On each closed rigid subarc before $G$, the force $-b/p$ and tuned
+slip have common positive lower bounds. The rigid trace is unchanged
+by detuning: $U_b$ enters only the slip observable and the profile.
+
+For a fixed fast triple $\mathbf n=(Y_0,V_0,Z_0)$ in any prescribed
+compact set, the complete physical initial state is
+\begin{equation}
+ \cX_\eps(0;\lambda,\theta,\nu,\mathbf n)
+       =(\phi_\nu,\eps^2Y_0,\omega_\nu,\eps V_0,\eps^2Z_0)
+ \label{eq:bd-physical-initial-data}
+\end{equation}
+in coordinates $(\phi,y,\omega,v,z)$.
+The slow datum and fast triple stay fixed as $\eps$ varies.
+The initial state need not be in contact. For $\mathbf n=0$ it is
+the same full physical state for every compliance and profile.
+No later release or touchdown state is independently prepared.
+The class is nonempty: the analytic weak curve supplies a rigid
+datum at $p_0$, and a compact interval of nearby weak coefficients
+supplies more. The scalar construction in Section~\ref{sec:entry} gives
+\eqref{eq:bd-prescribed-trace}. The positive limits of $-b/p$ and
+$u_0/p$ then give the closed-arc margins after the chart is reduced.
+
+\paragraph{Standing convention.}
+Fix the compact profile and physical-preparation classes above and
+$k\in I=[k_-,k_+]\Subset(0,\infty)$; the nominal mechanical box
+may then be reduced jointly for these same classes. All error
+estimates and event margins are uniform on the resulting compact
+label classes. Unless explicitly stated otherwise, mechanical
+parameters and each sufficiently small positive observation section
+are fixed before $\eps\downarrow0$. The common graph, return and
+section cutoffs are chosen once before these targets. Uniform
+selection is asserted only where stated; each incoming datum keeps
+its own prescribed rigid arc.
+
+The complete label is $\mathfrak l=(\lambda,k,\theta,\nu,\mathbf n)$.
+We use $\cX=(\phi,y,\omega,v,z)$ for the full physical state and
+$X=(\phi,y,\omega,v)$ for its mechanical part. In a five-state norm,
+$G$ includes its zero memory coordinate. Put
+$r=k\sqrt\eps=-\eta$. The actual belt slip is
+$u_r=u=\omega\cos\phi+U_*-r$; the critical-speed slip is
+$u_0=\omega\cos\phi+U_*=u_r+r$.
+The coefficient $k$ and $r$ remain constant along each trajectory;
+the physical belt speed follows $U_b=U_*-k\sqrt\eps$ as compliance
+varies. The slow datum and scaled fast triple $\mathbf n$ remain fixed;
+the physical initial state follows \eqref{eq:bd-physical-initial-data}.

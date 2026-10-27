@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "slug": "mechanical-renewal-log2",
+  "title": "Mechanical renewal and D²(ln D)² lower bounds for Hilbert numbers",
+  "authors": [
+    "Haibo Lu"
+  ],
+  "version": "2026-10-24",
+  "abstract": "A squared-logarithmic all-degree lower bound for hyperbolic limit cycles. No cubed-logarithmic lower bound is asserted.",
+  "topics": [
+    "Hilbert numbers",
+    "polynomial vector fields"
+  ],
+  "doi": "10.5281/zenodo.23603842",
+  "rights": {
+    "license": null,
+    "note": "No new license is granted by this collection."
+  },
+  "validation": {
+    "scope": "Finite exact integer and degree-budget checks passed for n=2..20000, explicit monomial enumeration through 256, and replication degrees 0..20000. They do not certify the analytic realization theorem.",
+    "formal_verification": false
+  },
+  "artifacts": [
+    {
+      "path": "paper.pdf",
+      "role": "author-manuscript",
+      "sha256": "5eea3b245a109435b4298f76bede1c91b7c23179857af717b926b6e9f0c7f984"
+    },
+    {
+      "path": "source/Makefile",
+      "role": "author-source",
+      "sha256": "40df77c68bbc6f5027e66d1de72f2674d464a43df4dcf5dee7bd03eba38a0c45"
+    },
+    {
+      "path": "source/README.md",
+      "role": "author-source",
+      "sha256": "404532b7ae756dbe31fd687ca1e25796008615a9dfb451c59d370e3374863772"
+    },
+    {
+      "path": "source/counting.tex",
+      "role": "author-source",
+      "sha256": "c13f7b4f684a3812c503151de04047d966b32e28ebbfadd4d9cf6761de40bf10"
+    },
+    {
+      "path": "source/main.tex",
+      "role": "author-source",
+      "sha256": "8f9d2038204dc13bb1077b612a3ad27c0e790b6ca78329340b3a01ac9a03639f"
+    },
+    {
+      "path": "source/mechanical-proof.tex",
+      "role": "author-source",
+      "sha256": "7b87652b0e946c5e595568affb48564a521383bf448ff0ad1f74a659d3665c1e"
+    },
+    {
+      "path": "source/prelim.tex",
+      "role": "author-source",
+      "sha256": "acc7686c3d13b51ec07be32167f3cece7c3fb54638e4c3827a22eeb9b6b80607"
+    },
+    {
+      "path": "source/references.bib",
+      "role": "author-source",
+      "sha256": "ec2ef874e5bf2367bcce4d150f21e26491a615078e24fa96b5ebf97eee1e2025"
+    },
+    {
+      "path": "source/renewal-conjecture.tex",
+      "role": "author-source",
+      "sha256": "62e7610e5aa5dcd9c8553b36b04f3181845f1d558fbb2bb9ebd0a4709495aad9"
+    },
+    {
+      "path": "source/replication.tex",
+      "role": "author-source",
+      "sha256": "ff117755745e2eada932f9eda3ca998fa1115c7c0167312405cc13b535377998"
+    },
+    {
+      "path": "source/repro/README.md",
+      "role": "reproducibility",
+      "sha256": "855e28e4d573735e5747fc9fdb4c8a600053c49754eb2f939cde9946ba005a5e"
+    },
+    {
+      "path": "source/repro/comparison.csv",
+      "role": "reproducibility",
+      "sha256": "22b7576386eb4cfe3fdb00bba148f450b55b55020a63bc0933f8b757962955f0"
+    },
+    {
+      "path": "source/repro/data.json",
+      "role": "reproducibility",
+      "sha256": "b5d18286199bc7bf1992b32b8790cadf253a3d0f6c3eda23d32d8079c1afa7f5"
+    },
+    {
+      "path": "source/repro/verify.py",
+      "role": "reproducibility",
+      "sha256": "b32446c72e479b4f484fa3e86ff9c8a8acfa732f8d75a1bfc4653ff92ad2764a"
+    }
+  ]
+}

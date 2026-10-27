@@ -1,0 +1,63 @@
+% MIXED: schematic base positions with exact threshold and window relations.
+% The horizontal coordinate is the actual base at one common event index.
+\begin{figure}[tbp]
+\centering
+\begin{tikzpicture}[
+ x=1cm,y=1cm,font=\small,
+ every node/.style={inner sep=1.5pt},
+ arrow/.style={-{Latex[length=1.6mm,width=1.1mm]},line width=.5pt},
+ brace/.style={decorate,decoration={brace,mirror,amplitude=3pt},
+                line width=.45pt}
+]
+ \node[anchor=west,font=\small\bfseries] at (0,4.80)
+   {Residual phase along the threshold sequence, $j=m+3$};
+ \node at (7.15,4.18)
+   {$\displaystyle \mathcal S_\lambda(\delta_j)-\mathcal S_\lambda(s)
+    =\rho_c^m\{\chi-\chi_*+r_{\mathfrak a}(\varepsilon_m)\}
+       +O(\varepsilon_m^{3/32})$};
+ \node at (7.15,3.56)
+   {$\displaystyle \rho_c^m\sim
+       \frac{\mathcal S_\lambda(s)}{A_0L},\qquad
+       A_0=\frac9{32},\quad\rho_c=\frac34,\quad
+       L=\log(1/\varepsilon_m)$};
+ \node[align=center] at (2.30,2.80)
+   {$\chi>\chi_*$\\release: $N_s=j+1$};
+ \node[align=center] at (12.00,2.80)
+   {$\chi<\chi_*$\\admission: $N_s=j$};
+ \fill[black!13] (6.60,1.70) rectangle (7.35,2.12);
+ \draw[arrow] (.40,1.91) -- (14.10,1.91)
+   node[right] {$\delta_j$};
+ \draw[densely dotted,line width=.5pt] (6.60,1.58) -- (6.60,2.22);
+ \draw[line width=.6pt] (7.35,1.58) -- (7.35,2.22);
+ \node[above right] at (7.35,2.13) {$s$};
+ \fill (2.30,1.91) circle[radius=1.9pt];
+ \fill (12.00,1.91) circle[radius=1.9pt];
+ \draw[brace] (2.30,1.44) -- (7.35,1.44);
+ \draw[brace] (7.35,1.44) -- (12.00,1.44);
+ \node at (4.36,1.07) {$\Theta_s(L^{-1})$};
+ \node at (9.765,1.07) {$\Theta_s(L^{-1})$};
+ \node[align=center] at (6.975,.79)
+   {$O_s(\varepsilon_m)$\\contact window};
+ \node[align=center] at (2.30,.16)
+   {$(s,2)$\\$\mathcal W_{\lambda,\nu,s}(s,2)$};
+ \node[align=center] at (12.00,.16)
+   {$(d_*,3)$\\$\mathcal W_{\lambda,\nu,s}(s,0)$};
+ \node at (7.15,-.65)
+   {$\varepsilon_m\ll L^{-1}\ll1,
+       \qquad O(\varepsilon_m^{3/32})=o(L^{-1})$};
+ \node[align=center] at (7.15,-1.22)
+   {At $\chi=\chi_*$ the leading comparison does not determine the stopping phase.};
+\end{tikzpicture}
+\caption{Residual phase versus contact resolution, with $\lambda,s$
+fixed, and $\chi=\chi_\lambda(\mathfrak a)$.
+The exact phase decreases with the base, giving opposite signs
+for the phase and base gaps. On compact label subclasses separated
+from $\chi_*$ by a fixed margin, the base gaps have order $L^{-1}$,
+larger than both the comparison error and the necessary contact-stop
+window $0<s-\delta_j\le C_s\varepsilon_m$.
+The displayed pairs are the actual terminal-pair limits.
+The admission-side touchdown is read on the original trajectory
+continued past observation. Positions and widths are schematic;
+no label attaining $\chi_*$ is assumed.}
+\label{fig:selection-mechanism}
+\end{figure}

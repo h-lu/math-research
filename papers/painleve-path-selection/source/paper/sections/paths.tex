@@ -1,0 +1,503 @@
+\section{Actual realization and complete stopped paths}
+\label{sec:growth-realization}
+\label{sec:physical-paths}
+
+The comparison in Section~\ref{sec:graph} controls actual touchdown
+states and the first physical section. We now recover the whole
+motion between those events. On fixed positive input bands we pair
+all contact and flight prefixes. A continuous scan of one unchanged
+contact index realizes its stopping phase; matching finitely many
+last returns and controlling the entire earlier tail then gives the
+complete path.
+
+\subsection{Ordered comparison on every positive-scale compact set}
+
+The realization argument scans $[s/2,2s]$, including inputs above
+the observation scale. We therefore compare whole returns on any
+positive-scale compact interval where the return estimates apply.
+
+\begin{lemma}[A whole return and all its prefixes]
+\label{path:ordered-return}
+Let $K\Subset(0,\delta_{\rm reset})$ lie below the inner return
+cutoffs. Consider actual inputs with scales $d\in K$, generated within
+the return domains, and with
+complete same-base defect
+$\kappa=|\xi^r-\Gamma_\lambda(d)|+
+|\eta_B-\mathcal B_\lambda(d)|\to0$.  There is an increasing
+homeomorphism $h:[0,3]\to[t_0,t_1]$ for their actual return, with
+\begin{equation}
+ \begin{gathered}
+ h(0)=t_0,\quad h(1)=t_{\rm sl},\quad h(2)=t_L,\quad h(3)=t_1,
+ \\
+ \sup_{\alpha\in[0,3]}
+ |\cX_\eps(h(\alpha))-\cC_{\lambda,d}(\alpha)|
+                  \le C_K(\eps+r+\kappa).
+ \end{gathered}
+ \label{path:ordered-estimate}
+\end{equation}
+Here $t_{\rm sl}$ is the actual first descending $u_r/\eps=M_{\rm sl}$ event,
+$t_L$ the actual first release and $t_1$ the next first touchdown.
+On compression $h$ is fixed by
+\begin{equation}
+ J(h(\alpha))=\alpha J_{\rm sl},
+ \quad J(t)=\int_{t_0}^t\lambda_N\,\dd t,
+ \quad J_{\rm sl}=J(t_{\rm sl}),\qquad 0\le\alpha\le1;
+ \label{path:impulse-clock}
+\end{equation}
+on release and flight it is
+\begin{equation}
+ h(1+q)=t_{\rm sl}+q(t_L-t_{\rm sl}),\qquad
+ h(2+q)=t_L+q(t_1-t_L),\quad 0\le q\le1.
+ \label{path:event-fractions}
+\end{equation}
+The same estimate pairs every stopped prefix in both directions.
+Moreover, in the normal coordinates $y,z=\eps d^{3/2}(Y,Z)$,
+$v=d^{3/2}V$, at the actual first release,
+\begin{equation}
+ \left|v_L-d^{3/2}V_d^{\rm n}(R_d)\right|
+ +\left|z_L/\eps-d^{3/2}Z_d(R_d)\right|
+                         \le C_K(\eps+r+\kappa).
+ \label{path:normalized-release}
+\end{equation}
+The flight durations have a common positive lower bound on $K$.
+\end{lemma}
+
+\begin{proof}
+Write $\chi=\eps+r+\kappa$.  On the fixed positive compact set,
+$e=\eps/d^{3/2}=O_K(\eps)$ and all weighted normal estimates
+give unweighted estimates with constants depending on $K$.
+By \eqref{path:contact-tube}, the contact lasts $O_K(\eps)$,
+and its coefficients have bounded drift.  For $t\le t_{\rm sl}$, put
+$f_\theta(w)=1-\Phi_\theta(w)$ and
+$\mathcal H_\theta(w)=\int_{M_{\rm sl}}^w f_\theta(q)\,\dd q$.
+The profile tail gives $0\le\mathcal H_\theta\le C$.
+The fixed slip threshold of Appendix~\ref{sec:contact} gives
+$H_\theta(u_r/\eps,X)\ge\kappa_H>0$ on this interval, and
+$\dot u_r=a_T-H_\theta(u_r/\eps,X)\lambda_N$.
+Since $J(t)\le C_K$,
+the identity for $\eps\mathcal H_\theta(u_r/\eps)$ implies on
+every prefix
+\begin{equation}
+ 0\le\int_{t_0}^t f_\theta(u_r/\eps)\lambda_N\,\dd t
+ \le\kappa_H^{-1}\left\{\int_{t_0}^t f_\theta(u_r/\eps)a_T\,\dd t
+             -\eps[\mathcal H_\theta(u_r/\eps)]_{t_0}^t\right\}
+ \le C_K\eps.
+ \label{path:tail-impulse}
+\end{equation}
+The two exact velocity rows consequently give, simultaneously on
+all compression prefixes,
+\begin{equation}
+ u_r(t)=u_r(t_0)-h_dJ(t)+O_K(\eps),\qquad
+ v(t)=v(t_0)-adJ(t)+O_K(\eps).
+ \label{path:impulse-lines}
+\end{equation}
+Coefficient drifts multiply a bounded impulse, while the free-field
+integrals and the unsaturated terms are controlled as above.  At
+$t_{\rm sl}$, $u_r=\eps M_{\rm sl}$, so
+$J_{\rm sl}=u_r(t_0)/h_d+O_K(\eps)\ge j_K>0$.
+The force is positive on $(t_0,t_L)$; hence $J/J_{\rm sl}$ is continuous
+and strictly increasing through compression.  This proves that
+\eqref{path:impulse-clock} is a homeomorphism and, by
+\eqref{path:impulse-lines}, gives precisely the linear impulse
+parameter of $\cC_{\lambda,d}|_{[0,1]}$.  Reconstructing
+$\omega=(u_r+r-U_*)/\cos\phi$ and using
+$|y|+|z|\le C_K\eps$ proves \eqref{path:ordered-estimate} there.
+
+From the actual $M_{\rm sl}$ event use elapsed normal time
+$\tau=(t-t_{\rm sl})/\eps$.  The full inherited-state estimate
+\eqref{con:M-admission} first compares to the inherited reference
+for that actual normalized touchdown input.  Move this reference to the graph
+input afterwards.  On $K$, its input sensitivity and
+\eqref{con:release-comparison} give
+\begin{equation}
+ |(Y,V,Z)(\tau)-N_d(\tau)|+
+ |L_\eps(\tau)-L_d(\tau)|+
+ |L_\eps'(\tau)-L_d'(\tau)|\le C_K\chi
+ \label{path:normal-prefix}
+\end{equation}
+on every stopped release prefix.  The positive-force interval and
+strict first-root bracket yield
+\[
+ R_\eps=(t_L-t_{\rm sl})/\eps,
+ \qquad |R_\eps-R_d|\le C_K\chi.
+\]
+For $1\le\alpha\le2$, compare at actual time
+$(\alpha-1)R_\eps$ and then move only the linear reference to
+$(\alpha-1)R_d$.  The strip bound gives $u_0=r+O_K(\eps)$,
+and the remaining physical coordinates follow from the chart and
+\eqref{path:normal-prefix}.  This proves the release portion of
+\eqref{path:ordered-estimate}, including its moving endpoint,
+and also \eqref{path:normalized-release}.  In particular
+$|z_L|\le C_K\eps$.  The opening margins give
+$\min(v_L,v_L+z_L/\eps)\ge v_K>0$.
+
+On the analytic free extensions the mechanical field is smooth and
+independent of belt translation.  Gronwall, on their common compact
+time interval, compares the actual-release and graph-release flows
+with error $C_K\chi$.  Their exact effective gap is
+\begin{equation}
+ g(\ell)=z_L(1-e^{-\ell/\eps})+
+                  \int_0^\ell v(q)\,\dd q.
+ \label{path:exact-free-gap}
+\end{equation}
+To exclude an additional root next to release, use $|b|\le B_K$:
+\[
+ g'(\ell)\ge\min(v_L,v_L+z_L/\eps)-B_K\ell>0
+\]
+on a fixed short opening interval.  Thereafter the reference gap
+has a positive minimum away from its terminal root.  In a common
+terminal bracket its velocity has a negative margin, and the memory
+derivative is uniformly negligible because that bracket is bounded
+away from release.  The actual gap has opposite endpoint signs
+and negative derivative there.  Its first subsequent zero therefore
+is the actual touchdown, with
+$|T_\eps-T_d|\le C_K\chi$.  This also gives a positive common
+lower bound for $T_\eps$.  Moving the reference time from
+$qT_\eps$ to $qT_d$ proves the flight portion of
+\eqref{path:ordered-estimate}.  The three clocks agree at their
+joins and are strictly increasing.  Restricting the same pairing
+to any prefix proves both image inclusions as well as its ordered
+comparison.
+\end{proof}
+
+Apply this lemma to the last input in \eqref{path:last-input} and
+write $\alpha_\eps=h_\eps^{-1}(t_s)$.  Compactness gives
+subsequences $(d_\eps,\alpha_\eps)\to(d,\alpha)$, and the actual
+section equation gives
+\begin{equation}
+ p(\cC_{\lambda,d}(\alpha))=-as.
+ \label{path:actual-stop-equation}
+\end{equation}
+The contact has $p=-ad$, and the free part decreases strictly from
+$-ad$ to $-aF_\lambda(d)$.  Its complete solution set is therefore
+\begin{equation}
+ \mathcal A_s=
+ \{(d,j_s(d)):F_\lambda^{-1}(s)\le d\le s\}
+                   \cup(\{s\}\times[0,2]).
+ \label{path:terminal-domain}
+\end{equation}
+This includes a crossing at the next touchdown even if the varying
+reference curve has not itself crossed before its own endpoint.
+Every terminal prefix converges in order, since
+\begin{equation}
+ \sup_{q\in[0,1]}
+ |\cX_\eps(h_\eps(q\alpha_\eps))
+                       -\cC_{\lambda,d}(q\alpha)|\longrightarrow0.
+ \label{path:terminal-prefix}
+\end{equation}
+For $\alpha=0$ the limiting piece is constant, as allowed by the
+completed ordered topology.
+
+\subsection{Actual realization of the terminal domain}
+
+Reduce $s_0$ once more so that $2s_0$ lies below all inner input
+cutoffs and, for $0<s\le s_0$,
+\begin{equation}
+ 2s<\Delta,\qquad (2s/c_D)^{4/3}<s/3,\qquad
+ c_D(s/2)^{3/4}>s.
+ \label{path:scan-margins}
+\end{equation}
+
+\begin{lemma}[A continuous sweep of one actual contact]
+\label{path:continuous-sweep}
+For each fixed complete label and every sufficiently large $j$
+there is an interval $J_j=[a_j,c_j]$, $c_j\to0$, on which the same
+indexed actual touchdown, contact and next return exist continuously,
+and
+\begin{equation}
+ \delta_j(a_j)=s/2,\qquad\delta_j(c_j)=2s,
+ \qquad s/2\le\delta_j(\eps)\le2s\quad(\eps\in J_j).
+ \label{path:scan-band}
+\end{equation}
+Every earlier controlled touchdown is below $s/3$, and the next
+touchdown is above $s$.  The ordered comparison
+\eqref{path:ordered-estimate} holds uniformly on $J_j$ with error
+tending to zero as $j\to\infty$.
+\end{lemma}
+
+\begin{proof}
+At positive compliance the positive-part vector field is locally
+Lipschitz and depends continuously on compliance.  The prescribed
+initial data are continuous.  The strict opening, closing, first
+$M_{\rm sl}$ and first-release brackets consequently give continuous
+dependence of any fixed finite sequence of the actual events.
+The needed local constants are only on sets bounded away from zero
+in compliance and input scale.  Positive gap between successive
+first events prevents a change of the indexed passage.
+
+Fix a common $\eps_*>0$ so that the original entrance and its
+admission hold for $0<\eps<\eps_*$. For fixed $j$, the entrance
+and growth upper bound imply $\delta_j(\eps)\to0$; all preceding
+inputs eventually satisfy the return hypotheses. Let $O_j\subset(0,\eps_*)$ be the
+open set on which the events through $\TD_j$ are generated with
+$\delta_n<\Delta$ for $3\le n<j$. Its component adjacent to zero
+is $(0,b_j)$. These components are nested. For every fixed
+$\eps_0\in(0,\eps_*)$, finite exit at that compliance excludes
+$\eps_0$ from $O_j$ for sufficiently large $j$; hence $b_j\to0$.
+In particular $b_j<\eps_*$ for all sufficiently large $j$, so its
+right endpoint is not the artificial end of the total compliance
+interval. At such a positive endpoint $b_j$, the finitely many scales
+have a positive lower bound and their full states and strict margins
+stay in compact sets.  Extend the finite events to that endpoint
+successively.  Inputs equal to $\Delta$ are allowed because
+$\Delta<\delta_{\rm reset}$.  No earlier input
+$\delta_n(b_j)$, $n\le j-2$, can equal $\Delta$: its next output
+would be larger than $\Delta$, contradicting the left limiting
+inequality for that next input.  If also
+$\delta_{j-1}(b_j)<\Delta$, all finite events and strict input
+inequalities would continue past $b_j$.  Hence
+\[
+ \delta_{j-1}(b_j)=\Delta,
+ \qquad \delta_j(b_j)>\Delta>2s.
+\]
+Only this endpoint call uses $\Delta$; its outer output is not
+used as a new input.
+
+Take the first compliance $c_j<b_j$ at which $\delta_j=2s$ and
+the last preceding compliance $a_j$ at which $\delta_j=s/2$.
+These first and last choices give \eqref{path:scan-band} on the
+whole interval by continuity. Its scanned input is
+itself below $\Delta$, so the return estimates apply to the next return throughout.
+The growth lower bound and \eqref{path:scan-margins} give
+\[
+ \delta_{j-1}\le(2s/c_D)^{4/3}<s/3,
+ \qquad\delta_{j+1}\ge c_D(s/2)^{3/4}>s.
+\]
+Earlier scales are smaller by strict growth.  Finally the budget
+gives $B_j\le q_{\rm g}^{j-3}B_3+C\Omega_\eps\to0$ uniformly on
+$J_j$; \eqref{path:dependent-row} recovers the full defect on
+$[s/2,2s]$.  Lemma~\ref{path:ordered-return} applies on this entire
+positive compact set, proving the last assertion.
+\end{proof}
+
+\begin{proposition}[Every terminal pair is realized]
+\label{path:realization}
+For every fixed complete label,
+\[
+ \Clust_{\eps\downarrow0}(d_\eps,\alpha_\eps)=\mathcal A_s.
+\]
+For fixed $\lambda,s$ and $d\in(d_*,s)$, $d_*=F_\lambda^{-1}(s)$,
+the explicit sequence
+\begin{equation}
+ \eps_m(d)=\exp\{-\tfrac{32}{9}(3/4)^{-m}
+                                  \mathcal S_\lambda(d)\}
+ \label{path:common-free-sequence}
+\end{equation}
+realizes $(d,j_s(d))$ uniformly on the fixed compact
+$(k,\theta,\nu,\mathbf n)$ class. Contact and endpoint
+realization is asserted for each fixed complete label and target;
+Proposition~\ref{sel:threshold-selection} supplies explicit common
+sequences for the two free endpoints.
+\end{proposition}
+
+\begin{proof}
+Fix first $\alpha\in(0,2]$.  On $J_j$ define $t_{j,\alpha}$
+by \eqref{path:impulse-clock} if $0<\alpha\le1$, and by the
+first formula of \eqref{path:event-fractions} if $1\le\alpha\le2$.
+These actual event times are continuous in compliance.  In the
+first case this follows from continuity of the flow and integral,
+and the strictly increasing inverse of $J/J_{\rm sl}$ with $J_{\rm sl}\ge j_s>0$.
+The two definitions agree at $\alpha=1$.  The continuous function
+\[
+ G_j(\eps)=p(\cX_\eps(t_{j,\alpha}(\eps)))+as
+\]
+has signs
+\begin{equation}
+ G_j(a_j)=as/2+O_s(a_j)>0,\qquad
+ G_j(c_j)=-as+O_s(c_j)<0
+ \label{path:phase-scan-signs}
+\end{equation}
+for large $j$.  Indeed contact takes $O_s(\eps)$ and $\dot p$ is
+bounded throughout its actual tube.  Take a root $\eps_j\in J_j$.
+Since $\alpha>0$, $t_{j,\alpha}>t_j$; strict decrease of $p$ gives
+$\delta_j<s$.  The predecessor and successor bounds in the sweep
+exclude both neighboring last-input indices: $N_s=j+1$, and the
+root is the first physical section time.  Moreover
+$\delta_j=s+O_s(\eps_j)\to s$ and the stopping phase equals
+$\alpha$ exactly.  The comparison lemma proves its whole terminal
+prefix limit.  By passing to later indices the compliances can be
+made strictly decreasing.
+
+For $\alpha_i\downarrow0$, choose sufficiently late terms from
+these positive-target sequences with decreasing compliance and
+all base and comparison errors below $1/i$.  This realizes $(s,0)$.
+Solving the equation directly at $\alpha=0$ would instead give
+$\delta_j=s$ and $N_s=j$, with the predecessor as last input;
+the positive-target diagonal avoids that change of index.
+
+For the free targets set $j=m+3$ at
+\eqref{path:common-free-sequence}. The exact graph chain started at
+the actual $\delta_3$ has phase at $j$ tending uniformly to
+$\mathcal S_\lambda(d)$, by \eqref{sel:uniform-entry-phase}.
+Its bases through $j$ are eventually below $3s/2$.
+Lemma~\ref{sel:sharp-phase} therefore gives the actual events through
+this index and
+\begin{equation}
+ \begin{gathered}
+ \mathcal S_\lambda(\delta_j)
+ =\mathcal S_\lambda(d)+\rho_c^m
+       \{\chi_\lambda(\mathfrak a)+r_{\mathfrak a}(\eps_m)\}
+             +O(\eps_m^{3/32})\longrightarrow\mathcal S_\lambda(d),\\
+ E_j=O(\eps_m^{3/32}).
+ \end{gathered}
+ \label{path:common-free-budget}
+\end{equation}
+Thus $\delta_j\to d$ and its complete independent state tends to
+the graph, uniformly. Equation~\eqref{path:dependent-row} recovers
+the dependent acceleration row. The preceding graph base tends to
+$F_\lambda^{-1}(d)<d_*$, so the preceding actual inputs stay a
+fixed distance below $s$.
+
+This output is separately checked as a new input: it is close to
+$d<s$, below the reset cutoff, retains the full cone and closing
+margins, and satisfies the propagated compliance and detuning
+inequalities.  Its actual next return has output tending to
+$F(d)>s$.  The preceding scales are below $d_*<s$, so
+$N_s=m+4$ and $d_\eps\to d$.  Every limit of its stopping phase
+satisfies \eqref{path:actual-stop-equation}.  Since $d<s$, the
+unique solution is the free parameter $j_s(d)$.  This proves
+uniform convergence: a failure of uniformity would give a varying
+compact-label subsequence and a different phase limit, contrary to
+the same equation and unique free root.  The complete tuple and
+ordered prefix comparisons are uniform for the same reason.
+For either free endpoint, a diagonal of interior targets and
+successively late terms realizes that endpoint with the complete
+label fixed.
+
+We have realized the entire vertical contact segment and
+free branch in \eqref{path:terminal-domain}.  The reverse inclusion
+was already proved by \eqref{path:actual-stop-equation}; this proves
+the stated equality of cluster sets.
+\end{proof}
+
+\subsection{Backward matching and the whole stopped path}
+
+\begin{lemma}[Every fixed number of last returns]
+\label{path:backward-match}
+If $(d_\eps,\alpha_\eps)\to(d,\alpha)$, then for every fixed
+$M$ and $0\le m\le M$,
+\begin{equation}
+ \delta_{N_s-1-m}\longrightarrow b_m=F_\lambda^{-m}(d).
+ \label{path:backward-bases}
+\end{equation}
+The complete normalized touchdown state tends to the graph at each $b_m$.
+The $M$ corresponding full actual returns converge in order to
+$\cC_{\lambda,b_m}$, and the last prefix converges to
+$\cC_{\lambda,d}|_{[0,\alpha]}$.
+\end{lemma}
+
+\begin{proof}
+The last scale is bounded below by $c_s$.  Repeated use of the
+growth upper bound gives a positive lower bound for each fixed
+finite number of predecessors, depending on $M,s$.  Their indices
+tend to infinity.  The graph budget and the dependent-row recovery
+therefore give complete graph attraction at each such input.
+Given the limit $b_{m-1}$, every limit $b$ of its predecessor
+satisfies $F_\lambda(b)=b_{m-1}$ by
+\eqref{path:same-base-output}.  Strict increase of $F_\lambda$
+makes this limit unique, equal to $F_\lambda^{-1}(b_{m-1})$.
+Compactness removes further extraction and proves
+\eqref{path:backward-bases}.  Lemma~\ref{path:ordered-return}
+applies to these finitely many positive-scale compact intervals;
+continuity in their bases gives the fixed reference returns.
+Equation~\eqref{path:terminal-prefix} treats the last prefix.
+\end{proof}
+
+\begin{proof}[Proof of Theorems~\ref{thm:whole} and~\ref{thm:common-free}]
+Lemma~\ref{path:first-section} gives the first transverse section,
+and Lemma~\ref{path:stopped-cascade} gives $N_s\to\infty$.
+Take a sequence with terminal pair tending to $(d,\alpha)$.
+The pair lies in $\mathcal A_s$ by
+\eqref{path:actual-stop-equation}.  Fix a depth $M$, and put
+$b_M=F^{-M}(d)$.  For sufficiently small compliance all actual
+inputs earlier than $\TD_{N_s-1-M}$ are at most $2b_M$.
+Their whole return segments are therefore in the same ball
+$G+B_{C(2b_M)^{3/4}}$, by
+\eqref{path:contact-tube}--\eqref{path:free-normal-tube}.
+This is a supremum over all early returns.  The analogous infinite
+reference tail in $L_d$ is in $G+B_{Cb_M^{3/4}}$.
+
+For a fixed incoming cutoff $\eta>0$,
+Lemma~\ref{path:first-section} aligns the incoming prefixes and puts
+the remaining original-to-$\TD_3$ curve in
+$G+B_{C\eta+o(1)}$.  Match in their order the entire intervening
+actual curve and the remaining incoming reference tail followed
+by the small infinite reference cascade.  Their common ball gives
+an error at most $C\eta+Cb_M^{3/4}+o(1)$, regardless of how many
+actual returns it contains.  Match the remaining $M$ full returns
+and final prefix by Lemma~\ref{path:backward-match}, and join
+their increasing pairings at the event endpoints.  Their finite
+maximum error tends to zero.  Constant limit pieces are handled by
+nondecreasing continuous surjections, approximated by increasing
+homeomorphisms as in the definition of the completed distance.
+Consequently
+\begin{equation}
+ \limsup_{\eps\to0}\dF(f_\eps,
+                  \cW_{\lambda,\nu,s}(d,\alpha))
+                         \le C\eta+Cb_M^{3/4}.
+ \label{path:whole-error}
+\end{equation}
+First let $\eps\to0$ at fixed $M,\eta$, and then let
+$\eta\downarrow0$, $M\to\infty$.  Inverse contraction gives
+$b_M\to0$, uniformly for $d\in[d_*,s]$ and the mechanical compact
+class.  This proves the whole ordered convergence.  Since
+$d_H\le\dF$, it also proves the two-sided Hausdorff convergence.
+
+The map $(d,\alpha)\mapsto\cW_{\lambda,\nu,s}(d,\alpha)$ is
+continuous on $\mathcal A_s$: for fixed $M$ use continuity of the
+finitely many last reference pieces and their terminal prefix,
+then bound both omitted tails uniformly by
+$C\sup_{d\in[d_*,s]}(F^{-M}(d))^{3/4}$.  Its image is compact.
+Every sequence tending to zero has a convergent terminal-pair
+subsequence, giving the upper cluster inclusion.  At a positive
+compliance limit, continuous dependence and the transverse section
+give continuity of the stopped curve.  These two cases prove
+relative compactness of the sufficiently small compliance family.
+Proposition~\ref{path:realization} gives the reverse inclusion from
+actual compliances with the same complete label.  This proves
+the exact cluster classification for paths and for their images.
+
+For the common free sequence, the entrance estimate, the budgets,
+the incoming comparison, the fixed-depth comparison and both small
+tail bounds are uniform on $(k,\theta,\nu,\mathbf n)$ in the fixed
+compact class.  The incoming prefix is always compared with its
+own $I_{\lambda,\nu}$.  Thus \eqref{path:whole-error} gives the
+asserted uniform whole-path convergence. The same finite-depth
+comparison and small-tail bounds apply whenever the terminal pairs
+converge uniformly on the compact auxiliary class. We use this
+observation for the explicit endpoint sequences in
+Proposition~\ref{sel:threshold-selection}. The free sequence fixes
+$\lambda,s,d$; the contact roots above are taken for each fixed
+complete label and target.
+\end{proof}
+
+
+
+\begin{corollary}[Different limits from the same full initial state]
+\label{cor:fixed-initial-paths}
+Fix $\lambda,k,\theta,\nu$ and take $\mathbf n=0$. The common full
+initial state is $(\phi_\nu,0,\omega_\nu,0,0)$. There are two
+compliance sequences along which the stopped paths tend respectively
+to $\cW_{\lambda,\nu,s}(s,0)$ and
+$\cW_{\lambda,\nu,s}(s,1)$. Their terminal velocities and compact
+path images differ.
+\end{corollary}
+
+Here the belt still follows $U_b=U_*-k\sqrt\eps$.
+
+\begin{proof}[Proof of Corollary~\ref{cor:fixed-initial-paths}]
+With $\mathbf n=0$, \eqref{eq:bd-physical-initial-data} is the stated
+fixed full initial point. Theorem~\ref{thm:whole} realizes the two
+targets with the remaining label fixed. Put
+$U_s=d_\lambda s(1+s^{1/3}\Gamma_U(s))>0$ and
+$h_s=\mu A(\phi_s)-B(\phi_s)>0$, where $p(\phi_s)=-as$.
+The compression curve in \eqref{gr:compression} gives
+\[
+ \omega_{(s,0)}-\omega_{(s,1)}=\frac{U_s}{\cos\phi_s}>0,
+ \qquad
+ v_{(s,0)}-v_{(s,1)}=\frac{as}{h_s}U_s>0.
+\]
+The first image meets $p=-as$ only at its admission point; the second
+contains the different arrest point on that section. Hence their
+compact path images differ.
+\end{proof}

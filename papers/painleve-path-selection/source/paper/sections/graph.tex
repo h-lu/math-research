@@ -1,0 +1,270 @@
+\section{The exact graph and comparison of actual returns}
+\label{sec:graph}
+The logarithmic form of the exact limiting return contracts the
+complete independent state. We use it to construct an invariant graph
+and a normalized scalar coordinate that records progress along its
+returns. This coordinate fixes the explicit compliance sequences in
+Theorem~\ref{thm:common-free}. The corresponding finite-scale contact and
+free curves retain the order of motion needed for path comparison.
+
+\begin{proposition}[An exact graph and normalized phase]
+\label{prop:canonical-graph-phase}
+After decreasing the outer radius $\delta_{\rm g}$, there are a common
+radius $0<\delta_0<\delta_{\rm g}$ and a jointly
+continuous graph $\Gamma_\lambda:(0,\delta_{\rm g}]\to\Kcal$,
+with zero memory component, such that
+\begin{equation}
+ \begin{aligned}
+ |\Gamma_\lambda(d)-\xi_{*,\lambda}|&\le Cd^{1/3},\\
+ |\Gamma_\lambda(d_2)-\Gamma_\lambda(d_1)|
+ &\le C\max(d_1,d_2)^{1/3}|\log(d_2/d_1)|.
+ \end{aligned}\label{gr:graph-bounds}
+\end{equation}
+Its base map $F_\lambda(d)=f_{0,\lambda}(d,\Gamma_\lambda(d))$
+is strictly increasing, $F_\lambda(d)>d$, and
+$\sup_\lambda F_\lambda(\delta_0)<\delta_{\rm g}$. For
+$0<d\le\delta_0$,
+\begin{equation}
+ T_{0,\lambda}(d,\Gamma_\lambda(d))
+      =(F_\lambda(d),\Gamma_\lambda(F_\lambda(d))).
+ \label{gr:invariance}
+\end{equation}
+On the outer interval there is a jointly continuous phase
+$\mathcal S_\lambda$, strictly decreasing and bi-Lipschitz in $\log d$,
+such that, with $\rho_c=3/4$,
+\begin{equation}
+ \mathcal S_\lambda(F_\lambda(d))
+       =\rho_c\mathcal S_\lambda(d),\qquad
+ \mathcal S_\lambda(d)=\log(K_\lambda^4/d)+O(d^{1/3}).
+ \label{eq:canonical-Schroeder}
+\end{equation}
+The equation holds on the inner interval. The normalization fixes its
+germ at zero on this graph. All bounds are uniform in $\lambda$.
+\end{proposition}
+\begin{proof}
+Put $x=\log(K_\lambda^4/\delta)$ and
+$\eta=\xi-\xi_{*,\lambda}$. Proposition~\ref{prop:limiting-factorization} gives
+\begin{equation}
+ \widehat T_\lambda(x,\eta)
+  =(\rho_c x+r_\lambda(x,\eta),H_\lambda(x,\eta)),\qquad
+ |r|+|H|+|Dr|+|DH|\le Ce^{-x/4}.
+ \label{gr:log-map}
+\end{equation}
+For each $\lambda$ the domain
+$[X,\infty)\times(\Omega-\xi_{*,\lambda})$ is convex. In the norm
+$\|(x,\eta)\|=\max\{|x|,\|\eta\|_\infty\}$ its derivative row
+sums are at most $\rho_c+Ce^{-X/4}$. Increase $X$ to obtain
+\begin{equation}
+ \|\widehat T_\lambda(z)-\widehat T_\lambda(\widetilde z)\|
+       \le q\|z-\widetilde z\|,\qquad q=7/8.
+ \label{gr:contraction}
+\end{equation}
+The base segment here is logarithmic, hence geometric interpolation
+of its endpoint scales. It lies in the auxiliary domain of the exact
+reference; actual returns will be compared by
+\eqref{loc:value} at their physical endpoints.
+
+We seek a curve $V_\lambda(S)=(S+u_\lambda(S),v_\lambda(S))$,
+$S\ge S_0$, whose parameter is multiplied by $\rho_c$ under the return:
+\[
+ V_\lambda(\rho_c S)=\widehat T_\lambda(V_\lambda(S))
+ \qquad(S\ge S_0/\rho_c).
+\]
+Thus $S$ will be the phase coordinate. To solve for the value at $S$,
+evaluate the right-hand side at $S/\rho_c$. The error
+$e^{-x/4}$ in \eqref{gr:log-map} then has size
+$e^{-S/(4\rho_c)}=e^{-S/3}$, which determines the weight below.
+On continuous pairs for $S\ge S_0$ set
+$\|Z\|_0=\sup_{S\ge S_0}e^{S/3}(|u(S)|+\|v(S)\|_\infty)$,
+and, writing $t=S/\rho_c$, define
+\[
+ (\mathcal PZ)(S)=
+ \bigl(\rho_c u(t)+r_\lambda(t+u(t),v(t)),
+                 H_\lambda(t+u(t),v(t))\bigr).
+\]
+On any fixed norm ball, all arguments lie in the common auxiliary
+domain for large $S_0$. Since
+$e^{S/3-t/4}=1$ and $e^{S/3-t/3}=e^{-S/9}$,
+\[
+ \|\mathcal P0\|_0\le C,\qquad
+ \|\mathcal PZ-\mathcal P\widetilde Z\|_0
+ \le(\rho_c e^{-S_0/9}+C_Me^{-4S_0/9})
+                       \|Z-\widetilde Z\|_0.
+\]
+Choose $M\ge\max(1,2C)$ and then $S_0$ so the last coefficient
+is below $1/2$. The fixed point satisfies
+\begin{equation}
+ u,v=O(e^{-S/3}),\qquad
+ V_\lambda(S)=\widehat T_\lambda(V_\lambda(S/\rho_c)).
+ \label{gr:parametrized-graph}
+\end{equation}
+
+The Picard iterates from zero are $C^1$. Their weighted derivative
+norms $A_n=\sup e^{S/3}(|u_n'|+\|v_n'\|_\infty)$ obey
+\[
+ A_{n+1}\le C+(e^{-S_0/9}+C_Me^{-4S_0/9})A_n
+\]
+by the chain rule and \eqref{gr:log-map}. They are uniformly bounded.
+Passing to the uniform limit in the integral inequality gives
+\begin{equation}
+ |u(b)-u(a)|+\|v(b)-v(a)\|_\infty
+       \le C\int_a^b e^{-t/3}\dd t\quad(S_0\le a<b).
+ \label{gr:weighted-Lipschitz}
+\end{equation}
+Finite iterates are jointly continuous in $(\lambda,S)$ on compact
+intervals, and their common contraction tail preserves this continuity.
+This argument uses only first state derivatives of the limiting return.
+
+For larger $S_0$, choose $\eta<1/2$ with $Ce^{-S_0/3}\le\eta$.
+Writing $x=S+u_\lambda(S)$, \eqref{gr:weighted-Lipschitz} gives
+\begin{equation}
+ (1-\eta)|S_2-S_1|\le|x_2-x_1|
+                  \le(1+\eta)|S_2-S_1|.
+ \label{gr:phase-bilip}
+\end{equation}
+Thus $S\mapsto x$ is strictly increasing and bi-Lipschitz.
+On each fixed positive base interval this also gives two-sided
+Lipschitz control between the phase and the base itself. Define
+\begin{equation}
+ \delta_\lambda(S)=K_\lambda^4e^{-S-u_\lambda(S)},\quad
+ \Gamma_\lambda(\delta_\lambda(S))=\xi_{*,\lambda}+v_\lambda(S),\quad
+ \mathcal S_\lambda(\delta_\lambda(S))=S.
+ \label{gr:phase-definition}
+\end{equation}
+Choose $\delta_{\rm g}<\min_\lambda \delta_\lambda(S_0)$ and
+$\delta_0<\min_\lambda \delta_\lambda(S_0/\rho_c)$, within the
+limiting-return radii. Reduce $\delta_0$ so that
+$\sup_\lambda F_\lambda(\delta_0)<\delta_{\rm g}$.
+Equation \eqref{gr:parametrized-graph} gives
+$F_\lambda(\delta_\lambda(S))=\delta_\lambda(\rho_c S)>\delta_\lambda(S)$
+on the inner interval. Both factors are strictly decreasing in their
+arguments, so $F_\lambda$ is strictly increasing there. It remains
+strictly increasing on the outer interval after reducing its radius:
+\eqref{loc:factorization} and \eqref{gr:weighted-Lipschitz} give a
+positive lower bound for its logarithmic difference quotient.
+The same estimates give \eqref{gr:graph-bounds} and \eqref{eq:canonical-Schroeder}.
+The memory component of the fibre map vanishes, hence so does
+that of the graph.
+For two coordinates with the stated normalization on this graph,
+their difference satisfies
+$E(d)=\rho_c^jE(F_\lambda^{-j}(d))\to0$, proving uniqueness
+of the normalized germ. The unconstrained part of the outer interval
+is only a representative of that germ.
+\end{proof}
+
+The graph's logarithmic Lipschitz constant on $(0,\delta_{\rm g}]$
+is $L_\Gamma\le C\delta_{\rm g}^{1/3}$. Reduce this outer radius,
+and then $\delta_0$, so that $q(1+L_\Gamma)<1$. With the common
+graph domains fixed, choose $\delta_{\rm reset}$ last as in
+Theorem~\ref{thm:detuned-output-admission}, and take $s_0>0$ with
+$2s_0<\min(\delta_0,\delta_{\rm reset})$. All reference curves with
+input in a fixed positive compact subset of $(0,2s]$ are then
+available in the same construction.
+
+\subsection{The ordered one-return curve}
+\label{gr:ordered-reference}
+
+We spell out the finite-scale curve used in the path comparison.
+Let $p(\phi_d)=-ad$ on the selected branch and put
+$h_d=\mu A(\phi_d)-B(\phi_d)>0$. Write
+$\Gamma_\lambda(d)=(0,\Gamma_U(d),\Gamma_W(d))$ and define
+\begin{equation}
+ \begin{gathered}
+ U_d=d_\lambda d\{1+d^{1/3}\Gamma_U(d)\},\qquad
+ V_d^{\rm in}=-r_0d^2\{1+d^{1/3}\Gamma_W(d)\},\\
+ V_d^{\rm a}=V_d^{\rm in}-(ad/h_d)U_d,\qquad
+ \mathcal E_\lambda(d,u,v)
+     =(\phi_d,0,(u-U_*)/\cos\phi_d,v,0).
+ \end{gathered}\label{gr:embedding}
+\end{equation}
+Here $u$ denotes the tuned slip argument of the embedding. Run the exact
+reference compression at $\sigma=\sqrt d$:
+\begin{equation}
+ Y'=V_c,\quad \sigma Z'=Y-2Z,\quad
+ V_c'=-a(Z-Y),\quad \mathcal U'=-h_d(Z-Y),
+ \label{gr:compression}
+\end{equation}
+from $(Y,Z,V_c,\mathcal U)=(0,0,V_d^{\rm in}/d^2,U_d/d)$.
+At its first arrest, start the inherited reference
+$N_d'=A_DN_d$, $N_d=(Y_d,V_d^{\rm n},Z_d)$, with
+$N_d(0)=(Y,\sigma V_c,Z)$ at arrest. Let $R_d$ be its first
+force zero. The first-event margins from Section~\ref{sec:contact} give
+\begin{equation}
+ Z_d(R_d)=Y_d(R_d)<0,\quad V_d^{\rm n}(R_d)>0,\quad
+ V_d^{\rm n}(R_d)+Z_d(R_d)>0.
+ \label{gr:release-signs}
+\end{equation}
+Put $V_d^{\rm rel}=d^{3/2}V_d^{\rm n}(R_d)$ and
+$\mathcal R_d=\mathcal E_\lambda(d,0,V_d^{\rm rel})$.
+Write $\Phi_{\rm f}(\ell;\mathcal R_d)$ for the analytic free
+mechanical flow, with zero memory appended. Its first subsequent
+touchdown has elapsed time $T_d$ and scale $F_\lambda(d)$.
+
+The continuous ordered curve is
+\begin{equation}
+ \cC_{\lambda,d}(\alpha)=
+ \begin{cases}
+ \mathcal E_\lambda(d,(1-\alpha)U_d,
+                  V_d^{\rm in}-(ad/h_d)\alpha U_d),&0\le\alpha\le1,\\
+ \mathcal E_\lambda(d,0,d^{3/2}V_d^{\rm n}((\alpha-1)R_d)),&1\le\alpha\le2,\\
+ \Phi_{\rm f}((\alpha-2)T_d;\mathcal R_d),&2\le\alpha\le3.
+ \end{cases}\label{eq:ps2-reference-path}
+\end{equation}
+The compression invariant
+$V_c-(a/h_d)\mathcal U=V_d^{\rm in}/d^2-(a/h_d)U_d/d$
+gives $d^{3/2}V_d^{\rm n}(0)=V_d^{\rm a}$, so the first join agrees.
+The second join is $\mathcal R_d$. For $0<d\le\delta_0$, graph invariance gives
+\begin{equation}
+ \cC_{\lambda,d}(3)=\cC_{\lambda,F_\lambda(d)}(0),\qquad
+ \sup_\alpha|\cC_{\lambda,d}(\alpha)-G|\le Cd^{3/4}.
+ \label{gr:curve-joins}
+\end{equation}
+The contact pieces have instantaneous physical duration in this
+reference curve; their parameters preserve the order of compression
+and release. They are not extra free solutions. At every fixed
+positive compact input interval, including the enlarged intervals
+used to scan $[s/2,2s]$, the event maps, free flow and graph bound
+make \eqref{eq:ps2-reference-path} Lipschitz in its input, uniformly in $\lambda$.
+The corresponding constants may depend on that interval.
+
+The same radius choice makes $U_d>0$. Consequently the contact
+curve is injective on $[0,2]$: the tuned slip $(1-\alpha)U_d$
+strictly decreases on compression, while on release it is zero
+and the normal velocity satisfies
+\begin{equation}
+ \frac{\dd V_d^{\rm n}}{\dd\tau}
+       =\tfrac12(Z_d-Y_d)>0\qquad(0\le\tau<R_d).
+ \label{gr:contact-injectivity}
+\end{equation}
+Positivity of the active force gives the strict inequality, and
+the two pieces meet only at their common arrest point. We will use
+this fact both to identify an interior stopping target and to
+separate complete path images.
+
+\subsection{The free-section parameter}
+\label{gr:free-section}
+
+Along the free part, $\dot p=-a+O(d+\ell)<-a/2$ after the common
+radius is reduced. Thus $p$ strictly decreases from $-ad$ to
+$-aF_\lambda(d)$. Fix $0<s\le s_0$ and put
+$d_*=F_\lambda^{-1}(s)$; this inverse is defined since $F$ is
+continuous and strictly increasing from zero and $F(s)>s$.
+For $d_*\le d\le s$, the equation
+\begin{equation}
+ p(\Phi_{\rm f}(\ell_s(d);\mathcal R_d))=-as
+ \label{gr:section-root}
+\end{equation}
+has exactly one root in $[0,T_d]$. Its derivative in $\ell$ is
+bounded away from zero, so its continuous dependence, including
+the endpoints, follows either from the inverse function theorem
+or directly from strict monotonicity and compactness. Hence
+\begin{equation}
+ j_s(d)=2+\ell_s(d)/T_d,
+ \qquad j_s(d_*)=3,\qquad j_s(s)=2
+ \label{gr:free-section-definition}
+\end{equation}
+is the continuous parameter in \eqref{eq:path-free-section}.
+On contact the section value is instead the constant $p=-ad$;
+therefore its section points have $d=s$ and $0\le\alpha\le2$.
+Together these observations give exactly the terminal domain
+$\mathcal A_s$ of \eqref{eq:ps5-domain}.

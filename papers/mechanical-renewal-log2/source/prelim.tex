@@ -1,0 +1,91 @@
+\section{Simple period zeros and finite simultaneous choices}\label{sec:prelim}
+
+We use polynomial one-forms $\omega=A\,dx+B\,dy$, with
+$\deg\omega=\max(\deg A,\deg B)$. A period zero always refers to a
+specified connected family of regular compact ovals, parametrized by the
+Hamiltonian value. Distinct ovals can have the same value. We select
+pairwise disjoint small closed annuli about the finitely many ovals that
+will produce cycles.
+
+\begin{lemma}\label{lem:jets}
+Let $f_1,\ldots,f_M$ be linearly independent real analytic functions on a
+connected open interval $I$. For every nonempty open subinterval $J\subset I$
+there is a real linear combination with at least $M-1$ distinct simple
+zeros in $J$.
+\end{lemma}
+\begin{proof}
+For analytic functions linear independence implies that the Wronskian is
+not identically zero. One way to see this is to perform elimination on
+their convergent Taylor series at an interior point: independent analytic
+germs admit a basis with strictly increasing orders of vanishing, whose
+Wronskian has a nonzero leading term. The identity theorem transfers
+independence to every open subinterval. Choose a point $h_0$ there where
+the Wronskian is nonzero. The map from coefficients to the Taylor
+coefficients through order $M-1$ at $h_0$ is invertible.
+
+Fix distinct real numbers $t_1,\ldots,t_{M-1}$ and prescribe those Taylor
+coefficients to be the coefficients of
+$\prod_{j=1}^{M-1}(h-h_0-\varepsilon t_j)$. The resulting coefficient
+vector stays bounded as $\varepsilon\to0$. For the corresponding
+function $F_\varepsilon$,
+\[
+ \varepsilon^{-(M-1)}F_\varepsilon(h_0+\varepsilon t)
+ =\prod_{j=1}^{M-1}(t-t_j)+O(\varepsilon)
+\]
+in $C^1$ on each fixed compact $t$-interval. Each simple root persists,
+and its energy lies in the prescribed subinterval for sufficiently small
+$\varepsilon>0$. For $M=1$ the assertion is empty.
+\end{proof}
+
+\begin{lemma}\label{lem:persistence}
+For a finite family of regular compact Hamiltonian annuli and fixed
+smooth one-forms, selected simple period zeros persist under a sufficiently
+small smooth change of the Hamiltonian and forms. A single smallness
+threshold can be used for the whole finite family.
+\end{lemma}
+\begin{proof}
+On each compact annulus choose a transverse coordinate and smoothly
+parametrize nearby level curves; regularity gives this parametrization
+by the implicit function theorem. Differentiating the integral in the
+energy parameter shows $C^1$ convergence of the period functions when
+the Hamiltonian and forms converge in sufficiently high finite
+differentiability norms on a neighborhood of the annulus.
+For each simple zero choose a closed energy interval $J$ on which
+$|M'|\ge a_J>0$ and the two endpoint values have opposite signs and
+absolute value at least $b_J>0$. Taking the minimum of these finitely
+many positive margins preserves both properties under a common
+$C^1$ perturbation. The intermediate value theorem and monotonicity
+give a simple zero in each selected interval. The annuli remain disjoint
+under a sufficiently small perturbation.
+\end{proof}
+
+The common threshold in this lemma is taken only after the degree and
+all the finite forms under consideration have been fixed. No threshold
+uniform in the degree is used.
+
+The following first-order criterion is standard; see, for example,
+\cite[p.~443]{LiLiLlibreZhang2001}. We record its finite simultaneous form.
+
+\begin{lemma}\label{lem:melnikov}
+Suppose that a polynomial Hamiltonian $H$ and a polynomial one-form
+$\omega=A\,dx+B\,dy$ have $N$ selected simple period zeros in pairwise
+disjoint compact regular annuli. For all sufficiently small nonzero real
+$\mu$, the single polynomial field
+\begin{equation}\label{eq:singlefield}
+ X_\mu=(H_y-\mu B,\,-H_x+\mu A)
+\end{equation}
+has at least $N$ distinct hyperbolic limit cycles and degree at most
+$\max(\deg H-1,\deg\omega)$.
+\end{lemma}
+\begin{proof}
+In the energy coordinate on a local transversal the return displacement
+is $\mu M(h)+O(\mu^2)$ in $C^1$, where
+$M(h)=\oint_{H=h}\omega$ is oriented by the Hamiltonian flow.
+This expansion follows by smooth dependence of the flow and return time
+and differentiation at $\mu=0$. Apply Lemma~\ref{lem:persistence} to the
+displacement divided by $\mu$, using the minimum of the finite margins.
+At each resulting fixed point the derivative of the return map is
+$1+\mu M'(h)+O(\mu^2)$ and differs from $1$ for sufficiently small
+nonzero $\mu$. It is positive and close to $1$, so the cycle is
+hyperbolic. The degree follows directly from \eqref{eq:singlefield}.
+\end{proof}

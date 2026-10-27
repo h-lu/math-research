@@ -1,0 +1,163 @@
+\section{Introduction}
+\label{sec:introduction}
+
+A rigid frictional system can lose forward uniqueness at a Painlev\'e
+singularity. Compliance restores an ordinary evolution, but its
+vanishing limit need not select a single outgoing motion. We study
+a compliant, smooth-friction unfolding of the critical oscillator
+of Nordmark, V\'arkonyi and Champneys~\cite[Section~6.1]{NVC2018}.
+Two masses are joined by a rigid link, with the lower mass contacting
+a moving belt. Successive contacts and flights form a cascade whose
+number of returns tends to infinity as compliance vanishes.
+
+Our question concerns two different forms of independence from the
+auxiliary contact parameters. Do they give the same family of limiting
+paths? Can one sequence of compliances select the same member of that
+family for all parameter values? We answer both questions for paths
+stopped at the first crossing of a fixed nearby link angle. The system
+has relaxing normal memory and friction smoothed at slip scale $\eps$,
+with belt speed $U_b=U_*-k\sqrt\eps$ and fixed $k>0$.
+Section~\ref{sec:model} specifies the compact mechanical, profile and
+physical-preparation classes used throughout.
+
+\paragraph{Earlier work and the present problem.}
+Champneys and V\'arkonyi~\cite[Sections~4, 5.1 and~5.3]{CV2016}
+place contact regularization, dynamic jam and reverse chatter within
+the forward-continuation problem for frictional rigid bodies.
+Compliance-dependent continuation already appears in reverse
+chatter: Nordmark, Dankowicz and
+Champneys~\cite[Sections~5.2 and~6.1]{NDC2009} give an asymptotic
+matching argument for selecting different forward motions along
+different compliance sequences, with numerical terminal curves for
+a conservative normal law and Coulomb friction. The relaxing
+normal law used here was introduced by Nordmark, V\'arkonyi and
+Champneys~\cite[Equations~(20)--(21)]{NVC2018} in their study of
+dynamic jam. The concluding discussion of their 2017 preprint
+identifies motion beyond the first lift-off or the onset of impact
+without collision as a further problem, including repeated
+contacts. We determine that subsequent local motion under the
+smooth friction and belt scaling fixed below, including every
+stopped path and the common-sequence question.
+
+Rigorous passage results in related contact problems resolve
+several of the local difficulties. Hogan and
+Kristiansen~\cite[Theorems~3.1--3.2]{HK2017} prove compression,
+slip arrest and lift-off for a single impact without collision,
+and a threshold separating it from immediate lift-off, at a fixed
+negative Painlev\'e coefficient. Kristiansen and
+Hogan~\cite[Theorem~6]{KH2018} prove persistence of a strong
+canard at the degenerate point, using a second blow-up to resolve
+the ellipticity left by the first. Their
+erratum~\cite{KH2018Erratum} requires sufficiently small initial
+tangential velocity for rigid-model slip arrest before the singular
+point; the canard theorem is unchanged. The additional tasks here
+are preparation of the independent normal memory into a repeatable
+return domain, comparison through a growing number of returns,
+and actual realization of every stopped contact prefix.
+
+Regularization can also select one outgoing orbit in other
+nonsmooth systems. For a truncated visible--invisible two-fold
+normal form, Kristiansen and Hogan~\cite[Theorem~1]{KH2019TwoFold}
+prove uniform contraction of a transverse incoming family towards
+one outgoing orbit under arctangent regularization, with a
+nonresonance condition and separation from the weak canard;
+their Section~5 discusses other regularization functions.
+In three-dimensional contact mechanics, Cheesman, Hogan and
+Kristiansen~\cite[Sections~4--5]{CHK2023} use normal compliance
+and a separate smoothing of spatial Coulomb friction to analyse
+impact without collision. They resolve local sticking dynamics
+and identify a Painlev\'e-I equation in the transition from
+slipping to inconsistency.
+
+For homogeneous singular ODEs, Drivas and
+Mailybaev~\cite[Theorem~5 and Corollary~2]{DM2018} study expelling
+regularizations approaching an exponentially attracting
+renormalized cycle with positive mean radial drift.
+Regularizations escaping into the basin of the same cycle share
+a phase family of limiting continuations. Their geometric sequence
+$\nu_n=\exp\{-T\langle F_r\rangle n+\chi\}$ selects phase
+$\zeta=c-\chi$, with regularization-dependent $c$.
+This gives a related distinction between a common limiting family
+and a common selecting sequence. In the contact problem here, an
+entrance-phase difference disappears at a free target but remains
+larger than the fixed-angle contact stopping window. Selection
+therefore depends on the target type, and the order of the entrance
+constants determines the endpoint limits.
+
+The scalar phase of a power-like return has a classical precedent.
+Goncharuk and Kudryashov~\cite[Lemmas~5--6]{GK2019} prove
+rectification and refined double-logarithmic parameter asymptotics,
+following root estimates of Ilyashenko, Kudryashov and
+Schurov~\cite[Sections~4.5--4.6]{IKS2018} and the smooth saddle-loop
+work of Dumortier and Roussarie~\cite{DR1990}. We construct the
+phase together with the complete mechanical graph and control its
+accuracy along actual returns. Bressan and
+Mazzola~\cite[Theorem~2]{BM2013} prove time--state graph convergence
+for specified approximations of impulsive feedbacks. Here the
+contact curves and their ordering are derived from the compliant
+force law.
+
+\paragraph{Main conclusions.}
+Theorem~\ref{thm:whole} classifies and realizes every stopped-path
+limit from the prescribed initial data. Each path consists of its
+incoming rigid arc, an infinite ordered contact--flight cascade
+leaving the singular point, and a terminal contact or flight prefix.
+At fixed mechanical parameters and observation section, the outgoing
+family is common to the prescribed auxiliary classes; different
+incoming data retain their own incoming arcs.
+Theorem~\ref{thm:common-free} gives the stronger common-sequence
+conclusion for every free-flight target, uniformly over those compact
+classes.
+
+Theorem~\ref{thm:contact-selection} states the entrance-constant law
+for contact targets within the same physical model and classes.
+Two fixed unequal constants exclude common interior contact selection,
+even at different contact phases. Moreover, on any sequence selecting
+an interior contact target for one datum, smaller and larger entrance
+constants force admission and release for the other data.
+Proposition~\ref{sel:threshold-selection} gives explicit threshold
+sequences and uniform endpoint selection on compact subclasses
+separated from the threshold. Equal constants are necessary for
+common interior selection; these estimates do not make them
+sufficient. The belt application is
+Corollary~\ref{cor:belt-contact-selection};
+Corollary~\ref{cor:friction-profile-selection} gives the corresponding
+application along an admissible friction-profile curve constructed
+locally through each baseline profile.
+
+\paragraph{Mechanism.}
+Recurring compression consumes tangential slip; arrest changes the
+normal response, and the inherited compression drives release.
+The subsequent cubic free-flight balance gives a return scale
+of order $\delta^{3/4}$. On the invariant graph of the complete
+normalized limiting return, the exact base map and its phase satisfy
+\[
+ F_\lambda(\delta)\sim K_\lambda\delta^{3/4},\qquad
+ \mathcal S_\lambda(F_\lambda(\delta))
+       =\tfrac34\mathcal S_\lambda(\delta).
+\]
+The prescribed physical preparation determines a bounded entrance
+correction. Repeated return contraction reduces the difference of
+two such corrections to order $1/\log(1/\eps)$ at a fixed positive
+section. An actual contact stop at $p=-as$ requires the much narrower
+window $\delta=s+O_s(\eps)$. Thus
+\[
+ \eps\ll\frac1{\log(1/\eps)}\ll1.
+\]
+The same entrance difference vanishes in the free-target limit but
+still separates the contact stopping windows and orders their
+endpoint limits. The comparison uses the exact phase at the fixed
+section, not just its leading logarithmic approximation.
+
+\paragraph{Proof route.}
+Section~\ref{sec:local-results} derives the complete prepared entrance
+and the repeatable local return from the physical initial data.
+Section~\ref{sec:graph} constructs the exact graph and compares the
+actual full states through the required event indices.
+Section~\ref{sec:physical-paths} pairs whole returns and scans a
+fixed actual contact index to classify and realize complete paths.
+Section~\ref{sec:contact-selection} compares the residual phase with
+the contact window and proves the belt and profile applications;
+Section~\ref{sec:observations} treats longer paths, first-angle
+truncation and strict local crossings. The local estimates and
+cancellations remain in the appendices.

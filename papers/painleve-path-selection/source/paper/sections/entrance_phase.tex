@@ -1,0 +1,50 @@
+\subsection{Belt ordering of the entrance constant}
+\label{sec:entrance-phase}
+
+Theorem~\ref{thm:contact-selection} reduces belt dependence to the
+order of the prepared coefficient $C_R$. The following strict order
+gives Corollary~\ref{cor:belt-contact-selection}.
+Throughout this subsection $\lambda,\theta$ are fixed; the mechanical
+coefficient is denoted by $d_\lambda$ as in Section~\ref{sec:model}.
+
+\begin{proposition}[Belt order of the entrance constant]
+\label{sel:entrance-phase}
+Let $C_R(k)$ be the second-touchdown coefficient in
+\eqref{loc:preparation-constants}, and let $K_\lambda$ be the
+return coefficient in \eqref{loc:constants}. Then $C_R(k)$ strictly decreases on $I$. Hence
+$\chi_{\lambda,\theta}(k)$ in \eqref{sel:chi} strictly increases.
+\end{proposition}
+\begin{proof}
+The normalized critical passage determines $q=q_{\rm in}>0$ from
+$(\lambda,\theta)$ alone; see Lemma~\ref{lem:critical-pullback}
+and Theorem~\ref{thm:detuned-release}. The normal-release constant
+$\nu_\#$ is determined by the fixed linear problem
+\eqref{con:canonical-release}, independently of the original labels.
+Put $H=ak/\gamma$ and $t=T_f(k)$ in
+\eqref{loc:preparation-constants}, where $A_{\rm reb}$ is the
+amplitude $A_s$ of \eqref{prep:amplitude}.
+Implicit differentiation of the flight equation gives
+\[
+ t'(k)=-\frac{3\ell(a/\gamma)t}{2ct+3\ell H}<0.
+\]
+Substitution in the amplitude first yields
+\[
+ A_{\rm reb}^2=\frac{d_\lambda}{2h^2}
+ \left[\gamma Ht^2+(2hc/3+ad_\lambda)t^3\right].
+\]
+Eliminating $H=(6q-ct^2)/(3\ell t)$ and using
+$\gamma=h\ell-d_\lambda$, we obtain
+\begin{equation}
+ A_{\rm reb}^2=\frac{d_\lambda}{2h^2}
+ \left[\frac{2\gamma q}{\ell}t+
+ \left(\frac{hc}{3}+\frac{d_\lambda c}{3\ell}+ad_\lambda\right)t^3\right].
+ \label{sel:positive-amplitude}
+\end{equation}
+Every coefficient is positive. Hence the amplitude, $R$ and $C_R$
+strictly decrease with $k$, which proves the order of $\chi$.
+
+\end{proof}
+
+The profile dependence requires a different argument, because a
+slip level can be visited more than once. We next construct a
+single-visit perturbation with nonzero release-speed response.

@@ -1,0 +1,657 @@
+\section{From physical preparation to the first release}
+\label{sec:entry}
+The incoming normal equilibrium loses uniform attraction as $p$ tends
+to zero. Negative detuning moves the relevant slip transition to
+$p\asymp\sqrt\eps$, where normal dissipation and variation of its
+energy metric have comparable sizes. We follow the prescribed rigid
+trace by coupling a normal energy with its exact weak coefficient.
+A first graph correction has identically zero force defect. The
+resulting energy estimate controls the outer range by dissipation and
+the critical annulus by a bounded Gronwall factor. Although the weak
+coefficient loses accuracy there, conversion back to the physical
+state multiplies its error by $p^\beta$. This gives the complete
+normal state needed for the first release.
+
+The compact classes are those of Section~\ref{sec:model}. In particular,
+$r=-\eta=k\sqrt\eps$, $k\in I=[k_-,k_+]\Subset(0,\infty)$,
+and all labels, including the original fast triple, are fixed before
+$\eps\downarrow0$. Constants below are common on these classes.
+Write $\gamma=-g_*>0$ and $\rho=b/p$.
+
+\subsection{The weak coordinate and a finite normal energy}
+
+\paragraph{The rigid first integral.}
+Let $\alpha_1=F_{\rm free}p$, $\alpha_2=F_{\rm free}b$ and
+$\alpha_3=-Q_{\rm sat}b$, restricted to $y=v=0$ when written as
+functions of $(p,b)$. The rigid saturated field is
+\begin{equation}
+ \begin{gathered}
+ \dot p=\alpha_1,\qquad \dot b=\alpha_2+\alpha_3b/p,\\
+ F(p,\rho)=\frac{\alpha_2+(\alpha_3-\alpha_1)\rho}{p},\qquad
+ \mathscr D=\alpha_1\partial_p+F\partial_\rho.
+ \end{gathered}
+ \label{ent:rigid-field}
+\end{equation}
+Here $\alpha_1(G)=-a$, $\alpha_2(G)=-c$,
+$\alpha_3(G)=-a\beta$ and $c=a(\beta-1)\ell$.
+The scalar equation for $\rho$ has the regular-singular form
+\[
+ p\rho_p=H(p,\rho),\qquad
+ H=\frac{\alpha_2(p,p\rho)+(\alpha_3-\alpha_1)(p,p\rho)\rho}
+              {\alpha_1(p,p\rho)},\qquad
+ H(0,\rho)=(\beta-1)(\rho+\ell).
+\]
+To construct its analytic weak curve, put $s=\bar\rho+\ell$.
+Its equation is $(p\partial_p-(\beta-1))s=pJ(p,s)$, with $J$
+analytic. In absolutely convergent power series the inverse diagonal
+operator divides coefficient $n$ by $n-(\beta-1)$, $n\ge1$.
+These divisors stay away from zero uniformly for
+$2<\beta_-\le\beta\le\beta_+<5/2$. On a sufficiently small common
+disk multiplication by $p$ therefore makes the fixed-point equation
+for $s$ a contraction. This gives $\bar b=p\bar\rho=-\ell p+O(p^2)$.
+
+For $d_b=\rho-\bar\rho$, subtraction gives exactly
+$d_b'=((\beta-1)/p+A_0(p,d_b))d_b$, where $A_0$ is analytic
+and bounded: $\partial_\rho H-(\beta-1)$ is divisible by $p$.
+Thus $d_b=p^{\beta-1}\zeta$ satisfies
+$\zeta'=A_0(p,p^{\beta-1}\zeta)\zeta$, a regular equation down
+to $p=0$ on each bounded $\zeta$ set. Define $\mathcal C(p,b)$
+as its limiting value there. Its integral equation and variational
+equation give
+\begin{gather}
+ b(p,C)=\bar b(p)+p^\beta\{C+O(p)\},\qquad
+ |\nabla_{p,b}\mathcal C|\le Cp^{-\beta},\notag\\
+ |b(p,C)-b(p,\widetilde C)|\le Cp^\beta|C-\widetilde C|,
+ \label{ent:weak-coordinate}\\
+ \rho=-\ell+O(p)+O(p^{\beta-1}),\qquad
+ \mathscr D\rho=O(1),\qquad
+ \mathscr D^2\rho=O(p^{\beta-3}).
+ \label{ent:weak-derivatives}
+\end{gather}
+For the first line, the variation in $\zeta$ and its inverse are
+bounded by $e^{Cp}$; conversion from
+$\zeta=(b-\bar b)/p^\beta$ gives the displayed derivatives.
+For the second, differentiate the regular equation along the rigid
+field. These are values of rigid derivatives at points of a bounded
+coefficient wedge, not derivatives of an actual fast transient.
+In particular $|F_p|+|F_\rho|\le C/p$ there. The exact first
+integral equals the prescribed $C_1$ on the prescribed rigid trace.
+
+\paragraph{A degenerating normal energy.}
+The normal decay rate tends to zero with $p$. We therefore seek a
+Lyapunov norm whose square decays at a rate proportional to $p$ for
+the frozen normal equation in fast time. Converting this norm to
+displacement and memory will cost
+$p^{-1/2}$, whereas the velocity estimate remains uniform. These
+component weights determine how the normal error enters the weak
+coordinate estimate below.
+
+Set $N=(Y,V,Z)=(y/\eps^2,v/\eps,z/\eps^2)$ and define
+\begin{equation}
+ M_o(p)=\begin{pmatrix}0&1&0\\-p&0&p\\1&0&-2\end{pmatrix},\quad
+ e_{\rm eq}=(2,0,1)^T,\quad q_N=(-1,0,1)^T,\quad a_1=(-1,2,-1)^T.
+ \label{ent:normal-matrix}
+\end{equation}
+The polynomial of $M_o$ is $z^3+2z^2+pz+p$.
+Its simple root $f=-2+p/4+O(p^2)$ is analytic; write the remaining
+factor as $z^2-a_cz+d_c$, where
+$a_c=-p/4+O(p^2)$ and $d_c=p/2+O(p^2)$. The polynomial projector
+\[
+ \begin{gathered}
+ P_f=\frac{M_o^2-a_cM_o+d_cI}{f^2-a_cf+d_c},\qquad P_c=I-P_f,\\
+ c_2=P_c(0,2,-1/2)^T,\quad c_1=(M_o-a_cI)c_2,\quad
+ e_f=P_f(0,0,1)^T.
+ \end{gathered}
+\]
+defines an analytic invertible matrix $T_o=(c_1,c_2,e_f)$.
+At zero its columns are $e_{\rm eq}$, $(0,2,-1/2)^T$ and $(0,0,1)^T$;
+their determinant is $4$, and
+\[
+ T_o^{-1}M_oT_o=\operatorname{diag}(A_c,f),\qquad
+ A_c=\begin{pmatrix}0&1\\-d_c&-h_c\end{pmatrix},\qquad h_c=-a_c.
+\]
+Put $S_c=\left(\begin{smallmatrix}d_c&h_c/2\\h_c/2&1\end{smallmatrix}\right)$
+and $\mathbb S=T_o^{-T}\operatorname{diag}(S_c,1)T_o^{-1}$.
+The exact identity $A_c^TS_c+S_cA_c=-h_cS_c$ and $f<-1$ give
+\begin{equation}
+ \begin{gathered}
+ M_o^T\mathbb S+\mathbb SM_o\le-c_0p\mathbb S,\\
+ |w_1|+|w_3|+|q_N^Tw|\le Cp^{-1/2}W,\qquad |w_2|\le CW,
+ \end{gathered}
+ \label{ent:energy-weights}
+\end{equation}
+where $W=\|w\|_{\mathbb S}$; also
+$\|e_{\rm eq}\|_{\mathbb S}\le C\sqrt p$ and
+$\|a_1\|_{\mathbb S}+\|(0,1,0)^T\|_{\mathbb S}\le C$.
+Indeed $S_c\asymp\operatorname{diag}(p,1)$; the first and third
+columns of $T_o$ have second component $O(p)$, giving the stronger
+$w_2$ bound. To differentiate the metric, write
+$D_o=\operatorname{diag}(S_c,1)$, $\zeta_o=T_o^{-1}w$ and
+$B_o=T_o^{-1}T_o'$. Then
+\[
+ w^T\mathbb S'w=\zeta_o^TD_o'\zeta_o
+ -\zeta_o^T(B_o^TD_o+D_oB_o)\zeta_o,
+ \qquad |w^T\dot{\mathbb S}w|\le C|\dot p|p^{-1}W^2.
+\]
+This estimate uses the actual $\dot p$.
+
+\paragraph{Coupled tracking of the normal and weak coordinates.}
+The first graph correction is
+\begin{equation}
+ G_1=\eps a_1F,\qquad N=e_{\rm eq}\rho+G_1+w.
+ \label{ent:first-graph}
+\end{equation}
+It satisfies $M_oG_1=\eps e_{\rm eq}F$ and $q_N^TG_1=0$ exactly.
+To keep the finite-profile feedback, evaluate $A_j=\alpha_j$
+at the actual mechanical state
+$\Xi(p,p\rho,\eps^2(2\rho+G_{1,1}+w_1),\eps(G_{1,2}+w_2))$,
+and set
+\[
+ \begin{gathered}
+ d_\eps=\{A_2+(A_3-A_1)\rho\}/p,\qquad
+ \mathcal T_v=\mu B(1-\Phi_\theta(u/\eps))\lambda_N,\\
+ \mathcal T_b=\mu(1-\Phi_\theta(u/\eps))\lambda_N
+                      (\partial_{\dot q}b)M^{-1}Q_T.
+ \end{gathered}
+\]
+With $E=G_1+w$ the exact equations are
+\begin{align*}
+ \dot p&=A_1,&
+ \dot\rho&=d_\eps-(A_3/p)q_N^TE+\mathcal T_b/p,\\
+ \eps\dot E&=M_oE-\eps e_{\rm eq}d_\eps+
+       \eps(A_3/p)e_{\rm eq}q_N^TE+\mathcal T_ve_V-\eps e_{\rm eq}\mathcal T_b/p,
+ &&e_V=(0,1,0)^T.
+\end{align*}
+Subtracting the derivative of $G_1$ gives, without truncation,
+\begin{equation}
+ \begin{split}
+ \eps\dot w={}&M_ow+\eps\frac{A_3}{p}(e_{\rm eq}+G_{1,\rho})q_N^Tw\\
+ &-\eps(e_{\rm eq}+G_{1,\rho})(d_\eps-F)-\eps G_{1,p}(A_1-\alpha_1)
+ -\eps^2a_1\mathscr D^2\rho\\
+ &\phantom{{}={}}
+ +\mathcal T_ve_V-\frac\eps p(e_{\rm eq}+G_{1,\rho})\mathcal T_b.
+ \end{split}
+ \label{ent:exact-remainder}
+\end{equation}
+In particular both profile terms remain in the normal equation.
+
+Here are the estimates needed to use this identity. They hold for
+$p\ge h\sqrt\eps$, with any fixed $h>0$, on partial intervals with
+bounded weak coefficient, strict normal-force bounds,
+$W\le\rho_0\sqrt p$, and $a/2\le-\dot p\le2a$.
+From \eqref{ent:weak-derivatives},
+$G_1=O(\eps)$,
+$\|G_{1,p}\|_{\mathbb S}+\|G_{1,\rho}\|_{\mathbb S}\le C\eps/p$,
+and $\|e_{\rm eq}+G_{1,\rho}\|_{\mathbb S}\le C_h\sqrt p$.
+The last bound uses $\eps/p^{3/2}\le h^{-3/2}\eps^{1/4}$.
+Superscript $G$ denotes $w=0$. Since its physical $y,v$ are
+$O(\eps^2)$, $|A_j^G-\alpha_j|\le C\eps^2$ and
+$|d_\eps^G-F|\le C\eps^2/p$.
+The four saturated inhomogeneous terms in
+\eqref{ent:exact-remainder} have energy bounds, respectively,
+\begin{equation}
+ C\eps^2p^{\beta-3},\qquad C\eps^3p^{-1/2},\qquad
+ C\eps^4p^{-2},\qquad C\eps^4p^{-1},
+ \label{ent:forcing-domination}
+\end{equation}
+when ordered as $-\eps^2a_1\mathscr D^2\rho$,
+$-\eps e_{\rm eq}(d_\eps^G-F)$,
+$-\eps G_{1,\rho}(d_\eps^G-F)$ and
+$-\eps G_{1,p}(A_1^G-\alpha_1)$.
+Relative to $\eps^2p^{\beta-3}$, the last three bounds have ratios
+$\eps p^{5/2-\beta}$, $\eps^2p^{1-\beta}$ and
+$\eps^2p^{2-\beta}$. For $h\sqrt\eps\le p\le p_i<1$ and the
+prescribed compact range $\beta<5/2$, these are uniformly small.
+Thus each term is bounded by $C_h\eps^2p^{\beta-3}$.
+At $\beta=5/2$ these three ratios are, respectively,
+$O(\eps)$, $O_h(\eps^{5/4})$ and $O_h(\eps^{7/4})$ on the same
+interval. These bounds describe the endpoint of this forcing
+calculation; the proof below uses the prescribed compact range.
+The physical differences from this graph are
+$(\eps^2w_1,\eps w_2)$, so
+$|A_j-A_j^G|\le C\eps W$ and
+$|d_\eps-d_\eps^G|\le C\eps W/p$.
+The three homogeneous terms have bounds
+$C_h\eps W/p$, $C_h\eps^2p^{-1/2}W$ and
+$C\eps^3W/p$. A value bound $1-\Phi_\theta(u/\eps)\le CR_\Phi$
+gives for the complete profile forcing
+$C_hR_\Phi(1+\eps p^{-1/2}+\eps^2p^{-2})\le C_hR_\Phi$.
+The metric derivative and \eqref{ent:energy-weights} consequently give
+\begin{equation}
+ \eps D^+W\le(-c_0p+C_h\eps/p)W
+                +C_h\eps^2p^{\beta-3}+C_hR_\Phi.
+ \label{ent:signed-energy}
+\end{equation}
+We retain the positive metric term when crossing the critical annulus.
+Finally the rigid field annihilates $\mathcal C$. At equal $(p,b)$,
+its difference from the actual field is
+\[
+ \delta\dot p=A_1-\alpha_1,\quad
+ \delta\dot b=(A_2-\alpha_2)+(A_3-\alpha_3)\rho
+                         -A_3q_N^Tw+\mathcal T_b,
+ \quad |A_j-\alpha_j|\le C(\eps^2+\eps p^{-1/2}W).
+\]
+Thus \eqref{ent:weak-coordinate} yields the coupled transport bound
+\begin{equation}
+ \left|\frac{d\mathcal C_\eps}{dp}\right|
+ \le C\{\eps^2p^{-\beta}+p^{-\beta-1/2}W+R_\Phi p^{-\beta}\}.
+ \label{ent:weak-transport}
+\end{equation}
+
+\subsection{Capture and the actual descending threshold}
+
+\begin{lemma}[The actual incoming threshold]\label{lem:detuned-threshold}
+The physical initial states reach a common fixed section $p=p_i>0$
+in positive-slip contact. On its continuous contact passage there is a
+unique first descending crossing $t_e$ of $u(t_e)=\gamma\eps T$,
+where $T=m|\log\eps|$ and $m$ is a sufficiently large fixed constant.
+If $p_{\rm stop}$ is the zero of the prescribed detuned rigid slip,
+then
+\begin{gather}
+ p_{\rm stop}=ak\sqrt\eps/\gamma+O(\eps),\qquad
+ p_e=p_{\rm stop}+a\eps T+R_e,\qquad R_e=o(\eps),
+ \label{ent:threshold-slow}\\
+ b_e=-\ell p_{\rm stop}+o(\sqrt\eps),\quad
+ |X_e-G|=O(\sqrt\eps),\quad
+ \lambda_N(t_e)=\ell+O(\sqrt\eps),\quad V_e=O(\eps),\\
+ E_{N,e}:=|Y_e+2\ell|+|V_e|+|Z_e+\ell|=O(\sqrt\eps).
+ \label{ent:threshold-normal}
+\end{gather}
+All assertions are uniform on the fixed compact classes.
+\end{lemma}
+\begin{proof}
+For capture, freeze $p>0$, $b<0$ on a closed incoming rigid arc and
+put $\ell_f=-b/p$. The frozen fast equations and proper energy are
+\[
+ \begin{gathered}
+ Y'=V,\quad V'=b+pL,\quad Z'=-Z-L,\quad L=(Z-Y)_+,
+ \\
+ \mathcal E_f=\frac{V^2}{2p}+\frac{Z^2+L^2}{2}+\ell_fY,
+ \qquad \mathcal E_f'=-(Z')^2.
+ \end{gathered}
+\]
+Minimization over $Z$ gives potential $\ell_fY$ for $Y\ge0$ and
+$Y^2/4+\ell_fY$ for $Y<0$, so sublevels are uniformly compact
+on the fixed positive ranges of $p,\ell_f$. In an invariant
+zero-dissipation set, $L=-Z$. If $L>0$, then $Y=2Z$, $V=0$,
+and $V'=0$ gives $L=\ell_f$; if $L=0$, then $Z=0$, $Y\ge0$,
+but $Y''=b<0$ cannot remain there. The invariance principle therefore
+gives attraction to $(-2\ell_f,0,-\ell_f)$, including initially
+free states. The Hurwitz matrix \eqref{ent:normal-matrix} gives a
+common local exponential estimate on this fixed arc. Continuous
+dependence and a finite cover of the parameter and initial-state
+compact sets give a common finite fast capture time. Over it the
+actual slow drift is $O(\eps)$ and the closed-arc slip margin makes
+the profile error $O(e^{-c/\eps})$, so the actual trajectory enters
+the strict-contact neighborhood too.
+
+Subtract the moving equilibrium there. Its physical-time derivative
+is bounded on the fixed arc; the local Lyapunov inequality gives
+$|N-N_*(p,b)|\le Ce^{-c(t-t_c)/\eps}+C\eps$.
+The time integral of the slow-field discrepancy is $O(\eps)$.
+Gronwall and alignment at a transverse section, leaving a fixed
+positive time after capture, give
+\begin{equation}
+ \mathcal C_\eps(p_i)=C_1+O(\eps),\quad W(p_i)=O(\eps),\quad
+ t_\eps(p_i)-t_{{\rm rig},\nu}(p_i)=O(\eps).
+ \label{ent:fixed-initialization}
+\end{equation}
+The graph correction is $O(\eps)$ at this section. Capture before it
+may contain departures and recontacts.
+
+We now stop on partial intervals by
+$|\mathcal C_\eps-C_1|\le1$, $W\le\rho_0\sqrt p$, strict force
+bounds, the regular chart and $a/2\le-\dot p\le2a$, adding the
+slip bounds below. Choose $p_i,\rho_0$ small, then $K_L$ large,
+and finally $\eps$ small. On $p\ge K_L\sqrt\eps$ the positive
+term in \eqref{ent:signed-energy} is absorbed, and the rigid slip
+slope is $\gamma/a$. Requiring $u\ge c_{\rm sl}p$ gives a profile
+tail smaller than every fixed power of $\eps$. Integration in the
+actual decreasing $p$ direction gives
+\begin{equation}
+ W(p)\le H_\eps(p)+C\eps^2p^{\beta-4}+CR_\Phi/p,\qquad
+ H_\eps=CW(p_i)e^{-c(p_i^2-p^2)/\eps}.
+ \label{ent:safe-tracking}
+\end{equation}
+Indeed the forcing integral is
+$C\eps\int_p^{p_i}e^{-c(s^2-p^2)/\eps}s^{\beta-3}\,ds$;
+$s^2-p^2\ge2p(s-p)$ bounds it by $C\eps^2p^{\beta-4}$.
+Substitution into \eqref{ent:weak-transport} gives
+\begin{equation}
+ |\mathcal C_\eps(p)-C_1|\le
+ C\{\eps+\eps^2p^{1-\beta}+\eps^2p^{-7/2}
+                           +R_\Phi p^{-\beta-1/2}\}.
+ \label{ent:coefficient-bound}
+\end{equation}
+The principal transport integral is
+$\eps^2\int_p^{p_i}s^{-9/2}\,ds=O(\eps^2p^{-7/2})$.
+The weighted integral of $H_\eps$ is $O(\eps W(p_i))=O(\eps^2)$:
+above $p_i/2$ its width is $O(\eps)$, and below $p_i/2$ the fixed
+exponential absorbs every endpoint power. Thus the safe endpoint has
+$W=O(\eps^{\beta/2})$ and $\mathcal C_\eps-C_1=O(\eps^{1/4})$.
+These bounds improve the coefficient and relative-energy stops.
+The rigid slip on the bounded weak wedge is at least
+$3\gamma p/(4a)$ after reducing $p_i$; its physical normal
+correction is $o(p)$ and $k\sqrt\eps/p\le k_+/K_L$.
+The large choice of $K_L$ improves the slip stop. The force, chart
+and orientation bounds improve too, so the endpoint is reached.
+
+On $h_I\sqrt\eps\le p\le K_L\sqrt\eps$, where
+$h_I=ak_-/(2\sup\gamma)>0$, stop additionally at the actual
+threshold $u=\gamma\eps T$. Choose
+\begin{equation}
+ \kappa_{\rm tail}=\alpha\inf\gamma/2,\qquad
+ N_{\rm tail}=\kappa_{\rm tail}m>\beta_+/2+3/4.
+ \label{ent:tail-choice}
+\end{equation}
+The coarse energy radius makes the actual and graph slips differ by
+$O(\eps)$, so both are at least $(\inf\gamma)\eps T/2$ before
+this stop. Hence $R_\Phi\le C\eps^{N_{\rm tail}}$.
+Retain the positive $C_h/p$ in the equation for $W$.
+Since $\int C_h\,dt/p\le C_h\log(K_L/h_I)$ and
+$\Delta t\le C\sqrt\eps$, its bounded Gronwall factor gives
+\[
+ W\le C\{\eps^{\beta/2}+\eps^{N_{\rm tail}-1/2}\}
+       =O(\eps^{\beta/2}).
+\]
+The three contributions to weak transport on the annulus are
+$O(\eps^{(5-\beta)/2})$,
+$O(\eps^{1/4})+O(\eps^{N_{\rm tail}-\beta/2-1/4})$, and
+$O(\eps^{N_{\rm tail}+(1-\beta)/2})$.
+They give $\mathcal C_\eps-C_1=O(\eps^{1/4})$ throughout;
+\eqref{ent:coefficient-bound} also holds there up to a fixed factor.
+The component weights now yield
+$w_1,w_3,q_N^Tw=O(\eps^{\beta/2-1/4})=o(\sqrt\eps)$,
+$w_2=O(\eps^{\beta/2})=o(\eps)$.
+Together with $G_{1,V}=2\eps F$, these prove the normal bounds
+in \eqref{ent:threshold-normal} on every partial annulus.
+In particular all energy, coefficient, force, chart and orientation
+stops are strictly improved.
+
+Along a rigid trace, division of
+$\dot u_0=g_*+O(p)+O(p^{\beta-1})$ by
+$\dot p=-a+O(p)$ gives
+$u_{0,{\rm rig},\nu}=\gamma p/a+O(p^2)+O(p^\beta)$.
+Detuning subtracts $k\sqrt\eps$ without changing that trace.
+This proves the formula for $p_{\rm stop}$. At equal $p$, the
+inverse weak-coordinate estimate gives on the annulus
+\begin{equation}
+ u-u_{\eta,{\rm rig},\nu}(p)
+ =O(\eps^2+p^\beta\eps^{1/4})=o(\eps).
+ \label{ent:physical-slip-match}
+\end{equation}
+Also $\dot u=g_*+O(\sqrt\eps)+O(\eps^{N_{\rm tail}})
+<-\inf\gamma/2$. At the lower annular boundary the rigid slip
+is at most $-k_-\sqrt\eps/2+O(\eps)$, contradicting the positive
+slip stop and \eqref{ent:physical-slip-match}. The threshold is
+therefore reached first and is crossed strictly once. Earlier slip
+margins exclude a preceding crossing on this continuous passage.
+Expansion at the same rigid zero gives more explicitly
+\begin{equation}
+ |R_e|\le C\{\eps^2+\eps^{\beta/2+1/4}
+                  +\eps^{3/2}T+\eps^2T^2\}=o(\eps).
+ \label{ent:threshold-remainder}
+\end{equation}
+If the profile tail is kept separately it adds
+$C\eps^{N_{\rm tail}-1/4}=o(\eps)$. This proves the lemma.
+\end{proof}
+
+\subsection{The critical passage and its first force zero}
+
+The threshold sets $\tau=(t-t_e)/\eps-T$ and $U=u/\eps$, so
+$U(-T)=\gamma T$ exactly. Its normal error is
+$E_{N,e}=O(\sqrt\eps)$, including $Z$, and
+$(1+T)^2E_{N,e}\to0$. The power two matters because the saturated
+critical propagator has a quadratic neutral part.
+
+The limiting normal--slip equations are
+\begin{equation}
+ \begin{gathered}
+ Y'=V,\qquad Z'=-Z-L_+,\qquad L=Z-Y,\\
+ V'=C_G(1-\Phi_\theta(U))L_+,\\
+ U'=d_\lambda+[-h+\mu A_G(1-\Phi_\theta(U))]L_+.
+ \end{gathered}
+ \label{ent:critical-field}
+\end{equation}
+with normalization
+$(Y,V,Z,U-g_*\tau)\to(-2\ell,0,-\ell,0)$ as $\tau\to-\infty$.
+
+\begin{lemma}[The normalized critical passage]
+\label{lem:critical-pullback}
+This normalization determines a unique solution $\overline W$ on
+$\mathbb R$, with error $O(e^{\omega_c\tau})$ as $\tau\to-\infty$,
+for common $\omega_c>0$. Its finite first force zero $\tau_r$ satisfies
+\begin{equation}
+ Y_r^0=Z_r^0<0,\qquad q_{\rm in}=V_r^0>0,\qquad U_r^0>0,
+ \qquad q_{\rm in}+Y_r^0>0.
+ \label{ent:critical-release-data}
+\end{equation}
+The solution, first-zero time and release data depend continuously
+on $(\lambda,\theta)$; the four strict quantities have common
+positive lower bounds on the fixed compact classes.
+\end{lemma}
+\begin{proof}
+On a far left interval use positive contact. Define
+$If(\tau)=\int_{-\infty}^{\tau}f(s)\,ds$ and
+$Kf(\tau)=\int_{-\infty}^{\tau}e^{-2(\tau-s)}f(s)\,ds$.
+The equations with their incoming limits are equivalent to
+\[
+ \begin{gathered}
+ Y+2\ell=IV,\quad Z+\ell=KIV,\quad L=\ell+(K-\operatorname{Id})IV,
+ \\
+ U=g_*\tau-hI(L-\ell)+(\mu A_G/C_G)V,\\
+ V=I[C_G(1-\Phi_\theta(U))L].
+ \end{gathered}
+\]
+In $\|f\|_\omega=\sup_{\tau\le-T_0}e^{-\omega\tau}|f(\tau)|$,
+where $0<\omega<\min(2,\alpha\inf\gamma/2)$, the operators
+$I,K$ have norms $1/\omega,1/(2+\omega)$.
+The first four formulas reconstruct the state boundedly from $V$.
+On a fixed ball, sufficiently large common $T_0$ makes $L>0$ and
+$U$ lie in the positive tail. Both $1-\Phi_\theta(U)$ and its
+$U$ derivative are then bounded by $Ce^{\alpha\inf\gamma\tau}$.
+The last formula is a self-map contraction, with constant
+$Ce^{-\alpha\inf\gamma T_0}<1$. It gives the exponential tail.
+Any solution with the stated incoming limits first has exponentially
+small $V'$; integration from its zero incoming velocity gives these
+same formulas and places it in the contraction ball. This proves
+uniqueness. The locally Lipschitz positive-part field has at most
+linear growth, so continuation is global.
+
+The filter formula
+$Z(\tau)=e^{-(\tau-s)}Z(s)-\int_s^\tau e^{-(\tau-\xi)}L_+(\xi)\,d\xi$
+keeps $Z<0$. At $U=0$ its derivative is $d_\lambda+B_GL_+>0$, so $U$
+stays positive. Until a first force zero, $V'>0$, hence $V>0$.
+If force remained positive forever, $Y'=V$ would eventually make
+$Y>0$, contrary to $Y<Z<0$. A finite first zero exists.
+There $L'=-Z-L_+-V\le0$. If $L'=0$, differentiation from the
+contact side gives $L''(\tau_r^-)=Z_r<0$, forcing $L<0$ just
+before its first zero. Thus $L'=-(q_{\rm in}+Y_r^0)<0$.
+Uniform contraction, continuous dependence on compact intervals,
+and this transverse first zero prove continuous dependence of all
+the data. Compactness gives the common strict margins.
+\end{proof}
+
+\begin{lemma}[Compactly supported variations of the critical passage]
+\label{lem:profile-variation}
+Fix $\lambda$ and an admissible $C^4$ baseline $\Phi^{\rm b}$.
+Let $K\Subset(Q_\Phi,\infty)$ be a closed interval on which
+$(\Phi^{\rm b})'$ has a positive lower bound, and put
+\[
+ E_K=\{\eta\in C^4(\R):\operatorname{supp}\eta\subset K\}.
+\]
+On a sufficiently small open ball about zero in $E_K$, equipped
+with its $C^4$ norm, the normalized first-release time and state
+for $\Phi^{\rm b}+\eta$ are Fr\'echet $C^1$.
+For a direction $\psi\in E_K$, let $z$ be the fixed-time variation
+of the contact extension, in state order $(Y,V,Z,U)$, and write
+$q=q_{\rm in,\lambda}[\Phi^{\rm b}]=V(\tau_r)$ and
+$y=Y(\tau_r)=Z(\tau_r)$. Then
+\begin{equation}
+ D\tau_r[\psi]=\frac{z_Z(\tau_r)-z_Y(\tau_r)}{q+y},
+ \qquad Dq[\psi]=z_V(\tau_r).
+ \label{ent:profile-event-derivative}
+\end{equation}
+Let $F_{\Phi^{\rm b}}$ be the contact extension of
+\eqref{ent:critical-field}, obtained by replacing $L_+$ by $L$.
+With $b=(0,C_G,0,\mu A_G)^T$,
+$A=D_WF_{\Phi^{\rm b}}(\overline W)$ and
+$\zeta'=-A^T\zeta$, $\zeta(\tau_r)=e_V$, one has
+\begin{equation}
+ Dq[\psi]=-\int_{-\infty}^{\tau_r}
+           L(\tau)b^T\zeta(\tau)\psi(U(\tau))\,d\tau.
+ \label{ent:profile-response}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Choose a finite $\tau_a<\tau_r$ so negative that
+$U(\tau)>\sup K+1$ and $L(\tau)>\ell/2$ for
+$\tau\le\tau_a$. Every perturbation supported in $K$ vanishes
+on this entire baseline tail. Attach the same value
+$\overline W(\tau_a)$ to the perturbed forward initial-value
+problem. The attached orbit has the prescribed normalization;
+the tail uniqueness in Lemma~\ref{lem:critical-pullback} identifies
+it with the perturbed pullback. Conversely, any normalized perturbed
+orbit lies above $K$ sufficiently far in the past, where that same
+uniqueness applies. Thus the incoming state at $\tau_a$ is exactly
+independent of the shape.
+
+Use the contact extension through the baseline first release.
+Evaluation $(\eta,U)\mapsto\eta(U)$ is jointly $C^1$ on
+$E_K\times\R$, so finite-time ODE dependence from the common
+initial state is Fr\'echet $C^1$. At the event
+$L'=-(q+y)<0$, and the implicit-function theorem gives a nearby
+$C^1$ zero. The exact positive incoming tail, the positive minimum
+of $L$ on the preceding compact interval, and strict decrease in
+a small sign-changing event bracket exclude all earlier zeros.
+The extension therefore agrees with the true positive-part solution
+up to its first release.
+
+The fixed-time variation satisfies
+\[
+ z'=Az-L\psi(U)b,\qquad z(\tau_a)=0.
+\]
+Differentiating $Z-Y=0$ gives the event-time formula. Since
+$V'(\tau_r)=C_G[1-\Phi^{\rm b}(U(\tau_r))]L(\tau_r)=0$,
+the moving-event contribution to $Dq$ vanishes.
+For the fixed state event $H=Z-Y$ and output $J=V$, with no direct
+time or profile dependence, the terminal covector is therefore
+\[
+ \nabla J-\frac{\nabla J\cdot F}{\nabla H\cdot F}\nabla H
+ =e_V\ne0,
+ \qquad \nabla H\cdot F=-(q+y)\ne0.
+\]
+Pairing with the terminal adjoint gives
+$(\zeta^Tz)'=-L\psi(U)b^T\zeta$, hence
+\eqref{ent:profile-response}. Its integrand vanishes before
+$\tau_a$, so no integrability condition for the adjoint at negative
+infinity is needed. Small perturbations in $E_K$ remain admissible
+by the derivative margin on $K$, unchanged core and zero, and the
+finite compact-support contribution to (F4). The weighted and
+unweighted $C^4$ norms on $E_K$ are equivalent.
+\end{proof}
+
+\begin{theorem}[First release of the captured passage]
+\label{thm:detuned-release}
+Let $\sigma=\sqrt\eps$ and
+\begin{equation}
+ \mathcal D_\eps=(1+T)^2(E_{N,e}+e^{-\omega_c T})
+                      +\sigma(1+T)^3+\eps(1+T)^4\longrightarrow0.
+ \label{ent:critical-error}
+\end{equation}
+The contact passage from $p_i$ has a first release $t_r>t_e$.
+Slip remains positive, and its complete release state satisfies
+\begin{gather}
+ t_r=t_e+\eps\{T+\tau_r+O(\mathcal D_\eps)\},\quad
+ y_r=z_r=\eps^2\{Y_r^0+O(\mathcal D_\eps)\},
+ \label{ent:release-time-memory}\\
+ v_r=\eps\{q_{\rm in}+O(\mathcal D_\eps)\},\quad
+ u_r=\eps\{U_r^0+O(\mathcal D_\eps)\},\quad
+ \dot g_r=\eps\{q_{\rm in}+Y_r^0+O(\mathcal D_\eps)\}>c_0\eps,
+ \label{ent:actual-release}\\
+ |X_r-G|=O(\sigma),\qquad
+ p_r/\sigma\to H:=ak/\gamma,\qquad b_r/\sigma\to-\ell H.
+ \label{ent:release-slow}
+\end{gather}
+The leading normal--slip data depend only on $(\lambda,\theta)$.
+\end{theorem}
+\begin{proof}
+The exact scaled equations have $Y',Z'$ as in
+\eqref{ent:critical-field} and
+\[
+ V'=b+[p+\mu B(1-\Phi_\theta(U))]L_+,\qquad
+ U'=a_T+[B-\mu A+\mu A(1-\Phi_\theta(U))]L_+.
+\]
+Stop while $(Y,V,Z)$ stays in a fixed enlarged bounded neighborhood
+of the reference normal range, $|U-\overline U(\tau)|\le1$,
+and the mechanical state stays in a common chart. On $[-T,-T_0]$,
+also stop at the boundary of the convex positive-contact tail
+neighborhood used below. On the tail,
+$\overline U(\tau)=g_*\tau+O(e^{\rho\tau})$, so this tube and
+every joining segment satisfy $U\ge-\gamma\tau-C$.
+On every partial interval of length $T+C$, the mechanical field is bounded and
+$|X-G|\le CM_\eps$, $M_\eps=\sigma+\eps(1+T)$.
+Subtracting \eqref{ent:critical-field} gives zero residual in $Y,Z$
+and residuals
+\[
+ b+pL_++(\mu B-C_G)(1-\Phi_\theta(U))L_+,\qquad
+ (a_T-d_\lambda)+(B-\mu A+h)L_++\mu(A-A_G)(1-\Phi_\theta(U))L_+,
+\]
+of size $CM_\eps$. The term $b+pL_+$ is included.
+
+On $[-T,-T_0]$, the saturated linear part is
+\[
+ M_\infty=\begin{pmatrix}0&1&0&0\\0&0&0&0\\1&0&-2&0\\h&0&-h&0\end{pmatrix}.
+\]
+Its homogeneous solutions have constant $V$, affine $Y$, a decaying
+$Z-Y/2+V/4$, and at most quadratic $U$; hence
+$\|e^{M_\infty s}\|\le C(1+s)^2$ for $s\ge0$.
+In a convex positive-contact tail neighborhood the remaining
+nonlinearity is
+$(1-\Phi_\theta(U))L(0,C_G,0,\mu A_G)^T$ and its derivative is
+$Ce^{\omega_c\tau}$. Decrease $\omega_c$ if needed so the same
+exponent applies here and to the pullback tail. This follows from
+(F4) on every joining segment.
+Thus the profile tail has all needed moments through degree two;
+no slow-time derivative of its composition is used.
+For $D=|W_\eps-\overline W|$, Duhamel gives on each partial interval
+\[
+ \begin{aligned}
+ D(\tau)&\le C(1+\tau+T)^2a_\eps
+ +C\int_{-T}^{\tau}(1+\tau-s)^2e^{\omega_cs}D(s)\,ds,\\
+ a_\eps&\le C\{E_{N,e}+e^{-\omega_c T}
+                      +\sigma(1+T)+\eps(1+T)^2\}.
+ \end{aligned}
+\]
+Divide by $(1+\tau+T)^2$ and take the supremum. The integral
+coefficient is at most
+$Ce^{-\omega_c T_0}\int_0^\infty(1+s)^2e^{-\omega_cs}\,ds<1/2$
+after increasing $T_0$. Therefore
+$\sup_{[-T,-T_0]}D\le C\mathcal D_\eps$.
+This improves the scaled-state, positive-force and chart stops.
+On a common fixed interval from $-T_0$ past all reference releases,
+the positive-part field is uniformly Lipschitz. Stopped Gronwall
+gives the same bound and improves the remaining state stop.
+
+The reference signed quantity $L=Z-Y$ is positive before a common small bracket of
+$\tau_r$, has opposite endpoint signs there, and has a strictly
+negative derivative in the bracket. The exact identity
+$L'=-Z-L_+-V$ transfers this derivative margin and the signs to
+the actual trajectory. It therefore has exactly one zero there,
+at $\tau_r+O(\mathcal D_\eps)$, and no preceding zero.
+The threshold lemma supplies contact from $p_i$ to $t_e$.
+At physical $u=0$, $\dot u=a_T+B\lambda_N>0$ on the chart,
+so the initial positive slip persists. At the zero,
+$\dot g=\eps(V+Z)$; the data and strict opening follow.
+Finally the physical duration is $O(\eps(1+T))=o(\sigma)$.
+Integration of $\dot p=-a+O(M_\eps)$ gives
+\[
+ p_r=p_e-a\eps(T+\tau_r)
+       +O(\eps\mathcal D_\eps+\eps(1+T)M_\eps).
+\]
+The $a\eps T$ term cancels before using
+\eqref{ent:threshold-remainder}; the $b$ change is
+$O(\eps(1+T))$. This proves \eqref{ent:release-slow}.
+Uniqueness of the normalized critical solution proves the asserted
+dependence of the leading data.
+\end{proof}

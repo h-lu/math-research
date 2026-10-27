@@ -1,0 +1,85 @@
+% MIXED: exact labels and joins, schematic widths and free-graph shape.
+% The upper strip is an order diagram, not a coordinate projection or clock.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[
+ x=1cm,y=1cm,font=\small,
+ every node/.style={inner sep=1.5pt},
+ box/.style={draw=black!70,line width=.5pt,fill=black!3},
+ arrow/.style={-{Latex[length=1.6mm,width=1.1mm]},line width=.5pt},
+ guide/.style={draw=black!35,densely dotted,line width=.45pt}
+]
+ \node[anchor=west,font=\small\bfseries] at (0,5.75)
+   {(a) The complete ordered path};
+ \draw[arrow] (0,5.30) -- (14.4,5.30)
+   node[midway,above] {order along the limiting curve};
+ \draw[box] (0,4.45) rectangle (2.05,5.00);
+ \node at (1.025,4.725) {$I_{\lambda,\nu}$};
+ \fill (2.05,4.725) circle[radius=1.3pt];
+ \node[above right] at (2.05,4.95) {$G$};
+ \node at (2.60,4.725) {$\cdots$};
+ \draw[box] (3.05,4.45) rectangle (4.60,5.00);
+ \draw[box] (4.60,4.45) rectangle (6.15,5.00);
+ \draw[box] (6.15,4.45) rectangle (7.70,5.00);
+ \node at (3.825,4.725) {$\mathcal C_{\lambda,b_3}$};
+ \node at (5.375,4.725) {$\mathcal C_{\lambda,b_2}$};
+ \node at (6.925,4.725) {$\mathcal C_{\lambda,b_1}$};
+ \node at (8.15,4.725) {$\star$};
+ \draw[box] (8.60,4.45) rectangle (14.40,5.00);
+ \node at (11.50,4.725)
+   {$\mathcal C_{\lambda,d}|_{[0,\alpha]}$ \ (final prefix)};
+ \node at (5.15,4.15) {$L_d:\quad b_m=F_\lambda^{-m}(d)\longrightarrow0$};
+ \node[anchor=west] at (0,3.62) {One return:};
+ \draw[box,fill=black!9] (2.05,3.28) rectangle (5.85,3.88);
+ \draw[box] (5.85,3.28) rectangle (10.40,3.88);
+ \draw[box,fill=white] (10.40,3.28) rectangle (14.40,3.88);
+ \node at (3.95,3.58) {compression $[0,1]$};
+ \node at (8.125,3.58) {inherited release $[1,2]$};
+ \node at (12.40,3.58) {free flight $[2,3]$};
+
+ \node[anchor=west,font=\small\bfseries] at (0,2.77)
+   {(b) The terminal domain $\mathcal A_s$};
+ \draw[arrow] (.50,.05) -- (6.65,.05) node[right] {$d$};
+ \draw[arrow] (.50,.05) -- (.50,2.30) node[above] {$\alpha$};
+ \foreach \yy/\ll in {.05/0,.70/1,1.35/2,2.00/3}{
+   \draw (.44,\yy) -- (.56,\yy);
+   \node[left=2pt] at (.44,\yy) {$\ll$};
+ }
+ \draw[guide] (1.50,.05) -- (1.50,2.00) -- (.50,2.00);
+ \draw[guide] (.50,1.35) -- (5.45,1.35);
+ \node[below=3pt] at (1.50,.05) {$d_*$};
+ \node[below=3pt] at (5.45,.05) {$s$};
+ % Only the continuous graph and its endpoint values are asserted.
+ \draw[densely dashed,line width=.8pt]
+   (1.50,2.00) .. controls (2.80,1.98) and (4.20,1.40) .. (5.45,1.35);
+ \node[above] at (3.50,1.85) {$(d,j_s(d))$};
+ \draw[line width=.8pt] (5.45,.05) -- (5.45,1.35);
+ \node[rotate=90,above=3pt] at (5.45,.70) {contact};
+ \fill (1.42,1.92) rectangle (1.58,2.08);
+ \fill (5.37,-.03) rectangle (5.53,.13);
+ \draw[fill=white,line width=.7pt] (5.45,1.35) circle[radius=1.8pt];
+ \fill (5.45,.70) circle[radius=1.5pt];
+ \node[above=3pt] at (1.50,2.00) {$(d_*,3)$};
+ \node[right=3pt] at (5.45,1.35) {$(s,2)$};
+ \node[right=3pt] at (5.45,.70) {$(s,1)$};
+ \node[above right=3pt] at (5.45,.05) {$(s,0)$};
+ \node[draw=black!50,rounded corners=2pt,align=center,
+       text width=6.0cm,inner sep=6pt] at (11.10,1.45)
+   {Two parameter pairs, one ordered path:\\[3pt]
+    $\mathcal W_{\lambda,\nu,s}(d_*,3)
+       =\mathcal W_{\lambda,\nu,s}(s,0)$\\[3pt]
+    $d_*=F_\lambda^{-1}(s)$};
+\end{tikzpicture}
+\caption{Complete stopped paths and their terminal data.
+(a) The incoming arc is followed by returns accumulating at $G$
+and a final prefix; the displayed $b_3,b_2,b_1$ are the last three
+full-return bases. Strip widths encode order, not duration.
+(b) The free graph and contact segment form $\mathcal A_s$; the
+graph shape is schematic. Arrest is $(s,1)$. Matching squares
+represent the single endpoint identification of complete ordered
+paths, while the parameter pairs remain distinct. Identifying the
+two interval endpoints gives the quotient circle of
+Corollary~\ref{cor:accumulation-circle}.}
+\label{fig:ordered-stopped-path}
+\label{fig:terminal-parameter-domain}
+\end{figure}
