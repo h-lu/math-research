@@ -1,0 +1,101 @@
+\subsection{The complete regular chain}
+
+The regular primary, wedge and secondary comparisons form one chain.
+A common crossing direction on their actual overlaps gives a single
+zero bound for $K$. Near the parabolic corner, the primary coefficient
+cone shows that the outward direction is $-\operatorname{sign}C$,
+with $C=\bar d/\lambda$.
+
+\begin{proposition}\label{rw:regular-chain}
+Assume the fixed-field inequality \eqref{rw:counting:forcing}.
+The regular initial part of the ordered physical interval has at
+most one zero of $K$, and that zero is simple. Near $\mathcal P$
+this assertion includes the finite connection, the wedge and the
+regular secondary tags, with their actual overlaps.
+
+If a primary regular zero has occurred, its subsequent sign and
+outward derivative have sign $-\sigma_1$ on the remaining
+regular chain. The same conclusion holds if its initial point
+has
+\begin{equation}\label{rw:merge:strong-entry}
+ \tau_1\sigma_1<0,\qquad
+ \operatorname{sign}K=-\operatorname{sign}\sigma_1;
+\end{equation}
+in that case the regular chain is zero-free.
+If the first zero instead occurs in the wedge or in the regular
+secondary part, its subsequent sign and outward derivative have
+sign $-\bar d$, and $\bar a\bar d<0$.
+In particular a secondary terminal after that zero receives
+$\bar aC<0$ and $K$ of sign $-C$.
+\end{proposition}
+\begin{proof}
+Saturation and coefficient transport give the positive-central
+interval with fixed-fibre forcing. The common-input identity
+\eqref{rw:counting:input-change} identifies $K$ on its overlaps.
+
+On the primary compact regular part
+Lemma~\ref{rw:finite:regular-direction} gives at most one
+simple zero and its outward direction $-\sigma_1$.
+At a zero, or under \eqref{rw:merge:strong-entry}, the
+positive column quotient on a fixed regular overlap gives
+\begin{equation}\label{rw:merge:primary-cone}
+ |\tau_1|\le C|\sigma_1|,\qquad
+ |\nu|\le C e^{-p_\sharp^2/(20\epsilon)}|\sigma_1|.
+\end{equation}
+The second inequality involves coefficients only, so it persists
+as the input moves along the chain.
+Near $\mathcal P$, $\bar B+\bar m$ has a fixed positive
+margin. Thus $\bar c$ has the sign of $\sigma_1$,
+$|\bar a|\le C|\bar c|$, and
+$\bar a\bar c<0$: the latter follows from
+$(\bar a+\bar c)\bar c<0$.
+Equation \eqref{rw:merge:primary-cone} makes
+$\nu=o(|\bar c|)$, so $\bar d=\bar c+\nu$ has that same
+sign and $\bar a\bar d<0$.
+For $\lambda>0$, $C=\bar d/\lambda$ has that sign too.
+No division of the error estimate by $\lambda$ was used.
+
+On the wedge the two columns in
+\eqref{rw:secondary:wedge-columns}, after the fixed-fibre
+forcing column is absorbed, have negative margins and a
+strictly monotone quotient in the actual outward direction.
+Hence any zero is simple, requires $\bar a\bar d<0$ and
+crosses in direction $-\bar d$. The regular secondary
+formula \eqref{rw:secondary:regular-limit} has the same
+property: its lower constant has sign $-\bar a$, and
+$\log(Q/P)$ has sign $C$, with the derivative margin of
+Lemma~\ref{rw:secondary:chain-direction}.
+Near the center this follows from its divided columns;
+away from the center the nonzero value or derivative margin
+proves it directly. A zero with $C=0$ would force the
+center identity, so does not give an isolated zero.
+The strict-focus reciprocal endpoint uses the stated value
+or derivative estimate in that same regular secondary
+preparation.
+
+Apply Lemma~\ref{rw:counting:merge} on the actual open overlaps.
+After a primary zero, the coefficient cone makes $\bar d$ and
+$\sigma_1$ have the same sign, so all later crossings have the
+same direction. Without a primary zero, all wedge and secondary
+crossings have direction $-\bar d$. This gives one zero on the
+union; the local direction lemmas keep $K$ departing once it has
+sign $-\bar d$.
+
+The finite lower-double connections in
+Lemma~\ref{rw:fibre:parabolic-connections} require a separate
+observation. On the lower-cone boundary their regular prefix,
+finite bridge, wedge and every retained compact regular
+secondary interval have one strict action sign, opposite to
+$\bar a$. Their lower action dominates on every retained compact
+secondary part, so they contribute no zero; a singular end remains
+terminal. On the primary prefix
+$\tau_1$ has the sign of $\bar a$. If
+$\tau_1\sigma_1<0$, the sign $-\sigma_1$ is therefore
+opposite to this actual value of $K$. Thus the strengthened
+entrance cannot occur in these boundary neighborhoods.
+
+Under \eqref{rw:merge:strong-entry}, the primary part departs from
+zero. Its cone \eqref{rw:merge:primary-cone} carries the same direction
+to the later pieces, excluding a first zero there. This proves the
+strengthened assertion.
+\end{proof}

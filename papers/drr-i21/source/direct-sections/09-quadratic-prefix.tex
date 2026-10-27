@@ -1,0 +1,266 @@
+\subsection{A common-height estimate before a boundary root}
+\label{sec:direct-quadratic-prefix}
+
+Beyond the contraction range, suppose both drifts still have positive
+margins. Equal leading actions then relate the two radii at the same
+central height. The derivative of this relation has a useful
+cancellation: the quadratic coefficients drop out of the derivative
+ratio. This determines the crossing direction of \(\mathcal L\)
+before the positive branch reaches a boundary root, for either sign
+of the quadratic coefficient.
+
+Suppose the scales \eqref{eq:direct-quadratic-prefix-scales} hold with
+\(\delta\) and \(\epsilon_3=\ell/\delta\) sufficiently small. The drifts
+\(K_\sigma\) of \cref{sec:early-central-heights} have the quadratic
+comparisons
+\[
+ K_\sigma^0(x)=a-\sigma bx+\bar c x^2.
+\]
+Choose a positive terminal radius \(R\), possibly varying
+over the compact coefficient set, such that \(K_+^0\)
+has a fixed positive margin on \(0\le x\le R\).
+Assume also that the equal-action negative radii for these
+terminal actions lie in a fixed compact interval on which
+\(K_-^0\) has a fixed positive margin.
+
+On these comparison intervals set
+\[
+ \mathcal A_\sigma^0(x)=\int_0^x\frac{u\,du}{K_\sigma^0(u)},\qquad
+ \mathcal A_-^0(y)=\mathcal A_+^0(x),\qquad y=f(x).
+\]
+The drift margins make \(\mathcal A_-^0\) strictly increasing, so its
+inverse at the prescribed actions defines \(f\) on the chosen compact
+intervals.
+
+\begin{samepage}
+\begin{lemma}[Equal-action comparison]
+\label{lem:direct-equal-action-comparison}
+For \(x,y=f(x)>0\) in these intervals, put
+\(R_1(x)=K_-^0(y)/K_+^0(x)\). Then
+\begin{equation}
+\label{eq:direct-quadratic-critical-identity}
+ \frac{yy'}x=R_1,\qquad
+ \frac{R_1'}{R_1}
+       =\frac{b(1+x/y)}{K_+^0(x)},\qquad
+ \frac{(D+x^2-\lambda y^2)'}{2x}=1-\lambda R_1
+\end{equation}
+for any constants \(D,\lambda\). In particular, \(R_1\) is
+nondecreasing when \(b\ge0\).
+\end{lemma}
+
+\begin{proof}
+Differentiate \(\mathcal A_-^0(y)=\mathcal A_+^0(x)\) to obtain the first identity.
+Since \((K_-^0)'(y)=b+2\bar c y\) and
+\((K_+^0)'(x)=-b+2\bar c x\), logarithmic differentiation
+of \(R_1\) and substitution of the first identity cancel
+the two quadratic terms and give the second. The third
+follows by differentiating \(D+x^2-\lambda y^2\).
+\end{proof}
+\end{samepage}
+
+\begin{lemma}[Quadratic prefix]
+\label{lem:direct-quadratic-prefix}
+Fix a small \(d_f>0\) and put \(z_e=\delta\ell^2d_f\).
+On the central heights in \(\cH_p\) satisfying
+\[
+ h\ge z_e,\qquad\hbox{or}\qquad
+ 0<h<z_e,\quad |\eta_+(z_e;h)|/\ell\le R,
+\]
+the return displacement has at most two distinct zeros.
+Moreover, for any logarithmic height coordinate \(T=-c_T\log h\),
+where \(c_T>0\)
+is independent of the central height, every zero of
+\[
+ \mathcal L(T)=\log\!\left[
+       \Pi_p'(I_-(h))\frac{I_{-,h}(h)}{I_{+,h}(h)}\right]
+\]
+on this interval satisfies \(\mathcal L_T>0\).
+The constants are uniform on the compact coefficient and
+action domains just specified.
+\end{lemma}
+
+\begin{proof}
+By \cref{lem:early-central-heights}, there is \(r_0\in(0,R)\) such that
+the central heights with \(h\ge z_e\), or with \(h<z_e\) and
+\(x_+=|\eta_+(z_e;h)|/\ell\le r_0\), form an initial interval in \(T\) on
+which the return contracts; in particular \(\mathcal L<0\) there.
+
+\emph{Matching the branches.}
+It remains to consider \(r_0\le x=x_+\le R\). On the prescribed
+compact drift intervals, the central-height identity
+\eqref{eq:direct-terminal-radius-jets}, with \(Q=\delta\ell^2\), gives
+\[
+ \delta\log(h_\sigma(x)/Q)
+ =-\mathcal A_\sigma(x)+\delta M_\sigma(x),\qquad
+ \mathcal A_\sigma(x)=\int_0^x\frac{u\,du}{K_\sigma(u)},\qquad
+ \|M_\sigma\|_{C^4}\le C .
+\]
+The fixed terminal height here is \(z_e/Q=d_f\).
+
+The leading action relation must first give two passages with exactly
+the same central height. The assumed margins and compact negative
+inverse provide this matching: on the relevant terminal interval,
+\((\mathcal A_-^0)'(y)\) is bounded below. At the endpoints of a slightly
+enlarged negative radius
+interval, the trial passages have central heights bracketing the
+positive passage's central height. The order of central heights
+(\cref{lem:central-height-order}) gives a matching negative passage.
+Implicit differentiation then gives
+\begin{equation}
+\label{eq:direct-quadratic-action-relation}
+ x_-(x)=f(x)+O_{C^3}(\epsilon_3+\delta).
+\end{equation}
+
+\emph{Preparing the endpoints.}
+Apply \cref{lem:direct-small-height-continuation} with the scales
+\eqref{eq:direct-quadratic-prefix-scales},
+\(\mathcal U_0=x_\sigma^2/2\) and the constant entrance height factor
+\(\zeta_0=d_f\). Both radius intervals are compact and positive, and
+the assumed drift margins persist for small \(\epsilon_3\).
+Choose the common-cone height \(Z_1=Z_0\ge1\). The endpoints are
+\[
+ I_\sigma(x_\sigma)=b_\sigma-\tfrac12EA_\sigma x_\sigma^2
+                        +Ee_\sigma(x_\sigma),\qquad
+ A_\sigma\asymp1,\quad
+ \|e_\sigma\|_{C^3}\le C\delta(1+|\log\delta|),
+\]
+with \(A_-/A_+\le\exp(2C_{\rm cone}\sqrt{z_*}+o(1))\).
+Here \(E=\ell^2(z_*/(\ell^2Z_0))^{-2q_2}\); by
+\eqref{eq:direct-tail-amplitude} with \(t=\ell^2Z_0\),
+\(E\le z_*^{1/4}\ell^{3/2}\), since \(Z_0\ge1\) and
+\(|q_2|<1/8\) for small \(\delta\).
+
+Whenever the interval contains a central height in \(\cH_p\), the
+endpoints are within \(O(E)\) of admissible endpoints and therefore
+lie in \(\widetilde W_\pm\), by \cref{lem:exterior-multiplier-new}.
+Composing with the exterior transition gives a Taylor remainder of
+\(O(E)\) after division by \(E\). Inserting
+\eqref{eq:direct-quadratic-action-relation} gives
+\begin{equation}
+\label{eq:direct-quadratic-completed-model}
+ \frac{2\Delta(x)}{EA_+}
+ =D+x^2-\lambda f(x)^2+R_\Delta(x),\qquad
+ \|R_\Delta\|_{C^3}
+       \le C\{\epsilon_3+\delta(1+|\log\delta|)+E\},
+\end{equation}
+where \(D\) depends only on the parameters and
+\(0<\lambda_0\le\lambda\le\bar\lambda<1\).
+
+\emph{Controlling the crossing direction.}
+Apply \cref{lem:direct-derivative-ratio-count} on \(r_0\le x\le R\) to
+\(\mathcal F(x)=2\Delta(x)/(EA_+)\), with \(\phi=x^2\), \(\psi=f^2\),
+and the \(\lambda\in[\lambda_0,\bar\lambda]\) and remainder
+\(R_\Delta\) of \eqref{eq:direct-quadratic-completed-model}; put
+\(\mathscr Q=\mathcal F'/(2x)\). Here \(\phi'=2x\ge2r_0\),
+\(\phi''=2\), and \(\psi'/\phi'=R_1\) by
+\eqref{eq:direct-quadratic-critical-identity}.
+
+At \(b=0\), equal actions give \(y=x\) and \(R_1=1\).
+Uniform smooth dependence on the compact drift domains gives
+\(|R_1-1|\le Cb\). Fix \(b_*>0\) so small that
+\(1-\lambda R_1\ge(1-\bar\lambda)/2\) for \(0\le b\le2b_*\).
+The second case of the lemma gives \(\mathscr Q>0\), and hence
+\(\Delta_x>0\) in this range. For \(b\ge b_*\),
+\cref{lem:direct-equal-action-comparison} gives \(R_1'\ge c_*>0\),
+so the first case of the derivative-ratio lemma gives
+\begin{equation}
+\label{eq:direct-quadratic-weighted-derivative}
+ \mathscr Q'<0 .
+\end{equation}
+These bounds and cuts are fixed before \(\delta,\epsilon_3\) are reduced
+to meet the remainder threshold.
+
+To express these signs in the common logarithmic coordinate, use the
+positive central-height formula:
+\[
+ \frac{h_x}{h}=-\frac{\mathcal A_+'(x)}\delta+M_+'(x)<0.
+\]
+Thus \(x_T>0\) for every such coordinate \(T\). The contraction
+interval of large central heights and small radii has
+\(\mathcal L<0\), including the cut \(x=r_0\). For \(b\le2b_*\),
+\(\Delta_x>0\) and \(h_x<0\) give \(\mathcal L<0\) on the
+remaining interval as well. For \(b\ge b_*\), a zero of
+\(\mathcal L\) in the compact-radius part has \(\mathcal F'=0\).
+By \eqref{eq:direct-quadratic-weighted-derivative},
+\[
+ \Delta_{xx}=EA_+x\mathscr Q'<0,\qquad
+ \Delta_{TT}=\Delta_{xx}x_T^2<0.
+\]
+With \(m_+=hI_{+,h}>0\), the exact identity
+\[
+ \Delta_T=-\frac{m_+}{c_T}(\e^{\mathcal L}-1)
+\]
+therefore gives
+\begin{equation}
+\label{eq:direct-quadratic-prefix-zero-orientation}
+ \mathcal L=0\quad\Longrightarrow\quad
+ \mathcal L_T=-\frac{c_T}{m_+}\Delta_{TT}>0.
+\end{equation}
+
+Finally, the central heights considered here form one interval in
+\(\cH_p\), by \cref{lem:central-height-order}. In increasing \(T\),
+the contraction interval and the compact-radius part cover it.
+The two estimates apply to the same displacement and include their
+shared cut. The compact-radius estimate also includes the terminal cut
+\(x=R\), where the endpoints lie in \(\widetilde W_\pm\) and the
+exterior map is smooth.
+Thus every zero of \(\mathcal L\) on this interval satisfies
+\(\mathcal L_T>0\). The second case of
+\cref{cor:ordered-cover-zero-count} gives the two-zero bound.
+\end{proof}
+
+The compact comparison ends before the positive drift vanishes.
+The next lemma gives a strict overlap with the boundary-flow estimate
+near that root. It then combines both estimates for the same
+logarithmic slope ratio.
+
+\begin{lemma}[Joining the early and root intervals]
+\label{lem:prefix-root-cover}
+Under \eqref{eq:direct-quadratic-prefix-scales}, suppose \(R\) ranges
+over a compact positive interval
+and \(K_+^0\) has a fixed positive margin on \(0\le x\le R\).
+The negative equal-action radii then lie in a fixed compact interval
+where \(K_-^0\) has a positive margin, as required in
+\cref{lem:direct-quadratic-prefix}.
+
+Suppose further that \(K_+\) has a first positive root \(\alpha\) in a
+fixed compact positive interval. Choose \(0<w_a<R<\alpha\), with fixed
+positive lower bounds for \(w_a\) and \(R-w_a\), and a fixed small
+\(Y_f>0\) such that the inverse boundary-flow coordinate is defined on
+\([w_a,\alpha]\) up to \(Y_f\). Fix a small \(d_f>0\), put
+\(z_e=\delta\ell^2d_f\), and use a logarithmic height coordinate \(T\)
+as in \eqref{eq:direct-source-clock-convention}. For sufficiently small
+\(\delta,\epsilon_3\), the early heights in \(\cH_p\)
+\[
+ h\ge z_e,\qquad\hbox{or}\qquad
+ h<z_e,\quad |\eta_+(z_e;h)|/\ell\le R
+\]
+form an initial interval in \(T\); every zero of \(\mathcal L\) there
+satisfies \(\mathcal L_T>0\). Every remaining height has its positive
+projected state at \(z=\ell^2Y_f\) in \([w_a,\alpha)\), with a strict overlap at the
+early cut. If every critical point of \(\mathcal L\) in this root range
+satisfies \(\mathcal L_{TT}<0\), then \(\Delta_p\) has at most three distinct
+zeros on \(\cH_p\); if \(\mathcal L_T>0\) at every zero there, it has at
+most two.
+\end{lemma}
+
+\begin{proof}
+The fixed radius and drift margins bound the positive terminal actions.
+To obtain a compact negative inverse, note that
+for \(\bar c\ge0\), the action of \(a+by+\bar c y^2\)
+increases to infinity; for \(\bar c<0\), it diverges at the first
+positive root. Its inverse at each bounded positive action therefore
+lies strictly inside the positive-drift interval. Smooth dependence
+at a larger fixed action and compactness of the coefficient set give
+the claimed compact interval. Thus
+\cref{lem:direct-quadratic-prefix} applies to the early interval.
+
+For every remaining height, the positive graph hits \(R\) below
+\(Y=\delta d_f\). By \eqref{eq:direct-projection-energy}, its projected
+state there lies between \(R-C\delta d_f>w_a\) and \(R<\alpha\).
+\Cref{rem:direct-projected-continuation} keeps it increasing and below
+\(\alpha\), and continues the inverse projection to \(Y_f\), also at a double
+root. The same strict bounds hold at the early cut and give an overlap.
+\Cref{lem:central-height-order} orders the two intervals, and
+\cref{cor:ordered-cover-zero-count} gives the stated zero bounds.
+\end{proof}

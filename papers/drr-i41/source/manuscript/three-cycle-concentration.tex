@@ -1,0 +1,133 @@
+\subsection{Concentration of three-cycle parameters}
+\label{sec:three-cycle-concentration}
+
+The two-cycle estimate on a compact positive source interval also
+locates the coefficient sequences that can carry three cycles. We use
+the canonical slice throughout: for a field \(F\) near \(F_*\), put
+\(\theta_F=\theta(\mathscr C_0(F))\), with
+\(\mathscr C_0\) from \eqref{eq:fixed-coefficient-transport} and
+\(\theta\) from Lemma~\ref{lem:slice}. Define
+\(\gamma(F),\alpha_0(F),\alpha_1(F)\) by
+\eqref{eq:center-parameters} at \(\theta_F\), and, when
+\(\alpha_0(F)<0\), set
+\[
+ s(F)=\sqrt{-\alpha_0(F)},\qquad
+ p(F)=\frac{\alpha_1(F)}{s(F)}.
+\]
+Thus the ratio below refers to this fixed analytic slice.
+
+\begin{proposition}[Uniform two-cycle exclusion on compact positive ratios]
+\label{prop:compact-positive-two-cycle-exclusion}
+For every fixed \(0<\eta\le P<\infty\), there are an open
+coefficient neighborhood \(\mathcal V_{\eta,P}\) of \(F_*\) in
+the full twelve-coefficient quadratic germ and
+\(\eps_{\eta,P}>0\) such that every
+\(F\in\mathcal V_{\eta,P}\) with
+\(\alpha_0(F)<0\) and \(\eta\le p(F)\le P\) has at most
+two distinct isolated periodic orbits \(C\) satisfying
+\[
+ d_{\rm H}(\iota_*(C),\Gamma_{I4})<\eps_{\eta,P}.
+\]
+The return estimate holds on one complete physical receiver, retaining
+the original windows and clips and all inputs between its roots.
+\end{proposition}
+
+\begin{proof}
+Apply Lemma~\ref{ann:lem-compact-positive-domains} and
+Proposition~\ref{sharp:upper-annulus} on the enlarged fixed ratio
+interval \([\eta/2,2P]\). They give the two-zero multiplicity bound
+on one complete physical receiver, including its endpoint, middle and
+high ranges. Choose its cap so that
+\[
+ 0<b_{\eta,P}\le\min\{h_c,z_*\},\qquad
+ L_{\rm raw}b_{\eta,P}<d_{\rm out}/4,
+ \qquad |\alpha_0|<d_{\rm out}/4.
+\]
+All constants may depend on \(\eta,P\). The ordinary coefficient
+restriction in \eqref{eq:finite-multiplier} makes the actual finite
+multiplier satisfy the final bound used by that proposition.
+
+Now choose
+\(0<h_{\rm in}<\min\{b_{\eta,P}/2,d_{\rm in}/(4L_{\rm raw})\}\)
+and \(|\alpha_0|<d_{\rm in}/4\). The height estimate
+\eqref{eq:height-capture} and Lemma~\ref{lem:loc-capture} admit every
+sufficiently close whole cycle to this counted receiver, at its unique
+prime section hit. Lemma~\ref{lem:slice-bound-transfer}, with
+\(\mathcal B=\{\alpha_0<0,\eta\le p\le P\}\) and
+\(N_{\rm cyc}=2\), gives the full-germ neighborhood and collar.
+\end{proof}
+
+\begin{corollary}[Three-cycle concentration]
+\label{cor:three-cycle-concentration}
+Let \(F_n\to F_*\) in the full quadratic coefficient germ. Suppose
+each \(F_n\) has three distinct isolated periodic orbits
+\(C_n^1,C_n^2,C_n^3\), all of this same field, and
+\[
+ \max_{1\le j\le3}
+ d_{\rm H}(\iota_*(C_n^j),\Gamma_{I4})\longrightarrow0.
+\]
+Then \(\alpha_0(F_n)<0\) and \(\alpha_1(F_n)>0\) for all
+sufficiently large \(n\), and
+\[
+ p(F_n)=\frac{\alpha_1(F_n)}{\sqrt{-\alpha_0(F_n)}}
+ \longrightarrow0.
+\]
+\end{corollary}
+
+\begin{proof}
+The whole-coefficient bounds of
+Proposition~\ref{sharp:upper-coefficient-bounds}, on the common
+receiver followed by geometric capture, give at most two cycles when
+\(\alpha_0\ge0\), at most one when
+\(\alpha_0<0,\alpha_1\le0\), and at most two when
+\(\alpha_0<0,p\ge P_*\), for one fixed \(P_*<\infty\).
+In the last range the exact trace scaling is
+\(r_L=\alpha_1\), \(p_L=1\), \(a_L=-p^{-2}\);
+its independent small \(r_L,|\gamma|\) bounds and positive unscaled
+cap cover the entire large-ratio sector.
+The same-field transport used above puts these exclusions on one full
+coefficient neighborhood and collar. The sequence and all three cycle
+sequences eventually enter them. Hence eventually
+\(\alpha_0(F_n)<0\), \(\alpha_1(F_n)>0\), and
+\(0<p(F_n)<P_*\).
+
+Fix \(0<\eta<P_*\). Apply
+Proposition~\ref{prop:compact-positive-two-cycle-exclusion} to
+\([\eta,2P_*]\). Its neighborhood and collar are fixed for this
+\(\eta\), so the sequence and its three cycles eventually enter
+them. If \(p(F_n)\ge\eta\) there, all three cycles belong to
+one two-cycle sector, a contradiction. Thus \(p(F_n)<\eta\)
+eventually. This proves the limit. The argument uses one fixed
+\(\eta\) at a time and requires no common collar as
+\(\eta\downarrow0\).
+\end{proof}
+
+\begin{corollary}[A consequence in a positive-gamma subregion]
+\label{cor:positive-gamma-concentration}
+Along any subsequence in Corollary~\ref{cor:three-cycle-concentration}
+for which \(\gamma(F_n)>0\), if
+\[
+ \frac{s(F_n)}{\gamma(F_n)^{3/2}}\longrightarrow0,
+\]
+then
+\[
+ \liminf\frac{p(F_n)}{\sqrt{\gamma(F_n)}}\ge\sqrt{12}.
+\]
+\end{corollary}
+
+\begin{proof}
+Fix \(0<\pi_0<\sqrt{12}\). The second alternative of
+Lemma~\ref{deg:lem-raw-jacobian} supplies a fixed \(k_0>0\)
+and a uniformly contracting complete return when
+\[
+ \frac{s}{\gamma^{3/2}}\le k_0,\qquad
+ \frac{p}{\sqrt\gamma}\le\pi_0.
+\]
+Its fixed-window endpoint quotient bounds the derivative on the
+whole physical interval, including intervening inputs. After its
+coefficient and multiplier restriction, geometric capture gives one
+neighborhood and collar. The subsequence eventually satisfies the
+first inequality and enters both; three isolated cycles exclude the
+second. Thus its lower limit is at least every
+\(\pi_0<\sqrt{12}\), which proves the assertion.
+\end{proof}

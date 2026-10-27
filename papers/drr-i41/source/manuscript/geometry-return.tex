@@ -1,0 +1,526 @@
+\section{The full quadratic germ and its physical return}
+\label{sec:normalization}
+
+We first separate the affine and positive-time changes from the five
+essential coefficients. We then construct the return through both
+singular points, including the two regular closing maps. The resulting
+displacement is written in an affine section height, which will be used
+throughout the zero count.
+
+\subsection{Reduction to five parameters}
+
+The following five-parameter family is transverse to the seven affine
+and positive-time directions:
+\begin{equation}\label{eq:slice}
+ H_\theta:\quad
+ \begin{cases}
+ \dot X=AX-Y+X^2+(\mu_2+\mu_3)XY+\mu_1Y^2,\\
+ \dot Y=CX+X^2+XY+\mu_3Y^2,
+ \end{cases}\qquad
+ \theta=(A,C,\mu_1,\mu_2,\mu_3)
+\end{equation}
+near \(\theta_0=(1,1,0,0,0)\).
+
+\begin{lemma}\label{lem:slice}
+There are neighborhoods \(\mathcal U\subset\mathcal Q_2\) of \(H_0\) and
+\(\mathcal W\) of \((I,0,1,\theta_0)\) such that every
+\(H\in\mathcal U\) has a unique representation with parameters in
+\(\mathcal W\),
+\begin{equation}\label{eq:affine-action}
+ H(z)=a_{\rm t}L^{-1}H_\theta(Lz+c),
+ \qquad (L,c,a_{\rm t},\theta)\ \hbox{near }(I,0,1,\theta_0),
+\end{equation}
+with \(a_{\rm t}>0\).  The resulting maps
+\(H\mapsto \mathfrak A(H):=(L,c,a_{\rm t})\) and
+\(H\mapsto\theta(H)\) are
+analytic on \(\mathcal U\), and satisfy
+\(\mathfrak A(H_0)=(I,0,1)\) and \(\theta(H_0)=\theta_0\).
+\end{lemma}
+\begin{proof}
+The derivative of the coefficient map has columns
+\[
+ DH_0h-Dh\,H_0,\quad
+ h=(1,0),(0,1),(X,0),(Y,0),(0,X),(0,Y),
+\]
+followed by \(H_0\) and the five vectors
+\[
+ (X,0),\quad(0,X),\quad(Y^2,0),\quad(XY,0),\quad(XY,Y^2).
+\]
+In monomial order \((1,X,Y,X^2,XY,Y^2)\) in each component,
+the determinant is \(3\). The analytic inverse function theorem
+proves the claim; positivity of \(a_{\rm t}\) persists near \(1\).
+\end{proof}
+
+For \(\mathfrak A=(L,c,a_{\rm t})\), denote by
+\(T_{\mathfrak A}\) the extension of
+\(z\mapsto Lz+c\) to the closed hemisphere, obtained by normalizing
+\((X,Y,W)\mapsto(L(X,Y)^{\mathsf T}+cW,W)\).  After shrinking
+\(\mathcal U\) to have compact closure in the inverse-function
+neighborhood, these extensions and their inverses have a common Lipschitz
+constant \(1\le L_*<\infty\).  Moreover,
+\begin{equation}\label{eq:slice-graphic-motion}
+ d_{\rm H}\bigl(T_{\mathfrak A(H)}\Gamma,\Gamma\bigr)\longrightarrow0
+ \qquad\text{as }H\longrightarrow H_0,
+\end{equation}
+because \(\mathfrak A(H)\to(I,0,1)\).
+
+\subsection{The two singular points}
+
+In the chart at the positive \(Y\)-direction, use
+\(v=X/Y,\ z=1/Y\). Multiplying the vector field by \(z>0\) preserves
+the direction of its orbits in the finite plane and gives
+\begin{equation}\label{eq:raw}
+ \dot v=D_\theta(v,z)=P_\theta(v)+Q_\theta(v)z,\qquad
+ \dot z=-zG_\theta(v,z)=-z\{R_\theta(v)+S_\theta(v)z\},
+\end{equation}
+where
+\begin{equation}\label{eq:polynomials}
+ \begin{aligned}
+ P(v)&=\mu_1+\mu_2v-v^3,& Q(v)&=-1+Av-Cv^2,\\
+ R(v)&=\mu_3+v+v^2,& S(v)&=Cv .
+ \end{aligned}
+\end{equation}
+The physical side is \(z>0\); the equator \(z=0\) is invariant.
+We always use the positive-time chart field on this side.
+At the organizing parameter \(\theta_0=(1,1,0,0,0)\), the chart is
+\begin{equation}\label{eq:infinity-chart-field}
+ \dot v=-v^3-(1-v+v^2)z,\qquad
+ \dot z=-z(v+v^2+vz).
+\end{equation}
+The linearization is \(\bigl(\begin{smallmatrix}0&-1\\0&0\end{smallmatrix}\bigr)\).
+Eliminating the analytic unit \(1-v+v^2\) gives the nullcline
+\(z=-v^3/(1-v+v^2)\), on which
+\begin{equation}\label{eq:infinity-multiplicity-four}
+ \left.\dot z\right|_{\dot v=0}
+ =\frac{v^4}{(1-v+v^2)^2}.
+\end{equation}
+Here \((1+v)(1-v+v^2)=1+v^3\); the reduced zero has order four,
+the multiplicity of the nilpotent singularity at infinity.
+The organizing arc has equation
+\begin{equation}\label{eq:organizing-arc}
+ z_\Gamma(v)=\sqrt{1+v^2}-1
+\end{equation}
+and is traversed with decreasing \(v\); its expansion
+\(z_\Gamma(v)=v^2/2+O(v^4)\) gives the common equatorial tangent.
+Choose a small fixed \(\delta>0\) and the sections
+\(\Sigma_\pm=\{v=\pm\delta\}\), with small height intervals around this arc.
+Take the height intervals small enough that \(-D\) has a positive lower
+bound on their closures.
+On the fixed small chart, a coefficient shrink gives
+\begin{equation}\label{loc:signs}
+ Q<-q_0<0,\qquad G_v=1+2v+Cz>g_0>0,\qquad
+ P_\theta(\delta)<0,\quad G_\theta(-\delta,z)<0.
+\end{equation}
+
+The small zero of the transverse eigenvalue and the first two
+equatorial coefficients there are
+\begin{equation}\label{eq:center-parameters}
+ \gamma=\frac{-1+\sqrt{1-4\mu_3}}2,\qquad
+ \alpha_0=P(\gamma),\qquad \alpha_1=P'(\gamma).
+\end{equation}
+The Jacobian with respect to \((\mu_3,\mu_1,\mu_2)\) at \(\theta_0\)
+is \(-1\), so these, together with \(A,C\), are parameter coordinates.
+The translated polynomials and their rescalings are introduced in
+Section~\ref{sec:coefficient-regimes}. The five raw coefficients
+\(A-1,C-1,\gamma,\alpha_0,\alpha_1\) vary independently.
+
+For the finite saddle-node, set \(u=X+1,\ W=Y+u\).
+At \(\theta_0\),
+\[
+ \dot u=u^2-W,\qquad \dot W=u^2+(u-2)W .
+\]
+The zero set of the second component is an analytic graph
+\(W=\psi(u,\theta)\), used here only to locate equilibria.
+The first component on this graph has a Weierstrass factor
+\[
+ e(u,\theta)(u^2+b_1(\theta)u+b_0(\theta)),\qquad
+ e(0,\theta_0)=1/2 .
+\]
+Indeed, at \(\theta_0\) it equals \(u^2(1-u)/(2-u)\).
+Differentiation gives
+\[
+ b_0=C-A+O(|\theta-\theta_0|^2),\qquad
+ b_1=A-1+\mu_2+\mu_3+O(|\theta-\theta_0|^2).
+\]
+Consequently \(K=b_0-b_1^2/4\) is a discriminant coordinate with
+\(dK=dC-dA\) at the organizing field.
+We also write \(K_{\rm fin}=K\) for this finite-passage discriminant.
+
+The organizing analytic germ has eigenvalues $0,-2$ and a nonzero
+quadratic weak coefficient $1/2$. Thus its multiplicity is two, the
+case $\mu=1$ of the saddle--node normal form. Fix a finite joint
+differentiability order \(N\ge12\) before restricting the coefficients.
+The ordinary section maps and their inverses will be used through phase
+order three, while division by the discriminant costs at most one
+parameter derivative. The intrinsic root-collar kernels use phase order
+five, axis order six and selected mixed order seven; these estimates and
+the strong projection estimates are obtained from the analytic chart
+field. Choose the order for the normal-form theorem now, increasing it
+if necessary before choosing any neighborhood. This finite surplus
+accommodates coefficient differentiation and Hadamard division, so a
+jointly smooth normalizer of all orders is unnecessary.
+The finite-smooth multiparameter unfolding normal form
+\cite[Theorem~3 and formula~(2.2), October 2000 author copy p.~6]{DIR02} gives,
+by a joint \(C^N\) orbital equivalence preserving positive time,
+\begin{equation}\label{eq:finite-normalform}
+ \xi'=\eps_f+\frac{\xi^2}{1+b\xi},\qquad \eta'=-\eta .
+\end{equation}
+Here the parameter in the cited theorem is the complete vector
+\(\theta-\theta_0\). For \(\mu=1\), its polynomial \(P(\theta,\xi)\)
+is the constant \(\eps_f\). The reduction divides by the nonzero strong
+rate, which is positive at the organizing parameter and remains so
+nearby; it thus gives the stated positive-time equivalence. The theorem
+imposes no rank condition on the unfolding coefficients.
+The linear calibration
+\(t_{\rm nf}=2t,\ \xi=(X+1-Y)/8+O(|(X+1,Y)|^2)\) gives
+\(\eps_f=(C-A)/16+O(|\theta-\theta_0|^2)\).
+The double-equilibrium loci in the two descriptions coincide.
+In parameter coordinates \((K,\vartheta)\), Hadamard division gives
+\[
+ \eps_f(K,\vartheta)=K h(K,\vartheta),\qquad
+ h(K,\vartheta)=\int_0^1\partial_K\eps_f(tK,\vartheta)\,dt,
+ \qquad h(\theta_0)=1/16.
+\]
+Continuity makes \(h\) a positive unit on a smaller coefficient
+neighborhood.
+
+For fixed internal sections \(\xi=\pm\rho\), with \(1+b\xi>1/2\),
+the passage exists when \(K>0\) and is exactly
+\begin{equation}\label{eq:finite-multiplier}
+ \eta_{\rm out}=m_{\rm fin}\eta_{\rm in},\quad
+ m_{\rm fin}=e^{-T_f},\quad
+ T_f=\int_{-\rho}^{\rho}
+       \frac{d\xi}{\eps_f+\xi^2/(1+b\xi)}
+     =\frac{\pi}{\sqrt{\eps_f}}+O(1).
+\end{equation}
+We write \(m=m_{\rm fin}\) in the completed return below.
+Completing the square in \(\xi^2+b\eps_f\xi+\eps_f\) proves the last
+estimate. Differentiating its arctangent and logarithmic expressions
+also shows that each fixed finite parameter derivative of \(m\) is
+bounded by \(CK^{-M}e^{-c/\sqrt K}\). Thus \(m\) extends flatly
+by zero to \(K=0\), to the chosen differentiability order.
+If \(K\le0\), an orbit entering the selected channel approaches the
+saddle-node or the left equilibrium and cannot exit through
+\(\xi=\rho\). The strong sides of this box point inward.
+
+\subsection{The exact displacement}
+
+Let \(T_\theta:\Sigma_+\to\Sigma_-\) be the infinity transition when
+it exists in positive time. The rest of the return consists of two
+regular transitions and the finite passage
+\eqref{eq:finite-multiplier}; see Figure~\ref{fig:graphic-sections}.
+
+\begin{lemma}\label{lem:closing}
+There are uniformly regular increasing maps \(C_\theta,E_\theta\)
+on fixed section intervals such that the finite-side return is
+\(q\mapsto C_\theta(mE_\theta(q))\). Their derivatives and inverse
+derivatives are bounded through the chosen finite order on buffered
+section intervals.
+If \(a_\theta=C_\theta(0)\), \(f_\theta=C_\theta-a_\theta\),
+and \(d_\theta=E_\theta\), then in the affine coordinate
+\(x=z_{\rm in}-a_\theta\) the cycle equation is
+\begin{equation}\label{eq:return}
+ \Delta_\theta(x)=x-m\Pi_\theta(x)=0,\qquad
+ \Pi_\theta(x)=\mathcal C_{\theta,m}(T_\theta(a_\theta+x)),
+\end{equation}
+where
+\begin{equation}\label{eq:divided-closing}
+ \mathcal C_{\theta,m}(q)=d_\theta(q)
+       \int_0^1 f_\theta'(tm d_\theta(q))\,dt .
+\end{equation}
+In the output coordinate \(t\), the equivalent equation is
+\begin{equation}\label{eq:inverse-return}
+ S_\theta(t)-a_\theta-f_\theta(mt)=0,\qquad
+ S_\theta=(d_\theta\circ T_\theta)^{-1}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The parameter-dependent flow-box theorem on the two compact regular
+segments gives positively oriented \(E_\theta,C_\theta\), with bounded
+derivatives and reciprocal slopes on smaller fixed intervals.
+The integral in \eqref{eq:divided-closing} extends
+\(f_\theta(md_\theta(q))/m\) to \(m=0\), with positive slope
+\(f_\theta'(md_\theta)d_\theta'\). Substitution proves both equations
+and preserves isolated zeros and their multiplicities.
+\end{proof}
+
+At a zero, boundedness of \(\mathcal C_{\theta,m}\) gives
+\(|x|\le Cm\).
+In the inverse equation, the nonlinear closing term has an additional
+factor \(m^2\):
+\begin{equation}\label{eq:closing-quadratic}
+ f_\theta(mt)=mf_\theta'(0)t+
+ m^2t^2\int_0^1(1-u)f_\theta''(umt)\,du .
+\end{equation}
+The affine input keeps this small quadratic closing term explicit in
+the later derivative comparisons.
+
+The separate value-and-slope normalization
+\eqref{eq:reference-normalization} is applied to the actual input height
+and completed output height. It retains their two centers and gains;
+only the input normalization is affine in the physical incoming height.
+
+\subsection{Order and uniform transverse sections}
+\label{sec:localization}
+
+We first bound the through trajectories from above by an invariant graph.
+Choose \(z_{\rm r}=\kappa\delta\), with
+\(\delta\ll\kappa\ll1\). On
+\(z_{\rm r}/2\le z\le2z_{\rm r}\), a coefficient shrink gives
+\(|P|\le z_{\rm r}/8,\ Q\le-1/2,\ |G|\le C\delta\).
+The orbit through \((\delta,z_{\rm r})\) consequently has
+\(D\le-z_{\rm r}/8\) and \(|dz/dv|\le C\delta\).
+It crosses the chart inside this band, by a first-exit argument.
+Its graph \(\overline z_\theta(v)\) is the upper boundary; all
+selected section windows are strictly below it.
+
+\begin{lemma}\label{lem:loc-through}
+The heights on \(\Sigma_+\) which reach \(\Sigma_-\) in the chart
+below this upper boundary form an interval
+\begin{equation}\label{loc:through-interval}
+ \mathcal T_\theta=(\Theta_\theta,\overline z_\theta(\delta)] .
+\end{equation}
+Every such orbit has \(D<0\). Both \(T_\theta\) and
+\begin{equation}\label{loc:speed-margin}
+ \sigma_\theta(h)=\min_{|v|\le\delta}
+          \{-D_\theta(v,z_\theta(v;h))\}
+\end{equation}
+are strictly increasing functions of the input \(h\).
+\end{lemma}
+\begin{proof}
+Every physical input has \(D<0\) on the right section by
+\eqref{loc:signs}. On the nullclines,
+\begin{equation}\label{loc:nullcline}
+ \dot D|_{D=0}=-zQG,\qquad \dot G|_{G=0}=G_vD .
+\end{equation}
+A first crossing from \(D<0\) to \(D>0\) requires \(G>0\);
+equality would be an equilibrium. The quadrant \(D>0,G>0\)
+is forward invariant by these identities, so this orbit cannot
+subsequently reach the left section. A first terminal nullcline hit on
+\(v=-\delta\) is also impossible: there \(\dot D<0\) by
+\eqref{loc:signs}. A through orbit therefore has \(D<0\) everywhere
+and solves
+\begin{equation}\label{loc:graph-equation}
+ z_v=-zG/D .
+\end{equation}
+Scalar uniqueness strictly orders these graphs. A graph above a through
+graph has smaller \(D\), since \(Q<0\), and cannot cross either
+\(D=0\) or the invariant upper boundary. It also passes through;
+openness proves the interval assertion and ordering proves that \(T\)
+increases. The positive difference of the two \(-D\)-values has a
+positive minimum on the compact \(v\)-interval, so \(\sigma\) increases.
+\end{proof}
+
+The lower endpoint is a stopped limiting passage. A \emph{gap} is the
+positive height difference from it on a specified transverse cut,
+distinct from the central height.
+
+\begin{lemma}\label{lem:loc-stopped-passage}
+There are \(0<r<\delta\) and \(d_0,c_r>0\), independent of the
+through orbit and of the sufficiently small coefficient, such that
+every through orbit with endpoints in the selected outer windows and
+\(\sigma_\theta<d_0\) crosses \(v=r\) and \(v=-r\) once, in order.
+On \(r\le |v|\le\delta\) it has \(-D\ge c_r\).
+The two outer transitions consequently have uniformly bounded
+derivatives and inverse derivatives of any prescribed finite order
+on slightly larger fixed domains.
+\end{lemma}
+\begin{proof}
+The incidence set
+\(\mathcal E_\theta=\{D=0,\ zG=0\}\) at \(\theta_0\) meets the
+small closed chart only at the origin. Compactness puts the whole
+nearby incidence set in \(|v|<r/3\).
+Choose a neighborhood \(\mathcal O\) of it in \(|v|<2r/3\).
+The endpoint lower bounds persist on the selected outer windows.
+At an interior minimum of \(-D\) on a through graph,
+\begin{equation}\label{loc:minimizer-identity}
+ D\,D_v-QzG=0 .
+\end{equation}
+Transversality excludes a minimum near the fixed outer sections.
+As \(\sigma_\theta\to0\), \eqref{loc:minimizer-identity} gives
+\(|zG|\le C\sigma_\theta\); hence the minimizing point must enter
+\(\mathcal O\). This proves the first assertion for some \(d_0\).
+If the outer speed had no positive lower bound, a limiting orbit
+would have a point with \(D=0\), \(D\le0\) on both time sides,
+and thus \(\dot D=0\). By \eqref{loc:nullcline} this point lies
+in \(\mathcal E\), a contradiction. The decreasing coordinate \(v\)
+now gives all ordered hits. The hitting-time theorem on these
+uniformly transverse compact slabs proves the derivative bounds.
+\end{proof}
+
+Fix nested section windows, whose interiors contain the corresponding
+intersections of the organizing graphic, and speed bounds
+\begin{equation}\label{loc:nested-buffers}
+ K_\pm\Subset K_\pm^\sharp\Subset\Sigma_\pm,\qquad
+ 0<d_{\rm in}<d_{\rm out}<d_0 .
+\end{equation}
+The inner and outer sets specified by
+\[
+ h\in K_+,\quad T_\theta(h)\in K_-,\quad \sigma_\theta(h)\le d_{\rm in},
+\]
+and respectively by the interiors of \(K_\pm^\sharp\) and
+\(\sigma_\theta(h)<d_{\rm out}\), are intervals, denoted by
+\(J_\theta^{\rm in}\subset J_\theta^{\rm out}\).
+All intervening transverse sections have nested windows as well.
+The central height
+\begin{equation}\label{loc:central-height}
+ h_\theta(h)=z_\theta(\gamma(\theta);h)
+\end{equation}
+is positive and strictly increasing on \(J_\theta^{\rm out}\).
+For any fixed raw height cap \(h_*>0\), define the affine physical
+receiver
+\begin{equation}\label{loc:analytic-receiver}
+ I_\theta(h_*)=
+ \{x:\ a_\theta+x\in J_\theta^{\rm out},
+       \ 0<h_\theta(a_\theta+x)<h_*\}.
+\end{equation}
+It is an interval, possibly empty. Thus the whole interval between any
+finite collection of its inputs satisfies the same input, inverse-output
+and speed restrictions. These geometric restrictions define the domain
+before any zero estimate is applied, and keep it on the through side of
+the stopped boundary.
+
+The estimates in the following sections choose a positive cap
+\(h_{\rm out}\) in \eqref{loc:analytic-receiver} with strict buffers.
+Fix this cap and the nested windows before the final independent raw
+coefficient restrictions and the multiplier bound. Subsequent restrictions
+retain these caps and section bounds. After these choices, the following
+capture lemma places all nearby complete cycles below a smaller cap
+\(0<h_{\rm in}<h_{\rm out}\).
+
+\begin{lemma}\label{lem:loc-capture}
+For every fixed set of these admissible nested windows and speed bounds in
+\eqref{loc:nested-buffers}, and every \(h_{\rm in}>0\), there
+are a coefficient neighborhood \(\mathcal V_0\) of \(\theta_0\) and
+\(\eps_0>0\) such that, for every \(\theta\in\mathcal V_0\), every periodic
+orbit \(C\) of \(H_\theta\) with
+\(d_{\rm H}(\iota_0(C),\Gamma)<\eps_0\) follows the selected
+positive-time circuit and has \(K>0\).
+It meets the return section once in its prime period.
+Its infinity arc has input in \(J_\theta^{\rm in}\), all selected
+transverse hits in the inner windows, and
+\(0<z(\gamma)<h_{\rm in}\).
+\end{lemma}
+\begin{proof}
+Surround the two singularities by small blocks and the two compact
+regular branches by flow boxes, with nested transverse windows.
+In the finite normal-form box take weak faces \(\xi=-\rho\) and
+\(\xi=\rho\), with transverse windows about the two organizing hits.
+The weak speed at these fixed faces is positive after a coefficient
+shrink. Thus they are respectively entrance and exit faces. The strong
+faces \(\eta=\pm\eta_0\) point inward, since \(\eta'=-\eta\),
+and are chosen away from the organizing arc. Remove from the two weak
+faces the parts outside the transverse windows. These parts and the
+strong faces are compact and disjoint from \(\Gamma\).
+
+The infinity block has transverse faces \(v=\delta\) and
+\(v=-\delta\), the invariant equator below, and the invariant graph
+\(\overline z_\theta\) above. At the two selected face windows the
+speed \(D\) is uniformly negative. Its upper face and the portions
+of the transverse faces outside these windows stay a positive distance
+from \(\Gamma\). The two regular flow boxes join the finite exit to
+the right infinity entrance and the left infinity exit to the finite
+entrance, in positive time. Their lateral faces have the same positive
+distance property. Choose the Hausdorff radius below all these boundary
+distances, which persist for nearby coefficients. A close cycle must
+visit both regular branch boxes, because it approximates the complete
+graphic. It can leave each visited box only through the selected next
+face; the equator cannot be crossed by uniqueness. These entrances and
+exits therefore force the finite channel, one regular branch,
+\(\Sigma_+\to\Sigma_-\), and the other regular branch in this order.
+The finite channel has no exit for \(K\le0\), so \(K>0\);
+Lemma~\ref{lem:loc-through} gives \(D<0\) on the infinity passage.
+
+Every intersection of the cycle with the selected connected segment
+of \(\Sigma_+\) lies in its inner window and has the same transverse
+orientation. A prime periodic orbit of a planar vector field is a
+Jordan curve. Along a connected transverse segment its intersections
+alternate between entering and leaving its bounded complementary
+component. Hence these equally oriented intersections consist of one
+point. The same circuit then contains one infinity arc, and its height
+is one isolated zero of \eqref{eq:return} when the cycle is isolated.
+
+If the uniform inner bounds failed, take
+\(\theta_n\to\theta_0\) and \(C_n\) with
+\(d_{\rm H}(\iota_0(C_n),\Gamma)\to0\).
+Let \(A_n\) be the unique infinity-block subarc selected above and \(A_0\)
+the complete organizing arc in that block.
+Every Hausdorff limit of \(A_n\) is contained in \(A_0\).
+Conversely every interior point of \(A_0\) is approached by
+\(\iota_0(C_n)\), and the selected circuit forces the approaching
+points to be on \(A_n\); closure includes the endpoints.
+Thus \(d_{\rm H}(A_n,A_0)\to0\).
+For a common modulus of continuity \(\omega\),
+\[
+ \left|\min_{A_n}(-D_{\theta_n})-\min_{A_0}(-D_{\theta_0})\right|
+ \le \|D_{\theta_n}-D_{\theta_0}\|_\infty
+          +\omega(d_{\rm H}(A_n,A_0)).
+\]
+Since the minimum on \(A_0\) is zero, \(\sigma_{\theta_n}(A_n)\to0\).
+The hits of \(v=\gamma(\theta_n)\) converge to \((0,0)\), the unique
+hit of \(v=0\) on \(A_0\), and all transverse hits enter the inner
+windows by continuity. This contradiction supplies one coefficient
+neighborhood and one Hausdorff radius.
+\end{proof}
+
+\subsection{Transferring a slice bound}
+
+The same geometric transfer will be used for the full coefficient cover
+and for its ratio-restricted parts.
+
+\begin{lemma}\label{lem:slice-bound-transfer}
+Let $\mathcal U_5$ be a neighborhood of $\theta_0$, let
+$\mathcal B$ be any subset of the slice parameter space, and fix
+$\eps_5>0$ and an integer $N_{\rm cyc}\ge0$.
+Suppose every $\theta\in\mathcal U_5\cap\mathcal B$ has at most
+$N_{\rm cyc}$ distinct isolated cycles at whole-graphic Hausdorff
+distance less than $\eps_5$ from $\Gamma$.
+There are one open neighborhood $\mathcal V$ of $F_*$ in
+$\mathcal Q_2$ and one $\eps>0$ such that every $F\in\mathcal V$
+with $\theta(\mathscr C_0(F))\in\mathcal B$ has at most
+$N_{\rm cyc}$ distinct isolated periodic orbits $C$ satisfying
+$d_{\rm H}(\iota_*(C),\Gamma_{I4})<\eps$.
+The transport preserves the complete
+marking, positive time and return-zero multiplicities. The maps and
+their inverses also preserve whole-orbit Hausdorff convergence to the
+marked graphics as the fields tend to $F_*$.
+\end{lemma}
+\begin{proof}
+For $H=\mathscr C_0(F)$ use the analytic decomposition in
+Lemma~\ref{lem:slice} for this field. Enlarge $L_0$ to bound both $S$ and
+$S^{-1}$, and use the common bound $L_*$ for
+$T_{\mathfrak A(H)}$ and its inverse. Continuity gives an open
+neighborhood $\widehat{\mathcal V}$ of $H_0$ on which
+\begin{equation}\label{eq:lift-neighborhood}
+ \theta(H)\in\mathcal U_5,\qquad
+ \eta(H):=d_{\rm H}(T_{\mathfrak A(H)}\Gamma,\Gamma)<\eps_5/2.
+\end{equation}
+Set
+\begin{equation}\label{eq:original-coefficient-neighborhood}
+ \mathcal V=\mathscr C_0^{-1}(\widehat{\mathcal V}),
+\end{equation}
+an ordinary open neighborhood in all twelve coefficients, and take
+\begin{equation}\label{eq:original-collar-radius}
+ \eps=\frac{\eps_5}{2L_*L_0}.
+\end{equation}
+The fixed change and $w=LZ+c$ send a cycle $C$ of this same field
+to a cycle $\widetilde C$ of $H_{\theta(H)}$, with
+\[
+ \iota_0(\widetilde C)=T_{\mathfrak A(H)}S(\iota_*(C)).
+\]
+Writing $d_{\rm original}=d_{\rm H}(\iota_*(C),\Gamma_{I4})$
+and $d_{\rm slice}=d_{\rm H}(\iota_0(\widetilde C),\Gamma)$,
+we have
+\begin{align}
+ d_{\rm slice}&\le L_*L_0d_{\rm original}+\eta(H)<\eps_5,
+                                      \label{eq:two-map-hausdorff}\\
+ d_{\rm original}&\le L_0L_*(d_{\rm slice}+\eta(H)).
+                              \label{eq:two-map-hausdorff-reverse}
+\end{align}
+The affine diffeomorphisms and positive time factors biject cycles,
+preserving distinctness, isolation, the two branches and their marked
+order. The induced transverse return maps are locally conjugate, so
+zero multiplicities are preserved as well. The first inequality applies
+the slice bound; both inequalities and $\eta(H)\to0$ give the
+convergence assertion as the fields tend to the organizing field.
+\end{proof}

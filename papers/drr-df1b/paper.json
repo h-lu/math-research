@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "slug": "drr-df1b",
+  "title": "Exact cyclicity two of the degenerate quadratic graphic DF₁b",
+  "authors": [
+    "Haibo Lu"
+  ],
+  "version": "2026-10-20",
+  "abstract": "Whole-graphic cyclicity exactly two for each fixed 0<b<2, in the full local quadratic coefficient space, with compact-modulus uniformity.",
+  "topics": [
+    "DRR program",
+    "quadratic vector fields",
+    "cyclicity"
+  ],
+  "doi": null,
+  "rights": {
+    "license": null,
+    "note": "No new license is granted by this collection."
+  },
+  "validation": {
+    "scope": "The author PDF, all author TeX, figures, bibliography, build entry point and PDF metadata sanitizer are included. File identities and source references were checked; no new mathematical correctness, numerical or proof-assistant certification is asserted.",
+    "formal_verification": false
+  },
+  "artifacts": [
+    {
+      "path": "paper.pdf",
+      "role": "author-manuscript",
+      "sha256": "5c7ce3bce0c960e4b8cb7d530edb7df29989472b4dda03cbae1dc67003aa8728"
+    },
+    {
+      "path": "source/README.md",
+      "role": "author-source",
+      "sha256": "7b9d381386c75cf36868175879082c9d5dbb4b162b8df0ce0b10b389be42f641"
+    },
+    {
+      "path": "source/appendices/contact-forcing.tex",
+      "role": "author-source",
+      "sha256": "acf408eec84a212093e601087e085156435947c361280612f972f6657e616202"
+    },
+    {
+      "path": "source/appendices/geometry.tex",
+      "role": "author-source",
+      "sha256": "691a96092bff2ee5dd6ce91eee262ef73f69bd44f5329df89981c38dbb52d3c8"
+    },
+    {
+      "path": "source/appendices/lower-complement.tex",
+      "role": "author-source",
+      "sha256": "fec76435696973c5eaaca4ef11d65a8bfb71d073ae3b7ce32246d2ac7d837460"
+    },
+    {
+      "path": "source/appendices/simple-contact.tex",
+      "role": "author-source",
+      "sha256": "6807f226e6f5f127b1e1ef7d56b5495eb8db98717582eb7a78dbd2e4d7d85f07"
+    },
+    {
+      "path": "source/appendices/transition-estimates.tex",
+      "role": "author-source",
+      "sha256": "c30ed2aac515270744787bd18a42abb6a020a2a97906b8766cc76c2b088caa7a"
+    },
+    {
+      "path": "source/appendices/whole-period.tex",
+      "role": "author-source",
+      "sha256": "4e5b862846aceea91b12db370886c1fd99076e6450dcec3867d7798f7c491fe1"
+    },
+    {
+      "path": "source/build.py",
+      "role": "author-source",
+      "sha256": "929a6ef09f1aa8a41dd7ef48c35c9f11ab79054cabe3b35925564ab6dfbd44d5"
+    },
+    {
+      "path": "source/figures/collision-passages.tex",
+      "role": "author-source",
+      "sha256": "96f5398b87047b87327b4b0a64c94a27b3792dd83048f0a28d237eeee622370c"
+    },
+    {
+      "path": "source/figures/df1b-graphic.pdf",
+      "role": "author-source",
+      "sha256": "a21a88af98817be229e50e68483f4059faa4b2902c26c33b8075ba36453bea13"
+    },
+    {
+      "path": "source/figures/graphic.tex",
+      "role": "author-source",
+      "sha256": "b51d3f2a2b361509d0a830601fae90aee5f9e823d8c1de18f053326668ba9ecd"
+    },
+    {
+      "path": "source/figures/two-saddle-connector.tex",
+      "role": "author-source",
+      "sha256": "33ebbf38e1918e9ef5e1024887f83f8f8850ec6a0278ee4b70f39fdf299bf3d1"
+    },
+    {
+      "path": "source/main.tex",
+      "role": "author-source",
+      "sha256": "86348d287535325f619b7ac9dac1be675b72c4eae49789b82df690c8892092f3"
+    },
+    {
+      "path": "source/references.bib",
+      "role": "author-source",
+      "sha256": "23be8451d6e812614efea115663e687641be5e826dee19997aae89a5c1d53209"
+    },
+    {
+      "path": "source/sections/collision.tex",
+      "role": "author-source",
+      "sha256": "f402b5ce20bcf94dc407e7c72a0cd07f26a41963be38460fc3b3dead643c9f62"
+    },
+    {
+      "path": "source/sections/combination.tex",
+      "role": "author-source",
+      "sha256": "4998d5c976c2cff2577c3286c605e2c979feb09c5e2e5cc5f69868573e74f251"
+    },
+    {
+      "path": "source/sections/counting.tex",
+      "role": "author-source",
+      "sha256": "014db00eedd4d8dde07057cf482ebd580f7032a422bb9710895b5e51b40745e3"
+    },
+    {
+      "path": "source/sections/introduction.tex",
+      "role": "author-source",
+      "sha256": "c4541b9e31166a8b3a0d2dee59bae30e28d1623d8343c9b95f9f2e5a0ec9b6f4"
+    },
+    {
+      "path": "source/sections/lower.tex",
+      "role": "author-source",
+      "sha256": "a1d53166797b60f2e477a9cb638371cff5a3f182727a593c670acfb1fe47e918"
+    },
+    {
+      "path": "source/sections/normal-coordinates.tex",
+      "role": "author-source",
+      "sha256": "ea63d5a8c33beb3d2b4849a68264a9c66a67153be17aa349e17f73251117f9f8"
+    },
+    {
+      "path": "source/sections/parameter-cover.tex",
+      "role": "author-source",
+      "sha256": "bd9e3bd75b810a9c78610e63b59e8a4970fa97f98b4a57be9a069483a9929f45"
+    },
+    {
+      "path": "source/sections/quadratic-transfer.tex",
+      "role": "author-source",
+      "sha256": "e71fa7ecba1354577f635f013a9a6aaa40808ff752a8f1477dc6cfaba39df80f"
+    },
+    {
+      "path": "source/sections/return-framework.tex",
+      "role": "author-source",
+      "sha256": "44381e9948468330033815e9a3b859d49c52af8844957a692b3e1b06e1572f1b"
+    },
+    {
+      "path": "source/sections/two-endpoints.tex",
+      "role": "author-source",
+      "sha256": "ab8f4b47353a660050ec306f16bc868df8e6ac9a6cb5638deb6505bd76e44fdc"
+    },
+    {
+      "path": "source/tools/sanitize-pdf-metadata.py",
+      "role": "author-source",
+      "sha256": "abb80c3cab7e76cd4c27bc95c98e108a7a5470386f58c6c3f5829df8c243722c"
+    }
+  ]
+}

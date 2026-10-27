@@ -1,0 +1,196 @@
+\section{A common normal-product coordinate}\label{sec:normal-product}
+
+At a simple saddle, a slow-root collision and the lower endpoint, we
+start from a selected invariant graph with a fixed normal spectral gap.
+The construction below separates the base and normal equations while
+preserving that graph. It gives a common tube, uniform finite phase
+derivatives, and the small coupling factor needed when passing to
+physical sections. Each application first constructs its selected graph.
+
+The persistence result of
+\cite[Theorem~3, p.~215]{Fenichel1971} assumes a $C^r$ field,
+a compact connected properly embedded $C^r$ invariant manifold,
+a hyperbolic splitting, and the source rate inequalities
+$\sigma^\pm(m)<1/r$ for every point of that manifold.
+We apply it to compact boundaryless extensions after establishing a
+fixed normal gap and finite-order rate domination. Its direct conclusion
+is invariant-manifold existence. Selection by the tail or incoming
+separatrix, the sharp forcing factor, uniform phase jets, and physical
+passage are adaptations proved in Sections~\ref{sec:simple-contact-tools},
+\ref{sec:positive-constant}, \ref{sec:two-endpoints}, and
+\ref{sec:lower-complement}.
+
+\begin{lemma}\label{lem:uniform-normal-product}
+Fix an integer $j\ge4$ and nested compact intervals
+$I_0\Subset I_1\Subset I_2$. Suppose a chosen invariant graph has been
+translated to $u=0$ and the equations are
+\begin{equation}\label{eq:uniform-normal-input}
+ \dot x=\tau v(x)+\rho c(x,u)u,\qquad
+ \dot u=B(x,u)u,\qquad 0<\tau\le\tau_0,
+ \quad 0\le\rho\le1.
+\end{equation}
+On a fixed tube over $I_2$, suppose $v,c,B$ have common
+$C^{2j+6}$ bounds in $(x,u)$ and $B$ has one sign with $|B|\ge a_*>0$.
+Then, after decreasing $\tau_0$ and the tube radius, there are exact
+$C^j$ coordinates on a common tube over $I_0$ in which
+\begin{equation}\label{eq:uniform-normal-product}
+ \dot\theta=\tau v(\theta),\qquad
+ \dot\eta=b(\theta)\eta,
+ \qquad b(\theta)=B(\theta,0).
+\end{equation}
+The coordinate maps and their inverses have common bounds through order
+$j$. They preserve the graph and satisfy
+\[
+ x=X(\theta,\eta)=\theta+\rho\eta L_1(\theta,\eta),
+ \qquad u=\eta+\eta^2L_2(\theta,\eta),
+\]
+where $L_1,L_2$ have common $C^{j-1}$ bounds.
+In particular $X_\eta=O_{C^{j-2}}(\rho)$ and the normal coordinate is
+uniformly transverse to the graph. All bounds are for phase derivatives
+with the field parameters fixed. Zeros of $v$, including multiple zeros,
+are allowed.
+\end{lemma}
+
+\begin{proof}
+ Put $\bar\tau:=|\tau|$. If $B\ge a_*$, first apply the argument to the
+ reversed vector field, replacing $v$ by $-v$ so that its base scale is the
+ positive $\bar\tau$. All estimates below use this $\bar\tau$; reversing the
+ orientation at the end restores the stated equation with the original
+ positive $\tau$. We may therefore assume $B\le-a_*$. Extend the already
+ translated equations outside $I_2$ with fixed smooth cutoffs, equal to the
+ original coefficients on $I_2$, keeping $u=0$ invariant, $B\le-a_*$, and
+ the factor $\tau$ in its base flow. Choose the extension of $B$ by a smooth
+ interpolation to a negative constant, and taper $v,c$ smoothly only outside
+ $I_2$; no extension of a prescribed boundary condition is being asserted.
+ This gives bounded coefficients on the whole base line. A smaller normal
+ tube is forward invariant. Write $\varphi_t$ for the complete flow of
+ $\dot x=\tau v(x)$ and $(x_t,u_t)$ for the full flow.
+The asymptotic phase is the convergent limit
+\begin{equation}\label{eq:uniform-phase-limit}
+ \theta(x,u)=\lim_{t\to\infty}\varphi_{-t}(x_t)
+ =x+\rho\int_0^\infty
+ D\varphi_{-t}(x_t)c(x_t,u_t)u_t\,dt.
+\end{equation}
+Indeed $|u_t|\le |u|e^{-a_*t}$ and
+$\|D^k\varphi_{\pm t}\|\le K_k(1+t)^{N_k}e^{K_k\bar\tau t}$.
+The required differentiated estimates follow directly from the flow
+variations. At first order they have coefficient matrix
+\[
+ \begin{pmatrix}
+ \tau v_x+\rho c_xu&\rho(c+uc_u)\\
+ B_xu&B+uB_u
+ \end{pmatrix}.
+\]
+Variation of constants and $\int_0^\infty|u_t|dt\le |u|/a_*$
+bound the longitudinal variations by a polynomial times
+$e^{K\bar\tau t}$.
+Every forcing term in a normal variation contains either $u_t$ or a
+lower normal variation. Induction through order $j+3$ consequently
+bounds the differentiated integrand in \eqref{eq:uniform-phase-limit}
+by
+\[
+ K_j(1+t)^{N_j}
+       e^{-(a_*-K_jd-K_j\bar\tau)t},
+\]
+where $d$ is the normal tube radius. Choose $K_jd<a_*/4$ and then
+$K_j\bar\tau_0<a_*/4$. The integral and these derivatives converge
+uniformly. In particular $\theta=x$ on $u=0$,
+$\theta-x=\rho u L(x,u)$ with bounded finite derivatives, and
+$\theta_x=1+O(d)$. Thus $(\theta,u)$ are uniformly invertible
+coordinates. The flow identity in the limit gives
+$\dot\theta=\tau v(\theta)$ exactly.
+
+In these coordinates write the second equation as
+$\dot u=b(\theta)u+q(\theta,u)u^2$ and put
+\begin{equation}\label{eq:uniform-amplitude-limit}
+ \eta=\lim_{t\to\infty}u_t
+       \exp\left(-\int_0^t b(\varphi_s\theta)ds\right)
+ =u\exp\left(\int_0^\infty
+                    q(\varphi_t\theta,u_t)u_t\,dt\right).
+\end{equation}
+The same induction, now with the base equation independent of $u$,
+gives an integrable majorant for the required derivatives. The last
+expression is $u+O(u^2)$ and has positive normal derivative on the
+smaller tube. Shifting the limit in time proves
+$\dot\eta=b(\theta)\eta$. The inverse function theorem gives the
+asserted common coordinate bounds. The input order $2j+6$ leaves more
+than the derivatives lost in division by $u$, these two coordinate
+changes, and the section changes below. Reversing time back proves
+the assertion for either normal sign.
+\end{proof}
+
+A product of order $J$ requires $C^{2J+6}$ coefficients and, when a
+coefficient contains one derivative of the selected graph, a
+$C^{2J+7}$ graph. Fix these orders before shrinking the parameter window.
+The simple-contact and positive-collision applications take $J=j+2$,
+with graph order at least $2j+11$ and $C^{2j+10}$ coefficients;
+this retains the $C^j$ small shear needed for physical sections and the
+full collision output $N$. The lower-endpoint product and the lower
+$B$ output take $J=j+1$, with graph order $2j+9$ and
+$C^{2j+8}$ coefficients. Only finite phase derivatives with the field
+parameters fixed are used.
+
+To use the product for physical transitions, we need two section changes. If
+$\rho=\tau$ and $|v(\theta_b)|\ge v_*>0$ at an exterior base, the
+change from $\theta=\theta_b$ to $x=\theta_b$ has uniformly bounded
+finite derivatives. In fact its hitting equation, divided by $\tau$,
+is
+\[
+ \int_0^T v(\varphi_t\theta_b)dt
+       +\eta_T L_1(\varphi_T\theta_b,\eta_T)=0,
+ \qquad \eta_T=\eta\exp\int_0^T b(\varphi_t\theta_b)dt.
+\]
+Its derivative in $T$ is bounded away from zero for small $\eta$;
+therefore $T=O(\eta)$ with common derivative bounds. The required
+lower bound on $|v|$ is at the exterior base; $v$ may vanish inside the
+collision strip.
+
+For $\rho=1$, or after a further uniformly smooth change to physical
+coordinates, write $z=X(\theta,\eta)$ and $y=H(\theta,\eta)$.
+The scaled variable $\eta=\tau V$ gives uniform section bounds in $V$.
+Assume again
+$|v(\theta_b)|\ge v_*>0$. Suppose $X_\theta$ is a
+positive unit and the normal direction is transverse to the graph,
+with $a_l:=H_\eta-h_zX_\eta$ a positive unit at
+$(\theta_b,0)$, where $y=h(z)$ is the physical graph. Divide
+$X(\varphi_T\theta_b,\eta_T)-X(\theta_b,0)=0$ by $\tau$
+after this substitution. The implicit function theorem gives bounded
+derivatives in $V$ for $|V|\le d_1$, where $d_1>0$ is fixed and small.
+To retain the normal factor, write
+$H(\theta,\eta)-h(X(\theta,\eta))=\eta a(\theta,\eta)$ and set
+$E_T(V)=\exp\int_0^{T(V)}b(\varphi_t\theta_b)dt$. Exactly,
+\[
+ \frac{\Phi(\tau V)-h(z_b)}{\tau}
+ =V E_T(V)a\bigl(\varphi_{T(V)}\theta_b,\tau V E_T(V)\bigr).
+\]
+The right side has a common $C^{j-1}$ bound and derivative $a_l$ at zero.
+Taylor's formula therefore gives
+\begin{equation}\label{eq:uniform-physical-section}
+ \Phi(\eta)=h(z_b)+a_l\eta+
+       \frac{\eta^2}{\tau}E(\eta/\tau),\qquad
+ \|E\|_{C^{j-3}}\le K,
+ \quad \frac{|\Phi^{(k)}|}{\Phi'}\le K_k\tau^{1-k}
+ \quad(2\le k\le j-1).
+\end{equation}
+Here $z_b=X(\theta_b,0)$ and $\Phi'$ is a positive unit after
+decreasing $d_1$. Thus unscaled section derivatives need not remain
+bounded as $\tau\to0$.
+
+Finally, if $v$ has a simple zero $\theta_s$ and
+$|v'(\theta_s)|$ is a positive unit, division of time by $|b(\theta)|$
+gives $\dot\theta=\tau g(\theta)$ and
+$\dot\eta=\operatorname{sgn}(b)\eta$. With
+$\beta=g'(\theta_s)$, the coordinate
+\[
+ \xi=\pm(\theta-\theta_s)
+ \exp\int_{\theta_s}^{\theta}
+       \left(\frac{\beta}{g(t)}-\frac1{t-\theta_s}\right)dt
+\]
+with the sign chosen to make the incoming coordinate positive,
+has common finite derivatives and satisfies
+$\dot\xi=\tau\beta\xi$. The integrand has a removable singularity;
+the small factor $\tau$ never enters its denominator. When the normal
+direction is expanding and $\beta<0$, the passage from
+$\xi=\xi_0$ to $\eta=\eta_0$ is exactly
+$D(s)=\xi_0(s/\eta_0)^r$, with $r=-\tau\beta$.
+This last scalar linearization is used only at simple roots.

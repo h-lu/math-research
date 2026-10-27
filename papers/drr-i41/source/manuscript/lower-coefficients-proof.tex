@@ -1,0 +1,47 @@
+\phantomsection\label{app:lower-coefficients-proof}
+
+\begin{proof}[Proof of Lemma~\ref{p4:transverse-coefficients}]
+For $A=1$ the whole $C>1$ family has the invariant parabola, so
+$\Delta_0(1,C)=0$.
+Write $K=c-1$ and
+\[
+ \mathcal E_c(X)=((X+1)^2+K)^2
+ \exp\left[-\frac4{\sqrt K}
+                \arctan\frac{X+1}{\sqrt K}\right].
+\]
+For $W=Y-(X^2-c)/2$, the exact affine equation at $\mu=0,C=c$ is
+\[
+ \dot W=2XW+(1-A)X^2,\qquad
+ \mathcal E_c'/\mathcal E_c=2X/f_c.
+\]
+The graph variation in the $A$ direction therefore satisfies
+\[
+ W_{A,X}=(2X/f_c)W_A-X^2/f_c.
+\]
+The tail bound $z_A=O(q^3)$ gives $W_A=O(X)$ at infinity.
+Since $\mathcal E_c\asymp X^4$, the free homogeneous coefficient
+vanishes, and the selected variations are
+\[
+ W_A^-(X)=-\mathcal E_c(X)\int_{-\infty}^X
+       \frac{t^2}{f_c(t)\mathcal E_c(t)}\dd t,\qquad
+ W_A^+(X)=\mathcal E_c(X)\int_X^\infty
+       \frac{t^2}{f_c(t)\mathcal E_c(t)}\dd t.
+\]
+The positive integrand is $O(|t|^{-4})$ at both ends, so
+$W_A^+-W_A^-$ is positive at the positive port. At fixed $v=d$,
+\[
+ W_z=\frac{d^2-z_c(d)}{z_c(d)^3}>0,
+\]
+conversion to raw height gives $\partial_A\Delta_0>0$.
+
+Truncate the limiting tails at $v=\pm a$. The outer derivative is
+$E_0'$ times the negative-tail first variation divided by the positive
+one, tending to $\Lambda_0=E_0'\ell_-/\ell_+$ as $a\downarrow0$.
+The parabola endpoints are $X=\pm X_a$, $X_a=a/z_c(a)\to\infty$,
+with equal fixed-$v$ conversion factors $W_z$. Thus the derivative
+is $\mathcal E_c(X_a)/\mathcal E_c(-X_a)$: its polynomial ratio tends
+to one and its arctangent difference to $\pi$, giving
+$\Lambda_0(1,c)=e^{-4\pi/\sqrt K}$. For every $C$ in the rectangle,
+$\Lambda_0(1,C)=e^{-4\pi/\sqrt{C-1}}$, so differentiation gives
+$\partial_C\Lambda_0(1,c)=2\pi K^{-3/2}e^{-4\pi/\sqrt K}$.
+\end{proof}

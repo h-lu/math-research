@@ -1,0 +1,166 @@
+\subsection{Transport in the original coefficient fibre}
+
+We transfer the outer orbit's inequality to the splitting, gap and
+saddle-ratio coordinates. The comparisons below may contain $|\nu|$;
+the exponential factor absorbs it on the fixed coefficient fibre.
+
+\begin{proposition}[Uniform coefficient and domain transport]
+\label{rw:coefficient-transport}
+On the ordered cover of Proposition~\ref{rw:ordered-cover},
+the fixed original inequality
+\eqref{rw:fibre:original-forcing} supplies the relative coefficient
+bounds used in the local critical-function estimates, uniformly at
+all physical inputs, including
+nonclosing inputs. More precisely, for each local center-generator
+size $I_{\rm loc}$ used in Sections~7--10 there is a modulus
+$\eta_{\rm loc}(\epsilon)\to0$ such that
+\[
+ |\nu|\le\eta_{\rm loc}(\epsilon)I_{\rm loc}.
+\]
+The coefficient constants and moduli are common to the finite cover.
+The coefficient divisions take place on the larger comparison
+domains of Section~5 and the corresponding secondary domains.
+The counted inputs remain on the positive-central physical interval.
+If a local generator size vanishes, absorption first gives
+$\nu=0$ and then the relevant exact center identity.
+\end{proposition}
+\begin{proof}
+Set $\delta_\epsilon=e^{-p_\sharp^2/(20\epsilon)}$.
+The original inequality is
+\begin{equation}\label{rw:fibre:transport-start}
+ |\nu|\le\delta_\epsilon
+                 (|\tau_1|+\epsilon|\sigma_1|)
+          \le\delta_\epsilon
+                 (|\tau_1|+|\sigma_1|).
+\end{equation}
+We compare the original generators with the local transverse
+coefficients in each type of chart.
+
+On regular and strict-focus charts take
+$I_{\rm loc}=|\tau_1|+|\sigma_1|$. At a two-lower-root match,
+the strict splitting derivative of
+Proposition~\ref{rw:finite:two-root-count} makes
+$(\bar a,\delta,\nu)$ a bounded inverse chart on a larger box.
+Here $\delta$ is the actual strong-intersection splitting.
+Single division from its exact reversible axis gives
+\[
+ |\tau_1|+|\sigma_1|
+                 \le C(|\bar a|+|\delta|+|\nu|).
+\]
+The finite upper saddle uses $(\bar a,\kappa,\nu)$ with the
+actual $\kappa=r-1=-\operatorname{tr}/\lambda_+$; the derivative
+$\partial_{\bar c}\kappa=-1/\sqrt{\bar m}+O(\epsilon)$ has a
+nonzero margin. The same division, already described after
+Proposition~\ref{rw:generator-division}, gives
+$|\tau_1|+|\sigma_1|\le C(|\bar a|+|\kappa|+|\nu|)$.
+Off these center axes the transverse size has a positive lower
+bound on each smaller closed chart.
+
+At the finite three-saddle intersection,
+\eqref{rw:centers:ideal-comparison} gives
+\[
+ |\tau_1|+|\sigma_1|+|\nu|
+            \asymp |\xi_2|+|\kappa\xi_1|+|\nu|.
+\]
+Thus take $I_{\rm loc}=|\xi_2|+|\kappa\xi_1|$; the product
+retains both intersecting center branches. The double-division
+segments and derivative budget are those of Section~5.
+
+At a strict one-infinite simple-root coincidence use the exact
+splitting $\delta$ and the actual scaled exponent difference
+$g$. On its strict compact row the determinant of this coordinate
+change tends to
+\[
+ \frac{p_c^4}{\bar B(1-\bar Bp_c^2)^3}>0,
+\]
+up to the positive unit from the regular power coordinate.
+The calculation and the equality of the actual leading powers
+on the second center are in
+Proposition~\ref{rw:infinity:strict-lower-loss}.
+Their bounded inverse and single division give
+$|\tau_1|+|\sigma_1|\le C(|\delta|+|g|+|\nu|)$.
+At the repeated and weak faces use instead the two comparisons
+\eqref{rw:centers:single-ideal-comparison}, with local sizes
+$|\tau|+|\zeta|$ and $|d_s|+|\varsigma|$, respectively.
+Their inverse charts and exact center axes were proved in
+Proposition~\ref{rw:center-coordinates}; the repeated comparison
+uses \eqref{rw:coordinates:zeta-identity}, rather than the strict-row
+determinant. The fixed-mean and lifted-contact comparisons, and the
+single weak offset $\bar B+K_*A$ of
+Proposition~\ref{rw:domains:weak}, are defined on larger domains
+containing every original input and the whole coefficient segments.
+At a cubic two-infinite end $\bar B=0,\bar m<0$,
+$|\bar B+\bar m|$ has a positive margin. Hence
+$|\tau_1|+|\sigma_1|\asymp|\bar a|+|\bar c|$,
+the cubic generator size. On other constant-sign pieces
+either the same bounded comparison applies or the
+transverse size is bounded below; no division at a vanishing
+gap is needed.
+
+At the parabolic corner we must retain the scale weights before
+comparing generator sizes. Since
+$\bar B+\bar m>1/8$, bounded normalized coefficients give
+\[
+ |\tau_1|+|\sigma_1|
+       \le C(|\bar a|+|\bar c|)
+       \le C(|\bar a|+|\bar d|+|\nu|).
+\]
+Inserting this in \eqref{rw:fibre:transport-start} and
+absorbing gives
+\begin{equation}\label{rw:fibre:weighted-transport}
+ |\nu|\le2C\delta_\epsilon(|\bar a|+|\bar d|).
+\end{equation}
+On the wedge, $\bar d=H\gamma$ with $H\le H_0<1$;
+on the secondary charts, $\bar d=\lambda C$ with
+$\lambda\le\lambda_*<1$. It follows, uniformly at every
+actual input, that the forcing is small relative to the local
+sizes $|\bar a|+|\gamma|$ and $|\bar a|+|C|$.
+The stronger weighted inequality
+\eqref{rw:fibre:weighted-transport} is retained whenever
+those local expressions are returned to original coefficients.
+The wedge bound in \eqref{rw:secondary:critical-forcing} retains
+$|\bar a|+|\bar d|$; the secondary bound uses $|\bar a|+|C|$.
+The additional powers in \eqref{rw:secondary:local-forcing} arise
+when an actual secondary closing witness supplies its absolute
+budget; they are stronger than the bounds used here.
+
+Near a finite secondary upper saddle the exact ratio calculation
+\eqref{rw:secondary:saddle-ratio} has a nonzero derivative
+in $C$ and yields
+\[
+ |C|\le C_0\bigl(|\kappa|+
+                  \epsilon\lambda|\bar a|
+                  +\epsilon\lambda|\nu|\bigr).
+\]
+Thus the preceding bound implies
+$|\nu|\le\widetilde\eta(\epsilon)
+ (|\bar a|+|\kappa|)$ after one further absorption.
+The estimate therefore uses the actual ratio of the secondary field,
+including its coefficient error relative to the limiting linear field.
+On the weak and real repeated secondary rows $|C|$ has a
+positive margin on the normalized face, so their transverse
+size is bounded below. They need no inverse coordinate
+division at the vanishing weak eigenvalue. A strict focus
+center has its regular division in $(\bar a,C)$, and the
+finite saddle center was treated above. These neighborhoods
+cover the normalized face with the adjacent strict rows,
+so the constants are uniform on their common boundary faces.
+
+In every unweighted comparison we have obtained
+$I_{\rm global}\le C(I_{\rm loc}+|\nu|)$.
+Choose the common scale with $C\delta_\epsilon<1/2$;
+then \eqref{rw:fibre:transport-start} gives
+$|\nu|\le2C\delta_\epsilon I_{\rm loc}$.
+The weighted comparisons have just given the same conclusion
+with their explicitly retained factors. If $I_{\rm loc}=0$,
+this inequality gives $\nu=0$ before any division by that
+size. The inverse coordinate identity then places the field
+on its real center axis, so its actual compared maps agree.
+This deals with the zero-size case as well.
+
+These are coefficient inequalities, so they hold also at nonclosing
+inputs. All divisions use the larger domains of Section~5, while
+saturation supplies positive central heights for the original field.
+Taking the largest of the finite coefficient bounds makes the
+absorptions and moduli uniform on the whole interval.
+\end{proof}

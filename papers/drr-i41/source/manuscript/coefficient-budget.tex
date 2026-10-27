@@ -1,0 +1,375 @@
+\subsection{A coefficient cover and its raw-height budgets}
+\label{sec:coefficient-raw-budgets}
+
+The coefficient alternatives must be fixed before choosing a common
+height cap. Their section constructions then give a raw-height cap
+independently of the remaining coefficient radii. In all phase
+derivatives below, the coefficients and actual finite multiplier are
+held fixed.
+
+\begin{lemma}[Coefficient-only cover]\label{lem:pure-coefficient-cover}
+Fix the original nested sections, the passive compact coefficient block,
+and the finite orders required by the regional preparations. There are
+fixed thresholds
+\(P_D,p_*,P_*,k_\flat,\Pi_{\rm far},\Pi_{\max},
+\mathfrak q_\flat,U_d,U_{\rm cub},G_{\max}\), and fixed overlapping
+coefficient rectangles, with the following properties.
+
+For \(\alpha_0\ge0\), the determinant and signed-trace substitutions
+\eqref{deg:determinant-chart}--\eqref{deg:trace-chart} cover every
+nonzero coefficient pair. The double-zero pair is retained separately.
+For \(\alpha_0=-s^2<0\), put \(p=\alpha_1/s\). The ranges
+\begin{equation}\label{eq:pure-outer-coefficient-cover}
+ p\le0,\qquad 0<p\le p_*,\qquad
+ p_*/2\le p\le2P_*,\qquad p\ge P_*
+\end{equation}
+cover every coefficient fibre. The small-positive range is covered by the overlapping gamma,
+compact-cubic, degree-loss and remote-root alternatives in
+Table~\ref{tab:coefficient-phase-cover}.
+Here the variables are exactly \eqref{deg:gamma-chart} and
+\eqref{deg:cubic-chart}. The degree and remote-root substitutions are
+\eqref{deg:gamma-degree-dictionary},
+\eqref{deg:negative-far-dictionary}, and
+\eqref{deg:cubic-degree-dictionary}. Their full independent rectangles
+lie in the prescribed coefficient ranges of their preparations.
+All thresholds and reserves are chosen before a final raw coefficient
+restriction. Neither a phase input, a return zero, nor a height cap is
+used to choose a coefficient alternative.
+\end{lemma}
+
+\begin{proof}
+Fix a signed compact strict source block about \(a=p=0,Y(0)=1\).
+Choose its high-height constant \(K_{\rm hi}\), large enough also for
+the signed trace block \(1/2\le|p_L|\le3/2\), and put
+\(K_{\rm lo}=2K_{\rm hi}\). The trace preparation on an initial
+\(|a_L|\le a_0\le1\) uses the fixed central-height range
+\(K_{\rm lo}(1+(3/2)^2)\). Its graph barrier fixes the bounded
+actual-gap range; its terminal construction then fixes
+\(Q,R_0,a_*,\xi_0\). Choose \(P_D>2/\sqrt{a_*}\).
+When \(\alpha_0>0\), use \(r_D=\sqrt{\alpha_0}\) if
+\(|\alpha_1|\le P_D\sqrt{\alpha_0}\). Otherwise put
+\[
+ r_L=|\alpha_1|,\qquad p_L=\operatorname{sgn}\alpha_1,
+ \qquad a_L=\alpha_0/\alpha_1^2<a_*/4.
+\]
+The two coefficient descriptions overlap on
+\(P_D/2<|\alpha_1|/\sqrt{\alpha_0}<P_D\).
+For zero opening and nonzero trace, the second description has
+\(a_L=0\).
+
+For negative opening, first choose the bounded positive-quadratic
+root-free and ghost reserves, and the independent positive far-root
+bounds \(q_0,\lambda_0,\tau_0\) in
+\eqref{deg:positive-far-range}. Choose the reciprocal preparation
+bounds \(\mathfrak q_-,\Pi_-,\tau_-\), with its positive-unit lower
+bound \(\omega_{\min}\), as in
+\eqref{deg:negative-far-rectangle}. Put
+\begin{equation}\label{eq:pure-routing-reserves}
+\begin{gathered}
+\mathfrak q_\flat=\tfrac12\min\{q_0,\mathfrak q_-\},\qquad
+\Pi_{\rm far}=\max\{\lambda_0^{-1/2},\Pi_-,2\sqrt{12}\},\\
+\Pi_{\max}=2\Pi_{\rm far}.
+\end{gathered}
+\end{equation}
+On \(0<\pi\le\Pi_{\max}\), fix the two bounded-gamma preparations,
+including the positive ghost raw-tail reserve. Choose \(k_\flat>0\)
+so that \(2k_\flat\) lies below their fixed \(k\)-bounds and below
+\(k_d(\mathfrak q_\flat)\). The latter is the bound placing the
+gamma-degree dictionary in its prescribed compact positive-unit block
+for \(\mathfrak q\ge\mathfrak q_\flat\). Set
+\(G_{\max}=k_\flat^{-2/3}\). Fix \(U_d\) for the large-\(U\)
+cubic-degree dictionary on this \(G\)-block and take
+\(U_{\rm cub}>U_d+1\). Fix the compact cubic preparation on
+\([0,U_{\rm cub}]\times[-G_{\max},G_{\max}]\).
+
+These substitutions are algebraic. The gamma polynomial
+\(t^3+3\epsilon t^2-\mathfrak qt+k^2\) and Vieta's relations give
+\eqref{deg:gamma-degree-dictionary}; the positive-unit entries have
+compact closure for \(\mathfrak q\ge\mathfrak q_\flat\).
+On the negative far face, the same relations give
+\(\omega=1-a+ja\), \(\tau=p^2/\omega^2\), and the full rectangle
+\eqref{deg:negative-far-rectangle}. The large-\(U\) polynomial
+\(y^3+3Gy^2-Uy+1\) gives
+\eqref{deg:cubic-degree-dictionary}; its positive units tend uniformly
+to one for bounded \(G\). Let \(\tau_d>0\) be the resulting compact
+degree bound. Take both degree radial bounds below \(1/2\), including
+their bounded-source, enlarged positive-energy, raw-image and relative
+curvature reserves. Include the fixed core/high overlap reserve in
+\(\tau_0\) and choose once
+\begin{equation}\label{eq:pure-small-ratio-reserve}
+0<p_*^2<\tfrac12\min\{\tau_0,\tau_d,
+                              \tau_-\omega_{\min}^2\}.
+\end{equation}
+Thus \(\tau=p^2\) and \(\tau=p^2/\omega^2\) already lie in their
+respective independent rectangles.
+
+If \(\gamma\ne0\) and \(k\le2k_\flat\), the overlapping
+\(\pi\)-ranges are \(\pi\le\Pi_{\max}\) and
+\(\pi\ge\Pi_{\rm far}\). On the latter range split at
+\(\mathfrak q_\flat\). The large-\(\mathfrak q\) dictionary is in
+the compact degree block, and the small-\(\mathfrak q\) dictionaries
+are in the positive far or negative reciprocal rectangle according to
+the sign of \(\gamma\). If \(\gamma=0\) or \(k\ge k_\flat\),
+then \(|G|^{3/2}\le k_\flat^{-1}\), and
+\([0,U_{\rm cub}]\cup[U_d,\infty)\) covers \(U\ge0\).
+The \(k\), \(\pi\), \(\mathfrak q\), and \(U\) descriptions
+have the strict overlaps just chosen, with their equality faces retained.
+
+For the large positive-source range use the exact trace dictionary
+\eqref{deg:large-trace-dictionary}. Its signed opening is
+\(a_L=-p_L^2/p^2\). Choose
+\(P_*>\max\{2,p_*,3/\sqrt{a_*}\}\), increasing it if necessary
+for the fixed bounded-gap trace block of
+Lemma~\ref{lem:large-ratio-height}. Finally fix the compact positive
+interval \([p_*/2,2P_*]\) and its endpoint, middle and high reserves.
+The remaining independent radii \(r_D,r_L,g,t,s\) can subsequently
+be restricted in raw coordinates. This proves the coefficient cover.
+\end{proof}
+
+\input{cover-index}
+
+\begin{proposition}[Regional raw-height budgets]
+\label{prop:regional-raw-budgets}
+Fix the coefficient rectangles and all section and overlap reserves of
+Lemma~\ref{lem:pure-coefficient-cover}. Let \(\mathcal A_j\) be their
+finitely many regional alternatives and write
+\[
+\mathcal V_\delta=\{\max(|A-1|,|C-1|,|\gamma|,
+                                  |\alpha_0|,|\alpha_1|)<\delta\}.
+\]
+There is \(b>0\) such that, for every
+\(0<h\le b\) and each \(j\), there are independent raw bounds
+\(\delta_j(h)>0\) and \(\bar m_j(h)>0\) for which the actual regional
+transition identities and complete derivative and curvature estimates
+hold on their stated phase domains for every
+\(\theta\in\mathcal A_j\cap\mathcal V_{\delta_j(h)}\) and every
+\(0\le m\le\bar m_j(h)\). These domains together cover every input of
+\begin{equation}\label{eq:regional-raw-budget-domain}
+\{x:a_\theta+x\in J_\theta^{\rm out},\quad
+                         0<h_\theta(a_\theta+x)<h\}.
+\end{equation}
+The bounds restrict \((A,C,\gamma,\alpha_0,\alpha_1)\) in the
+independent raw coordinates and \(0\le m\le\bar m_j(h)\).
+These additional restrictions impose no relation between active radii
+or root gaps.
+Each estimate retains its original input and inverse output windows,
+positive-time passage, speed and stop clips, admitted equality dividers,
+and intervening nonroot inputs. Its raw observers and divided closing
+are composed on their full admitted images, with ordinary phase
+\(C^3\) bounds and all nonlinear curvature terms retained.
+\end{proposition}
+
+\begin{proof}
+We first construct a fixed signed high-height cap on the original raw
+sections. Fix the enlarged signed strict source block used in the
+coefficient lemma. Choose the core cut \(L\) and raw port radius
+\(0<d<\delta\), with \(d\le1/100\), as in
+Lemma~\ref{ann:p0-fixed-tail-ports}. Let \(a_H,p_H\) bound its
+normalized \(|a|,|p|\), and increase \(L\) until
+\(p_H/L\le1/40\), \(a_H/L^2\le1/4000\).
+The fixed-core continuity bounds \(s_{\rm core},\rho_{\rm core}>0\)
+put both entrance ratios in \([1/4,3/4]\) for independent
+\(s\le s_{\rm core}\) and
+\(|\gamma|,|A-1|,|C-1|\le\rho_{\rm core}\).
+
+Choose a fixed transverse tube from these ports to the original
+sections, and let \(\mu_z>0\) be smaller than its port tolerance and
+both raw-window margins. With \(T=\log(d/(sL))\), the entrance-memory
+estimate of Lemma~\ref{ann:p0-fixed-tail-ports}, with its fixed
+\(\lambda=7/5\), gives
+\begin{equation}\label{eq:raw-high-entrance-memory}
+ |w_\sigma(T)-w_\Gamma(d)|
+ \le C\{s+|\gamma|+d|A-1|+d^2|C-1|\}.
+\end{equation}
+Indeed its initial term is \(O(e^{-\lambda T})=O(s)\), and
+integration of the two source terms has orders \(e^{-T}\) and
+\(e^{-\lambda T}\); the passive terms have the three orders displayed.
+The constant depends on the fixed ports and strict block, not on the
+flight length. Choose \(s_H>0\) and independent passive coefficient
+bounds so that the right side times \(d^2\), plus \(2d|\gamma|\),
+is less than \(\mu_z\). The invariant ratio strip from the same lemma
+keeps both complete tails in the chart. Their raw port errors are
+therefore below \(\mu_z\), so both full images lie in the original
+windows. The regular observers and divided closing can now be
+composed on their larger fixed buffers.
+
+At any signed high input freeze \(r_0=\sqrt H\). The transformed
+parameters satisfy \(|a|\le K_{\rm hi}^{-1}\),
+\(|p|\le K_{\rm hi}^{-1/2}\), and \(Y(0)=1\).
+If \(H\le s_H^2\), this is the same admitted strict block.
+The two absolute tail variations in
+\eqref{sharp:upper-tail-ratio} have the common
+\(r_0^{2-\lambda_\gamma}\) factor; its cancellation, followed by
+the actual bridges and divided closing, gives a fixed \(C_H\).
+The dilation is frozen during differentiation. This proves the signed
+high estimate without a restriction on \(\gamma\log r_0\).
+
+Let \(z_{\rm geo}>0\) be a fixed central reserve below the upper
+chart boundary constructed before Lemma~\ref{lem:loc-through}, and
+bound \(0<\ell_\theta(\gamma)\le L_{\rm raw}\) on the preliminary
+raw block. Choose
+\begin{equation}\label{eq:regional-fixed-raw-cap}
+b=\tfrac14\min\{s_H^2,z_{\rm geo},d_{\rm out}/(4L_{\rm raw})\}>0.
+\end{equation}
+Every signed high input below \(b\) consequently has its original
+raw-domain description. With \(|\alpha_0|<d_{\rm out}/4\), its
+speed satisfies
+\(\sigma_\theta\le|\alpha_0|+L_{\rm raw}H<d_{\rm out}/2\).
+
+Now fix any \(0<h\le b\). The lower and strict preparations have
+already fixed their compact blocks, chords and positive raw-window
+reserves. We place their comparison and upper shots below \(h\)
+by the following independent raw restrictions. In the determinant and
+trace charts it is enough to require
+\begin{equation}\label{eq:regional-det-trace-cap-bounds}
+r_D^2<\frac{h}{8K_{\rm hi}(1+P_D^2)},\qquad
+r_L^2<\frac{h}{4K_{\rm lo}}.
+\end{equation}
+Their bounded normalized-height complements have the finite strict
+domains of \eqref{deg:det-height-cover} and
+\eqref{deg:trace-domain-inclusion}; their larger heights are in the
+signed high block. On the fixed compact positive-ratio region the
+enlarged strict box \([u_L/2,3u_H]\) is placed below \(h/4\) by
+\(s^2<h/(12u_H)\). The endpoint admission and its actual matching
+are those of Lemma~\ref{ann:lem-compact-positive-domains}.
+
+For a bounded-gamma preparation let \(k_B,\Pi_B\) be its fixed
+coefficient bounds and \(E_B>0\) its fixed upper core height. Retain
+the action comparison bound and impose
+\begin{equation}\label{eq:regional-gamma-cap-bounds}
+g<\min\left\{1,\frac{E_B}{4K_{\rm hi}(1+\Pi_B^2)},
+                       \frac1{2k_B}\sqrt{\frac h{E_B}}\right\}.
+\end{equation}
+Then the normalized high threshold is below \(E_B/2\), while
+\((gk)^2E_B<h/4\). The actual comparison and upper shots and every
+intervening graph retain the outward admission used in
+\eqref{deg:negative-gamma-cover} and in the positive paired
+construction. The positive ghost raw tail is part of the same original
+domain, including \(gku\ge d_0\); its raw derivative estimate is
+\eqref{bp-tail:consumed-derivative}.
+
+For the compact cubic block let \(E_c>0\) be its fixed upper core
+height. Retain the exponentially small comparison bound and require
+\begin{equation}\label{eq:regional-cubic-cap-bounds}
+\tau_{\rm cub}<\min\left\{1,
+ \frac{E_c}{4K_{\rm hi}(1+U_{\rm cub}^2)},
+ \tfrac12\sqrt{h/E_c}\right\}.
+\end{equation}
+Here \(\tau_{\rm cub}=(-\alpha_0)^{1/3}\). Thus the normalized
+threshold is below \(E_c/2\) and
+\(\tau_{\rm cub}^2E_c<h/4\). The comparison remains in the actual
+lip domain, with the bounded/growing resection and the original raw
+ghost continuation retained in \eqref{deg:compact-physical-cover}.
+
+For the positive far-root rectangle, the fixed \(\tau_0\) already
+ensures \(\tau K_{\rm hi}(1+\tau)<E_f/2\) and the action comparison,
+where \(E_f>0\) is the selected upper shot. Since
+\(a=gq\lambda\), \(q\le q_0\), \(\lambda\le\lambda_0\), the
+raw restriction
+\begin{equation}\label{eq:regional-far-cap-bound}
+g<\frac1{2q_0\lambda_0}\sqrt{h/E_f}
+\end{equation}
+gives \(a^2E_f<h/4\). The full lower output and upper core images
+are the admitted images used in \eqref{deg:far-physical-cover}.
+No ratio threshold is changed after \(h\) is fixed.
+
+For the degree preparations, the exact source dictionary
+\eqref{deg:degree-source} gives
+\begin{equation}\label{eq:degree-cap-raw-identities}
+\alpha_1=\tau^2\kappa^2\mathcal R\omega,\qquad
+s_s^2=\tau^3\kappa^4\mathcal R^2B.
+\end{equation}
+The actual \(h_L=0\) source graph and its real enlarged chord have
+\(Y_0\le C_Y(1-\log(2\tau))\) by
+\eqref{bd:positive-height} and the enlarged positive-energy construction
+in Lemma~\ref{p2:lem-bounded-source-budget}. Use the degree bounds
+\(\kappa\le\kappa_*\), \(\tau\le\tau_*<1/2\) already fixed in
+the coefficient cover, and put
+\begin{equation}\label{eq:degree-cap-compact-constant}
+D_*=\tau_*[1-\log(2\tau_*)],\qquad
+C_d=C_Y\kappa_*^2
+       \frac{\mathcal R_{\max}B_{\max}}{\omega_{\min}}D_*.
+\end{equation}
+The function \(t[1-\log(2t)]\) increases on \((0,1/2)\).
+Consequently the actual trace \(h^0\) satisfies
+\begin{equation}\label{eq:degree-cap-height-raw-bound}
+H_\theta(h^0)\le C_Y\alpha_1\tau\kappa^2
+       \frac{\mathcal RB}{\omega}[1-\log(2\tau)]
+       \le C_d\alpha_1.
+\end{equation}
+On the reciprocal graph \eqref{deg:degree-infinity-graph}, write
+\(a_{\rm rec,*}=\kappa_*A_{d,\max}<1/2\) for its fixed opening bound.
+There
+\[
+\frac{\mathcal RB}{\omega}
+=\frac{dA_dj}{1-a+ja}
+\le\frac{d_{\max}A_{d,\max}j_0}{1-a_{\rm rec,*}}.
+\]
+Thus \eqref{eq:degree-cap-height-raw-bound} holds with
+\begin{equation}\label{eq:degree-cap-reciprocal-constant}
+C_r=C_Y\kappa_*^2
+      \frac{d_{\max}A_{d,\max}j_0}{1-a_{\rm rec,*}}D_*
+\end{equation}
+in place of \(C_d\), uniformly as \(j\downarrow0\). The independent
+raw restriction
+\begin{equation}\label{eq:degree-cap-alpha-one-bound}
+0<\alpha_1<\frac h{4\max\{C_d,C_r\}}
+\end{equation}
+places the upper source shot and its chosen enlarged chord below
+\(h/4\). The fixed positive-label threshold also gives
+\(H_\theta(h^0)>K_{\rm hi}(|\alpha_0|+\alpha_1^2)\), so that this
+chord overlaps the same signed high continuation.
+The fixed \(p_*\) and degree ratios are unchanged.
+
+Raw output admission in these degree charts is independent of a
+reciprocal lower bound on a gain. Indeed
+\(r_s^2=(\mathcal R/\omega)\alpha_1\le C\alpha_1\); for a fixed
+\(|\lambda_\gamma|<\nu<1\), the retained absolute factor obeys
+\[
+\Omega=r_s^{2-\lambda_\gamma}
+       \le C\alpha_1^{1-\nu/2}\longrightarrow0.
+\]
+The stopped raw trace has a fixed window margin, so the full enlarged
+output chord is admitted before its observer is composed. The exact
+input buffer, actual matching and every-point allocation are those of
+Proposition~\ref{p2:prop-unified-carrier-cover}. Actual reciprocal
+maps use \(j>0\); \(j=0\) retains its one-sided normalized meaning.
+The raw-Jacobian estimate already holds on the full original raw-window
+and inverse-output-window domain and can be restricted to any such cap.
+
+All these descriptions are restrictions of the original physical map
+\(\Pi=\mathcal C_{\theta,m}\circ T_\theta(a_\theta+\cdot)\).
+For local nonlinear observers write
+\(\Pi=\psi_-\circ P\circ\iota\), where
+\(\iota=\psi_+^{-1}\) on the actual incoming image. In particular
+the physical curvature contains all three terms
+\begin{equation}\label{eq:raw-budget-complete-curvature}
+\Pi''=\psi_-''(P)(P')^2(\iota')^2
+       +\psi_-'(P)P''(\iota')^2
+       +\psi_-'(P)P'\iota''.
+\end{equation}
+Here the derivatives of \(P\) are evaluated at \(\iota(x)\). The regional
+estimates include these ordinary observer derivatives, through
+order three, before any positive affine normalization
+\eqref{sharp:upper-affine}. Restriction leaves those estimates unchanged.
+The divided closing has the ordinary \(C^3\) rows
+\eqref{phys:eq-closing-jets}, including \(m=0\).
+
+Take the finite minimum of the original raw-domain and error bounds
+and the independent restrictions above. Express
+\(\tau_{\rm cub}<T\) as \(|\alpha_0|<T^3\),
+\(r_D<R\) as \(\alpha_0<R^2\), and
+\(r_L<R\) as \(|\alpha_1|<R\). Half this minimum defines
+\(\delta_j(h)>0\) in the independent raw coordinates. All other
+normalized coordinates remain in the rectangles already fixed by
+Lemma~\ref{lem:pure-coefficient-cover}.
+
+Lastly let \(C_j\) bound the complete derivative on the regional
+bounded pieces and let \(M_j\) bound the full translated output on
+the original closing image. Intersect the ordinary closing-domain
+bound, the regional critical-logarithm bound, and the inequalities
+\(mC_j<1/2\), \(mM_j<a_{\rm cl}/2\). Their finite positive
+minimum gives \(\bar m_j(h)>0\). The enlarged domain and equality
+buffers were chosen earlier; their estimates hold at nonclosed inputs
+as well. This proves the asserted raw budgets.
+\end{proof}

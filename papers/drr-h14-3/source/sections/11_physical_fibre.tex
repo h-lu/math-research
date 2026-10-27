@@ -1,0 +1,58 @@
+\section{The physical fibre and its ordered cover}
+\label{rw:physical-fibre}
+
+Fix an original field and follow its returning arcs outwards. An outer
+closing orbit bounds the line-breaking coefficient; three equilibrium-free
+strips then supply all intermediate returns, including the nonclosing
+ones. We order their local descriptions and transport this one coefficient
+inequality to the common interval used in Section~12.
+Figure~\ref{rw:physical:interval-scheme} shows the regular and terminal
+parts. Their open overlap carries the same $K$ and permits a seam beyond
+a preceding regular zero.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1.25cm,y=.85cm,>=Stealth,font=\small]
+ \draw[->] (0,0)--(8.3,0) node[right] {outward input};
+ \draw[thick] (0,.75)--(4.6,.75);
+ \draw (0,.60)--(0,.90) (4.6,.60)--(4.6,.90);
+ \node[above] at (2.3,.75) {$R$: regular initial chain};
+ \draw[thick] (3.8,-.75)--(8,-.75);
+ \draw (3.8,-.90)--(3.8,-.60) (8,-.90)--(8,-.60);
+ \node[below] at (6,-.75) {$T$: terminal union, when present};
+ \draw[dotted] (3.8,-1.0)--(3.8,1.05);
+ \draw[dotted] (4.6,-1.0)--(4.6,1.05);
+ \node[fill=white,inner sep=1pt] at (4.2,0) {$O$};
+ \draw[thick,dashed] (3.8,-1.55)--(5.25,-1.55);
+ \node[below,align=center] at (4.525,-1.55)
+    {possible constant-sign\\connection inside $T$};
+\end{tikzpicture}
+\caption{Schematic intervals on one actual physical fibre with an outer
+closing witness. $O$ is an open overlap. Near the parabolic corner $R$
+includes the finite connection, wedge and regular secondary part.
+The depicted terminal lower-loss connection, when present, remains
+inside $T$. The lengths
+carry no metric information, and the arrow orders inputs rather than
+trajectories. Proposition~\ref{rw:ordered-cover} supplies these domains.}
+\label{rw:physical:interval-scheme}
+\end{figure}
+
+We use the original and normalized generators
+\[
+ \tau_0=a+c,\quad \sigma_0=c(B+m),\qquad
+ \tau_1=\bar a+\bar c,\quad
+ \sigma_1=\bar c(\bar B+\bar m),
+\]
+so $\tau_0=\rho\tau_1$, $\sigma_0=\rho^3\sigma_1$,
+$\epsilon=\rho^2$ and $\ell=\rho\nu$. Except when explicitly
+discussing $\rho=0$, all normalized coordinates have $\rho>0$.
+Reflect the whole field once, if necessary, to arrange $\ell\ge0$.
+The new outgoing endpoint is the old incoming endpoint; reflection
+does not preserve a previously selected numerical outgoing cutoff.
+It preserves the original generator norms and cycle multiplicities
+by Proposition~\ref{rw:geometry:reflection}.
+
+\input{sections/11a_outer_forcing}
+\input{sections/11b_saturation}
+\input{sections/11c_ordered_cover}
+\input{sections/11d_coefficient_transport}

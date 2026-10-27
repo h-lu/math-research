@@ -1,0 +1,1157 @@
+\section{Exact long matching and the secondary scale}
+\label{rw:secondary-scale}
+
+This section treats the remaining corner
+\[
+ \bar B>0,\qquad \bar c=\bar m=0,\qquad
+ |\bar a|\le2\sqrt{\bar B},\qquad p=q=\infty.
+\]
+The primary affine upper field is parabolic; its returning arcs may
+have arbitrarily long passages on a scale determined by $\bar d$ and
+$\bar m$, independently of the primary scale. Follow each arc to its
+first exit, at either a fixed-height wedge section or a secondary-scale
+section. The former gives two long
+legs joined by a regular vertical passage; the latter gives a normalized
+affine upper problem. Attach the original lower passages in both cases
+and compare their outputs at the same central section.
+Throughout, $\bar B$ belongs to a fixed compact positive interval.
+Write
+\[
+ Z=Y+\epsilon,\quad \bar d=\bar c+\nu,\quad
+ \theta=\epsilon\bar B,\quad b=1-\theta,\quad k=1-2\theta,\quad
+ \beta_\epsilon=k/b,\quad h_I=b/\bar B,\quad \mu=b/\theta.
+\]
+In particular $\beta_\epsilon\mu=k/\theta$ exactly.
+The secondary scale is introduced at the second exit. Every counting
+interval is restricted by the complete lower passing conditions and
+positive original central heights. Coefficient division uses the signed
+central continuations with reference values fixed independently of input.
+
+\subsection{The weighted field and its exact long passage}
+
+The original upper equation, with its forcing retained, is
+\begin{equation}\label{rw:secondary:retained}
+ Z_\xi=Z[X+\bar d(Z-\epsilon)]-\epsilon\nu(Z-\epsilon).
+\end{equation}
+This identity is the reason for using $\bar d$, rather than $\bar c$,
+in the new scale. For $r=Z^{-1/2}$, $v=Xr$ and
+$\dd\tau/\dd\xi=1/r$, put
+\[
+ D_v=\bar d/r,\quad M_v=\bar m/r^2,\quad
+ A_v=\bar a r,\quad N_v=\nu r,\quad E_v=\epsilon r^2.
+\]
+The exact polynomial equations are
+\begin{equation}\label{rw:secondary:vertical}
+\begin{gathered}
+ H_v=v+D_v(1-E_v)-\epsilon N_v(1-E_v),\\
+ P_v=(1-E_v)[M_v(1-E_v)-1]+\theta v^2+\epsilon A_vv-vH_v/2,\\
+ r_\tau=-rH_v/2,\quad v_\tau=P_v,\quad
+ (D_v)_\tau=D_vH_v/2,\quad (M_v)_\tau=M_vH_v,\\
+ (A_v)_\tau=-A_vH_v/2,\quad (N_v)_\tau=-N_vH_v/2,\quad
+ (E_v)_\tau=-E_vH_v.
+\end{gathered}
+\end{equation}
+Conserved products recover the original coefficients, for example
+$D_vr=\bar d$ and $N_v/r=\nu$, so retain these variables in the
+vertical passage.
+
+For any fixed $V>0$, small extended entries at $v=V$ pass uniquely
+to $v=-V$, with finite time and bounded finite jets. Indeed, at zero
+extended variables $P_v=-1-kv^2/2$. On a slightly larger compact tube keep
+$P_v<-1/2$, bound the logarithmic rates of the five extended variables,
+and reduce the entry widths by their growth factor for time $4V$.
+First exit then gives passage in time at most $4V$.
+Finite variational equations and the transverse hitting equation give
+the stated jets, including the inverse. The radial component is
+$r_-=r_+L_v$ with positive bounded unit
+$L_v=\exp[-\frac12\int H_v\,\dd\tau]$.
+Reflection makes $L_v=1$ on the reversible leaves.
+These are jets in extended entries, not bounded original
+$\bar d$ derivatives at $r_+=0$.
+
+On the outgoing adjoining chart set
+\[
+ \varphi=X/Z,\quad R=1/Z=\varphi^2w,\quad
+ g=\bar d/\varphi,\quad j=\bar m/\varphi^2,\quad
+ e=\epsilon\varphi^2w .
+\]
+Divide the field by $X>0$. Direct substitution gives
+\begin{equation}\label{rw:secondary:adjoining}
+\begin{gathered}
+ G=1+g(1-e)-\epsilon\nu\varphi w(1-e),\\
+ W=(1-e)[j(1-e)-w]-b-g(1-e)
+                     +\epsilon\varphi w[\bar a+\nu(1-e)],\\
+ \varphi'=\varphi W,\qquad w'=-w(G+2W),\qquad
+ g'=-gW,\qquad j'=-2jW.
+\end{gathered}
+\end{equation}
+Thus $g\varphi=\bar d$, $j\varphi^2=\bar m$ remain constant.
+Its origin has contracting and expanding rates $-b,k$.
+
+\begin{proposition}[The exact long map]\label{rw:exact-long}
+Fix an order $N$, a section $\varphi_0>0$, and a finite terminal
+height range $0\le w_e\le w_*$. On sufficiently small common
+ordinary coefficient neighborhoods, the backward map from
+$(\varphi,w,g,j)=(H,w_e,\gamma,J)$ to $\varphi=\varphi_0$ is
+\begin{equation}\label{rw:secondary:long-map}
+ w_{\rm in}=w_e(H/\varphi_0)^{\beta_\epsilon}e^\Psi .
+\end{equation}
+For one $q>0$ depending only on the fixed order,
+\begin{equation}\label{rw:secondary:long-jets}
+\begin{aligned}
+ \Psi&=\Psi_0(\gamma,J,w_e;\theta)+O_N^{\rm aux}(H^q),\qquad
+ H\partial_H\Psi=O_{N-1}^{\rm aux}(H^q),\\
+ \partial_x\Psi&=\epsilon S_x,\qquad
+ S_x=O_{N-1}^{\rm aux}(H^q),\qquad x\in\{\bar a,\nu\}.
+\end{aligned}
+\end{equation}
+In the auxiliary norms $\theta$ and $\epsilon$ are independent.
+The derivatives are ordinary terminal-height derivatives through zero,
+ordinary $\gamma,J,\bar a,\nu,\theta,\epsilon$ derivatives and
+$H\partial_H$, with the indicated total-order budgets.
+Ordinary $\epsilon$ differentiation of $\epsilon S_x$ may remove its
+explicit factor. After $\theta=\epsilon\bar B$ is imposed, scale
+derivatives are taken with
+$E_\epsilon=\epsilon\partial_\epsilon+\theta\partial_\theta$;
+they preserve that factor. No bound on $\epsilon|\log H|$ is required.
+\end{proposition}
+
+\begin{proof}
+Put $t=\log(\varphi/H)$ and $L=\log(\varphi_0/H)$. Exactly,
+\begin{equation}\label{rw:secondary:long-scalar}
+ \varphi=He^t,\quad g=\gamma e^{-t},\quad j=Je^{-2t},\qquad
+ w_t=-wQ,\quad Q=2+G/W,\quad 0\le t\le L .
+\end{equation}
+Choose the larger rectangle with $W<-c$, $Q>1/2$; then
+$w\le w_e e^{-t/2}$ and no earlier exit is possible.
+Subtracting the exact saddle ratio gives
+\[
+ Q-\beta_\epsilon=(G-1)/W+(W+b)/(bW)
+\]
+with a right side integrable uniformly in $L$. Integration gives
+$\Psi=-\int_0^L(Q-\beta_\epsilon)\,\dd t$ and the exact power
+in \eqref{rw:secondary:long-map}.
+Appendix~\ref{rw:app:secondary-long} differentiates its renormalized
+integral equation, including the moving endpoint and the height
+$w_e=0$, and proves \eqref{rw:secondary:long-jets}.
+The limiting unit retains its terminal-height dependence:
+$\Psi_0(0,0,w_e;\theta)=-(2b)^{-1}\log(1+2w_e/k)$.
+\end{proof}
+
+The exact power can also be checked on the reversible field. Its
+first integral is
+$Z^{-2\theta}(X^2+\bar B^{-1}+2Z/k)$.
+At fixed $Z/|X|$ its comparison with the maximum-height section gives
+the power $b/k$, inverse to $\beta_\epsilon$.
+For positive scale $1<b/k<2$, so that single power need not have
+an ordinary second derivative at zero. This is why the long estimate
+uses Euler input derivatives. Keeping $\beta_\epsilon$ exact is also
+essential for unrestricted separation of scales: replacing it by its
+zero-scale value would leave an error proportional to
+$\epsilon\log H$, which need not be small.
+
+\subsection{Two actual exits and compact section labels}
+
+Locate the first exit of each returning upper arc to identify the middle
+passage and define tags at its actual section points.
+
+Fix a small $w_0>0$. At the wedge exit $w=w_0$, write
+$\varphi=H$, $\gamma=\bar d/H$, $J=\bar m/H^2$.
+The vertical passage \eqref{rw:secondary:vertical}, followed by
+the reflected long map, has data
+\[
+ \widetilde H=HL_v,\qquad
+ \widetilde\gamma=-\gamma/L_v,\qquad
+ \widetilde J=J/L_v^2.
+\]
+Consequently the two original horizontal power inputs are
+\begin{equation}\label{rw:secondary:wedge-inputs}
+ u_\pm=H^{\beta_\epsilon}L_\pm,\qquad
+ L_\pm,L_\pm^{-1}>c>0.
+\end{equation}
+Their logarithms have the finite jets above.
+On a fixed original coefficient fibre the derivative is
+\[
+ \mathcal D=H\partial_H-\gamma\partial_\gamma-2J\partial_J,\qquad
+ \mathcal D\log u_\pm
+      =\beta_\epsilon+O(\delta+H^q)>c>0
+\]
+when $|\gamma|,|J|<\delta$.
+Reflection gives $u_+=u_-$ on $\bar a=\bar d=\nu=0$.
+
+For $\lambda>0$ define
+\begin{equation}\label{rw:secondary:normalization}
+ \lambda=\max(|\bar d|,\sqrt{|\bar m|}),\quad
+ C=\bar d/\lambda,\quad M=\bar m/\lambda^2,\quad
+ \max(|C|,\sqrt{|M|})=1,\quad
+ \Lambda=\lambda^{\beta_\epsilon}.
+\end{equation}
+Coefficient differentiation is performed on ordinary open neighborhoods
+of these signed faces, keeping $\lambda$ fixed rather than
+redifferentiating the maximum.
+Put $\hat x=\lambda X$, $\hat z=\lambda^2Z$,
+$\delta_s=\epsilon\lambda^2$ and $\dd t_s/\dd\xi=1/\lambda$.
+The exact field is
+\begin{equation}\label{rw:secondary:field}
+\begin{aligned}
+ \dot{\hat x}&=(\hat z-\delta_s)[M(\hat z-\delta_s)-1]
+                         +\theta\hat x^2+\epsilon\bar a\lambda\hat x,\\
+ \dot{\hat z}&=\hat z[\hat x+C(\hat z-\delta_s)]
+                         -\epsilon\nu\lambda(\hat z-\delta_s).
+\end{aligned}
+\end{equation}
+There is no coefficient $\nu/\lambda$.
+At zero scale division by $\hat z>0$ gives the affine field
+\begin{equation}\label{rw:secondary:linear}
+ \hat x'=M\hat z-1,\qquad \hat z'=\hat x+C\hat z.
+\end{equation}
+
+\begin{proposition}[First exits of returning upper arcs]
+\label{rw:secondary:routing}
+Consider actual upper arcs returning from $(p,0)$ to $(-q,0)$
+with primary data tending to the stated corner, $\nu\to0$ and
+$p\to\infty$. Closure at the central section is not required.
+After fixed choices of sections and one common coefficient restriction,
+each arc has either a first wedge exit
+\[
+ w=w_0,\quad 0<H<H_0,\quad
+ |\bar d|<\delta H,\quad |\bar m|<\delta H^2,
+\]
+or a passage between $\hat\varphi=\hat x/\hat z=L$ and $-L$
+in one fixed compact projective rectangle
+$0<R=1/\hat z<R_{\max}$.
+For $\lambda=0$ only the first alternative occurs.
+No uniform flight-time bound is asserted.
+\end{proposition}
+
+\begin{proof}
+The arrival estimate in Appendix~\ref{rw:app:secondary-barriers}
+sends $p\to\infty$ to the fixed section $\varphi=\varphi_0$ with
+$w\to0$, without any bound on $\epsilon\log p$.
+Also $q\to\infty$: otherwise a bounded positive subsequence of $q$
+and the reflected regular upper transition bound $p$; if $q\to0$,
+the small-entry equation gives $p/q\to1$. Both contradict
+$p\to\infty$. These arguments involve returning arcs, not their
+central closing values.
+
+Choose the wedge constants first, then $L\ge10$ so large that
+$1/L<\delta/2$, $1/L^2<\delta/2$.
+Keep the adjoining signs $W<-c$, $G+2W<-c$ on
+$\lambda L\le\varphi\le\varphi_0$, $0<w\le w_0$.
+Here $\varphi$ decreases and $w$ increases until a first terminal
+side is reached. At $w=w_0$ the required ratios are at most
+$1/L,1/L^2$. Its value $H$ tends to zero, since on every fixed
+$\varphi\ge\varphi_1>0$ strip the time and multiplicative height
+growth are bounded while the entry height tends to zero.
+The other side is $\varphi=\lambda L$; assign a corner hit to
+either alternative. If $\lambda=0$, exponential height growth
+reaches $w=w_0$.
+
+At the second side $0<R\le L^2w_0$.
+The fixed first-exit barrier of
+Appendix~\ref{rw:app:secondary-barriers} confines the arc until
+$\hat\varphi=-L$. This crossing must occur for a returning arc,
+whose incoming endpoint has
+$\hat\varphi=-q/(\epsilon\lambda)<-L$.
+It then has $w<R_{\max}/L^2<w_0+12$; reflected adjoining
+monotonicity continues the same arc to the original horizontal
+section. Uniqueness excludes another middle excursion.
+The spatial barrier is not a claim that arbitrary incident
+trajectories return.
+\end{proof}
+
+\begin{lemma}[Actual secondary tags]\label{rw:secondary:tags}
+On the fixed outgoing secondary section, its actual point $(L,R)$
+has a positive affine-flow tag $P\in[p_0,\infty]$.
+The reciprocal tag $t=1/P$ is a regular increasing coordinate in $R$,
+including $R=0$, with bounded finite jets and inverse jets.
+The incoming section has the reflected tag $Q$ with the same
+properties. These tags are not defined as $\lambda p,\lambda q$.
+\end{lemma}
+
+\begin{proof}
+Follow \eqref{rw:secondary:linear} backward from the actual section
+point. Multiplying by its fixed initial radial value $R$ gives
+\[
+ (\bar x,\bar z)(0)=(L,1),\qquad
+ \dot{\bar x}=R-M\bar z,\quad \dot{\bar z}=-\bar x-C\bar z.
+\]
+Before $\bar z=0$, $0\le\bar z\le1$ and
+$\bar x(s)\ge L-s$. A first-exit comparison gives a transverse
+zero at $0<T<2/L$, with $\bar x(T)>L/2$.
+This solution is smooth on the entire compact set
+$0\le R\le R_{\max}$, $|C|,|M|\le1$.
+Thus $P=\bar x(T)/R\ge L/(2R_{\max})=:p_0$ and
+$t=R/\bar x(T)$ vanishes simply at zero.
+Away from zero the flow determinant gives
+\[
+ \det(f,a_R)=\frac{R-M+L(L+C)}{R^3}>0,\qquad
+ \det(f,(1,0))=-P<0
+\]
+at the two sections, respectively; hence $P_R<0$ and $t_R>0$.
+Compactness supplies a common inverse margin. Reflection proves
+the incoming statement.
+\end{proof}
+
+The actual section points and the first-exit choice give the compact data
+\[
+ (\bar B,\bar a,\epsilon,\lambda,C,M,t_P,t_Q),
+ \quad \max(|C|,\sqrt{|M|})=1,\quad
+ 0\le t_P,t_Q\le p_0^{-1},
+\]
+together with the wedge or secondary exit choice and its fixed
+section. At $\lambda=0$ the secondary entries are limiting
+directions, not values of a divided original coefficient.
+The same construction applies to nonperiodic returning arcs and
+will be used for joint limits of an outer orbit and intermediate arcs.
+
+\subsection{Exact cancellation and regular comparisons}
+
+The original lower maps have one common horizontal exponent. Its
+absolute power supplies the bound on $\nu$ at a closing zero;
+cancellation in the derivative quotient supplies the relative expression
+used to count zeros on the fixed fibre.
+
+The original horizontal lower preparation is
+\begin{equation}\label{rw:secondary:lower}
+ D_\pm(u)=K_\pm u^\mu e^{P_\pm(u)/\epsilon},\quad
+ P_\pm(0)=0,\quad \|P_\pm\|_{C^N}\le C,\quad
+ H_\pm(u):=h_I+uP_\pm'(u)>c .
+\end{equation}
+This is \eqref{rw:transitions:horizontal-power}, in the two reflected
+coordinates. A finite lower double root is crossed between fixed
+slow sections before the final fixed core. Its whole-path condition
+must hold; otherwise the passage is absent. On its passing side the
+additional action belongs to $\epsilon\log K_\pm$ alone.
+The relative normal estimate supplies the same ordinary input bounds
+for $P_\pm$. No bounded coefficient derivatives of that divergent
+action are inferred.
+
+At $\hat\varphi=\pm L$ apply the variable-height long map, where
+$H=\lambda L$, $\gamma=C/L$, $J=M/L^2$.
+After regular outer connectors it gives
+\begin{equation}\label{rw:secondary:normalized-inputs}
+ u_\pm=\Lambda v_\pm .
+\end{equation}
+At a finite regular tag $v_\pm,v_\pm'>c$ after choosing a common
+oriented input. At strict-focus infinity, using $t=1/P$,
+$v_\pm=tV_\pm(t)$ with positive bounded units, derivatives and
+inverse margins. The angular field there has a negative margin
+on the compact passage, so its time and its ordinary radial jets
+through $R=0$ are bounded. At singular tags the two outer maps
+are constructed separately.
+
+The long unit converges as $\lambda\to0$ uniformly in $\theta$;
+then $\theta\to0$ identifies its limit with the affine tag flow:
+\begin{equation}\label{rw:secondary:phase-ratio}
+ v_-/v_+\longrightarrow P/Q(P;M,C)
+\end{equation}
+with the selected section and coefficient jets, including
+strict-focus reciprocal zero. With $s$ denoting the long variable,
+the affine backward leg has $\hat\varphi=Le^s$,
+$\hat x=[Le^sw(s)]^{-1}$ and
+$w(s)\sim w_e e^{-s}e^{\Psi_0}$. Its axis endpoint therefore satisfies
+\[
+ P^{-1}=Lw_e e^{\Psi_0(C/L,M/L^2,w_e;0)}.
+\]
+The original horizontal phase is $\varphi_0w_{\rm in}$ times a unit
+tending to one, so its quotient by $\Lambda$ also tends to $P^{-1}$.
+Reflection gives $Q^{-1}$ on the other leg.
+The ordinary height estimates and the radial passage give the stated
+jets after removing the common simple factor at reciprocal zero.
+
+Let $I_\pm=D_\pm(u_\pm)$ and
+$F=I_+-I_--\sqrt\epsilon\,\nu H_c$, where $H_c>c$ is independent
+of input. For a common increasing input let
+$l_\pm=D\log u_\pm$; use $D=\mathcal D$ in the wedge and
+$D=t\partial_t$ on a secondary reciprocal interval.
+The complete derivative logarithm is
+\begin{equation}\label{rw:secondary:complete-log}
+\begin{aligned}
+ \mathcal K={}&\epsilon\log(I_-'/I_+')
+ =\epsilon\log(K_-/K_+)+h_I\log(u_-/u_+)\\
+ &+P_-(u_-)-P_+(u_+)+\epsilon\log(l_-/l_+)\\
+ &+\epsilon\log\frac{H_-(u_-)}{H_+(u_+)} .
+\end{aligned}
+\end{equation}
+In this quotient, cancel the identical power $\Lambda$, or
+$H^{\beta_\epsilon}$, before any coefficient derivative; at reciprocal
+zero cancel the common simple factor $t$ as well. The exact cancellation
+removes $(\partial\beta_\epsilon)\log\lambda$ from the relative terms.
+Single-sided compositions still contain factors
+$\Lambda|\log\lambda|^j$, which a reserved positive power absorbs.
+Thus the estimates allow unbounded $\epsilon|\log\lambda|$.
+
+\begin{lemma}[Absolute scale budget]\label{rw:secondary:flat-budget}
+On each regular-lower center comparison box, for arbitrary fixed
+$A,N>0$, sufficiently small radial and scale cutoffs give
+\[
+ |I_+|+|I_-|\le Ce^{-A/\epsilon}\lambda^N
+ \quad\hbox{or}\quad Ce^{-A/\epsilon}H^N
+\]
+with the finite coefficient derivatives used for center division.
+The same absolute upper bound holds on a passing lower-double
+overlay, whose extra action only decreases the amplitudes.
+The derivatives of that extra action are excluded.
+\end{lemma}
+
+\begin{proof}
+Before any scale factor is discarded, the exact combined power is
+$\Lambda^\mu=\lambda^{k/(\epsilon\bar B)}$.
+Bound the remaining amplitudes by $e^{C_0/\epsilon}$.
+Choose $\lambda_0$ so that
+$\frac12\inf(k/\bar B)\log(1/\lambda_0)>C_0+A$,
+then choose $\epsilon$ so that
+$\epsilon N<\frac12\inf(k/\bar B)$.
+This proves the estimate. Further reserved powers absorb every
+fixed logarithm, inverse scale loss and coefficient derivative.
+The proof for $H$ is identical; at focus infinity reserve part
+of the common input power as well. A fixed lower core has an
+additional positive contraction budget, uniformly on compact
+coefficient blocks, by Proposition~\ref{rw:relative-core}.
+A fixed lower bottleneck contributes only further positive action.
+\end{proof}
+
+On a common regular-lower box reflection gives the exact identity
+$I_+=I_-$ when $\bar a=\bar d=\nu=0$ in the wedge, or
+$\bar a=C=\nu=0$ at secondary scale.
+On that common box, divide the absolute difference by the transverse
+coefficients using this identity. Only then impose the closing equation.
+The absolute budget and Lemma~\ref{rw:centers:relative-forcing} give,
+with $\eta_\epsilon\to0$,
+\begin{equation}\label{rw:secondary:local-forcing}
+ |\nu|\le\eta_\epsilon(|\bar a|+|\bar d|)
+ \quad\hbox{in the wedge},\qquad
+ |\nu|\le\eta_\epsilon\lambda^N(|\bar a|+|C|)
+ \quad\hbox{at secondary scale}.
+\end{equation}
+The exponent $N$ is any preselected finite exponent after reserving
+the required extra losses. In the first formula choose at least two
+powers of $H$ before replacing $H^N|\bar d|/H$ by $|\bar d|$.
+These scale powers come from the absolute deviations. Once a closing
+zero has supplied the coefficient inequality, the critical-function
+estimates use only the weaker bounds
+\begin{equation}\label{rw:secondary:critical-forcing}
+ |\nu|\le\eta_\epsilon(|\bar a|+|\bar d|)
+ \quad\hbox{in the wedge},\qquad
+ |\nu|\le\eta_\epsilon(|\bar a|+|C|)
+ \quad\hbox{on regular secondary intervals},
+\end{equation}
+imposed on a fixed coefficient fibre, with $\eta_\epsilon\to0$.
+
+For regular lower coefficients the endpoint constant is
+\begin{equation}\label{rw:secondary:lower-constant}
+ L(\bar a,\bar B)=
+ -\frac{\pi\bar a}{\bar B\sqrt{4\bar B-\bar a^2}} .
+\end{equation}
+Indeed its limiting difference is
+$-2\bar a\int_0^\infty X^2/(F_+F_-)\,\dd X$.
+With $s=\sqrt{\bar B}X$, reciprocal symmetry of the quartic
+reduces the integral to
+$\pi/(2\bar B\sqrt{4\bar B-\bar a^2})$.
+The subtracted tail is integrable with coefficient derivatives on
+every compact subset of $|\bar a|<2\sqrt{\bar B}$.
+The exact horizontal power subtraction and the finite-order lower
+phase estimates transfer this limit with the selected jets.
+At a lower double root, instead, retain
+$\mathcal K=\mp A_l+O(1)$ on its whole-path passing set;
+the sign corresponds to the contracting side. It is a strict
+constant-sign comparison, not a bound on $\mathcal K'$.
+
+\begin{proposition}[Wedge and regular secondary rows]
+\label{rw:secondary:regular}
+\label{rw:secondary:wedge}
+The wedge has local bound $Z(F)\le2$, and so does every finite
+regular secondary tag or strict-focus infinite tag.
+Each assertion holds on an open coefficient and section neighborhood,
+includes both signs of $\nu$, and retains all lower passing conditions.
+Near a regular center the derivative logarithm has at most one zero
+under the respective bound in \eqref{rw:secondary:critical-forcing}.
+For the closing-zero
+claim that bound follows from any one closing zero; if none exists,
+there is nothing to count.
+A lower-double action-dominated neighborhood has a strict sign of
+$\mathcal K$ and hence at most one closing zero.
+\end{proposition}
+
+\begin{proof}
+In the wedge, divide \eqref{rw:secondary:complete-log} on its
+common center box:
+\begin{equation}\label{rw:secondary:wedge-columns}
+ \mathcal K=\bar a A+(\bar d/H)C_w+\nu E,\qquad
+ A\to-\frac{\pi}{2\bar B^{3/2}},\quad
+ C_w\to-\frac{2c_w}{3\bar B},\quad
+ c_w=\frac{\sqrt{1+2w_0}}{w_0}.
+\end{equation}
+The $\mathcal D$ derivatives of these columns tend to zero.
+To compute the second column, the limiting center parabola is
+$Z=(p^2-X^2)/2$ and $p=c_w/H$ at $w=w_0$.
+Variation of $Z''-\bar dZ'=-1$ gives
+$\partial_{\bar d}(q-p)=2p^2/3$.
+Its endpoint action contribution is
+$-2Hp^3/[3(1+\bar Bp^2)]$, with the displayed limit.
+The first column is the derivative of
+\eqref{rw:secondary:lower-constant} at zero.
+The fixed-section endpoint variation cancels between the two
+center maps. The long estimates transfer these calculations with
+their $\mathcal D$ jets on small $|\gamma|,|J|,H,\epsilon$.
+
+Absorb the forcing column by adding
+$\nu\bar a E/(\bar a^2+\bar d^2)$ to $A$ and
+$H\nu\bar d E/(\bar a^2+\bar d^2)$ to $C_w$.
+The fixed-fibre operator has
+$\mathcal D\bar a=\mathcal D\bar d=\mathcal D\nu=0$.
+Thus \eqref{rw:secondary:critical-forcing} makes the corrections
+$O(\eta_\epsilon)$ and $O(H\eta_\epsilon)$ in the required
+$\mathcal D$ jets. Both columns retain negative
+margins and
+$\mathcal D\log[C_w/(HA)]<-1/2$.
+Thus their ratio is strictly monotone and $\mathcal K$ has at most
+one zero. Zero transverse coefficients give the exact center.
+Strict nonzero $\bar a$ and the lower-double boundary are instead
+covered by the value or action sign in
+\eqref{rw:secondary:lower-constant}. Compactness of the closed
+lower cone supplies a finite choice of such neighborhoods; one
+neighborhood counts the entire smaller wedge of a fixed fibre.
+
+At regular secondary tags the limit is
+\begin{equation}\label{rw:secondary:regular-limit}
+ \mathcal K_0=L(\bar a,\bar B)-\bar B^{-1}\log(Q/P).
+\end{equation}
+We record the affine-flow facts that determine its columns.
+For return time $T$, set $\zeta(s)=e^{-Cs/2}\hat z(s)$ along the
+orbit.
+If $S_\chi''=\chi^2S_\chi$, $S_\chi(0)=0$, $S_\chi'(0)=1$,
+$\chi^2=M+C^2/4$, the Dirichlet formula gives
+\[
+ P=\frac{\int_0^TS_\chi(T-s)e^{-Cs/2}\,\dd s}{S_\chi(T)},\quad
+ Qe^{-CT/2}=\frac{\int_0^TS_\chi(s)e^{-Cs/2}\,\dd s}{S_\chi(T)}.
+\]
+The first-return time precedes the first positive zero of $S_\chi$.
+Pair $s$ and $T-s$ for $0<s<T/2$: the kernel difference
+$S_\chi(T-s)-S_\chi(s)$ is positive by the hyperbolic sine formula
+or its linear limit, and for $\chi=i\omega$ it equals
+$2\cos(\omega T/2)\sin(\omega(T/2-s))/\omega>0$
+because the first-return condition gives $T<\pi/\omega$.
+On this half-interval, $e^{-Cs/2}-e^{-C(T-s)/2}$ has sign $C$,
+so the paired integral gives
+$\operatorname{sign}(P-Qe^{-CT/2})=\operatorname{sign}C$.
+Together with $Q_P=(P/Q)e^{CT}$ this proves
+$\operatorname{sign}\partial_P\log(Q/P)=\operatorname{sign}C$.
+On $C=0$ the divided column is
+\[
+\begin{gathered}
+ G(P,M)=\partial_C\log(Q/P)|_{C=0}
+   =\frac2{P^2}\int_0^{z_{\max}}
+                         \sqrt{P^2-2z+Mz^2}\,\dd z,\\
+ G_P=2\int_0^1\frac{v^2}{1-MP^2v^2}\,\dd v>0.
+\end{gathered}
+\]
+The vanishing endpoint integrand justifies its differentiation.
+For $M=-r^2$, direct integration gives
+$G(1/t,M)=\pi/(2r)-2t/r^2+O(t^2)$.
+More generally at strict-focus infinity the affine solution gives
+\[
+ \log(Q/P)|_{t=0}=\frac{\pi C}{\sqrt{-4M-C^2}},\quad
+ \partial_t\log(Q/P)|_{t=0}
+ =-\frac{C(1+e^{-\pi C/\sqrt{-4M-C^2}})}{-M}.
+\]
+These follow by imposing the first zero in
+\[
+ \hat z(s)=\frac1M\left[
+ 1-e^{Cs/2}\left(\cos\omega s-
+       \frac{MP+C/2}{\omega}\sin\omega s\right)\right],
+ \qquad \omega=\sqrt{-M-C^2/4};
+\]
+they have finite coefficient jets on strict-focus compact sets.
+
+For $C\ne0$ these derivative margins transfer to $\mathcal K$.
+For $C=0,\bar a\ne0$ use its nonzero value.
+Near $\bar a=C=0$, divide into
+$\mathcal K=\bar a A+CD+\nu E$; the limiting columns are
+$A_0=-\pi/(2\bar B^{3/2})$ and
+$D_0=-G(1/t,M)/\bar B$.
+Their ratio has a strict derivative margin, also at $t=0$.
+The mixed jets of Proposition~\ref{rw:exact-long} and the horizontal
+preparation give $\|E\|_{C^1}\le C$ uniformly on this regular-lower
+box. To see this, cancel $\Lambda$ in
+\eqref{rw:secondary:complete-log} before taking one $\nu$ and one
+input derivative. At focus infinity write $v_\pm=tV_\pm$ and cancel
+$t$ as well. The remaining relative units have positive margins;
+one input derivative of their logarithmic rates and one coefficient
+derivative spend two input orders and one coefficient order, with
+one further input order reserved for the simple-factor division.
+At fixed $\lambda,C$, the original lower coefficient is
+$\bar c=\lambda C-\nu$, so the $\nu$ derivative is
+$\partial_\nu-\partial_{\bar c}$ in the original lower box.
+The single-sided terms retain a positive scale power.
+For fixed horizontal and central sections, shrink the regular center box
+so that $|\bar a|\le\sqrt{B_*}/2$ and $\epsilon|\bar m|\le1/4$.
+The exact formula \eqref{rw:transitions:lower-factor}, with a smaller
+scale cutoff, gives $F_I^\pm(s)\ge B_*/2+s^2/2$ on $[0,x_R]$.
+Write $\beta_I^\pm/(sF_I^\pm)=h_I/s+q_\pm$ and use the fixed
+split $x_h$ of Proposition~\ref{rw:lower-preparation}. The horizontal
+proof and the curved and central connections give
+\[
+\begin{aligned}
+ \epsilon\log K_\pm={}&-S_c^\pm-h_I\log x_h
+ -\int_0^{x_h}q_\pm(s)\,\dd s
+ -\int_{x_h}^{x_R}\frac{\beta_I^\pm(s,0)}{sF_I^\pm(s)}\,\dd s\\
+ &+\epsilon\log U_\pm-\epsilon\log\epsilon,
+ \qquad U_\pm=Z_e^\pm(0)e^{j_\pm(0)}u_c^\pm(0)a_c^\pm.
+\end{aligned}
+\]
+The units $U_\pm$ are positive with bounded logarithmic coefficient
+jets by Propositions~\ref{rw:transitions:curved-exit}
+and~\ref{rw:transitions:central-core}. For
+$\mathscr D_\nu=\partial_\nu-\partial_{\bar c}$, fixed $R$ gives
+$\mathscr D_\nu h_I=\mathscr D_\nu S_c^\pm=0$.
+Differentiating the fixed integrals using the displayed positive
+denominator and Proposition~\ref{rw:phase} therefore bounds
+$\mathscr D_\nu[\epsilon\log(K_-/K_+)]$ uniformly on this regular
+center box. Define the forcing column by integrating this
+$\nu$ derivative from zero. The corrections
+\[
+ \frac{\nu\bar a E}{\bar a^2+C^2},\qquad
+ \frac{\nu C E}{\bar a^2+C^2}
+\]
+are therefore $O(\eta_\epsilon)$ in $C^1$ under
+\eqref{rw:secondary:critical-forcing}. Adding them to $A,D$
+preserves their margins and the strict derivative of their quotient.
+This gives $Z(\mathcal K)\le1$ and $Z(F)\le2$.
+The lower-double case uses its independent constant action sign.
+\end{proof}
+
+\begin{lemma}[Outward direction and regular departure]
+\label{rw:secondary:chain-direction}
+\label{rw:secondary:chain-monotone}
+The wedge's outward derivative is a positive multiple of
+$-\mathcal D$, and the secondary tag $P$ increases outward.
+Under the corresponding relative forcing bounds, if
+$\bar a\bar d<0$ and $\mathcal K=0$ or
+$\operatorname{sign}\mathcal K=-\operatorname{sign}\bar d$,
+its outward derivative has sign $-\operatorname{sign}\bar d$
+on the wedge and on a fixed compact regular secondary set.
+\end{lemma}
+
+\begin{proof}
+For the actual input $a(p)=(p,\epsilon)$ and wedge output
+$b(H)=(1/(w_0H),1/(w_0H^2))$, the flow determinants are
+$-\epsilon p<0$ and $\dot w/(w_0^3H^4)>0$.
+The flow Jacobian has positive determinant, so $H'(p)<0$ and
+$\dd/\dd p=(H'(p)/H)\mathcal D$ exactly.
+The tag orientation follows from Lemma~\ref{rw:secondary:tags}
+and the ordering of the transverse outgoing intersections.
+
+Put $s=\operatorname{sign}\bar d$.
+The hypothesis $s\mathcal K\le0$ in the wedge first excludes the
+strict nonzero lower-cone values and then, by its two negative
+columns, bounds $|\bar a|\le C|\bar d|/H$.
+Inserting this bound into $-s\mathcal D\mathcal K$ leaves the
+strict negative main term $(|\bar d|/H)C_w$; the column derivatives
+are arbitrarily smaller. At secondary scale the same hypothesis
+and \eqref{rw:secondary:regular-limit} give $|\bar a|\le C|C|$.
+The outward derivative of $\log(Q/P)$ has sign $C$ and a margin
+relative to $|C|$, using $-t$ as the regular outward coordinate at
+focus zero.
+The divided relative errors are small compared with that margin.
+Thus the outward derivative of $\mathcal K$ has sign $-s$.
+This is a local direction statement on actual open regular overlaps;
+it does not add their zero counts.
+\end{proof}
+
+\subsection{Singular secondary endpoints}
+
+For use at every singular row keep the exact projective equation.
+With $R=1/\hat z$, $\hat\varphi=\hat x/\hat z$,
+$A_s=\epsilon\bar a\lambda$, $\nu_s=\epsilon\nu\lambda$, it is
+\begin{equation}\label{rw:secondary:projective}
+\begin{aligned}
+ R'={}&-R(\hat\varphi+C)+(C\delta_s+\nu_s)R^2-\nu_s\delta_sR^3,\\
+ \hat\varphi'={}&M-b\hat\varphi^2-C\hat\varphi
+ +R[-1-2M\delta_s+(A_s+C\delta_s+\nu_s)\hat\varphi]\\
+ &+R^2[\delta_s+M\delta_s^2-\nu_s\delta_s\hat\varphi].
+\end{aligned}
+\end{equation}
+Its coefficients converge on fixed compact rectangles. The lower
+coefficient $\bar B$, however, is still measured at the original scale;
+replacing it by $\bar B/\lambda^2$ would lose the compact coefficient
+range required by the lower estimates. We therefore attach each new
+upper map to the original lower maps \eqref{rw:secondary:lower}.
+
+\begin{proposition}[A finite secondary saddle]
+\label{rw:secondary:saddle}
+For $M>0$, the limiting tags
+$P=P_c(M,C)$, $Q=P_c(M,-C)$ have local bound $Z(F)\le3$.
+Let $\kappa=r-1$ for the actual saddle ratio $r$.
+Under $|\nu|\le\eta_\epsilon(|\bar a|+|\kappa|)$, with
+$\eta_\epsilon\to0$, their derivative logarithm also satisfies
+$Z(\mathcal K)\le2$.
+Here
+\[
+ P_c(M,C)=\frac2{C+\sqrt{C^2+4M}} .
+\]
+The actual domain is the positive returning saddle quadrant, intersected
+with every lower whole-path condition and the positive central outputs.
+A lower double root may shorten this domain.
+\end{proposition}
+
+\begin{proof}
+The limiting saddle is $(-C/M,1/M)$, with ratio
+$r_0=(\sqrt{C^2+4M}-C)/(\sqrt{C^2+4M}+C)$.
+Near its positive height, division by $\hat z$ turns
+\eqref{rw:secondary:field} into an analytic $O(\epsilon)$
+perturbation of the affine field, uniformly through $\lambda=0$.
+The axis construction of Section~\ref{rw:upper-resonance} therefore
+applies on a common neighborhood. Its two outer maps are
+$u_+(t)=\Lambda v_+(t)$, $u_-(y)=\Lambda v_-(y)$ with
+$v_\pm,v_\pm'>c$; cancellation of $\Lambda$ gives
+$v_-(0)/v_+(0)\to r_0$.
+
+Near $C=0$ preserve the exact reversible identity.
+On $\bar a=C=\nu=0$ put $z_s=\delta_s+1/M$ and
+\[
+ W_c(z)=(z/z_s)^{-2\theta},\qquad
+ I_c(z)=\int_{z_s}^z
+       \frac{2(s-\delta_s)[M(s-\delta_s)-1]}sW_c(s)\,\dd s .
+\]
+The first integral is $W_c\hat x^2-I_c$.
+Since $I_c=(z-z_s)^2J_c$ with $J_c(z_s)=1/z_s>0$,
+its analytic square root supplies reflected product coordinates.
+Extend them and normalize the neighboring axes, using the identity
+when they are already normalized. The reciprocal preparation then
+gives the actual ratio $\kappa=r-1$ and
+\[
+ y=t^re^w,\qquad
+ w=-\sigma_s t\omega(t;\kappa)+O_E(\epsilon n t^{7/4}),
+ \qquad |\sigma_s|\le C\epsilon n,\quad
+ n=|\bar a|+|\kappa|+|\nu|.
+\]
+The identity is $y=t$ on the center. Hadamard division on the
+common coefficient box supplies the factor $n$ in the remainder.
+Finite mixed jets are obtained from the same equation and
+coefficient division on its fixed positive quadrant.
+
+Put $U=D_+(u_+)$, $V=D_-(u_-)$ and
+$\mathsf A_\pm=\epsilon U''/U',\epsilon V''/V'$.
+For $u=\Lambda v$, set
+$Z_\pm=H_\pm(u)v'/v$.
+Then $\mathsf A_\pm=Z_\pm+\epsilon Z_\pm'/Z_\pm$.
+These rates have positive margins and bounded ordinary jets.
+A lower-double action is a constant multiplier and cancels here.
+It is not differentiated in coefficients.
+
+Integrating these rates gives \eqref{rw:finite:saddle-log} with
+$(v,K)=(y,\mathcal K)$:
+\begin{equation}\label{rw:secondary:saddle-log}
+ \mathcal K=K_c+\epsilon\kappa\log t+\mathcal E(t),\qquad
+ K_c=\epsilon\log[rV'(0)/U'(0)] .
+\end{equation}
+The remainder and its Euler derivative are $O(t^{1/2})$,
+or $O(nt^{1/2})$ near the center. Cancellation of $\Lambda$
+before differentiating shows
+\[
+ K_c\longrightarrow L(\bar a,\bar B)+\bar B^{-1}\log r_0 .
+\]
+On a regular center box this yields
+$K_c=\bar a A_c+\kappa B_c+\nu C_c$, where
+$A_c\to-\pi/(2\bar B^{3/2})$ and the other columns are bounded.
+The exact center and the absolute budget give
+$|\nu|\le\eta(|\bar a|+|\kappa|)$ at a closing zero.
+The actual ratio coordinate is legitimate because
+$\partial_C\kappa\to-1/\sqrt M$.
+
+We apply Lemma~\ref{rw:finite:saddle-counting} to this preparation.
+For a nonzero limiting $\bar a$, clause \textup{(i)} uses $R_*=1$;
+for a dominating lower action it uses that action's magnitude.
+Near the center fix a large $K_0$. The divided constant and relative
+forcing give the same hypotheses with $R_*=|\bar a|$ in the cone
+$|\bar a|>K_0|\kappa|$.
+
+In the remaining cone the constant may cancel, so we count the Euler
+derivative instead. For $|\bar a|\le K_0|\kappa|$, the coefficient
+bound gives $n\le(1+K_0)(1+\eta_\epsilon)|\kappa|$.
+If $\kappa=0$, it first gives $\bar a=\nu=0$, the exact center.
+On the noncenter part, differentiation gives
+\eqref{rw:finite:saddle-compensator} with $K=\mathcal K$,
+$A=\mathsf A_-(0)$, $B_0=\mathsf A_+(0)$ and $\sigma=\sigma_s$;
+the prepared remainder satisfies $|D^jR|\le Cnt^{3/2}$, $j\le2$.
+Since $\sigma_s/\kappa=O(\epsilon)$, the positive rate margin gives
+$W/\kappa>c$, $|T|\le C|\kappa|$ and
+$|R'|=|DR|/t\le C|\kappa|t^{1/2}$.
+Clause \textup{(ii)} gives $Z(\mathcal K)\le2$.
+Away from ratio one, the unsheared reciprocal equation gives
+$y=k_0t^re^w$ with a bounded positive $k_0$ and the derivative
+expansion of clause \textup{(iii)}, with
+$A=\mathsf A_-(0)$ and $B=\mathsf A_+(0)$.
+Thus the same bound holds there. By \ref{rw:zero-calculus},
+$Z(F)\le3$ on the lower-passing, positive-central subinterval;
+no endpoint value at a truncated passage is used.
+\end{proof}
+
+We also retain the actual coefficient identity needed by a later
+entrance argument. On $\bar a=\nu=0$ let $q=M+\theta C^2$.
+The saddle Jacobian of the divided field is exactly
+\[
+ J_s^{\rm ref}=
+ \begin{pmatrix}
+ -2\theta C/(1+\delta_s q)&(M-\theta C^2)/(1+\delta_s q)\\
+ 1&C
+ \end{pmatrix}.
+\]
+The remaining coefficients change it by
+$O(\epsilon\lambda(|\bar a|+|\nu|))$.
+Thus on a compact positive-$M$ block
+\begin{equation}\label{rw:secondary:saddle-ratio}
+ \kappa=-\alpha_s C+
+ O(C^2+\epsilon\lambda|\bar a|+\epsilon\lambda|\nu|),\qquad
+ \alpha_s=\frac{1+M\delta_s-2\theta}
+                  {\sqrt{M(1+M\delta_s)}}>c>0 .
+\end{equation}
+The reference ratio is exactly one at $C=0$. This is an identity
+for the secondary parameters $C=\bar d/\lambda$; its small
+$\nu$ term does not justify dropping the order-one $\nu$ term in
+the primary ratio when $\bar c$ is held fixed.
+
+\begin{proposition}[Real, repeated and weak secondary rows]
+\label{rw:secondary:real}
+For $C>0$ the following limiting rows have the stated local bounds;
+reflection supplies $C<0$:
+\[
+\begin{array}{c|c|c}
+\text{row}&\text{limiting tags}&Z(F)\\ \hline
+ M<0,\ C^2+4M>0&P=P_c,\ Q=\infty&\le2\\
+ C=2g,\ M=-g^2&P_c=1/g\le P<\infty,\ Q=\infty&\le2\\
+ C=2g,\ M=-g^2&P=Q=\infty&\le2\\
+ M=0&P=1/C,\ Q=\infty&\le3
+\end{array}
+\]
+Every assertion holds in an open coefficient and section neighborhood.
+It includes neighboring signs of the unfolding parameters and either
+lower double root on its whole-path passing set. Positive central
+outputs are imposed in addition to the upper conditions below.
+\end{proposition}
+
+\begin{proof}
+In every row the lower maps remain \eqref{rw:secondary:lower}, with
+divergent lower actions confined to input-independent constants.
+The upper singularities require different estimates: a hyperbolic power
+for the strict row, a quadratic angular passage for the repeated rows,
+and the exact moving radial factor for the weak row. We keep the passing
+domains throughout these preparations and their adjacent unfoldings.
+
+For the strict row define
+\[
+ \Delta=\sqrt{C^2+4bM},\quad
+ \varphi_s=(-C-\Delta)/(2b),\quad
+ \gamma=\varphi_s+C=\frac{Ck-\Delta}{2b},\quad r=\gamma/\Delta.
+\]
+Both $\Delta,\gamma$ have positive margins.
+The projective saddle has eigenvalues $-\gamma,\Delta$.
+Straighten its axes and integrate its orbital reciprocal equation
+in the returning quadrant. The map is $k_0t^re^{j(t)}$,
+with three selected Euler derivatives of $j$ tending to zero
+as the section shrinks. Compact positive-ratio margins absorb
+the fixed logarithmic losses, including internal resonances.
+The other quadrant enters the attracting node.
+After the two long legs,
+\[
+ u_+=\Lambda v(t),\quad v,v'>c,\qquad
+ u_-=\Lambda k_1t^re^{j_1(t)} .
+\]
+In \eqref{rw:secondary:complete-log},
+$t\partial_t\log l_+=1+O(t)$ and
+$t\partial_t\log l_-=o(1)$.
+Consequently $t\mathcal K'=h_Ir-\epsilon+o(1)>0$.
+The terms from $P_\pm$ are $O(\Lambda t)+O(\Lambda t^{r_*})$.
+This proves the two-zero closing bound.
+
+Near a repeated root the boundary restriction of
+\eqref{rw:secondary:projective} gives exactly, after the positive
+division by $b$ and a finite-order phase projection,
+\begin{equation}\label{rw:secondary:repeated}
+\begin{gathered}
+ v'=\mu_u+v^2=:f(v),\qquad R'=-R\beta_u(v,R),\\
+ \beta_u(v,0)=(\Xi-v)/b,\qquad
+ \mu_u=-\frac{C^2+4bM}{4b^2},\qquad \Xi=\frac{Ck}{2b}.
+\end{gathered}
+\end{equation}
+The normal margin is positive. Fix the finite derivative order
+before taking the angular strip small enough that its slow variation
+growth is dominated by that margin, as in
+Section~\ref{rw:upper-degenerate-preparation}.
+The phase construction preserves this exact boundary equation.
+A moving entry $v$ can reach a fixed positive exit $v_R$ precisely when
+\begin{equation}\label{rw:secondary:repeated-domain}
+ f(s)>0\quad(v\le s\le v_R):
+ \quad \mu_u>0\ \text{or}\ %
+       [\mu_u\le0,\ v>\sqrt{-\mu_u}].
+\end{equation}
+No scalar root can be crossed by using a different normal fibre.
+
+For a finite repeated tag the entry coordinate decreases strictly
+with $P$. At the limiting field this follows from the coordinates
+$V,Z_1$ and $r'=-r^2$ in
+Appendix~\ref{rw:app:secondary-tails}; the fixed radial entry
+and transverse outer map preserve a negative derivative margin.
+The normal passage has
+\[
+ G(v)=k_0\exp[-\int_v^{v_R}\beta_u(s,0)/f(s)\,\dd s]e^{j(v)},
+ \qquad N=fG'/G=\beta_u(v,0)+fj'>c .
+\]
+The selected ordinary jets of $j$ are bounded by
+Proposition~\ref{rw:relative-core} and
+Lemma~\ref{rw:transitions:moving-rate}.
+Write $u_+=\Lambda w(v)$, $w,w'>c$,
+$u_-=\Lambda k_1G(v)$ and $\psi=w'/w$.
+The full numerator is
+\begin{equation}\label{rw:secondary:finite-repeated-numerator}
+\begin{aligned}
+ f\mathcal K'={}&h_IN-h_If\psi
+       +u_-P_-'N-fu_+P_+'\psi\\
+ &+\epsilon(fN'/N-f'-f\psi'/\psi)
+       +\epsilon f\partial_v\log[H_-(u_-)/H_+(u_+)] .
+\end{aligned}
+\end{equation}
+The last term is $O(\epsilon\Lambda)$; the other perturbations
+are $O(\Lambda+|f|+\epsilon|f'|+\epsilon|f|)$.
+First reduce the angular strip, then the scale, so $h_IN$
+dominates. Thus $f\mathcal K'>0$ on the whole actual branch.
+
+For the two-infinite repeated row, fixed slow sections
+$-v_R,v_R$ require $\mu_u>0$. Their contraction is
+\[
+ e^{-A_u},\qquad
+ A_u=\frac{2\Xi}{b\sqrt{\mu_u}}\arctan(v_R/\sqrt{\mu_u}).
+\]
+The outer relative units have ordinary radial jets, giving
+$u_+=\Lambda tV_+(t)$,
+$u_-=\Lambda e^{-A_u}tV_-(t)$ with $t=1/P$ and positive units.
+Hence
+\[
+ \mathcal K(0)=\epsilon\log(K_-/K_+)-h_IA_u+O(1),\qquad
+ \|\mathcal K-\mathcal K(0)\|_{C^2}\le C .
+\]
+The explicit repeated first integral and the uniformly contracting
+tails of Appendix~\ref{rw:app:secondary-tails} prove
+\begin{equation}\label{rw:secondary:repeated-limit}
+ \mathcal K_P\longrightarrow
+ \bar B^{-1}[P^{-1}-P/(P-P_c)^2],\qquad
+ \mathcal K_t\longrightarrow
+ \frac{P_c(2-P_ct)}{\bar B(1-P_ct)^2}>0 .
+\end{equation}
+The ordinary $C^2$ bound transfers this derivative limit to $t=0$:
+compare first with a fixed small positive $t$ and then let that input
+decrease to zero. The positive derivative gives the two-zero closing
+bound even when upper and lower divergent actions cancel in the constant.
+
+For the weak row take $C>0$; reflection is applied to the whole
+field before choosing the contracting chart when $C<0$.
+Put $\Delta=\sqrt{C^2+4bM}$ and
+$\varphi_s=(-C-\Delta)/(2b)$. The exact radial eigenvalue is
+\begin{equation}\label{rw:secondary:weak-face}
+ \gamma=\varphi_s+C
+ =-\frac{2(M+\epsilon\bar BC^2)}{Ck+\Delta}.
+\end{equation}
+Thus the moving weak face is $M+\epsilon\bar BC^2=0$.
+In reversed projective time the normal eigenvalue is $-\Delta$.
+The weak graph gives a reduced equation $\zeta'=\zeta G(\zeta)$,
+where $G(0)=\gamma$ and
+\[
+ G'(0)=
+ \frac{1+2M\delta_s-(A_s+C\delta_s+\nu_s)\varphi_s}
+      {\Delta+\gamma}-C\delta_s-\nu_s\longrightarrow1/C>0.
+\]
+Choose the finite smooth complete extension and phase projection as
+in Section~\ref{rw:upper-degenerate-preparation}. Its inputs hold here:
+$R=0$ is invariant, the normal margin is $\Delta$, and the displayed
+positive $G'(0)$ gives
+$u=G(\zeta)-\gamma=\zeta\int_0^1G'(s\zeta)\,\dd s$.
+Division by its positive time factor gives exactly
+$u'=f(u)=u(\gamma+u)$, spending one radial derivative.
+The derivative orders precede the weak width, so normal decay
+dominates every retained slow variation.
+The unique positive component reaching the fixed exit $u_R$ is
+\begin{equation}\label{rw:secondary:weak-domain}
+ \max(0,-\gamma)<u<u_0<u_R/2,\qquad |\gamma|<u_R/2.
+\end{equation}
+Intersect this domain with the two original lower whole-path
+conditions and positive central outputs.
+
+Let $t=t(u)$ be the inverse normal passage with its regular connector.
+Proposition~\ref{rw:relative-core} and
+Lemma~\ref{rw:transitions:moving-rate} give
+\[
+ \frac{t'}t=\frac Nf,\qquad
+ \frac{t''}{t'}=\frac{A_U}f,\qquad
+ A_U=N-f'+fN'/N,\qquad N,A_U>c,
+\]
+with bounded ordinary $C^2$ rates. Moreover $\|t\|_{C^3}\to0$
+uniformly as $u_0,|\gamma|\to0$, with $u_R$ fixed:
+the transit time tends uniformly to infinity, and
+$f(u_R)/f(u)\le e^{\varpi T}$ when $|f'|\le\varpi$,
+so the reserved normal exponential absorbs every fixed inverse-speed
+loss. In the secondary upper construction retain joint order twelve
+before the positive coordinate/time change, leaving eleven;
+relative-core with $N=7$ uses nine primitive orders and gives seven
+orders for the relative logarithm, hence five for its rates, including
+two ordinary input and three coefficient orders.
+Independently retain original-lower field, reference and connection
+order ten for the Gaussian divided-$\nu$ bound in
+Appendix~\ref{rw:app:relative-core}. The lower-phase reserve gives
+raw graph order seventeen for this target, whereas the full lower-preparation reserve in
+Proposition~\ref{rw:lower-preparation} gives eighteen
+for $P_\pm$ through order seven. Choose the original lower graph
+at order eighteen. Retain order seven also in $\Phi,w$ for the
+rate and simple-factor divisions below. All orders count ordinary
+section inputs, coefficients and Euler scale derivatives together.
+
+Write $u_+=\Lambda w(t)$, $w,w'>c$, and
+$u_-=\Lambda\Phi(u)$, $\Phi(0)=0$, $\Phi'>c$.
+Put $L_u=u\Phi'/\Phi$, $R_\Phi=\Phi''/\Phi'$,
+$\psi=w'/w$, and
+\[
+\begin{aligned}
+ A_I&=H_-(u_-)-\epsilon+
+       \epsilon u_-H_-'(u_-)/H_-(u_-),\\
+ R_{\rm out}&=H_+(u_+)\psi+
+       \epsilon[\Lambda w'H_+'(u_+)/H_+(u_+)+\psi'/\psi].
+\end{aligned}
+\]
+The complete derivative quotient, with its common exact scale power
+already canceled, gives
+\begin{equation}\label{rw:secondary:weak-numerator}
+ \mathcal M=f\partial_u\mathcal K
+ =A_IL_u(\gamma+u)+\epsilon fR_\Phi
+       -R_{\rm out}(t)Nt-\epsilon A_U.
+\end{equation}
+Here $A_I(0)=h_I-\epsilon=k/\bar B$,
+$A_I',A_I''=O(\Lambda)$ and $L_u=1+O(u)$.
+Lemma~\ref{rw:weak:rate-calculus} applies with
+$h=1$, $A=A_IL_u$, $R=R_\Phi$ and $E=R_{\rm out}N$.
+Their bounded ordinary $C^1$ rates and $\|t\|_{C^2}\to0$ give
+$\partial_u\mathcal M>c$ after the weak ranges and then the scales
+are reduced, retaining the term $-\epsilon A_U'$.
+Hence $Z(\mathcal K')\le1$, $Z(\mathcal K)\le2$ and
+$Z(F)\le3$ by \ref{rw:zero-calculus}. Lower-double constants
+do not enter these input rate derivatives.
+
+Each numerator argument uses only input derivatives of lower
+bottleneck maps, so their divergent constants are harmless.
+Reflection exchanges both actual maps and the oriented inputs,
+takes $(\bar a,C,\nu)$ to their negatives, and preserves return
+multiplicity. It is applied before choosing the contracting chart.
+\end{proof}
+
+The weak numerator supplies a useful direction without taking a
+formal endpoint value: in the outward orientation $u$ decreases,
+so $\operatorname{sign}\mathcal K'_{\rm out}
+=-\operatorname{sign}\mathcal M$.
+This remains valid on a shortened lower-passing interval.
+For finite saddles \eqref{rw:secondary:saddle-ratio} supplies the
+actual ratio direction. These directions give the entrance counts in
+Propositions~\ref{rw:secondary:saddle-anchor}
+and~\ref{rw:secondary:weak-anchor}.
+
+\subsection{Exhaustion of the normalized escape faces}
+
+It remains to show that these rows cover every returning-arc limit.
+We use the compact actual tags to include the repeated and weak
+boundaries, without assuming that the arc closes at the central section.
+
+\begin{proposition}\label{rw:secondary:exhaustion}
+Every limit of nonwedge returning upper arcs in
+Proposition~\ref{rw:secondary:routing}, with an inherited lower cone,
+belongs to one of the following rows or its reflection:
+\[
+\begin{array}{c|c}
+ \text{limiting upper data}&\text{tags}\\ \hline
+ \text{regular}&0<P<P_c,\quad Q=Q(P;M,C)\\
+ M>0& P=P_c,\quad Q=Q_c\\
+ M<0,\ C>0,\ C^2+4M>0&P=P_c,\quad Q=\infty\\
+ C>0,\ C^2+4M=0&P_c\le P<\infty,\quad Q=\infty\\
+ M=0,\ C>0&P=1/C,\quad Q=\infty\\
+ M<0,\ C^2+4M<0&P=Q=\infty\\
+ M<0,\ C^2+4M=0&P=Q=\infty .
+\end{array}
+\]
+Here $Q_c=P_c(M,-C)$ and $P_c=\infty$ when
+$C^2+4M<0$ or $C+\sqrt{C^2+4M}\le0$.
+The secondary signed normalization remains in every row.
+No third occurrence of the same zero corner is possible.
+The assertion applies to returning arcs without a closing condition.
+\end{proposition}
+
+\begin{proof}
+Take a convergent subsequence in the compact normalized face,
+inherited lower cone and reciprocal tags. If $P_*<P_c$, the affine first return
+is regular and compact finite-time convergence gives
+$Q_*=Q(P_*;M,C)$. Reflection gives the converse when $Q_*<Q_c$.
+
+Let $D=C^2+4M>0$ and $P_c<\infty$. A supercritical
+$P_*>P_c$, including infinity, enters the boundary node
+\[
+ R=0,\qquad \hat\varphi_n=(-C+\sqrt D)/2,
+\]
+whose eigenvalues are $-\sqrt D$ and $-(C+\sqrt D)/2<0$.
+For a finite tag the affine solution has a positive growing
+coefficient; for an infinite tag follow the boundary angular equation
+from $L$. A small trapping neighborhood in $R\ge0$ persists by its
+strict eigenvalue margins and invariant boundary. Continuous
+dependence on the preceding compact segment sends nearby arcs into
+it and excludes arrival at $-L$, contradicting their return.
+Reflection gives the opposite-end exclusion. This requires $D>0$.
+
+If both finite tags are nonregular, the affine eigenline classification
+therefore gives the two finite thresholds with $M>0$.
+If just one tag is infinite, it gives the strict-real, finite-input
+repeated, or weak row. At a repeated root the full finite interval
+$P\ge P_c$ remains. A finite opposite tag would be a regular
+reflected return and would force $P<P_c$.
+If both tags are infinite, the node exclusions force $D\le0$.
+Normalization then implies $M<0$, since $M=0$ would force
+$C=0$ and violate $\max(|C|,\sqrt{|M|})=1$.
+These give precisely the two-infinite rows.
+
+On the normalized repeated face $|C|=1$, $M=-1/4$;
+on the limiting weak face $|C|=1$, $M=0$.
+Their adjacent signed unfoldings have the whole-path domains
+\eqref{rw:secondary:repeated-domain} and
+\eqref{rw:secondary:weak-domain}; the reciprocal repeated tag has
+its separate relative preparation. Together with the strict-real,
+finite-saddle and focus rows, these cover every boundary of the
+normalized face, with actual first-exit flags and tags retained.
+Normalization excludes $(C,M)=(0,0)$, so another parabolic zero
+corner cannot occur.
+
+An excluded returning sequence at arbitrarily small scales would
+contradict these exclusions. Each retained row has the open local
+neighborhood proved in its preparation, completing the returning-arc
+exhaustion.
+\end{proof}
+
+\begin{theorem}[The local secondary atlas]\label{rw:secondary-local}
+The wedge and all rows of Proposition~\ref{rw:secondary:exhaustion}
+have the preparations and unanchored closing-zero bounds proved above.
+The bounds are two for wedge, regular, strict-real and either repeated
+row, and three for finite-saddle and weak rows.
+They apply with multiplicity on one actual comparison interval with
+the lower whole-path and positive-central restrictions.
+The adjoining maps use the exact exponent $\beta_\epsilon$;
+the two lower maps use the exact common exponent $\mu$.
+All coefficient contractions precede restriction to the normalized
+faces, and no bound on $\epsilon|\log\lambda|$ is imposed.
+\end{theorem}
+
+\begin{proof}
+Combine Propositions~\ref{rw:secondary:regular},
+\ref{rw:secondary:saddle} and \ref{rw:secondary:real}.
+The scalar through-domains are connected intervals, and a failed lower
+whole-path condition excludes the corresponding return.
+The common central maps increase in each chosen comparison input;
+positive-central restrictions therefore truncate an interval and do
+not add components. The exact center contributes no isolated zeros.
+The returning-arc routing and tag exhaustion supply the configuration
+list without using any of these counts. No conclusion here adds
+the bounds from distinct chart pieces.
+\end{proof}

@@ -1,0 +1,120 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,mathtools,mathrsfs}
+\usepackage{enumitem,tikz,aliascnt,float,array,longtable}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,positioning}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\theoremstyle{definition}
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{definition}{Definition}{Definitions}
+\crefname{remark}{Remark}{Remarks}
+\newcommand{\R}{\mathbb R}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\GammaI}{\Gamma(C_0)}
+\newcommand{\distH}{d_{\mathrm H}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\e}{\mathrm e}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cV}{\mathcal V}
+\DeclareMathOperator{\PV}{PV}
+\DeclareMathOperator{\Cycl}{Cycl}
+\title[Sharp local cyclicity of the $I_2^1$ graphic]
+  {Sharp local cyclicity of the $I_2^1$ graphic in a five-parameter quadratic family}
+\author{Haibo Lu}
+\address{Shanghai Institute of Technology}
+\email{luhaibo1985@gmail.com}
+\date{}
+\subjclass[2020]{34C07, 34C23, 34E15}
+\keywords{local cyclicity, quadratic vector field, nilpotent saddle--node, return map}
+\hypersetup{pdftitle={Sharp local cyclicity of the I\unichar{"2082}\unichar{"00B9} graphic in a five-parameter quadratic family},
+  pdfauthor={Haibo Lu},
+  pdfsubject={Local cyclicity exactly three for each fixed C\unichar{"2080}>1}}
+\begin{document}
+\begin{abstract}
+The DRR graphic $I_2^1$ is a loop through a nilpotent saddle--node at
+infinity. We prove that its local cyclicity is exactly three in a
+five-parameter quadratic family, for every fixed organizing value
+$C_0>1$. The upper bound holds throughout a full parameter neighborhood
+and counts periodic orbits close to the whole graphic in Hausdorff distance.
+We parameterize both halves of the singular passage by one central height
+and compare their endpoint derivatives after the exterior transition.
+Drift-weighted errors preserve this comparison when boundary roots merge
+or passage times diverge. With $C=C_0$ fixed, direct action matching and a
+transverse variation of the connection splitting yield three limit cycles
+converging to the whole graphic. They are hyperbolic and persist on open
+parameter sets approaching the organizing value. Thus the local upper
+bound is attained within the same quadratic family.
+\end{abstract}
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\input{direct-sections/01-introduction}
+
+\input{direct-sections/02-graphic-central-return}
+\input{direct-sections/03-paired-variation}
+\input{direct-sections/standard-tools}
+\input{direct-sections/04-uniform-passage-estimates}
+\input{direct-sections/contact-positive-offsets}
+\input{direct-sections/05-bounded-contact}
+\input{direct-sections/06-positive-offset-saddle}
+\input{direct-sections/recurring-ranges}
+\input{direct-sections/early-central-heights}
+\input{direct-sections/09-quadratic-prefix}
+\input{direct-sections/07-adaptive-positive-passage}
+\input{direct-sections/weak-root-passage}
+\input{direct-sections/primary-regimes}
+\input{direct-sections/08-primary-negative-drift}
+\input{direct-sections/10-negative-displaced-contact}
+\input{direct-sections/quadratic-regimes}
+\input{direct-sections/11-positive-quadratic-drift}
+\input{direct-sections/12-negative-quadratic-annulus}
+\input{direct-sections/13-buffered-negative-quadratic}
+\input{direct-sections/14-negative-quadratic-fold}
+\input{direct-sections/15-negative-quadratic-no-root}
+\input{direct-sections/16-negative-quadratic-separated-roots}
+\input{direct-sections/17-negative-quadratic-weak-root}
+\input{direct-sections/18-parameter-cover-and-cyclicity}
+\input{direct-sections/19-sharpness}
+
+\appendix
+\input{direct-sections/a-coefficient-scales}
+\input{direct-sections/b-geometric-saddle-details}
+\section{Notation and terminology index}
+\label{app:notation-terminology}
+\input{direct-sections/notation-guide}
+\input{direct-sections/terminology-guide}
+\section*{Acknowledgments and AI tool disclosure}
+OpenAI’s ChatGPT and Codex were used during the development and preparation
+of this work. These tools assisted with exploring proof strategies,
+developing and checking mathematical arguments, preparing verification
+scripts, and revising the exposition and LaTeX source. They were also used
+to help identify relevant literature and potential gaps in intermediate
+drafts. The author is responsible for the mathematical claims, references,
+and final presentation of the paper.
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,95 @@
+\subsection{The cubic action and the physical curvature}
+\label{subsec:representative-cubic}
+
+The compact cubic block illustrates the curvature mechanism behind the
+three-zero bound. At the scale \eqref{deg:cubic-chart}, its axis
+polynomial is
+\[
+ P(\xi)=1-U\xi+3G\xi^2+\xi^3,
+ \qquad U\ge0,
+\]
+with \(U,G\) in a fixed compact set. On a strict through interval,
+let \(u>0\) and \(-r<0\) be the incoming and outgoing axis points.
+The limiting action equation is
+\begin{equation}\label{intro:compact-action}
+ \int_0^u\frac{\xi}{P(\xi)}\,d\xi
+ =\int_0^r\frac{\xi}{P(-\xi)}\,d\xi,
+ \qquad b=-u^2/2,\qquad S(b)=-r^2/2.
+\end{equation}
+On the traversed segment \(P>0\). Differentiating gives
+\(r_u=uP(-r)/(rP(u))>0\) and
+\begin{equation}\label{intro:compact-action-curvature}
+ S'=\frac{P(-r)}{P(u)},\qquad
+ \frac{P(u)}{u+r}\frac{S''}{S'}=3-\frac{U}{ur},\qquad
+ (ur)_b=-\frac ru-\frac{uP(-r)}{rP(u)}<0.
+\end{equation}
+These are the cubic specialization of
+\eqref{neg:action-curvature}--\eqref{neg:entry-exit-monotonicity}.
+The term containing \(G\) cancels. At a curvature zero, \(U=3ur\),
+so the derivative of the middle expression with respect to \(b\)
+is strictly negative. Thus every curvature zero is a downward crossing,
+and there can be at most one on a connected interval.
+
+The actual input is an affine raw section coordinate. To compare its
+curvature with the action formula, write the two separate outward maps as
+\[
+ \Gamma_\pm=a_\pm+c_\pm\phi_\pm,\qquad c_\pm>0,
+ \qquad \widehat\Pi=\phi_-\circ S_{\rm act}\circ\phi_+^{-1}.
+\]
+Here \(S_{\rm act}\) is the actual matched transition in the two normal
+section labels. The centers and gains are retained exactly. In these
+coordinates the second-derivative chain rule is
+\begin{equation}\label{intro:completed-curvature-chain}
+ \phi_+'\frac{\widehat\Pi''}{\widehat\Pi'}
+ =\frac{S_{\rm act}''}{S_{\rm act}'}
+  +S_{\rm act}'\frac{\phi_-''}{\phi_-'}
+  -\frac{\phi_+''}{\phi_+'}.
+\end{equation}
+Each section derivative uses its own quadratic label. The actual gains
+do not enter this identity. Returning to the physical affine input
+multiplies its second and third derivatives by
+\(c_-/c_+^2\) and \(c_-/c_+^3\), so their signs are preserved.
+
+On its bounded normal-section interval,
+Proposition~\ref{deg:prop-compact-cubic} proves the weighted identity
+\begin{equation}\label{intro:actual-cubic-curvature}
+ \phi_+'(b)\frac{P(u)}{u+r}
+              \frac{\widehat\Pi''}{\widehat\Pi'}
+ =3-\frac{U}{ur}+E(u,r),\qquad
+ \|E\|_{C^1_{u,r}}\le C\tau_{\rm cub}(1+|\log\tau_{\rm cub}|).
+\end{equation}
+It includes both section terms in
+\eqref{intro:completed-curvature-chain}. Near a possible zero the
+principal derivative with respect to \(u\) has a margin
+\(c(1+r_u)\), whereas the error derivative along the matched graph is
+at most \(C\tau_{\rm cub}(1+|\log\tau_{\rm cub}|)(1+r_u)\).
+The physical input \(\phi_+(-u^2/2)\) decreases with \(u\).
+Consequently the actual curvature retains the same downward crossing.
+The bounded-action comparison overlaps this description on the same
+map. The rest of the admitted interval has bounded physical first
+derivative; choosing \(m\) last makes \(F'>1/2\) there.
+Lemma~\ref{sharp:upper-curvature-count} then gives three zeros on the
+whole interval.
+
+Two estimates make this calculation compatible with singular
+coefficient limits. First, the exterior continuations carry the common
+first-variation factor \(\tau_{\rm cub}^{2-\lambda_G}\), where
+\(\lambda_G=12\tau_{\rm cub}G/(1+2\tau_{\rm cub}G)\).
+The common power cancels in the completed first derivative; the actual
+normalized section maps have ordinary \(C^3\) bounds. The general
+raw cancellation is displayed in \eqref{sharp:upper-tail-ratio}.
+Second, near an axis root the normal height has an action exponential.
+The proof bounds derivatives on the product of the two separate section
+domains, using this exponential to pay the losses in each root distance.
+Only then is the estimate restricted to the actual matching graph.
+This controls the two root distances independently and includes the
+dependence on the moving entrance.
+
+The other coefficient faces use the same physical chain rule with
+different positive weights, as recorded in
+Lemma~\ref{neg:lem-completed-curvature}. On the reversible face the
+principal curvature vanishes. There the exact first integral permits
+division by the coefficient distance before taking the limit, giving
+the relative estimate \eqref{neg:relative-estimate}.
+The coefficient cover selects one of these estimates for each whole
+coefficient fibre.

@@ -1,0 +1,50 @@
+\subsection{The compact cubic block: a common curvature orientation}
+\label{sharp:upper-cubic-section}
+
+\begin{proposition}[The complete compact cubic carrier]
+\label{sharp:upper-cubic}
+Fix finite \(U_0,G_0\). On the coefficient block
+\begin{equation}\label{sharp:upper-cubic-block}
+ a=-1,\quad p=tU,\quad\gamma=t^2G,\quad s=t^3,
+             \qquad0\le U\le U_0,\quad |G|\le G_0,
+\end{equation}
+the same displacement has at most two critical points and at most three
+isolated zeros, counted with multiplicity, on its whole physical carrier
+under the common positive unscaled raw cap. All captured target cycles
+lie in this carrier after the common coefficient and marked
+Hausdorff-collar shrink.
+\end{proposition}
+
+\begin{proof}
+Put \(\tau=t^2\). Proposition~\ref{deg:prop-compact-cubic} supplies the
+actual clipped carrier and its allocation \eqref{deg:compact-physical-cover}.
+Its bounded-action and independent root-collar estimates give the same
+curvature orientation. The growing range has positive curvature by
+\eqref{deg:compact-curvature}, and is identified with the bounded
+range by the actual resection
+\begin{equation}\label{sharp:upper-cubic-overlap}
+ p_\tau(u)=u+O_{C^3}(\tau(1+|\log\tau|)),\quad p_\tau'>0,
+                \qquad2M+\beta\le u\le3M-\beta.
+\end{equation}
+These are estimates for the completed physical map, so
+\begin{equation}\label{sharp:upper-cubic-common-crossing}
+ \Pi''(x)=0\quad\Longrightarrow\quad\Pi'''(x)<0
+\end{equation}
+on the connected lower receiver. Real and fold fibres retain their
+one-sided through endpoints.
+
+The original ghost tail has the derivative bound
+\eqref{deg:compact-raw-tail-derivative}; the core has
+\eqref{deg:compact-core-variation}. The construction places
+their comparison and high intervals in strict overlap:
+\begin{equation}\label{sharp:upper-cubic-height-overlap}
+ \eta_{\rm comp}<\tau K_H(1+\tau U^2)<\eta_{\max}/2,
+                      \qquad\tau^2\eta_{\max}<h_c/2.
+\end{equation}
+One final multiplier bound makes \(F'>1/2\) on this complement.
+The cover in Proposition~\ref{deg:prop-compact-cubic} includes every
+input, retaining the original clips and equality dividers. Its whole-carrier
+count, equivalently Lemma~\ref{sharp:upper-curvature-count}, gives
+the stated multiplicity bounds. Capture is applied after these analytic
+choices, as in Lemma~\ref{lem:loc-capture}.
+\end{proof}

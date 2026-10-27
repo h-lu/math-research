@@ -1,0 +1,1378 @@
+\section{Local passage tools at a simple contact}
+\label{sec:simple-contact-tools}
+
+We treat a contact whose linear coefficient is negative, with estimates
+uniform as that coefficient tends to zero. This uniformity allows the
+same tools to be used at the quadratic contact in
+Section~\ref{sec:positive-constant}.
+Throughout this section the field is
+\begin{equation}\label{eq:simple-family}
+ F=y(1+bz-y)+\varepsilon^2(Cz^2-Az+A^2c),\qquad
+ G=zy+\varepsilon^3A^3d.
+\end{equation}
+The constants in estimates are independent of the positive small
+parameters.  The letter $C$ in \eqref{eq:simple-family} always denotes
+the quadratic coefficient, not a generic constant.  All derivatives
+in the estimates below are taken in phase or section variables, with
+the field parameters fixed.
+
+To bound the zeros of the complete displacement, we compare a local
+contact passage with its complete complementary transition. We first
+estimate the negative and positive transitions in regular section
+coordinates, then construct the local saddle passages. These common
+estimates will be used in both contact-scale regimes below.
+
+The return maps below are defined using the sections of
+Lemma~\ref{lem:sections}.  In this section $u$ denotes the physical
+ordinate on its outgoing section $z=z_c>0$, where $F>0$; it is not the
+coordinate on the upper section.  We put the negative section at
+$z=-q_g$, $q_g>0$.
+Every cycle being counted meets the positive section exactly once and
+has, in the contact neighborhood, $y>0$, $F>0$ and
+$y(-q_g)\le K_0\varepsilon^3$.  We decrease that neighborhood so that
+$1/2<1+bz-y<2$ and $F_y>1/2$ there.
+
+\subsection{The negative transition}
+
+The negative transition contracts strongly enough to absorb the shrinking
+transverse scale in both regimes. Write
+\begin{equation}\label{eq:simple-tail-parameters}
+ c=t^2\kappa,\quad d=t^3\eta,\quad \varepsilon=te,
+ \qquad 0<e\le1,\quad |\kappa|,|\eta|\le K,
+ \quad n=At^2.
+\end{equation}
+We shall take $t$ small; $e$ need not be bounded away from zero.
+Set $p=\varepsilon^2P$ and $R=G/F$.
+
+The central contact passage uses the finite-order saddle-node product of
+\cite[Theorem~3 and Section~2.8]{DIR2002}, at pp.~6 and 11 of
+the authors' public manuscript. We apply it in the central contact chart
+of Appendix~\ref{sec:simple-contact}.
+Its planar critical germ has one zero and one negative eigenvalue;
+the center reduction has a nonzero quadratic term. These data match
+the multiplicity-two translated critical field there; parameters
+form a finite-dimensional smooth unfolding. The differentiability
+order is prescribed before choosing its smaller parameter window.
+It supplies a finite-smooth orbital product. The fixed-gap product used
+away from the central saddle-node is proved in
+Section~\ref{sec:normal-product}. Neither construction uses analytic
+linearization across degeneration or a positive-endpoint cyclicity bound.
+
+\begin{lemma}\label{lem:negative-transition}
+Assume $0<A\le A_+<\infty$ and either
+\begin{enumerate}
+\item $C$ belongs to a fixed compact subinterval of $(0,\infty)$; or
+\item $A\ge A_0>0$, $C$ is bounded, and $P(z)\ge p_0>0$
+on the fixed negative interval preceding the contact neighborhood.
+\end{enumerate}
+In the second case choose the fixed negative cut $q_g$ sufficiently
+small in terms of these bounds. With the scales in \eqref{eq:simple-tail-parameters}, fix $L$
+sufficiently large and then take $t$ sufficiently small. Every positive,
+right-going transition from the prescribed physical source, with
+$y(-q_g)\le K_0\varepsilon^3$, satisfies on its passage from
+$z=-q_g$ to $z=-Ln$
+\begin{equation}\label{eq:simple-negative-barrier}
+ 0<y<p,\qquad p\le F\le3p,\qquad
+ P(-x)\asymp x(x+A)\quad(Ln\le x\le q_g).
+\end{equation}
+If $J_-(u)=y(-Ln;u)$ includes the preceding fast part of the orbit, then
+\begin{equation}\label{eq:simple-negative-jets}
+ 0<(J_-)_u\le K_1\varepsilon e^{-\gamma T_A/\varepsilon^2},
+ \qquad 0\le \frac{(J_-)_{uu}}{(J_-)_u}\le K_1\varepsilon^{-2},
+ \qquad T_A=\log\frac{q_g+A}{A(1+Lt^2)}.
+\end{equation}
+Here $T_A\ge t_0+t_1\log(A_+/A)$ for some $t_0,t_1>0$.
+The transverse ordinate scale is $n^2e^2=A^2\varepsilon^2t^2$.
+In particular,
+\begin{equation}\label{eq:simple-scale-cancellation}
+ \frac{(J_-)_u}{A^2\varepsilon^2t^2}\longrightarrow0
+\end{equation}
+uniformly in $A,t,e$.
+\end{lemma}
+
+\begin{proof}
+If $C$ belongs to a fixed compact subinterval of $(0,\infty)$,
+$P(-x)\ge Cx^2+Ax/2$ for $x\ge LAt^2$ after taking $L\ge2K$.
+If instead $A\ge A_0>0$, $C$ is bounded, and $P$ has a fixed positive
+lower bound on the preceding negative interval, choose $q_g$ with
+$|C|q_g\le A_0/8$ and
+$K/L\le1/8$.  Then
+$3Ax/4\le P(-x)\le5Ax/4$, which gives the same comparability in
+\eqref{eq:simple-negative-barrier}.  At the graph $y=p(z)$,
+\[
+ G-p_zF\le\varepsilon^2xP(-x)
+ \left(-1+\frac{3e^2}{L}+6|C|\varepsilon^2
+                  +\frac{2eK}{L^2}\right)<0.
+\]
+The incoming height is below $p(-q_g)$ for small $\varepsilon$.
+This proves the barrier by first contact.
+
+For later use we record the exact derivatives.  With $Q=1+bz$ and
+$\Delta=\varepsilon^3A^3t^3\eta$,
+\begin{align}
+ R_y&=\frac{z(y^2+p)-\Delta(Q-2y)}{F^2},\label{eq:simple-Ry}\\
+ R_{yy}&=\frac{2\{z[y^3+(3y-Q)p]
+              +\Delta[p+Q^2-3Qy+3y^2]\}}{F^3}.
+              \label{eq:simple-Ryy}
+\end{align}
+On the small negative tail $|\Delta|/(xp)\le2eK/L^2$.
+The numerator $z[y^3+(3y-Q)p]$ is positive and comparable to $xp$.
+Increasing $L$, and decreasing the contact neighborhood, therefore gives
+\begin{equation}\label{eq:simple-tail-density}
+ R_y\le-\frac{\gamma}{\varepsilon^2(x+A)},\qquad
+ 0<R_{yy}\le\frac{K_2}{\varepsilon^4x(x+A)^2}.
+\end{equation}
+
+The complete negative transition also includes an entrance whose
+abscissa moves with $u$.
+Follow the descending part of the fast orbit to
+$y_e=K_e\varepsilon^3$.  Its abscissa $\Lambda(u)$ lies in a fixed
+negative interval, with $0<k_1\le\Lambda_u\le k_2$ and
+$|\Lambda_{uu}|\le k_2$.  Indeed, on the descending part,
+\[
+ \frac{dz}{dy}=
+ \frac{1+bz-y+\varepsilon^2P(z)/y}{z+\Delta/y},
+ \qquad
+ \int_{y_e}^{y_h}\left(1+\frac{\varepsilon^2}{y}\right)dy\le K_3;
+\]
+the denominator stays away from zero and the first two variational
+equations give these bounds.  On the subsequent fixed negative interval,
+$R=-\Theta(\varepsilon)$ at the entrance,
+$R_y\le-k_3\varepsilon^{-2}$ and
+$|R_{yy}|\le K_3\varepsilon^{-4}$.  The derivative and its logarithmic
+derivative, at a fixed terminal abscissa, are exactly
+\begin{align}
+ y_u(z)&=-R(\Lambda,y_e)\Lambda_u
+                   \exp\!\int_\Lambda^zR_y,\label{eq:simple-moving-first}\\
+ \partial_u\log y_u(z)&=
+ \frac{\Lambda_{uu}}{\Lambda_u}
+ +\left(\frac{R_z}{R}-R_y\right)(\Lambda,y_e)\Lambda_u
+ +\int_\Lambda^zR_{yy}y_u.\label{eq:simple-moving-second}
+\end{align}
+Here $R_z/R=O(1)$ at the entrance.  The last integral on the fixed
+interval has absolute value at most
+$K_4\varepsilon^{-4}\int_0^{O(1)}\varepsilon
+e^{-k_3s/\varepsilon^2}ds=O(\varepsilon^{-1})$.
+The term $-R_y\Lambda_u$ is at least $k_4\varepsilon^{-2}$.
+Thus the map to $-q_g$ is increasing and convex, with logarithmic
+derivative bounded by $K_4\varepsilon^{-2}$.  This argument does not
+require $R_{yy}$ to be positive on the remote interval.
+
+On the tail, \eqref{eq:simple-tail-density} preserves convexity and
+bounds $(J_-)_u$. Its contribution to the second variation reduces,
+with $N=\gamma/\varepsilon^2$, to
+\begin{equation}\label{eq:simple-tail-integral}
+ \frac{K_5\varepsilon^{-3}}{(q_g+A)^N}
+       \int_{LAt^2}^{q_g}\frac{(x+A)^{N-2}}x\,dx.
+\end{equation}
+For $A\le q_g/4$, split at $x=A$.  The upper integral, using
+$x^{-1}\le2/(x+A)$, is $O(\varepsilon^{-1})$; the lower one is bounded
+by
+\[
+ K_5\varepsilon^{-3}|\log(Lt^2)|A^{-2}
+       \left(\frac{2A}{q_g+A}\right)^N=o(1).
+\]
+For large $N$ the $A$-dependent factor is increasing up to $q_g/4$,
+where its exponential ratio is $2/5$.
+For $q_g/4\le A\le A_+$ split instead at $x=q_g/2$.
+The upper integral is again $O(\varepsilon^{-1})$, and the lower one
+is bounded by
+$K_6\varepsilon^{-3}(1+|\log\varepsilon|)\theta^N=o(1)$,
+where $\theta=(q_g/2+A_+)/(q_g+A_+)<1$.
+We used $t\ge\varepsilon$.  In the signed-$C$ case one may equivalently
+use $P(-x)\asymp Ax$, split at $q_g/2$, and obtain the same estimate.
+This proves \eqref{eq:simple-negative-jets}.
+
+Choose $t$ so that $T_A(A_+,t)>t_0>0$.  Differentiation with respect
+to $\log A$ gives
+$\partial_{\log A}T_A=-q_g/(q_g+A)$, proving its asserted lower
+bound.  Finally the left side of \eqref{eq:simple-scale-cancellation}
+is at most
+\[
+ K_7\varepsilon^{-3}A^{-2}
+       \left(\frac{A(1+Lt^2)}{q_g+A}\right)^{\gamma/\varepsilon^2}.
+\]
+For $N>2+2A_+/q_g$, the function
+$A^{-2}[A/(q_g+A)]^N$ is increasing.  Its maximum is at $A_+$,
+where the displayed exponential ratio is uniformly below one.
+The exponential therefore absorbs the shrinking ordinate scale, with
+no restriction on the relative rates of $A,t,e$.
+\end{proof}
+
+\subsection{Positive transitions and local passage maps}
+
+On the positive transition, a relative transverse coordinate avoids a
+second-derivative loss over a long flight. The following variational
+estimate controls that coordinate by its total change.
+
+\begin{lemma}\label{lem:normal-distortion}
+Suppose $v_x=\alpha(x,v)v$ on a forward interval
+$x_0\le x\le x_1$, with $x_1>x_0$ and $v(x_0,a)=a>0$, and suppose the
+selected solutions are monotone in $x$ and remain below $v_0$.  If
+\[
+ |v\alpha_v|+|v^2\alpha_{vv}|\le K v|\alpha|,
+\]
+then the endpoint map $\Phi$ satisfies
+$a\Phi'/\Phi=1+O(v_0)$ and $a\Phi''/\Phi'=O(v_0)$.
+If $\alpha\le0$, the stronger estimates
+\begin{equation}\label{eq:simple-contracting-distortion}
+ \Phi'>0,\qquad \Phi'\le K_1,\qquad
+ |\Phi''/\Phi'|\le K_1
+\end{equation}
+hold, independently of its flight time or of $\Phi'(0)$.
+\end{lemma}
+
+\begin{proof}
+Put $E=av_a/v$ and $B=a\partial_a\log E$.  Exact differentiation gives
+\[
+ (\log E)_x=v\alpha_v,\qquad
+ B_x=E(v\alpha_v+v^2\alpha_{vv}),\qquad E(x_0)=1, B(x_0)=0.
+\]
+Since $\int v|\alpha|dx=|v(x_1)-a|\le v_0$,
+$|\log E|\le Kv_0$ and $|B|\le Ke^{Kv_0}v_0$.
+The identity $a\Phi''/\Phi'=E-1+B$ proves the first assertion.
+If $\alpha\le0$, replace $v_0$ by $a$ and use
+$\Phi'=E\Phi/a\le E$.
+\end{proof}
+
+The next lemma converts this relative distortion bound into physical
+section derivatives. Its input is a reference outgoing orbit of the
+same field, with quadratic height bounds and positive speed. We will
+construct that orbit separately for the bounded and small saddle ratios.
+
+\begin{lemma}\label{lem:positive-transition}
+Put $z=nU$, $y=n^2V$, where $n>0$ and either
+$n=A\varepsilon^2$ or $n=Ac$.
+Consider the scaled equations
+\begin{equation}\label{eq:simple-positive-scaled}
+ U'=V(1+bnU-n^2V)+q(U),\qquad V'=UV+\ell_1,
+\end{equation}
+where $q(U)=k-U+C\varepsilon^2U^2$, with bounded $k$, or
+$q(U)=e^2(1-U)+C\varepsilon^2U^2$.
+Let $\mathcal F(U,V)$ denote the right-hand side of the first
+equation. Suppose a reference outgoing orbit of the same system, in
+particular with the same value of $\ell_1$, is written as $V=h(U)$ and
+reaches a fixed $U_0>0$ with a uniform positive speed and has the bounds
+\begin{equation}\label{eq:simple-positive-reference}
+ k_0(1+U^2)\le h(U)\le K_0(1+U^2),\qquad
+ \mathcal F(U,h)\ge k_0h,
+\end{equation}
+up to a fixed small physical section $z=z_c$.
+For $|\ell_1|$ sufficiently small, a fixed small relative neighborhood
+of this reference reaches the same section.  If its initial transverse
+coordinate $a$ is oriented so that
+$V/h-1=j_0a+O(a^2)$, with $j_0$ a positive unit and bounded first
+three derivatives, its physical transition $u=C_+(a)$ satisfies
+\begin{equation}\label{eq:simple-positive-jets}
+ 0<C_+'\le K_1 n^{3/2},\qquad
+ \left|\frac{C_+''}{C_+'}\right|\le K_1.
+\end{equation}
+The conclusions hold for bounded signed $C$.  The entire relative
+neighborhood lies in the fixed outgoing section near the limiting fast
+orbit, after decreasing the parameters.
+The reference graph and the constants in
+\eqref{eq:simple-positive-reference} are required only on the compact
+$U$--interval ending at the fixed section $z=z_c$.  In each application
+below that graph, its two barriers, and the positive-speed collar are
+constructed first on this interval; the parameter neighborhood is then
+shrunk so that the same collar is valid for all parameters under
+consideration.  No assertion is made for $U$ outside this interval.
+\end{lemma}
+
+\begin{proof}
+Write $V=h(1+v)$, $F_0=\mathcal F(U,h)$,
+$F_v=\mathcal F(U,h(1+v))$ and
+$B_v=1+bnU-n^2h(2+v)$.  Subtracting the two orbit equations gives
+\begin{equation}\label{eq:simple-relative-equation}
+ v_U=\alpha(U,v)v,\qquad
+ \alpha=-\frac{(1+v)UhB_v+(\ell_1/h)F_0
+                      +\ell_1(1+v)B_v}{F_vF_0}.
+\end{equation}
+On the physical neighborhood, $B_v$ is a positive unit. By
+\eqref{eq:simple-positive-reference}, $F_v/F_0=1+O(v)$ and
+$h/F_0$ is bounded.  The two terms involving $\ell_1$ are uniformly
+smaller than the first numerator term, since $U\ge U_0>0$ and
+$h\ge k_0(1+U^2)$.  Thus $\alpha<0$ and direct differentiation gives
+\[
+ |v\alpha_v|+|v^2\alpha_{vv}|\le K_2|v||\alpha|.
+\]
+Apply Lemma~\ref{lem:normal-distortion} to $v$ or $-v$.
+The relative deviation contracts, so it cannot leave the chosen
+neighborhood; the second estimate in \eqref{eq:simple-positive-jets}
+follows, including the initial smooth change of section.
+
+To recover the size of $C_+'$, use \eqref{eq:simple-Ry} along the
+reference neighborhood. The physical constant and forcing terms have
+sizes $O(n^2)$ and $O(n^3)$, and the term proportional to $-z^2$ has
+a favorable sign.  Since $F\ge k_1y$ and $y\ge k_1(n^2+z^2)$,
+\[
+ R_y\le K_3z+
+ K_3\frac{\varepsilon^2z^3+n^2z+n^3}{(n^2+z^2)^2}.
+\]
+Its integral to $z_c$ is at most
+$K_4+K_4\varepsilon^2\log(1/n)$.  The physical transverse derivative
+at the initial scaled section is $O(n^2)$.  Hence
+$C_+'\le K_5n^{2-K_4\varepsilon^2}\le K_5n^{3/2}$, where the last
+inequality uses one common choice $\varepsilon_0$ with
+$K_4\varepsilon_0^2\le1/2$ and then the common shrinking $n<1$.
+Finally $k_2z^2\le y\le K_6(n^2+z^2)$ on fixed positive intervals.
+In the joint limit $n,\varepsilon\to0$, any limiting graph therefore solves
+$y_z=z/(1+bz-y)$ and has $y(0)=0$.
+Uniqueness for this regular equation identifies it with the selected
+fast orbit.  The bounds give compactness on every $[z_0,z_c]$ and then
+convergence as $z_0\downarrow0$, uniformly over the relative
+neighborhood.  This proves the last assertion.
+\end{proof}
+
+At the central saddle-node, the exact product separates the scalar
+flight time from normal contraction. It also reduces the fixed-point
+count to the sign of one derivative involving the complement.
+
+\begin{lemma}\label{lem:saddle-node-passage}
+Let $X_p$ be a $C^\infty$ local family, with $p$ in a compact
+parameter germ, and suppose the phase germ of $X_{p_0}$ is real analytic
+and has an ordinary multiplicity-two saddle-node with a negative nonzero
+eigenvalue and a positive quadratic center coefficient.  For every
+integer $k<\infty$, after decreasing the
+phase--parameter neighborhood, there are parameter-dependent $C^k$
+orbital coordinates
+\[
+ \dot s=W(s,p),\qquad \dot w=-w,\qquad
+ W=u(s,p)((s-\sigma(p))^2+\mu(p)),\quad u>0.
+\]
+The coordinates, their inverses, and the regular changes to fixed
+transverse sections have bounded derivatives through every order fixed
+before that shrinking.  No $C^\infty$ or analytic equivalence on one
+common phase--parameter neighborhood is asserted.
+Let $D(s)=w_0\exp(-\int_s^{s_+}W^{-1})$ be a finite passage from
+$w=w_0>0$ to $s=s_+$.  Then $WD_s=D$.  On a sufficiently small
+incoming interval,
+\begin{equation}\label{eq:simple-saddle-node-smallness}
+ D(s)\le w_0\exp\left(-\frac{k_0}
+                         {|s-\sigma|+\sqrt{|\mu|}}\right).
+\end{equation}
+If an increasing return transition $H$ is defined on an interval of
+$a>0$, and on one subinterval containing every solution of $D(H(a))=a$
+one has $W(H)>0$ and
+\begin{equation}\label{eq:simple-pfaff-hypothesis}
+ 1-W_s(H(a))+aH''(a)/H'(a)>0,
+\end{equation}
+then the equation has total isolated zero multiplicity at most two
+on that actual finite-passage subinterval.
+\end{lemma}
+
+\begin{proof}
+The finite-order orbital product form is the multiplicity-two
+specialization of \cite[Section~2.1, equation~(2.2), Theorem~3, and
+Section~2.8]{DIR2002}.  More precisely, the source treats a
+$C^\infty$ unfolding of a real-analytic critical saddle-node germ.
+Its multiplicity is denoted by $\mu+1$, so the present case has
+$\mu=1$ and, after a possible reversal of time, its normal form is
+\[
+ \dot z=b_0(p)+\frac{z^2}{1+\alpha(p)z},\qquad \dot w=-w,
+\]
+because its polynomial $P(p,z)$ has degree at most $\mu-1=0$ in the
+multiplicity-two case.  This is an exact product, not a formal jet.
+Moreover
+\[
+ b_0+\frac{z^2}{1+\alpha z}
+ =\frac{(z-\sigma)^2+\widehat\mu}{1+\alpha z},\qquad
+ \sigma=-\frac{\alpha b_0}{2},\qquad
+ \widehat\mu=b_0-\frac{\alpha^2b_0^2}{4}.
+\]
+Shrinking the phase neighborhood makes $(1+\alpha z)^{-1}$ a positive
+unit, which gives the asserted $W$ after renaming $z$ and
+$\widehat\mu$.  The source states finite smoothness on a
+phase--parameter neighborhood and that decreasing this neighborhood
+permits a higher prescribed finite order; Section~2.8 treats a
+multidimensional unfolding.  We therefore include all compact passive
+parameters in $p$ before choosing $k$ and shrinking.  Only the resulting
+$C^k$ coordinates and regular $C^k$ section changes are used here; the
+source's analyticity assertion away from the critical stable manifold
+is not used.
+
+In these canonical coordinates the second equation integrates exactly.
+Along a passage on which $W>0$,
+\[
+ \frac{dw}{ds}=-\frac{w}{W(s,p)},\qquad
+ D(s)=w_0\exp\left(-\int_s^{s_+}\frac{dx}{W(x,p)}\right),
+ \qquad WD_s=D.
+\]
+Write $s_+=\sigma+r$ and
+$m=\max(|s-\sigma|,\sqrt{|\mu|})\le r/2$.
+Every finite passage under consideration contains the interval
+$[\sigma+m,\sigma+r]$ and has
+\[
+ \int_s^{s_+}\frac{dx}{W(x)}\ge
+ \int_m^r\frac{dx}{u_1(x^2+|\mu|)}\ge\frac1{4u_1m}.
+\]
+If $\mu\le0$, its starting point is necessarily to the right of the
+rightmost root; no root is crossed.  This proves
+\eqref{eq:simple-saddle-node-smallness}, including the passage from
+$s>\sigma$ at $\mu=0$.
+For $L(a)=\log D(H(a))-\log a$ and
+$Z(a)=aH'(a)-W(H(a))$, exact differentiation gives
+\[
+ L'=\frac{Z}{aW(H)},\qquad
+ Z'=H'\left(1-W_s(H)+aH''/H'\right)>0.
+\]
+Thus $L'$ has at most one zero. A fixed point with $L'\ne0$ is
+simple; if $L=L'=0$, then $L''=Z'/[aW(H)]>0$, so it is exactly
+quadratic and the only tangent zero. Since the critical point is a
+strict minimum, the sum of isolated fixed-point multiplicities is at
+most two on this actual finite-passage interval.
+\end{proof}
+
+When the saddle ratio tends to zero, we instead need product coordinates
+whose phase derivatives remain bounded in that limit. The following
+lemma constructs them and gives the corresponding weighted curvature
+criterion for the complement.
+
+\begin{lemma}\label{lem:small-ratio-saddle}
+For the system
+\begin{equation}\label{eq:simple-small-ratio-system}
+ X'=e^2\{Y(1+bnX-n^2e^2Y)+1-X+CcX^2\},\qquad
+ Y'=XY+e\eta,
+\end{equation}
+near $X=1,Y=0$, with $n=Ac$, $0<A\le A_+$,
+$c,e,|\eta|$ small and bounded $C$, there are
+uniform $C^j$ orbital coordinates, for any fixed $j$, in which
+\begin{equation}\label{eq:simple-exact-power}
+ \dot\xi=-r\xi,\quad \dot\omega=\omega,\qquad
+ r\asymp e^2,\qquad D(s)=\xi_0(s/\omega_0)^r.
+\end{equation}
+Here $D$ is the exact passage between fixed positive sections
+$\xi=\xi_0$ and $\omega=\omega_0$.
+If an increasing complete complementary transition $H$ has
+\begin{equation}\label{eq:simple-small-ratio-curvature}
+ r|H''/H'|<\frac{1-r_0}{2\xi_0},\qquad 0<r\le r_0<1,
+\end{equation}
+then $D(H(a))=a$ has total isolated zero multiplicity at most two on
+each actual finite-passage interval where these maps are defined.
+\end{lemma}
+
+\begin{proof}
+It suffices to establish the assertion for $j\ge4$. Fix an integer
+$K\ge2j+11$ before shrinking the parameters, and choose nested intervals
+$I_0\Subset I_1\Subset I_2\Subset(0,\infty)$ about $X=1$.
+The interval $I_0$ contains the saddle and the local sections to be used
+below. Write
+\[
+ \mathcal F(X,Y)=Y(1+bnX-n^2e^2Y)+1-X+CcX^2,
+ \qquad w=Y+\frac{e\eta}{X}.
+\]
+In the original time the translated equations are exactly
+\[
+ X'=e^2\mathcal F(X,w-e\eta/X),\qquad
+ w'=Xw-\frac{e^3\eta}{X^2}\mathcal F(X,w-e\eta/X).
+\]
+Thus, after reversing time, they have the form
+\begin{equation}\label{eq:small-ratio-translated}
+ \dot X=e^2\mathcal A(X,w),\qquad
+ \dot w=-Xw+q\mathcal R(X,w),\qquad q=e^3\eta,
+\end{equation}
+where $\mathcal A=-\mathcal F(X,w-e\eta/X)$ and
+$\mathcal R=X^{-2}\mathcal F(X,w-e\eta/X)$ have common finite-order
+phase bounds on a fixed tube over $I_2$. These bounds also hold at
+$\eta=0$; none of the changes divides by $\eta$, $e$, or $n$.
+
+To construct an invariant graph with common finite derivatives, embed
+$I_2$ as an arc of a circle and extend the coefficients with a
+fixed smooth cutoff equal to one on $I_1$. Extend the normal coefficient
+$X$ to a function $\widetilde B\ge b_0>0$ on the circle tube.
+The extended equations are
+\[
+ \dot\theta=e^2\widetilde A(\theta,w),\qquad
+ \dot w=-\widetilde B(\theta,w)w
+                 +q\widetilde R(\theta,w).
+\]
+The extension retains both small factors $e^2$ and $q$, and all its
+coefficient norms are common over the prescribed compact parameter
+sets. At $e=0$ the zero circle has zero tangential rate and a normal
+contraction rate bounded below by $b_0$. For the fixed order $K+1$,
+the normal-hyperbolicity inequalities persist after one parameter
+shrinking. Fenichel's theorem
+\cite[Theorem~3, p.~215]{Fenichel1971} therefore gives a $C^{K+1}$
+invariant circle, whose projection is a graph $w=\phi(\theta)$.
+It has common finite phase bounds: in the graph transform the normal
+variations decay at least as $e^{-b_0t/2}$, while each fixed number
+of base variations is bounded by a polynomial in $t$ times
+$e^{C_Ke^2t}$. Taking $C_Ke^2<b_0/4$ gives common bounds for the
+successive jet equations. The invariance equation then retains the
+factor $q$, which is needed when the selected graph is translated back
+to the physical variables.
+
+That equation is
+\begin{equation}\label{eq:small-ratio-graph-invariance}
+ e^2\widetilde A(\theta,\phi)\phi'
+       +\widetilde B(\theta,\phi)\phi
+       =q\widetilde R(\theta,\phi).
+\end{equation}
+The differentiated-maximum induction in the proof of
+Lemma~\ref{lem:pc-selected-graph} now retains $q$ on the right-hand
+side of \eqref{eq:small-ratio-graph-invariance}: at order $m\le K$
+the transport term vanishes at a maximum of $|\phi^{(m)}|$, the normal
+coefficient is at least $b_0/2$, and every remaining term is $O_m(|q|)$
+once the lower jets are bounded. The preliminary phase bounds control
+the first-order quadratic term. Thus
+$\|\phi\|_{C^K}\le C_K|q|$, uniformly also at $q=0$.
+Restriction to
+$I_0$ and reversal of the translation therefore give
+\begin{equation}\label{eq:small-ratio-selected-graph}
+ Y_s(X)=-\frac{e\eta}{X}+O_{C^K}(e^3|\eta|).
+\end{equation}
+In particular $\phi=0$ when $\eta=0$, so this estimate includes that
+parameter face with the same constants.
+
+Put $u=Y-Y_s(X)$ and
+$\chi(X,u)=1+bnX-n^2e^2(2Y_s(X)+u)$. Subtracting the graph
+invariance equation gives, in the original time,
+\[
+ X'=e^2\mathcal F(X,Y_s(X))+e^2\chi(X,u)u,\qquad
+ u'=\{X-e^2Y_s'(X)\chi(X,u)\}u.
+\]
+The normal coefficient is a positive unit. The graph estimate supplies
+common $C^{2j+10}$ bounds for these coefficients, so we may apply
+Lemma~\ref{lem:uniform-normal-product} with $\tau=\rho=e^2$ at order
+$J=j+2$. This gives exact product coordinates
+\[
+ \theta'=e^2f(\theta),\qquad \omega'=a(\theta)\omega,
+ \quad f=1-\theta+Cc\theta^2+O_{C^1}(e|\eta|),\quad a\ge a_*>0.
+\]
+Their inverse satisfies $X_\omega=O_{C^j}(e^2)$ and
+$Y=Y_s(\theta)+\omega u_1(\theta,\omega)$, with
+$u_1$ and $X_\theta$ positive units. Since
+$f_\theta=-1+O(c+e|\eta|)$, its root is simple. The scalar
+linearization at the end of that lemma, with $g=f/a$ and
+$\beta=-g'(\theta_s)>0$, gives \eqref{eq:simple-exact-power}
+with $r=e^2\beta\asymp e^2$. The two extra product orders leave the
+asserted $C^j$ bounds after this scalar coordinate change.
+
+The estimate $X_\omega=O_{C^j}(e^2)$ also controls changes to physical
+sections despite the weak longitudinal speed. Fix a
+canonical base $\theta_b$ a distance comparable to $\sigma>0$ from
+the simple root, and then a normal collar of width $\delta\ll\sigma$.
+In the inverse product coordinates
+$X=\theta+e^2\omega L(\theta,\omega)$, the longitudinal displacement
+across this collar is $O(e^2\delta)$. A vertical section just to the
+left of the incoming canonical section can therefore be chosen so that
+the intervening forward flight has duration $O(\delta/\sigma)$.
+For a nearby physical section $X=\theta_b+e^2\ell$, the hitting
+equation, starting on $\theta=\theta_b$, becomes
+\[
+ \int_0^T f(\Theta(t))\,dt
+       +\omega(T)L(\Theta(T),\omega(T))-\ell=0
+\]
+after division by $e^2$. Its time derivative is separated from zero
+on the chosen collar because $|f(\theta_b)|\asymp\sigma$.
+The implicit-function theorem therefore gives common derivatives
+through the required order for this section map and its inverse.
+The intervals, $\sigma$, and $\delta$ are fixed before shrinking
+$e,c,|\eta|$; no relation between their rates of approach to zero is
+used.
+
+Finally put $\mathcal P=D\circ H$.  At a point where $\mathcal P'=1$,
+\[
+ \mathcal P''=\frac{D''}{D'^2}+\frac{H''}{H'}
+              =\frac{r-1}{rD(H)}+\frac{H''}{H'}<0,
+\]
+since $D\le\xi_0$ and \eqref{eq:simple-small-ratio-curvature} holds.
+Every zero of $\mathcal P'-1$ is a strict downward crossing.
+The single-maximum argument of Lemma~\ref{lem:pc-ratio} therefore gives
+at most two simple return zeros or one exactly quadratic zero on the
+actual interval, with the multiplicity transfer of
+Section~\ref{sec:return-framework}.
+\end{proof}
+
+
+
+\section{Simple-contact zero count}\label{sec:simple-contact}
+
+We now compose the local passages of
+Section~\ref{sec:simple-contact-tools} with the complete complementary
+transition. Bounded saddle ratios use Lemma~\ref{lem:dulac-jets}; small
+ratios use the exact power passage just constructed. Before estimating
+zeros, we specify the return domain on which these compositions preserve
+physical fixed points and their multiplicities.
+
+\begin{proposition}\label{prop:simple-contact}
+Suppose that $0<A\le A_+<\infty$ and that either
+\begin{enumerate}
+\item $C$ belongs to a compact subinterval of $(0,\infty)$; or
+\item $A\ge A_0>0$, $C$ is bounded, and the polynomial satisfies
+$P(z)\ge p_0>0$ on the fixed negative interval preceding the small
+contact neighborhood used below.
+\end{enumerate}
+There are positive constants $c_0,d_0,\varepsilon_0,\rho_{\rm H}$
+and a neighborhood $U$ of the whole graphic such that, for
+$|c|<c_0$, $|d|<d_0$ and $0<\varepsilon<\varepsilon_0$,
+the total actual finite minimal-return multiplicity of the isolated
+periodic orbits $L\subset U$ satisfying
+$d_{\rm H}(L,\Gamma_b)<\rho_{\rm H}$ is at most two.
+The choices are locally uniform in
+$b\in(0,2)$ and uniform on every compact set in the second case having
+the stated positive lower bound.
+\end{proposition}
+
+\paragraph{Domain of the outgoing inverse.}
+Let $D$ denote the local passage and $N$ the transition from the physical
+source to its incoming coordinate. The conjugate return $D\circ N\circ C_+$
+can be used only where the outgoing continuation $C_+$ and its inverse
+are both defined.
+Fix the original positive low section core $I_0$, the local outgoing
+section $\Omega$, and a larger ordinary outgoing collar containing
+$[0,a_{\rm out}]$. Write $I_{\rm out}=(0,a_{\rm out})$ for its counting interval.
+The ordinary positive continuation $C_+:I_{\rm out}\to J\subset I_0$ is defined
+on the entire collar, with $C_+'>0$, before the return is defined.
+Reference barriers and the regular fast tube are constructed for that
+whole collar and the same field. A smaller incoming collar puts every
+finite local output in $I_{\rm out}$; there is no orbit-dependent collar choice.
+
+The signed transition along the fast arc, descent and negative predecessor
+is increasing in the physical source ordinate. Let $I_{\rm pass}$ be the
+set of incoming ordinates admitting a positive finite contact passage
+with $F>0$ to the target core. Between two passing
+graphs, $F_y>0$ bounds the intermediate speeds below by the positive
+minimum on the lower graph, for this fixed field. Scalar order then
+continues every intermediate graph to the target; transverse finite
+hits give openness. Thus $I_{\rm pass}$, and its source preimage
+$I_{\rm ret}\subset I_0$, are open intervals, possibly empty.
+The regular fast clearance, negative
+predecessor and rightgoing contact event show that this is a minimal
+first return $R$ on $I_{\rm ret}$.
+
+For the central or compact passage, or the late weak-saddle class,
+write $I_{\rm ret,local}$ for the actual local-return interval.
+In the weak case it is the lower, late-class interval, excluding the
+finite threshold assigned to the early class. The local entry and
+outgoing-collar estimates give
+\[
+ R(I_{\rm ret,local})\subset J.
+\]
+This containment is asserted only for these local passages. The early
+weak class retains its separate physical displacement and the signed
+gluing argument below; no small weak-saddle collar is asserted for it.
+
+Consequently $C_+^{-1}$ is used only on $I_{\rm ret,local}\cap J$:
+\[
+\begin{gathered}
+ I_{\rm adm}=C_+^{-1}(I_{\rm ret,local}\cap J),\qquad
+ H=N\circ C_+,\quad \mathcal P_a=D\circ H,\\
+ R(C_+(a))=C_+(\mathcal P_a(a))\qquad(a\in I_{\rm adm}).
+\end{gathered}
+\]
+Every point of this interval follows the same sequence of positive
+finite passages. Flow uniqueness therefore gives the conjugacy on this
+domain.
+The conjugacy preserves actual minimal-return multiplicity by
+Section~\ref{sec:return-framework}; its derivative need only be nonzero
+for each fixed field.
+Axis hits, zero amplitudes on
+equilibria or stable separatrices, missing targets and infinite flights
+are outside the actual return domain. The same domain requirements
+apply to bounded signed $C$ under the second hypothesis of the proposition.
+
+\subsection{Bounded ratios to the contact scale}\label{subsec:simple-bounded}
+
+We first bound the rescaled constant term and forcing:
+$|k|,|\ell|\le K$, where
+$k=c/\varepsilon^2$ and $\ell=d/\varepsilon^3$.
+Putting $n=A\varepsilon^2$, $z=nU$, $y=n^2V$ gives
+\begin{equation}\label{eq:simple-bounded-system}
+ U'=\mathcal F=V(1+bnU-n^2V)+k-U+C\varepsilon^2U^2,
+ \qquad V'=UV+\ell.
+\end{equation}
+The tail estimate with $t=\varepsilon$ gives
+$V(-L)\le L+K+1$.  On $[-L,0]$, above a sufficiently large fixed
+level $T$, one has $\mathcal F\ge V/4$ and $V'\le K$.
+Thus $(V^2)_U\le8K$ on each excursion above $T$, and
+\begin{equation}\label{eq:simple-bounded-height}
+ V(U)\le B_*:=\sqrt{T^2+8KL}\qquad(-L\le U\le0).
+\end{equation}
+Thus all incoming contact passages enter a bounded scaled strip. For
+signed $C$, take $|C|\varepsilon^2L^2<1$ and increase $T$
+by a fixed amount; the argument is unchanged.
+
+\paragraph{Parameters separated from $\ell=0$.}
+When the rescaled forcing is separated from zero, negative forcing
+prevents passage and positive forcing makes the complete return
+contracting. Fix $\ell_0>0$. If $\ell\le-\ell_0$, start at $U=-2L$, where
+$V\le2L+K+1\le3L$.  On $[-2L,-L]$ a hypothetical passing orbit
+has $V'\le-LV-\ell_0$ and $0<\mathcal F\le12L$, after increasing
+the harmless numerical constant if necessary.  Consequently
+\[
+ V(-L)\le(3L+\ell_0/L)e^{-L/12}-\ell_0/L<0
+\]
+for a sufficiently large fixed $L$, a contradiction.
+
+For $\ell\ge\ell_0$, the entrance instead lies below the positive
+nullcline $m(U)=-\ell/U$.  To see this uniformly, on the first half
+of $[-2L,-L]$ the level $2\ell/(3L)$ is an upper barrier and
+\[
+ V(-3L/2)\le2\ell/(3L)+3Le^{-L/16}<3\ell/(4L).
+\]
+If the orbit remained above $m$ on the second half, $V$ would be
+nonincreasing, contradicting $m(-L)=\ell/L$.  At a meeting with $m$,
+$d(V-m)/d\sigma=-m'\mathcal F<0$, so it cannot cross back upward.
+It follows that $UV+\ell>0$ and
+\begin{equation}\label{eq:simple-forcing-negative-density}
+ \partial_V\frac{UV+\ell}{\mathcal F}
+ =\frac{U\mathcal F-(UV+\ell)\mathcal F_V}{\mathcal F^2}<0
+ \qquad(-L\le U<0).
+\end{equation}
+If there is an equilibrium at a negative abscissa, the first one,
+$U_n$, prevents passage: the region
+$\{-L\le U\le U_n,\ 0\le V\le m(U)\}$ is forward invariant.
+Its upper boundary points inward, and on the right boundary
+$\mathcal F(U_n,V)\le\mathcal F(U_n,m(U_n))=0$.
+This includes the coalescence of two equilibria.
+
+Every remaining crossing has $V(0)\ge v_0>0$ uniformly.  Indeed, on
+$[-1,0]$, below $\min(1,\ell_0/2)$, one has
+$V'\ge\ell_0/2$ and $0<\mathcal F\le K+4$.
+Choosing $v_0$ smaller than both half that level and
+$\ell_0/[4(K+4)]$, a terminal value below $v_0$ would force
+$V(-1)<0$.  The level $v_0$ cannot be crossed downward there.
+For $U\ge0$, a small parabola $V_b=v_0/2+\gamma U^2$ points inward:
+\[
+ V'-V_b'\mathcal F\ge\ell_0+
+ U\{(1-4\gamma)v_0/2-2\gamma K\}
+ +\gamma(1-4\gamma-2|C|\varepsilon^2)U^3>0.
+\]
+Take $U_1$ large enough that $\mathcal F\ge V/4$ for $U\ge U_1$.
+On $[0,U_1]$ the bounded-height argument used in
+\eqref{eq:simple-bounded-height} gives $V\le B_1$; since
+$V'\ge\ell_0$, its flight time is at most $B_1/\ell_0$.
+The vertical-section derivative on this compact part is
+\[
+ \frac{\mathcal F(0,V(0))}{\mathcal F(U_1,V(U_1))}
+     \exp\!\int\operatorname{div}(\mathcal F,UV+\ell)
+ \le K_1.
+\]
+No inverse of the possibly small speed at $U=0$ is used.
+On the rest of the positive part, \eqref{eq:simple-Ry} and the lower
+parabola give a logarithmic derivative loss at most
+$K_2+K_2\varepsilon^2\log(1/(A\varepsilon^2))$.
+The negative transition has derivative at most
+$K_3\varepsilon\exp[-(t_0+t_1\log(A_+/A))/\varepsilon^2]$,
+and \eqref{eq:simple-forcing-negative-density} adds no loss.
+The derivative of the complete return is therefore bounded above by
+\begin{equation}\label{eq:simple-forcing-multiplier}
+ K_4\varepsilon\exp\left\{
+ -\frac{t_0+t_1\log(A_+/A)}{\varepsilon^2}
+ +K_4\varepsilon^2\log\frac1{A\varepsilon^2}\right\}<1.
+\end{equation}
+Choose $\varepsilon$ so that $K_4\varepsilon^4<t_1/2$; then the
+coefficient of $\log(A_+/A)$ is negative and the remaining logarithms
+are absorbed by $t_0/(2\varepsilon^2)$. The displacement is therefore
+strictly decreasing on its single return interval and has at most one zero.
+
+\paragraph{Small forcing and negative $k$.}
+For small forcing, a negative constant term is excluded by reducing
+the incoming height below the level needed for positive speed.
+Fix $k_0>0$, let $k\le-k_0$, and take $|\ell|\le k_0^2/64$.
+Put $H=k_0/8$.  On $[-2L,-L]$, as long as $V\ge H$,
+\[
+ V'=UV+\ell\le-LV+k_0^2/64\le-(L/2)V
+\]
+for fixed large $L$.  A passing orbit has $0<\mathcal F\le B L$ and
+enters this strip below $3L$.  Until its first hit of $V=H$ it therefore
+satisfies
+\[
+ \frac{dV}{dU}\le-\frac{V}{2B},\qquad
+ V(-L)\le3Le^{-L/(2B)}<H.
+\]
+If it hits $H$ earlier, the vector field on that boundary points down and
+prevents a later upcrossing.  Thus in all cases $V(-L)<H$.  For
+$U\le-k_0/4$,
+$V'|_{V=H}\le-k_0H/4+k_0^2/64<0$.
+At $U=-k_0/4$ this implies
+$\mathcal F\le2H-k_0+k_0/4+O(\varepsilon^2)<0$.
+Thus this parameter range has no passing orbit.
+
+\paragraph{The saddle-node at $(k,\ell)=(0,0)$.}
+At these parameters the origin has eigenvalues $-1,0$ and center
+equation $V'=V^2+O(V^3)$; $V=0$ is its strong invariant line.
+Lemma~\ref{lem:saddle-node-passage} applies, with the center coordinate
+oriented by $s_V(0)>0$. To use its small-passage estimate, we must first
+put every physical entry in a common small incoming range.
+For a small fixed $d_0>0$, descent on $[-2L,-L]$ and the constant
+upper barrier on $[-L,-d_0]$ give
+\begin{equation}\label{eq:simple-central-entry}
+ V(-d_0)\le
+ \max\{(2L+K+1)e^{-k_5L},\,2|\ell|/d_0\}.
+\end{equation}
+For $|k|<d_0/4$, the speed on the latter interval is at least $d_0/2$.
+Choose $L$ large, then $|k|,|\ell|$ small.  In product coordinates
+the entry has $w\in[3d_0/4,5d_0/4]$ and
+$|s-\sigma|\le K_5(V+|k|+|\ell|)$.
+It reaches $w_0=d_0/2$ in the bounded time $\log(w/w_0)$, with a
+positive transverse derivative and bounded derivatives of the section
+change.  At zero parameters, positive physical entries have $s>0$;
+their potentially infinite time from the right is included in
+\eqref{eq:simple-saddle-node-smallness}.
+
+For the positive reference, use the linear and parabolic barriers in
+the saddle-node part of the proof of
+Lemma~\ref{lem:lower-positive-references}, with
+$p(U)=k-U+C\varepsilon^2U^2$, $\ell_*=\ell$ and
+$n=A\varepsilon^2$. Start at $U=\delta$ on
+$h=\delta+\delta^2+O(\delta^3+|k|+|\ell|+\varepsilon^2)$.
+The lower line $(1+\delta/4)U$ has a strict crossing margin for
+$|k|+|\ell|\ll\delta^2$; the small and large parabolas then give
+$h\asymp1+U^2$ and $\mathcal F/h\ge k_6>0$.
+These inequalities do not use a lower bound for $A$: their physical
+smallness is $y\le M(n^2+z^2)$, with $n\le A_+\varepsilon^2$.
+They also allow signed bounded $C$, since its adverse contribution is
+$O(\varepsilon^2h)$. Fix $z_c$ before shrinking $n$.
+Thus Lemma~\ref{lem:positive-transition} applies uniformly in $A$.
+
+Let $N(u)$ be the complete transition from the positive section to the
+incoming center coordinate.  The convex map of
+Lemma~\ref{lem:negative-transition} remains convex up to $U=-d_0$:
+in \eqref{eq:simple-Ryy} the positive term $xp(1+bz)$ dominates
+the forcing, since $|\ell|\ll d_0^2$, and all higher physical-height
+terms tend uniformly to zero on the bounded core.
+Its scaled first derivative is $o(1)$ by
+\eqref{eq:simple-scale-cancellation}.  The final bounded section
+change therefore gives $N'>0$ and $N''/N'\ge-o(1)$.
+Combining this incoming estimate with the outgoing transition gives,
+for $H=N\circ C_+$,
+\begin{equation}\label{eq:simple-central-curvature}
+ aH''/H'=aC_+''/C_+'+aC_+'(N''/N')\ge-K_7a.
+\end{equation}
+First choose the product neighborhood with $W_s\le1/4$, then
+$a_0$ with $K_7a_0\le1/4$.  Decrease the incoming range and the
+parameters in \eqref{eq:simple-central-entry} so that
+\eqref{eq:simple-saddle-node-smallness} puts every fixed point in
+$0<a<a_0$.  The actual passing condition restricts $H$ to one component
+to the right of any scalar root, hence to an interval.  Intersecting
+with $(0,a_0)$ keeps an interval containing every fixed point.
+Equations \eqref{eq:simple-central-curvature} and
+\eqref{eq:simple-pfaff-hypothesis} give at most two cycles.
+
+\paragraph{Small forcing and positive $k$.}
+For $k\in[k_0,K]$ the saddle near $(U,V)=(k,0)$ persists, with
+\[
+ U_s=k+O(\varepsilon^2+|\ell|),\quad V_s=-\ell/U_s,
+ \quad\lambda_-=-1+O(\varepsilon^2+|\ell|),\quad
+ \lambda_+=k+O(\varepsilon^2+|\ell|).
+\]
+Its characteristic ratio $r=-\lambda_-/\lambda_+$ lies in a compact
+subinterval of $(0,\infty)$, including values on either side of one.
+The descent \eqref{eq:simple-central-entry}, followed to
+$U=U_s-\delta$, makes the incoming unstable coordinate $s$ as small
+as prescribed.  That continuation has $\mathcal F\ge\delta/2$;
+its derivatives are uniformly bounded.
+Choose the saddle coordinates with $U_x>k_8>0$, $U_y<-k_8$.
+In the prepared form used in Lemma~\ref{lem:dulac-jets}, a negative
+entry $s$ exits on the left with stable coordinate at most
+$y_0(|s|/x_0)^{r_-/2}$.  For small $|s|$, its physical longitudinal
+speed is negative there.  Such a trajectory, and the infinite-time
+entry $s=0$, cannot be a counted contact passage.  Hence $s>0$.
+
+At $U=U_s+\delta$ the reference satisfies
+$h=(k+1)\delta+O(\delta^2+|\ell|+\varepsilon^2)$.
+Use the bounded-ratio construction in the proof of
+Lemma~\ref{lem:lower-positive-references}, replacing $k_c$ by $k_0$
+and $\ell_*$ by $\ell$. The lower line
+$(1+k_0/2)(U-U_s)$ has a strict positive crossing margin; the same
+parabolas give $h\asymp1+U^2$ and $\mathcal F/h\ge k_9>0$.
+Again only $n=A\varepsilon^2\le A_+\varepsilon^2$ enters the physical
+smallness, and bounded signed $C$ contributes $O(\varepsilon^2h)$.
+The positive transverse orientation and compact local section change
+give the incidence required by Lemma~\ref{lem:positive-transition}.
+Hence \eqref{eq:simple-positive-jets} holds with $n=A\varepsilon^2$.
+
+For the negative transition to the saddle's incoming section,
+Lemma~\ref{lem:negative-transition} and its final bounded section
+change give $N'>0$, $N'=o(1)$ and $|N''/N'|\le K_9\varepsilon^{-2}$.
+Consequently
+\begin{equation}\label{eq:simple-compact-complement}
+ 0<H'\le m(\varepsilon)\longrightarrow0,\qquad
+ |H''/H'|\le K_{10}+K_{10}n^{3/2}\varepsilon^{-2}
+             \le K_{11},\qquad H=N\circ C_+.
+\end{equation}
+The identity $n^{3/2}\varepsilon^{-2}=A^{3/2}\varepsilon$ is what
+makes the bound uniform in $A$.
+
+The smallness of $H'$ allows the two-zero comparison to include $r=1$.
+At a point where $(D\circ H)'=1$, set
+$s=H(a)$, $T=\log(1/s)$ and $M=\log(1/m)-\log K_{12}$.
+Lemma~\ref{lem:dulac-jets} gives
+$(1-r)T\ge M$.  For large $M$ this is impossible if $r\ge1$.
+Otherwise $\beta=1-r\ge M/T$ and
+$sD''/D'\le-\beta/2$, since $T e^{-\nu T}$ is bounded.
+At that point
+\[
+ (D\circ H)''=\frac{D''}{D'^2}+\frac{H''}{H'}
+ \le-\frac{\beta}{2sD'}+K_{11}<0,\qquad
+ \frac{\beta}{sD'}\ge\frac{M e^{r_-T}}{K_{12}T}.
+\]
+Taking $m$ small proves the last strict inequality.
+All zeros of $(D\circ H)'-1$ are downward crossings, so there is at
+most one. A displacement zero at this stationary point is exactly
+quadratic and the sole zero; all other zeros are simple. Hence the
+total actual fixed-point multiplicity is at most two.
+Fix the outgoing collar first; choose the incoming collar small enough
+that $D$ maps into it and that the negative-entry exclusion holds;
+then choose $L,|\ell|,\varepsilon$.  Monotonicity makes the resulting
+return domain one interval.  This order places every counted cycle
+in the domain on which the estimates were proved.
+
+These cases cover every fixed bounded $(k,\ell)$ set with common
+thresholds. Choose a small central neighborhood, then $k_*>0$
+inside it, and finally $\ell_*>0$ below its threshold, $k_*^2/64$,
+and the positive-saddle threshold.  The five parameter ranges
+\[
+ \ell\ge\ell_*,\quad \ell\le-\ell_*,\quad
+ |\ell|<\ell_*, k\le-k_*,\quad
+ |\ell|<\ell_*, |k|<k_*,\quad
+ |\ell|<\ell_*, k\ge k_*
+\]
+have bounds $1,0,0,2,2$, respectively.  Equalities are assigned to a
+range whose estimate holds with a strict margin.
+
+\subsection{Ratios larger than the contact scale}\label{subsec:simple-radial}
+
+Put
+\[
+ \rho=\max\{\varepsilon,\sqrt{|c|},|d|^{1/3}\},\qquad
+ e=\varepsilon/\rho,\quad \kappa=c/\rho^2,\quad\eta=d/\rho^3.
+\]
+The compact direction set is
+\begin{equation}\label{eq:simple-direction-set}
+ 0\le e\le1,\quad |\kappa|,|\eta|\le1,\qquad
+ \max\{e,\sqrt{|\kappa|},|\eta|^{1/3}\}=1.
+\end{equation}
+For $e$ bounded below, $k=\kappa/e^2$ and $\ell=\eta/e^3$ are bounded,
+so the preceding subsection applies. It remains to treat small $e>0$,
+when the constant term or forcing determines the larger scale $\rho$.
+
+\paragraph{Negative forcing or a negative constant term.}
+On the larger scale, the same incoming-height argument excludes
+negative forcing and a negative constant term. Use the exact scaling
+\[
+ X=\frac{z}{A\rho^2},\quad
+ Y=\frac{y}{A^2\varepsilon^2\rho^2},\quad
+ X'=e^2\mathcal F,\quad Y'=XY+e\eta,
+\]
+where
+\begin{equation}\label{eq:simple-radial-system}
+ \mathcal F=YQ+\kappa-X+C\rho^2X^2,\qquad
+ Q=1+bA\rho^2X-A^2\rho^4e^2Y.
+\end{equation}
+Lemma~\ref{lem:negative-transition}, with $t=\rho$, gives
+$Y(-L)\le L+K+1=:B_0$.
+If $\eta\le-\eta_0<0$, on the unit interval $[-L,-L+1]$
+one has $Y'\le-e\eta_0$, $Y\le B_0$ and
+$0<\mathcal F\le B_1$.  Thus
+$Y_X\le-\eta_0/(eB_1)$, which is incompatible with $Y>0$ when
+$e$ is small.
+
+If $\kappa\le-\kappa_0<0$, take the section $X_g=\kappa/2$.
+Its polynomial value is at most $-\kappa_0/4$ after decreasing $\rho$.
+Choose $\theta>0$ with $2\theta<\kappa_0/8$.
+On the same first unit interval, as long as $Y\ge\theta$,
+$Y'\le-(L-1)Y/2$; hence
+\[
+ Y(-L+1)\le B_0\exp[-(L-1)/(2e^2B_1)]<\theta
+\]
+unless it already met that level.
+For $X\le-\kappa_0/2$, the boundary $Y=\theta$ still points down
+when $e|\eta|<\kappa_0\theta/4$.
+It therefore reaches $X_g$ with
+$\mathcal F\le2\theta-\kappa_0/4<0$, another contradiction.
+Both exclusions use the incoming-height bound from the fixed physical
+section; that bound is essential to the scaled argument.
+
+\paragraph{Positive forcing separated from zero.}
+Assume $\eta\ge\eta_0>0$. To retain contraction between the negative
+tail and the core, we first place the physical incoming orbit below
+the positive nullcline.
+On the far negative tail set
+$h_s(z)=-\Delta/z$, $w=y-h_s$ and
+\[
+ E(z,s)=\exp\!\int_s^z\frac{\zeta}{F(\zeta,y(\zeta))}\,d\zeta.
+\]
+The exact difference equation and its integral are
+\begin{equation}\label{eq:simple-radial-incidence}
+ w_z=(z/F)w-h_s',\qquad
+ w(z_g)=E(z_g,-q_g)w(-q_g)
+                 -\int_{-q_g}^{z_g}E(z_g,s)h_s'(s)\,ds,
+ \quad z_g=-LA\rho^2 .
+\end{equation}
+The first term has absolute value at most
+$K\varepsilon^3 e^{-\gamma T_A/\varepsilon^2}$.
+On the final interval of length $A\varepsilon^2$,
+the kernel is bounded below by a positive constant and
+$h_s'\ge k\Delta/(A^2\rho^4)$.
+The integral is consequently at least
+$k A^2\varepsilon^5\eta/\rho$.
+The ratio of the first term to this lower bound is at most
+\[
+ K\frac{\rho}{\varepsilon^2}A^{-2}
+    \left(\frac{A(1+L\rho^2)}{q_g+A}\right)^{\gamma/\varepsilon^2}
+       \longrightarrow0.
+\]
+The maximization in $A$ from Lemma~\ref{lem:negative-transition}
+makes this limit uniform for arbitrarily small relative scales.
+Thus $w(z_g)<0$. At $w=0$ its derivative is
+$-h_s'<0$, so the passing orbit remains below the nullcline up to zero.
+In particular $G>0$ there, and
+$R_y=(zF-GF_y)/F^2<0$ on the entire negative contact interval.
+
+For the positive part, the forcing determines the scale
+$s=A\varepsilon\rho$. Put
+$z=sU$, $y=s^2V$.  The equations are
+\begin{equation}\label{eq:simple-radial-core}
+ U'=V(1+bsU-s^2V)+\kappa-eU+C\varepsilon^2U^2,\qquad
+ V'=UV+\eta.
+\end{equation}
+The low-height argument on $[-1,0]$ used above gives
+$V(0)\ge2v_0>0$.  With $\gamma>0$ small,
+$V_b=v_0+\gamma U^2$ is a strict lower barrier: its crossing
+expression is bounded below by
+$\eta_0+U(v_0/2+\gamma U^2/2)>0$.
+After excluding the already treated parameters
+$\kappa\le-\kappa_*<0$, choose
+$\kappa_*\le v_0/8$ and $e\le\sqrt{v_0\gamma}/4$.
+Then $U'\ge V/4$ throughout the positive part.
+For signed $C$, absorb
+$|C|\varepsilon^2U^2\le(|C|\varepsilon^2/\gamma)V$
+and replace $V/4$ by $V/8$.
+The estimate
+$y_z\le Kz+K s^3/(s^2v_0+\gamma z^2)$ keeps a sufficiently small
+contact height in the physical neighborhood up to $z_c$.
+
+In the scalar variational numerator of \eqref{eq:simple-radial-core},
+the terms $-eU^2$ and $-\eta(1+bsU-s^2V)$ are nonpositive.
+The other terms, divided by the square of the speed, have integrals
+bounded by
+\[
+ K\int_0^{z_c/s}\frac{U\,dU}{(v_0+\gamma U^2)^2}
+ +K\varepsilon^2\int_0^{z_c/s}
+                         \frac{U^3\,dU}{(v_0+\gamma U^2)^2}
+ +Ks^2\int_0^{z_c/s}\left(U+\frac1{v_0+\gamma U^2}\right)dU.
+\]
+This is at most $K+K\varepsilon^2\log(1+z_c/s)$.
+Combining it with the negative estimate gives
+\[
+ \log\mathcal P'
+ \le K-\frac{\gamma}{\varepsilon^2}
+             (t_0+t_1\log(A_+/A))
+       +K\varepsilon^2\{\log(A_+/A)+2|\log\varepsilon|+K\}<0.
+\]
+Here $\rho\ge\varepsilon$ was used in the last logarithm.
+All scale factors cancel in vertical-section derivatives.
+Thus the complete return has at most one fixed point on this
+parameter range.
+
+\paragraph{A positive constant term and small forcing.}
+The last case has $\kappa=1$ and $|\eta|$ small.
+Write $c=\rho^2>0$, $n=Ac$, $e=\varepsilon/\sqrt c$.
+The equations are \eqref{eq:simple-small-ratio-system}.
+Orbits may leave a small neighborhood of $Y=0$ before reaching the
+saddle, so a local saddle map alone does not cover the return domain.
+We separate these early departures from the late passages near the saddle.
+Fix a small $\sigma>0$, then a smaller $\delta>0$.
+The separating event is the first upward intersection with $Y=\delta$:
+an intersection at $X_b\le1-\sigma$ defines the first class.
+The second, late class enters a saddle neighborhood near $X=1-2\sigma$
+below $Y=\delta$; its fixed outgoing normal section has height between
+$3\delta$ and $5\delta$.
+
+We first show that these classes exhaust the incoming orbits and form
+ordered source intervals.
+For $\eta\le0$ the homogeneous negative estimate gives
+\begin{equation}\label{eq:simple-small-forcing-entry}
+ Y(-L)\le\frac{K e}{A^2\sqrt c}
+        \exp\left(-\frac{\gamma T_A}{ce^2}\right)
+                  \le e^{-B/e^2}
+\end{equation}
+for any prescribed $B>0$, by taking the upper bound for $c$ small first.
+The factor $A^{-2}$ is absorbed by maximizing as before, and the
+remaining $c^{-1/2}$ by $\exp[-k/(ce^2)]$.
+On $[-L,0]$ the ordinate decreases; on $[0,1-\sigma]$ it satisfies
+$Y_X\le K Y/(\sigma e^2)$.
+Taking $B>K/\sigma$ proves that this sign of forcing cannot belong
+to the first class.
+For $\eta\ge0$, the height on $[-L,0]$ is uniformly bounded.
+For example an upward crossing of a large fixed level $T$ requires
+$X\ge-e\eta/T$; while $Y\ge T$, one has
+$\mathcal F\ge Y/2$ and $(Y^2)_X\le4\eta/e$.
+The remaining interval has length at most $e\eta/T$.
+This bounds the height and gives, by an integrating factor,
+\[
+ Y(0)\le B_0e^{-L^2/(K_1e^2)}
+                +\frac{K_1\eta}{e}
+                     \int_{-L}^0e^{-X^2/(K_1e^2)}\,dX
+       \le B_0e^{-L^2/(K_1e^2)}+K_2\eta<\delta/4.
+\]
+An upward crossing of $Y=\delta$ at negative $X$ could not be
+followed by a downward crossing before zero, since
+$X\delta+e\eta$ increases with $X$.
+Its first upward intersection therefore has $X_b>0$.
+Every counted cycle eventually has such an intersection because its
+outgoing physical height is separated from the shrinking level
+$n^2e^2\delta$. Write $q$ for the increasing physical source ordinate.
+Scalar ordering gives $Y_q>0$ at every fixed pre-hit abscissa, and at
+the upward event $Y_X>0$. Thus
+\[
+ (X_b)_q=-Y_q/Y_X<0.
+\]
+The second class is therefore the lower source interval and the first
+class the upper interval, separated, when both occur, by one finite
+transverse threshold.
+
+For the early class, $\eta\ge0$. We estimate the complete multiplier
+by following the growing height through the core. Use $Y$ as independent
+variable up to $Y=e^{-2}$. A first zero of $\mathcal F$ is impossible, because
+its derivative there is $\mathcal F_Y>0$.
+Moreover,
+\begin{equation}\label{eq:simple-growing-height}
+ \frac{d(X^2)}{dY}\le K_3e^2+\frac{K_3e^2}{Y}
+                         +\frac{K_3ce^2X^2}{Y}.
+\end{equation}
+Gronwall's inequality keeps $X$ bounded.  Before a fixed large level
+$Y_0$, its squared increment is $O(e^2)$, leaving
+$X\le1-\sigma/2$.  Choose $Y_0$ above four times the resulting
+global upper bound for $X$; above it $\mathcal F\ge Y/4$.
+Thus $\mathcal F\ge k_1(1+Y)$ throughout.
+The terminal $X$ is bounded below as well.  If $XY<e\eta$ above
+$Y_0$, then $X_Y\ge eY/(8\eta)$, which forces $XY=e\eta$ before
+$Y_0+1$, for sufficiently small $\eta$.  Thereafter
+$(X^2)_Y\ge e^2/4$.  For $\eta=0$ this last estimate applies directly.
+It follows that at $Y=e^{-2}$,
+\[
+ 0<x_-\le X_t\le x_+<\infty,\qquad y=n^2,\quad z=nX_t.
+\]
+On the whole scaled positive part the exact density is
+\[
+ \partial_Y\frac{XY+e\eta}{e^2\mathcal F}
+ =\frac{X[1-X+CcX^2+n^2e^2Y^2]
+                 -e\eta(1+bnX-2n^2e^2Y)}
+        {e^2\mathcal F^2}.
+\]
+Its integral is at most $K_4/e^2$.
+From the terminal point a small lower parabola and a large upper
+parabola in $U=z/n,V=y/n^2$ give
+$y\asymp n^2+z^2$ and $F\ge k_2y$ to the fixed positive section.
+At a lower meeting the term $UV(1-2\gamma Q)$ is positive; the terms
+of orders $e^2U$ and $\varepsilon^2U^3$ are absorbed after fixing
+$\gamma$. After shrinking the physical neighborhood, at the upper
+parabola $V=M(1+U^2)$ one has $F/n^2\ge V/2$, or equivalently
+$F\ge y/2$, and $dV/dU<2MU$.
+The remaining density integral is therefore at most
+$K_5+K_5\varepsilon^2\log(1/n)$, by the integration in
+Lemma~\ref{lem:positive-transition}.
+Since the negative part has $R_y<0$, the complete derivative satisfies
+\begin{equation}\label{eq:simple-first-class-multiplier}
+ \log\mathcal P'\le
+ \log(K_6\varepsilon)-\frac{\gamma T_A}{ce^2}
+                 +\frac{K_6}{e^2}+K_6
+                 +K_6\varepsilon^2\log(1/n)<0.
+\end{equation}
+Indeed $\log(1/n)\le T_A+K_7+\log(1/c)$.
+First take $c$ small to absorb $K_6/e^2$, then $\varepsilon$ small
+to absorb $\varepsilon^2T_A$; the remainder
+$ce^2\log(1/c)$ tends uniformly to zero.
+There is at most one cycle in the first interval.
+
+For the late class, we apply Lemma~\ref{lem:small-ratio-saddle}
+after verifying the physical amplitude and the derivatives of both
+complementary transitions. The incoming amplitude must be positive.
+For $\eta\ge0$, the same selected weak graph is
+\[
+ Y_s(X)=-e\eta/X+O_{C^K}(e^3\eta).
+\]
+It is below the axis for $\eta>0$ and equals the axis for $\eta=0$.
+The product inverse preserves the sign of $Y-Y_s$; hence
+$\omega\le0$ is nonphysical in $Y>0$. For $\eta<0$, zero amplitude
+approaches the saddle in infinite time, while a negative amplitude,
+if initially physical, reaches the axis while growing in modulus.
+The axis-hit argument is used only for this negative sign of the forcing.
+The incoming tilted section is reached with bounded derivatives by
+the explicit $O(e^2\delta)$ section adjustment in that lemma.
+The transition from $-L$ to that section stays to the left of
+$1-\sigma$ with bounded height and $\mathcal F\ge k_\sigma>0$.
+Writing this scalar transition as $Q_e$ and its equation as
+$Y_X=f_e(X,Y)$, direct differentiation on the fixed strip gives
+\[
+ |f_{e,Y}|+|f_{e,YY}|\le K_8e^{-2},\qquad
+ 0<Q_e'\le e^{K_8/e^2},\qquad
+ \left|\frac{Q_e''}{Q_e'}\right|
+       \le K_8e^{-2}e^{K_8/e^2}.
+\]
+The rescaled incoming map $v$ supplied by
+\eqref{eq:simple-negative-jets} has
+\[
+ v'\le L_0(A,c,e)e^{-\gamma T_A/(ce^2)},\qquad
+ |v''/v'|\le K_8\varepsilon^{-2}.
+\]
+Here $L_0$ has at most polynomial growth in the inverse small scales.
+After taking $c$ small, the negative action absorbs the factor
+$e^{K_8/e^2}$ and every polynomial loss, uniformly as $A\downarrow0$.
+Consequently $(Q_e\circ v)'=o(1)$ and
+\[
+ \frac{(Q_e\circ v)''}{(Q_e\circ v)'}
+ =\frac{v''}{v'}+\left(\frac{Q_e''}{Q_e'}\circ v\right)v'
+ =O(\varepsilon^{-2}).
+\]
+Including the ordinate rescaling and the regular tilted-section change
+therefore gives
+\begin{equation}\label{eq:simple-small-ratio-negative}
+ N'>0,\qquad |N''/N'|\le K_9\varepsilon^{-2}.
+\end{equation}
+
+To bound the outgoing transition independently of the weak eigenvalue,
+move the normal outlet to a horizontal section
+$Y=\delta_1\asymp\delta$, slightly above it.  Its $X$-coordinate is
+a decreasing smooth function of the outgoing weak coordinate $a$,
+with derivative a negative unit.
+The inverse-coordinate bounds in
+Lemma~\ref{lem:small-ratio-saddle} give uniform first three derivatives
+for this conversion; shrink $e|\eta|\ll\delta$ after fixing $\delta$.
+Continue with $Y$ as independent variable to $e^{-2}$.
+Here $X$ stays in a positive compact interval,
+$XY+e\eta\ge k_3XY$, and for $j\le3$,
+\[
+ \left|\partial_X^j
+ \frac{e^2\mathcal F}{XY+e\eta}\right|
+                         \le K_{10}e^2(1+1/Y).
+\]
+Its integral is bounded by
+$K_{11}+K_{11}e^2|\log\delta|$.
+After the last shrinking of $e$ this gives a nonzero first derivative
+and bounded second and third derivative ratios to the terminal
+horizontal section.
+The parabolic bounds just established, a fixed compact transition to
+a vertical $U$-section, and
+Lemma~\ref{lem:positive-transition} give
+$0<C_+'\le K_{12}n^{3/2}$ and
+$|C_+''/C_+'|\le K_{12}$.
+The coordinate $a=0$ is the actual outgoing unstable separatrix.
+Its fixed small collar can be chosen by first fixing $\sigma$, then
+$\delta\ll\sigma$, then the parameters: the horizontal-section
+conversion has bounded derivative ratios independently of the last
+choice of $\delta$, since its two heights have a bounded ratio.
+This avoids a dependence of the allowable collar on an inverse weak
+speed.
+
+For the complete complementary transition $H=N\circ C_+$,
+\begin{equation}\label{eq:simple-weighted-curvature}
+ r|H''/H'|
+ \le K_{13}e^2+
+      K_{13}\frac{e^2n^{3/2}}{\varepsilon^2}
+ =K_{13}e^2+K_{13}A^{3/2}\sqrt c\longrightarrow0.
+\end{equation}
+The weight $r\asymp e^2$ cancels the loss from the incoming second
+derivative; the available unweighted estimate need not tend to zero.
+Lemma~\ref{lem:small-ratio-saddle} gives at most two cycles in the
+second interval.
+The equality $X_b=1-\sigma$ is assigned to the first interval; its
+transverse event and all estimates extend there, so it adds no cycle.
+
+\begin{lemma}[Gluing the two simple-contact classes]
+\label{lem:simple-two-class-gluing}
+The two classes just constructed have total actual minimal-return
+multiplicity at most two, including a finite threshold only once.
+\end{lemma}
+\begin{proof}
+For $\eta\le0$ the first class is absent, so only the second-class
+bound is needed. For $\eta>0$, let $\mathcal P(q)$ be the complete
+return on the increasing physical ordinate and put
+$\mathcal F(q)=\mathcal P(q)-q$. The two class descriptions are
+restrictions of this same finite flow return. Its physical target is
+transverse, so its hitting-time formula gives a $C^1$ return through
+the finite threshold. The actual passing domain is one interval by
+scalar order and $F_y>0$, as in Lemma~\ref{lem:sections}.
+On the upper interval, \eqref{eq:simple-first-class-multiplier} gives
+$\mathcal F'<0$, including the threshold assigned to that class.
+
+On the lower, late interval use the increasing physical continuation
+$q=C_+(a)$ only on $I_{\rm adm}=C_+^{-1}(I_{\rm ret,local}\cap J)$, where
+$J=C_+(I_{\rm out})$. The complete outgoing collar was fixed first and contains
+all late-class local outputs; its inverse is not used outside $J$.
+The amplitude return is
+$\mathcal P_a(a)=D(H(a))$, with $H=N\circ C_+$; the chosen
+outgoing collar contains its outputs. The proof of
+Lemma~\ref{lem:small-ratio-saddle} shows that every zero of
+$\mathcal P_a'-1$ has $\mathcal P_a''<0$. Hence the amplitude displacement
+has at most one stationary point, a strict maximum. If it has two
+zeros, they cross first upward and then downward; a tangent zero is
+a strict maximum and is the sole zero in that interval. Since
+\[
+ \mathcal F(C_+(a))=C_+(\mathcal P_a(a))-C_+(a),
+\]
+the increasing coordinate change preserves these signs.
+Writing $J=(j_-,j_+)$, the containment
+$\mathcal P(I_{\rm ret,local})\subset J$ also gives
+$\mathcal F(q)>0$ for $q\le j_-$ and
+$\mathcal F(q)<0$ for $q\ge j_+$ wherever the late return is defined.
+Thus these signs extend across the parts of the late interval outside $J$.
+
+Every lower zero is simple unless it is the sole, exactly quadratic
+strict-maximum zero. If there are two simple lower zeros, or one
+quadratic lower zero, the physical displacement is negative after the
+last lower zero and up to the threshold. A zero at that threshold
+would have negative derivative and therefore positive displacement
+immediately to its left, a contradiction. The strictly decreasing
+upper displacement has no zero either. Otherwise there is at most one
+simple lower zero and at most one simple upper zero. Thus the sum of
+actual multiplicities is at most two. The same
+strict derivative statements exclude intervals of zeros. A finite
+threshold zero is simple because $\mathcal F'<0$ there and is counted
+once in this total multiplicity count; zero-amplitude separatrices and
+infinite-time passage boundaries are not periodic orbits.
+\end{proof}
+
+All these arguments remain valid in the signed-$C$ case of the
+proposition.  On fixed scaled intervals replace
+$1-X+CcX^2\ge1-X$ by half that bound, after fixing the intervals and
+decreasing $c$.  Near the saddle its derivative is still
+$-1+O(c+e|\eta|)$.  On the positive parabolas the only new adverse
+term is $-|C|\varepsilon^2U^2=O(\varepsilon^2V)$.
+The negative estimates were already proved with
+$P(-x)\asymp Ax$, and $A\ge A_0$ only improves their scale
+cancellation.  These explicit replacements cover every sign-sensitive
+inequality above.
+
+\begin{proof}[Proof of Proposition~\ref{prop:simple-contact}]
+Choose a small fixed $\eta_*>0$ for the positive-constant,
+small-forcing argument, then $e_*>0$ small enough for it and both
+separated-forcing arguments.
+In \eqref{eq:simple-direction-set}, $e\ge e_*$ gives a fixed bounded
+$(k,\ell)$ set and hence the bound two from
+Subsection~\ref{subsec:simple-bounded}.
+For $e<e_*$, $\eta\ge\eta_*$ gives the bound one and
+$\eta\le-\eta_*$ gives zero.
+In the remaining range $|\eta|<\eta_*$, compact normalization forces
+$|\kappa|=1$: $\kappa=-1$ is excluded and $\kappa=1$ gives the bound
+two by Lemma~\ref{lem:simple-two-class-gluing}. The parameter thresholds
+are fixed before taking the common small upper bound on $\rho$.
+Only finitely many choices are needed.
+Within each range, fixed section sizes, barrier levels, and collar
+widths are selected first.  The common upper bounds for $L^{-1}$ and
+the small parameters are then chosen in the order used in the
+corresponding proof, so estimates such as
+$n^{2-K\varepsilon^2}\le n^{3/2}$ hold simultaneously on the whole
+compact parameter set.
+
+For each fixed field the subdivision is made by its coefficients,
+so bounds from different parameter ranges are not added.  Within the
+last range the two first-intersection intervals are the only
+subdivision of the physical source.
+To verify the interval assertions used throughout, two passing scalar
+graphs bound every intermediate graph by uniqueness.  Since $F_y>0$,
+the lower graph supplies positivity of $F$ and $y$, and the upper graph
+prevents an earlier upper exit.  Intermediate graphs therefore reach
+the same section.  Conditions on an incoming amplitude or on the
+ordered first intersection are inverse images of intervals under
+monotone maps.  Rolle's theorem has always been applied on these
+intervals, not across missing portions of a return map.
+By Lemma~\ref{lem:sections}, one fixed physical source contains the
+single intersection of every sufficiently close whole-graphic cycle.
+Thus no additional sum over source sections is required, and the
+proposition follows.
+\end{proof}

@@ -1,0 +1,518 @@
+\section{Geometry and the return problem}\label{rw:geometry}
+
+We count cycles on one transverse section in a fixed neighborhood of
+the hemicycle.  The geometric construction ensures that every counted
+cycle crosses this section exactly once.  We then define the return
+on the inputs whose finite return paths stay in the neighborhood;
+the later changes of scale estimate this same return problem.
+
+The base field is
+\begin{equation}\label{rw:base-field}
+ X_0:\qquad \dot x=-y,\qquad \dot y=x(1+y).
+\end{equation}
+Put $z=1+y$.  On $z>0$ it has the first integral
+\begin{equation}\label{rw:geometry:energy}
+ H_0(x,z)=\frac{x^2}{2}+z-1-\log z.
+\end{equation}
+Its Hessian is $\operatorname{diag}(1,z^{-2})$, its unique critical
+point is $(0,1)$, and its sublevel sets are compact in $z>0$.
+Consequently every positive level is a smooth strictly convex oval.
+The field is nonzero on that oval and tangent to it, so the oval is a
+periodic orbit.
+
+We use the northern embedding
+\[
+ \iota(x,y)=\frac{(x,y,1)}{\sqrt{1+x^2+y^2}}.
+\]
+The boundary of this period annulus on the sphere is the Jordan curve
+$\Gamma$ consisting of the closure of $y=-1$ and the upper equatorial
+semicircle.  Indeed, at bounded $x$ the lower branch of a level tending
+to infinity approaches $y=-1$.  Every unbounded sequence on these
+ovals has $y>-1$ and hence can accumulate only on the upper semicircle;
+intersections with each fixed ray $y=k|x|$, $k\ge0$, tend to infinity,
+as does the upper turning point.  Write $p_-,p_+$ for the negative and
+positive horizontal points at infinity, and $q_+$ for the positive
+vertical point.  The direction on $y=-1$ is from $p_-$ to $p_+$.
+In the chart $y=1/r$, $x=w/r$, multiplication by $r>0$ gives
+\[
+ r'=-rw(1+r),\qquad w'=-w^2-r(1+w^2).
+\]
+Thus the other half of $\Gamma$ runs from $p_+$ through $q_+$ to $p_-$.
+
+\subsection{A coefficient family for all quadratic perturbations}
+
+Consider the five-parameter family
+\begin{equation}\label{rw:family}
+ \begin{aligned}
+ X_\alpha=(P_\alpha,Q_\alpha),\qquad
+ P_\alpha&=-y+Bx^2+my^2+ax,\\
+ Q_\alpha&=x(1+y)+cy+dy^2,
+ \qquad \alpha=(B,m,a,c,d).
+ \end{aligned}
+\end{equation}
+The coefficient which breaks the invariant line is
+\begin{equation}\label{rw:geometry:line-breaking}
+ \ell=d-c,\qquad \dot z\big|_{z=0}=\ell.
+\end{equation}
+The origin remains an equilibrium; its linearization has determinant
+$1+ac>0$ near $\alpha=0$.
+
+\begin{proposition}\label{rw:slice}
+The family \eqref{rw:family}, near-identity affine coordinate changes,
+and positive constant time changes form analytic local coordinates on
+the twelve-dimensional space of real quadratic planar vector fields
+near $X_0$.  A uniform bound for isolated cycles of \eqref{rw:family}
+in a fixed spherical collar of $\Gamma$, counted with return-germ
+multiplicity, therefore gives the same bound on a smaller fixed collar
+for every quadratic field in an open coefficient neighborhood of $X_0$.
+\end{proposition}
+
+\begin{proof}
+For $A$ near the identity matrix, $b\in\R^2$ near zero, and $r\in\R$
+near zero, define
+\[
+ \mathcal S(A,b,r,\alpha)(v)
+       =e^r A^{-1}X_\alpha(Av+b).
+\]
+There are four matrix entries, two translation parameters, one time
+parameter, and five parameters in $\alpha$.
+For an affine infinitesimal change $h$, its column in the differential
+at the base point is $DX_0h-DhX_0$.  The changes
+$(1,0),(0,1),(x,0),(y,0),(0,x),(0,y)$ give, respectively,
+\[
+ \begin{array}{lll}
+ v_1=(0,1+y),&v_2=(-1,x),&v_3=(y,x+xy),\\
+ v_4=(-x-xy,y+y^2),&v_5=(-x,x^2+y),&v_6=(-y,-x).
+ \end{array}
+\]
+The time column is $v_7=(-y,x+xy)$.  The remaining columns, in the
+parameter order of \eqref{rw:family}, are
+\[
+ (x^2,0),\quad(y^2,0),\quad(x,0),\quad(0,y),\quad(0,y^2).
+\]
+In a linear relation, the constant, first-component $xy$ and
+second-component $x^2$ coefficients eliminate $v_1,v_2,v_4,v_5$.
+The remaining coefficients $u,v,w$ of $v_3,v_6,v_7$ satisfy
+\[
+ \begin{pmatrix}1&-1&-1\\1&-1&1\\1&0&1\end{pmatrix}
+ \begin{pmatrix}u\\v\\w\end{pmatrix}=0.
+\]
+Its determinant is $-2$, and the five family columns occupy distinct
+monomials. Thus $D\mathcal S$ is invertible; the analytic inverse
+function theorem proves the local-coordinate assertion.
+
+If $Y=\mathcal S(A,b,r,\alpha)$ and $\Phi(v)=Av+b$, then
+$D\Phi\,Y=e^r X_\alpha\circ\Phi$.  Thus $\Phi$ sends trajectories to
+trajectories preserving time orientation.  On transverse sections it
+conjugates the corresponding return germs.  If $\psi$ is the section
+coordinate change and $P$ a return, then
+\begin{equation}\label{rw:geometry:section-unit}
+ \psi(P(u))-\psi(u)
+ =(P(u)-u)\int_0^1\psi'\bigl(u+t(P(u)-u)\bigr)\,\dd t.
+\end{equation}
+At a fixed point the last factor is nonzero.  Isolation and the order
+of the displacement zero are preserved.
+
+In homogeneous coordinates the spherical extension of $\Phi$ is
+\[
+ \widehat\Phi(\xi_1,\xi_2,\xi_3)
+ =\frac{(A(\xi_1,\xi_2)^{\mathsf T}+b\xi_3,\xi_3)}
+ {\left\|(A(\xi_1,\xi_2)^{\mathsf T}+b\xi_3,\xi_3)\right\|}.
+\]
+Its homogeneous matrix is invertible, so it is a sphere
+diffeomorphism preserving the closed northern hemisphere.  It converges
+uniformly to the identity as $(A,b)$ tends to $(I,0)$.  Given a collar
+$U_*$ for the normalized family, choose $U$ with
+$\overline U\subset U_*$.  One sufficiently small affine neighborhood
+then satisfies $\widehat\Phi(\overline U)\subset U_*$ for every such
+$\Phi$.  Intersecting the corresponding product neighborhood with the
+local-coordinate neighborhood of $\mathcal S$ gives an open
+twelve-dimensional coefficient neighborhood.  Cycles in $U$ map
+injectively to cycles in $U_*$ with their multiplicities unchanged.
+\end{proof}
+
+\subsection{A fixed collar and its transverse section}
+
+The initial energy count uses the base-field Chebyshev estimate of
+Proposition~\ref{rw:base-ect}.  Fix its threshold
+$H_{\mathrm{ECT}}$ and choose the collar so that every point on its
+positive lower section has energy above that threshold.
+
+\begin{proposition}\label{rw:collar}
+There are a closed spherical annulus $\mathcal A$ containing $\Gamma$
+in its interior, a number $0<z_L<1/8$, and a coefficient neighborhood
+$\mathcal V$ of zero with the following properties.  The annulus
+excludes the origin and the negative vertical point at infinity, and
+\begin{equation}\label{rw:geometry:section}
+ h(z_L):=z_L-1-\log z_L>H_{\mathrm{ECT}}+2,
+ \qquad \Sigma=\{x=0,\ |z|<z_L\}.
+\end{equation}
+Its lower part over $-1\le x\le1$ is the rectangle
+$[-1,1]\times[-z_L,z_L]$ in $(x,z)$ coordinates.
+Every affine periodic orbit contained in $U=\operatorname{int}\mathcal A$
+is essential in $\mathcal A$ and crosses $\Sigma$ exactly once, with
+$\dot x>0$.  Both $\mathcal A$ and $\mathcal V$ can be chosen invariant
+under the spatial and coefficient reflections defined below.
+\end{proposition}
+
+\begin{proof}
+We first choose three vertex boxes in which no periodic orbit can be
+contained.  Throughout this construction let all five coefficient
+moduli be at most $p_*=1/64$.
+At a horizontal vertex put $x=\sigma/r$, $y=v/r$, where
+$\sigma\in\{-1,1\}$, and multiply the field by $r>0$.  Its equations
+are
+\[
+ \begin{aligned}
+ r'&=-\sigma Br-\sigma mrv^2+\sigma r^2v-ar^2,\\
+ v'&=\sigma r+\sigma(1-B)v+dv^2-\sigma mv^3
+          +\sigma rv^2+(c-a)rv.
+ \end{aligned}
+\]
+The divergence of this polynomial field is
+\[
+ \sigma(1-2B)+2dv-4\sigma mv^2+4\sigma rv+(c-3a)r.
+\]
+On the square $|r|,|v|\le1/8$ its difference from $\sigma$ is at
+most $109/1024<1/8$.  If a periodic orbit were contained in its
+northern part $r>0$, its Jordan disk would lie in the same square
+and half-plane.  Green's theorem would give zero for the integral
+of the divergence over that disk, contrary to its strict sign.
+
+At the upper vertex use $y=1/r$, $x=w/r$.  The positively rescaled
+field is $r'=-rF$, $w'=G$, where
+\[
+ \begin{aligned}
+ F&=(1+r)w+d+rc,\\
+ G&=m-dw+(B-1)w^2+r[-1+(a-c)w-w^2].
+ \end{aligned}
+\]
+In $0<r<1/4$, $|w|<1/4$, an equilibrium lies on
+\[
+ w=w_s(r)=-\frac{d+rc}{1+r},\qquad
+ |w_s|\le p_*,\quad |w_s'|\le2p_*.
+\]
+On this graph,
+\[
+ G_r\le-1+2p_*^2,\qquad |G_w|\le4p_*+2p_*^2,
+\]
+so
+\[
+ \frac{\dd}{\dd r}G(r,w_s(r))
+ \le-1+10p_*^2+4p_*^3<-\frac12.
+\]
+There is at most one equilibrium in the box, and its determinant is
+\[
+ \det D(-rF,G)
+ =r(1+r)\frac{\dd}{\dd r}G(r,w_s(r))<0.
+\]
+It is a saddle.  A periodic orbit contained in this rectangle would
+enclose either no equilibrium or one saddle, whereas its index is one.
+This excludes such an orbit.
+
+Cut the regular parts of $\Gamma$ at finitely many points, with two
+cuts inside each vertex box.  The remaining compact regular arcs have
+flow-box neighborhoods.  A sufficiently thin bicollar can be divided
+by radial crosscuts into strips, each contained in one of these flow
+boxes or vertex boxes.  Make the crosscuts transverse at the chosen
+regular points, with their positive normal pointing in the direction
+of the base flow.  Include the lines $x=-1,0,1$ on the finite arc
+and choose the stated rectangular part there.  Its width can be made
+arbitrarily small; choose $z_L$ to satisfy
+\eqref{rw:geometry:section}.  The other widths can then be decreased
+so that the annulus excludes the two points specified in the statement.
+The construction can be made symmetric under $x\mapsto-x$ by choosing
+the two horizontal boxes and the regular crosscuts in reflected pairs.
+
+On the central rectangle, $P_\alpha>3/4$ after shrinking the
+coefficient neighborhood.  On every other crosscut the normal
+component also has a positive minimum on its compact length.  The
+finitely many strict inequalities persist on one common coefficient
+neighborhood, which we intersect with its reflected image.
+
+Any periodic orbit in $U$ must meet a crosscut.  Otherwise it is
+contained in a single strip, where a flow-box coordinate or one of the
+vertex arguments excludes it.  All crosscut intersections are transverse
+and positive.  There are finitely many, since the orbit is compact and
+a transverse intersection is isolated.  Each crosscut represents the
+same relative homology class in the annulus, so its signed intersection
+number with the orbit is the orbit's winding number.  A simple closed
+curve in an annulus has winding number $0$ or $\pm1$; positivity
+forces the value one.  Hence the orbit is essential and meets every
+crosscut, in particular $\Sigma$, exactly once.
+\end{proof}
+
+\subsection{Actual returns and periodic points}
+
+Only isolated affine periodic orbits whose northern images lie in $U$
+are counted.  We first locate these orbits relative to the line $z=0$
+and bound the line-breaking coefficient by their section height.  The
+return domain will then be defined by the complete trajectory.
+
+\begin{lemma}\label{rw:geometry:cycle-height}
+Every periodic orbit contained in $U$ encloses the origin and lies in
+$z>0$.  If $s$ is its intersection with $\Sigma$, then
+\begin{equation}\label{rw:geometry:line-bound}
+ 0<s<z_L,\qquad |\ell|<3s.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+An essential curve in $\mathcal A$ separates its two complementary
+components.  The origin is on the bounded side of $\Gamma$, while
+the southern hemisphere is on the other side.  Thus the affine Jordan
+disk of each such periodic orbit contains the origin.
+
+For $\ell\ne0$, every intersection with $z=0$ has the same nonzero
+normal velocity $\ell$.  A periodic scalar function cannot have only
+crossings of one sign, so a periodic orbit cannot meet this line.
+For $\ell=0$, invariance and uniqueness give the same exclusion.
+Choose one of the regular equatorial crosscuts of the preceding
+construction with its northern part in $y>0$.  Every counted orbit
+meets it, and hence is on the side $z>0$ throughout.
+
+Its lower segment is a graph over $[-1,1]$, since $P_\alpha>3/4$
+on the central rectangle.  On that graph the exact equation is
+\[
+ z_x=\ell A(x,z)+b(x,z)z,
+ \quad A=\frac{(1-z)^2}{D},\quad
+ b=\frac{x+c(z-1)}{D},
+\]
+where
+\[
+ D=1-z+Bx^2+m(1-z)^2+ax.
+\]
+For $0\le z\le z_L<1/8$ and the coefficient bound used above,
+$3/4<D<9/8$, $A>2/3$, and $|b|<3/2$.
+If $\ell<0$, integrate from $0$ to $1$ and use $z(1)>0$ to obtain
+\[
+ s>|\ell|\int_0^1 A(t,z(t))
+             e^{-\int_0^t b(u,z(u))\,\dd u}\,\dd t
+ \ge\frac49(1-e^{-3/2})|\ell|>\frac{|\ell|}{3}.
+\]
+If $\ell>0$, variation of constants from $-1$ to $0$ gives the same
+lower bound for $s$ after discarding its positive homogeneous term.
+The case $\ell=0$ is immediate.
+\end{proof}
+
+Let $\Sigma_+=\{x=0,\ 0<z<z_L\}$, identified with $(0,z_L)$.
+For a fixed $\alpha$, define $\mathcal D_\alpha$ to be the set of
+$s\in\Sigma_+$ whose trajectory has a finite first positive-time
+return to $\Sigma_+$, with the entire intervening path affine,
+contained in $U$, and contained in $z>0$.  Write this return as
+$\mathcal P_\alpha(s)$.
+
+\begin{lemma}\label{rw:geometry:return-domains}
+The domain $\mathcal D_\alpha$ is open.  The return is locally jointly
+analytic in its input and coefficients and is a local increasing
+diffeomorphism.  Its isolated fixed points correspond bijectively to
+the cycles counted in $U$.
+\end{lemma}
+
+\begin{proof}
+A finite return path is compact in the prescribed open region and
+ends transversely. Analytic flow dependence and the implicit function
+theorem preserve its return under small input and coefficient changes.
+Compactness away from the endpoint flow boxes, and transversality
+inside them, exclude an earlier intersection. This proves openness
+and local joint analyticity.
+The variational determinant formula for a transverse return gives
+\[
+ \mathcal P_\alpha'(s)=
+ \frac{P_\alpha(0,s-1)}
+      {P_\alpha(0,\mathcal P_\alpha(s)-1)}
+ \exp\!\left(\int_0^{T(s)}\operatorname{div}X_\alpha
+                          (\Phi_t^\alpha(0,s-1))\,\dd t\right)>0.
+\]
+Here $P_\alpha$ is the first component of the vector field in
+\eqref{rw:family}.
+Both normal velocities are positive.  Finally, a fixed point closes
+the prescribed trajectory, and a counted cycle has exactly one section
+intersection by Proposition~\ref{rw:collar} and belongs to this domain
+by Lemma~\ref{rw:geometry:cycle-height}.
+\end{proof}
+
+\begin{definition}\label{rw:geometry:counting}
+The Poincar\'e multiplicity of an isolated cycle is the order of the
+zero of $\mathcal P_\alpha(s)-s$ at its section intersection.  A return germ
+identically equal to the identity contributes no isolated cycle.
+\end{definition}
+
+This definition is independent of the analytic section coordinate by
+\eqref{rw:geometry:section-unit}.  Multiplication of a displacement by
+an analytic nonvanishing factor also preserves its zero orders.
+Derivative zeros require a separate comparison, since differentiating
+a unit multiple also differentiates the unit.  The domain
+$\mathcal D_\alpha$ may be disconnected.  Thus a periodic orbit
+supplies a local return, while a comparison with more distant section
+points requires the intervening paths to be constructed.
+
+\subsection{One direction for each fixed field}
+
+The reflection used throughout the paper reverses time as well as space.
+Let
+\begin{equation}\label{rw:geometry:reflection}
+ R(x,y)=(-x,y),\qquad
+ \alpha^R=(B,m,-a,-c,-d).
+\end{equation}
+Direct substitution in \eqref{rw:family} gives
+\begin{equation}\label{rw:geometry:flow-reflection}
+ X_{\alpha^R}(R v)=-DR\,X_\alpha(v),\qquad
+ \Phi_t^{\alpha^R}(Rv)=R\Phi_{-t}^{\alpha}(v).
+\end{equation}
+The collar and coefficient neighborhood are reflection invariant, and
+$R$ fixes every point of $\Sigma_+$.  Thus it preserves cycles, their
+central height, and isolation.
+
+Let $s_*$ be a periodic point and restrict its original
+forward return to an analytic increasing diffeomorphism
+$P:I\to P(I)$ on a small positive section interval.  The reflected
+forward return near that point is $Q=P^{-1}:P(I)\to I$, and
+\begin{equation}\label{rw:geometry:inverse-germ}
+ Q(s)-s=-\bigl(P(Q(s))-Q(s)\bigr).
+\end{equation}
+Since $Q'(s_*)>0$, composition with $Q$ preserves the order of the
+displacement zero.  The multiplicity is therefore unchanged by
+\eqref{rw:geometry:reflection}.  This is an identity of germs at a
+periodic point.  The reflected positive return follows the original
+trajectory in reverse time, so its domain is determined by that reverse
+passage.
+
+We may consequently reflect a fixed field with $\ell<0$ and carry out
+its count with $\ell\ge0$.  All section labels and comparison paths
+for that field are thereafter taken in this selected direction.
+Numerical cutoffs used uniformly in the family are chosen once on a
+reflection-invariant coefficient neighborhood, not chosen anew for
+each field.  This sign-dependent choice is made only after the field
+is fixed.  Coefficient differentiation and division across $\ell=0$
+use the original analytic auxiliary maps on their stated common domains.
+
+\subsection{Energy ranges and the primary normalization}
+
+The lower section has the analytic coordinate
+\[
+ h=h(s)=s-1-\log s>H_{\mathrm{ECT}}+2,
+ \qquad h'(s)=1-s^{-1}<0.
+\]
+For $0<\eta<1$ and a fixed $H_*>h(z_L)+1$, set
+\[
+ \mathscr M(h)=\max\{|B|h,|m|h,|a|\sqrt h,|c|\sqrt h\}.
+\]
+The three energy classes are
+\begin{equation}\label{rw:geometry:energy-classes}
+ \begin{array}{ll}
+ h\le H_*,&\text{bounded energy},\\
+ h>H_*,\quad\mathscr M(h)\le\eta,
+       &\text{small coefficients at the energy scale},\\
+ h>H_*,\quad\mathscr M(h)>\eta,
+       &\text{parameter-dominant energy}.
+ \end{array}
+\end{equation}
+The first two classes will be counted together.  Their thresholds are
+fixed before the final coefficient shrink, and the bounded-energy
+interval lies entirely above $H_{\mathrm{ECT}}$.
+This classification applies to actual periodic
+points and extends no return domain.
+
+\begin{definition}\label{rw:normalization}
+The primary scale and normalized coefficients, for $\rho>0$, are
+\begin{equation}\label{rw:geometry:primary-scale}
+ \begin{gathered}
+ \rho=\max\{\sqrt{|B|},\sqrt{|m|},|a|,|c|\},
+ \qquad\epsilon=\rho^2,\\
+ (B,m,a,c)=(\rho^2\bar B,\rho^2\bar m,
+                       \rho\bar a,\rho\bar c),\qquad
+ \nu=\ell/\rho,\quad\bar d=d/\rho=\bar c+\nu.
+ \end{gathered}
+\end{equation}
+Thus $\max(|\bar B|,|\bar m|,|\bar a|,|\bar c|)=1$.
+The generators in original and primary coefficients are
+\begin{equation}\label{rw:geometry:generators}
+ \begin{gathered}
+ \tau_0=a+c,\qquad\sigma_0=c(B+m),\\
+ \tau_1=\bar a+\bar c=\tau_0/\rho,\qquad
+ \sigma_1=\bar c(\bar B+\bar m)=\sigma_0/\rho^3.
+ \end{gathered}
+\end{equation}
+\end{definition}
+
+The normalized vector lies on the union of the signed faces of
+$[-1,1]^4$.  Smooth parameter arguments are made in the indicated
+local coefficient charts, not by differentiating the maximum across
+its corners.  For $\rho>0$, the two products $\tau_0\sigma_0$ and
+$\tau_1\sigma_1$ have the same sign, but
+\begin{equation}\label{rw:geometry:generator-ratio}
+ \frac{\tau_1}{\sigma_1}
+       =\epsilon\frac{\tau_0}{\sigma_0}\qquad(\sigma_0\ne0).
+\end{equation}
+If $\rho=0$, then $B=m=a=c=0$, while $d=\ell$ may be nonzero.
+All energies belong to the first two classes because $\mathscr M=0$.
+No barred coefficients, $\nu$, or quotient by $\epsilon$ is used in
+that case.
+
+For later calculations we record the exact scaled equations.  With
+$\xi=t/\rho$, $X=\rho x$, and $z=1+y$, the lower equations are
+\begin{equation}\label{rw:geometry:lower-field}
+ \begin{aligned}
+ X_\xi&=\epsilon\{1-z+\bar B X^2+\bar aX
+                              +\epsilon\bar m(1-z)^2\},\\
+ z_\xi&=Xz+\epsilon\bar c\,z(z-1)+\rho\ell(1-z)^2.
+ \end{aligned}
+\end{equation}
+With $X=\rho x$ and $Y=\rho^2y$, the same field and time give
+\begin{equation}\label{rw:geometry:upper-field}
+ \begin{aligned}
+ X_\xi&=Y(\bar mY-1)+\epsilon(\bar B X^2+\bar aX),\\
+ Y_\xi&=(Y+\epsilon)(X+\bar cY)+\nu Y^2.
+ \end{aligned}
+\end{equation}
+These identities do not assume that $\nu$ is bounded.
+
+\begin{lemma}\label{rw:geometry:flatness}
+A parameter-dominant cycle has $\rho>0$ and satisfies
+\[
+ \rho\sqrt h>\eta,\qquad
+ |\ell|<3e^{-\eta^2/\rho^2},\qquad
+ \frac{|\ell|}{\rho^k}\le C_{k,\eta}
+                  e^{-\eta^2/(2\rho^2)}\quad(k\ge0).
+\]
+\end{lemma}
+\begin{proof}
+If $\rho\sqrt h\le\eta$, the four terms in $\mathscr M(h)$ are
+bounded by $\eta^2,\eta^2,\eta,\eta$, respectively, contradicting
+the third class.  Since $0<s<1$, the exact identity
+$s=e^{-h-1+s}$ gives $s<e^{-h}$.  Apply
+\eqref{rw:geometry:line-bound} and retain half of the exponential to
+absorb any fixed power of $\rho^{-1}$.
+\end{proof}
+The estimate uses the height of an actual cycle.  The ratio $\ell/s$
+still has only the bound in \eqref{rw:geometry:line-bound}; derivatives
+along parameter curves require the common-domain estimates below.
+
+\begin{lemma}\label{rw:geometry:endpoints}
+Every periodic orbit counted in $U$ meets $y=0$ exactly once on each
+half-axis.  For $\rho>0$, write these intersections, in the selected
+direction, as $(p/\rho,0)$ and $(-q/\rho,0)$ with $p,q>0$.
+The upper connecting arc lies in $y>0$.  Nested cycles have increasing
+$p$ and $q$ towards the outer cycle.  Reflection exchanges the labels:
+$p_{\rm ref}=q_{\rm orig}$ and $q_{\rm ref}=p_{\rm orig}$.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{rw:geometry:cycle-height}, the Jordan disk contains
+the origin.  Each horizontal half-axis therefore meets its boundary.
+On $y=0$, the normal velocity is $\dot y=x$, so all crossings of
+the positive ray are upward and all crossings of the negative ray
+are downward.  Their signed intersection number is the winding number
+one; consequently each ray is crossed exactly once.  The arc between
+the upward and downward crossings is in $y>0$.  Inclusion of the
+Jordan disks orders their two ray intersections and proves the nesting
+assertion.  Equation~\eqref{rw:geometry:flow-reflection} exchanges the
+two crossings while reversing time, giving the last assertion.
+\end{proof}
+
+In particular a cutoff imposed on the reflected outgoing label is a
+cutoff on the original incoming label, not on the original outgoing
+label.  All later endpoint cutoffs refer to the direction already
+selected for the fixed field.  Varying a section input always keeps
+the original coefficient vector fixed; any induced changes of scaled
+coordinates must be included in the chain rule.

@@ -1,0 +1,102 @@
+The following bounds apply to the same completed displacement on its
+actual connected through interval. The appendices prove the transition
+and section estimates used in each region, with the one-sided endpoint
+estimates and continuations needed to count the full physical carrier.
+
+\subsection{The signed high-height interval}
+
+\begin{corollary}[Signed high-height interval]
+\label{rew:cor-high-derivative-signed}
+There exist \(K,z_*,\gamma_*,C_H>0\) such that, for all sufficiently
+small raw coefficients and either sign of \(\alpha_0\), the complete
+transition on the actual fixed sections satisfies \(0<\Pi'\le C_H\)
+throughout the interval of through trajectories
+\begin{equation}\label{ann:high-source-interval}
+ K(|\alpha_0|+\alpha_1^2)<H:=z(\gamma)<z_*,
+ \qquad |\gamma|<\gamma_*.
+\end{equation}
+After the common choice \(mC_H<1/2\), the complete displacement has
+\(\Delta'>1/2\) and hence at most one isolated zero, counted with
+multiplicity, on this entire interval and on each of its truncations.
+The assertion includes \(\alpha_0=\alpha_1=0\). At a positive
+boundary height \(H=K(|\alpha_0|+\alpha_1^2)<z_*\), with the same
+coefficient bounds, the derivative bound still holds; this equality
+face is assigned to the low-height region.
+\end{corollary}
+\begin{proof}
+Fix the coefficients and a through trajectory in
+\eqref{ann:high-source-interval}. Freeze \(r_0=\sqrt H\) and put
+\[
+ a=\frac{\alpha_0}{H},\qquad
+ p=\frac{\alpha_1}{\sqrt H},\qquad s=r_0,
+ \qquad v=\gamma+r_0X,\quad z=r_0^2Y.
+\]
+The reference orbit has \(Y(0)=1\), and
+\[
+ |a|<K^{-1},\qquad |p|<K^{-1/2}.
+\]
+Choose \(K\) so large that the closed block with the corresponding
+nonstrict bounds lies inside the signed compact strict family of
+Proposition~\ref{sharp:upper-high}. Then choose \(z_*\) and
+\(\gamma_*\) small enough for its raw-tail estimates. Its complete
+derivative bound applies with the frozen scale \(r_0\), including
+both signs of \(a\) and \(a=p=0\). The phase-independent constant bounds the derivative of the same
+physical map, with \(r_0\) frozen during differentiation.
+
+Scalar first variation makes \(H\) increasing with that input, so
+\eqref{ann:high-source-interval} and its truncations are intervals.
+Choose \(mC_H<1/2\) last; then \(\Delta'>1/2\) throughout.
+The closed block includes the positive equality face, assigned to
+low height. For double-zero coefficients every positive height is high.
+\end{proof}
+
+\subsection{The compact positive-ratio whole-carrier bound}
+
+\begin{proposition}\label{sharp:upper-annulus}
+For each fixed \(0<p_0<P<\infty\), the complete captured carrier
+with \(a=-1\) and \(p_0\le p\le P\) has at most two
+isolated displacement roots, counted with multiplicity.
+\end{proposition}
+\begin{proof}
+Use the one connected actual receiver and its open preimages from
+Lemma~\ref{ann:lem-compact-positive-domains}. Keep the physical
+affine input \(x\) throughout. On \(I_E\cup I_M\),
+\(\Pi_{xx}<0\), so for the physical multiplier \(m>0\),
+\(\Delta''=-m\Pi''>0\). On \(I_H\), the complete derivative
+bound of Lemma~\ref{ann:p0-paired-high-derivative} gives
+\(\Delta'>1/2\) after the single final choice
+\(m<\min\{m_{\rm ad},1/(2C_H)\}\).
+Every critical point has \(\Delta''>0\).
+Lemma~\ref{sharp:upper-critical-count} gives the whole-carrier
+multiplicity bound.
+\end{proof}
+\subsection{The gamma-dominant and far-root carriers}
+
+\begin{proposition}\label{sharp:upper-gamma}
+For a fixed \(\Pi_{\max}<\infty\), the bounded-\(\pi\)
+negative-gamma carrier has at most two displacement zeros, and the
+bounded-\(\pi\) positive-gamma carrier has at most three. The positive
+far-root carrier of \eqref{deg:positive-far-range} has at most two.
+All counts hold on the entire captured physical interval.
+\end{proposition}
+\begin{proof}
+Propositions~\ref{deg:prop-negative-gamma} and
+\ref{deg:prop-positive-far} give the two-zero counts on their
+original connected carriers, with multiplicity, using the covers
+\eqref{deg:negative-gamma-cover} and \eqref{deg:far-physical-cover}.
+For positive bounded \(\pi\),
+Corollary~\ref{deg:cor-positive-quadratic-whole-carrier} gives at most
+two zeros of the same physical \(F'\), including the ghost raw tail.
+Its paired/high overlap, in \(\eta=gY_0\), is
+\begin{equation}\label{sharp:upper-gamma-overlap}
+ gK_H(1+\Pi_{\max}^2g)<\eta_{\max}/2,\qquad
+ (gk)^2\eta_{\max}<H_{\rm cap}/2.
+\end{equation}
+The remaining root-free fibres are contractions by
+Lemma~\ref{deg:lem-raw-jacobian}. Lemma~\ref{sharp:upper-critical-count}
+then gives the three-zero count on the whole original carrier.
+\end{proof}
+
+\input{sharp-upper-cubic}
+\input{sharp-upper-degree}
+\input{sharp-upper-local-regional}

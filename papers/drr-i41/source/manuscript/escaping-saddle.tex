@@ -1,0 +1,826 @@
+\section{The compact positive-ratio passage}
+\label{sec:compact-positive}
+
+We next treat the coefficient face \(\alpha _0=-s^2<0\) with
+\(p=\alpha _1/s\) in a fixed interval \([p_0,P]\subset(0,\infty)\).
+The low-height orbits pass between a positive equatorial saddle and
+a negative saddle escaping to \(X=-\infty\), whose characteristic
+number tends to zero.
+
+The escaping saddle prevents a comparison on fixed compact source
+sections alone. We parametrize its passage by the point where the strong
+leaf meets the equator. An axis integral measures the normal expansion
+all the way to that saddle. Matching it with the positive Dulac map gives
+a curvature estimate in the input of the same return, uniformly as the
+negative characteristic number tends to zero. We then join this endpoint
+estimate to the compact middle and the high interval, where the derivative
+is bounded.
+
+\begin{lemma}[Domains of the compact positive-ratio passage]
+\label{ann:lem-compact-positive-domains}
+For \(p_0\le p\le P\), sufficiently small \(s>0,|\gamma|\), and one
+fixed sufficiently small bound on \(z(\gamma)\), the actual through
+interval is covered by the negative-saddle endpoint, a compact family
+of strict source passages, and the high-height interval. Consecutive
+pieces overlap in actual trajectories. The completed transition has
+negative curvature on the endpoint and compact middle, and bounded
+first derivative on the high-height interval. All cuts and estimates
+are uniform on the fixed \(p\)-interval.
+\end{lemma}
+
+\subsection{The equatorial roots and the strong foliation}
+\label{ann:subsec-negative-saddle}
+
+With \(a=-1\), write \eqref{ann:source-field} as
+\[
+ X'=-(M+LY),\qquad Y'=-Y(XB+\zeta Y),
+\]
+where
+\begin{equation}\label{ann:source-coefficients}
+\begin{aligned}
+ M&=1-pX+3\gamma X^2+sX^3,& B&=1+2\gamma+sX,\\
+ L&=1-A(\gamma+sX)+C(\gamma+sX)^2,&
+ \zeta&=Cs(\gamma+sX).
+\end{aligned}
+\end{equation}
+
+\begin{lemma}\label{ann:lem-axis-roots}
+The roots of \(M\) are simple and have the order
+\(-R<x_+<x_f\), where \(R\to\infty\), \(x_+\to p^{-1}\).
+For \(M_-(q)=M(-q)\), \(B_-(q)=B(-q)\), put
+\(\kappa=-M_-'(R)\) and \(\rho_-=\kappa/(RB_-(R))\).
+Then
+\begin{equation}\label{ann:negative-root-identity}
+ sR=3\gamma+p/R+R^{-2},
+\end{equation}
+and
+\begin{equation}\label{ann:small-negative-index}
+ \kappa\ge cp_0,\qquad
+ 0<\rho_-\le C(R^{-1}+|\gamma|+sR)\longrightarrow0 .
+\end{equation}
+At \(x_+\), the rates \(L_+=-M'(x_+)\), \(\nu_+=x_+B(x_+)\)
+give \(0<\rho_0\le\rho_+=\nu_+/L_+\le\rho_1<\infty\).
+\end{lemma}
+\begin{proof}
+On compact sets \(M\to1-pX\), yielding \(x_+\) and the negative
+sign immediately to its right. Since \(M(0)>0\), the cubic has a
+second positive root and a negative root, both escaping uniformly.
+Substitution at \(-R\) proves \eqref{ann:negative-root-identity}.
+The factorization
+\[
+ M=s(X+R)(X-x_+)(X-x_f),\qquad sRx_+x_f=1
+\]
+gives
+\(\kappa=x_+^{-1}(1+x_+/R)(1+R/x_f)\ge cp_0\).
+Direct differentiation also gives
+\(\rho_-=(2p/R+3\gamma+3/R^2)/B_-(R)\).
+The positive rates converge on the compact \(p\)-interval.
+\end{proof}
+
+Fix \(Q\gg P\), then \(R_0>2Q\), and shrink the coefficients so that
+\begin{equation}\label{ann:delta-Q}
+ d_Q=Q^{-2}+P/Q+|\gamma|+sR\ll1 .
+\end{equation}
+In \(q=-X\) the negative tail is
+\begin{equation}\label{ann:negative-tail-field}
+ q'=M_-(q)+L_-(q)Y,\qquad
+ Y'=Y\{qB_-(q)+\zeta_-(q)Y\},
+\end{equation}
+with
+\[
+ \begin{aligned}
+ M_-&=1+pq+3\gamma q^2-sq^3,& B_-&=1+2\gamma-sq,\\
+ L_-&=1-A(\gamma-sq)+C(\gamma-sq)^2,&
+ \zeta_-&=Cs(sq-\gamma).
+ \end{aligned}
+\]
+Let \(\mathcal V\) denote \eqref{ann:negative-tail-field}.  Use the
+positive normal time \(d\tau_n=qB_-(q)\,dt\), and write
+\(V=\mathcal V/(qB_-(q))\).  In \(u=\log q\), \(w=Y/q^2\),
+put \(c=L_-/B_-\) and \(k=\zeta_-q/B_-\).  The axis speed is
+\begin{equation}\label{ann:negative-slow-speed}
+ h_-(q)=\frac{M_-(q)}{q^2B_-(q)}
+       =\frac{q^{-2}+p/q+3\gamma-sq}{B_-(q)}=O(d_Q).
+\end{equation}
+The exact normal-time equations are
+\[
+ u'=h_-+cw,\qquad w'=w\{1-2h_-+(k-2c)w\}.
+\]
+The functions \(h_-\), \(c-1\), \(k\) and their first five Euler
+derivatives \(D_q^j=(q\partial_q)^j\) are \(O(d_Q)\) on
+\(Q/2\le q\le2R\) and fixed logarithmic collars.
+Extend this triple consistently as in
+Lemma~\ref{lem:normal-time-projection}.  Its hypotheses hold with
+\(\epsilon=Cd_Q\); choosing \(Q\) first and then the small
+coefficient bounds makes this quantity sufficiently small.  The
+projection is therefore constructed directly from the negative-tail
+field, independently of either return-map estimate.
+
+It gives a strong projection \(\pi(q,Y)\) for \(V\) with uniform
+scaled bounds
+on the whole corridor, including the root \(R\).  The induction
+through one further order, using the fifth coefficient derivatives,
+gives a bounded \(C^4\) norm for \(\log\pi-\log q\) in
+\((\log q,Y/q^2)\).  Throughout this
+section, the footpoint refers to this normal-time projection.
+In particular, its invariance equation is
+\begin{equation}\label{ann:strong-projection}
+ \pi(q,0)=q,\qquad \pi_*V=b_-(r)\partial_r,\qquad
+ b_-(r)=\frac{M_-(r)}{rB_-(r)},\qquad r=\pi(q,Y).
+\end{equation}
+
+Use the section
+\begin{equation}\label{ann:negative-strong-section}
+ Y/q^2=w_0,\qquad 0<w_0<1/4 .
+\end{equation}
+At the limiting corner, the leaf over \(r\) satisfies
+\(Y-q^2/2=-r^2/2\), and meets the section transversely at
+\(q=r(1-2w_0)^{-1/2}\).  The uniform projection estimates give a
+unique intersection over every \(R_0\le r<R\), of the form
+\[
+ q_s(r)=rU_s(r),\qquad U_s\asymp1,\qquad q_s'(r)\asymp1,
+ \qquad |(r\partial_r)^j\log U_s|\le C\quad(1\le j\le3).
+\]
+We use this footpoint \(r\) to parametrize the strong section.
+
+Figure~\ref{fig:tails-roots} shows the compact core, long tails
+and root configuration.
+\input{long-tail-geometry}
+
+\subsection{An integrating coordinate up to the negative saddle}
+
+The linear normal equation along the negative axis is
+\(d\log Y/dq=qB_-(q)/M_-(q)\). Its integral suggests the coordinates
+\begin{equation}\label{ann:negative-action}
+ \mathcal A_-(r)=\int_Q^r\frac{qB_-(q)}{M_-(q)}\,dq,\qquad
+ \mathcal D_-=\frac{M_-(r)}{rB_-(r)}\partial_r .
+\end{equation}
+Then \(\mathcal D_-\mathcal A_-=1\), and
+\(\mathcal A_-\to\infty\) at \(R\).
+Thus \(\mathcal A_-\) covers the entire interval up to the saddle,
+although the upper bound \(R\) for the footpoint tends to infinity.
+The next lemma relates this linear integral to the height
+of the actual orbit on the fixed cut \(q=Q\).
+
+\begin{lemma}\label{ann:lem-global-action-preparation}
+The height \(Y_Q(r)\) at the fixed cut \(q=Q\) of the orbit through
+the strong section over \(r\) satisfies
+\begin{equation}\label{ann:negative-action-preparation}
+ \log Y_Q=c_\theta-\mathcal A_-(r)+\mathcal R_-(r),
+ \qquad R_0\le r<R,
+\end{equation}
+where, for \(j=1,2\),
+\begin{equation}\label{ann:negative-action-remainder}
+ |\mathcal D_-^j\mathcal R_-|\le C(d_Q+e_{R_0}),\qquad
+ e_{R_0}=C_QR_0^2e^{-c(R_0-Q)/P}\longrightarrow0.
+\end{equation}
+The value of \(\mathcal R_-\) need not be small.
+\end{lemma}
+\begin{proof}
+Apply Lemma~\ref{lem:normal-time-action-height} to the triple just
+constructed. The polynomial in \eqref{ann:negative-tail-field}
+gives \(M_-(q)/q\ge p_0/2\) on \([Q/2,Q]\) after shrinking the
+coefficients, and \(b_->0\) up to its simple root \(R\).
+After \(R_0\) is fixed, the same polynomial gives
+\(b_-\le CP\) on \([Q,R_0]\). Thus the lemma constructs the
+whole actual height interval within \(Q/2<q<2R\), and yields
+\begin{equation}\label{ann:global-action-exact}
+ \log Y_Q=-\mathcal A_-(r)+2\log r+\log\mathcal U(r)+E_Q(Y_Q),
+\end{equation}
+with the unit and fixed-cut bounds stated there. In particular,
+\begin{equation}\label{ann:negative-small-height}
+ 0<Y_Q(r)\le e_{R_0}=C_QR_0^2e^{-c(R_0-Q)/P}.
+\end{equation}
+Choose \(R_0\) large and then shrink the coefficient neighborhood.
+Taking \(c_\theta=0\) and
+\(\mathcal R_-=2\log r+\log\mathcal U+E_Q(Y_Q)\),
+\eqref{eq:normal-time-action-jets} gives
+\(\mathcal D_-\mathcal R_-=1-K\) and
+\(\mathcal D_-^2\mathcal R_-=-\mathcal D_-K\), proving the
+claimed bounds. The lemma also gives \(Y_Q\downarrow0\) at \(R\).
+\end{proof}
+
+\subsection{Derivatives on the return sections}
+
+We now continue from the strong section to the actual return section,
+retaining the footpoint power and the divided closing. In the following
+proof, \(w_0\) keeps the small-lip restriction
+\(0<w_0<1/4\) of \eqref{ann:negative-strong-section}; only
+\(w_1\) is chosen in \((1/2,1)\).
+
+\begin{lemma}\label{ann:lem-negative-gate}
+Let \(\Gamma_-(r)\) denote the resulting coordinate on the negative
+return section.
+Then
+\begin{equation}\label{ann:negative-gate-derivative}
+ -\Gamma_-'(r)=\Omega_-(\theta)r^{1-\lambda_\gamma}U_-(r)>0,
+ \qquad \Omega_->0,
+\end{equation}
+where \(U_-\) and its reciprocal are bounded and
+\begin{equation}\label{ann:negative-gate-jets}
+ |\mathcal D_-^j\log U_-|\le C(d_Q+e_{R_0}),\qquad j=1,2 .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix \(w_0\), \(w_1\in(1/2,1)\), \(\mu=3/2\), and the small
+physical width \(\delta\) before its nested output windows. All phase
+derivatives fix coefficients and multiplier. On the strong section the
+inverse of \(\upsilon=\widehat\pi(u,w_0)\), \(\upsilon=\log r\), is
+\(u=a(\upsilon)=\log q_s(r)\). The projection bounds give
+\begin{equation}\label{ann:repair-inverse-start}
+ a_1\asymp1,\qquad |a_2|+|a_3|\le C,\qquad 1<q_s/r<2,
+ \qquad a_j=\partial_\upsilon^j a.
+\end{equation}
+Also, for \(h=M_-/(r^2B_-)\),
+\begin{equation}\label{ann:repair-action-budget}
+ \mathcal D_-=h\partial_\upsilon,\qquad
+ |h|+|h_\upsilon|\le Cd_Q.
+\end{equation}
+The scalar graph and its logarithmic-radius equation are
+\begin{equation}\label{ann:negative-scalar-graph}
+ Y_q=f=\frac{Y(qB_-+\zeta_-Y)}{M_-+L_-Y},\qquad
+ W_u=F(u,W)=W\left\{\frac{B_-+ZW}{D+L_-W}-2\right\},
+\end{equation}
+where \(W=Y/q^2\), \(D=q^{-2}+p/q+3\gamma-sq\), and \(Z=q\zeta_-\).
+On \(w_0\le W\le w_1\), after choosing \(Q\) and shrinking the
+coefficients,
+\begin{equation}\label{ann:repair-outgoing-strip}
+ D+L_-W\ge c,\qquad F(u,w_0)>c,\qquad F(u,w_1)<-c,\qquad F_W\le-\mu.
+\end{equation}
+The needed coefficient and state derivatives are bounded; explicitly,
+\begin{equation}\label{ann:repair-rational-identities}
+ qf_Y=F_W+2,\qquad
+ F_{WW}=\frac{2D(ZD-B_-L_-)}{(D+L_-W)^3},\qquad
+ F_{WWW}=-\frac{6DL_-(ZD-B_-L_-)}{(D+L_-W)^4}.
+\end{equation}
+Thus the strip is invariant and \(q'>0\). Since
+\(\sup_{r<R}q_s(r)<q_H=(\delta+\gamma)/s\), every orbit reaches
+this raw exit once, even when \(q_s>R\).
+
+To extract the long-tail power, compare with
+\[
+ F^0_\gamma(W)=W\left\{\frac{1+2\gamma}{3\gamma+L_\gamma W}-2\right\},
+ \quad L_\gamma=1-A\gamma+C\gamma^2,
+ \quad w_\gamma=\frac{1-4\gamma}{2L_\gamma}.
+\]
+Here \(F^0_\gamma(w_\gamma)=0\),
+\((F^0_\gamma)'(w_\gamma)=-2+\lambda_\gamma\),
+\((F^0_\gamma)''=O(|\gamma|)\), and
+\(F-F^0_\gamma=O(sq+p/q+q^{-2})\) in \(C^1_W\).
+Scalar contraction, with \(q_0=q_s(r)\), consequently gives
+\begin{equation}\label{ann:repair-memory-remainder}
+ \left|f_Y-\frac{\lambda_\gamma}{q}\right|
+ \le C\left(s+pq^{-2}+q^{-3}
+       +\frac{|\gamma|}{q}(q_0/q)^\mu\right).
+\end{equation}
+The last term retains entrance memory and has integral at most
+\(|\gamma|/\mu\), independently of the tail length. Hence
+\begin{equation}\label{ann:repair-integrated-remainder}
+ I(r)=\int_{q_0}^{q_H}(f_Y-\lambda_\gamma/q)\,dq,\qquad
+ |I(r)|\le C(\delta+|\gamma|+p/q_0+q_0^{-2}).
+\end{equation}
+For the fixed-entry first variation,
+\begin{equation}\label{ann:negative-first-variation}
+ (J_Y)_q=f_YJ_Y,
+\end{equation}
+so the exact cocycle is
+\begin{equation}\label{ann:negative-free-factor}
+ \frac{J_Y(q)}{J_Y(q_0)}=(q/q_0)^{\lambda_\gamma}
+ \exp\int_{q_0}^{q}\{f_Y(\widetilde q,Y(\widetilde q))-\lambda_\gamma/\widetilde q\}\,d\widetilde q.
+\end{equation}
+
+The moving initial value \(W(a(\upsilon);\upsilon)=w_0\) gives
+\begin{equation}\label{ann:repair-moving-variation}
+ J:=\partial_\upsilon W=-F(a,w_0)a_1
+ \exp\int_a^uF_W\,dv<0,\qquad |J|\le Ce^{-\mu(u-a)}.
+\end{equation}
+Differentiate its logarithm using the triangular variation argument of
+Lemma~\ref{lem:scalar-normalization}. The first integral forcing is
+\(F_{WW}J\); in the second row it is
+\(F_{WWW}J^2+F_{WW}J\partial_\upsilon\log(-J)\).
+The moving lower-limit terms involve only \(a_1,a_2,a_3\) and the
+bounded entrance derivatives of \(F\). Integrating the decaying
+forcings in order yields
+\begin{equation}\label{ann:repair-moving-log-first}
+ |\partial_\upsilon\log(-J)|\le C,
+\end{equation}
+\begin{equation}\label{ann:repair-moving-log-second}
+ |\partial_\upsilon^2\log(-J)|\le C.
+\end{equation}
+No reciprocal of \(J\) is estimated separately.
+
+For raw admission choose \(0<\eta\ll\delta\), then require
+\(2sR<\eta\). Every orbit crosses \(sq=\eta\) in the strip.
+Contraction on the fixed remaining raw interval, compared with
+\(w_\Gamma(x)=(\sqrt{1+x^2}+1)^{-1}\), gives
+\[
+ |W_H-w_\Gamma(\delta+\gamma)|
+ \le C(\eta/(\delta+\gamma))^\mu
+ +C_{\eta,\delta}(|A-1|+|C-1|+|\gamma|+sp+s^2).
+\]
+The raw height is \(z_H=(\delta+\gamma)^2W_H\); its organizing
+height shifts by \(O(\delta|\gamma|)\). Choose \(\eta/\delta\)
+from the fixed window reserve, then shrink the coefficients. On this
+whole admitted image the divided adapter \(\chi=\mathcal C_{\theta,m}\)
+has the ordinary \(C^3\) bounds of Lemma~\ref{phys:lem-c3-adapters}.
+Set \(\Gamma_-(r)=\chi(z_H(r))\). Its observer identities and the
+preceding two rows give
+\begin{equation}\label{ann:repair-completed-log-jets}
+ |\partial_\upsilon\log(-\Gamma_-')|
+ +|\partial_\upsilon^2\log(-\Gamma_-')|\le C.
+\end{equation}
+Finally separate \(F_W=-2+\lambda_\gamma+(qf_Y-\lambda_\gamma)\)
+in the moving cocycle:
+\begin{equation}\label{ann:negative-raw-gate-factor}
+ -z_H'=\Omega_\theta r^{1-\lambda_\gamma}\widehat U_-,\qquad
+ \Omega_\theta=s^{2-\lambda_\gamma}(\delta+\gamma)^{\lambda_\gamma},
+\end{equation}
+\begin{equation}\label{ann:repair-unit-factor}
+ \widehat U_-=F(a,w_0)a_1(q_s/r)^{2-\lambda_\gamma}e^{I(r)},\qquad
+ U_-=\chi'(z_H)\widehat U_-.
+\end{equation}
+The factors \(\widehat U_-,U_-\) are positive units, with
+\(\Omega_\theta\) kept separate. Subtracting
+\((1-\lambda_\gamma)\upsilon+\log\Omega_\theta\) in
+\eqref{ann:repair-completed-log-jets} bounds two ordinary derivatives
+of \(\log U_-\). Equation~\eqref{ann:repair-action-budget} then gives
+\(\mathcal D_-\log U_-=O(d_Q)\) and
+\(\mathcal D_-^2\log U_-=O(d_Q^2)\), proving the assertion.
+The same bounds before the adapter give
+\(\mathcal D_-^jz_H=O((sr)^{2-\lambda_\gamma}d_Q^j)\), \(j=1,2\).
+\end{proof}
+
+At the other saddle the characteristic number remains compact.
+Its Dulac estimate must still include the actual incoming coordinate,
+because the curvature is taken in the physical affine input.
+
+\begin{lemma}[The fixed-cut height and the actual positive half-gate]
+\label{ann:p0-positive-interface}
+For fixed \(p\in[p_0,P]\Subset(0,\infty)\), physical windows,
+and then fixed \(Q\), there is a common positive radius \(H_*\)
+such that the map from the local positive-saddle exit to \(q=Q\)
+is \(\Psi_\theta(v)\), with \(\Psi_\theta(0)=0\), bounded
+\(C^3\) norm, and derivative bounded above and away from zero.
+The actual incoming half-gate \(x=\Gamma_+(H)\), on a slightly
+larger interval than \([0,H_*]\), satisfies
+\[
+ \Gamma_+'>0,\qquad
+ \left|\frac{\Gamma_+''}{\Gamma_+'}\right|
+ +\left|\frac{\Gamma_+'''}{\Gamma_+'}\right|\le C_Q.
+\]
+Its exact value-and-slope normalization and its inverse on a smaller
+normalized image have uniform \(C^3\) bounds. Its full raw image
+is admitted by the preassigned incoming window.
+For every fixed \(0<\overline H\le H_*\),
+\(y_+(\overline H)=Y_Q^+(\overline H)\) has a uniform positive
+lower bound. No uniform lower bound for the raw \(\Gamma_+'\)
+or bound for the raw inverse is asserted.
+\end{lemma}
+\begin{proof}
+The fixed rescaled axis segment from the outgoing saddle cut to \(q=Q\)
+has a positive speed margin. Its finite hitting map \(\Psi\) therefore
+has \(\Psi(0)=0\), positive derivative units and uniform \(C^3\)
+bounds; no raw-tail scale enters this map.
+
+For the incoming half-map, follow the stable separatrix backwards. In
+the limiting field its denominator \(D=Y+1-pX\) cannot first vanish,
+since \(D_X=XY/D-p>0\) near a proposed zero; a quadratic upper
+barrier excludes finite blow-up. The compact half-family consequently
+enters a common parabolic band at a fixed \(X=L_0\). A buffered chord
+has a finite hitting map \(A_\theta(H)=Y(L_0)/L_0^2\) with positive
+derivative units and uniform \(C^3\) bounds, including \(H=0\).
+
+On the outward tail \(F_w\le-\lambda<0\), and the state derivatives
+through order three are bounded. The relative-jet argument
+\eqref{tail:relative-jet-equations}, with
+\(0<J_1\le e^{-\lambda t}\), bounds \(J_2/J_1,J_3/J_1\).
+Exact value-and-slope normalization thus gives the asserted map and
+inverse bounds. The fixed-port argument of
+Lemma~\ref{ann:p0-fixed-tail-ports} admits its whole raw chord: that
+argument needs only this common parabolic band, retains the entrance
+memory and \(O(d|\gamma|)\) port shift, and reaches the original
+window through its fixed raw tube. Compose the ordinary bridge on this
+admitted image.
+
+Finally Lemma~\ref{lem:uniform-positive-dulac} and \(\Psi\) give
+\(y_+(H)=c_+H^{\rho_+}e^{\mathcal R_+(H)}\), with \(c_+\) a
+positive unit. Thus for fixed \(0<\overline H<1\),
+\(y_+(\overline H)\ge c_Q\overline H^{\rho_1}e^{-M_Q}>0\).
+This height bound involves no lower bound on the raw incoming slope.
+\end{proof}
+
+\begin{lemma}\label{ann:lem-positive-dulac}
+There is a fixed incoming coordinate \(H>0\) at \(x_+\) for which
+the height on \(q=Q\) is
+\begin{equation}\label{ann:positive-dulac-map}
+ Y_Q^+(H)=c_+H^{\rho_+}e^{\mathcal R_+(H)}.
+\end{equation}
+For \(0<\epsilon<\min(1,\rho_0)\), the Euler derivatives of
+\(\mathcal R_+\) through order two are bounded by
+\(CH^\epsilon(1+|\log H|)\).
+The continuation to the input \(x\) in \eqref{eq:return}
+has the form \(x=\Gamma_+(H)\), with
+\begin{equation}\label{ann:positive-gate-derivative}
+ \Gamma_+'(H)=\Omega_+(\theta)U_+(H)>0,
+\end{equation}
+where \(U_+\) and its reciprocal are bounded and its first two
+Euler logarithmic derivatives have the same vanishing bound.
+\end{lemma}
+\begin{proof}
+Apply Lemma~\ref{lem:uniform-positive-dulac} to the rates in
+Lemma~\ref{ann:lem-axis-roots}, then compose with the fixed-cut map
+\(\Psi\) above. Hadamard division gives
+\(\Psi(v)=\Psi'(0)ve^{j(v)}\), \(j(0)=0\), with bounded \(C^2\)
+norm. Its first two Euler rows along the Dulac map are
+\(O(H^{\rho_+})\), so this composition preserves the asserted remainder.
+For the incoming half-gate set
+\(\Omega_+=\Gamma_+'(0)\), \(U_+=\Gamma_+'(H)/\Gamma_+'(0)\).
+The preceding relative \(C^3\) bounds give
+\(\mathcal E\log U_+,\mathcal E^2\log U_+=O(H)\),
+\(\mathcal E=H\partial_H\). The final input differs from raw height
+only by the translation \(a_\theta\).
+\end{proof}
+
+\subsection{Endpoint curvature and the total count}
+
+\begin{lemma}[Exhaustion of the low central heights]
+\label{ann:p0-low-height-exhaustion}
+There are fixed \(R_a<R_b\), \(R_a>2Q\), and \(u_L>0\), chosen
+before the final coefficient shrink, such that every actual through
+orbit with \(0<u:=Y(0)\le2u_L\) is represented uniquely by the
+same negative strong footpoint \(R_b<r<R\) and by the positive
+Dulac coordinate \(0<H<\overline H\). The identification on the
+fixed cut is
+\[
+ N_\theta(u)=y_\theta(r)=Y_Q^+(H),
+ \qquad N_\theta(u):=Y(Q;Y(0)=u).
+\]
+All actual input and output windows are those already fixed; zero
+height is not included as a through orbit.
+\end{lemma}
+\begin{proof}
+Start at \((Q,y)\), \(0<y<w_0Q^2\). Until the strong-section hit,
+the footpoint \(p_f=\pi(q,Y)\) increases below \(R\), and the
+projection estimates give
+\[
+ (\log q)'\ge h(\log p_f)+(1-C\epsilon)w>0,\qquad
+ q<2p_f<2R,\qquad (\log w)'\ge\nu_0>0.
+\]
+Thus there is one transverse hit in finite normal time, inside the
+unchanged corridor; it may have \(q_s>R\). Scalar first variation
+and \(\partial_q(Y-w_0q^2)=q_sF(\log q_s,w_0)>0\) give
+\(dq_s/dy<0\), hence \(dr/dy<0\). The reverse construction in
+Lemma~\ref{lem:normal-time-action-height} has
+\(y_r=-Ky/b<0\), \(K\ge1/2\), and \(y\to0\) at \(R\).
+It is therefore a bijection \([R_a,R)\to(0,y(R_a)]\), identical
+to the forward construction by uniqueness.
+
+On \(0\le q\le Q\), choose a small signed height strip with
+\(M_-+L_-Y>c>0\). Its finite map satisfies
+\(N(0)=0\), \(c_Q\le N'\le C_Q\), with common finite-order bounds.
+Choose \(\overline H\) for the positive Euler errors, then \(R_a\)
+so that \(e_{R_a}<\inf y_+(\overline H)\) and the fixed-cut errors
+are small; take \(R_0=R_a\). On every fixed footpoint interval the
+exact action-height formula bounds the unit and action, giving
+\(\inf y(R_a)>0\). Choose \(R_b>R_a\) with
+\(e_{R_b}<\inf y(R_a)\), then require \(R>2R_b\).
+The same fixed-interval formula gives
+\[
+ y(R_b)=R_b^2\mathcal U(R_b)
+ e^{-\mathcal A(R_b)+E_Q(y(R_b))}\ge\eta_b>0.
+\]
+Choose \(2u_L\) below the domain of \(N\) and \(\eta_b/C_Q\).
+Then \(N(u)<y(R_b)\) selects a unique \(r>R_b\); it is also below
+\(y_+(\overline H)\) and selects a unique positive Dulac preimage.
+Equality at \(q=Q\) identifies the orbit, so both previously admitted
+gates and the divided closing apply throughout this interval.
+\end{proof}
+
+The exhaustion lemma identifies the same orbit in the two endpoint
+coordinates. Equating their descriptions of \(Y_Q\) gives
+\begin{equation}\label{ann:endpoint-matching}
+ \rho_+\log H+\mathcal R_+(H)
+       =-\mathcal A_-(r)+\mathcal R_-(r)+c_\theta .
+\end{equation}
+Set \(\mathcal D=H\partial_H\) and
+\(K_-=1-\mathcal D_-\mathcal R_-\ge1/2\).
+Then
+\begin{equation}\label{ann:rH}
+ Hr_H=-\frac{\rho_++\mathcal D\mathcal R_+}{K_-}
+                  \frac{M_-(r)}{rB_-(r)}<0 .
+\end{equation}
+By \eqref{ann:negative-small-height} and
+\eqref{ann:positive-dulac-map}, throughout this endpoint
+\[
+ H\le C_QR_0^{2/\rho_0}e^{-c(R_0-Q)/(P\rho_1)}.
+\]
+Thus the same choice of \(R_0\) makes all positive Dulac remainders
+small on the entire interval \(R_0\le r<R\).
+
+\begin{proposition}\label{ann:prop-endpoint-curvature}
+The complete map
+\(x=\Gamma_+(H)\mapsto\Pi_\theta(x)=\Gamma_-(r(H))\)
+has \(\Pi_\theta''(x)<0\) on this endpoint. Its displacement has
+at most two zeros counted with multiplicity.
+\end{proposition}
+\begin{proof}
+Write \(y(H)=Y_Q^+(H)\) and
+\(\mathcal O(y(r))=\Gamma_-(r)\). Put
+\(b=M_-/(rB_-)\), \(\mathcal D_-=b\partial_r\), and
+\(K=-\mathcal D_-\log y\ge1/2\). The action-height jets give \(K=1+O(d_Q+e_{R_a})\) and
+\(\mathcal D_-K=O(d_Q+e_{R_a})\). The coefficient quotients are
+\begin{align}
+ M_-'/(rB_-)&=(p/r+6\gamma-3sr)/B_-=O(d_Q),
+ \label{ann:Mprime-quotient}\\
+ M_-/(r^2B_-)&=(r^{-2}+p/r+3\gamma-sr)/B_-=O(d_Q),
+ \label{ann:M-quotient}\\
+ sM_-/(rB_-^2)&=O(d_Q).\label{ann:B-quotient}
+\end{align}
+Thus \(b'=O(d_Q)\). The identity
+\(\mathcal O'=(-\Gamma_-')b/(yK)\), together with
+Lemma~\ref{ann:lem-negative-gate}, gives
+\[
+ e_{\mathcal O}:=1+y\frac{\mathcal O''}{\mathcal O'}
+ =-\frac{\mathcal D_-\log(-\Gamma_-')+b'-\mathcal D_-\log K}{K},
+ \qquad |e_{\mathcal O}|\le Cd_Q+C_Qe_{R_a}.
+\]
+No reciprocal negative saddle rate occurs.
+Set \(\mathsf A=\rho_++H\mathcal R_+'\). In the actual input
+\(x=\Gamma_+(H)\), the full chain rule is
+\begin{equation}\label{ann:complete-log-curvature}
+ H\partial_H\log\Pi_x'
+ =-1+\mathsf A e_{\mathcal O}
+      +H\partial_H\log\mathsf A-H\partial_H\log\Gamma_+'.
+\end{equation}
+Choose \(Q\) first. For this fixed cut choose \(\overline H\)
+so that \(|\mathsf A-\rho_+|\le\min(1,\rho_0/2)\) and the last
+two terms each have absolute value at most \(1/16\).
+Choose \(R_a\) using the positive fixed-cut image margin, as in
+Lemma~\ref{ann:p0-low-height-exhaustion}, and then shrink the
+coefficients so that
+\( |e_{\mathcal O}|\le1/[16(\rho_1+1)]\).
+The right side is at most \(-13/16\). Since
+\(\Pi_x'>0\), \(H\Gamma_+'>0\),
+\[
+ \frac{\Pi_{xx}}{\Pi_x'}
+ =\frac{H\partial_H\log\Pi_x'}{H\Gamma_+'}<0.
+\]
+For the physical multiplier \(m>0\), \(\Delta''=-m\Pi''>0\);
+Rolle's theorem with multiplicities gives the endpoint count.
+\end{proof}
+
+\begin{lemma}[Fixed parabolic tails and the physical sections]
+\label{ann:p0-fixed-tail-ports}
+Fix the physical sections \(\Sigma_\pm=\{v=\pm\delta\}\), their
+nested windows, and \(0<d<\delta\le1/32\), with \(d\le1/100\).
+On an enlarged compact strict source family, one can choose a fixed
+\(L\), and then sufficiently small bounds on the raw coefficients
+and on \(s>0\), so that the two outward graphs reach
+\(v=\gamma\pm d\). Their entire images are admitted by uniformly
+regular increasing maps
+\[
+ \mathcal B_{\sigma,\theta}:z(\gamma+\sigma d)
+       \longmapsto z(\sigma\delta),\qquad \sigma=\pm1.
+\]
+These maps and their inverses have uniform phase \(C^3\) bounds on
+slightly larger fixed windows. The divided closing map is defined on
+the full negative image for \(0\le m\le m_{\rm ad}\), where
+\(m_{\rm ad}>0\) is fixed before any zero-counting multiplier bound.
+\end{lemma}
+\begin{proof}
+Choose \(|\gamma|<\min\{d/2,(\delta-d)/2,1/500\}\).
+For \(r=Le^t\), \(\xi=sr\), write \(w=Y/r^2\) on either tail.
+Its exact equation is
+\[
+ \dot w=F_\sigma(t,w)
+ =w\left(\frac{n_{0,\sigma}+n_{1,\sigma}w}
+                   {\ell_\sigma w+d_\sigma}-2\right),
+\]
+where
+\[
+\begin{aligned}
+ v_\sigma&=\gamma+\sigma\xi,
+ &\ell_\sigma&=1-Av_\sigma+Cv_\sigma^2,\\
+ d_\sigma&=3\gamma+\sigma\xi-\sigma p/r-a/r^2,
+ &n_{0,\sigma}&=1+2\gamma+\sigma\xi,
+ &n_{1,\sigma}&=\sigma C\xi v_\sigma.
+\end{aligned}
+\]
+The entrance \(L\) is chosen on the enlarged limiting family first.
+Continuous dependence on the fixed core then puts both entrance
+values strictly inside \([1/4,3/4]\). Increase \(L\), if necessary,
+so that \(|p|/L\le1/40\) and \(|a|/L^2\le1/4000\), and require
+\(A,C\in[9/10,11/10]\) and \(sL<d\). The fixed core is retained
+when these choices are made. On
+\[
+ 1/4\le w\le3/4,\quad \xi\le1/100,
+ \quad |\gamma|\le1/500,
+ \quad |p|/r\le1/40,
+ \quad |a|/r^2\le1/4000
+\]
+the denominator is bounded below and the vector field points strictly
+inward at both edges. Differentiating this rational quotient, as in
+\eqref{ann:repair-rational-identities}, gives
+\begin{equation}\label{ann:p0-tail-envelope}
+ F_w\le-\lambda,\qquad \lambda=7/5,
+ \qquad |F_{ww}|\le10,
+ \qquad |F_{ww}|\le240|d_\sigma|.
+\end{equation}
+Thus the band remains invariant up to
+\(T=\log(d/(sL))\), independently of its length.
+
+The invariant band controls the graph throughout the long tail. To
+compose with the regular transitions, we must also place its whole image
+inside the fixed physical windows.
+At the organizing coefficients the exact radial graph is
+\[
+ w_\Gamma(\xi)=\frac1{\sqrt{1+\xi^2}+1},\qquad
+ \xi\partial_\xi w_\Gamma=F^0_\sigma(\xi,w_\Gamma).
+\]
+On the preceding coefficient box, the mean-value formula gives
+\[
+ |F_\sigma-F^0_\sigma|
+ \le100\bigl(|\gamma|+|A-1|\xi+|C-1|\xi^2
+                         +|p|/r+|a|/r^2\bigr).
+\]
+For \(T=\log(d/(sL))\), contraction gives the uniform error
+\[
+ \begin{split}
+ \mathcal E_\theta(L,T)={}&e^{-\lambda T}
+       |w_\sigma(0)-w_\Gamma(sL)|\\
+ &+100\int_0^T e^{-\lambda(T-t)}
+ \left(|\gamma|+|A-1|sLe^t+|C-1|(sLe^t)^2
+       +\frac{|p|}{L}e^{-t}+\frac{|a|}{L^2}e^{-2t}\right)dt.
+ \end{split}
+\]
+In particular \(|w_\sigma(T)-w_\Gamma(d)|\le\mathcal E_\theta\).
+This retains the entrance memory; \(1<\lambda<2\) bounds both
+decaying-power convolutions. For fixed \(L\) and bounded \(a,p\),
+\(\mathcal E_\theta\to0\) uniformly as
+\(s,\gamma,A-1,C-1\to0\).
+With \(g(v)=\sqrt{1+v^2}-1\), the actual port heights satisfy
+\[
+ |z_\sigma-g(\gamma+\sigma d)|
+       \le d^2\mathcal E_\theta(L,T)+2d|\gamma|.
+\]
+
+On the fixed annulus \(d/2\le|v|\le2\delta\), the organizing graph
+has \(-D_0(v,g(v))\ge v^2/4\ge d^2/16\).
+Choose a fixed tube about this graph, and then shrink the raw
+coefficients so that \(-D_\theta\ge d^2/32\) there. The actual
+graph equation
+\[
+ z_v=\frac{z(R_\theta(v)+Cvz)}
+                {[1-Av+Cv^2]z-P_\theta(v)}
+\]
+has bounded state derivatives through order three in the tube.
+Gronwall's inequality, with the port error just obtained, gives
+admission to that tube by a first-exit argument. Its finite physical
+length then gives the asserted regular maps and inverse bounds.
+First place their entire images strictly inside the prescribed inner
+windows. Next choose \(m_{\rm ad}\) so that
+\(m d_\theta(K_-^\sharp)\) lies strictly inside the fixed domain of
+\(f_\theta\). Only after these domain assertions do we compose the
+divided closing map.
+\end{proof}
+
+\begin{lemma}[Actual curvature on a compact positive source block]
+\label{ann:p0-middle-actual-curvature}
+Fix \(0<p_0\le p\le P\) and a buffered positive central-height
+interval \(0<u_-\le u\le u_+\). For \(a=-1\), after a common
+coefficient shrink the complete transition has \(\Pi_{xx}<0\) on
+this whole block in the actual affine input. The assertion is
+uniform for \(0\le m\le m_{\rm ad}\).
+\end{lemma}
+\begin{proof}
+We first construct the limiting strict block. On the two half-graphs
+\(X=\sigma r\),
+\[
+ Y_r=\frac{rY}{Y+1-\sigma pr},\qquad Y(0)=u.
+\]
+The height increases and is bounded above by
+\(u_++1+r^2+2Pr\). The negative denominator is automatically
+positive. On the positive half, at a sufficiently small positive
+denominator its derivative \(rY/D-p\) is positive, which excludes
+a first zero. More quantitatively,
+\[
+ D\ge\min\{1/2,u_-/(4P^2)\}>0.
+\]
+These inequalities exclude finite blow-up and give both infinite
+half-graphs. A common parabolic entrance is fixed as follows. For
+\(Q=\max\{4,16P\}\), \(w=Y/r^2\), and \(t=\log r\), the source
+equation satisfies
+\[
+ 0<w\le1/4\ \Longrightarrow\ (\log w)_t\ge2/3,
+ \qquad w\ge3/4\ \Longrightarrow\ (\log w)_t\le-2/5.
+\]
+Its entrance bounds at \(Q\) are uniform. After a fixed additional
+logarithmic time both half-graphs enter the strict parabolic band.
+
+The resulting enlarged strict family is admitted on the actual
+sections by Lemma~\ref{ann:p0-fixed-tail-ports}. On this compact
+family, Proposition~\ref{ann:prop-source-curvature} gives
+\(S''=-p\mathcal I_{bb}\) with a uniform negative margin since
+\(p\ge p_0\). The positive affine normalization of \(S\) has the
+same margin up to bounded positive factors.
+Proposition~\ref{prop:source-normalization} with phase order two
+therefore gives \(\Phi''<0\) after a common coefficient shrink.
+
+Retain the exact centres and gains of the actual maps \(h,k\) in
+\eqref{eq:reference-normalization}, including both bridges and divided
+closing. With \(c_h=h'(b_0)>0\), \(c_k=k'(b_0)>0\), one has
+\begin{equation}\label{ann:p0-two-actual-adapters}
+ \Pi_{xx}(x)=\frac{c_k}{c_h^2}\Phi''\!\left(
+ b_0+\frac{x+a_\theta-h(b_0)}{c_h}\right)<0.
+\end{equation}
+The curvature sign is preserved by the positive prefactor, even when
+both absolute gains tend to zero.
+\end{proof}
+
+\begin{lemma}[Paired first variations at high central height]
+\label{ann:p0-paired-high-derivative}
+For the fixed compact positive-ratio region, there are fixed
+\(K_H,z_*,C_H>0\) such that the complete actual transition has
+\(0<\Pi_x'\le C_H\) on
+\[
+ u=Y(0)>K_H(1+p^2),\qquad 0<s^2u<z_*.
+\]
+The constant is independent of the tested phase point. The actual
+multiplier restriction \(mC_H<1/2\) gives \(\Delta'>1/2\).
+\end{lemma}
+\begin{proof}
+The derivative assertion is Proposition~\ref{sharp:upper-high} with
+\(a=-1\). Its paired absolute variations
+\eqref{sharp:upper-tail-ratio} cancel the common
+\(s^{2-\lambda_\gamma}\) power before the actual bridges and
+ordinary divided closing are composed. For the high range freeze
+\(H=s^2u\); the signed normalization in
+Corollary~\ref{rew:cor-high-derivative-signed} gives the same
+\(C_H\) at every phase point.
+
+For the domain assertion, apply
+Lemma~\ref{ann:p0-fixed-tail-ports} to that signed compact source
+block, fixing its core, tail entrance, ports and raw-bridge tubes
+before shrinking the coefficients and \(z_*\). This admits both
+full raw images, including the positive-height equality and
+double-zero faces. Shrink \(z_*\) further so that
+\[
+ \sigma_\theta\le-D_\theta(\gamma,H)
+   =H(\ell_\gamma-\bar a)\le2H<d_{\rm out}.
+\]
+Restrict the receiver to \(H<\min\{h_{\rm out},z_*\}\), and
+choose \(m<\min\{m_{\rm ad},1/(2C_H)\}\) last.
+\end{proof}
+
+\begin{proof}[Proof of Lemma~\ref{ann:lem-compact-positive-domains}]
+Fix the coefficient interval, finite smoothness, physical windows and
+closing-domain cap \(m_{\rm ad}\). Lemma~\ref{ann:p0-low-height-exhaustion}
+chooses \(Q,\overline H,R_a=R_0,R_b,u_L\) in that order and matches
+all \(0<u\le2u_L\) through the fixed-cut equality
+\(N(u)=y(r)=Y_Q^+(H)\). Its full raw images are admitted.
+Independently fix the core, tail entrance and raw tubes for
+Lemma~\ref{ann:p0-paired-high-derivative}, obtaining \(K_H,C_H,z_*\).
+Choose \(u_H>\max\{2u_L,K_H(1+P^2)\}\) and apply
+Lemma~\ref{ann:p0-middle-actual-curvature} on \([u_L/2,3u_H]\).
+Intersect these coefficient bounds, including \(R>2R_b\), without
+changing \(Q\).
+
+Choose the unscaled cap and coefficient bounds so that
+\[
+ 0<h_{\rm cap}\le z_*,\qquad
+ L_{\rm raw}h_{\rm cap}<d_{\rm out}/4,\qquad
+ |\alpha_0|<d_{\rm out}/4,
+ \quad 0<\ell_\theta(\gamma)\le L_{\rm raw}.
+\]
+Then every through orbit with \(H=z(\gamma)<h_{\rm cap}\) satisfies
+\(\sigma_\theta\le-D_\theta(\gamma,H)
+=-\alpha_0+\ell_\theta(\gamma)H<d_{\rm out}/2\).
+Let \(J\) be the original buffered receiver clipped by
+\(H<\min\{h_{\rm cap},h_{\rm out}\}\), in the affine coordinate
+\(x=z_{\rm in}-a_\theta\). The final global choice takes
+\(h_{\rm out}\le h_{\rm cap}\), as in Section~\ref{sec:conclusion}.
+
+The strictly increasing central height
+\(u(x)=z_\theta(\gamma;a_\theta+x)/s^2\) gives the relative open
+intervals
+\[
+ I_E=J\cap\{0<u<2u_L\},\qquad
+ I_M=J\cap\{u_L<u<2u_H\},\qquad
+ I_H=J\cap\{u>u_H\}.
+\]
+They cover \(J\), including all four internal equality levels, and
+have physical overlaps \(u_L<u<2u_L\) and \(u_H<u<2u_H\).
+The endpoint estimate holds on the larger \(r>R_a\) domain, the
+middle estimate on \([u_L/2,3u_H]\), and the high estimate below
+\(z_*\). Original window and speed clips preserve this cover; the
+fixed-cut match has its own image margin. Raw overlap lengths need no
+positive lower bound.
+
+Uniqueness identifies these as restrictions of the same completed map
+\eqref{eq:return}. Proposition~\ref{ann:prop-endpoint-curvature} and
+Lemma~\ref{ann:p0-middle-actual-curvature} give \(\Pi_{xx}<0\) on
+\(I_E\cup I_M\), while
+Lemma~\ref{ann:p0-paired-high-derivative} gives
+\(0<\Pi_x'\le C_H\) on \(I_H\). All cuts, caps and estimates
+precede the final multiplier restriction and geometric capture.
+\end{proof}

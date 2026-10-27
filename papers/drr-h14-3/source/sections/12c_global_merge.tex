@@ -1,0 +1,225 @@
+\subsection{Joining the one terminal union}
+
+We now join the regular departure to the terminal estimates. Each
+terminal union includes its constant-sign connections, so the result
+counts $K$ on the whole physical interval.
+
+\begin{proposition}[The logarithmic-ratio count on the physical interval]
+\label{rw:anchored-unions}
+Assume \eqref{rw:counting:forcing}, and let
+$J=[p_0,p_\gamma]$, with
+$p_0\in\{p_\sharp/8,p_\sharp/4\}$, be the physical interval
+of Proposition~\ref{rw:saturation}. Then
+\begin{equation}\label{rw:merge:two}
+ Z(K;J)\le2.
+\end{equation}
+If \eqref{rw:merge:strong-entry} holds at $p_0$, then
+\begin{equation}\label{rw:merge:one}
+ Z(K;J)\le1.
+\end{equation}
+All zeros are counted with their full analytic multiplicities.
+These assertions verify hypothesis \textup{(III)} of
+Section~\ref{rw:counting}.
+\end{proposition}
+\begin{proof}
+Write $J=R\cup T$ by Proposition~\ref{rw:ordered-cover}, with at
+most one terminal union and every internal constant-sign connection
+retained. Section~11 gives its domains and fixed-fibre forcing.
+Use the seam and center convention of Section~\ref{rw:anchors:primary}.
+If there is no terminal part, Proposition~\ref{rw:regular-chain}
+already gives both conclusions.
+For each direct derivative row below,
+Lemma~\ref{rw:anchors:calculus} gives two tail zeros, or one after
+a regular zero or the supplied strong entrance: Proposition
+~\ref{rw:regular-chain} gives $KK_p>0$ at that seam.
+A direct bound $Z(K;T)\le1$ gives the same union conclusions;
+a constant-sign piece contributes no zero.
+
+The following table records the terminal estimates used in the proof.
+Every derivative numerator has a positive multiplier on its actual
+passing interval.
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}p{.42\linewidth}X@{}}
+\toprule
+ Terminal description & Estimate or entrance result used\\ \midrule
+ Two finite lower roots
+       &$Z(K')\le1$; \ref{rw:finite:two-root-count}\\
+ One incoming loss at a finite saddle
+       &$K<0$ if $r\ge1$, or $Z(K')\le1$ if $r<1$;
+                         \ref{rw:finite:upper-loss}\\
+ Strict or repeated one-infinite lower contact
+       &$Z(K')\le1$; \ref{rw:infinity:strict-lower-loss},
+                         \ref{rw:infinity:repeated-lower-loss}\\
+ Signed horizontal finite root or cubic end
+       &$Z(K')\le1$; signed-horizontal calculation in
+          Section~\ref{rw:infinity:signed-horizontal}, or
+          Proposition~\ref{rw:infinity:cubic}\\
+ Strict focus or nonjoint opposing tail
+       &$Z(K)\le1$; \ref{rw:infinity:strict-focus},
+                         \ref{rw:infinity:opposing}\\
+ Joint contact and separated tail
+       &$Z(K')\le1$ on the whole union;
+                         \ref{rw:joint:one-critical}\\
+ Finite saddle with regular lower legs
+       &Anchored result \ref{rw:anchors:regular-saddle}\\
+ Primary three-saddle
+       &Fixed-seam union result \ref{rw:anchors:three-saddle}\\
+ Regular outgoing lower arc at a primary weak upper end
+       &$Z(K')\le1$; \ref{rw:infinity:weak-regular}\\
+ Primary weak contact or weak center
+       &Union result \ref{rw:anchors:primary-weak}\\
+ Secondary finite saddle or weak end
+       &\ref{rw:secondary:saddle-anchor},
+                         \ref{rw:secondary:weak-anchor}\\
+ Other secondary end
+       &$Z(K)\le1$ or a strict derivative;
+                         \ref{rw:secondary:regular},
+                         \ref{rw:secondary:real}\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The constant-sign lower or upper slow pieces are those of
+Lemma~\ref{rw:finite:incoming-contraction} and
+Propositions~\ref{rw:infinity:negative-regular},
+\ref{rw:infinity:slow-domination}, together with their
+reflections and secondary lower-double overlays.
+The joint estimate applies to its whole contact--separated union.
+At a cubic end the multiplier is $F_+(t)F_-(f(t))>0$ on passage.
+It remains to treat interior connections and the entrance-dependent
+anchors.
+
+\emph{A lower loss before a finite saddle.}
+Suppose an incoming double root precedes a finite upper
+saddle. Write its lower parameters as
+$\bar B=b_0^2,\bar a=2b_0$ and the upper eigenvalues
+as $\alpha_0,-d_0$, with $\alpha_0,d_0>0$.
+The root inequality $1/b_0<q_c=1/d_0$ gives
+\[
+ \tau_1=2b_0+\alpha_0-d_0>b_0+\alpha_0>0 .
+\]
+The regular action difference is positive at small input
+and tends to $+\infty$ at the incoming lower root.
+The regular one-simple-zero result therefore makes
+$K<0$ throughout the intervening limiting regular
+interval. Compact convergence gives its actual sign
+on the retained overlaps, and incoming contraction
+continues it through the finite connection.
+There was no regular zero. The remaining saddle interval
+has at most two zeros of $K$ by
+Proposition~\ref{rw:finite:upper-loss}; for $r\ge1$
+it has none. Hence the complete union has at most two.
+If the strong entrance held, $\tau_1>0$ would force
+$\sigma_1<0$ and a positive initial value of $K$,
+contradicting the negative regular sign.
+Thus this configuration cannot occur under that entrance.
+The coincident incoming loss needs no intervening
+connection and its derivative bound is applied directly.
+Reflection proves the opposite orientation with its
+corresponding interval and signs.
+
+\emph{A lower root before or after a one-infinite threshold.}
+A simple root before the threshold ends passage and
+cannot be followed by a second counted part.
+For a double outgoing root $r$ strictly before a strict
+or repeated upper threshold $P$, the inverse incoming
+contraction estimate gives $K>0$ through its finite
+connection. The outgoing action diverges while the
+incoming action there is regular; the small-input sign
+is positive as well, so the regular one-zero result
+excludes a preceding regular zero.
+For example at the repeated field
+$\bar a=-2/r,\bar B=r^{-2},\bar c=2/P,
+\bar m=-P^{-2}$, $r<P$ gives
+$\tau_1<0$ and $\sigma_1>0$. At a strict threshold
+write the positive roots of the upper characteristic
+polynomial as $\gamma_+>\gamma_->0$.
+The inequality $r<1/\gamma_+$ gives
+$\tau_1=\gamma_++\gamma_--2/r<0$ and
+$\sigma_1>0$ again.
+Thus the strong entrance would require a negative
+initial value and is excluded.
+The upper contact and separated tail after that connection
+have the same strictly negative $K_p$ on their open
+overlap: this is the double-before-threshold numerator
+in Section~8 and, at a repeated tail, the sign in
+\eqref{rw:infinity:opposing-slope}.
+Their union has at most one zero. Its preceding positive
+connection does not increase this bound.
+
+At a repeated upper threshold with a first lower root
+$r>P$, the intervening returning tail is the
+constant-sign piece $K<0$ of
+Proposition~\ref{rw:infinity:negative-regular}.
+The finite-root derivative and its infinite limiting
+description are alternative overlapping charts of the
+same end, as in Proposition~\ref{rw:ordered-cover}.
+For a first simple root
+$\bar a=-1/r-\bar Br$ and $\bar Br^2\le1$; hence
+\[
+ \sigma_1=2P^{-1}(\bar B-P^{-2})<0,\qquad
+ \tau_1=2/P-1/r-\bar Br>0.
+\]
+The same inequalities hold at a double root $r>P$.
+The small-input value and the last regular value are
+both negative, so again the regular prefix is zero-free.
+The strong entrance would have positive sign and is
+excluded. The final finite-root piece has a strict
+derivative, or the signed horizontal/cubic numerator
+has at most one zero. It consequently contributes at
+most two zeros, with no count from the preceding
+constant-sign connection. Root coincidence with $P$
+is one contact case already listed above.
+
+The weak boundary with a lower double strictly before
+its threshold uses its constant-sign connection and the
+weak-regular numerator of
+Proposition~\ref{rw:infinity:weak-regular}.
+For an outgoing double, $r<P=1/\bar c$ gives
+$\tau_1=\bar c-2/r<0$, $\sigma_1=\bar c/r^2>0$
+and a positive initial/connection sign.
+For an incoming double, $\bar a=2/r$ gives
+$\tau_1=\bar c+2/r>0$ and $\sigma_1=\bar c/r^2>0$;
+the incoming action gives the negative connection sign,
+and the strong coefficient condition is itself impossible.
+In either case the primary
+regular prefix has no zero, its value is incompatible
+with the strong entrance, and the final numerator has
+at most one zero. This gives at most two zeros on the
+union. The weak contact exactly at the threshold is
+the anchored weak case below.
+
+\emph{Primary anchors.}
+Apply the three primary entrance propositions listed in the table.
+Coefficient transport supplies their fixed-fibre forcing, including
+the primary order-one $\nu$ term; the three-saddle proposition derives
+its stronger \eqref{rw:finite:three-forcing} from the same outer cycle.
+Their union counts already include the regular prefix and exclude
+the incompatible entrances in the two-critical three-saddle and
+positive-$\bar B$ weak branches.
+
+\emph{Secondary anchors.}
+The complete regular chain supplies
+\eqref{rw:secondary:anchor-entry}, either after its zero or from
+\eqref{rw:merge:strong-entry}. Together with coefficient transport,
+these are the saddle-anchor hypotheses. At the weak end, reflection
+to $C>0$ gives $K,K_p<0$, the weak-anchor entrance. The two
+propositions give the asserted union counts, retaining lower-double
+overlays and their incompatible signs. The other secondary rows use
+the table; their regular/focus pieces have already been counted in $R$.
+
+Exhaustion in Section~11 completes the proof: a regular zero leaves
+at most one terminal zero; without one the union has at most two.
+Under \eqref{rw:merge:strong-entry} the chain is zero-free, each
+compatible terminal case leaves at most one zero, and the sign
+arguments above exclude the remaining connections.
+
+Physical truncation restricts the counted interval. The endpoint
+signs used above belong to the stated comparison continuations.
+Under reflection the original central logarithm transforms as
+$K_{\rm ref}(q)=-K(p)$ and
+$K_{\rm ref}\partial_qK_{\rm ref}=KK_p/q'(p)$.
+Thus multiplicities and outward departure are preserved at the
+corresponding seam and threshold, while both generator signs reverse.
+The reflected outgoing label is the original incoming label.
+All noncompact counts use the finite-selection convention of Section~3.
+\end{proof}

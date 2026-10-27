@@ -1,0 +1,45 @@
+\subsection{Geometric capture and the upper bound}
+\begin{proposition}[Central three-cycle upper bound]\label{prop:central-bound}
+There are a coefficient neighborhood \(\mathcal V_5\) and
+\(\eps_5>0\) such that every field in the five-parameter family with
+coefficient in \(\mathcal V_5\) has at most three isolated periodic
+orbits \(C\) with \(d_{\rm H}(\iota_0(C),\Gamma)<\eps_5\).
+\end{proposition}
+\begin{proof}
+Fix the windows, coefficient cover, reserves, \(h_c\), and multiplier
+bound of Lemma~\ref{lem:common-raw-receiver}. Choose
+\[
+ 0<h_{\rm in}<\min\{h_c/2,d_{\rm in}/(4L_{\rm raw})\},
+ \qquad |\alpha_0|<d_{\rm in}/4.
+\]
+Every through orbit of central height \(H<h_{\rm in}\) satisfies
+\begin{equation}\label{eq:height-capture}
+ \sigma_\theta\le-D_\theta(\gamma,H)
+ =-\alpha_0-Q_\theta(\gamma)H
+ \le|\alpha_0|+L_{\rm raw}H<d_{\rm in}/2.
+\end{equation}
+Intersect the analytic neighborhood with \(|\alpha_0|<d_{\rm in}/4\)
+and call it \(\mathcal V_{\rm an}\).
+Only now apply Lemma~\ref{lem:loc-capture} with these original inner
+windows, speed bounds and fixed \(h_{\rm in}\). It supplies
+\(\mathcal V_0,\eps_0\); set
+\[
+ \mathcal V_5=\mathcal V_{\rm an}\cap\mathcal V_0,
+ \qquad \eps_5=\eps_0.
+\]
+Every collar cycle is admitted to the inner windows and height cap,
+follows the complete marked positive-time circuit with \(K>0\), and
+gives one zero of \eqref{eq:return} in \(I_\theta(h_c)\) at its unique
+prime return-section hit.
+
+Each covering alternative in Proposition~\ref{sharp:upper-coefficient-bounds}
+controls all of \(I_\theta(h_c)\), including intervening nonroot inputs, so
+\begin{equation}\label{eq:total-bound}
+ N_{\rm cen}\le\max\{2,1,3,2,2\}=3.
+\end{equation}
+The regional arguments control the connected lower/core/high union.
+On coefficient overlaps, either applicable whole-interval bound is used;
+local phase counts are not added. Distinct cycles give
+distinct zeros and transverse return preserves isolation, proving the
+assertion on this one neighborhood and collar.
+\end{proof}

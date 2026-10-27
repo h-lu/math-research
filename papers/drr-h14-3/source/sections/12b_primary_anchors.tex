@@ -1,0 +1,284 @@
+\subsection{Primary terminal intervals with their regular entrances}
+\label{rw:anchors:primary}
+
+Let $R$ be the regular prefix of the physical interval and $T$ its
+terminal union. On their actual open overlap, regular changes of input
+identify the same original-central $K$.
+
+By Proposition~\ref{rw:regular-chain}, $R$ has at most one simple
+zero. After a zero, or under the signed entrance below, it supplies
+the departure sign $-\sigma_1$ and the coefficient cone
+\eqref{rw:merge:primary-cone}. More generally,
+Lemma~\ref{rw:finite:regular-direction} gives that derivative sign
+whenever $K$ has sign $-\sigma_1$, without requiring the cone;
+if $\sigma_1=0$, $K,K_p$ have sign $-\tau_1$ off the center.
+A regular zero requires $\tau_1\sigma_1<0$.
+These statements hold on the actual overlap, including nonclosing inputs.
+
+\label{rw:anchors:seam-convention}
+If $K$ is constant on a terminal interval, a nonzero constant
+contributes no zero; a zero constant extends into its regular overlap
+and, by the regular count under forcing, belongs to the exact center
+case, contributing no isolated closing zero. Otherwise choose a seam
+in the overlap away from zeros of $K$ and the terminal derivative
+numerator, after a regular zero if one has occurred. The part of $T$ before the seam is then assigned to $R$,
+with every multiplicity retained. We fix this seam before classifying
+the terminal critical zeros, and use the same convention for the
+secondary anchors and the final union.
+
+\begin{lemma}[Entrance counts]\label{rw:anchors:calculus}
+On a tail after this seam, a positive-multiplier numerator with at
+most $j$ zeros gives $Z(K)\le j+1$, or $Z(K)\le j$ when
+$K K'_{\rm out}>0$ at the seam. On an explicitly constructed
+comparison continuation, a two-zero bound and opposite nonzero
+endpoint signs give at most one zero on every physical subinterval.
+If $u$ decreases outward and a positive-multiplier numerator of
+$K_u$ strictly increases in $u$, an entrance with $K<0$ and
+$K'_{\rm out}<0$ likewise leaves at most one zero, which is simple.
+All counts include multiplicity and apply to finite selections at
+excluded endpoints.
+\end{lemma}
+\begin{proof}
+Ordinary and away Rolle in Lemma~\ref{rw:counting:rolle} give the
+first assertion. Opposite endpoint signs force odd total multiplicity,
+so a two-zero continuation has one zero. In the last assertion the
+seam numerator is positive and, moving outward, can become negative
+at most once. Thus $K$ first decreases below zero and then strictly
+increases, allowing at most one simple crossing.
+\end{proof}
+
+\begin{proposition}[Regular lower arcs at an upper saddle]
+\label{rw:anchors:regular-saddle}
+In the chart of Proposition~\ref{rw:finite:regular-saddle}, the terminal
+part has at most two zeros of $K$, with multiplicity. If $R$ has a zero,
+its remaining terminal part has at most one. The same improvement holds
+when $R$ has no zero but the supplied entrance satisfies
+\begin{equation}\label{rw:anchors:signed-entry}
+ \tau_1\sigma_1<0,\qquad
+ \operatorname{sign}K=-\operatorname{sign}\sigma_1.
+\end{equation}
+Thus $Z(K;R\cup T)\le2$ without a prescribed entrance and it is
+at most one under \eqref{rw:anchors:signed-entry} if the preceding
+part has no zero.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{rw:finite:regular-saddle} gives the unanchored bound.
+In either improved case, the regular overlap supplies
+\eqref{rw:anchors:signed-entry} and the cone
+\eqref{rw:merge:primary-cone}; coefficient transport supplies
+\eqref{rw:finite:saddle-relative-forcing} on this fixed fibre.
+Lemma~\ref{rw:finite:saddle-entry-signs} then gives opposite signs
+at the seam and $t=0$ for the same original-central $K$ on its
+two-zero comparison continuation. Lemma~\ref{rw:anchors:calculus}
+leaves one zero there and hence on its physical part. Add the
+possible single regular zero.
+\end{proof}
+
+At the three-saddle end the derivative numerator may have two zeros.
+Ordinary Rolle would then allow three zeros of $K$. We need the signs
+forced by the two-critical-zero case, together with the regular entrance,
+to remove this extra possibility.
+
+\begin{proposition}[The three-saddle union at a fixed seam]
+\label{rw:anchors:three-saddle}
+Suppose $T$ is the three-saddle chart of
+Proposition~\ref{rw:finite:three-count}, and impose its relative
+forcing on the fixed fibre. Then
+\[
+ Z(K;R\cup T)\le2.
+\]
+After a zero in $R$, every seam satisfying the preceding conventions
+leaves at most one terminal zero. If there is no regular zero and
+\eqref{rw:anchors:signed-entry} holds, the union has at most one zero.
+All counts include multiplicity and remain valid when central positivity
+or a moving lower boundary truncates the passing interval.
+\end{proposition}
+\begin{proof}
+For the physical interval $J=[p_0,p_\gamma]$ of
+Proposition~\ref{rw:saturation}, the outer closing orbit supplies the
+local forcing in \eqref{rw:finite:three-forcing}.
+Indeed, write the actual seam as $p_s=P_s-\psi_+(t_s)$,
+with $\psi_+'>0$. The separatrix input $P_s$ has no finite upper
+return. Saturation therefore excludes $p_\gamma\ge P_s$, and hence
+\[
+ p_s\le p_\gamma<P_s,\qquad 0<t_\gamma\le t_s.
+\]
+The fixed signed connecting maps constructed in
+Section~\ref{rw:finite:three-saddle} contain this smaller upper
+passage. Its actual lower returns remain on the passing sides
+of the two strong separatrices, by
+Proposition~\ref{rw:lower-preparation}; thus
+$G_+(t_\gamma)>0$ and $G_-(v(t_\gamma))>0$.
+Consequently $\gamma$ is an actual closing zero in the same
+three-saddle comparison chart. Equation~\eqref{rw:finite:three-forcing}
+holds on its fixed coefficient fibre, including the comparison
+continuation used below.
+
+Write $u=G_+(t)$, $z=G_-(v(t))$, $v=t^re^w$ as in
+Section~\ref{rw:finite:three-saddle}. On the deficit comparison domain,
+\[
+ M=tuz K_t,\qquad t>0,\quad u>0,\quad z>0.
+\]
+The outward coordinate is $p=P_s-\psi_+(t)$ with
+$\psi_+'>0$. Let $T_s$ be the actual positive-central tail after
+the fixed seam $t_s$, and set
+\begin{equation}\label{rw:anchors:fixed-seam-number}
+ j_s=Z(M;T_s).
+\end{equation}
+The local bound gives $j_s\le2$ at this fixed seam.
+If $j_s\le1$, Lemma~\ref{rw:anchors:calculus} proves the assertions:
+regular departure gives $KK_p>0$ after a regular zero or under the
+prescribed signed entry.
+
+Suppose now that $j_s=2$. Apply, if needed, the reflection identity to
+the whole union, its coefficients, and its already fixed seam so that
+$r>1$. It sends $K$ to its negative composed with the corresponding
+input change, and changes the signs of $\tau_1,\sigma_1$ together.
+It preserves multiplicity, outward ordering and the signed-entry
+condition, and transports the already chosen seam and threshold to
+their corresponding actual points. The reflected outgoing label is
+the original incoming label; the numerical outgoing cutoff need not
+be unchanged.
+
+With this local forcing fixed, apply
+Proposition~\ref{rw:finite:three-count} on the same deficit comparison
+interval, with the original central function $K=\mathcal K$ and
+the already fixed seam. Its two-zero classification gives
+\begin{equation}\label{rw:anchors:three-end-signs}
+ u_0,z_0>0,\qquad \tau_1>0,\qquad
+ M(0+)=\epsilon\kappa u_0z_0>0,\qquad K(0+)=-\infty.
+\end{equation}
+The actual tail's two zeros exhaust the comparison bound.
+The same proposition gives $M(t_s)>0$ and $K_p(t_s)<0$ at its
+fixed seam.
+
+The regular overlap determines the remaining sign, $K(t_s)$.
+For $\sigma_1\ge0$, $\tau_1>0$ and the positive regular columns
+give $K(t_s)<0$, with relative forcing absorbed. For $\sigma_1<0$,
+a positive value of $K(t_s)$ would have sign $-\sigma_1$, and
+Lemma~\ref{rw:finite:regular-direction} would imply $K_p(t_s)>0$,
+a contradiction. The seam avoids a zero, so again $K(t_s)<0$.
+Together with \eqref{rw:anchors:three-end-signs}, this gives negative
+signs at both ends of the continued tail. Ordinary Rolle bounds its
+total multiplicity by three, and parity reduces this to two.
+Restricting to the physical subinterval preserves that bound.
+
+There cannot have been a regular zero: since $\tau_1>0$, such a zero
+would require $\sigma_1<0$ and would leave $K>0$ at the seam,
+contrary to the preceding conclusion. Thus the union has at most two
+zeros. Finally the no-zero signed-entry alternative also excludes
+$j_s=2$. If $\sigma_1>0$, it contradicts $\tau_1\sigma_1<0$;
+if $\sigma_1<0$, it would require a positive seam value of $K$.
+Only $j_s\le1$ remains, and the away estimate gives one.
+\end{proof}
+
+\begin{proposition}[Primary weak thresholds with their regular part]
+\label{rw:anchors:primary-weak}
+Let $T$ be either a positive-$\bar B$ weak threshold with a lower
+root at $P$, as in Proposition~\ref{rw:infinity:weak-loss}, or the weak-center chart of
+Proposition~\ref{rw:infinity:weak-center}. Under the actual overlap
+and fixed-fibre forcing hypotheses above,
+\[
+ Z(K;R\cup T)\le2.
+\]
+After a zero in $R$, the remaining terminal part has at most one zero.
+With no regular zero and \eqref{rw:anchors:signed-entry}, the whole
+union has at most one. These statements concern the common physical
+passing interval, with all whole-path and central positivity conditions.
+\end{proposition}
+\begin{proof}
+The upper input $u$ decreases outward, so each positive-multiplier
+numerator of $K_u$ has sign opposite to $K_p$. Throughout this proof
+we restrict the quotients to the physical interval where the lower
+whole-path test from $\chi(u)$, $u>\max(0,-\gamma)$, the finite
+lower deficit and central positivity all hold.
+
+\textit{The weak center.}
+Write $d=d_s$ and $s=\varsigma=\bar B+\bar m$ in this proof.
+Use the complete numerator \eqref{rw:infinity:weak-center-numerator},
+with the actual moving eigenvalue $\gamma$ and the retained term
+$-\epsilon F_I(\chi)A_U$ in $C$. On this fixed fibre,
+Proposition~\ref{rw:coefficient-transport} supplies
+$|\nu|\le\eta(|d|+|s|)$, $\eta\to0$.
+With $e_s=e_\varsigma$, Lemma~\ref{rw:infinity:weak-entry-data}
+supplies the divided coefficients
+\begin{equation}\label{rw:anchors:weak-columns}
+ M=d\overline C-t(se_s+\nu e_\nu),\qquad
+ e_s>c,\quad \overline C'>1/2,
+\end{equation}
+on the same coefficient branch, with bounded $C_u^2$ coefficients
+and small $\overline C$. Under that forcing the coordinate norm is
+comparable to $|\tau_1|+|\sigma_1|$.
+
+If $|s|<\sqrt\eta(|d|+|s|)$, the small-$s$ alternative of that
+lemma gives $M/d$ strictly increasing, so $Z(M)\le1$.
+Lemma~\ref{rw:anchors:calculus} gives all the assertions in this case.
+
+Otherwise $s\ne0$ and
+$e=e_s+(\nu/s)e_\nu>c/2$. If $d=0$, $M=-tse$ has no zero and
+the assertions follow by the same Rolle inequalities. If $d\ne0$, set
+\[
+ R_0=\frac{\overline C}{te},\qquad
+ M=dte(R_0-s/d).
+\]
+Lemma~\ref{rw:infinity:weak-entry-data} gives unimodality of $R_0$,
+interval strict superlevel sets, and strictly increasing crossings
+of nonpositive levels. In particular,
+if $ds<0$, there is at most one zero of $M$, and the preceding
+ordinary and away Rolle arguments apply.
+
+It remains that $d$ and $s$ have the same sign. Since $\bar c>0$,
+this is the sign of $\sigma_1$. Suppose first that the seam has
+$K$ of sign $-\sigma_1$. Its regular derivative has that same sign,
+so the seam numerator has sign $d$. Thus the seam lies in
+\[
+             \{u:R_0(u)>s/d\}.
+\]
+Moving outward decreases $u$ and can leave this interval at most once.
+Consequently the remaining terminal part has at most one numerator
+zero. Its away entrance gives at most one zero of $K$. This argument
+applies after the possible regular zero and under the prescribed
+signed entrance.
+
+If instead the seam value of $K$ has sign $\sigma_1$, no regular
+zero has occurred. If $M$ there has sign $d$, the same superlevel
+argument gives at most one numerator zero and ordinary Rolle gives
+at most two zeros of $K$. If $M$ has the opposite sign, then $K_p$
+has the sign of $K$ at the seam; away Rolle and $Z(M)\le2$ again
+give at most two. The seam avoids numerator zeros. If the original
+overlap point was such a zero, its initial segment was assigned to $R$
+before the seam was fixed, so the count still covers the entire union.
+
+\textit{Positive $\bar B$.}
+At a simple threshold $\bar a=-\bar c-\bar B/\bar c$ with
+$0<\bar B<\bar c^2$, and at the double threshold
+$\bar B=\bar c^2$, $\bar a=-2\bar c$. Hence at either threshold
+$\tau_1<0$ and $\sigma_1>0$. Lemma~\ref{rw:infinity:weak-entry-data}
+gives $K>0$ on the retained compact regular overlap for this same
+original central function.
+
+There was therefore no preceding regular zero, since its outward
+sign would be $-\sigma_1<0$. For the same reason the prescribed
+signed entry cannot occur on this union. It remains to bound the
+unanchored terminal continuation of this positive overlap.
+Use the numerator and quotient from
+Proposition~\ref{rw:infinity:weak-loss},
+\[
+ M=AC-tE,\qquad E>c,\qquad R_0=C/(tE).
+\]
+Here $A=\delta_L$ for a simple lower loss, and
+$A=\mu_L+\delta_L^2$ for a double loss.
+Lemma~\ref{rw:infinity:weak-entry-data} gives $A>0$ and $C>0$
+at every numerator zero and interval strict superlevel sets of $R_0$.
+If $A\le0$, $M$ has no
+zero and the assertion follows. If $A>0$, an entrance with $M>0$
+lies in the interval $\{R_0>1/A\}$ and encounters at most one
+numerator zero outward; ordinary Rolle gives at most two zeros of $K$.
+An entrance with $M<0$ has $K_p>0$ and is away from zero, so
+$Z(M)\le2$ and away Rolle give the same bound.
+
+Reflection transports the union, its signs and multiplicities.
+The improvement comes from this entrance; an arbitrary weak-chart
+subinterval still has the unanchored four-zero closing estimate of
+Section~8.
+\end{proof}

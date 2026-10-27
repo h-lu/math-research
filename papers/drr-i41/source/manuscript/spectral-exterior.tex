@@ -1,0 +1,156 @@
+\subsection{An exterior spectral estimate}
+
+The outward cubic, quadratic and degree-loss passages share a scalar
+graph equation. The quadratic coefficient determines a power in its
+first variation, while the remaining terms control the error in its
+logarithmic derivatives. We use logarithmic height as the independent
+variable to estimate these derivatives directly, including the moving
+endpoints.
+
+\begin{lemma}[Exterior spectral estimate]\label{deg:lem-spectral-exterior}
+Fix a terminal cut \(d>0\), a small lip constant \(\ell_0>0\), compact
+bounds on \(A,C\), and positive constants \(c_0,C_0\). Put
+\[
+ \begin{gathered}
+ M=tx^3+\mu_2x^2+\mu_1x+\mu_0,\qquad B=1+b+tx,\\
+ Q=1-A(v+tx)+C(v+tx)^2,\quad \zeta=tC(v+tx),\quad |t|\le1.
+ \end{gathered}
+\]
+All coefficients are fixed under \(E=a\partial_a\). On an enlarged
+open interval of \(0<a<d/2\), suppose, pointwise in \(a\), that
+some \(0<\rho\le\rho_0\) satisfies
+\begin{equation}\label{deg:spectral-exterior-hypotheses}
+ \begin{gathered}
+ c_0\rho\le m(x):=M(x)/x^2\le C_0\rho\quad(a\le x\le2a),\\
+ |b|+|v|+|\mu_2|+|t|a+|\mu_1|/a+|\mu_0|/a^2\le C_0\rho .
+ \end{gathered}
+\end{equation}
+For sufficiently small \(|t|d,\rho_0\), depending only on these
+fixed bounds, the graph
+\begin{equation}\label{deg:spectral-exterior-graph}
+ z_x=\frac{z(xB+\zeta z)}{M+Qz},\qquad z(a)=\ell_0M(a)
+\end{equation}
+reaches \(x=d\) with positive height and denominator. An ordinary
+\(C^3\) observer \(\chi\), with \(\chi'>0\), is appended on the
+open preimage of its prescribed buffered terminal image. Set
+\[
+ \nu=\frac{2\mu_2}{1+b},\quad\lambda=2\nu,\quad e=2-\lambda>3/2,
+ \quad\Theta=|t|a+|\mu_1|/a+|\mu_0|/a^2,\quad L_\rho=1+|\log\rho|,
+\]
+\[
+ H_\chi=\sup\{|z(\log\chi')'|
+       +|z(\log\chi')'+z^2(\log\chi')''|\},\qquad
+ \mathcal T=|t|d+|\mu_2|+|\mu_1|/d+|\mu_0|/d^2+H_\chi ,
+\]
+where the supremum is on that buffer and is finite.
+For any coefficient-only \(\sigma>0\), use
+\(\beta=-a^2/(2\sigma^2)\) and \(\Gamma(\beta)=\chi(z_d)\).
+Then \(\Gamma'>0\), and
+\begin{equation}\label{deg:spectral-exterior-rows}
+ |E\log\Gamma'+\lambda|+|E^2\log\Gamma'|
+ \le C\{\Theta L_\rho+\mathcal T(a/d)^e\}.
+\end{equation}
+The same rows hold after a positive coefficient-only affine calibration.
+For intrinsic terminal height take \(\chi=\mathrm{id}\), so \(H_\chi=0\).
+No reciprocal bound on \(\sigma\) or bound on \(\lambda\log a\) is used.
+\end{lemma}
+\begin{proof}
+Set \(W=z/x^2\), \(\tau=\log(x/a)\), \(N=B+\zeta xW\), and
+\(D=m+QW\). Then \(W_\tau=F=W(N/D-2)\). On \([a,2a]\),
+\(N,Q\) are positive units and \(D\asymp\rho+W\) for bounded \(W\).
+Below a small fixed \(w_0\), \(F\ge cW/(\rho+W)\). Starting at
+\(W_l=\ell_0m(a)\), the time to reach \(w_0\) is at most
+\[
+ C\rho\log\frac{w_0}{\ell_0c_0\rho}+Cw_0<\log2,
+\]
+by choosing \(w_0\) first and then \(\rho_0\). At the boundaries
+\(w_0<1/2\), \(w_1=3/4\), the formula \(F(x,w)=1-2w+O_w(\rho)\)
+makes the strip invariant up to \(2a\). Beyond it,
+\(|m(x)|\le|t|d+C\rho\ll w_0^2\) preserves the strip, gives
+positive-unit \(D\) and \(F_W\le-c<0\). Thus the graph reaches
+\(d\), with \(c\rho\le W\le w_1\), even if \(m\) changes sign.
+
+The bounded strong graph with \(b=v=\mu_j=0\), keeping \(t,A,C\),
+is \(W_*=1/2+O(|t|x)\), by the integral from zero for
+\(xU'=-2U+O(|t|x)\), \(U=W-1/2\). Strip contraction gives
+\begin{equation}\label{deg:spectral-exterior-window}
+ |W(d)-W_*(d)|\le C\rho+C(a/d)^c.
+\end{equation}
+Where this comparison applies, the original buffer margin and the
+permitted cutoff choices put the terminal height in the observer's
+domain. Elsewhere we retain the original terminal admission condition.
+
+Put \(r=\log x\), \(\eta=\log z\). At fixed height, \(W_r=-2W\)
+and \(r_\eta=V=D/N\). The raw cocycle
+\eqref{deg:scalar-raw-cocycle} has the exact density split
+\begin{equation}\label{deg:spectral-exterior-density}
+ \begin{gathered}
+ \frac{2m+xm'+(xQ'+\zeta x)W}{N}=\nu+J,\\
+ J=\frac{(3-\nu)tx+\mu_1/x+
+          tx[-A+(3-\nu)C(v+tx)]W}{N}.
+ \end{gathered}
+\end{equation}
+Here \(2m+xm'=3tx+2\mu_2+\mu_1/x\); \(\mu_0\) cancels only
+in the density. Let
+\(I=\int_{\eta_l}^{\eta_T}J\,d\eta\), with
+\(\eta_l=\log(\ell_0M(a))\). The near height length is \(O(L_\rho)\);
+on the strip \(d\eta\le C\,d\log x\). Thus every partial integral
+is bounded by \(C\{\Theta L_\rho+|t|d+|\mu_1|/a\}\).
+
+Use \eqref{deg:scalar-inverse-endpoints} with
+\(P_j=E^jr|_\eta\), \(l_j=E^j\eta_l\), \(t_j=E^j\eta_T\),
+\(Er_l=1\). The polynomial gives bounded \(l_1,l_2\),
+\(V_l,V_{r,l}=O(\rho)\), and \(P_{1,l}=1+O(\rho)>0\).
+For \(\mathscr B=EW_l-F_l\), the exact first cocycle gives
+\begin{equation}\label{deg:spectral-exterior-inverse-decay}
+ \begin{gathered}
+ P_1=\frac{-\mathscr B(1+\ell_0Q(a))}{\ell_0N}
+       (a/x)^e\left(\frac W{\ell_0m(a)}\right)^\nu e^I,\\
+ 0<P_1\le C(a/x)^e,\qquad |P_2|\le CP_1 .
+ \end{gathered}
+\end{equation}
+The initial factor equals \(B(a)K(a)>0\), with \(K\) from
+\eqref{deg:scalar-polynomial-lip-slope}. Since \(|\nu|\le C\rho\)
+and \(c\rho\le W\le w_1\), its height ratio to power \(\nu\) is a
+unit for either sign, proving the first bound without bounding
+\(a^{-\lambda}\). Near the lip, fixed-height differentiation gives
+\(|V_{rr}|\le C(\rho+W)\), whereas \(d\eta=N/D\,d\log x\).
+On the strip all these factors are bounded. Hence
+\[
+ |V_{rr}|\,d\eta\le C\,d\log x,\qquad
+ (P_2/P_1)_\eta=V_{rr}P_1.
+\]
+Its integral is bounded by \(C\int_a^d(a/x)^e\,d\log x\), proving
+the second bound. The two fixed-terminal rows then give
+\(|t_1|+|t_2|\le C(a/d)^e\).
+
+Rational differentiation at fixed height gives
+\(|J_r|+|J_{rr}|\le C(|t|x+|\mu_1|/x)\). In the two full Leibniz
+rows \eqref{deg:scalar-density-endpoints}, the lower terms cost
+\(C\Theta\), the near integrals cost \(C\Theta L_\rho\), and
+\[
+ \int_{2a}^d(|t|x+|\mu_1|/x)(a/x)^e\,d\log x
+ \le C(|t|a+|\mu_1|/a).
+\]
+Every upper term retains \((a/d)^e\). Therefore
+\begin{equation}\label{deg:spectral-exterior-integral-rows}
+ |EI|+|E^2I|
+ \le C\{\Theta L_\rho+(|t|d+|\mu_1|/d)(a/d)^e\}.
+\end{equation}
+The exact polynomial-lip formula becomes
+\begin{equation}\label{deg:spectral-exterior-slope}
+ \Gamma'=\sigma^2a^{-\lambda}
+ B(a)K(a)\ell_0^{-\nu}m(a)^{-\nu}
+ \frac{W_T}{m(d)+Q(d)W_T}z_T^\nu\chi'(z_T)e^I .
+\end{equation}
+Both \(E\) rows of \(\log(BK)\) are \(O(\Theta)\). Also
+\(E m,E^2m=O(\Theta)\), \(m(a)\asymp\rho\), and
+\(|\nu|,\Theta\le C\rho\), so those of \(-\nu\log m(a)\) cost
+\(C\Theta\). At fixed \(d\), the first two height-logarithmic rows
+of \(\log[W_T/(m(d)+Q(d)W_T)]\) cost \(C|m(d)|\), and those of
+\(\nu\log z_T\) cost \(C|\nu|\). The observer rows are precisely
+those defining \(H_\chi\). Their terminal chain rules and the integral
+bounds prove \eqref{deg:spectral-exterior-rows}, since
+\(a^{-\lambda}\) contributes \(-\lambda\) and zero to the first and
+second Euler rows.
+\end{proof}

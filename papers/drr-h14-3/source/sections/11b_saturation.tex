@@ -1,0 +1,185 @@
+\subsection{Equilibria and the three returning strips}
+
+To continue the comparison paths between an initial input and an outer
+cycle, we must exclude an equilibrium that could trap an intervening
+orbit. We do this first, then fill the upper and two lower strips by
+trajectories.
+
+\begin{lemma}[Equilibria enclosed by counted cycles]
+\label{rw:fibre:enclosed-equilibria}
+On a common small original parameter neighborhood, the Jordan disk
+of every counted cycle contains the origin and no other equilibrium.
+The section points of any two counted cycles belong to one interval
+of the actual return domain.
+\end{lemma}
+\begin{proof}
+The origin has index one and remains the only equilibrium in a
+fixed inner disk. The fixed regular collar strips remain free of
+equilibria. Proposition~\ref{rw:collar} places every counted
+cycle essentially in the collar, surrounding that disk. The upper
+vertex calculation in that proposition leaves at most one additional
+equilibrium in the upper chart, and it is a saddle.
+It remains to exclude horizontal equilibria from the cycle's disk.
+
+If $\rho=0$, then $B=m=a=c=0$ and $\dot x=-y$; the
+equilibrium equations give only the origin. Suppose $\rho>0$.
+In a horizontal chart $x=\sigma/r$, $y=v/r$, $\sigma=\pm1$,
+the equation $\dot y=0$ is
+\[
+ \sigma(r+v)+dv^2+crv=0.
+\]
+Its unique small solution is $v=rh(r)$ with $h=-1+o(1)$.
+Thus $|z|=|1+y|<\delta$ at any horizontal equilibrium.
+The other equilibrium equation reads
+\[
+ 1-z+\bar BX^2+\bar aX+\epsilon\bar m(1-z)^2=0.
+\]
+Choose fixed small $R,\delta>0$ and then small $\epsilon$.
+The left side is positive for $|X|\le R$, $|z|\le\delta$,
+so the equilibrium lies in one of the two half-strips $|X|>R$.
+
+In the incoming half-strip put $T=1/(-X)$ and use the positive
+time change $\dd\tau/\dd\xi=-X$. With
+$\eta_\ell=\rho\ell$, the exact equations are
+\begin{equation}\label{rw:fibre:horizontal-equilibrium-field}
+\begin{split}
+ T_\tau&=\epsilon T\bigl[\bar B-\bar aT+
+        \{1-z+\epsilon\bar m(1-z)^2\}T^2\bigr],\\
+ z_\tau&=-z+\epsilon\bar cTz(z-1)
+                             +\eta_\ell T(1-z)^2 .
+\end{split}
+\end{equation}
+On $0\le T\le1/R$, $|z|\le\delta$, the tangential derivatives
+are $O(\epsilon)$ and the normal derivative is
+$-1+O(\epsilon+|\eta_\ell|)$.
+Extend to a slightly larger rectangle, preserving $T=0$ and
+these strict margins. The normally contracting graph construction
+used in Section~4 gives
+\[
+ z=g(T)=\eta_\ell T\,O_{C^2}(1),\qquad
+ Z=z-g(T),\qquad Z_\tau=-\beta(T,Z)Z,\quad\beta>1/2.
+\]
+The two factors in $g$ follow by solving on $\eta_\ell=0$
+and $T=0$, respectively, and dividing these vanishing factors
+in the bounded graph family. Every equilibrium lies on $Z=0$.
+The small original quantity is $\rho\ell$; no bound on
+$\nu=\ell/\rho$ is used.
+
+A counted cycle has $z>0$ by
+Proposition~\ref{rw:geometry:cycle-height}. At $T=1/R$,
+$0\le z\le\delta$, one has $T_\tau>0$, while
+$|g|<\delta/2$. A cycle point with $Z<0$ cannot leave the
+rectangle in backward time through $T=1/R$; it cannot reach
+$z=\delta$ because $Z<0$ is preserved and $g<\delta/2$.
+It cannot reach $z=0$, and its compact affine orbit stays away
+from $T=0$. It would therefore remain in the rectangle for
+all backward time, whereas $|Z|$ grows exponentially.
+This is impossible. A periodic orbit on $Z=0$ would be a
+nonconstant periodic orbit of the scalar equation on that graph,
+also impossible. Every cycle point in this half-strip consequently
+lies strictly above $g$.
+
+An equilibrium with $0<z=g(T)<\delta$ is joined vertically to
+$z=0$ without meeting the cycle: cycle points with that $T$
+are above $g$, including any points above the rectangle.
+The line $z=0$ is outside the cycle's disk, since the whole
+cycle has $z>0$. Thus the equilibrium is outside the disk.
+The same holds immediately if its height is nonpositive.
+Reflecting the field and reversing time gives the argument on
+the outgoing half-strip, for either sign of $\ell$.
+The coordinate $T$ includes finite roots and roots escaping
+to infinity, so no horizontal escape case remains.
+
+The single upper saddle is now the only possible additional
+equilibrium inside the disk. Its index would change the enclosed total
+from one to zero, contradicting the index of a periodic orbit. Thus
+only the origin is enclosed. Two counted cycles are nested essential
+curves and bound an equilibrium-free annulus in the collar. Cut this
+annulus at the transverse central section. The compact-limit argument
+for the strips below shows that every intermediate section point
+returns, placing both cycles in one interval of the actual return
+domain.
+\end{proof}
+
+\begin{proposition}[Saturation of the physical interval]
+\label{rw:saturation}
+Assume \eqref{rw:fibre:original-forcing}, fix
+$p_0\in[p_\sharp/8,p_\sharp/4]$, and let $\gamma$ be a counted
+cycle with $p_\gamma>p_0$. Every input
+$p\in[p_0,p_\gamma]$ has an actual upper return $q(p)$
+and both actual lower central intersections. They satisfy
+\[
+ q'(p)>0,\qquad L_+'(p)<0,\qquad L_-'(q)<0,
+ \qquad
+ L_+(p),\ L_-(q(p))\ge s_\gamma>0.
+\]
+All three arcs, and the segment joining their central endpoints,
+lie in the fixed collar. This statement holds at nonclosing inputs
+as well as on periodic orbits.
+\end{proposition}
+\begin{proof}
+At $p_0$ the fixed small-endpoint upper map and both regular
+lower maps exist. After reducing $p_\sharp$, their two actions
+are at most $p_\sharp^2/31$ uniformly in the stated interval
+for $p_0$. Their positive homogeneous amplitudes are bounded
+below by a fixed positive prefactor times
+$e^{-p_\sharp^2/(31\epsilon)}$.
+The actual signed reference contributions are $O(|\ell|)$.
+Since the original generator norm is bounded and the forcing
+exponent is $p_\sharp^2/20$, both complete central heights are
+positive for sufficiently small scale. Their arcs lie in the collar
+by the regular construction.
+
+The axis endpoints of the three initial arcs lie inside the
+corresponding endpoints of $\gamma$. Since trajectories cannot cross
+$\gamma$, the arcs stay in its disk. Join their central endpoints by
+the central crosscut. Each lower path stays in its own half-plane until
+its first central intersection, so it meets the crosscut only there.
+The three arcs and the crosscut form a simple essential curve in the
+collar, inside $\gamma$, whether or not its two central values coincide.
+
+The initial and outer upper arcs, joined by the two axis segments,
+bound a compact equilibrium-free strip by
+Lemma~\ref{rw:fibre:enclosed-equilibria}. Since $\dot y=x$ on
+$y=0$, the positive axis segment is an entrance, the negative one
+an exit, and the orbit sides cannot be crossed. A nonexiting orbit
+would have an equilibrium-free compact $\omega$-limit set, hence a
+periodic orbit by Poincar\'e--Bendixson. Its Jordan disk lies in
+$y>0$ inside $\gamma$ and contains no equilibrium, contradicting
+the periodic-orbit index. Thus every intermediate upper entry returns, with
+$q_0\le q(p)\le q_\gamma$. The transverse flow determinant
+has a fixed sign and gives $q'(p)>0$.
+
+Construct the right and left lower strips from the corresponding
+initial and outer arcs, an axis segment, and a central crosscut.
+They are equilibrium-free as well. On the right use backward
+time, so the positive axis segment is an entrance; on the left
+use forward time and the negative axis segment is an entrance.
+The central crosscuts are exits because $\dot x>3/4$ on the
+fixed central rectangle. The same compact-limit and index argument
+gives both central intersections at every intermediate endpoint.
+Transversality and endpoint order give $L_+'(p)<0$, $L_-'(q)<0$;
+their minimum heights occur on $\gamma$ and equal $s_\gamma>0$.
+
+The three strips and the joining central segments lie in the annulus
+between the two essential curves, hence remain in the fixed collar.
+The nonexit contradiction uses compactness for each fixed field;
+flight times may diverge as a saddle or slow gap tends to zero.
+\end{proof}
+
+On this physical interval keep the actual central height as output.
+The fixed weak references give
+\[
+ F(p)=L_+(p)-L_-(q(p))=U(p)-V(p)-\rho\nu H,\qquad H>0,
+\]
+where $H$ is independent of $p$ and $U',V'<0$. Consequently
+\begin{equation}\label{rw:fibre:physical-log}
+ K=\epsilon\log(V'/U'),\qquad
+ F'=U'(1-e^{K/\epsilon}).
+\end{equation}
+A common regular input change and a change of the fixed additive
+references preserve $K$ on this orbit interval. We keep the original
+central height as output, since a nonlinear output change need not
+preserve it. The signed center-comparison domains used to estimate
+these functions are auxiliary; the physical interval of
+Proposition~\ref{rw:saturation} has positive complete central heights.

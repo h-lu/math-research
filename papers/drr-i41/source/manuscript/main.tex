@@ -1,0 +1,486 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype,enumitem,float}
+\usepackage{longtable,array}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\hypersetup{
+ pdftitle={Sharp local cyclicity of the complete quadratic graphic I4-1},
+ pdfauthor={Haibo Lu},
+ pdfsubject={Complete manuscript on exact local cyclicity in the full quadratic germ},
+ pdfkeywords={finite cyclicity, quadratic vector fields, DRR graphic, saddle-node, Dulac map, entry-exit}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dd}{\,d}
+\newcommand{\tauc}{\tau_{\rm cub}}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\sgn}{sgn}
+\setlist{nosep}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\title{Sharp local cyclicity of the complete quadratic graphic $I_4^1$}
+\author{Haibo Lu\\
+\small Shanghai Institute of Technology, Shanghai 201418, People's Republic of China\\
+\small Corresponding author: \href{mailto:luhaibo1985@gmail.com}{\texttt{luhaibo1985@gmail.com}}\\
+\small \href{https://orcid.org/0009-0000-2717-5968}{ORCID: 0009-0000-2717-5968}}
+\date{18 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The complete Dumortier--Roussarie--Rousseau graphic $I_4^1$ consists of
+two parabolic branches joining a finite saddle--node to a
+multiplicity-four vertex at infinity. We prove that its local cyclicity
+is exactly three in the full quadratic coefficient germ. One
+coefficient neighborhood and one whole-graphic Hausdorff collar give
+the upper bound, and every smaller neighborhood and collar contain one
+field with three hyperbolic complete cycles. We compare the curvature
+of the completed physical return with that of a cubic entry--exit
+action, whose quadratic coefficient cancels from the weighted
+curvature. Relative estimates near reversibility, separate root scales,
+and the ratio of the two physical tail gains preserve the comparison
+through root coalescence. At degree loss, comparison of the actual
+small-power section maps gives a two-zero bound. A finite coefficient
+cover yields one uniform count. The lower construction uses two
+coefficients to match a vanishing complete gain to a steep action
+transition and preserve three simple roots in one field. Whole-orbit
+convergence and a diagonal limit give attainment at the endpoint.
+In a fixed analytic slice, the ratio
+$p=\alpha_1/\sqrt{-\alpha_0}$ of the translated axis coefficients,
+defined for $\alpha_0<0$,
+tends to zero from above along three-cycle sequences approaching the
+organizing field and graphic. The bound is uniform down to $p=0$, where at most
+one cycle occurs, and is sharp below every positive cutoff on $p$.
+\end{abstract}
+
+\noindent\textbf{Keywords:} finite cyclicity; quadratic vector field;
+DRR graphic; saddle--node; Dulac map; entry--exit asymptotics.
+
+\medskip
+\noindent\textbf{2020 Mathematics Subject Classification:}
+34C07 (primary); 34C23, 37G15 (secondary).
+
+\medskip
+\section{Introduction}
+\label{sec:introduction}
+
+Determining how many limit cycles bifurcate from a quadratic graphic
+under variation of all quadratic coefficients is a local part of the
+Dumortier--Roussarie--Rousseau finiteness programme
+\cite[Introduction, author copy pp.~1--2]{DIR02}. We study its graphic
+$I_4^1$, whose two parabolic branches join a finite saddle--node to a
+nilpotent saddle--node at infinity
+\cite[Proposition~4.2.2 and Figure~8, journal pp.~111--113]{DRR94}.
+
+For the present graphic the axis polynomial is cubic. Its incident
+roots can coalesce at different rates, and other coefficient limits
+reduce its degree. The cyclicity problem therefore asks for a bound on
+the return through both vertices throughout these configurations.
+We obtain the sharp bound three: one coefficient neighborhood and one
+Hausdorff collar admit at most three cycles, and arbitrarily small
+neighborhoods and collars admit three hyperbolic cycles in one field.
+
+The return-map approach connects singular-passage geometry with zero
+counting. Saddle--node normal forms provide finitely smooth transition
+coordinates \cite{DIR02}; transition maps give finite cyclicity for
+elementary quadratic graphics surrounding a focus or center
+\cite{DGR02}. For graphics through nilpotent singularities, finite
+cyclicity has been obtained by controlling the regular transition
+derivatives \cite[Theorems~5.4 and~6.3, journal pp.~372 and 388--389]{ZR02}
+and nonlinear transitions through a finite saddle--node
+\cite[Theorem~3.8, author copy p.~23]{RZ04}. In the center case,
+division in the center ideal permits a displacement--Rolle argument
+\cite[Sections~5.1 and 5.4--6, author copy pp.~19 and 23--25]{RR08}.
+Sharp counts have been obtained for a local
+codimension-four nilpotent saddle--node family
+\cite[Theorem~1.1, peer-reviewed author version p.~4]{Huzak17JDE}
+and for hyperbolic hemicycles under quadratic perturbations
+\cite[Definition~1.4 and Theorem~B, published pp.~3 and 7]{MV25}.
+For slow--fast canard cycles containing one remote hyperbolic saddle
+with nonunit hyperbolicity ratio, whose slow dynamics is regular or
+has only finitely many singularities, all in the interior of the slow
+segment, Huzak proves an upper bound of three
+\cite[Definition~1 and Theorem~2.2, peer-reviewed author version
+pp.~7--8]{Huzak22}.
+
+At the infinity passage of $I_4^1$, entry--exit theory describes how an
+orbit follows the axis and reaches its outgoing section.
+De Maesschalck and Schecter establish the entry--exit relation and its
+smooth parameter dependence \cite[Theorem~1.1 and Corollary~1.2]{DMS16}.
+Huzak and Kristiansen develop this description for degenerate turning
+points, including the $n=1$ geometry associated with $I_4^1$
+\cite[printed p.~3 and Theorem~6.1, printed p.~25]{HK26}.
+Their strict $n=1$ transition theorem assumes a uniformly negative
+axis polynomial on its selected chart
+\cite[Theorem~2.4, printed pp.~6--7]{HK26}. These local transition
+results provide entry--exit coordinates and regularity. The present
+argument also needs the other root and degree-loss charts, the finite
+saddle--node closing, and one count for the complete physical return.
+The neighboring fixed-parameter graphic $I_2^1$ is studied in
+\cite{Lu26I21}. At the $I_4^1$ endpoint its finite-passage multiplier
+vanishes; the lower construction below realizes three cycles internally
+before taking this endpoint limit.
+
+The organizing field in the original classification coordinates is
+\begin{equation}\label{eq:problem-field}
+ F_*:\quad
+ \dot x=\lambda_*x-y+x^2,\qquad
+ \dot y=x+\lambda_*y+2\lambda_*x^2+xy,
+ \qquad \lambda_*=\frac{1}{\sqrt3}.
+\end{equation}
+Its invariant parabola is
+\begin{equation}\label{eq:problem-parabola}
+ y=\pi_*(x):={x^2\over2}-\lambda_*x-{\lambda_*^2+1\over2}.
+\end{equation}
+Write
+\(\iota_*(x,y)=(x,y,1)/\sqrt{1+x^2+y^2}\),
+let \(p_*=(-2\lambda_*,2/3)\), \(q_*=(0,1,0)\), and let
+\(\Gamma_-=\overline{\iota_*\{(x,\pi_*(x)):x<-2\lambda_*\}}\) and
+\(\Gamma_+=\overline{\iota_*\{(x,\pi_*(x)):x>-2\lambda_*\}}\). The complete
+marked graphic is
+\begin{equation}\label{eq:positive-word}
+ \Gamma_{I4}=\Gamma_-\cup\Gamma_+,
+ \qquad q_*\longrightarrow p_*\longrightarrow q_*.
+\end{equation}
+The two occurrences of \(q_*\) are one marked projective vertex.
+
+Let \(\mathcal Q_2\) be the twelve-dimensional affine space of real planar
+vector fields of degree at most two, and let \(d_{\rm H}\) be the Hausdorff
+distance for a fixed smooth metric on the closed upper hemisphere.
+
+\begin{theorem}[Exact local cyclicity of \(I_4^1\)]\label{thm:main}
+There are a neighborhood $\mathcal V$ of $F_*$ in $\mathcal Q_2$ and
+$\eps>0$ such that every $F\in\mathcal V$ has at most three distinct
+isolated periodic orbits $\gamma$ with
+\[
+ d_{\rm H}\bigl(\iota_*(\gamma),\Gamma_{I4}\bigr)<\eps.
+\]
+Conversely, for every neighborhood $\mathcal W$ of $F_*$ and every
+$\delta>0$, some $F\in\mathcal W$ has three geometrically distinct
+hyperbolic periodic orbits satisfying this inequality with $\delta$
+in place of $\eps$. Thus
+\[
+ \operatorname{Cycl}_{\mathcal Q_2}(\Gamma_{I4},F_*)=3.
+\]
+Both assertions concern the complete two-branch marked graphic and
+the full twelve-coefficient quadratic germ.
+\end{theorem}
+
+\subsection{The mechanism of the proof}
+
+The finite saddle--node supplies a small multiplier $m>0$. Including
+the two regular closing maps, cycles are zeros of one displacement in
+an affine physical input:
+\begin{equation}\label{eq:intro-displacement}
+ F_{\theta,m}(x)=x-m\Pi_{\theta,m}(x)=0.
+\end{equation}
+The cubic entry--exit action reveals the key cancellation: its
+positively weighted curvature contains the linear and cubic
+coefficients, while the quadratic coefficient cancels. The product of
+the two matched axis distances decreases with the incoming quadratic
+label, so every curvature zero has the same crossing orientation.
+Section~\ref{subsec:representative-cubic} derives the identity and
+transfers this orientation to the completed physical map. With a
+positive displacement derivative on the upper continuation,
+Rolle's theorem then gives at most three displacement zeros.
+
+Uniformity requires more than convergence to the action. The two
+nonlinear section maps contribute to physical curvature, and their
+individual gains can vanish at different rates. We retain both gains
+and their actual section images. Near reversibility, division by the
+coefficient distance controls the curvature as its leading term
+vanishes. Separate root-collar estimates handle independently
+approaching roots; matching actual inward heights also controls the
+original ghost tails beyond the growing-action ranges. On the upper
+continuation, a bounded complete derivative gives $F'>1/2$ after
+$m$ is chosen small.
+At degree loss, a comparison of the two actual small-power section
+maps instead gives the same upward orientation at every critical
+point of the displacement, and hence at most two zeros on that
+whole coefficient fibre.
+
+These estimates count one connected interval of actual trajectories.
+We fix the finite coefficient cover and overlap reserves, then a
+positive unscaled height cap, and finally independent coefficient and
+multiplier bounds. Geometric capture places every nearby whole cycle
+in the interval already counted. Fixed positive ratio intervals have
+a stronger two-cycle bound, forcing three-cycle parameters to
+concentrate at $p\to0^+$ in the slice defined below.
+
+The lower construction is independent of this upper count. First fix
+$c>1$ near one. The complete organizing gain is
+$\exp(-4\pi/\sqrt{c-1})$; choose the action-model parameter
+$\epsilon>0$ so that this equals $2\epsilon^{5/2}$.
+The central transition has slope of order $\epsilon^{-5/2}$,
+compensating for the vanishing gain. Two coefficients then calibrate
+the offset and the complete gain in one field, and one small scale
+preserves all three simple roots and their physical hyperbolicity.
+Their complete orbits converge to both branches of the organizing
+parabola. A diagonal choice as $c\downarrow1$ gives the endpoint
+lower bound. The analytic affine and positive-time slice transports
+the conclusions to all twelve quadratic coefficients.
+
+\subsection{The organizing family and coordinate model}
+
+Put
+\[
+ A_0=\begin{pmatrix}\sqrt3/2&0\\[2pt]\sqrt3/4&3/4\end{pmatrix},
+ \qquad \rho={2\over\sqrt3}.
+\]
+The affine change
+\begin{equation}\label{eq:canonical-change}
+ \binom X Y=A_0\binom x y,
+ \qquad t_{\rm can}=\rho t
+\end{equation}
+has positive time factor and sends \eqref{eq:problem-field} to
+\begin{equation}\label{eq:base}
+ H_0:\qquad \dot X=X-Y+X^2,\qquad \dot Y=X+X^2+XY.
+\end{equation}
+The parabola becomes $Y=(X^2-1)/2$, the finite vertex is $p=(-1,0)$,
+and the point at infinity is $q=(0,1,0)$.  For a quadratic field $F$ in the
+original coordinates, its field in the canonical coordinates is
+\begin{equation}\label{eq:fixed-coefficient-transport}
+ \mathscr C_0(F)(Z)=\rho^{-1}A_0F(A_0^{-1}Z),
+ \qquad Z=(X,Y)^{\mathsf T}.
+\end{equation}
+The map $\mathscr C_0:\mathcal Q_2\to\mathcal Q_2$ is a linear
+isomorphism, with inverse
+\[
+ \mathscr C_0^{-1}(H)(u)=\rho A_0^{-1}H(A_0u).
+\]
+In particular, it sends the full twelve-coefficient germ at $F_*$ onto the
+full twelve-coefficient germ at $H_0$.
+
+Let
+\[
+ \iota_0(X,Y)={ (X,Y,1)\over\sqrt{1+X^2+Y^2}}
+\]
+be the canonical affine embedding, and let $S$ be the projective extension
+of $A_0$ to the closed upper hemisphere.  Thus
+\begin{equation}\label{eq:fixed-projective-map}
+ S(U,V,W)=
+ {\left(A_0\binom{U}{V},W\right)
+  \over\sqrt{\left\lVert A_0\binom{U}{V}\right\rVert^2+W^2}},
+ \qquad S\circ\iota_*=\iota_0\circ A_0.
+\end{equation}
+This is a smooth projective diffeomorphism preserving the upper hemisphere.
+Set
+\begin{equation}\label{eq:canonical-graphic}
+ \Gamma:=S(\Gamma_{I4}).
+\end{equation}
+It is the complete two-branch marked graphic of $H_0$, with the same
+positive-time branch order because $\rho>0$.  For the fixed smooth metric
+used in Theorem~\ref{thm:main}, compactness gives a constant
+$1\le L_0<\infty$
+such that
+\begin{equation}\label{eq:fixed-map-lipschitz}
+ d_{\rm H}(S K,S K')\le L_0d_{\rm H}(K,K')
+\end{equation}
+for all nonempty compact subsets $K,K'$ of the hemisphere.  All calculations
+below are made for $H_0$ and $\Gamma$; the final proof pulls the resulting
+coefficient neighborhood back by \eqref{eq:fixed-coefficient-transport} and
+uses \eqref{eq:fixed-map-lipschitz} to transfer the Hausdorff collar.
+
+The canonical model also lies in the organizing family
+\begin{equation}\label{intro:eq-i21-family}
+ H_c:\quad \dot X=X-Y+X^2,\qquad
+ \dot Y=cX+X^2+XY,
+ \qquad
+ \Gamma_c=\overline{\iota_0\{Y=(X^2-c)/2\}},
+\end{equation}
+where the closure is taken in the closed upper Poincare hemisphere and
+\(\iota_0(X,Y)=(X,Y,1)/\sqrt{1+X^2+Y^2}\). Along the invariant parabola,
+\begin{equation}\label{intro:eq-parabola-speed}
+ \left.\dot X\right|_{\Gamma_c}
+ =\frac{(X+1)^2+c-1}{2}.
+\end{equation}
+For every fixed \(c>1\), the finite point \(X=-1\) is crossed with positive
+speed. At \(c=1\), the same point becomes a finite saddle--node. The two
+infinite ends remain the two marked occurrences of one projective vertex;
+no equatorial arc is added. This is the geometric change from the fixed \(I_2^1\) problem to the \(I_4^1\) endpoint.
+
+In the original coordinates, direct substitution and \(3\lambda_*^2=1\) give
+\begin{align}
+ F_*\bigl(y-\pi_*(x)\bigr)
+ &=\dot y-\pi_*'(x)\dot x
+   =2x\bigl(y-\pi_*(x)\bigr),\notag\\
+ \left.\dot x\right|_{y=\pi_*(x)}
+ &=\lambda_*x-\pi_*(x)+x^2
+   ={1\over2}(x+2\lambda_*)^2.
+ \label{eq:parabola-invariance-speed}
+\end{align}
+Writing \(u=x+2\lambda_*\) and \(w=y-\pi_*(x)\), the complete system is
+\begin{equation}\label{eq:finite-saddle-node-coordinates}
+ \dot u=\frac{u^2}{2}-w,\qquad
+ \dot w=2(u-2\lambda_*)w .
+\end{equation}
+Its linearization at \((u,w)=(0,0)\) is
+\[
+ \begin{pmatrix}0&-1\\[2pt]0&-4\lambda_*\end{pmatrix}.
+\]
+Thus it has one zero and one nonzero eigenvalue, while the restriction to
+\(w=0\) has the quadratic degeneracy \(\dot u=u^2/2\). The finite point is
+therefore a saddle--node. The multiplicity of the other marked vertex is checked
+separately in the infinity chart of Section~\ref{sec:normalization}.
+The lower bound used here is constructed internally in
+Theorem~\ref{p4:fixed-c}. The complete organizing multiplier
+$\exp(-4\pi/\sqrt{c-1})$ vanishes as $c\downarrow1$;
+at the endpoint the regular finite passage becomes a saddle--node.
+We therefore derive the upper estimate at $c=1$ with the finite
+multiplier separated from the actual infinity passage.
+
+\input{figures/graphic-return}
+
+
+\subsection{The small positive ratio and its sharpness}
+
+The analytic slice in Lemma~\ref{lem:slice} is fixed once for the full
+quadratic germ. For the same field $F$, write
+$\theta_F=\theta(\mathscr C_0(F))$, let
+$P(v)=\mu_1+\mu_2v-v^3$, $R(v)=\mu_3+v+v^2$, and use the root
+$\gamma(F)$ of $R$ near zero. Set
+\begin{equation}\label{eq:sharp-sector-coordinates}
+ \alpha_0(F)=P(\gamma(F)),\qquad
+ \alpha_1(F)=P'(\gamma(F)),\qquad
+ s(F)=\sqrt{-\alpha_0(F)},\quad p(F)=\alpha_1(F)/s(F),
+\end{equation}
+where $s,p$ are used for $\alpha_0<0$. The ratio therefore has one
+specified normalization throughout the upper and lower arguments.
+
+\begin{theorem}[Uniform small positive ratio and sharpness]
+\label{thm:small-sector}
+There are an ordinary open neighborhood $\mathcal V_{\rm s}$ of $F_*$
+in $\mathcal Q_2$, constants $\eps_{\rm s}>0$ and $p_{\rm s}>0$, such
+that every $F\in\mathcal V_{\rm s}$ with
+\[
+ \alpha_0(F)<0,\qquad 0\le p(F)\le p_{\rm s}
+\]
+has at most three distinct isolated periodic orbits whose complete
+images have Hausdorff distance less than $\eps_{\rm s}$ from
+$\Gamma_{I4}$. On its connected admitted physical return interval,
+the corresponding isolated displacement zeros have total multiplicity
+at most three. On the face $p=0$ the bound is one.
+
+For every neighborhood $\mathcal W$ of $F_*$, every $\delta>0$ and
+every $\eta>0$, one field $F\in\mathcal W$ has three geometrically
+distinct hyperbolic complete periodic orbits at Hausdorff distance
+less than $\delta$ from $\Gamma_{I4}$ and satisfies
+\[
+ \alpha_0(F)<0<\alpha_1(F),\qquad
+ 0<p(F)<\min\{p_{\rm s},\eta\}.
+\]
+The upper bound retains the independently varying raw coefficients;
+no restriction on $\gamma/s$, relative root distances, or the actual
+finite multiplier compared with a source radius is added.
+\end{theorem}
+
+Proposition~\ref{prop:lower-coefficient-face} locates the constructed
+triples more precisely: $p\to0^+$ and $\gamma/s\to+\infty$, while
+the two positive roots remain separated in the positive-gamma chart.
+Thus the sharpness family is retained by the unrestricted small-ratio
+estimate. Section~\ref{sec:sharp-small-sector} proves the theorem from
+the full regional estimates below.
+
+\subsection{Organization}
+
+Section~\ref{sec:normalization} constructs the physical return and
+slice. Sections~\ref{sec:counting-tools}--\ref{sec:small-positive-source-dictionaries}
+give the counting calculus and cubic mechanism.
+Section~\ref{sec:common-cover-conclusion} assembles the regional
+estimates, uniform budgets, capture and concentration.
+Section~\ref{sharp:lower-section} constructs the simultaneous lower
+bound with its model, passage, tail and coefficient proofs; the
+small-ratio and full-germ proofs follow. The remaining regional transition
+proofs and coefficient dictionaries are developed in the appendices.
+Two illustrative ghost paths are provided in the optional supplement.
+\medskip
+\setcounter{tocdepth}{1}
+\tableofcontents
+\medskip
+
+\input{geometry-return}
+\input{counting-tools}
+\input{dictionary-section}
+\section{Uniform regional returns and the three-cycle upper bound}
+\label{sec:common-cover-conclusion}
+
+The regional estimates apply to the completed physical map. We fix
+the coefficient subcover and its reserves, choose a common raw-height
+cap, and only then restrict the independent coefficients and finite
+multiplier. Each coefficient alternative counts the whole returning
+interval; geometric capture completes the upper bound.
+\input{analytical-contracts}
+\input{regional-contracts}
+\input{coefficient-limits-dictionary}
+\input{coefficient-budget}
+\input{common-capture}
+\input{paired-raw-tails}
+\input{sharp-upper-bound}
+\input{geometric-capture}
+\input{three-cycle-concentration}
+\input{sharp-lower-bound}
+\input{lower-coefficient-face}
+\input{sharp-sector}
+\input{cyclicity-proof}
+\appendix
+\input{physical-section-toolkit}
+\input{strong-projection}
+\input{source-normalization}
+\input{negative-action}
+\input{comparisons-section}
+\input{escaping-saddle}
+\input{root-cubic-section}
+\input{degree-section}
+\input{coefficient-limits-moving}
+\input{nonnegative-opening}
+\input{moving-section-bookkeeping}
+\input{coefficient-dictionaries-proofs}
+\input{notation-index}
+
+\section*{Funding}
+
+This research received no specific grant from any funding agency in the
+public, commercial, or not-for-profit sectors.
+
+\section*{Declaration of competing interests}
+The author declares no known competing financial interests or personal
+relationships that could have appeared to influence the work reported in this
+article.
+
+\section*{Data and code availability}
+The complete LaTeX source accompanies this manuscript. Supporting
+symbolic checks and independent multiprecision shooting examples retain
+their frozen coefficients and trajectory data in the accompanying
+reproduction material. The numerical examples are supplementary and are
+not premises of the analytic argument.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+During preparation of this manuscript the author used OpenAI Codex for
+mathematical exploration and proof drafting, simulated technical readings,
+organization and language editing, LaTeX and code assistance, literature
+searches, and symbolic and internal-consistency checks. These tools do not
+constitute independent human peer review or formal verification. The author
+is responsible for the mathematical claims and the final manuscript.
+
+\begingroup
+\sloppy
+\bibliographystyle{plain}
+\bibliography{references}
+\endgroup
+\end{document}

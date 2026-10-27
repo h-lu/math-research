@@ -1,0 +1,198 @@
+\section{Fold, separated roots, and the weak root}
+\label{sec:direct-negative-root-regimes}
+
+The buffered estimate uses a fixed positive margin for the secondary
+drift. Near a positive root or a minimum tending to zero, we instead
+compare the drift-weighted positive passage with the negative branch
+of \cref{sec:direct-negative-annulus-buffer}. At the fold this controls
+bounded outputs, but on the no-root side the positive passage can
+continue through the annulus after a long bottleneck. We treat that
+continuation separately, then handle separated roots and the root
+approaching the central line to complete the coefficient cover.
+
+\subsection{The boundary-drift fold and bounded outputs}
+\label{sec:direct-negative-fold}
+
+Continue with \eqref{eq:direct-negative-secondary-scales}.
+Take \(1/2\le b\le1\), set \(x_{\rm f}=b/2\), and choose a small
+fold width \(\epsilon_{\rm f}>0\) before fixing the parameter neighborhood.
+Consider
+\begin{equation}
+\label{eq:direct-fold-region}
+ |a-b^2/4|\le\epsilon_{\rm f}^2/100,\qquad r\ll\epsilon_{\rm f}^2 .
+\end{equation}
+This region is specified by the quadratic comparison. The exact fold
+is the parameter locus where the minimum of \(K_+\) defined below
+vanishes.
+In positive secondary coordinates \(x=\eta/(sr)\),
+\(Z=z/(s^2r^2)\), the drift is
+\[
+ K_+(x)=a-bx+x^2-rx^3R_q(srx),\qquad F_+(x)=K_+(x)/x .
+\]
+It is strictly convex on the fixed fold box:
+\(K_+''=2+O(r)>1\).
+Its minimum is at \(x_{\rm f}+O(r)\). When roots are present, the first
+lies in \((x_{\rm f}-\epsilon_{\rm f}/4,x_{\rm f}+\epsilon_{\rm f}/4)\) and may be double.
+On \(0\le x\le x_L=x_{\rm f}-2\epsilon_{\rm f}\) there is a fixed positive
+drift margin.
+
+Fix a finite \(B_*>x_{\rm f}+\epsilon_{\rm f}\), and a small positive output
+height \(Z_f\). Construct the boundary-flow coordinate
+of \cref{lem:direct-boundary-flow} on a fixed positive
+box from \(x_L\) to beyond \(B_*\), retaining the exact
+drift \(F_+\). Put \(t_0=s^2r^2\). The bounded-output
+interval of central heights is
+\begin{equation}
+\label{eq:direct-fold-bounded-output}
+ x_{\rm f}-\epsilon_{\rm f}\le w=\mathcal W_+(x(t_0Z_f;h),Z_f)\le B_* .
+\end{equation}
+We consider the central heights of \(\cH_p\) in the positive-drift
+component reached from \(x_L\). They form an interval, by
+\cref{lem:central-height-order} and \(\mathcal W_x>0\).
+
+\begin{proposition}[Bounded outputs at the fold]
+\label{prop:direct-fold-bounded}
+For each fixed \(B_*\), one can choose \(\epsilon_{\rm f}\) sufficiently
+small so that \(\Delta_p\) has at most three distinct zeros on
+\eqref{eq:direct-fold-bounded-output}, uniformly on both sides of
+the fold. If \(K_+\) has a positive root, \(\Delta_p\) has at most
+three distinct zeros on all of \(\cH_p\).
+\end{proposition}
+
+\subsubsection{Positive passage in the fold region}
+
+Reaching the bounded-output interval forces a fixed advance through
+the slow part of the boundary flow. We use this advance first to make
+the entry height small, then to apply the drift-weighted phase estimate.
+Since \(\mathcal W_+\le x\), for a central height in
+\eqref{eq:direct-fold-bounded-output} the positive half-orbit
+reaches \(x_L\) below height \(Z_f\) and then crosses the
+projected interval \([x_{\rm f}-2\epsilon_{\rm f},x_{\rm f}-\epsilon_{\rm f}]\), where
+\(0<F_+\le C\epsilon_{\rm f}^2\). Its incoming height at \(x=x_L\)
+therefore satisfies
+\begin{equation}
+\label{eq:direct-fold-action-gap}
+ Z_i\le Z_f\e^{-\mathcal A_{\rm gap}/s},\qquad
+ \mathcal A_{\rm gap}\ge c_1/\epsilon_{\rm f},\qquad
+ h/(s^3r^2)\le (Z_f/s)\e^{-\mathcal A_{\rm gap}/s}.
+\end{equation}
+The projected entry is at most \(x_L\), so its action is at least
+the displayed increment. The central prefix is therefore thin and has the
+preparation \(Z_i=s\xi \Upsilon(\xi)\), with
+\(\xi=k_ph\), \(\Upsilon(0)=1\), and uniform derivative bounds.
+
+Use \(T=-s\log h\) at the fixed output \(z=t_0Z_f\).
+The regular entry margin and \eqref{eq:direct-fold-action-gap} verify
+\cref{lem:direct-weighted-phase} with \(\delta=s\), \(N=1\), \(j=2\).
+Thus \(w_T=\theta_+F_+(w)\), with
+\(\theta_+-1,\theta_+',\theta_+''=o(1)F_+(w)\).
+The constants may depend on fixed \(\epsilon_{\rm f},B_*\).
+\Cref{rem:direct-projected-continuation} keeps the projected state
+below its first root and the inverse graph outward, also at a double root.
+
+The coefficient ratios at the output height \(t_0Z_f\) are
+\(O(s)\), and \cref{lem:boundary-flow-endpoint} with \(\ell=sr\)
+and \(\delta=s\) gives
+\begin{equation}
+\label{eq:direct-fold-endpoint}
+ -I_{+,w}=E_f A_pw\,U_p(w),\qquad
+ E_f=t_0(z_*/(t_0Z_f))^{2s}\longrightarrow0,\qquad
+ U_p=1+O_{C^3}(s),\quad A_p\asymp1.
+\end{equation}
+Compute the rate \(\mathfrak H_+=\partial_T\log(hI_{+,h})\) and its
+derivative from \eqref{eq:direct-rate-identities} with \(K=K_+\) and
+\(\theta=\theta_+\).
+On the fixed enlarged interval, the coefficient expansion and
+\eqref{eq:direct-curvature-coefficient-cubic}, with \(K_+'(0)=-b\) and
+\(R_K(x)=-rR_q(srx)\), give
+\[
+ \frac{K_+'(w)}w=2-\frac bw+3\kappa_3 rw+O(sr^2),\qquad
+ wK_+''-K_+'=b+3\kappa_3 rw^2+O(sr^2)>b/2 .
+\]
+Constants in these remainders may depend on \(B_*\).
+Since \(w_T=\theta_+F_+(w)>0\), the rate and its derivative
+therefore satisfy
+\begin{equation}
+\label{eq:direct-fold-positive-rates}
+ -C\epsilon_{\rm f}-o(1)\le\mathfrak H_+
+       \le 2-\frac{b_{\min}}{2B_*},\qquad
+ \mathfrak H_+'\ge-o(1),\qquad b_{\min}=1/2 .
+\end{equation}
+The constant \(C\) is independent of \(\epsilon_{\rm f}\); the errors tend to
+zero after \(\epsilon_{\rm f},B_*\) are fixed, uniformly as \(K_+(w)\)
+tends to zero.
+
+\subsubsection{The negative branch}
+
+The positive action gap also makes the negative branch thin at a
+fixed secondary cut. This places it in the range of the negative-branch
+estimates from the preceding section.
+The negative secondary drift
+\[
+ a+bX+X^2+rX^3R_q(-srX)
+\]
+has a fixed positive margin on every fixed prefix.
+Choose a large fixed \(M_n\), and then choose \(\epsilon_{\rm f}\) so
+that \(\mathcal A_{\rm gap}\) in \eqref{eq:direct-fold-action-gap} exceeds
+the negative action to \(X=M_n\) by a fixed positive amount.
+The inverse central-height coordinate puts the negative
+branch strictly below \(y=z/(s^3\rho^2)=\delta_{\rm an}\)
+at \(\rho=M_nr\), with the regular prefix preparation
+\eqref{eq:direct-annulus-prefix}. Hence
+\cref{lem:negative-branch-far-root} applies with \(M=M_n\).
+
+\subsubsection{Counting and the root-present cover}
+
+Let \(\rho_{\rm f}=b_{\min}/(12B_*)\), reduced if necessary
+so that \(\rho_{\rm f}<0.5\). Choose \(M_n\) large enough
+to absorb the \(r/\rho\) errors, then \(\epsilon_{\rm f}\) small for
+the action gap and the lower bound in
+\eqref{eq:direct-fold-positive-rates}.
+The positive projected output stays in the bounded interval just fixed.
+We divide according to the negative output: its small-radius and far-root rates give
+opposite signs for the first derivative of the slope ratio, while
+the compact primary range controls its critical points.
+For the slope ratio \(\mathcal L\) of \eqref{eq:direct-completed-log-ratio},
+the following three intervals cover the bounded-output central heights:
+\begin{enumerate}[label=(\roman*)]
+\item If the negative thin exit has \(\rho\le\rho_{\rm f}\),
+then \(\mathcal L'>0\), because the negative-branch rate
+\(2-3\rho+o(1)\) exceeds the upper bound for the positive-branch rate in
+\eqref{eq:direct-fold-positive-rates}.
+\item For \(\rho_{\rm f}/2\le\rho\le0.9\),
+\eqref{eq:direct-negative-primary-rates} and
+\eqref{eq:direct-fold-positive-rates} give
+\(\mathcal L''<0\).
+\item On \eqref{eq:direct-negative-far-core},
+\(\mathcal L'<0\), by
+\eqref{eq:direct-negative-far-rate} and the lower bound for the
+positive-branch rate. This includes every branch still thin at \(0.9\).
+\end{enumerate}
+The endpoint estimates and bounded derivatives of \(\Pi_p\) make the
+exterior derivatives \(o(1)\) in these comparisons.
+By \cref{lem:negative-branch-far-root}, the three ranges are ordered
+intervals of central heights after intersection with the bounded-output
+interval. The last two overlap, and the first two overlap on
+\([\rho_{\rm f}/2,\rho_{\rm f}]\). Their inequalities for
+\(\mathcal L(T)\) hold also at the cuts.
+The first and third comparisons exclude critical points in their
+respective ranges; the second controls their curvature. Thus, on the
+whole bounded-output interval,
+\begin{equation}
+\label{eq:direct-fold-critical-maximum}
+ \mathcal L'=0\quad\Longrightarrow\quad\mathcal L''<0.
+\end{equation}
+By \cref{cor:ordered-cover-zero-count}, \(\Delta_p\) has at most three
+distinct zeros on the bounded-output interval.
+
+To cover the early heights as well when \(K_+\) has a positive root,
+apply \cref{lem:prefix-root-cover}
+with \(\delta=s\), \(\ell=sr\), \(\epsilon_3=r\), comparison drifts
+\(a-\sigma bx+x^2\), \(R_p=x_{\rm f}-\epsilon_{\rm f}/2\),
+\(w_a=x_{\rm f}-3\epsilon_{\rm f}/4\) and the first root
+\(x_*\in(x_{\rm f}-\epsilon_{\rm f}/4,x_{\rm f}+\epsilon_{\rm f}/4)\).
+The positive margin up to \(R_p\) is fixed, and the inverse projection
+continues in the fold box up to \(Z_f\), including when \(x_*\) is double.
+Its root range lies in \eqref{eq:direct-fold-bounded-output}, where
+\eqref{eq:direct-fold-critical-maximum} holds. The lemma therefore gives
+the root-present bound of three.

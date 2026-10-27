@@ -1,0 +1,264 @@
+\subsection{Simple roots, quadratic passages and the cubic boundary}
+
+The form of the lower transition depends on which root controls its
+transit.  A separated simple root gives a power law, while a quadratic
+minimum is described by its full transit integral.  At the horizontal
+end a positive $\bar B$ gives an exact invariant-axis exponent; as
+$\bar B=\bar a=0$ is approached, we retain the whole slow factor
+$xF_I(x)$ to avoid division by the vanishing coefficients.  Each
+representation ends at the fixed phase section of
+Lemma~\ref{rw:transitions:lower-sections} and then uses the same
+central connection.
+
+\begin{proposition}[Lower preparations]\label{rw:lower-preparation}
+Fix a finite derivative order and a compact set of the indicated data.
+The following representations hold on common auxiliary domains and on
+the actual passing portions specified below.
+
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item Suppose the first positive root $q_0$ of
+$1-\bar a q+\bar Bq^2$ is simple, with
+$\Delta=-\partial_q(1-\bar a q+\bar Bq^2)|_{q=q_0}>0$.
+Assume $q_0$ and $\Delta$ have positive upper and lower bounds.
+There is an actual strong intersection $\widehat q=q_0+O(\epsilon)$
+on $Y=0$ and a regular power coordinate
+$t=\chi(\widehat q-q)$, where $\chi(0)=0$ and $\chi'>c>0$.
+On its passing side $t>0$ the central output is
+\begin{equation}\label{rw:transitions:finite-power}
+ L_-(q)=s_-+D_-(t),\qquad
+ D_-(t)=K_-t^{h_-/\epsilon}e^{j_-(t)},\qquad j_-(0)=0.
+\end{equation}
+Here $h_->c>0$, $h_-=q_0/\Delta+O(\epsilon)$, $K_->0$,
+and $j_-$ has bounded ordinary input and mixed coefficient and
+Euler-scale derivatives through the prescribed order.
+On this compact simple-root block the derivatives of
+$\epsilon\log K_-$ in the coefficients and Euler scale are bounded.
+The reflected outgoing preparation has the same properties.
+
+\item Near an interior double root of $F_I$, there are an increasing
+regular coordinate $u$ and a positive bounded time change for which
+the weak equation is
+\begin{equation}\label{rw:transitions:lower-morse}
+ u'=\epsilon(\mu+u^2).
+\end{equation}
+The complete interval to the selected right exit must satisfy
+$\mu+s^2>0$. The normal equation retains a fixed contracting margin.
+The relative amplitude and the absolute output have the finite-order
+extensions of Proposition~\ref{rw:relative-core}, without any bound
+on $\epsilon/\mu$.
+
+\item On a compact block $\bar B\ge B_*>0$, the fixed horizontal
+entry of Lemma~\ref{rw:transitions:lower-sections} has
+\begin{equation}\label{rw:transitions:horizontal-power}
+ D_-(t)=K_-t^{h_I/\epsilon}e^{P_-(t)/\epsilon},\qquad
+ h_I=\frac{1-\epsilon\bar B}{\bar B},\qquad P_-(0)=0.
+\end{equation}
+The selected finite jets of $P_-$ are bounded, including at $t=0$.
+Its domain is the positive component that connects to the fixed exit.
+The reflected exponent is exactly the same at each positive scale.
+All action accumulated after a fixed small horizontal section belongs
+to $K_-$; its logarithm need not have bounded gap derivatives.
+
+\item On a neighborhood of $\bar B=\bar a=0$, including both signs
+of $\bar B$, write $g=g_I=xF_I(x)$. The horizontal deviation admits
+\begin{equation}\label{rw:transitions:cubic-amplitude}
+ D(x)=C\exp\left[-\frac1\epsilon
+       \int_x^{x_R}\frac{\beta_I(s,0)}{g(s)}\,\dd s\right]
+       e^{\widetilde j(x)},\qquad C>0,
+\end{equation}
+where the normal entry and central relative units are included in
+$\widetilde j$. Its selected ordinary input and mixed jets are bounded
+on the common auxiliary domain. On the actual passing component put
+\begin{equation}\label{rw:transitions:cubic-rate}
+ N_I=\beta_I(x,0)+\epsilon g\widetilde j',\qquad
+ A_I=N_I-\epsilon g'+\epsilon g\frac{N_I'}{N_I}.
+\end{equation}
+Then
+\[
+ D'>0,\qquad \frac{D''}{D'}=\frac{A_I}{\epsilon g},\qquad
+ A_I=1+O_{C^N}(\epsilon),\qquad A_I(0)=1-2\epsilon\bar B.
+\]
+The rate coefficients are defined and bounded across the auxiliary
+nonpassing parameters; the quotient is used only where $g>0$.
+\end{enumerate}
+The reference value $s_-$ in these formulas is the central value of
+the one fixed weak graph, independent of the input. The outgoing
+reference is obtained by the fixed-field reflection convention.
+No assertion about the number of closing zeros is part of this
+proposition.
+\end{proposition}
+
+\begin{proof}
+For a simple root, the first task is to locate the actual strong
+separatrix and normalize its input.  In the phase coordinate the root
+$r$ is close to $1/q_0$;
+$g_I'(r)>c>0$. The strong fibre is $x=r$. On a fixed finite root
+block use the original normal height coordinate
+$U_0=Z/\epsilon=Tz-\epsilon\nu T^2H(T)$, which extends smoothly
+through $\epsilon=0$ after substitution of $w=\epsilon Tz$.
+The phase on these states satisfies $x=T+O_{C^N}(\epsilon)$.
+Thus $x=r$ is a graph over $z$, with horizontal slope
+$O(\epsilon)$, and intersects $z=1$ at $q=\widehat q$ with
+$\widehat q=q_0+O(\epsilon)$. Its normal rate has a fixed nonzero
+margin outside a smaller saddle box. It is the strong separatrix
+throughout $0<z<1$ and is a barrier to the incoming passage.
+The sign in \eqref{rw:transitions:lower-passing} selects
+$q<\widehat q$.
+
+Locally put $u=U_0$ and $v=x-r$. The invariant axes give
+\[
+ \dot u=-uA(u,v),\qquad \dot v=\epsilon vB(u,v),
+ \qquad A,B>c>0.
+\]
+At the equilibrium their ratio is
+$h=A(0,0)/B(0,0)=q_0/\Delta+O(\epsilon)$.
+Let $H_o=A/B$. Normalize the axes by the regular changes
+\begin{equation}\label{rw:transitions:axis-normalization}
+ \frac{\dd\log U}{\dd\log u}=\frac{h}{H_o(u,0)},
+ \qquad
+ \frac{\dd\log V}{\dd\log v}=\frac{H_o(0,v)}h.
+\end{equation}
+The right sides equal one at zero. Subtracting one before integration
+shows that $U/u$ and $V/v$ are positive regular units with bounded
+jets and inverses. In the new coordinates the orbital coefficient is
+$h^2H_o(u,v)/(H_o(u,0)H_o(0,v))$. It equals $h$ on both axes.
+Two Hadamard divisions therefore give
+\begin{equation}\label{rw:transitions:large-ratio-equation}
+ \frac{\dd U}{\dd V}
+ =-\frac h\epsilon\frac UV-\frac{U^2}\epsilon R(U,V).
+\end{equation}
+The finite jets of $R$ are bounded uniformly. To obtain final order
+$N$, use the phase and axis constructions two orders higher for these
+two divisions, and retain another two orders for the connections and
+inverses. Together with Proposition~\ref{rw:phase}, a graph order
+$N+11$ suffices for this argument. Only finitely many orders are used.
+
+Fix small positive sections $U=U_*$ and $V=V_*$ and take
+$0<t<t_0<V_*/2$. The reciprocal equation gives the exact passage
+\begin{equation}\label{rw:transitions:reciprocal-lower}
+ \mathscr D(t)=
+ \frac{U_*(t/V_*)^{h/\epsilon}}
+ {1+(U_*/\epsilon)t^{h/\epsilon}
+       \int_t^{V_*}s^{-h/\epsilon}R(U(s),s)\,\dd s}.
+\end{equation}
+The integral retains the dependence of $R$ on the solution $U$.
+Set $V=t e^{\epsilon\theta}$ and
+$T_f=\epsilon^{-1}\log(V_*/t)$. The denominator is $1+U_*tI$, where
+\[
+ I=\int_0^{T_f}e^{-(h-\epsilon)\theta}
+       R(U(\theta),t e^{\epsilon\theta})\,\dd\theta,
+ \qquad U_\theta=-U[h+UVR(U,V)].
+\]
+Here $U$ contracts uniformly and the explicit scalar flow
+$V=te^{\epsilon\theta}$ satisfies \eqref{rw:relative:slow-growth}
+with $\varpi=O(\epsilon)$. The mixed normal induction of
+Appendix~\ref{rw:app:relative-variations} bounds the differentiated
+integrands, with their additional weight $e^{-(h-\epsilon)\theta}$, by
+$C(1+\theta)^M e^{-(h_*-C_N\epsilon)\theta}$.
+Extend $R$ boundedly beyond $V_*$ while retaining contraction.
+The infinite integral has bounded ordinary and mixed jets. The finite
+tail and its endpoint terms are bounded by finite sums
+$C\epsilon^{-a}t^{-b}(1+|\log(t/V_*)|)^M(t/V_*)^{h/\epsilon-1}$.
+Half the exponent absorbs the input powers and logarithms, and
+$t/V_*<1/2$ absorbs the inverse scale powers. Thus the selected jets
+extend at $t=0$. Reducing $t_0$ makes the denominator positive and
+$j=-\log(1+U_*tI)$ has bounded jets with $j(0)=0$.
+
+The transverse connection from $z=1$ to the local fast section has
+bounded jets and inverse jets in the original finite-height coordinates;
+composing its input with $V$ gives the regular deficit $t$.
+The remaining leg stays away from the simple root and reaches the fixed
+phase exit. Its input-independent linear contraction belongs to $K_-$;
+its relative unit is controlled by Proposition~\ref{rw:relative-core}
+and Lemma~\ref{rw:transitions:curved-exit}, followed by
+Proposition~\ref{rw:transitions:central-core}. The large power absorbs
+the finite ordinary derivative losses, so composition preserves the
+relative jets. Absorb the unit's value at zero into $K_-$.
+On this simple-root compact block the remaining linear action is an
+integral over intervals whose slow denominators have positive margins.
+It follows that $\epsilon\log K_-$ has bounded coefficient and
+Euler-scale jets. This proves (i), including the fixed central reference.
+
+For (ii), let $x_0$ be the minimum of $F_I$ near the double root.
+It is interior and bounded away from zero. Write
+\[
+ F_I(x)=\mu+(x-x_0)^2a(x),\qquad
+ a(x)=\int_0^1(1-s)F_I''(x_0+s(x-x_0))\,\dd s>c.
+\]
+The increasing Morse coordinate $u=(x-x_0)\sqrt{a(x)}$ is regular.
+Its velocity is $\epsilon(\mu+u^2)$ times the bounded positive
+unit $x\partial_xu$. Dividing time by this unit gives
+\eqref{rw:transitions:lower-morse}. The normal contraction remains uniformly positive.
+Apply Proposition~\ref{rw:relative-core} on the whole passing interval,
+with the fixed exit margin. Crossing the minimum requires $\mu>0$;
+for $\mu\le0$ a right-hand entry must exceed $\sqrt{-\mu}$.
+The same fixed phase and central connections complete the passage.
+
+For (iii), choose $x_h>0$ small enough that $F_I>c>0$ on
+$[0,x_h]$ throughout the positive-$\bar B$ block. Since
+$\beta_I(0,0)=1-\epsilon\bar B$ and $F_I(0)=\bar B$,
+\begin{equation}\label{rw:transitions:horizontal-division}
+ \frac{\beta_I(x,0)}{xF_I(x)}=\frac{h_I}{x}+q_0(x)
+\end{equation}
+with $q_0$ having bounded finite jets at zero; subtraction of the
+constant value and one Hadamard division prove this statement.
+The exact normal integral from the fixed horizontal entry is
+\[
+ Z_{\rm out}=Z_e(t)
+ \exp\left[-\frac1\epsilon\int_t^{x_R}
+       \frac{\beta_I(s,0)}{sF_I(s)}\,\dd s\right]e^{j(t)}.
+\]
+The factor $Z_e$ is bounded away from zero for this section.
+Separate the integral at $x_h$ and use
+\eqref{rw:transitions:horizontal-division}. After the central relative
+unit is included, its input-dependent logarithm multiplied by
+$\epsilon$ is
+\[
+ P_-(t)=\int_0^t q_0(s)\,\dd s
+ +\epsilon\log\frac{Z_e(t)}{Z_e(0)}
+ +\epsilon\bigl(\widetilde j(t)-\widetilde j(0)\bigr).
+\]
+All its required jets are bounded by the relative estimates, even
+when a later slow exit is lost. For each passing parameter the
+input-independent action on $[x_h,x_R]$ belongs to $K_-$.
+A later loss of passage gives the absolute zero extension of
+Proposition~\ref{rw:relative-core}; $\log K_-$ may still have
+unbounded gap derivatives there.
+Reflection fixes $\bar B$ and $\epsilon$, so $h_I$ agrees exactly
+on the two sides. If a separately normalized power input is needed,
+$t\exp(h_I^{-1}\int_0^t q_0)$ absorbs the pure weak-axis action;
+it and its inverse have bounded jets. In a common actual input the
+scaled remainder $P_-$ is the appropriate representation.
+
+For (iv), retain the undistributed slow factor $g=xF_I$.
+The exact linear normal integral and the relative amplitudes give
+\eqref{rw:transitions:cubic-amplitude}; the fixed horizontal normal
+input is a positive unit, so its logarithm can be included in
+$\widetilde j$. Use \eqref{rw:relative:rates} with
+$(q,f,j)=(\epsilon,g,\widetilde j)$ and
+$N_I=1+O(\epsilon)>0$ to obtain the rate formula.
+At zero, $g(0)=0$ and $g'(0)=\bar B$; hence
+$N_I(0)=1-\epsilon\bar B$ and
+$A_I(0)=1-2\epsilon\bar B$ exactly. The finite jets of the
+relative amplitude and of $g,\beta_I$ give those of $N_I,A_I$.
+To retain a rate coefficient through order $N$, retain the primitive
+through order $N+2$ before differentiating.  The construction remains
+regular when $\bar B$, $\bar a$ or a slow gap vanishes, since these
+factors have not been divided out.  The values and logarithmic
+derivatives of $D$ are used on the passing component
+\eqref{rw:transitions:lower-passing}; its relative coefficients and
+absolute zero extension are defined on the larger auxiliary domain.
+\end{proof}
+
+\begin{remark}[The choice of section matters]
+The exponent in \eqref{rw:transitions:horizontal-power} belongs to a
+fixed positive horizontal fast section. The finite section $Y=0$ has
+normal input $\epsilon$ times a unit on finite $T$-intervals; at
+$T=0$ it has an additional vanishing $T$ factor. Thus extending that
+section to the horizontal boundary does not preserve the displayed
+power without accounting for its input factor. Likewise an arbitrary
+regular substitution $t\mapsto tk(t)$ contributes
+$(h/\epsilon)\log k(t)$ to an unscaled power logarithm.
+The normalized input of (i) absorbs this action; the common-input
+formula (iii) records it in $P/\epsilon$.
+\end{remark}

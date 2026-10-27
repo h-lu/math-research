@@ -1,0 +1,634 @@
+\subsection{Two lower roots at a finite upper saddle}
+\label{rw:finite:three-saddle}
+
+When both simple lower roots meet an upper saddle, all three
+passages can lose their exits together. Fix $\bar B=-\beta$,
+$0<\beta_*\le\beta\le\beta^*$, near the triangle center
+$\bar m=\beta$, $\bar c=-\bar a$, $\nu=0$. The actual upper
+ratio $r$ stays in a fixed compact subset of $(0,\infty)$. Retaining
+both lower deficits as well as this ratio allows all three passages
+to degenerate independently. Use the actual splitting coordinates of Lemma~\ref{rw:coordinates:finite-splittings}, and the
+upper coordinates and regular legs of
+Lemma~\ref{rw:coordinates:two-center-upper} near the reversible
+intersection. On the remaining compact parts, extend just the triangle
+coordinates $L_\pm L_0^{\epsilon\beta}$ from
+Lemma~\ref{rw:centers:triangle}, and straighten and normalize the
+neighboring axes by the same construction. The axis graph denominators
+have positive margins on every compact positive-ratio interval; no
+resonant shear is needed for this extension. Its orbital remainder is
+$\epsilon$ times a bounded function and vanishes on the triangle
+component. The same regular outer legs therefore give
+\[
+ u=G_+(t)=u_0+tA_0(t),\qquad
+ z=G_-(v)=z_0+vB_0(v),\qquad v=t^re^{w(t)},
+\]
+where $A_0,B_0,G_+',G_-'>c>0$. The lower maps are those of
+Proposition~\ref{rw:lower-preparation}:
+\begin{equation}\label{rw:finite:three-powers}
+ D_\pm(s)=K_\pm s^{h_\pm/\epsilon}e^{j_\pm(s)},\qquad
+ K_\pm>0,\quad h_\pm>h_*>0,\quad j_\pm(0)=0.
+\end{equation}
+The upper passage and both lower deficit passages define the signed
+central comparison on
+\begin{equation}\label{rw:finite:three-domain}
+ 0<t<t_0,\qquad u>0,\qquad z>0.
+\end{equation}
+Since $u,z$ increase, this is an interval. The closing function there is
+\[
+ F(t)=D_+(u)-D_-(z)-\sqrt\epsilon\,\nu H,\qquad H>h_*>0.
+\]
+The weak references, and hence $H$, are independent of $t$.
+The complete central outputs are $s_++D_+(u)$ and $s_-+D_-(z)$.
+Their positivity is an additional requirement for an actual return,
+beyond the deficit conditions in \eqref{rw:finite:three-domain}.
+The Gaussian reference calculation in
+Lemma~\ref{rw:finite:regular-lower} applies on the fixed inner cores:
+$F_\pm$ have positive margins there even when the outer roots are
+lost. It gives $H=\sqrt{2\pi}+O(\sqrt\epsilon)$ and, more precisely,
+\[
+ s_+=-\sqrt\epsilon\,\nu H_+,
+ \qquad s_-=\sqrt\epsilon\,\nu H_-,
+ \qquad H_+,H_->c>0,\qquad H=H_++H_-.
+\]
+At a zero of $F$ the two outputs agree. For $\nu\ge0$ the
+incoming one is positive, and for $\nu\le0$ the outgoing one is
+positive, since $D_\pm>0$. Thus their common output is always
+positive at a closing zero. In each core the original height
+$\mathfrak z=1+y$ has derivative of fixed sign on $\mathfrak z=0$,
+namely the sign of $\nu$ (with the reflected sign on the other
+core). An orbit with positive entrance and exit cannot cross that
+line and return. Together with the strict deficit passages and finite
+transverse connections, this proves that each closing zero gives an actual
+positive-height return. At nonclosing inputs we continue to use the
+signed comparison.
+
+The numerator calculation below uses coefficient division as well as
+input differentiation. Reserve twelve total finite orders in the lower
+and upper preparations before shrinking their construction domains.
+This supplies six ordinary input and two coefficient derivatives of the regular connectors and
+lower relative coefficients, four Euler input and four coefficient
+derivatives of the upper relative logarithm, and the two coefficient
+derivatives spent in product division below. The lower graph can be
+constructed at order $23$ by the $N+11$ reserve in
+Proposition~\ref{rw:lower-preparation}. Scale derivatives are Euler
+derivatives. The ordinary input derivatives of the lower connectors
+are not asserted for the singular composite $t^r$ at zero.
+
+Use the common signed relative extension and absolute zero extension
+after Proposition~\ref{rw:generator-division} when a coefficient
+segment changes a deficit's sign.
+For any fixed desired $S_*>0$, first reduce the input radius $d<1$
+so that a half of $d^{h_*/\epsilon}$ absorbs the upper bound for
+$\exp(\epsilon\log K_\pm/\epsilon)$, and then reduce $\epsilon$
+so that the remaining half-power absorbs all reserved derivatives.
+This gives
+\begin{equation}\label{rw:finite:three-flat}
+ |\partial_s^i\partial_{\mathbf b}^{\alpha}\widehat D_\pm|
+       \le C\epsilon^{-M}e^{-S_*/\epsilon}
+\end{equation}
+through the required finite orders. These extensions preserve both
+center identities by that construction.
+Keep the original $t$ fixed on the coefficient segments and impose
+central positivity on actual returns.
+
+Put
+\[
+ \mathcal K=\epsilon\log
+ \frac{D_-'(z)G_-'(v)v'}{D_+'(u)G_+'(t)},\qquad
+ D=t\partial_t,\qquad \kappa=r-1,\qquad
+ E=\frac{tv''}{v'}-\kappa.
+\]
+Ordinary primes on $G_\pm$ and $D_\pm$ mean their own input
+derivatives. For use in the chain rule define
+\[
+ R_\pm(s)=j_\pm'(s)+
+       \frac{j_\pm'(s)+sj_\pm''(s)}{h_\pm/\epsilon+sj_\pm'(s)}.
+\]
+Then $D_\pm''/D_\pm'=(h_\pm/\epsilon-1)/s+R_\pm$ on $s>0$.
+The displayed formula also defines bounded auxiliary coefficients on
+the signed interval; no logarithm of a zero extension is taken.
+
+\begin{proposition}[Complete three-saddle numerator]
+\label{rw:finite:three-numerator}
+On the comparison interval the following function is exactly
+$tuz\,\mathcal K'$:
+\begin{equation}\label{rw:finite:three-M}
+\begin{aligned}
+ M={}&(h_--\epsilon)uDz-(h_+-\epsilon)zDu
+              +\epsilon uz(\kappa+E)\\
+ &+\epsilon uz\left[
+ R_-(z)Dz-R_+(u)Du+
+ \frac{G_-''(v)}{G_-'(v)}Dv-
+ \frac{G_+''(t)}{G_+'(t)}t\right].
+\end{aligned}
+\end{equation}
+This formula defines its auxiliary extension. Its endpoint value is
+\[
+ M(0+)=\epsilon\kappa u_0z_0.
+\]
+Near ratio one put
+$\xi_1=(u_0+z_0)/2$, $\xi_2=(u_0-z_0)/2$ and
+$I=|\xi_2|+|\kappa\xi_1|$. Then
+\begin{equation}\label{rw:finite:three-comp}
+\begin{aligned}
+ M&=C_0+Tt-Wt\omega(t;\kappa)+\mathcal R_3,\\
+ C_0&=\epsilon\kappa u_0z_0,\\
+ P&=u_0z_1(rh_--\epsilon)+\epsilon u_0z_0rJ_-,\\
+ N&=z_0u_1(h_+-\epsilon r)+\epsilon u_0z_0J_+,\\
+ T&=P-N+\epsilon u_0z_0\sigma_s(2+1/r),\\
+ W&=\kappa P+2\epsilon u_0z_0\sigma_s r,
+\end{aligned}
+\end{equation}
+where $u_1=G_+'(0)$, $z_1=G_-'(0)$ and
+\[
+ J_+=u_1R_+(u_0)+G_+''(0)/u_1,\qquad
+ J_-=z_1R_-(z_0)+G_-''(0)/z_1.
+\]
+Here $\sigma_s$ denotes the resonant coefficient $\sigma$ of
+\eqref{rw:upper:comp-map} in the present center-preserving coordinates.
+For $|\kappa|\le1/64$,
+\begin{equation}\label{rw:finite:three-remainder}
+ |D^j\mathcal R_3|\le C(I+|\nu|)t^{7/4},\qquad 0\le j\le2.
+\end{equation}
+If this fibre has one actual closing zero, then
+\begin{equation}\label{rw:finite:three-forcing}
+ |\nu|\le\delta_\epsilon I,\qquad
+ \delta_\epsilon=C\epsilon^{-M-1/2}e^{-S_*/\epsilon}\longrightarrow0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Differentiate $\mathcal K$ before clearing its denominators.
+The two power rates give the first two terms in
+\eqref{rw:finite:three-M}; the upper second derivative gives
+$\epsilon uz(\kappa+E)$. The ordinary curvature of each regular leg
+gives the last two terms in its bracket. Thus the numerator retains
+every coordinate contribution to the complete central derivative.
+
+To verify the expansion, first regard $t$ and $t^r$ as independent
+small quantities. The endpoint Taylor formulas give
+\[
+ u=u_0+u_1t+O(t^2),\qquad
+ z=z_0+z_1t^r+\text{terms of order greater than one}.
+\]
+The terms linear in these two quantities are
+\[
+ C_0+Pt^r-Nt-\epsilon u_0z_0\sigma_s Q(t),
+ \qquad Q=2rt\omega-(2+1/r)t.
+\]
+In particular the $J_\pm$ contributions are present even when the
+connectors are nonlinear. The exact equality
+$t^r=t-\kappa t\omega$ gives \eqref{rw:finite:three-comp}.
+
+We first estimate the remainder uniformly on the auxiliary box,
+before dividing by the center generators. Write $\mathcal F_a$ for a
+function whose selected
+$D^j\partial_{\mathbf b}^{\alpha}$ derivatives are $O(t^a)$,
+$j\le2$, $|\alpha|\le2$. With $a=15/16$ the functions
+$t,t^r,t\omega$ belong to $\mathcal F_a$ on
+$|\kappa|\le1/64$; every fixed parameter logarithm is absorbed by
+$63/64-a>0$. The upper preparation gives
+$v-t^r,Dv-rt^r\in\mathcal F_{2a}$ and
+$E+\sigma_sQ\in\mathcal F_{7/4}$.
+Integral Taylor remainders of $G_\pm$, $R_\pm$ and their regular
+curvatures then show that every omitted product has at least two
+$\mathcal F_a$ factors or the displayed curvature remainder.
+As $2a=15/8>7/4$, it follows that
+$D^j\partial_{\mathbf b}^{\alpha}\mathcal R_3=O(t^{7/4})$ on
+the entire common auxiliary box.
+
+The triangle center gives vanishing of $M$ and its retained
+coefficients on $\xi_1=\xi_2=\nu=0$; the reflected extension
+identities give the same vanishing on $\xi_2=\kappa=\nu=0$.
+These two axes explain the generator pair $(\xi_2,\kappa\xi_1)$.
+Apply the product-ideal division of
+Proposition~\ref{rw:generator-division} to $\mathcal R_3$.
+Its explicit mixed integral in $\xi_1,\kappa$ spends two coefficient
+derivatives and preserves $t^{7/4}$, proving
+\eqref{rw:finite:three-remainder}.
+
+Apply the identical division to
+$\widehat D_+(G_+(t))-\widehat D_-(G_-(v(t)))$.
+Equation~\eqref{rw:finite:three-flat} bounds its divided coefficients
+by $C\epsilon^{-M}e^{-S_*/\epsilon}$. At a physical closing zero
+Lemma~\ref{rw:centers:relative-forcing} now proves
+\eqref{rw:finite:three-forcing}. This is a coefficient constraint
+on the whole fibre. If $I=0$, it forces $\nu=0$ and the exact center
+identity contributes no isolated zero.
+\end{proof}
+
+\paragraph{The scalar compensator calculation.}
+The same scalar calculation controls the derivative at a single upper
+saddle and the numerator here. Keeping $t\omega$ intact makes its
+bounds uniform even when $|\kappa\log t|$ is unbounded.
+
+\begin{lemma}\label{rw:finite:compensator-calculus}
+For $|\kappa|\le1/64$ set $r=1+\kappa$ and
+\[
+ M=C+Tt-Wt\omega(t;\kappa)+R,\qquad L=|T|+|W|>0.
+\]
+Assume $|R'|\le C_*Lt^{1/2}$ and
+$|R''|\le C_*Lt^{-1/2}$. On a common sufficiently small
+$(0,t_0)$, $M$ has at most two zeros, with multiplicity.
+If it has two, then
+\begin{equation}\label{rw:finite:compensator-signs}
+ TW>0,\qquad (C+R(0))W>0.
+\end{equation}
+There is also the following one-zero version. For fixed positive
+$c_*,C_*$, if
+\[
+ W/\kappa\ge c_*,\quad |T|\le C_*|\kappa|,\quad
+ |R'|\le C_*|\kappa|t^{1/2},\quad \kappa\ne0,
+\]
+then first choosing $t_0$ small and then $|\kappa|$ small makes
+$M'$ have sign $-\operatorname{sign}\kappa$ throughout the interval.
+The constant $C$ is unrestricted in both assertions.
+\end{lemma}
+
+\begin{proof}
+Let $\phi=(t\omega)'$. Direct differentiation gives
+$\phi'=-rt^{\kappa-1}$. On $0<t<e^{-6}$,
+$1\le\phi\le16t^{-1/8}$. At any zero of $M'$,
+\[
+ T=W\phi-R',\qquad
+ |W|\ge\frac{L}{2(1+\phi)}
+\]
+once $C_*t_0^{1/2}<1/2$. Thus $W\ne0$ at such a zero and
+\[
+ \frac{|R''|}{|W|rt^{\kappa-1}}
+ \le \frac{2C_*}{r}(1+\phi)t^{1/2-\kappa}
+ \le C C_*t^{23/64}<1/2
+\]
+after a second common reduction. Every zero of $M'$ is therefore
+simple and crosses with sign $W$. There can be at most one such
+crossing; Rolle's theorem proves the two-zero bound, including
+multiplicity. If $W=0$, the estimate on $R'$ excludes a zero of $M'$.
+
+When $TW\le0$, $|T-W\phi|\ge L>|R'|$, so two zeros are impossible.
+If $W>0$, the unique possible critical point is a minimum. Two zeros
+force strict decrease to the first of them and hence $M(0+)>0$.
+For $W<0$ all signs reverse. The integrable bound on $R'$ supplies
+$R(0)$ and proves \eqref{rw:finite:compensator-signs}.
+The last assertion is the $\phi$ estimate in the proof of
+Lemma~\ref{rw:finite:saddle-counting}\textup{(ii)}, applied to
+$M'=T-W\phi+R'$.
+\end{proof}
+
+\paragraph{The coefficient columns near ratio one.}
+To apply the scalar lemma, we must control its coefficient norm
+$|T|+|W|$ by the center generators. Work on the same inverse box
+as above. Transversality of $T$ to the reversible component and an
+exact factorization of $W$ give the required determinant margin.
+At the reversible intersection, let $k_*=G_+'(0)=G_-'(0)>0$.
+There $h_+=h_-=1/(2\beta)$ exactly. Put
+\[
+ A_c=k_*(1/(2\beta)-\epsilon)>c>0.
+\]
+The coefficient $T$ has $\partial_{\xi_2}T=2A_c$ there.
+Moreover the functions $\tau_1$, $\sigma_1$ and $\sigma_s/\epsilon$
+vanish on both center axes, so their divisions have bounded columns:
+\begin{equation}\label{rw:finite:three-directed-generators}
+\begin{aligned}
+ \tau_1&=a_\tau\xi_2+b_\tau\kappa\xi_1+c_\tau\nu,
+                         &a_\tau&>c>0,\\
+ \sigma_s/\epsilon&=-a_s\xi_2+b_s\kappa\xi_1+c_s\nu,
+                         &a_s&>c>0,\\
+ |\tau_1|+|\sigma_1|&\le C(I+|\nu|).
+\end{aligned}
+\end{equation}
+The positive $a_\tau$ is the inverse of the positive transverse
+column in \eqref{rw:coordinates:finite-jacobian}, continued with
+its coefficient derivative margin. We verify the second direction
+from the original upper field.
+
+The coordinates of Lemma~\ref{rw:coordinates:two-center-upper}
+are affine at zero scale, so the first-order calculation in
+Appendix~\ref{rw:app:upper-resonant-sign} applies. Absorbing their
+positive linear section factors in $\chi_{\rm loc}^2$, it gives on
+$\kappa=\nu=0$
+\[
+ \sigma_s=-\chi_{\rm loc}^2\epsilon\bar a
+                  [\bar m^{5/2}+O(\epsilon)],\qquad\chi_{\rm loc}>c.
+\]
+The factors $\epsilon$ and $\bar a$ are exact, by the affine
+zero-scale field and the reversible identity. The finite coordinate
+Jacobian gives $\partial_{\bar a}\xi_2>c$ at fixed $\kappa$.
+Hence the $\xi_2$ column is strictly negative at the intersection.
+The integral division, with the uniform second coefficient jets,
+retains that sign on a smaller box and proves
+\eqref{rw:finite:three-directed-generators}.
+
+The $W$ column has an exact positive factor on the finite-scale
+coefficient box. Define
+\[
+ Q_*=z_1(rh_--\epsilon)+\epsilon z_0rJ_->c>0,\qquad
+ Q^*=u_1(h_+-\epsilon r)+\epsilon u_0J_+>c>0.
+\]
+Exactly, $P=u_0Q_*$ and $N=z_0Q^*$. On $\xi_2=\nu=0$ write
+$\sigma_s=\epsilon b_s\kappa\xi_1$. Then
+\begin{equation}\label{rw:finite:three-W-factor}
+ W=\kappa\xi_1[Q_*+2\epsilon^2rb_s\xi_1^2].
+\end{equation}
+The bracket has a uniform positive margin.
+Remove $\xi_2,\nu$ by single integral division. On $\nu=0$ this gives
+\[
+ \binom TW=
+ \begin{pmatrix}a_T&b_T\\a_W&b_W\end{pmatrix}
+ \binom{\xi_2}{\kappa\xi_1},
+ \qquad a_T>c,\quad b_W>c,\quad |b_T|\le C.
+\]
+The exact formula for $W$ also gives
+$|a_W|\le C|\kappa|+C\epsilon^2(|\xi_1|+|\xi_2|)^2$.
+Consequently the determinant has a positive margin after reducing
+the box; restoring $\nu$ and using
+\eqref{rw:finite:three-forcing} yields
+\begin{equation}\label{rw:finite:three-column-norm}
+ cI\le |T|+|W|\le CI
+\end{equation}
+on every noncenter fibre with a closing zero. The division uses the
+coordinates $\kappa,\xi_1$ themselves; their product
+$\kappa\xi_1$ is a generator.
+
+\paragraph{Critical points on the deficit domain.}
+The deficit inequalities now constrain a critical point of $M$.
+This step uses $u,z>0$ and therefore applies on the comparison
+interval, rather than on the whole auxiliary box.
+
+\begin{lemma}\label{rw:finite:three-critical-gaps}
+Near ratio one, under \eqref{rw:finite:three-forcing} on a noncenter
+fibre, every zero of $M'$ in the comparison interval has $u_0z_0>0$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{rw:finite:three-comp} and
+$1-\kappa(t\omega)'=rt^\kappa$,
+\[
+ M'=rP t^\kappa-N-\epsilon u_0z_0\sigma_sQ'
+                                 +\mathcal R_3'.
+\]
+Suppose $u_0z_0\le0$, and put
+$S(t)=|u_0|t^\kappa+|z_0|$. The principal terms have the same
+sign and modulus at least $cS(t)$; the noncenter assumption and
+forcing exclude $S=0$.
+If $u_0<0$, the condition $u>0$ gives $|u_0|\le Ct$.
+If $z_0<0$, $z>0$ gives $|z_0|\le Cv\le Ct^r$.
+In either case
+\[
+ |u_0z_0|\le CtS(t).
+\]
+Since $|Q'|\le Ct^{-1/8}$, its curvature contribution is bounded
+by $C\epsilon|\sigma_s|t^{7/8}S(t)$.
+Also $I\le C(|u_0|+|z_0|)$ and
+$S(t)\ge t^{1/64}(|u_0|+|z_0|)$, whence
+\[
+ |\mathcal R_3'|\le CIt^{3/4}
+                      \le Ct^{47/64}S(t).
+\]
+A common small $t_0$ makes both errors less than half the principal
+margin. Therefore $M'$ cannot vanish.
+\end{proof}
+
+\paragraph{Ratios separated from one.}
+Away from ratio one, a power comparison replaces the compensator.
+We must also recover the signs of the original coefficients: the
+curvature crossing alone does not determine them.
+After reflection it is enough to fix $r\ge1+\delta$, $\delta>0$,
+on a compact ratio interval. Put $I_a=|u_0|+|z_0|$.
+The triangle-preserving coordinates give the unsheared equation
+\[
+ V_U=-rV/U-V^2R(U,V),\qquad
+ R=\epsilon(u_0R_u+z_0R_z+\nu R_\nu),
+\]
+with bounded finite jets. Its exact reciprocal integral yields
+\[
+ v=t^re^w,\quad |D^jw|\le C\epsilon(I_a+|\nu|)t,\quad
+ v'\asymp t^{r-1},\quad v''\ge c\,v'/t.
+\]
+Indeed $t^r\int_t^1s^{-r}\,\dd s\le Ct$, and its finitely many
+Euler derivatives have the same bound. The differentiated integral
+equations have small integral coefficients; iteration retains these
+bounds. Fixed coefficient logarithms are absorbed with a portion of
+the positive margin $\delta$. No near-resonant shear is used here.
+
+Single-center division of the absolute closing difference gives
+$|\nu|\le\delta_\epsilon I_a$ on every fibre with a closing zero.
+Direct integral division of \eqref{rw:finite:three-M} then gives,
+on the full positive $t$ interval of the auxiliary extension,
+\begin{equation}\label{rw:finite:three-away-derivative}
+ M'=u_0v'\mathcal A-z_0\mathcal B+\nu v\mathcal C,
+\end{equation}
+where
+\[
+ \mathcal A,\mathcal B>c>0,\quad
+ |\mathcal A'|\le C,\quad
+ |\mathcal B'|\le C(1+|u_0|/t),\quad
+ |(v\mathcal C)'|\le Cv/t.
+\]
+These bounds follow by separating the two unmixed deficit terms
+from their mixed connector term. On $u_0=z_0=0$, the numerator is
+$tv\nu$ times a bounded coefficient, by division from the exact
+triangle identity.
+On $z_0=0$, divide $M$ by $v$ and then by $u_0$; its endpoint
+coefficient is $(rh_--\epsilon)z_1>c$.
+On $u_0=0$, divide by $t$ and then by $z_0$; its endpoint
+coefficient is $-(h_+-\epsilon r)u_1<-c$.
+The remaining mixed term has its constant
+$\epsilon\kappa u_0z_0$ explicitly removed. Its first Euler
+derivatives are $O(t)$ and its second ordinary derivative is
+$O(1/t)$. The bounded connector derivatives and the preceding
+bounds on $w$ prove these estimates term by term in
+\eqref{rw:finite:three-M}; integral division in $u_0,z_0$
+preserves them. Differentiating the two unmixed terms gives
+\eqref{rw:finite:three-away-derivative}; the mixed second derivative
+accounts for $|u_0|/t$ in $\mathcal B'$. Ratios of $v$ at points
+of a coefficient integration segment are positive bounded units,
+since $r$ is held fixed and the corresponding difference of $w$
+is $O(\epsilon(I_a+|\nu|)t)$.
+
+At a zero of $M'$, its two principal terms must balance. The
+$\nu v$ term is smaller than their sum since
+$v\le Ctv'$ and $v\le Ct$. Thus
+\begin{equation}\label{rw:finite:three-away-balance}
+ u_0z_0>0,\qquad |z_0|\asymp|u_0|v'
+                      \asymp |u_0|t^{r-1}.
+\end{equation}
+At such a point,
+$M''=u_0v''\mathcal A$ with relative error
+$O(t+|u_0|+\delta_\epsilon t)$.
+All zeros of $M'$ are simple and cross with sign $u_0$, so there
+is at most one. This controls the auxiliary numerator. Actual returns
+remain subject to the strict deficit conditions.
+
+Suppose $M$ has two zeros in the comparison interval. The auxiliary
+interval contains both zeros and extends to $t=0$. If $u_0,z_0$
+were both negative, its only possible critical point would be a maximum, whereas
+$M(0+)=\epsilon\kappa u_0z_0>0$. Such a function has at most one
+positive zero. Hence
+\begin{equation}\label{rw:finite:three-away-positive}
+ u_0>0,\quad z_0>0,\quad
+ z_0\le Cu_0t_*^{r-1}\le Cu_0t_0^\delta
+\end{equation}
+for a critical point $t_*$ between the two zeros. In particular,
+after reducing $t_0$, $\xi_2=(u_0-z_0)/2>0$.
+
+To recover $\tau_1$ with a uniform sign, work first at
+$\epsilon=\nu=0$ on $z_0=0$. Let $q=q_l=Q_s$ be the common
+incoming root. Its lower and upper equations are
+\[
+ \beta q^2+\bar a q=1,\qquad
+ \bar m q^2-\bar c q=1.
+\]
+The outgoing intersections are $p_l=1/(\beta q)$ and
+$P_s=1/(\bar m q)$. Therefore exactly
+\begin{equation}\label{rw:finite:three-away-transverse}
+ \tau_1=(\bar m-\beta)q,\qquad
+ \delta_+=p_l-P_s=\frac{\bar m-\beta}{\beta\bar m q}.
+\end{equation}
+Since $u_0=\chi_+(\delta_+)$ with $\chi_+'>c$, these formulas
+give $\tau_1=A_0u_0$ on this surface, where $A_0>c$ has bounded
+jets. In particular the derivative in $\bar m-\beta$ is a
+positive unit at the center, even when the actual ratio is used
+as the remaining coordinate.
+
+In the common inverse coordinates define, at positive scale,
+$A_\epsilon=\int_0^1\partial_{u_0}
+\tau_1(su_0,0,r,0;\epsilon)\,\dd s$.
+The exact triangle identity makes the omitted constant zero.
+Convergence of the lower strong intersections and the upper
+low-layer jets to their zero-scale values gives
+$|A_\epsilon-A_0|\le C\epsilon(1+|\log\epsilon|)$.
+Single division in $z_0,\nu$ now gives
+\[
+ \tau_1=A_\epsilon u_0+B_\epsilon z_0+C_\epsilon\nu,\qquad
+ A_\epsilon>c,\quad |B_\epsilon|+|C_\epsilon|\le C.
+\]
+Use \eqref{rw:finite:three-away-positive} and
+$|\nu|\le\delta_\epsilon(u_0+z_0)$.
+Choose $t_0$ with $C t_0^\delta$ small first, then the scale with
+$C\delta_\epsilon$ small. The two errors are absorbed by
+$A_\epsilon u_0/2$, and hence $\tau_1>0$. The lower and upper
+intersection equations, together with the critical-point balance,
+therefore determine the coefficient direction.
+The same argument applied to $\bar m-\beta$ gives
+$\bar m-\beta>0$: on the zero-scale surface in
+\eqref{rw:finite:three-away-transverse} its quotient by $u_0$
+is also a positive bounded unit, and it vanishes on the exact
+positive-scale triangle axis. On the compact center part with
+$r\ge1+\delta$, one has $\bar c=-\bar a<-c_\delta<0$;
+the actual ratio coordinates preserve this margin on a smaller
+neighborhood. Therefore the original primary generator has
+$\sigma_1=\bar c(\bar m-\beta)<0$ on this nonresonant two-zero
+branch. All $\nu$ terms in these divisions are $O(|\nu|)$ and
+are absorbed by the stated forcing; no extra $\epsilon$ factor
+is assigned to the $\nu$ dependence of the ratio.
+
+The local calculation gives an upper bound of four closing zeros. It also identifies the
+only branch on which the numerator can have two zeros. The signs on
+that branch will be used at the already fixed regular seam in
+Section~12; they do not yet determine the value of $\mathcal K$ at
+that seam.
+
+\begin{proposition}[Local count and the two-zero terminal branch]
+\label{rw:finite:three-count}
+On common small neighborhoods of every compact triangle-center
+stratum, the closing equation has at most four isolated zeros on
+\eqref{rw:finite:three-domain}, with multiplicity.
+More precisely, on a noncenter fibre satisfying the local forcing
+bound supplied by one closing zero,
+\[
+ Z(M)\le2,\qquad Z(\mathcal K)\le3,\qquad Z(F)\le4.
+\]
+If a terminal subinterval contains two zeros of $M$, counted with
+multiplicity, orient the whole field by reflection if necessary so
+that $r>1$. Then
+\begin{equation}\label{rw:finite:three-terminal-signs}
+ u_0>0,\qquad z_0>0,\qquad \xi_2>0,\qquad \tau_1>0,
+ \qquad M(0+)>0,\qquad
+ \mathcal K(t)\longrightarrow-\infty\quad(t\downarrow0).
+\end{equation}
+Near ratio one the same branch also has $T>0$, $W>0$ and
+$\sigma_s<0$; away from one it has $\bar m>\beta$ and
+$\sigma_1<0$. In particular $t=0$ is the end of the deficit
+comparison interval in this branch. It need not be an end of the
+positive-central return domain. If a seam $t_s$ in the comparison interval
+is fixed away from the zeros and its tail contains exactly these two
+zeros, then $M(t_s)>0$, $\mathcal K'_t(t_s)>0$, and
+$\mathcal K'_p(t_s)<0$ in the outward coordinate
+$p=P_s-\psi_+(t)$, $\psi_+'>0$.
+These conclusions do not assume or provide a sign for
+$\mathcal K(t_s)$.
+\end{proposition}
+
+\begin{proof}
+Near one, \eqref{rw:finite:three-remainder} and
+\eqref{rw:finite:three-column-norm} satisfy
+Lemma~\ref{rw:finite:compensator-calculus}. Away from one, the
+single crossing established above gives $Z(M)\le2$.
+On the comparison interval, $M=tuz\,\mathcal K'$ with $tuz>0$,
+and $F'=D_+'(u)G_+'(t)(1-e^{\mathcal K/\epsilon})$.
+Two applications of Rolle's theorem with multiplicity therefore give
+the displayed bounds. If there is no closing zero, the bound for $F$
+is immediate. If forcing gives the exact center, there is no isolated
+closing zero.
+
+The away-from-one terminal signs were proved in
+\eqref{rw:finite:three-away-positive} and
+\eqref{rw:finite:three-away-transverse}. For the near-one signs,
+first restrict to a smaller ratio interval so that its reflected
+ratio remains in $|r-1|\le1/64$.
+Fix a large $K_0$ and separate the cone
+$|\xi_2|\le K_0|\kappa\xi_1|$.
+On this cone, the exact positive column
+\eqref{rw:finite:three-W-factor}, the small $\xi_2$ column,
+and relative forcing give
+\[
+ \frac{W}{\kappa\xi_1}>c,\qquad
+ |T/\xi_1|\le C|\kappa|,\qquad
+ |\mathcal R_3'/\xi_1|\le C|\kappa|t^{1/2}.
+\]
+Thus the one-zero part of
+Lemma~\ref{rw:finite:compensator-calculus} applies to $M/\xi_1$.
+For $\kappa=0$ this cone is the reversible center. Neither case
+permits the two-zero branch.
+
+In the complementary cone choose $K_0$ large and then reduce the
+coefficient box so that $T$ has the sign of $\xi_2$.
+Two zeros of $M$ give a zero of $M'$ in the deficit interval, so
+Lemma~\ref{rw:finite:three-critical-gaps} implies $u_0z_0>0$.
+The case $\kappa=0$ would have $C_0=0$, contrary to
+\eqref{rw:finite:compensator-signs}. For $\kappa>0$, $C_0>0$,
+so that same lemma gives $W>0$ and $T>0$, hence $\xi_2>0$.
+Equation~\eqref{rw:finite:three-directed-generators}, this cone and
+forcing imply $\tau_1>0$ and $\sigma_s<0$.
+The exact formula
+\[
+ W=\kappa u_0Q_*+2\epsilon u_0z_0\sigma_s r
+\]
+then excludes $u_0,z_0<0$: both terms would be negative.
+Thus both deficits are positive.
+
+Reflection exchanges the lower legs and replaces the actual upper
+passage by its inverse. The new ratio is $1/r$, the new critical
+function is $-\mathcal K$ composed with the inverse input, and its
+derivative numerator is a nonzero signed unit times the old one.
+It preserves zeros with multiplicity and the comparison interval.
+Apply the preceding argument in that complete reflected coordinate
+choice when $r<1$; no inequality is transported while keeping the
+old entry coordinate fixed.
+
+Positive endpoint deficits now place all sufficiently small $t>0$
+in the comparison interval. Both complete central outputs must still
+be positive for an actual return. At fixed coefficients, the lower
+derivatives at $u_0,z_0$ are finite and nonzero, while
+$v'\sim rt^{r-1}$.
+This proves the endpoint limit for $\mathcal K$ in
+\eqref{rw:finite:three-terminal-signs}.
+Finally $M(0+)>0$ and exactly two zeros before the fixed seam,
+counted with multiplicity, imply $M(t_s)>0$ by parity.
+The positive multiplier and $dp/dt<0$ give the two derivative signs.
+The remaining step is to determine $\mathcal K(t_s)$ from the
+regular overlap. Proposition~\ref{rw:anchors:three-saddle} combines
+that value with the derivative signs and endpoint parity to count
+zeros on the whole union. The local estimate alone leaves the
+four-zero closing bound.
+\end{proof}

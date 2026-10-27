@@ -1,0 +1,487 @@
+\subsection{Two infinite endpoints and one exact exponent}
+\label{rw:infinity:two-infinite}
+
+When both ray endpoints tend to infinity, the lower cones and upper
+barrier of Section~\ref{rw:finite:geometry} give the limiting conditions
+\[
+ \bar B\ge0,\qquad |\bar a|\le2\sqrt{\bar B},\qquad
+ \bar c^2+4\bar m\le0.
+\]
+The case $\bar c=\bar m=0$ is reserved for the second scale in
+Section~10. In this subsection $\bar m<0$. These inequalities describe
+the limiting point. The neighborhoods below are open in the coefficients and retain perturbations on both
+sides of the limiting boundaries.
+
+For $\bar B>B_*>0$, the two lower passages have exactly the same
+power exponent at every positive scale. By
+Proposition~\ref{rw:lower-preparation} and
+\eqref{rw:transitions:equal-exponents},
+\begin{equation}\label{rw:infinity:horizontal-powers}
+ D_\pm(t)=K_\pm t^{h/\epsilon}e^{P_\pm(t)/\epsilon},\qquad
+ h=\frac{1-\epsilon\bar B}{\bar B},\quad P_\pm(0)=0.
+\end{equation}
+The selected jets of the scaled amplitudes $P_\pm$ are bounded;
+a regular radial coordinate change need not bound $P_\pm/\epsilon$.
+All input-independent constants, including slow actions, remain in
+$K_\pm>0$. With the two weak references fixed, the complete central
+equation is
+\begin{equation}\label{rw:infinity:closing}
+ F=D_+(t)-J(t)-\rho\nu H_c,\qquad J=D_-\circ f,
+ \quad H_c=H_++H_->h_*>0,
+\end{equation}
+where $s_+=-\rho\nu H_+$, $s_-=\rho\nu H_-$ and $H_\pm>0$.
+The upper connector has $f'>0$. Both deviation derivatives are positive,
+so $K=\epsilon\log(J'/D_+')$ satisfies
+$F'=D_+'(1-e^{K/\epsilon})$. Impose every slow-path and
+regular-connection condition on the comparison domain, and central
+positivity on actual returns. A zero of \eqref{rw:infinity:closing} has
+positive common height and positive core arcs by the argument of
+Section~\ref{rw:finite:three-saddle}. With the collar and stated
+passage conditions it gives an actual return.
+
+On a strict focus neighborhood the upper angular velocity is bounded
+away from zero between fixed horizontal sections. Its bounded-time
+radial equation gives $f=tk$, with positive bounded $k,k^{-1},f'$
+and inverse derivative, in all selected jets. Apply
+Lemma~\ref{rw:joint-jet-budget}, with the common exponent
+$h$, to obtain \eqref{rw:transitions:common-power}. Its coefficient-only
+constant is $C=\epsilon\log(K_-/K_+)$.
+All logarithm arguments have positive margins on a fixed small
+section. The cancellation uses equality of the exponents for the same
+field, before differentiation. On each endpoint block,
+Lemma~\ref{rw:joint-jet-budget} bounds the input-dependent terms
+through relative connector units. Input-independent slow actions stay
+in $C$; their possibly divergent coefficient derivatives are outside
+these finite-jet estimates.
+
+\subsection{Strict focus: values and slopes after center division}
+
+\begin{proposition}\label{rw:infinity:strict-focus}
+At a limiting point with
+$\bar B>0$, $\bar a^2<4\bar B$, $\bar m<0$ and
+$\bar c^2+4\bar m<0$, one common neighborhood of the two infinite
+endpoints contains at most two isolated counted cycles, with
+multiplicity. The statement includes both center families and their
+intersection.
+\end{proposition}
+\begin{proof}
+Use the actual common input from
+Lemma~\ref{rw:transitions:common-input}, so that its limit is $t=1/p$.
+On compact positive input intervals, the upper regular convergence
+and lower rate integrals give, on $\nu=0$,
+\[
+ K(t)\longrightarrow-\mathcal A(1/t),\qquad
+ \mathcal A(p)=A_-(\mathcal U_0(p))-A_+(p),\qquad
+ A_\pm(P)=\int_0^P\frac{x\,\dd x}{1\pm\bar ax+\bar Bx^2}.
+\]
+This convergence holds with the selected coefficient derivatives.
+It extends through $t=0$: reserve one further input derivative in
+\eqref{rw:transitions:common-power}, compare on a short interval to a fixed
+positive input, and use the common Lipschitz bound before sending that
+input to zero. On this strict domain $C$ and its selected coefficient
+jets are bounded; no slow gap is tending to zero in this assertion.
+
+To count near the two center families, we need the value and slope
+of the limiting action after division by their generators.
+Put $M=-\bar m>0$, $\Omega=\sqrt{4M-\bar c^2}$ and
+$\Upsilon=e^{\pi\bar c/\Omega}$. The upper linear solution in
+Section~\ref{rw:finite:geometry} has
+\[
+ S(T)=e^{\bar cT/2}\frac{\sin(\Omega T/2)}{\Omega/2},\qquad
+ I(T)=\int_0^TS(u)\,\dd u,\qquad pS(T)=I(T).
+\]
+At $T_0=2\pi/\Omega$, $S=0$, $S'=-\Upsilon$,
+$S''=-\bar c\Upsilon$, and $I=(1+\Upsilon)/M$.
+Expanding $S(T)=I(T)/p$ by the implicit function theorem yields
+\begin{equation}\label{rw:infinity:upper-series}
+ \mathcal U_0(p)=\Upsilon p-\frac{\bar c(1+\Upsilon)}M
+          +\frac{\Upsilon-\Upsilon^{-1}}{2Mp}+O(p^{-2}).
+\end{equation}
+Substitution in $q=(S^2-IS')/S$ gives this expansion.
+The lower integrands give
+\[
+ A_\pm(p)=\frac{\log p}{\bar B}+C_\pm
+ \mathbin{\pm}\frac{\bar a}{\bar B^2p}
+ +\frac{\bar B-\bar a^2}{2\bar B^3p^2}+O(p^{-3}),
+ \quad C_--C_+=\frac{\pi\bar a}{\bar B\sqrt{4\bar B-\bar a^2}}.
+\]
+The constant follows by separating the logarithmic derivative of
+$1\pm\bar ax+\bar Bx^2$ from its reciprocal. Consequently
+$\mathcal A(1/t)=J_0+J_1t+O(t^2)$, where
+\begin{equation}\label{rw:infinity:focus-jets}
+\begin{aligned}
+ J_0&=\frac\pi{\bar B}
+ \left(\frac{\bar c}{\sqrt{4M-\bar c^2}}
+       +\frac{\bar a}{\sqrt{4\bar B-\bar a^2}}\right),\\
+ J_1&=\frac{1+\Upsilon^{-1}}{\bar B^2}
+               \left(-\bar a-\frac{\bar B\bar c}M\right).
+\end{aligned}
+\end{equation}
+These vanish simultaneously only on $\bar a=\bar c=0$ or
+$M=\bar B,\bar a=-\bar c$. Indeed $J_0=0$ fixes the opposite
+signs and gives $M\bar a^2=\bar B\bar c^2$; inserting the resulting
+$\bar a=-\bar c\sqrt{\bar B/M}$ in $J_1$ proves the assertion.
+
+The real period domains in Section~\ref{rw:centers} contain every
+represented input at either center. On a smaller product neighborhood,
+Proposition~\ref{rw:generator-division} therefore gives
+\[
+ K=\tau K_\tau+\sigma_1K_\sigma+\nu K_\nu,
+ \qquad \tau=\bar a+\bar c,
+ \quad \sigma_1=\bar c(\bar B-M).
+\]
+The independent dividing coordinates are
+$(\tau,\bar c,\bar B-M,\nu)$; no inverse for $\sigma_1$ is used.
+The value and slope distinguish the two transverse action columns.
+Differentiating \eqref{rw:infinity:focus-jets} by the successive
+differences of Proposition~\ref{rw:generator-division} gives the
+value--slope determinants
+\[
+ -\frac{2\pi(1+\Upsilon^{-1})}
+ {\bar B^3(4\bar B-\bar c^2)^{3/2}},\qquad
+ -\frac{\pi}{\bar B^3M(\sqrt{\bar B}+\sqrt M)}
+\]
+on the second and reversible center, respectively. They agree at
+the intersection and have uniform nonzero margins on compact blocks.
+Reserve the two coefficient
+orders for this division, in addition to the three input orders and
+the one derivative spent in the cancellation formula. The primitive
+order can be fixed before the common sections by Section~4.
+
+Here $\epsilon\log K_\pm$ are bounded. Choose $t_0$ so that half
+of $t^{h/\epsilon}$ absorbs these constants; the other half absorbs
+the finite differentiated powers and logarithms, exactly as in
+\eqref{rw:finite:three-flat}. Center division therefore gives the
+absolute weight required by Lemma~\ref{rw:centers:relative-forcing},
+with $I=|\tau|+|\sigma_1|$. Every fibre with a closing zero satisfies
+$|\nu|\le\eta(\epsilon)I$, $\eta\to0$.
+If $I=|\tau|+|\sigma_1|>0$, the rank just computed yields
+\[
+ |K(0)|+|K'(0)|\ge cI,\qquad \|K\|_{C^2}\le CI.
+\]
+On a common short interval these estimates force either a nonzero
+value throughout or a first derivative of one strict sign. Thus $K$
+has at most one zero.
+Off the centers the same alternative follows directly from $(J_0,J_1)$.
+If $I=0$, forcing gives the center identity. Finally the displayed
+formula for $F'$ gives the claimed two zeros, with multiplicity.
+\end{proof}
+
+\subsection{Fixed slow strips and their relative limits}
+
+As a lower double root or an upper repeated root is approached, transit
+times diverge and the strict-focus bounds on the action constants no
+longer apply. Fixed sections separate these contractions from the
+relative terms that will be differentiated.
+
+\begin{lemma}\label{rw:infinity:fixed-strips}
+Near an incoming lower double root $\bar a=2\sqrt{\bar B}$,
+choose fixed lower phase sections on opposite sides of its minimum.
+The passage exists precisely when its exact scalar factor $f_L$ is
+positive between them. Its map, about the selected weak reference, is
+$L_Lu e^{r_L(u)}$, with bounded selected relative jets and
+\[
+ \epsilon\log L_L=-A_L+O(\epsilon),\qquad A_L\longrightarrow+\infty.
+\]
+Near an upper repeated root $\bar c=2\gamma>0$,
+$\bar m=-\gamma^2$, fix the upper slow sections $v=\pm v_R$.
+That passage exists precisely for $\mu_U>0$ and has
+\begin{equation}\label{rw:infinity:upper-slow-factor}
+ G(u)=e^{-A_U}u e^{r_U(u)},\qquad
+ A_U=\frac{2\Xi}{b\sqrt{\mu_U}}\arctan\frac{v_R}{\sqrt{\mu_U}},
+\end{equation}
+where $b=1-\epsilon\bar B$,
+$\mu_U=-[(\bar c+\nu)^2+4b\bar m]/(4b^2)$ and
+$\Xi=(\bar c+\nu)(1-2\epsilon\bar B)/(2b)$.
+The complete upper connector is
+$f(t)=\alpha t e^{\psi(t)}$, with
+$\alpha=e^{-A_U}k_0$, $k_0>c$, and bounded selected jets of
+$\psi$ and of the absolute factor $\alpha$.
+These bounds do not bound coefficient derivatives of $A_L$ or $A_U$.
+\end{lemma}
+\begin{proof}
+Apply the exact phases and relative integral estimates of Section~4.
+On the lower strip, the normal rate has a positive margin and the
+scalar velocity is $\epsilon f_L$. At its limiting minimum
+$r_0$, positivity and coefficient closeness give
+$f_L(w)\le\delta+C(w-r_0)^2$. For fixed sections $R<r_0<Q$,
+\[
+ A_L=\int_R^Q\frac{\beta_L(w,0)}{f_L(w)}\,\dd w
+ \ge\frac{2\beta_*}{\sqrt{C\delta}}
+       \arctan\left(c_1\sqrt{C/\delta}\right)\longrightarrow\infty,
+ \quad c_1=\min(r_0-R,Q-r_0).
+\]
+The weak-branch reference may arrive at the outer section with
+nonzero normal value. Subtract its solution before applying the
+relative integral, so the difference still has the contracting normal
+factor. Regular central composition puts $-A_L+O(1)$ into
+$\epsilon\log K_-$ and leaves $P_-$ bounded in the selected
+input-dependent jets. Reflection gives the corresponding assertion
+for $K_+$.
+
+The upper exact equations are $v'=\mu_U+v^2$ and
+$R'=-R\beta_U(v,R)$, with
+$\beta_U(v,0)=(\Xi-v)/b$.
+Integration between $\pm v_R$ gives
+\eqref{rw:infinity:upper-slow-factor}. Both endpoints are fixed and
+separated, so the lost-exit extension of the relative-core proposition
+applies. On adjoining sections $v_R\le|v|\le v_{\rm out}$,
+$\mu_U+v^2\ge v_R^2/2$ after shrinking coefficients. The regular
+maps $\Phi_{\rm in},\Phi_{\rm out}$ have bounded positive units.
+The absolute factor $e^{-A_U}$ and the relative integral have the
+selected extensions from Proposition~\ref{rw:relative-core}.
+Lemma~\ref{rw:app:flat-composition} gives the complete connector
+and its asserted jets.
+\end{proof}
+
+\begin{lemma}\label{rw:infinity:repeated-tail}
+After subtraction of the input-independent contractions in the
+preceding lemma, the relative input derivatives converge to their
+repeated-root limits, uniformly even when the transit times diverge.
+On compact intervals $p>1/\gamma$ the incoming upper logarithmic
+rate has limit $-p/(p-1/\gamma)^2$.
+\end{lemma}
+\begin{proof}
+Apply Proposition~\ref{rw:relative-core} to the fixed strips.
+The upper strip has $q=1$, fixed transverse exits and quadratic time
+jets; the lower strip has $q=\epsilon$ and $T\ge c/\epsilon$.
+Their auxiliary flow jets converge on bounded time intervals, so
+Corollary~\ref{rw:transitions:relative-continuity} gives the
+relative differentiated limits even as the transit times diverge.
+
+Its limiting rate is explicit. For the repeated affine field set
+$V=Y+\gamma^{-2}$, $Z=X+\gamma Y-\gamma^{-1}$ and $r=Z/V$.
+Then $V'=\gamma V+Z$, $Z'=\gamma Z$, $r'=-r^2$, and
+$\log(Vr)-\gamma/r$ is constant. At $(p,0)$ it is
+$\log(p-P_0)-P_0/(p-P_0)$, where $P_0=1/\gamma$.
+The incoming relative logarithm has the negative of this entry value;
+its derivative is $-p/(p-P_0)^2$. Fixed regular connectors preserve
+this rate on the original entry coordinate. The preceding tail
+argument supplies its perturbed limit. Reflection uses its own forward
+contracting chart.
+\end{proof}
+
+\subsection{Domination and competing slow actions}
+
+\begin{proposition}\label{rw:infinity:slow-domination}
+At an incoming lower double root with a strict upper focus, the local
+bound is one cycle, necessarily simple and attracting. Its reflected
+outgoing configuration is repelling and has no closing zero for
+$\ell\ge0$. At a positive repeated upper root with a regular outgoing
+lower path, the bound is again one simple attracting cycle; it is absent
+for $\ell\le0$. This includes an additional incoming lower double root.
+The reflected upper configuration reverses both stability and the
+excluded sign of $\ell$.
+\end{proposition}
+\begin{proof}
+Every fixed slow strip must pass; outside its scalar passing condition
+there is no represented orbit. In the first case
+\eqref{rw:transitions:common-power} is $K=-A_L+O(1)$, uniformly in input
+and transit time. In the second it is
+$K=-hA_U-A_L+O(1)$, where $A_L=0$ if the incoming lower path
+is regular. Shrink the neighborhoods until the divergent negative terms
+absorb the bounded remainder. This uses no ratio between the actions and
+gives $K<-1$ and $F'>0$ throughout the comparison interval. At a
+zero the first-return multiplier in central height is
+$J'/D_+'<1$, giving simplicity and attraction.
+The deviations both tend to zero as $t\downarrow0$, so in the
+second case $D_+>J$ excludes $\ell\le0$ in
+\eqref{rw:infinity:closing}. Reflection gives $D_+<J$ in the
+outgoing-only lower case and excludes $\ell\ge0$. These inequalities
+are valid on the extended comparison interval; they do not assert a
+positive central return at $t=0$.
+\end{proof}
+
+\begin{proposition}\label{rw:infinity:opposing}
+Suppose the limiting data are
+\[
+ \bar B_*>0,\qquad \bar a_*=-2\sqrt{\bar B_*},\qquad
+ \bar c_*=2\gamma>0,\quad\bar m_*=-\gamma^2,\qquad
+ \bar B_*\ne\gamma^2.
+\]
+A common neighborhood of the two infinite endpoints contains at most
+two isolated counted cycles, with multiplicity. The same holds after
+reflection and for either sign of the line-breaking parameter.
+\end{proposition}
+\begin{proof}
+Here the lower and upper contractions enter $K$ with opposite signs.
+Both fixed slow strips must pass. The lower contraction belongs to
+$K_+$, so cancellation gives
+\[
+ K(0)=A_L-hA_U+O(1),\qquad
+ \|K-K(0)\|_{C^2([0,t_0])}\le C.
+\]
+The value $K(0)$ can be arbitrary because the two gaps vanish
+independently. Keep it undifferentiated in coefficients. To
+bound the nonconstant part, reserve at least three input derivatives
+of the primitive relative maps before the derivative spent in the
+critical logarithm, and use the same actual outgoing coordinate
+before either slow strip.
+
+Put $r_0=1/\sqrt{\bar B_*}$ and $P_0=1/\gamma$.
+The regular outgoing entry integral has logarithmic rate
+$-p/[\bar B_*(p-r_0)^2]$. Combining this with the upper rate in
+Lemma~\ref{rw:infinity:repeated-tail}, and with the limiting horizontal
+factor $h=1/\bar B_*$, gives on compact subsets of
+$p>\max(r_0,P_0)$
+\[
+ K_p\longrightarrow\frac p{\bar B_*}
+      [(p-r_0)^{-2}-(p-P_0)^{-2}].
+\]
+In the reciprocal input this is
+\begin{equation}\label{rw:infinity:opposing-slope}
+ K_t\longrightarrow
+ \frac{(P_0-r_0)[2-(P_0+r_0)t]}
+ {\bar B_*(1-r_0t)^2(1-P_0t)^2}.
+\end{equation}
+Compare with a fixed positive input and use the uniform second
+derivative bound to extend this convergence to $t=0$. Since
+$P_0\ne r_0$, the right side has one strict sign on a common short interval. Thus $K$
+has at most one zero regardless of its constant value, and $F$ at
+most two. The excluded equality is exactly the joint center treated
+in Section~\ref{rw:joint-section}.
+\end{proof}
+
+\subsection{The cubic horizontal boundary}
+
+\begin{proposition}\label{rw:infinity:cubic}
+At $\bar B_* =\bar a_*=0$, $\bar m_*<0$,
+$\bar c_*^2+4\bar m_*\le0$, the two-infinite-endpoint local bound
+is three isolated cycles, with multiplicity. The open neighborhoods
+include both signs of $\bar B$, both signs of $\nu$, and a repeated
+upper boundary when present.
+\end{proposition}
+\begin{proof}
+At the cubic boundary the power representation is singular.
+Use instead the undivided phases of
+Proposition~\ref{rw:lower-preparation}, written as
+\[
+ x'=\epsilon g_\pm(x),\quad g_\pm(x)=xF_\pm(x),\qquad
+ Z'=-Z\beta_\pm(x,Z).
+\]
+The exact coefficients satisfy
+\[
+ F_\pm(0)=\bar B,\quad F_\pm'(0)=\pm\bar a,
+ \quad \beta_\pm(0,0)=1-\epsilon\bar B,
+\]
+and on $\nu=0$,
+$F_\pm(x)=\bar B\pm\bar ax+(1+\epsilon\bar m)x^2$.
+Fix a small exit $x_R>0$ with $F_\pm(x_R)>x_R^2/2$ and a
+positive fixed fast input. An entry $x<x_R/2$ passes precisely when
+$F_\pm>0$ on $[x,x_R]$. This is the positive scalar component
+adjoining $x_R$; it is one interval. Lost exits have infinite time,
+so the relative and absolute extensions of Section~4 apply here.
+No extension across a collision of entry and exit is needed.
+
+After regular continuation to the central section set
+\[
+ N_\pm=\beta_\pm(x,0)+\epsilon g_\pm\widetilde j_\pm',\qquad
+ A_\pm=N_\pm-\epsilon g_\pm'
+                    +\epsilon g_\pm N_\pm'/N_\pm.
+\]
+The exact logarithmic rate is
+\begin{equation}\label{rw:infinity:cubic-rate}
+ D_\pm'>0,\qquad
+ \frac{D_\pm''}{D_\pm'}=\frac{A_\pm(x)}{\epsilon xF_\pm(x)},
+ \quad A_\pm=1+O(\epsilon),\quad A_\pm(0)=1-2\epsilon\bar B.
+\end{equation}
+The last two assertions hold with the reserved jets on the auxiliary
+product box. Normal contraction absorbs the finite inverse scale powers
+from the central connection, giving the absolute bounds required for
+one coefficient division and the subsequent forcing estimate.
+
+For a strict upper focus, $f=tk$ and its limiting map is
+$f_0(t)=1/\mathcal U_0(1/t)$. At a positive upper repeated root,
+Lemma~\ref{rw:infinity:fixed-strips} gives instead
+$f=\alpha te^\psi$, $\alpha\to0$. Its proof only requires bounded
+$\bar B$, so remains valid here. In both cases
+\[
+ L=tf'/f,\qquad R_f=f''/f',\qquad L(0)=1
+\]
+have bounded input jets. The compositions depend on $f$ and $\psi$,
+not on $\alpha^{-1}$. The two scalar passing intervals at $t$ and
+$f(t)$ intersect in one interval, since $f'>0$; at the repeated
+root impose also $\mu_U>0$. The signed central comparison may again
+be larger than the actual return domain.
+
+The connector curvature enters when differentiating the complete
+critical function. Keeping this term gives the exact identity
+\begin{equation}\label{rw:infinity:cubic-numerator}
+\begin{split}
+ \mathcal P&=tF_+(t)F_-(f(t))K'\\
+ &=F_+(t)A_-(f(t))L-F_-(f(t))A_+(t)
+        +\epsilon tF_+(t)F_-(f(t))R_f.
+\end{split}
+\end{equation}
+The exact endpoint values give $\mathcal P(0)=0$, allowing one
+division by the radial input on the auxiliary box. Define
+$Q=\mathcal P/t=\int_0^1\mathcal P'(ut)\,\dd u$ on the whole
+auxiliary box. Reserve primitive total order eight: the rate and
+curvature formulas spend at most two orders, and this division one.
+The remaining five supply three input and two coefficient orders for
+$Q$. On the passing interval $Q=F_+F_-K'$, with positive multiplier.
+
+If $\bar c_*\ne0$, reflect to $\bar c_*>0$. At zero lower
+coefficients and zero scale,
+$Q=t[L-(f/t)^2]$ and
+\[
+ Q'(0)=1-\alpha_0^2>0,\qquad
+ \alpha_0=e^{-\pi\bar c_*/\sqrt{-4\bar m_*-\bar c_*^2}}
+\]
+in the strict focus case. In the repeated case the same exact
+numerator gives
+\[
+ |Q'(0)-(1-\alpha^2)|\le C(|\bar B|+|\bar a|+\epsilon),
+ \qquad \|Q''\|\le C.
+\]
+Since $\alpha\to0$, a common small interval has $Q'>c>0$.
+It follows that $Q$ has at most one zero, $K$ at most two, and
+$F$ at most three.
+
+It remains to include $\bar c_*=0$, in a strict focus neighborhood.
+Choose the reflected phase and graph extensions symmetrically. On
+$\bar a=\bar c=\nu=0$ the connector is an increasing involution
+and hence the identity; the two relative maps and the extended
+numerator coincide. This is an identity on the common auxiliary
+product box, even if a contracted coefficient point loses a horizontal
+exit. Thus Hadamard division gives
+\[
+ Q=\bar a Q_a+\bar cQ_c+\nu Q_\nu.
+\]
+The same division of the absolute deviations and
+Lemma~\ref{rw:centers:relative-forcing} give, at a closing zero,
+$|\nu|\le\eta(\epsilon)(|\bar a|+|\bar c|)$, $\eta\to0$.
+
+Compute the transverse rank from the undivided limiting numerator,
+then transfer it to the actual divided columns.
+Put $M=-\bar m$ and expand the reciprocal of
+\eqref{rw:infinity:upper-series} as
+$f_0(t)=\alpha_0t+f_2t^2+f_3t^3+O(t^4)$. Then
+\[
+ f_2=\frac{\bar c\alpha_0(1+\alpha_0)}M,\qquad
+ f_3=\frac{\bar c^2\alpha_0(1+\alpha_0)^2}{M^2}
+                -\frac{\alpha_0-\alpha_0^3}{2M}.
+\]
+At zero scale the value and slope of $Q$ are
+\[
+ Q(0)=\bar B f_2/\alpha_0+\bar a(1+\alpha_0),
+\]
+\[
+ Q'(0)=\bar B(2f_3/\alpha_0-f_2^2/\alpha_0^2)
+       +\bar af_2(1+\alpha_0^{-1})+1-\alpha_0^2.
+\]
+Differentiating in $(\bar a,\bar c)$ on the reversible face gives
+\[
+ \begin{pmatrix}2&2\bar B/M\\
+ 0&\pi(M-\bar B)/M^{3/2}\end{pmatrix}.
+\]
+Its determinant has a fixed nonzero margin near $\bar B=0$.
+Mixed convergence of the undivided extended numerator transfers this
+rank to the actual columns. With
+$I=|\bar a|+|\bar c|$, forcing and the reserved bounds give
+$|Q(0)|+|Q'(0)|\ge cI$, $\|Q\|_{C^2}\le CI$.
+The value-or-slope alternative on a fixed short interval gives at most
+one zero of $Q$, followed by the same two Rolle steps. If $I=0$,
+forcing gives the reversible identity. Apply the finite-selection
+convention of Section~\ref{rw:counting}.
+\end{proof}

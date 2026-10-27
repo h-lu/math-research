@@ -1,0 +1,95 @@
+\subsection{A direct Jacobian estimate}
+\label{subsec:deg-raw-jacobian}
+
+In the following two sign ranges, the graph Jacobian itself controls the
+complete derivative. An exact logarithmic derivative separates the
+endpoint factor from an interior term whose integral has a uniform upper
+bound, so no action compactification is needed.
+
+\begin{lemma}\label{deg:lem-raw-jacobian}
+Assume either
+\(\alpha _0\le0,\alpha _1\le0\), or
+\(\alpha _0=-s^2<0,\alpha _1=sp>0,\gamma>0\) and
+\[
+ {s\over\gamma^{3/2}}\le k_0,\qquad
+ {p\over\sqrt\gamma}\le\pi_0<\sqrt {12}.
+\]
+On the physical input interval selected by Lemma~\ref{lem:loc-capture},
+the central transition has a uniformly bounded positive derivative.
+After the final choice of the finite saddle--node multiplier, the
+complete return is a contraction.
+\end{lemma}
+
+\begin{proof}
+Put \(\xi=v-\gamma\), the local spatial coordinate of
+\eqref{deg:central-field}, and set
+\[
+ M=-P(\gamma+\xi)
+ =-\alpha _0-\alpha _1\xi+3\gamma \xi^2+\xi^3,\qquad
+ \mathscr D=M+\ell z=-\dot v.
+\]
+Along a through orbit, regarded as a graph \(z=z(v)\), write
+\[
+ f={z\{q_\gamma \xi+\xi^2+Cvz\}\over\mathscr D},\qquad
+ \nu={6\gamma\over q_\gamma},\qquad
+ N=-\alpha _1+(3-\nu)\xi^2.
+\]
+Direct differentiation gives
+\begin{equation}
+ f_z={d\over dv}\log {z^{1+\nu}\over\mathscr D}
+       +{N+\{\ell'(v)+(1-\nu)Cv\}z\over\mathscr D}.
+ \label{deg:raw-log-jacobian}
+\end{equation}
+If \(\alpha _1\le0\), then \(N\ge|\alpha _1|+2\xi^2\) after shrinking
+\(|\gamma|\).  Let \(\kappa=\frac12\inf\ell\).  On
+\(\mathscr D\ge\kappa z\), the last quotient in
+\eqref{deg:raw-log-jacobian} is bounded below.  On the complement,
+\(M<0\),
+\[
+ z<{|M|\over\ell-\kappa},\qquad
+ |M|\le C(\delta+|\gamma|)N.
+\]
+Choosing the fixed raw width \(\delta\) and then the coefficient
+neighbourhood makes the numerator at least \(N/2\) there.  Thus its
+integral in the physical direction from the positive to the negative
+section is bounded above.
+
+In the second case put \(\xi=(s/\sqrt\gamma)\widehat x\), with
+\(\pi=p/\sqrt\gamma\) and \(k=s/\gamma^{3/2}\).  Then
+\[
+ M=s^2\{1-\pi\widehat x+3\widehat x^2+k\widehat x^3\}.
+\]
+Where \(N<0\), the quadratic identity
+\[
+ 1-\pi\widehat x+3\widehat x^2
+ =3\left(\widehat x-{\pi\over6}\right)^2+1-{\pi^2\over12}
+\]
+gives a positive multiple of \(1+\widehat x^2\).  On \(N<0\) one has
+\(\widehat x^2\le C\pi/k\), hence
+\(|k\widehat x|\le C\sqrt{\pi_0k_0}\).
+The cubic term is therefore absorbed by decreasing \(k_0\).
+Since \(-N\le sp\), the change of variable cancels the prefactor
+\(sp\,s/(s^2\sqrt\gamma)=\pi\le\pi_0\), and hence
+\[
+ \int_{\{N<0\}}{-N\over\mathscr D}\,d\xi
+ \le C\int_{\mathbb R}{d\widehat x\over1+\widehat x^2}<\infty .
+\]
+Where \(N\ge0\), the preceding two-denominator argument applies.  Indeed
+\(M<0\) can then occur only at \(\xi=-u\), \(u>3\gamma\), and
+\(N\ge cu^2\), \(|M|\le u^3\le\delta u^2\).
+
+Integration of \eqref{deg:raw-log-jacobian} yields
+\[
+ 0<T_\theta'\le
+ C{(z^{1+\nu}/\mathscr D)_-\over
+       (z^{1+\nu}/\mathscr D)_+}\le C_0.
+\]
+The two endpoints lie in the fixed positive-height windows, which bound
+the quotient in this estimate.
+The estimate holds on the full interval
+\(\mathcal T_\theta\cap\operatorname{int}K_+^\sharp
+\cap T_\theta^{-1}(\operatorname{int}K_-^\sharp)\), including all
+intervening captured inputs. The bounded divided closing of
+Lemma~\ref{phys:lem-c3-adapters}, followed by a final multiplier
+shrink, gives the contraction.
+\end{proof}

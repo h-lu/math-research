@@ -1,0 +1,343 @@
+\subsection{The upper return and the necessary lower geometry}
+\label{rw:finite:geometry}
+
+The first task is to locate the possible endpoints of returning cycle
+data. The zero-scale upper return determines the regular input range.
+Whole-path positivity of the two lower factors and an action inequality
+then exclude some combinations of losses. Use the fixed-field direction
+$\ell\ge0$ chosen in Section~\ref{rw:geometry}, and put
+\[
+ F_\pm(X)=1\pm\bar aX+\bar BX^2,\qquad
+ A_\pm(P)=\int_0^P\frac{X}{F_\pm(X)}\,\dd X
+\]
+on intervals where the denominator is positive throughout. Approaching
+a root is allowed only from this passing side; the action is never
+continued through it.
+
+At $\epsilon=\nu=0$ the upper field, divided by its positive factor
+$Y$, is
+\begin{equation}\label{rw:finite:principal-upper}
+ X'=\bar mY-1,\qquad Y'=X+\bar cY.
+\end{equation}
+Let $S''-\bar cS'-\bar mS=0$, $S(0)=0$, $S'(0)=1$, and
+$I(T)=\int_0^T S(t)\,\dd t$. An arc beginning at $(p,0)$ has
+$Y(t)=pS(t)-I(t)$ and $X=Y'-\bar cY$.
+For $\mathcal D=\bar c^2+4\bar m\ge0$ write
+$\gamma_\pm=(\bar c\pm\sqrt{\mathcal D})/2$, and define
+\[
+ p_c=\begin{cases}1/\gamma_+,&\mathcal D\ge0,\ \gamma_+>0,\\
+ \infty,&\text{otherwise},\end{cases}
+ \qquad q_c=p_c(\bar m,-\bar c).
+\]
+
+\begin{lemma}[The regular upper arc]\label{rw:finite:upper-return}
+The first return of \eqref{rw:finite:principal-upper} through $Y>0$
+exists exactly for $0<p<p_c$. Its exit $(-q,0)$ defines an increasing
+analytic bijection $q=\mathcal U_0(p)$ from $(0,p_c)$ onto $(0,q_c)$.
+If $T$ is the flight time, then
+\begin{equation}\label{rw:finite:upper-derivative}
+ \mathcal U_0'(p)=\frac pq e^{\bar cT},\qquad
+ \mathcal U_0^{-1}(q;\bar m,\bar c)
+       =\mathcal U_0(q;\bar m,-\bar c).
+\end{equation}
+On every compact regular coefficient and input set the positive-scale
+return exists on a larger common tube and satisfies
+\begin{equation}\label{rw:finite:regular-upper-error}
+ \mathcal U_{\epsilon,\nu}(p)
+ =\mathcal U_0(p)+O_N(\epsilon(1+|\log\epsilon|))+\nu O_N(1).
+\end{equation}
+Here and below $O_N$ includes selected finite ordinary input and
+coefficient derivatives and Euler scale derivatives, with a finite
+total order chosen before the domains. Common smaller image intervals
+have bounded inverse jets in the same class.
+\end{lemma}
+\begin{proof}
+On the first positive interval of $S$ put $W=S^2-IS'$.
+Since $W'=\bar cW+S$,
+\[
+ W=e^{\bar cT}\int_0^T e^{-\bar ct}S(t)\,\dd t>0,
+ \qquad (I/S)'=W/S^2>0.
+\]
+Thus the flight-time equation $p=I(T)/S(T)$ has at most one
+solution. At that solution $Y'(T)=-W/S<0$, so the exit is
+$(-q,0)$ with $q=W/S>0$.
+For $\mathcal D<0$, $S=e^{\bar cT/2}\sin(\sqrt{-\mathcal D}T/2)
+/(\sqrt{-\mathcal D}/2)$; the quotient $I/S$ tends to infinity
+at the first zero of $S$. For $\mathcal D>0$ use
+$S=(e^{\gamma_+T}-e^{\gamma_-T})/(\gamma_+-\gamma_-)$.
+Its quotient tends to $1/\gamma_+$ if $\gamma_+>0$ and to infinity
+otherwise. At $\mathcal D=0$, $S=Te^{\bar cT/2}$ gives the same
+rule, including $\bar c=0$. These are exactly the stated ranges.
+The determinant formula for transverse sections has normal factors
+$p,q$ and divergence $\bar c$, proving the derivative identity.
+Reflection gives its inverse and the range of $q$.
+
+To estimate the positive-scale return on a common tube, split each
+compact reference arc into two layers $0\le Y\le d_0$ and a middle
+arc with $Y\ge d_0$.
+On a layer $G=X+\bar cY$ has a fixed nonzero margin. Set
+$g=\bar mY-1$, $F=\bar BX^2+\bar aX$,
+$Q=\epsilon/(Y+\epsilon)$ and $r_0=Y^2/(Y+\epsilon)$.
+The exact equation there is
+\[
+ X_Y=\frac{(1-Q)g+QF}{G+\nu r_0}.
+\]
+The perturbation at $\nu=0$ is $Q(F-g)/G$, whose integral is
+$O(\epsilon\log(1+d_0/\epsilon))$. In the middle, use the
+positive time change by $Y+\epsilon$; its field is
+$(g+Q(F-g),G+\nu r_0)$. Ordinary flow dependence and the transverse
+exit equation give the value estimate on larger compact tubes.
+For the selected jets use the bounded-layer variation argument
+\eqref{rw:app:bounded-variation}, with $E_\epsilon=\epsilon\partial_\epsilon$
+and the integrable carriers $E_\epsilon Q=Q(1-Q)$,
+$E_\epsilon r_0=-Qr_0$; further Euler
+rows retain these carriers times bounded polynomials in $Q$.
+Ordinary $\nu$ integration gives the last term of
+\eqref{rw:finite:regular-upper-error}. The positive compact margin
+in \eqref{rw:finite:upper-derivative} then gives the inverse jets on
+fixed smaller common images.
+\end{proof}
+
+The lower maps must be expressed in the original central height to
+compare the two complete paths. Their absolute size is exponentially
+small, so we estimate a logarithmic amplitude after removing the action.
+The common parameter domains below also contain the center contractions
+of Section~5.
+
+\begin{lemma}[Regular lower amplitudes]\label{rw:finite:regular-lower}
+Fix a compact set of positive finite inputs with $F_+>0$ on $[0,p]$.
+For $p$ bounded away from zero, the signed outgoing backward map
+from $(p,1)$ to $X=0$ is
+\begin{equation}\label{rw:finite:lower-height}
+ L_+(p)=Z_+(p)-\ell H_+(p,\ell),\qquad
+ Z_+(p)=a_+(p)e^{-A_+(p)/\epsilon},
+\end{equation}
+on a common enlarged input and coefficient domain. The logarithm of
+$a_+>0$ has bounded selected jets, while
+$H_+=\sqrt{\pi/2}+O_N(\sqrt\epsilon+|\ell|)$ and its required
+ordinary $\ell$ derivatives are bounded. Reflection gives
+$L_-(q)=Z_-(q)+\ell H_-(q,\ell)$ with the same properties.
+Positive endpoints of either signed map imply a passage with $z>0$.
+
+With the fixed weak references of Section~4 one can instead write
+\begin{equation}\label{rw:finite:relative-lower}
+ L_+(p)=s_++U(p),\quad L_-(q)=s_-+V_0(q),\qquad
+ U=\alpha_Ue^{-A_+(p)/\epsilon},\quad
+ V_0=\alpha_Ve^{-A_-(q)/\epsilon}.
+\end{equation}
+The positive amplitudes have bounded logarithmic jets on a small
+ordinary $\nu$ box, and $s_--s_+=\rho\nu H$, $H>h_*>0$,
+is independent of input. In particular $U',V_0'<0$ and their
+logarithmic derivative rates have the usual action limits on every
+smaller compact regular input interval.
+\end{lemma}
+\begin{proof}
+Choose a small fixed $d_0>0$. On the regular layer $d_0\le z\le1$,
+use $z$ as independent variable. Its denominator has a nonzero margin,
+so $P=p+\epsilon R$ has bounded selected jets.
+On the core use \eqref{rw:relative:core-field}, with
+$\nu=\ell/\rho$ and $F_\epsilon=F_++\epsilon\bar m$.
+Its linear part is
+$(X/(\epsilon F_\epsilon)-\bar c/F_\epsilon)z
+ +\ell/(\rho F_\epsilon)$.
+The backward kernel $K(X,u)$ on $0\le X\le u\le P$ satisfies
+\[
+ |K(X,u)|\le Ce^{-c(u^2-X^2)/\epsilon},\quad
+ \int_X^P|K|\frac u\epsilon\,\dd u\le C,
+ \quad \int_X^P|K|\frac{\dd u}{\rho}\le C.
+\]
+The remainder has size
+$C((X/\epsilon+1)z^2+|\ell z|/\rho)$.
+Choose $d_0$ and then a fixed ordinary $\ell$ disk so that the
+backward integral is a contraction. This constructs the signed map
+as well. On $z=0$ the graph derivative has the sign of $\ell$, so
+a trajectory with positive endpoints cannot leave and reenter $z>0$.
+At $\ell=0$ the line itself is invariant.
+
+At zero forcing,
+$z(X)\le Cd_0e^{-c(P^2-X^2)/\epsilon}$, so
+$\int_0^P(X/\epsilon+1)z(X)\,\dd X\le Cd_0$.
+Removing the action leaves a bounded logarithm: the endpoint shift
+$(A_+(P)-A_+(p))/\epsilon$ is bounded since $P-p=\epsilon R$,
+the linear correction uses $F_\epsilon-F_+=O(\epsilon)$, and the
+nonlinear correction is the preceding integral.
+The normalized Volterra argument of
+Proposition~\ref{rw:transitions:central-core} supplies its selected
+jets after $X=Py$: $P$ stays in a compact positive interval, its
+regular endpoint jets are bounded, and the kernel satisfies the same
+weighted bound \eqref{rw:app:normalized-kernel-bound}.
+
+Differentiate the core integral with respect to $\ell$ at zero
+forcing. Up to an exponentially small layer endpoint term, its
+negative outgoing value is
+\[
+ \int_0^P
+ \exp\left[-\int_0^X \mathfrak f_z(u,z_0(u))\,\dd u\right]
+ \frac{(1-z_0(X))^2}{\rho D(X,z_0(X))}\,\dd X.
+\]
+Near zero put $X=\rho v$. The integrand tends to $e^{-v^2/2}$;
+its error is $O(\rho)$ times a fixed polynomial and a Gaussian.
+Away from a fixed small central interval the positive linear rate
+makes the error exponentially small. The same kernels bound higher
+ordinary $\ell$ variations. Hadamard integration therefore proves
+the formula for $H_+$ and its jets. Reflection proves the incoming
+formula.
+
+For \eqref{rw:finite:relative-lower}, restrict the one chosen weak
+reference $z_b$ at the variable endpoint $P$. Its continuation to
+$X=0$ is the same reference for all inputs. On the weighted Gaussian
+core of Proposition~\ref{rw:transitions:central-core}, the difference
+$w=z-z_b$ satisfies $w_X=a(X)w+b(X,w)w^2$ with
+\[
+ a-X/(\epsilon F_+)=O(1),\quad
+ \partial_\nu a=O(1),\quad |b|\le C(X/\epsilon+1).
+\]
+The weighted reference estimate gives
+$(X/\epsilon)|\partial_\nu z_b|=O(1)$, controlling the potentially
+large coefficient term. It is this weighted bound that is needed here,
+rather than bounds on the unweighted high $X$ derivatives.
+The positive bounded endpoint deviation and the same normalized
+Volterra estimate give $\alpha_U$; reflection gives $\alpha_V$.
+The Gaussian variation above, now with $\ell=\rho\nu$, gives
+opposite reference signs and gap
+$\sqrt\epsilon\,\nu(\sqrt{2\pi}+O(\sqrt\epsilon))$.
+Finally $-\epsilon U'/U=A_+'-\epsilon(\log\alpha_U)'$ and its
+reflected identity give the positive derivative margins and logarithmic
+rates, using relative rather than absolute errors.
+\end{proof}
+
+\begin{lemma}[Entry bounds and action ordering]
+\label{rw:finite:action-order}
+There is a fixed $\chi>0$ such that every parameter-dominant cycle
+in the chosen direction has $p>\chi/2$ and $q>\chi$ at small scale.
+If its incoming data stay in a compact set where $F_->0$ on $[0,q]$,
+then its outgoing data stay in a compact regular lower set and
+\begin{equation}\label{rw:finite:action-inequality}
+ A_+(p)\le A_-(q)+C\epsilon.
+\end{equation}
+Consequently outgoing loss with a regular incoming lower limit is
+impossible.
+\end{lemma}
+\begin{proof}
+Take $\chi=\eta/4$, with the fixed energy threshold of Section~2,
+and decrease $\eta\le1/16$ if necessary. The crossing argument in
+that section gives one intersection with each half of $y=0$.
+For $0\le X\le\chi$, $0\le z\le1/8$, the lower denominator
+is greater than $3/4$. The cycle has $0\le\ell<3s$ and
+$s<e^{-\eta^2/\epsilon}$, so variation of constants gives
+\[
+ z_X\le(4X/(3\epsilon)+4/3)z+4s/\rho,
+ \qquad z(X)\le6s e^{2X^2/(3\epsilon)+4X/3}
+                  <e^{-\eta^2/(2\epsilon)}.
+\]
+Thus the orbit reaches $X=\chi$. A later decrease to $\chi/2$
+cannot occur while $z\le1/2$, where its horizontal velocity is
+positive. In $1/2<z<1$, $z_\xi\ge\chi z/4$ as long as
+$X\ge\chi/2$, and the possible decrease in $X$ is at most
+$4\epsilon\log2/\chi<\chi/2$. Hence $p>\chi/2$.
+For the incoming side, the reference arc with $q=\chi$ has
+$F_->3/4$ and $A_-(\chi)\le\eta^2/24$. Lemma~\ref{rw:finite:regular-lower}
+gives $s_{\rm ref}\ge c e^{-\eta^2/(24\epsilon)}>s$.
+This arc, the intervening central segment and the segment on $z=1$
+bound a flow region: the top is an entry, the central edge an exit,
+and uniqueness prevents crossing the reference arc. Every $q\le\chi$
+would consequently give height at least $s_{\rm ref}$, a contradiction.
+
+Now fix incoming compact regular data, so
+$s\ge ce^{-A_{\max}/\epsilon}$ for a fixed $A_{\max}$.
+On a fixed outgoing strip $0<X\le R$, a turn $D=0$ is a strict
+maximum of $X$. Indeed, with $u=1-z$ its equation gives
+$u(1+\epsilon\bar m u)=-X(\bar a+\bar BX)$ and
+$u\le2(1+R)X$. Thus $z_\xi>0$ and $D_\xi=D_z z_\xi<0$
+at the turn, for small scale. Before a first rightward crossing of
+$X=R$ one has $D>0$. Also $F_\epsilon-D>0$, and the forcing
+term is nonnegative. On $[0,\chi]$ use
+$z_X/z\ge X/(\epsilon F_\epsilon)-4/3$, and beyond $\chi$ use
+$z_X/z\ge(1-\epsilon/\chi)X/(\epsilon F_\epsilon)$.
+Since $z(R)\le1$, integration gives
+\begin{equation}\label{rw:finite:action-budget}
+ (1-\epsilon/\chi)\int_0^R\frac{X}{F_\epsilon(X)}\,\dd X
+       \le-\epsilon\log s+4\chi\epsilon/3.
+\end{equation}
+The incoming regular arc bounds the right side by $A_{\max}+o(1)$.
+Since $F_\epsilon(X)\le2+X+X^2$, the integral on the left is at
+least $\frac12\log(R/2)$ for $R\ge2$. A fixed sufficiently large $R$
+therefore bounds $p$.
+If $F_+$ then approached zero at or before a limiting endpoint,
+apply the same inequality for every $R$ before its first zero and
+let $R$ approach that zero. The integral diverges for both simple
+and double zeros, contradicting the bound. This argument also
+excludes nearby positive polynomials with minima tending to zero.
+Thus both lower data sets are compact and regular. At a closing zero,
+$L_+(p)=L_-(q)$ and $\ell\ge0$ give $Z_+(p)\ge Z_-(q)$.
+Taking logarithms with their bounded amplitudes proves
+\eqref{rw:finite:action-inequality}.
+\end{proof}
+
+\begin{lemma}[Lower cones and simultaneous finite loss]
+\label{rw:finite:lower-cones}
+At a limit $(\mathbf b_*,p_*,q_*)$ of cycle data, $F_+$ and $F_-$
+are nonnegative up to their respective endpoints. In particular
+\[
+ p_* =\infty\Longrightarrow\bar B\ge0,\ \bar a\ge-2\sqrt{\bar B},
+ \qquad
+ q_* =\infty\Longrightarrow\bar B\ge0,\ \bar a\le2\sqrt{\bar B}.
+\]
+If both finite lower limits lose positivity, then $\bar B=-\beta<0$
+and their endpoints are the simple roots
+\[
+ p_*=(\bar a+\Delta)/(2\beta),\qquad
+ q_*=(-\bar a+\Delta)/(2\beta),\qquad
+ \Delta=\sqrt{\bar a^2+4\beta},\qquad p_*q_*=1/\beta.
+\]
+If the upper limit is regular, these roots satisfy
+$\mathcal U_0(p_*)=q_*$.
+\end{lemma}
+\begin{proof}
+At an outgoing line $X=R>0$, if $F_+(R)+\epsilon\bar m\le0$,
+the horizontal velocity is negative for $0<z<1$. It prevents the
+first rightward crossing needed to reach $p>R$. Reflection gives
+the corresponding incoming obstruction. Passing to the limit proves
+nonnegativity and the two quadratic cone conditions.
+For $\bar B\ge0$, a positive root of $F_+$ requires $\bar a<0$,
+whereas one of $F_-$ requires $\bar a>0$. Hence both losses force
+$\bar B<0$ and the displayed roots are unique and simple. The
+same barrier for the nearby exact quadratic roots prevents a cycle
+endpoint from lying beyond either root. Since each limiting root
+was assumed at or before its endpoint, they coincide. The upper
+identity follows from the regular return convergence.
+\end{proof}
+
+A strict real upper threshold also excludes returns beyond it,
+uniformly for unbounded inputs. We will use this fact at infinity.
+If $\mathcal D>0$, $\gamma_+>0$ on a compact coefficient block, then for every fixed $\zeta>0$ no input
+$p\ge p_c+\zeta$ returns, at a sufficiently small common scale.
+To prove this without bounding $p$, choose $r>0$ between the two
+eigenvalues and close to $\gamma_+$, and choose $b_0>1/r$ with
+$b_0<p_c+2\zeta/3$. Then
+$A=\bar m+r\bar c-r^2>0$ and $rb_0-1>0$ have fixed margins.
+The limiting reference arc from $p_c+\zeta$ reaches a small
+$Y=d_0$ in $X+rY-b_0>0$. On the sloping boundary of the unbounded
+region $Y\ge d_0$, $X+rY-b_0\ge0$, its exact outward derivative
+in the time divided by $Y+\epsilon$ is
+\[
+ AY+rb_0-1+Q\{F(b_0-rY)-g(Y)\}
+                         +r\nu Y^2/(Y+\epsilon)>0.
+\]
+The error is bounded by $C_{d_0}\epsilon(1+Y)+C|\nu|Y$;
+the bottom boundary points inward as well. This is a forward
+invariant region. Larger inputs either reach it, by uniqueness of
+the layer graphs, or escape affinely; neither returns. Reflection
+gives the exit exclusion. This proof requires a strict discriminant:
+it gives no exclusion at a repeated root.
+\label{rw:finite:strict-barrier}
+
+Thus two infinite endpoints require $\bar c^2+4\bar m\le0$,
+because otherwise at least one reflected threshold is finite.
+The remaining upper limits have $\bar m<0$, or
+$\bar c=\bar m=0$. In the latter case the lower cones and primary
+normalization imply $\bar B>0$. If only $p_*$ is infinite and
+$q_*$ finite, the incoming lower polynomial must lose positivity,
+by Lemma~\ref{rw:finite:action-order}. These restrictions classify
+limits of actual cycle data. The passage constructions still use
+adjacent signed coefficient domains for their common comparisons.

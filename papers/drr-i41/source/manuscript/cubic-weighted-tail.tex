@@ -1,0 +1,568 @@
+On a growing positive tail, the lip label is unbounded while its raw
+abscissa remains small. The next estimate controls the logarithmic
+derivatives of the actual exterior map in that regime. Keeping its
+absolute first gain will later allow composition with the independent
+negative section map.
+
+\begin{lemma}[Complete section derivatives on a growing cubic tail]
+\label{deg:lem-raw-growing-section}
+Fix a sufficiently small terminal cut \(\delta>0\). Let
+\[
+ \begin{gathered}
+ M(x)=x^3+\mu_2x^2+\mu_1x+\mu_0,\qquad B_0(x)=1+b+x,\\
+ Q_0(x)=1-A(v+x)+C(v+x)^2,\qquad \zeta_0(x)=C(v+x).
+ \end{gathered}
+\]
+with bounded \(A,C\). Hold all coefficients fixed as the starting
+point \(a\) varies. On an enlarged interval \(I\subset(0,d_0]\),
+with \(d_0<\delta/2\), suppose uniformly for \(a\in I\)
+\[
+ |b|+|v|\le C_0a,\qquad |\mu_j|\le C_0a^{3-j}\ (j=0,1,2),
+ \qquad M(x)\ge c_0x^3\quad(a\le x\le\delta).
+\]
+Use the actual positive graph
+\begin{equation}
+ z_x=\frac{z\{xB_0(x)+\zeta_0(x)z\}}{D_0(x,z)},\qquad
+ D_0=M+Q_0z,\qquad z(a)=\ell_0M(a),
+ \label{deg:weighted-raw-positive-graph}
+\end{equation}
+and an increasing regular terminal adapter \(\chi\), with uniformly bounded
+\(C^3\) norm and inverse on its enlarged image. For fixed positive
+\(\sigma\), label the input by \(b_+=-a^2/(2\sigma^2)\), and write
+\(\Gamma_+(b_+)=\chi(z_\delta)\). After choosing \(\ell_0,d_0\)
+small, this continuation and every separate affine normalization
+\(\phi_+\) satisfy
+\begin{equation}
+ |(a\partial_a)^j\log\phi_+'|\le Ca(1+|\log a|)^4,
+ \qquad j=1,2.
+ \label{deg:raw-growing-section-jets}
+\end{equation}
+The exact positive factor \(\sigma^2\) in the first derivative is
+retained; no bound on its reciprocal is required.
+\end{lemma}
+\begin{proof}
+Set \(E=a\partial_a\) and \(m(x)=M(x)/x^2\). On \(a\le x\le2a\),
+the coefficient bounds and the polynomial margin give
+\[
+ c_0a\le m(x)\le C_1a,\qquad
+ |b|+|v|+|\mu_2|+a+|\mu_1|/a+|\mu_0|/a^2\le C_1a.
+\]
+Thus Lemma~\ref{deg:lem-spectral-exterior} applies with \(t=1\)
+and comparison mass \(\rho=a\), including its near-lip strip entry.
+This mass is not differentiated;
+all polynomial coefficients and \(\sigma\) remain fixed. The adapter
+is evaluated on its stated enlargement of the generated terminal image.
+In the actual raw-section applications,
+\eqref{deg:spectral-exterior-window}, with \(\rho=a\), and the
+original fixed terminal-image margin admit the whole family after
+choosing \(d_0\) within its original cutoff reserve. The stated
+ordinary \(C^3\) adapter and inverse bounds give a uniform bound for
+its two logarithmic-height rows on the enlarged terminal image.
+
+The common spectral estimate has
+\[
+ \lambda=\frac{4\mu_2}{1+b}=O(a),\qquad
+ \Theta=a+|\mu_1|/a+|\mu_0|/a^2\le C_1a.
+\]
+Its terminal coefficient \(\mathcal T\) is bounded on the stated
+buffer, and \(\mathcal T(a/\delta)^{2-\lambda}\le Ca\), after
+the permitted \(d_0\) shrink. Consequently
+\[
+ |E\log\Gamma_+'+\lambda|+|E^2\log\Gamma_+'|
+ \le Ca(1+|\log a|).
+\]
+The physical gain is given exactly by
+\eqref{deg:scalar-polynomial-lip-slope},
+\begin{equation}\label{deg:weighted-complete-positive-derivative}
+ \Gamma_+'=\sigma^2\chi'(z_\delta)\frac{z_\delta}{D_0(\delta,z_\delta)}
+                 B_0(a)J_0(a)e^{I(a)},\qquad J_0=1+O(a),
+\end{equation}
+where \(J_0=K\) and \(I\) are the exact factors in that formula.
+This retains the factor \(\sigma^2\) without a reciprocal bound.
+Since \(\lambda=O(a)\), both uncorrected logarithmic rows satisfy
+the stronger first-logarithmic-power bound. Frozen affine calibration
+leaves them unchanged, proving \eqref{deg:raw-growing-section-jets}.
+\end{proof}
+
+\begin{lemma}[Weighted cubic tail on the actual sections]
+\label{deg:lem-weighted-cubic-tail}
+Fix a compact set of coefficients \(0\le U\le U_0\),
+\(|G|\le G_0\), and use the field
+\eqref{deg:compact-cubic-field}--\eqref{deg:compact-cubic-polynomials}.
+On its root-free positive fibres choose \(M\) sufficiently large,
+independently of \(\tauc\), and retain
+\[
+ u\ge2M,\qquad a=\tauc u\le d_0,\qquad r_0\le r<c.
+\]
+Here \(c\) is the simple negative root and the two moving sections are
+\(Y=\ell_0P\), with \(\eta=\tauc Y\).  The exterior maps are the
+actual continuations to the fixed raw sections, followed by the regular
+input adapter and the divided finite-side output adapter, respectively.
+These continuations use the nested domains constructed by
+\eqref{deg:compact-raw-corridor}.
+There are constants, uniform on these domains, such that, with
+\[
+ E=u\partial_u,\quad
+ \mathcal D_+=\frac{P(u)}{uB(u)}\partial_u,\quad
+ \mathcal D_-=\frac{P(-r)}{rB(-r)}\partial_r,\quad
+ \epsilon_u=\tauc(1+u),\quad L_u=1+|\log\epsilon_u|,
+\]
+the exact action matching has the form
+\begin{equation}
+ A_+(u)-A_-(r)=\tauc\{\log P(u)-\log P(-r)+R_+(u)-R_-(r)\},
+ \label{deg:weighted-split-action}
+\end{equation}
+where
+\begin{equation}
+ |R_+|+|R_-|\le C,\qquad
+ |E^jR_+|\le C\epsilon_u,\qquad
+ |\mathcal D_-^jR_-|\le C\tauc\quad(1\le j\le3).
+ \label{deg:weighted-action-jets}
+\end{equation}
+The relative variation in \eqref{deg:weighted-relative-variation} obeys
+\begin{equation}
+ |\varrho|+\frac{|\mathcal D_+\varrho|+|\mathcal D_-\varrho|}{u+r}
+       \le C\epsilon_uL_u^4.
+ \label{deg:compact-rho}
+\end{equation}
+If \(b_+=-u^2/2\),
+\(b_-=-r^2/2\), and \(\phi_\pm\) are the separately affine-normalized
+actual section embeddings, then
+\begin{equation}
+ |E\log\phi_+'|+|E^2\log\phi_+'|
+       \le C\epsilon_uL_u^4,
+ \qquad
+ |\mathcal D_-^j\log\phi_-'|
+       \le C\tauc(1+|\log\tauc|)^4\quad(j=1,2).
+ \label{deg:weighted-actual-section-jets}
+\end{equation}
+Every prime on \(\phi_\pm\) is taken in its own label \(b_\pm\).
+The full composition \(\Pi=\phi_-\circ S\circ\phi_+^{-1}\), with
+\(S(-u^2/2)=-r^2/2\), therefore satisfies
+\begin{equation}
+ \phi_+'\frac{P(u)}{u+r}\frac{\Pi''}{\Pi'}
+       =3-\frac{U}{ur}+E_u,
+ \qquad |E_u|\le C\epsilon_uL_u^4.
+ \label{deg:compact-curvature}
+\end{equation}
+The inward action estimates and the two exterior estimates are obtained
+separately on their actual domains.
+\end{lemma}
+
+\begin{proof}
+We first continue the two inward graphs to the original centre and
+differentiate their exact height match. We then estimate the two
+exterior embeddings separately. The negative embedding requires a
+root-collar calculation because its first variation vanishes there.
+Substitution in the completed-curvature identity gives the final estimate.
+
+Choose a small fixed \(\delta_c>0\) such that \(P\) is a positive unit
+on \([-2\delta_c,2\delta_c]\), and so that
+\(2\delta_c<r_0\).  On the root-free positive fibre, put
+\[
+ \begin{gathered}
+ q=\frac{A_+(u)-A_+(v)}\tauc,\quad
+ W=\frac{Y}{P(v)},\quad D(v)=\frac{P(v)}{vB(v)},\\
+ H(v)=\frac{P'(v)}{vB(v)},\qquad
+ \varpi(v)=\frac{C\tauc^3(G+v)P(v)}{vB(v)}.
+ \end{gathered}
+\]
+For \(\delta_c\le v\le u\), graph division gives the exact equations
+\begin{equation}
+ v_q=-\tauc D(v),\qquad
+ W_q=W\left\{-\frac{1+\varpi W}{1+QW}+\tauc H\right\},
+ \qquad W(0)=\ell_0.
+ \label{deg:weighted-inward-equations}
+\end{equation}
+In particular, \(\tauc H=O(\epsilon_u)\),
+\(Q-1=O(\epsilon_u)\), and
+\(\varpi=O(\epsilon_u^3)\).  Fix \(\ell_0\), then \(d_0\),
+small enough that the braces and the derivative of the right-hand side
+with respect to \(W\), for \(0\le W\le\ell_0\), are both less than
+\(-c_1<0\).  A first-exit argument gives
+\begin{equation}
+ 0<W(q)\le\ell_0e^{-c_1q}.
+ \label{deg:weighted-kernel-decay}
+\end{equation}
+
+For unbounded \(u\), Euler differentiation keeps the moving entrance
+under control. At fixed action clock \(q\),
+\begin{equation}
+ Ev=\kappa(u)D(v),\qquad
+ \kappa(u)=\frac{u^2B(u)}{P(u)}\asymp u^{-1}.
+ \label{deg:weighted-transport}
+\end{equation}
+The first three Euler derivatives of \(\kappa\) are \(O(u^{-1})\).
+On \([M,u]\), \(D(v)=O(v^2)\), and each further application of
+\(D(v)\partial_v\) increases polynomial degree by at most one.
+On \([\delta_c,M]\), this vector field and its first four derivatives
+are uniformly bounded, including when the positive factor approaches a
+double root: they contain \(P\), rather than \(P^{-1}\).
+Differentiating \eqref{deg:weighted-transport} inductively therefore gives
+\[
+ |E^j\log v|\le C_j\quad(1\le j\le4),\qquad
+ |E^j(\tauc H)|+|E^j(Q-1)|+|E^j\varpi|
+       \le C_j\epsilon_u\quad(0\le j\le3).
+\]
+Because the transported field contains \(P\), these bounds remain
+uniform when the root-free positive minimum tends to zero.
+Apply Lemma~\ref{deg:lem-stable-ratio-ledger} with
+\(D=E,\kappa=\tauc,\rho=\epsilon_u,\alpha=0\) on
+\(\delta_c\le v\le u\).
+The needed clock rows follow from \(\partial_q=-\tauc D(v)\partial_v\):
+on the growing part its degree growth is controlled by
+\(\tauc v\le\epsilon_u\), and on the compact part its coefficients
+are bounded. The strict diagonal chosen above gives
+\begin{equation}\label{deg:weighted-kernel-jets}
+ |E^jW(q)|\le C\epsilon_u(1+q)^Ne^{-c_2q},\qquad1\le j\le3.
+\end{equation}
+
+The nonlinear logarithmic correction on this tail is exactly
+\[
+ V_+(u)=\int_0^{q_c(u)}
+       \frac{(Q-\varpi)W}{1+QW}\,dq,
+ \qquad q_c(u)=\frac{A_+(u)-A_+(\delta_c)}\tauc.
+\]
+The fixed-clock and terminal formulas of the same lemma give \(|V_+|\le C\) and
+\(|E^jV_+|\le C\epsilon_u\), \(1\le j\le3\): indeed,
+\(|E^jq_c|\le C_j/\epsilon_u\) and
+\(q_c\ge[A_+(2M)-A_+(M)]/\tauc\ge a_M/\tauc\).
+Every boundary term is therefore at most
+\(C\tauc^{-N}e^{-c_2a_M/\tauc}\).
+
+For the negative inward tail replace \((P,B,Q,\varpi)\) by
+\((P(-v),B(-v),Q(-v),-C\tauc^3(G-v)P(-v)/(vB(-v)))\).
+At fixed \(q\), \(\mathcal D_-\) transports to
+\(P(-v)[vB(-v)]^{-1}\partial_v\);
+its coefficient rows in the braces are \(O(\tauc)\) on
+\([\delta_c,c]\), including the root factor. The same lemma with
+\(\rho=\tauc\) gives \(|V_-|\le C\),
+\(|\mathcal D_-^jV_-|\le C\tauc\). Since \(r\ge r_0>2\delta_c\),
+its complete terminal rows are exponentially small.
+
+Continue both tails to \(\xi=0\) using
+Lemma~\ref{deg:lem-compact-height-continuation}, with radial coordinate
+\(v=|\xi|\) oriented from \(\delta_c\) to zero and
+\(\kappa_c=\tauc\). Here \(P\ge p_c>0\), the linear inward
+propagator is at most one, and the nonlinear coefficient has ordinary
+height derivatives through order three bounded by \(C/\tauc\).
+For the incoming heights \(y_\pm=Y(\pm\delta_c)\), the exact memory
+\eqref{deg:stable-ratio-polynomial-memory} gives
+\(y_\pm\le C\tauc^{-N}e^{-c/\tauc}\); its three
+logarithmic phase rows grow at most polynomially in \(\tauc^{-1}\).
+The cited continuation and composition rows therefore make the remaining
+nonlinear correction exponentially small, with those phase derivatives.
+The exact cocycle \eqref{deg:exact-action-cocycle} gives the actual
+heights on the common section:
+\begin{align*}
+ \log Y_0^+(u)&=\log(\ell_0P(u))-A_+(u)/\tauc+R_+(u),\\
+ \log Y_0^-(r)&=\log(\ell_0P(-r))-A_-(r)/\tauc+R_-(r).
+\end{align*}
+with \eqref{deg:weighted-action-jets}.  Equality of these heights is
+exactly the physical matching condition.  This proves
+\eqref{deg:weighted-split-action}; it also supplies a separated extension
+\(R_0(u,r)=R_+(u)-R_-(r)\), whose genuinely mixed derivatives vanish.
+
+The separated height formulas also determine the relative first
+variation and its weighted derivatives. Write
+\(P_+=P(u)\), \(P_-=P(-r)\), \(B_+=B(u)\), \(B_-=B(-r)\),
+and use radial derivatives in
+\(H_+=P_+'/(uB_+)\), \(H_-=P_-'/(rB_-)\).
+Differentiating \eqref{deg:weighted-split-action} gives
+\begin{equation}
+ r_u=\frac{uB_+P_-}{rB_-P_+}(1+\varrho),\qquad
+ 1+\varrho=
+ \frac{1-\tauc H_+-\tauc\mathcal D_+R_+}
+      {1-\tauc H_--\tauc\mathcal D_-R_-}.
+ \label{deg:weighted-relative-variation}
+\end{equation}
+Since \(\mathcal D_+=(P_+/(u^2B_+))E\), the numerator differs
+from one by \(O(\epsilon_u)\), with the same Euler bound.  The
+denominator differs from one by \(O(\tauc)\), with two bounded action
+variations of that order.  This proves \eqref{deg:compact-rho} (even
+with \(L_u^4\) omitted).  Both denominators are positive after shrinking
+\(d_0\) and then \(\tauc\).
+
+For the positive exterior map apply
+Lemma~\ref{deg:lem-raw-growing-section} with
+\[
+ \sigma=\tauc,\quad a=\tauc u,\quad
+ (\mu_2,\mu_1,\mu_0)=(3\tauc G,-\tauc^2U,\tauc^3),
+ \quad b=2\tauc G,\quad v=\tauc G.
+\]
+For \(u\ge2M\), the coefficient bounds hold and the leading cubic
+term gives \(M(x)\ge c x^3\) on \([a,\delta]\), uniformly on the
+fixed compact block. In the translated coordinate \(x=v-\gamma\),
+the original positive raw port is \(x_T=\delta-\tauc G\).
+The proof of the raw lemma is uniform for terminal cuts in a fixed
+neighborhood of \(\delta\); \(x_T\) is coefficient-only and is held
+fixed under \(E\). Thus it applies at this actual port. The corridor
+supplies its enlarged terminal image.
+Since \(a\asymp\epsilon_u\), \eqref{deg:raw-growing-section-jets}
+is the positive assertion of \eqref{deg:weighted-actual-section-jets}.
+
+Put \(\lambda_G=12\tauc G/(1+2\tauc G)\).
+For the negative exterior map, first restrict to
+\(r_0\le r\le c-x_0\), with \(x_0>0\) fixed and small.
+Here \(P_-(r)=P(-r)\) has a fixed positive margin. Put \(v=-\xi\),
+\(B_-(v)=B(-v)\), \(Q_-(v)=Q(-v)\), and use the increasing
+height clock \(s=\log\eta\). The fast invariant
+\(H=\eta-v^2/2\) satisfies the exact equation
+\[
+ H_s=\tauc\mathscr F(H,e^s),\qquad
+ \mathscr F=
+ \frac{v\eta(B_--Q_-)/\tauc
+       -C\tauc(G-v)\eta^2-vP_-(v)}
+      {vB_-(v)-C\tauc^2(G-v)\eta}.
+\]
+On a fixed box with \(v\ge r_0/2\), the denominator is a positive
+unit, \((B_--Q_-)/\tauc\) is smooth and bounded, and
+\(v=\sqrt{2(e^s-H)}\) gives
+\( |\partial_H^i\partial_s^j\mathscr F(H,e^s)|\le C\)
+for \(i+j\le3\). The initial rows are
+\[
+ s_l=\log\{\tauc\ell_0P_-(r)\},\qquad
+ H_l=-r^2/2+\tauc\ell_0P_-(r).
+\]
+The ordinary \(r\)-derivatives of \(s_l-\log\tauc\) are bounded.
+The moving initial recursion of
+\eqref{deg:scalar-moving-bell} therefore gives the three initial
+variations of \(-r^2/2\), with errors \(O(\tauc)\).
+Choose a fixed small \(\eta_*>0\). First exit and the three
+triangular equations on
+\(s_l\le s\le\log\eta_*\), whose length is
+\(O(1+|\log\tauc|)\), give
+\[
+ H(\log\eta_*;r)=-r^2/2+
+          O_{C^3_r}\bigl(\tauc(1+|\log\tauc|)\bigr).
+\]
+This is an actual outward passage: initially
+\(D=\tauc P_-+Q_-\eta>0\), and at a possible first zero
+\(D_s=Q_-\eta>0\). On the fixed positive-height continuation
+to a sufficiently large fixed cut \(v=L>c+1\), the graph equation
+is an \(O_{C^3}(\tauc)\) perturbation of \(\eta_v=v\). Hence
+\[
+ \eta_L(r)=\tfrac12(L^2-r^2)+
+          O_{C^3_r}\bigl(\tauc(1+|\log\tauc|)\bigr).
+\]
+The cut and its buffered chord lie in the original corridor
+\eqref{deg:compact-raw-corridor}. From this cut to the raw port use
+the negative tail with source quartet
+\((a,p,\gamma,s)=(-\tauc,\tauc U,\tauc G,\tauc)\).
+For a fixed \(0<\nu<1\), \eqref{eq:N-bound} gives
+\[
+ \int_L^{\delta/\tauc+G}\|\mathcal N\|_{C^3}\,dv
+ \le C\tauc\int_L^\infty
+ (v^{-2+\nu}+v^{-3+\nu}+v^{-4+\nu}+v^{-5+\nu})\,dv
+ \le C\tauc.
+\]
+After extraction of its exact first slope, the tail and its inverse
+are \(\mathrm{id}+O_{C^3}(\tauc)\). Its physical slope is
+\(d_{\rm c}=\tauc^{2-\lambda_G}U_{\rm c}\), with
+\(U_{\rm c}\) a positive unit. The original ordinary \(C^3\)
+observer and divided closing add \(O_{C^3}(d_{\rm c})\) by
+\eqref{eq:exterior-normalization}. Calibrating value and slope at a
+frozen reference in this compact interval gives
+\(\widetilde\phi_-=\mathrm{id}+O_{C^3}(\tauc(1+|\log\tauc|))\)
+in \(b_-=-r^2/2\). Since \(\mathcal D_-\) has bounded coefficients
+and derivatives here, the two logarithmic slope rows have the same
+bound. They are unchanged by a frozen positive affine calibration,
+so the original \(\phi_-\) satisfies
+\eqref{deg:weighted-actual-section-jets} on this interval.
+Near the root, the first variation vanishes and the preceding compact
+normalization no longer gives a bounded inverse. We extract its endpoint
+power before estimating logarithmic derivatives.
+
+The root equation gives the exact factorization
+\[
+ P_-(r)=(c-r)L_-(r),\qquad
+ L_-(r)=r^2+(U/c+c^{-2})r+c^{-1},\qquad
+ L_-(c)=c^2+U+2/c>0.
+\]
+Thus \(c\) and \(L_-\), with their required finite coefficient
+derivatives, are uniform units on a fixed negative collar,
+independently of the positive bottleneck. Put \(x=c-r\), \(y=\eta\).
+Dividing by the
+positive normal rate \(rB(-r)\) gives
+\[
+ \dot x=-\beta x p(x)-k_1(x)y,\qquad
+ \dot y=y\{1+k_2(x)y\},\qquad
+ \beta=\frac{\tauc L_-(c)}{cB(-c)}=O(\tauc),
+\]
+Here the coefficients are exactly
+\[
+ \begin{split}
+ p(x)&=\frac{cB(-c)L_-(c-x)}{L_-(c)(c-x)B(-c+x)},\\
+ k_1(x)&=\frac{Q(-c+x)}{(c-x)B(-c+x)},\qquad
+ k_2(x)=-\frac{C\tauc^2(G-c+x)}{(c-x)B(-c+x)}.
+ \end{split}
+\]
+In particular \(p(0)=1\), \(p,k_1\) are positive units and
+\(k_2=O_{C^7}(\tauc^2)\) on a fixed box.
+Use the normal-time construction
+\eqref{eq:saddle-normal-time}--\eqref{eq:exact-saddle-invariant} in the
+proof of Lemma~\ref{lem:actual-dulac-matching}, with
+\(\rho=\beta\), \(h=-\beta xp\), \(c=-k_1\), \(k=k_2\),
+and selected coefficient parameter \(\tauc\) at fixed \(U,G,A,C\).
+The explicit coefficients have a bounded joint order-seven budget:
+\(h=O_{C_x^7}(\beta)\), \(k_1\) is a positive unit, and their
+selected \(\tauc\)-rows are bounded. The normal coefficient and its
+parameter rows retain their height factors.
+The projection at phase order five uses axis-flow order six and the
+selected parameter row. For a fixed normal decay rate \(0<\lambda<1\),
+its integrands have the majorant
+\(C(1+T)^Ne^{-(\lambda-C\beta)T}\), integrable after
+\(C\beta<\lambda/2\). Thus the exact coordinates \((\Xi,Z)\)
+and invariant \(I=\Xi Z^\beta\) have five phase derivatives and one
+intrinsic \(\tauc\)-derivative, as required for the divisions below.
+In the following coefficient-dependent units, a subscript
+\({\rm c}\) records dependence on \(\tauc\). On the moving curve
+\(y=\tauc\ell_0P_-\), these coordinates have the form
+\[
+ \Xi_m=xu_{\rm c}(x),\qquad Z_m=\tauc xv_{\rm c}(x),\qquad
+ I(x)=\theta_{\rm c} x^{1+\beta}A_{\rm c}(x),\quad
+ \theta_{\rm c}=\tauc^\beta,\quad A_{\rm c}=u_{\rm c} v_{\rm c}^\beta,
+\]
+with positive \(C^4\) units \(u_{\rm c},v_{\rm c},A_{\rm c}\).
+To check the coefficient differences before taking the root limit, put
+\(Y_{\rm c}(x)=\tauc x\ell_0L_-(c-x)\). Then
+\[
+ \partial_{\tauc}u_{\rm c}(x)=
+ \frac{(\partial_{\tauc}\Xi)(x,Y_{\rm c}(x))}{x}
+ +\Xi_y(x,Y_{\rm c}(x))\ell_0L_-(c-x),\qquad
+ v_{\rm c}=\ell_0L_-(c-x)e^{-J(x,Y_{\rm c}(x))}.
+\]
+The first numerator vanishes at \(x=0\); its parameter-valued fifth
+phase row gives \(C^4\) after Taylor division. In the second term the
+moving factor \(x\) has already cancelled, so \(\Xi_y\) needs only
+four phase rows. The formula for \(v_{\rm c}\) removes the factor
+\(\tauc x\) before differentiation. Integrating these intrinsic
+parameter rows gives \(u_{\rm c}-u_0,v_{\rm c}-v_0=O_{C^4}(\tauc)\),
+and hence \(A_{\rm c}-A_0=O_{C^4}(\tauc)\). Also
+\(\theta_{\rm c}=1+O(\tauc|\log\tauc|)\).
+
+At a fixed outer cut beyond \(-c\), the stopped trajectory has
+positive height. The invariant is a regular increasing coordinate
+there, including \(I=0\), as in
+\eqref{eq:exact-saddle-invariant}. Choose its buffered invariant chord
+first, then the smaller lip collar so \(I(x)\) lies strictly inside it.
+Choose the upper horizontal boundary with invariant values above that
+chord throughout the local strip. This is possible at \(\tauc=0\),
+where \(\pi=c-\sqrt{r^2-2\eta}\), and the strict margin persists
+for small \(\tauc\). Thus no orbit of the lip collar exits through
+that boundary.
+The outward speed starts positive. At a possible first zero of
+\(\mathscr D=\tauc P_-+Q_-\eta\), one has
+\(\dot r=0\) and \(\dot{\mathscr D}=Q_-\dot\eta>0\), excluding
+loss of that speed. Increasing height and the invariant chord then give
+the actual first hit of the outer cut at positive height, uniformly for
+\(0<x\le x_0\). Continue this fixed chord to the
+negative raw section, before either the regular output adapter or the
+finite closing map. After extracting the intrinsic exact first slope, write
+\[
+ T(x)=t_{\rm st}+d_{\rm c} F_{\rm c}(I(x)),\qquad
+ d_{\rm c}=\tauc^{2-\lambda_G}U_{\rm c}>0,
+\]
+where \(U_{\rm c}\) is a positive unit and \(F_{\rm c},F_{\rm c}^{-1}\)
+have uniform \(C^4\) bounds on a fixed invariant chord. Here the
+finite positive-height passage has \(O(\tauc)\) coefficient changes.
+On its subsequent tail, \eqref{eq:N-bound}, integrated with the
+frozen negative quartet, bounds the nonlinear normalized kernel by
+\(O(\tauc)\) through four phase orders. Thus the intrinsic,
+separately normalized maps
+satisfy \(F_{\rm c}=F_0+O_{C^3}(\tauc)\); no convergence rate for
+the extracted slope \(d_{\rm c}\) is used.
+
+Since \(b_-=-r^2/2\), one has \(db_-/dx=r=c-x>0\).
+Consequently the exact first derivative is
+\[
+ T_{b_-}'=d_{\rm c}\theta_{\rm c} x^\beta
+                 K_{\rm c}(x,x^\beta),\qquad
+ K_{\rm c}(x,z)=
+ \frac{F_{\rm c}'(\theta_{\rm c} xzA_{\rm c}(x))
+       \{(1+\beta)A_{\rm c}(x)+xA_{\rm c}'(x)\}}{c-x}.
+\]
+The function \(K_{\rm c}\) is a positive \(C^3\) unit on a fixed
+rectangle \(0\le x\le x_0\), \(0\le z\le1\), and
+\(K_{\rm c}(0,z)\) is independent of \(z\).
+At \(\tauc=0\) the outer graph is
+\(\eta(\xi)=(\xi^2-r^2)/2\). Its intrinsic, separately
+normalized section map is affine in \(b_-\). The regular factors
+therefore cancel exactly at \(z=1\), giving a positive constant
+\(k_0\), independent of \(x\), for which
+\[
+ \|K_{\rm c}(\cdot,1)-k_0\|_{C^2}
+       \le C\tauc(1+|\log\tauc|).
+\]
+The affine limiting map is what makes the logarithmic derivative small;
+boundedness of the regular factors alone would not suffice.
+
+To differentiate along \(z=x^\beta\), use
+\(E_x=x\partial_x+\beta z\partial_z\). For
+\(0<x\le x_0<1\),
+\[
+ x|1-x^\beta|\le C\beta.
+\]
+The uniform \(C^3\) bounds for \(K_{\rm c}\), its constancy in
+\(z\) at \(x=0\), and the preceding cancellation imply
+\[
+ |E_x\log K_{\rm c}|+|E_x^2\log K_{\rm c}|
+       \le C\tauc(1+|\log\tauc|)
+       \quad\hbox{on }z=x^\beta.
+\]
+Indeed the differences of the \(x\)-derivatives between \(z\)
+and \(1\) have factors \(1-z\), accompanied by \(x\) or
+\(x^2\); all remaining terms contain \(\beta\).
+Since
+\[
+ \mathcal D_-=-\frac{L_-(c-x)}{(c-x)B(-c+x)}E_x,
+ \qquad E_x\log x^\beta=\beta,
+\]
+we obtain the first two action-logarithmic bounds for
+\(T_{b_-}'\), including their one-sided limits as \(x\downarrow0\).
+The derivative itself may vanish like \(x^\beta\).
+
+Finally append the original increasing ordinary \(C^3\) output adapter
+\(\psi\) and the divided closing map. Put
+\[
+ \Psi_{\theta,m}=\mathfrak f_{\theta,m}\circ\psi,
+ \qquad \mathfrak f_{\theta,m}(q)=f_\theta(mq)/m,
+ \qquad \Gamma_-=\Psi_{\theta,m}\circ T.
+\]
+Admission to the original raw and closing windows precedes these
+compositions. Apply \eqref{phys:eq-observer-log} and
+\eqref{phys:eq-closing-jets} with \(D=\mathcal D_-\) and primes in
+\(b_-\). They bound the two logarithmic-slope corrections using only
+the ordinary \(C^3\) norms and positive first derivative of
+\(\Psi_{\theta,m}\), uniformly for \(0\le m\le m_0\).
+The invariant formula retains the small gain:
+\(|DT|+|D^2T|\le Cd_{\rm c}\), and
+\(d_{\rm c}\le C\tauc^2\), since \(\lambda_G=O(\tauc)\).
+Both additional logarithmic rows are therefore \(O(d_{\rm c})\),
+using only the ordinary \(C^3\) adapter and closing bounds of
+Lemma~\ref{phys:lem-c3-adapters}. Thus the actual complete output
+satisfies \eqref{deg:weighted-actual-section-jets}; affine normalization
+fixes its logarithmic rows.
+
+We can now combine the inward match with both exterior estimates.
+Apply Lemma~\ref{neg:lem-completed-curvature} with
+\(v=r\), \(P_+=P(u)\), \(P_-=P(-r)\), and \(W=u+r\).
+In \eqref{deg:weighted-exact-curvature-chain}, put \(R_B=B_+/B_-\).
+The first term differs from
+\((P'(u)/u+P'(-r)/r)/(u+r)=3-U/(ur)\) by
+\(O(\epsilon_u)\).  The second is \(O(\epsilon_u)\), since
+\(R_B-1=\tauc(u+r)/B_-\) and
+\(r_u=O(P_-/(u^2r))\).  The third is controlled by
+\eqref{deg:compact-rho}, and the last by
+\eqref{deg:weighted-actual-section-jets}, since
+\(P_+/(u^2(u+r))\) is bounded.  For the negative section term use
+\[
+ \frac{\tauc(1+|\log\tauc|)^4}{u+r}
+       \le C\epsilon_u(1+|\log\epsilon_u|)^4.
+\]
+To see this uniformly, write \(\epsilon_u=\tauc(1+u)\), use
+\(1+|\log\tauc|\le1+|\log\epsilon_u|+\log(1+u)\), and note that
+\((1+\log(1+u))^4/(1+u)^2\) is bounded.
+This proves \eqref{deg:compact-curvature} in the actual affine
+input coordinate.
+\end{proof}

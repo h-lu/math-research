@@ -1,0 +1,264 @@
+\subsection{Finite-order estimates for the exact long passage}
+\label{rw:app:secondary-long}
+
+The exact saddle power accounts for the nonintegrable part of the long
+flight. Its remaining correction is integrable, and differentiating
+that correction proves Proposition~\ref{rw:exact-long}, including the
+ordinary terminal-height jets at zero. Fix the total order $N$ first.
+The constants may depend on $N$ and the fixed heights and sections,
+but are independent of the long time.
+
+Use the terminal variables of \eqref{rw:secondary:long-scalar}.
+The rectangle is chosen with $W<-c$ and $Q>1/2$, so
+$0\le w(t)\le w_e e^{-t/2}$. The exact subtraction of the saddle
+ratio gives
+\begin{equation}\label{rw:secondary:integrable-carriers}
+ |Q-\beta_\epsilon|\le C\left(
+ |\gamma|e^{-t}+|J|e^{-2t}+w+
+ \epsilon(|\bar a|+|\nu|)\varphi w+\epsilon\varphi^2w\right).
+\end{equation}
+A coefficient derivative may remove the small coefficient multiplying
+a term, but leaves its exponential or weighted factor. These factors
+control the differentiated integral: for every fixed integer $i$,
+\[
+ \int_0^L(1+t)^iw(t)\,\dd t\le C_i,\qquad
+ \int_0^L(1+t)^i(\varphi+\varphi^2)w(t)\,\dd t
+       \le C_iH^{1/2}(1+L)^i .
+\]
+Indeed $\varphi=He^t$ and $e^L=\varphi_0/H$; integration of
+$He^{t/2}$ and $H^2e^{3t/2}$ proves the second estimate.
+
+Write
+\[
+ w=w_e e^{-\beta_\epsilon t}e^{R(t)},\qquad R(0)=0,\qquad
+ R_t=-(Q-\beta_\epsilon).
+\]
+The zeroth-order bound follows by integrating
+\eqref{rw:secondary:integrable-carriers}.
+At each derivative order, the highest variation of $R$ solves a linear
+inhomogeneous equation with coefficient $-wQ_w$. Its absolute integral
+is bounded independently of $L$, so variation of constants has a common
+bound. A $\gamma$ or $J$ derivative introduces $e^{-t}$ or $e^{-2t}$;
+an $\bar a$ or $\nu$ derivative introduces $\epsilon\varphi w$.
+An $H\partial_H$ derivative of an explicit coefficient retains
+$\varphi w$ or $\varphi^2w$. A $\theta$ derivative of the removed
+power introduces a factor $t$, always accompanied by one of these
+integrable carriers.
+
+The same variation-of-constants induction, with these carriers and
+finite polynomial factors in $t$, bounds all lower-jet products through
+the fixed order $N$. At the moving endpoint, $H\partial_HL=-1$;
+the boundary terms retain
+$e^{-L/2}$, $e^{-L}$, or $(\varphi_0+\varphi_0^2)w(L)$, so the same
+induction includes them.
+
+For ordinary terminal-height derivatives, use the equation for $R$
+rather than $\log w_e$. Its explicit height dependence is
+$w_e e^{-\beta_\epsilon t}e^R$, smooth also at $w_e=0$.
+Each resulting source contains $e^{-\beta_\epsilon t}$ times
+controlled lower variations. Thus every reserved ordinary height
+derivative is bounded jointly with all auxiliary coefficient
+derivatives. The original map keeps its exact front factor $w_e$.
+
+To construct the limiting unit, set $H=0$, hence $\varphi=0$, in
+the equation for $R$ and integrate on $[0,\infty)$. The convergent
+integral defines
+$\Psi_0(\gamma,J,w_e;\theta)$. Comparing its solution on $[0,L]$
+with the positive-$H$ solution uses only the last two carriers in
+\eqref{rw:secondary:integrable-carriers}; the omitted infinite tail
+is $O(e^{-L/2})$. Variation of constants proves an $O(H^{1/2})$
+difference at order zero. The differentiated comparisons add finitely
+many powers of $|\log H|$. Choose one $q\in(0,1/2)$ to absorb all
+of them after $N$ has been fixed. This proves the stated mixed
+$O(H^q)$ limits.
+
+For $x\in\{\bar a,\nu\}$ put $Y_x=\partial_xR$. Since
+$\beta_\epsilon$ is independent of $x$, the exact coefficient
+variations satisfy
+\[
+ (Y_x)_t+wQ_wY_x=\epsilon F_x,\qquad Y_x(0)=0,\qquad
+ F_{\bar a}=\frac{G\varphi w}{W^2},\quad
+ F_\nu=\frac{\varphi w(1-e)(W+G)}{W^2}.
+\]
+Dividing this equation by $\epsilon$ gives
+\[
+ (Z_x)_t+wQ_wZ_x=F_x,\qquad Z_x(0)=0.
+\]
+This equation defines $Z_x$ also at $\epsilon=0$, and uniqueness gives
+$Y_x=\epsilon Z_x$. Both forcing terms have the carrier $\varphi w$.
+Their auxiliary derivatives are bounded by
+$C(1+t)^{M_N}\varphi e^{-t/2}$; ordinary height derivatives replace
+the factor $w_e$ by bounded variations. The other differentiated
+sources contain a lower variation of $Z_x$ multiplied by an integrable
+variation of $wQ_w$. The same variation-of-constants induction through
+total order $N-1$, including ordinary $\epsilon$ derivatives and the
+moving endpoint, therefore gives
+\[
+ S_x:=Z_x(L),\qquad
+ \|S_x\|_{N-1}^{\rm aux}
+ \le C H^{1/2}(1+L)^{M_N}\le C H^q.
+\]
+Thus the coefficient variations have the stated factorization with
+the full auxiliary derivative budget.
+
+The terminal-height limit is nonconstant. At $\gamma=J=0$ the
+limiting equation has $Q=(k+2w)/(b+w)$; direct separation gives
+\[
+ t=\frac bk\log\frac{w_e}{w}
+       +\frac1{2k}\log\frac{k+2w}{k+2w_e},\qquad
+ \Psi_0(0,0,w_e;\theta)
+       =-\frac1{2b}\log(1+2w_e/k).
+\]
+This also verifies its ordinary smoothness at zero height.
+No assertion here concerns an ordinary $C^2$ extension in $H$ at zero.
+
+\subsection{Arrival and confinement for returning upper arcs}
+\label{rw:app:secondary-barriers}
+
+To connect the original axis input to the long map, use
+$t=1/X$, $v=Z/X$ and divide the field by $X>0$.
+The exact equations are
+\[
+\begin{aligned}
+ t'/t={}&-\theta-\bar m v^2+
+ t[(1+2\epsilon\bar m)v-\epsilon\bar a]
+                  -\epsilon(1+\epsilon\bar m)t^2,\\
+ v'={}&bv+\bar d v^2-\bar m v^3
+ +t[(1+2\epsilon\bar m)v^2
+                -\epsilon(\bar d+\nu+\bar a)v]\\
+ &+t^2[-\epsilon(1+\epsilon\bar m)v+\epsilon^2\nu].
+\end{aligned}
+\]
+The upper half-plane has $v\ge\epsilon t$. Fix
+$V=1/\varphi_0$. For $0<v\le V$ and sufficiently small entering
+$t,\epsilon,\bar d,\bar m,\nu$, these equations give $v'\ge v/2$.
+The apparent constant forcing, divided by $v$, is bounded by
+$\epsilon|\nu|t$. In the first equation discard the favorable
+$-\theta$ and use $\epsilon|\bar a|t/v\le|\bar a|$.
+Then
+\[
+ \frac{\dd\log t}{\dd v}\le C(1+|\bar m|v+t).
+\]
+Integrate on a small fixed $t$ strip and use first exit: an entry
+$t=1/p$ has $t\le C_V/p$ up to $v=V$. It cannot exit through
+$Y=0$, since $Y_\xi=\epsilon X>0$ there, and cannot stay forever
+below $V$ because $v'\ge v/2$. Thus it reaches the fixed section
+with $w=vt\to0$ as $p\to\infty$. The flight time is finite for
+each entry and need not be uniformly bounded. Reflection gives
+the incoming assertion.
+
+For the middle passage choose $w_1=w_0+12$ and then $L\ge10$,
+large enough for the reflected adjoining signs on $0\le w\le w_1$.
+Only after these choices reduce the coefficient and scale bounds.
+Put
+\[
+ R_0=L^2w_0,\quad K_0=L+2,\quad A_0=3(L+2),\quad
+ R_*=4(L^2+L+2),\quad
+ R_{\max}=R_0+2A_0L+R_*+2 .
+\]
+Then $R_{\max}/L^2=w_0+10+16/L+10/L^2<w_1$.
+On $-L\le\hat\varphi\le L$, $0\le R\le R_{\max}$ the exact
+projective field \eqref{rw:secondary:projective} converges to
+\[
+ \hat\varphi'=M-\hat\varphi^2-C\hat\varphi-R,\qquad
+ R'=-R(\hat\varphi+C).
+\]
+For the normalized faces $|C|,|M|\le1$, a common scale restriction
+therefore gives
+\[
+ R'\le K_0R,\qquad \hat\varphi'\le-R/2\quad(R\ge R_*).
+\]
+For $\mathcal V=R+A_0(\hat\varphi+L)$ it follows that
+$\mathcal V'\le-K_0R/2<0$ when $R\ge R_*$.
+At a first crossing of
+$\mathcal V=R_0+2A_0L+R_*+1$, one would have $R>R_*$ and a
+negative crossing derivative, a contradiction. This barrier lies
+strictly below the previously fixed radial boundary.
+The field points inward at $\hat\varphi=L$, and $R=0$ is invariant.
+Hence an arc stays in this compact rectangle until its first meeting
+with $\hat\varphi=-L$.
+
+This is a spatial statement. A given returning upper arc must make
+that meeting, because its later incoming endpoint has
+$\hat\varphi=-q/(\epsilon\lambda)<-L$. It is not asserted that
+every initial point in the rectangle returns. At the meeting,
+$w=R/L^2<w_1$. The reflected adjoining signs then continue the
+same arc outward to the fixed horizontal section with decreasing
+$w$; uniqueness excludes a second middle excursion. No upper bound
+for the intervening time is used.
+
+\subsection{Relative repeated-root limits at reciprocal input zero}
+\label{rw:app:secondary-tails}
+
+The repeated upper action may diverge, while the input derivatives of
+its logarithmic comparison retain ordinary limits in the actual
+reciprocal tag $t=1/P$. We separate this constant action from the
+relative units. In the horizontal matching $H=\lambda L$ is fixed
+and the terminal height varies, so the ordinary height estimates above
+apply at reciprocal zero.
+
+Apply Corollary~\ref{rw:transitions:relative-continuity} to
+\eqref{rw:secondary:repeated}, with $q=1$, $f(v)=\mu_u+v^2$ and
+the normal margins of Section~\ref{rw:upper-degenerate-preparation}.
+Fix all needed orders before choosing the strip so that
+$C_N\varpi<\beta_*/8$. At its fixed positive exit $v_R$ the scalar
+velocity has a positive margin. The full strip between $\pm v_R$
+passes only for $\mu_u>0$; its time tends to infinity as the gap
+vanishes. Its time derivatives have polynomial bounds in $1+T$,
+and moving entries satisfy the same fixed-exit jet estimate, by
+Appendix~\ref{rw:app:relative-variations}. The prepared field,
+sections and reserved flow jets converge on bounded time intervals.
+The corollary therefore gives convergence of the relative amplitudes
+and their ordinary radial derivatives through normal input zero and
+a lost exit. The absolute action remains in its constant multiplier.
+For $C=2g$, $M=-g^2$, put
+\[
+ V=\hat z+g^{-2},\qquad Z_1=\hat x+g\hat z-g^{-1},\qquad r=Z_1/V.
+\]
+The limiting affine equations give
+$V'=gV+Z_1$, $Z_1'=gZ_1$, $r'=-r^2$, and the first integral
+$\log(Vr)-g/r$ on the relevant positive branch.
+At $(P,0)$ it is
+$\log(P-P_c)-P_c/(P-P_c)$, $P_c=1/g$.
+The incoming and outgoing relative logarithmic derivatives are
+$-P/(P-P_c)^2$ and $-1/P$. These are the limits used in
+\eqref{rw:secondary:repeated-limit}.
+To extend the derivative limit to reciprocal zero we need an ordinary
+input bound. In the two-infinite repeated row, $\mu_u>0$ and the slow
+sections are fixed.
+Reserve four ordinary input orders in the tag and fixed connecting maps.
+Lemma~\ref{rw:secondary:tags} gives a regular change between the actual
+radial section coordinate and $t=1/P$, through zero. The connections
+to the fixed slow sections stay away from the angular root. Their
+normal entry is therefore $t$ times a positive unit with three bounded
+ordinary derivatives. Proposition~\ref{rw:relative-core}, including
+normal input zero, gives the same relative bounds across the long slow
+strip. At the horizontal connections use Proposition~\ref{rw:exact-long}
+with $H=\lambda L$ fixed while the terminal height varies. Its ordinary
+height jets through zero supply the remaining relative units. Thus
+the inputs in this row are
+\[
+ u_+=c_+tV_+(t),\qquad u_-=c_-tV_-(t),\qquad
+ c_+=\Lambda,\quad c_-=\Lambda e^{-A_u},\quad
+ 0<c_-\le c_+\le1,
+\]
+where $V_\pm$ have common ordinary $C^3$ bounds and positive lower
+margins. These bounds remain uniform as $\mu_u\downarrow0$.
+Put $l_\pm=1+tV_\pm'/V_\pm\ge1/2$ on a common small interval.
+Apply Lemma~\ref{rw:joint-jet-budget} with $N=2$ on the fixed coefficient
+fibre, using $s=tV_+(t)$, $s'=V_+l_+>c$,
+$k=(V_-/V_+)\circ t(s)$ and $1+sk'/k=l_-/l_+>c$.
+The two lower inputs are $c_+s$ and
+$c_-sk(s)$. Absorb $c_\pm^{h_I/\epsilon}$ into their constant
+multipliers; $P_\pm(c_\pm s)$ have the required ordinary $C^3$ bounds,
+and $H_\pm=h_I+uP_\pm'>c$. The lemma bounds
+$\mathcal K-[\epsilon\log(K_-/K_+)-h_IA_u]$ in ordinary $C^2$,
+so it bounds $\mathcal K(t)-\mathcal K(0)$ in the same norm.
+Only input derivatives are taken: $A_u$ and the divergent lower actions
+remain in the constants. The estimate holds on
+the passing side, then restricts to the lower whole-path and
+positive-central interval; the varying terminal height requires no
+ordinary $C^2$ extension in $H$. The common $C^2$ bound makes the
+first derivatives at $t=0$ and at a fixed small $t=\eta$ differ by
+at most $C\eta$. Convergence at $\eta>0$, followed by
+$\eta\downarrow0$, gives the endpoint derivative limit.

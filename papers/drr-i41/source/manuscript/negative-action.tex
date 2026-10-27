@@ -1,0 +1,455 @@
+\section{Degenerating saddle transitions: action coordinates}
+\label{sec:negative-action}
+
+We use an action coordinate to describe a large negative
+source-energy interval. Let \(\beta\) be
+defined by \(Y+\log Y=X^2/2+\beta\) for the unperturbed negative source.
+The passage consists of two parabolic tails joined by a thin region near
+the equator. Its limiting transition is determined by an action integral,
+but its curvature vanishes on the reversible coefficient set. Absolute
+convergence alone does not control the curvature near that set. We estimate
+the nonlinear part of the actual transition relative to the distance to
+that set. Keeping the section maps and their inverses in physical
+coordinates allows this estimate to be used in
+\eqref{eq:intro-displacement}.
+
+\subsection{The equation and the section coordinates}
+
+The local scales below are related to the raw coefficients in
+Section~\ref{sec:coefficient-regimes}.
+
+Fix a scale \(t>0\) on each coefficient fibre, keeping it fixed as
+the orbit varies. Start with \eqref{ann:source-field} at \(a=-1\),
+write \(p=t\Lambda_1\), \(s=t^3\Lambda_2\),
+\(\gamma=t^2k\), and put \(\xi=tX\), \(\eta=t^2Y\).
+After this phase scaling and a positive change of time, the same
+form \eqref{ann:source-field} holds in $(\xi,\eta)$ with the new
+coefficients
+\begin{equation}\label{neg:source-dictionary}
+ (a_{\rm new},p_{\rm new},\gamma_{\rm new},s_{\rm new})
+ =(-t^2,t^2\Lambda_1,t^2k,t^2\Lambda_2).
+\end{equation}
+Thus \(p_{\rm new}=tp\), \(s_{\rm new}=s/t\), and the equation is
+\begin{equation}\label{neg:field}
+\begin{split}
+ \dot\xi&=-\eta-t^2P_\Lambda(\xi)
+                +At^2L(\xi)\eta-Ct^4L(\xi)^2\eta,\\
+ \dot\eta&=-\eta\{\xi+t^2\xi(2k+\Lambda_2\xi)
+                         +Ct^4\Lambda_2L(\xi)\eta\},\\
+ P_\Lambda(\xi)&=1-\Lambda_1\xi+3k\xi^2+\Lambda_2\xi^3,
+ \qquad L(\xi)=k+\Lambda_2\xi .
+\end{split}
+\end{equation}
+The passive coefficients \(A,C\) range over a fixed compact
+neighborhood of \((1,1)\). Physical tails have \(\Lambda_2>0\);
+at \(\Lambda_2=0\) we will use limits of normalized maps.
+
+For the unperturbed negative source,
+\(Y+\log Y=X^2/2+\beta\). Hence its rescaled energy is
+\begin{equation}\label{neg:affine-energy}
+ \widehat b=t^2\beta+t^2\log(2t^2),\qquad
+ \eta+t^2\log(2\eta)=\xi^2/2+\widehat b.
+\end{equation}
+Energy-label differences are exactly \(t^2\) times source-label
+differences; the action integral below keeps these transverse labels.
+
+We specify the intervals on which the estimate will be used. Choose
+compact intervals
+\[
+ J\Subset\operatorname{int}\widehat J_+\Subset(-\infty,0),
+ \qquad \widehat J_-\Subset(-\infty,0),
+\]
+and a compact coefficient set. For \(b\in\widehat J_+\), put
+\(x=\sqrt{-2b}\) and define \(r>0\) by
+\begin{equation}\label{neg:action-equation}
+ A_-(r;\Lambda)=A_+(x;\Lambda),\qquad
+ A_+(x;\Lambda)=\int_0^x\frac{u}{P_\Lambda(u)}\,du,
+ \quad A_-(r;\Lambda)=\int_0^r\frac{u}{P_\Lambda(-u)}\,du.
+\end{equation}
+We require that the entry and exit lie in fixed compact subintervals
+of \((0,\infty)\), that \(-r^2/2\) lies in
+\(\operatorname{int}\widehat J_-\) with a fixed margin, and that
+\begin{equation}\label{neg:rootfree-margin}
+ P_\Lambda\ge p_0>0
+\end{equation}
+on a common neighborhood of every traversed segment \([-r,x]\).
+The common neighborhood extends to both sides of the limiting exit.
+Monotonicity of \(A_-\) then gives comparison exit cuts with opposite
+action differences. Enlarged intervals provide the smaller common
+images needed for composition and inversion.
+
+Choose a fixed \(L\) beyond the entry and exit intervals. The positive
+height pieces between the two sections \(\xi=\pm L\) and the lips
+are required to lie in fixed transverse neighborhoods. Each outward
+tail lies in a parabolic corridor and reaches the prescribed raw
+section, followed by its actual regular transitions. The divided
+finite closing map is included on its side. Its multiplier \(m\)
+is held fixed as an independent passive parameter in
+\(0\le m\le m_0\) during parameter division, as in
+Section~\ref{sec:source-normalization}; the cycle equation uses its
+actual value \(m>0\). These requirements concern the whole enlarged
+input and output intervals.
+
+There is a useful energy coordinate for all small signed \(k\).
+Put
+\begin{equation}\label{neg:ideal-energy}
+\begin{split}
+ \ell&=1-At^2k+Ct^4k^2,\qquad
+ \nu_k=\frac{6t^2k}{1+2t^2k},\\
+ \mathcal B_{t,k}(\xi,\eta)
+ &=-\frac12\left[
+ \eta^{-\nu_k}\left(\xi^2+\frac1{3k}
+             -\frac{2\ell\eta}{1-4t^2k}\right)-\frac1{3k}\right].
+\end{split}
+\end{equation}
+The apparent pole is removable, with
+\begin{equation}\label{neg:ideal-energy-zero}
+ \mathcal B_{t,0}=\eta+t^2\log\eta-\xi^2/2 .
+\end{equation}
+Direct differentiation of \eqref{neg:field} gives
+\(\dot{\mathcal B}_{t,k}=0\) when
+\(\Lambda_1=\Lambda_2=0\). Shrink the parameters so that
+\(1+2t^2k\), \(1-4t^2k\), and \(\ell\) are positive.
+At the two fixed cuts use the separate coordinates
+\begin{equation}\label{neg:cut-labels}
+ b_\pm=\mathcal B_{t,k}(\pm L,\eta)+t^2\log2 .
+\end{equation}
+Here \(\eta\) stays in a compact positive interval and
+\(\partial_\eta\mathcal B_{t,k}\) is bounded above and away
+from zero. These coordinates and their inverses are smooth in
+\(t^2,k,b_\pm\). They agree with \eqref{neg:affine-energy} at
+\(k=0\); away from that set, their relation is part of the actual
+section maps.
+
+Let \(S_{t,\lambda,k}\), \(\lambda=(\Lambda_1,\Lambda_2)\),
+be the passage from \(b_+\) to \(b_-\), and let
+\(\Gamma_\pm\) be the maps from these separate coordinates to
+the actual input and divided output heights. For references
+\(b_\pm^*\) in the enlarged intervals, set
+\begin{equation}\label{neg:tail-normalizations}
+\begin{split}
+ c_\pm&=\Gamma_\pm'(b_\pm^*)>0,
+ \qquad a_\pm=\Gamma_\pm(b_\pm^*)-c_\pm b_\pm^*,\\
+ \phi_\pm(b)&=b_\pm^*
+          +\frac{\Gamma_\pm(b)-\Gamma_\pm(b_\pm^*)}{c_\pm},
+ \qquad \Gamma_\pm=a_\pm+c_\pm\phi_\pm .
+\end{split}
+\end{equation}
+On the respective raw images
+\(\mathcal I_\pm=\Gamma_\pm(\operatorname{int}\widehat J_\pm)\)
+and normalized images
+\(\mathcal U_\pm=\phi_\pm(\operatorname{int}\widehat J_\pm)\), put
+\begin{equation}\label{neg:exact-composition}
+ \Pi_{t,\Lambda}=\phi_-\circ S_{t,\lambda,k}\circ\phi_+^{-1}
+       :\mathcal U_+\longrightarrow\mathcal U_- .
+\end{equation}
+If necessary the domain is restricted to the smaller input interval
+whose image has the prescribed output margin. The estimates below
+ensure that \(J\subset\mathcal U_+\) for small parameters.
+
+To see the role of both affine factors, write the actual cycle
+equation as \(h-a_{\rm f}-mh_{\rm out}=0\), where
+\(a_{\rm f}=a_\theta=C_\theta(0)\) and
+\(h_{\rm out}=\mathcal C_{\theta,m}(T_\theta(h))\) is the divided
+output height from Lemma~\ref{lem:closing}. Substitution of
+\eqref{neg:tail-normalizations} gives, without a change of zeros,
+\begin{equation}\label{neg:physical-displacement}
+ D(u)=a_+-a_{\rm f}-ma_-+c_+u-mc_-\Pi_{t,\Lambda}(u)=0 .
+\end{equation}
+Thus \(u\) is affine in the actual incoming height. The two
+positive first derivatives may tend to zero at different rates;
+neither their equality nor a bounded ratio is required.
+
+The zero count therefore requires curvature control of the completed map
+\eqref{neg:exact-composition}. Lemma~\ref{neg:lem-completed-curvature}
+expresses this curvature with both section contributions; the relative
+comparison below estimates them separately.
+
+\subsection{A relative estimate near the reversible coefficients}
+
+For a fixed reference \(b_*\in J\), write
+\(\mathfrak T f=f-f(b_*)-(b-b_*)f'(b_*)\).
+On a fixed compact interval the quotient norm satisfies
+\[
+ \|[f]\|_{C^3/\operatorname{Aff}}
+      \asymp\|\mathfrak T f\|_{C^3}\asymp\|f''\|_{C^1} .
+\]
+This quotient isolates the derivatives needed for the curvature count.
+The affine coefficients remain in the actual displacement
+\eqref{neg:physical-displacement}.
+
+\begin{theorem}[Relative convergence on the actual sections]
+\label{neg:thm-relative}
+Fix the enlarged intervals, the entry and exit margins, the tail and
+regular-transition neighborhoods described above. There exist
+\(t_0,\lambda_0,k_0,C>0\), depending only on these data and the
+compact passive coefficient set, such that the following holds.
+For
+\[
+ 0<t\le t_0,\qquad
+ 0<\rho_{\rm id}:=(\Lambda_1^2+\Lambda_2^2)^{1/2}\le\lambda_0,
+ \qquad \Lambda_2\ge0,\qquad |k|\le k_0,
+\]
+put \(\theta_i=\Lambda_i/\rho_{\rm id}\). On the fixed smaller
+interval \(J\), the map \eqref{neg:exact-composition} satisfies
+\begin{equation}\label{neg:relative-estimate}
+ \left\|\frac{[\Pi_{t,\Lambda}-\mathrm{id}]}{\rho_{\rm id}}
+           -\theta_1[U_0]-\theta_2[V_0]\right\|_{C^3/\operatorname{Aff}}
+ \le C\{t^2(1+|\log t|)+\rho_{\rm id}+|k|\},
+\end{equation}
+where
+\begin{equation}\label{neg:limiting-rows}
+ U_0(b)=-\frac23(-2b)^{3/2},\qquad
+ V_0(b)=\frac25(-2b)^{5/2} .
+\end{equation}
+The coefficient \(k\) is independently signed. The constants are
+uniform in the two separate reference values, held fixed during
+parameter integration, and in \(0\le m\le m_0\). No positive
+lower bound on \(\theta_2\) is needed. At \(\Lambda_2=0\) the
+assertion concerns the one-sided normalized limits.
+\end{theorem}
+
+\begin{proof}
+On each outward tail use \eqref{eq:parabolic-tail} with dictionary
+\eqref{neg:source-dictionary} and the separate initial label
+\eqref{neg:cut-labels}. With \(L\) fixed before shrink, the enlarged
+windows have \(\eta\asymp r^2\) and denominator \(\asymp r^2\)
+throughout division. Thus the tail proof of
+Proposition~\ref{prop:source-normalization} applies with its exact
+\(j\asymp r^{\lambda_\gamma}\), kernel
+\eqref{eq:normalized-difference}, and bounds
+\eqref{eq:N-bound}--\eqref{eq:N-parameter-bound} through one extra
+phase order. It gives bounded \(C^3\)-valued intrinsic \(s\)-rows
+and \(p\)-rows at \(s=0\), including the moving-end error
+\(O_{C^3}(s^{1-\nu})\). These differentiations concern only the tails.
+
+At \(p=s=0\), \eqref{neg:ideal-energy} is a first integral;
+implicit differentiation gives identity normalized intrinsic limits.
+As in \eqref{ann:exact-source-division}, integrate the intrinsic tails
+first in \(p\) at \(s=0\), then in \(s\) at fixed \(p\), holding
+the two reference values separately fixed. Since
+\(\partial_{\Lambda_1}=t^2\partial_p\)
+and \(\partial_{\Lambda_2}=t^2\partial_s\), the intrinsic maps and
+inverses differ from the identity by
+\(Ct^2(|\Lambda_1|+\Lambda_2)\) in \(C^3\).
+
+At the tested coefficients, each raw gain for \(\Lambda_2>0\) satisfies
+\[
+ d\le C(t^2\Lambda_2)^{2-\nu}
+       \le Ct^2\rho_{\rm id},\qquad 0<\nu<1.
+\]
+The ordinary observers, including divided closing, therefore add
+\(O_{C^3}(d)\) by Lemma~\ref{phys:lem-c3-adapters}. Thus
+\begin{equation}\label{neg:single-tail-estimate}
+ \|\phi_\pm-\mathrm{id}\|_{C^3}
+ +\|\phi_\pm^{-1}-\mathrm{id}\|_{C^3}
+       \le Ct^2(|\Lambda_1|+\Lambda_2).
+\end{equation}
+At \(\Lambda_2=0\) use the one-sided normalized limit. Inverses
+are on fixed smaller common images; no exterior coefficient derivative
+is needed.
+
+For the core, work in a small independent \((\lambda,k)\)-block with
+strict core margin and construct \(S_{t,\lambda,k}\) and its first
+\(\lambda\)-derivatives in \(C_b^3\), keeping \(t>0,k\) fixed.
+Choose an integer \(M>20\), and cut each lip at
+\(y=\eta/t^2=t^M\). On a lip use
+\(H=\eta-\xi^2/2\) and \(\ell_\eta=\log\eta\).
+Equation \eqref{neg:field} gives exactly
+\begin{equation}\label{neg:lip-equation}
+ \frac{dH}{d\ell_\eta}=t^2\Phi_\pm,
+ \qquad
+ \Phi_\pm=
+ \frac{\xi\eta(2k+\Lambda_2\xi+AL-Ct^2L^2)
+              -\xi P_\Lambda+Ct^2\Lambda_2L\eta^2}
+      {\xi\{1+t^2(2k+\Lambda_2\xi)\}
+                              +Ct^4\Lambda_2L\eta} .
+\end{equation}
+The signed root \(\xi^2=2(\eta-H)\) is bounded away from zero
+on each lip, as is the denominator. Thus the required derivatives
+of \(\Phi_\pm\) in \(H,\lambda,k\) are bounded. The logarithmic
+clock has length \(O(1+|\log t|)\), giving a change
+\(O(t^2(1+|\log t|))\) through total order five; the positive-height
+pieces to \(\pm L\) add \(O(t^2)\). Equation~\eqref{neg:ideal-energy}
+therefore gives
+\begin{equation}\label{neg:lip-label-error}
+ b=H+O_{C^5}\bigl(t^2(1+|\log t|)\bigr),
+\end{equation}
+At \(k=0\), the error is \(t^2\log(2\eta)\), largest at
+\(\eta=t^{M+2}\); the removable continuation in \(k\) has the same
+mixed bound through order five. The positive entry is
+\(\sqrt{-2b}+O_{C^5}(t^2(1+|\log t|))\); the negative exit has
+the corresponding estimate about \(-\sqrt{-2b}\).
+
+In the thin core put \(Q=t^2\log y\). Its exact graph equation is
+\begin{equation}\label{neg:thin-core}
+ Q_\xi=
+ \frac{\xi(1+2t^2k+t^2\Lambda_2\xi)
+               +Ct^6\Lambda_2(k+\Lambda_2\xi)y}
+      {P_\Lambda(\xi)+\ell_\Lambda(\xi)y}
+ =\frac{\xi}{P_\Lambda(\xi)}+R,
+ \quad
+ \ell_\Lambda=1-At^2L+Ct^4L^2 .
+\end{equation}
+Until the first return to \(y=t^M\), one has \(0<y\le t^M\).
+The root-free margin and direct differentiation give
+\begin{equation}\label{neg:core-mixed-estimate}
+ |\partial_Q^j\partial_\lambda^\alpha R|
+       \le C\{t^2+t^{M-2j}\},\qquad j+|\alpha|\le5,
+\end{equation}
+with the same bounds for the required \(\xi\)-derivatives.
+The negative powers come only from differentiating
+\(y=e^{Q/t^2}\). For dependence on an open domain, replace this
+exponential above the lip by
+\(t^M\chi((Q-Q_{\rm lip})/t^2)\), where
+\(Q_{\rm lip}=Mt^2\log t\), \(\chi(z)=e^z\) for
+\(z\le1\), and \(\chi\) is smooth, positive and constant for
+\(z\ge2\). This changes no first-exit orbit, preserves
+\eqref{neg:core-mixed-estimate}, and keeps the denominator positive.
+
+The two comparison exit cuts from \eqref{neg:action-equation}
+have opposite action differences. Starting at the positive lip,
+\(Q\) decreases, stays a fixed amount below the lip near
+\(\xi=0\), and increases strictly on the negative side away from
+zero. The comparison cuts consequently give a unique actual first
+exit. At that exit,
+\(Q_\xi=-r/P_\Lambda(-r)+o(1)\) is bounded away from zero.
+The differentiated integral equation for \eqref{neg:thin-core},
+followed by this implicit exit equation, therefore has uniform
+derivatives through total order five. With the two lip maps it gives
+\begin{equation}\label{neg:compact-mixed-convergence}
+\begin{split}
+ &\|S_{t,\lambda,k}-S_{0,\lambda,k}\|_{C_b^3}
+  +\|\partial_\lambda S_{t,\lambda,k}
+                -\partial_\lambda S_{0,\lambda,k}\|_{C_b^3}\\
+ &\hspace{20mm}\le C\{t^2(1+|\log t|)+t^{M-10}\},
+ \qquad S_{0,\lambda,k}(b)=-r^2/2 .
+\end{split}
+\end{equation}
+No derivative with respect to \(t\) at zero is asserted.
+
+The exact energy and even \(P_{0,k}\) give
+\(S_{t,0,k}=S_{0,0,k}=\mathrm{id}\). At \(\lambda=k=0\),
+\eqref{neg:action-equation} gives
+\[
+ \partial_{\Lambda_1}S_{0,0,0}=-2x^3/3=U_0(b),\qquad
+ \partial_{\Lambda_2}S_{0,0,0}=2x^5/5=V_0(b).
+\]
+Its derivatives are smooth on the compact root-free block. The
+identity on the coefficient ideal permits the exact division
+\[
+ S_{t,\lambda,k}-\mathrm{id}
+      =\int_0^1\partial_\lambda S_{t,v\lambda,k}\,\lambda\,dv .
+\]
+Using \eqref{neg:compact-mixed-convergence} in this integral, and
+then the smoothness of the limiting action, gives
+\begin{equation}\label{neg:relative-core}
+ \|S_{t,\lambda,k}-\mathrm{id}-\Lambda_1U_0-\Lambda_2V_0\|_{C^3}
+  \le C\rho_{\rm id}
+          \{t^2(1+|\log t|)+\rho_{\rm id}+|k|\} .
+\end{equation}
+Thus division by \(\rho_{\rm id}\) precedes the limit; the even
+coefficient \(k\) creates no additional row.
+
+The same construction bounds \(S\) in \(C^4\). Apply
+Lemma~\ref{phys:lem-c3-core-transport} with
+\eqref{neg:single-tail-estimate} to obtain
+\begin{equation}\label{neg:composition-estimate}
+ \|\Pi_{t,\Lambda}-S_{t,\lambda,k}\|_{C^3}
+                       \le Ct^2\rho_{\rm id} .
+\end{equation}
+Only the core needs the extra phase derivative for evaluation at
+\(\phi_+^{-1}\). Combining with \eqref{neg:relative-core} proves
+\eqref{neg:relative-estimate}.
+\end{proof}
+
+The outgoing tail must first be estimated in its own intrinsic label. If
+an outgoing graph is written as \(\eta(\xi,S(b))\), then
+\[
+ \partial_b^2\eta(\xi,S(b))
+    =\eta_{BB}(\xi,S(b))(S')^2+\eta_B(\xi,S(b))S'' .
+\]
+The second term need not decay on that tail. Estimating the map in
+\(B\) first and then composing retains this contribution.
+
+\subsection{Zeros of the completed displacement}
+
+The action transition has a curvature formula useful beyond the
+small coefficient neighborhood. Differentiating
+\eqref{neg:action-equation}, with \(x=\sqrt{-2b}\), gives
+\begin{equation}\label{neg:action-curvature}
+ S_\Lambda'=
+     \frac{P_\Lambda(-r)}{P_\Lambda(x)}>0,
+ \qquad
+ \frac{S_\Lambda''}{S_\Lambda'}
+   =\frac{x+r}{P_\Lambda(x)}
+                 \left(3\Lambda_2-\frac{\Lambda_1}{xr}\right),
+ \quad S_\Lambda=-r^2/2 .
+\end{equation}
+The terms containing \(k\) cancel. Moreover
+\begin{equation}\label{neg:entry-exit-monotonicity}
+ \frac{d(xr)}{db}
+      =-\frac r x-\frac{xP_\Lambda(-r)}{rP_\Lambda(x)}<0 .
+\end{equation}
+Thus, away from \(\lambda=0\), every possible curvature zero is
+simple and has the same crossing orientation.
+
+\begin{corollary}\label{neg:cor-rootfree}
+On a compact family satisfying the section, tail, and root-free
+margins above, assume \(\Lambda_2\ge0\) and that the physical
+coefficients satisfy \(k\to0\) whenever
+\(\rho_{\rm id}\to0\), uniformly on the family. For example,
+the condition \(|k|^3\le C\Lambda_2^2\) suffices.
+There is a common \(t_0>0\) such that every actual completed
+displacement \eqref{neg:physical-displacement}, for
+\(0<t\le t_0\), has at most three isolated zeros on its input
+interval, counted with multiplicity.
+
+The same conclusion holds for connected coefficient-dependent
+intervals \(J_\Lambda\) if their coefficient--label graph has
+compact closure and the enlarged input and output intervals, both
+exit margins, and all actual transition neighborhoods have the
+same uniform margins.
+\end{corollary}
+\begin{proof}
+At \(\rho_{\rm id}=0\), the exact first integral and the separate
+normalized tail limits give \(\Pi=\mathrm{id}\). The displacement
+is therefore affine: it has at most one zero unless it vanishes
+identically, in which case it has no isolated zero. This coefficient
+boundary is understood as a normalized limit; actual raw passages
+have \(\Lambda_2>0\).
+
+Near the coefficient ideal, put \(x=\sqrt{-2b}\). The limiting
+rows satisfy
+\[
+ U_0''=-2/x,\qquad V_0''=6x,\qquad
+ \frac{(\theta_1U_0+\theta_2V_0)''}{2/x}
+                   =-\theta_1+3\theta_2x^2 .
+\]
+If the last expression vanishes, compactness of the positive
+\(x\)-interval and \(\theta_1^2+\theta_2^2=1\) give a
+positive lower bound on \(\theta_2\). Its derivative in \(b\)
+is \(-6\theta_2\). When \(\theta_2\) is smaller than a fixed
+positive constant, the expression is instead bounded away from
+zero. This proves a uniform alternative of no curvature zero or
+one simple downward crossing. The relative \(C^3\) estimate
+preserves that alternative after a common shrink of
+\(t,\rho_{\rm id},k\).
+
+On the complementary compact coefficient annulus, the tail estimate
+still applies as \(p=t^2\Lambda_1\), \(s=t^2\Lambda_2\),
+\(\gamma=t^2k\) tend uniformly to zero. The strict core margin permits
+the same lip and first-exit argument, giving absolute \(C^3\)
+convergence to \(S_\Lambda\) without division through the ideal. Hence
+\(\|[\Pi-S_\Lambda]\|_{C^3/\operatorname{Aff}}\to0\).
+Equations \eqref{neg:action-curvature} and
+\eqref{neg:entry-exit-monotonicity} give the same uniform crossing
+alternative on this compact annulus. Finitely overlapping the two
+coefficient regions gives one bound on \(t\).
+
+Lemma~\ref{sharp:upper-curvature-count} gives at most one curvature
+zero and three displacement zeros since \(D''=-mc_-\Pi''\).
+The affine relation \eqref{neg:physical-displacement} preserves
+multiplicity. Compactness of the coefficient--label graph supplies
+the same constants fibrewise on \(J_\Lambda\).
+\end{proof}

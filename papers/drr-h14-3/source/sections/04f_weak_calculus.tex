@@ -1,0 +1,52 @@
+\subsection{Derivative comparison at a weak passage}
+
+The weak inverse map has a uniformly flat output, but its logarithmic
+rates divide by the vanishing scalar speed.  Multiplying the derivative
+comparison by that speed gives a regular numerator.  The positive
+weight below also retains the estimate when the incoming lower
+factor approaches a root.
+
+\begin{lemma}[Weighted weak rates]\label{rw:weak:rate-calculus}
+On one passing interval let $f=u(\gamma+u)>0$, $t\in C^3$, $t,t'>0$, and
+\[
+ \frac{t'}t=\frac Nf,\qquad
+ \frac{t''}{t'}=\frac{A_U}f.
+\]
+Let $J(u),O(t)\in C^3$ be central maps with same-sign nonzero
+derivatives after composition, and let $h\in C^1$, $h(u)>0$. Set
+\[
+ K=\epsilon\log\frac{J'}{(O\circ t)'},\qquad
+ h\epsilon\frac{J''}{J'}=\frac A u+\epsilon R,
+ \qquad E=hN\left(\epsilon\frac{O''}{O'}\right)\circ t.
+\]
+Then the exact numerator is
+\begin{equation}\label{rw:weak:weighted-numerator}
+ M=hfK'=A(\gamma+u)+\epsilon fR-tE-\epsilon hA_U.
+\end{equation}
+Suppose $A\ge a_*>0$ and $A,R,E,hA_U$ have common bounded
+ordinary $C^1$ norms. For sufficiently small
+$|\gamma|+u+\epsilon+\|t\|_{C^1}$, depending only on these bounds,
+$M'>a_*/2$. Hence $K'$ has at most one zero, which is simple, and
+$K$ has at most two zeros counted with their orders. Every such zero
+has order at most two. A regular $C^3$ input change preserves these
+orders in the original analytic comparison. There is no lower bound
+on $h$ at an excluded endpoint.
+\end{lemma}
+\begin{proof}
+The chain rule gives
+$\epsilon(O\circ t)''/(O\circ t)'=
+ (\epsilon O''/O')t'+\epsilon t''/t'$.
+Substituting the stated rates proves
+\eqref{rw:weak:weighted-numerator}. Its derivative is
+\[
+ M'=A+(\gamma+u)A'+\epsilon(fR)'-(tE)'
+                                      -\epsilon(hA_U)'.
+\]
+The last four terms are uniformly small under the stated bounds.
+Since $hf>0$, a zero of $K'$ is simple, and a zero of $K$ at that
+point has $K''=M'/(hf)\ne0$. All other zeros of $K$ are simple.
+Rolle's theorem, counting a double zero once also in $K'$, gives
+the asserted bounds for every finite selection. A regular $C^3$
+change of input preserves the first nonzero derivative and hence
+these original analytic zero orders.
+\end{proof}

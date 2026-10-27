@@ -1,0 +1,262 @@
+\section{The finite parameter cover and the geometric conclusion}
+\label{sec:direct-parameter-cover}
+
+The regional estimates bound the displacement on the whole interval
+of admissible central heights. It remains to show that their parameter
+regions cover a full neighborhood of the organizing value, with common
+sections and compatible constant choices. The resulting zero bound is
+the maximum of the regional bounds. Geometric capture then gives the
+upper bound for periodic orbits. The table below summarizes the regions;
+the proof fixes their thresholds and checks their overlaps and boundary
+cases.
+
+\input{direct-sections/parameter-guide}
+
+\begin{proposition}[Uniform zero bound]
+\label{prop:direct-uniform-displacement}
+For each fixed \(C_0>1\), there is a full parameter
+neighborhood of \((1,C_0,0,0,0)\) such that, with
+\[
+ N_{\rm dir}=3,
+\]
+\(\Delta_p\) has at most \(N_{\rm dir}\)
+distinct zeros on the height interval \(\cH_p\).
+\end{proposition}
+
+\begin{proof}
+\emph{Common sections and the contraction margin.}
+First fix a preliminary box in the coordinates \((\eta,z)\) for this
+\(C_0\), the common cone of \cref{sec:direct-passage-estimates}, and the
+fixed adaptive and annular landing levels. The organizing endpoints satisfy
+\(\eta_\pm^2/(2z_*)\to1\) as \(z_*\downarrow0\), by
+\cref{lem:exterior-multiplier-new}. Hence their windows can be
+chosen with a fixed lower bound \(z_*/\eta_\pm^2\ge c_{\rm end}>0\)
+for all sufficiently small sections; choose each landing level
+below \(c_{\rm end}/2\). The other landing restrictions use the enlarged
+compact drift domains before the later coefficient and height thresholds.
+
+Choose \(\Lambda_*\) with \(\Lambda_0<\Lambda_*<1\), and reserve a
+fixed fraction of \(-\log\Lambda_*\) for tail errors.
+By \cref{lem:exterior-multiplier-new} with \(\Lambda_+=\Lambda_*\),
+we can then fix \(z_*\) small and choose the enlarged exterior
+windows \(\widetilde W_\pm\) of that lemma. Thus
+\eqref{eq:exterior-uniform-contraction-new} holds with
+\(\Lambda_+=\Lambda_*\) in every regional estimate.
+
+The same tail bound must fit the reserved contraction margin in every
+region. The half-orbits enter the common cone after a finite scaled
+continuation, as in \cref{lem:early-central-heights},
+in \cref{sec:direct-bounded-contact,sec:direct-positive-offset}, and
+by \eqref{eq:direct-finite-common-cone-entry}. From a common height
+\(t\) in that cone, \eqref{eq:direct-tail-first-slope} bounds the
+tail contribution to the logarithm of the endpoint derivative ratio by
+\(2C_{\rm cone}(\sqrt{z_*}+|q_1|/\sqrt t)\), as in
+\cref{lem:boundary-flow-endpoint}. The coefficient of \(\sqrt{z_*}\)
+in every such upper bound is therefore at most \(2C_{\rm cone}\),
+independently of \(L\), of coefficient margins such as \(\nu\), and
+of the regional cuts.
+
+The continuation constants and higher exterior derivatives may depend
+on the cuts and on \(z_*\), but enter only the final parameter
+thresholds. Choose \(z_*\) also so that
+\(2C_{\rm cone}\sqrt{z_*}\) is smaller than the reserved fraction.
+This choice is made after the common cone and before all later cuts
+and thresholds, and meets every regional smallness requirement on
+\(z_*\). If \(q_1\le0\), \cref{prop:signed-contraction-new} gives
+at most one zero. Henceforth assume \(q_1>0\).
+
+\emph{Secondary negative offsets.}
+For \(q_0<0,\ q_2\ne0\), let \(s,r\) be the scales of
+\cref{sec:standard-tools}. We first fix thresholds for these scales;
+the contact width will be chosen after the remaining regions have
+been compared.
+\Cref{prop:direct-positive-quadratic} for \(q_2>0\) and the second
+assertion of \cref{prop:direct-negative-weak-root} for \(q_2<0\) give
+constants \(\kappa_+\) and \(\kappa_-\), respectively, and thresholds for
+\(s,r\) independent of \(L\). Below these thresholds, for every
+\(L>\max\{\kappa_+^{-1},\kappa_-^{-1}\}\), \(\Delta_p\) has at most three
+zeros outside the strip \(|q_0|\le Lq_1^2\), for either sign of \(q_2\).
+Consequently a single secondary threshold
+\(0<r_{\rm d}<1/4\) for \(r\) can be fixed for both signs
+before the final contact constant \(L\) is selected.
+
+\emph{The primary and linear scales.}
+For the remaining negative offsets, including \(q_2=0\), the primary
+and linear scales must overlap the secondary region. We choose the
+thresholds so that small normalized constant coefficient, outside the
+secondary region, forces the normalized linear coefficient to stay
+bounded away from zero. Put
+\[
+ b_{\rm cov}:=r_{\rm d}/2,\qquad A_0:=2/\sqrt{b_{\rm cov}}.
+\]
+For this fixed \(A_0\), the primary displaced-contact
+estimate \cref{prop:direct-negative-displaced} gives
+constants \(a_{\rm w},\kappa_{\rm w}>0\).
+Choose \(m_{\rm cov}>0\) so that
+\begin{equation}
+\label{eq:direct-cover-constants}
+ 2m_{\rm cov}<1,\qquad \sqrt{2m_{\rm cov}}<b_{\rm cov},
+             \qquad 2m_{\rm cov}/b_{\rm cov}^{3/2}<a_{\rm w}.
+\end{equation}
+With \(H\) and \(\rho_1\) of \cref{sec:standard-tools}, put
+\(\bar a=|q_0|/H^3\) and \(\bar b=q_1/H^2\).
+If \(\bar a\ge m_{\rm cov}\),
+\cref{prop:direct-primary-negative} gives at most three zeros.
+On the remaining region \(\bar a<m_{\rm cov}\) (and hence also
+\(\bar a\le2m_{\rm cov}\)), use the secondary estimates when
+\(q_2\ne0\) and \(r<r_{\rm d}\). For the complementary part,
+it suffices to consider \(q_2=0\) or
+\(r\ge r_{\rm d}/2=b_{\rm cov}\). On this part we claim
+\begin{equation}
+\label{eq:direct-cover-primary-overlap}
+ \bar b\ge b_{\rm cov},\qquad
+ |q_2|/\rho_1\le1/\sqrt{b_{\rm cov}}<A_0,\qquad
+ |q_0|/\rho_1^3\le2m_{\rm cov}/b_{\rm cov}^{3/2}<a_{\rm w}.
+\end{equation}
+To prove the overlap, consider which term realizes the maximum
+defining \(H\). If \(H=\rho_1\), the first assertion is immediate.
+The possibility \(H=|q_0|^{1/3}\) would give
+\(\bar a=1\), excluded by \eqref{eq:direct-cover-constants}.
+In the remaining case \(H=|q_2|\),
+\[
+ r=\max\{\sqrt{\bar a},\bar b\}.
+\]
+Because \(\sqrt{\bar a}<b_{\rm cov}\) and \(r\ge b_{\rm cov}\),
+one has \(\bar b\ge b_{\rm cov}\).
+The other assertions in
+\eqref{eq:direct-cover-primary-overlap} follow from
+\(\rho_1=H\sqrt{\bar b}\).
+
+If also \(q_1^2/|q_0|\le\kappa_{\rm w}\), these inequalities put
+the parameter in \cref{prop:direct-negative-displaced}, giving at
+most two zeros. Within this part of coefficient space, the
+complementary case satisfies \(|q_0|/q_1^2<1/\kappa_{\rm w}\)
+and lies in bounded contact. The bands
+\(m_{\rm cov}\le\bar a\le2m_{\rm cov}\) and
+\(r_{\rm d}/2\le r<r_{\rm d}\) provide fixed overlaps of these
+coefficient regions.
+
+\emph{Positive offsets and the contact strip.}
+If \(q_0>0\), \cref{prop:direct-positive-offset} gives at most two
+zeros whenever \(q_1/\sqrt{q_0}\le\kappa_{\rm p}\), for a fixed
+\(\kappa_{\rm p}>0\). Its complement satisfies
+\(q_0/q_1^2<\kappa_{\rm p}^{-2}\). We can now choose the contact
+width to include all the remaining parameters:
+\begin{equation}
+\label{eq:direct-final-contact-constant}
+ L>2\max\{\kappa_{\rm p}^{-2},\kappa_{\rm w}^{-1},
+                         \kappa_+^{-1},\kappa_-^{-1},1\}.
+\end{equation}
+\Cref{prop:direct-bounded-contact} gives at most two zeros on this
+strip for sufficiently small parameters.
+
+\Cref{tab:direct-constant-order} records the global order of choices.
+Within each regional proof, its fixed coefficient and height cuts precede
+the final scale reduction, as specified there.
+\begin{table}[ht]
+\centering
+\small
+\caption{Global order of fixed choices. Each row may depend on preceding
+rows; the original parameter neighborhood is reduced last.}
+\label{tab:direct-constant-order}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr.44\textwidth-6pt}
+                >{\raggedright\arraybackslash}p{\dimexpr.56\textwidth-6pt}@{}}
+\hline
+Choice & Purpose and permitted dependence\\
+\hline
+Fixed \(C_0\); preliminary box, common cone and landing level
+\(m_{\rm land}\); \(\Lambda_*=\Lambda_+\), then \(z_*\), exterior windows
+and capture data
+  & Reserve the exterior margin using \(\Lambda_0\), and fix
+    \(2C_{\rm cone}\sqrt{z_*}\) below a fixed fraction of it, before any
+    coefficient or height threshold. The landing level is small for
+    \cref{lem:direct-adaptive-positive} and
+    \eqref{eq:direct-no-root-adaptive-rate}, which use only bounds of the
+    drift factors.\\
+For \(q_2>0\): \(a_+,\kappa_+\), then the compact thresholds. For
+\(q_2<0\): the fold width \(\epsilon_{\rm f}\) and
+\(\nu=\epsilon_{\rm f}^2/50\), \(a_-,\kappa_-\), then the compact
+thresholds. Then \(r_{\rm d}\)
+  & Both signs of \(q_2\); the complements of the weak-root regions lie
+    in bounded contact strips.\\
+\(b_{\rm cov}=r_{\rm d}/2\), \(A_0\), \(a_{\rm w}\), \(\kappa_{\rm w}\),
+\(m_{\rm cov}\)
+  & Fixed primary--secondary overlaps in
+    \eqref{eq:direct-cover-constants}--\eqref{eq:direct-cover-primary-overlap}.\\
+Positive-offset threshold \(\kappa_{\rm p}\), then contact width \(L\)
+  & \eqref{eq:direct-final-contact-constant} includes the complements of
+    all weak-root and saddle regions.\\
+Contact height thresholds, compact passing sets and matching height;
+final original parameter neighborhood
+  & Cut-dependent finite-height errors and exterior derivative bounds
+    are absorbed by parameter reduction with \(z_*\) fixed.\\
+\hline
+\end{tabular}
+
+\end{table}
+
+\emph{Boundary cases and a full neighborhood.}
+The regions now have fixed overlaps. We check that they also include
+their boundary cases. If \(q_1=0\), signed contraction applies, including
+\(q_0=q_2=0\) and the axes \(H=0\) or \(r=0\). If \(q_1>0\)
+and \(q_0=0\), the contact row applies.
+
+If \(q_0<0\) and \(q_2=0\), then \(\bar a<m_{\rm cov}\) puts
+\(H=\rho_1\), so \(\bar b=1\) and the primary--contact overlap
+above applies. Its weak-root condition puts the point in the displaced
+row; the complementary condition puts it in the contact row.
+
+For \(q_0<0\), \(\bar a<m_{\rm cov}\) and \(q_2\ne0\), the
+cases \(r<r_{\rm d}/2\), \(r_{\rm d}/2\le r<r_{\rm d}\), and
+\(r\ge r_{\rm d}\) are covered by the secondary row, the doubled
+overlap, and the primary--contact overlap. The primary row includes
+\(\bar a=m_{\rm cov}\); the overlap and secondary rows include
+\(r=r_{\rm d}/2\), and the overlap includes \(r=r_{\rm d}\).
+
+Equality \(|q_0|=Lq_1^2\) belongs to contact. For \(q_0>0\), the
+saddle row and its contact complement are exhaustive. Equality in the
+saddle condition is assigned to the saddle row, and both rows allow
+\(q_2=0\). Thus every parameter belongs to at least one row of
+\cref{tab:direct-parameter-cover}. The maximum of the listed zero
+bounds is \(N_{\rm dir}=3\).
+
+Finally, choose the smallest of the finitely many remaining parameter
+thresholds, keeping the sections fixed. The coefficient comparison in
+Appendix~\ref{app:coordinates} gives a full neighborhood in the original
+five parameters on which all these conditions hold. All estimates are
+uniform for \((A,C)\) in the fixed neighborhood, independently of
+\(H,s,r\) and \(\rho_1\). This proves the proposition.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:direct-finite-cyclicity}]
+Fix \(C_0>1\) and use the fixed sections, exterior windows,
+and full parameter neighborhood constructed in the proof of
+\cref{prop:direct-uniform-displacement}. Choose the
+whole-graphic capture data of
+\cref{prop:isolation-capture-new} for these windows, reduced as in
+the paragraph before \cref{lem:exterior-multiplier-new} and in
+\eqref{eq:small-central-height-new}.
+Let \(V\) be the intersection of the parameter neighborhood
+with \(V_{\mathrm{cap}}\), and choose
+\(\varepsilon\le\rho_{\mathrm{cap}}\); by
+\cref{prop:isolation-capture-new}(ii), every periodic orbit within
+Hausdorff distance \(\varepsilon\) of \(\GammaI\) is then captured.
+
+Let \(p\in V\), and let \(\gamma\) be a periodic orbit with
+\(\distH(\overline\gamma,\GammaI)<\varepsilon\). By
+\cref{lem:unique-central-crossing-new}, it has exactly one transverse
+central crossing. The interval construction in
+\cref{prop:central-displacement-interval-new} assigns it a zero of
+\(\Delta_p\), injectively. The uniform zero bound therefore gives
+at most \(N_{\rm dir}=3\) such orbits.
+
+It remains to check isolation. The interior-window construction in
+\cref{prop:central-displacement-interval-new} places the height of
+every captured orbit in \(\operatorname{int}\mathcal H_p\).
+The finite zero bound makes its displacement zero isolated in an
+open central-height neighborhood. The correspondence in that
+proposition preserves isolation, so every periodic orbit counted
+above is a limit cycle.
+Consequently \(N(V,\varepsilon)\le3\) in
+\eqref{eq:cyclicity-definition}, and \(\Cycl(\GammaI)\le3\).
+\end{proof}

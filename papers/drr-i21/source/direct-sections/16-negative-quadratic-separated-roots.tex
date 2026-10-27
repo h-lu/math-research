@@ -1,0 +1,182 @@
+\subsection{Separated roots on the negative quadratic-drift scale}
+\label{sec:direct-negative-separated}
+
+Even for separated roots, the limiting endpoint rates can agree.
+We compare derivatives of these rates in the common logarithmic height
+coordinate. Retaining their drift weights makes the curvature
+comparison strict at every interior height.
+
+Fix \(a_0^-,\underline b,\nu>0\), and consider
+\begin{equation}
+\label{eq:direct-negative-separated-region}
+ a\ge a_0^-,\qquad b\ge \underline b,\qquad b^2-4a\ge\nu
+\end{equation}
+in \eqref{eq:direct-negative-secondary-scales}.
+The first positive secondary root is simple:
+\[
+ \alpha=\frac{b-\sqrt{b^2-4a}}2+O(r),\qquad
+ c<\alpha<C,\qquad K_+'(\alpha)<-c.
+\]
+Set \(x_L=\alpha/4,\ w_a=\alpha/2,\ R_p=3\alpha/4\).
+The exact drift and its quadratic comparison have fixed
+positive margins up to \(R_p\).
+
+\begin{proposition}[Separated secondary roots]
+\label{prop:direct-negative-separated}
+In \eqref{eq:direct-negative-separated-region}, \(\Delta_p\)
+has at most three zeros for all sufficiently
+small independent \(s,r>0\), including parameters at
+which the two limiting characteristic rates agree.
+\end{proposition}
+
+\begin{proof}
+Construct the positive boundary-flow coordinate at a
+fixed small output \(z=t_0Z_f,\ t_0=s^2r^2\).
+The root-approach interval of central heights is
+\begin{equation}
+\label{eq:direct-negative-separated-root-cell}
+ w=\mathcal W_+(x(t_0Z_f;h),Z_f)\in[w_a,\alpha).
+\end{equation}
+Advancing from a projected entry at most \(x_L\) to \(w_a\)
+requires a fixed positive \(F_+\)-flow time \(\tau_*\).
+Thus each central height in this interval satisfies
+\[
+ h/(s^3r^2)\le (Z_f/s)\e^{-\tau_*/s}.
+\]
+The regular prefix gives \eqref{eq:direct-common-phase} at the
+fixed output \(z=t_0Z_f\). The positive drift margin at \(x_L\)
+and the advance \(\tau_*\) verify
+\cref{lem:direct-weighted-phase} with \(\delta=s\), \(N=1\) and
+\(j=2\). Thus, in \(T=-s\log h\), the phase errors are
+\(o(1)F_+(w)\) through two \(T\)-derivatives.
+\Cref{lem:boundary-flow-endpoint}, with \(\ell=sr\) and
+\(\delta=s\), gives \(-I_{+,w}=E_fA_pw(1+O_{C^3}(s))\), with
+\(E_f=t_0(z_*/(t_0Z_f))^{2s}\to0\).
+Apply \eqref{eq:direct-rate-curvature}:
+\[
+ \mathfrak H_+'=
+ F_+(w)\{Q_+(w)+o(1)\},\qquad
+ Q_+(w)=\frac{wK_+''-K_+'}{w^2}.
+\]
+By \eqref{eq:direct-curvature-coefficient-cubic}, with \(K_+'(0)=-b\) and
+\(R_K(x)=-rR_q(srx)\), one has \(Q_+(w)=b/w^2+O(r)>c_Q>0\), since
+\(b\ge \underline b\) and \(w<\alpha<C\).
+Consequently \(\mathfrak H_+'\ge cF_+(w)>0\) on the root interval.
+
+The negative output at the same central height may lie on either
+scale. We follow it from bounded secondary outputs through the annulus
+and the compact primary interval to its far root, retaining the
+endpoint estimates needed to absorb the exterior curvature in each
+range.
+Choose a small fixed \(x_c>0\) so that the negative boundary action
+to \(2x_c\) is less than \(\tau_*/4\). This is possible
+because the central coefficient is at least \(a_0^-\).
+The negative prefix coordinate gives exponentially small height
+at this cut.
+The negative secondary drift is
+\[
+ K_b(X)=a+bX+X^2+rX^3R_q(-srX),\qquad F_b=K_b/X .
+\]
+Choose a large fixed \(M\), and a small fixed output
+height \(Z_b>0\). The boundary-flow coordinate on
+a box containing \([x_c/4,5M]\) shows that every
+negative output with \(X\le4M\) at \(t_0Z_b\)
+has projected state \(w_b\in[x_c,4M]\).
+At the regular entry \(x_c/2\), the drift \(F_b\) has a fixed
+positive lower bound. The advance from that entry to
+\(w_b\ge x_c\), at the fixed output \(z=t_0Z_b\), has a fixed
+positive phase gap. Hence \cref{lem:direct-weighted-phase}
+applies with \(\delta=s\), \(N=1\) and \(j=2\), in the same
+\(T\), giving phase errors \(o(1)F_b(w_b)\) through two
+\(T\)-derivatives.
+By \cref{lem:boundary-flow-endpoint}, its endpoint has amplitude
+\(E_b=t_0(z_*/(t_0Z_b))^{2s}\to0\). By
+\eqref{eq:direct-curvature-coefficient-cubic}, with \(K_b'(0)=b\) and
+\(R_K(X)=rR_q(-srX)\), one has \(Q_b(X)=-b/X^2+O(r)<-c_M<0\) for
+\(x_c\le X\le4M\). The endpoint rate identities and the weighted phase
+estimate then give
+\[
+ \mathfrak H_-'\le-cF_b(w_b),\qquad
+ |I_{-,T}|+|I_{-,TT}|\le CE_bF_b(w_b).
+\]
+
+If the radius \(X\) of the negative graph at \(t_0Z_b\) exceeds
+\(4M\), the graph is thin at \(X=M\). Indeed, the outward graph then
+reaches \(X=4M\) below \(Z_b\), it lies in the coordinate box between
+\(X=M\) and \(X=4M\), and \(8B_0Z_b\le15M^2\) since \(Z_b\) is small.
+For small \(s\), \cref{lem:direct-radial-advance} with \(\delta=s\),
+\(X_1=M\), \(X_2=4M\) and \(C_F=\sup|F_b|\) on the box bounds its
+secondary height at \(X=M\) by
+\(Z_b\e^{-3M/(2C_Fs)}<sM^2\delta_{\rm an}\).
+
+For a thin exit in \(Mr\le\rho\le v_0\), the negative regular
+prefix allows us to apply \cref{lem:direct-annulus-rates}, with
+\(u=r/\rho\), \(v=\rho\). Choose \(M\) large and \(v_0,s\) small.
+Since \(b\ge \underline b\), \eqref{eq:direct-annulus-clock-rate} gives
+\[
+ \mathfrak H_-'\le-c(u+v),\qquad
+ |I_{-,T}|+|I_{-,TT}|\le C(s\rho)^{2-4s}.
+\]
+For \(v_0/2\le\rho\le0.9\),
+\cref{lem:negative-branch-far-root}(i) instead gives
+\(\mathfrak H_-'<-c_{v_0}<0\), with the same
+endpoint size estimate.
+
+Every graph still thin at \(0.9\) satisfies
+\eqref{eq:direct-negative-far-core}, and
+\cref{lem:negative-branch-far-root}(ii) gives, uniformly up to the
+far root,
+\[
+ \mathfrak H_-'\le-cF_n(w_n),\qquad
+ |I_{-,T}|+|I_{-,TT}|\le CE_nF_n(w_n).
+\]
+These ranges cover every negative-branch output. We now compare the
+exterior term with the curvature margin in each range. Equation
+\eqref{eq:direct-exterior-curvature} gives exterior contributions
+\(o(1)F_b\) and \(o(1)F_n\) on the bounded secondary and far-root
+intervals and \(o(1)\) on the compact primary interval. On the small
+primary annulus, \eqref{eq:direct-annular-exterior-curvature} gives
+\(o(\rho)\).
+Each exterior contribution is absorbed by its negative curvature
+margin. Thus
+\[
+ \mathcal L''=\mathfrak H_-'-\mathfrak H_+'
+                      +\partial_T^2[(\log\Pi_p')(I_-)]<0
+\]
+throughout \eqref{eq:direct-negative-separated-root-cell}.
+The positive drift weights give strict negativity at every interior
+central height, although both may tend to zero at the endpoint.
+Thus the curvature remains strictly negative at each interior height
+even when the limiting rates agree. In the leading model the
+characteristic rates agree at
+\(\alpha=b/3,\ a=2b^2/9\), which is included here.
+
+Finally apply \cref{lem:prefix-root-cover} with \(\delta=s\),
+\(\ell=sr\), \(\epsilon_3=r\), comparison drifts \(a-\sigma bx+x^2\)
+and the radii \(w_a,R_p,\alpha\) fixed above. The positive margin
+and the gap \(R_p-w_a\) are fixed, and the inverse boundary-flow
+coordinate is defined up to \(\alpha\) at \(Z_f\).
+The root range is \eqref{eq:direct-negative-separated-root-cell},
+where \(\mathcal L_{TT}<0\). Hence \(\Delta_p\) has at most three
+zeros on \(\cH_p\).
+\end{proof}
+
+\subsubsection{The compact secondary coefficient cover}
+
+For any fixed \(a_0^->0\), the normalized coefficients
+with \(a\ge a_0^-\) now have a bound of three.
+Choose the fixed fold width \(\epsilon_{\rm f}\) from
+\cref{prop:direct-negative-fold}, and let \(\nu=\epsilon_{\rm f}^2/50\).
+The three overlapping regions are
+\[
+ b^2-4a\le-\nu,\qquad |b^2-4a|\le2\nu,\qquad b^2-4a\ge\nu .
+\]
+They are covered respectively by
+\cref{prop:direct-buffered-negative,prop:direct-negative-fold,prop:direct-negative-separated}.
+For the last two regions normalization forces \(b=1\):
+otherwise \(a=1\) would give \(b^2-4a\le-3\).
+On the middle region
+\mbox{\(|a-b^2/4|\le\epsilon_{\rm f}^2/100\)}, as required for the fold.
+Each of the three propositions bounds the zeros on the whole height
+interval. The minimum of their scale thresholds therefore gives a
+uniform bound of three on this coefficient set.

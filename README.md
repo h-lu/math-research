@@ -10,6 +10,10 @@ the scope of any supporting computation recorded in metadata.
 | Paper | Version | Materials |
 | --- | --- | --- |
 | Cyclicity Six and Saturation Geometry at Cancelling Double Grazing | 2026-10-27 | [PDF](papers/cancelling-double-grazing/paper.pdf) · [Source](papers/cancelling-double-grazing/source/) · [Details](papers/cancelling-double-grazing/README.md) |
+| Exact cyclicity two of the degenerate quadratic graphic DF₁b | 2026-10-20 | [PDF](papers/drr-df1b/paper.pdf) · [Source](papers/drr-df1b/source/) · [Details](papers/drr-df1b/README.md) |
+| Cyclicity three for the quadratic hemicycle H₁₄³ | 2026-10-20 | [PDF](papers/drr-h14-3/paper.pdf) · [Source](papers/drr-h14-3/source/) · [Details](papers/drr-h14-3/README.md) |
+| Sharp local cyclicity of the I₂¹ graphic in a five-parameter quadratic family | 2026-10-20 | [PDF](papers/drr-i21/paper.pdf) · [Source](papers/drr-i21/source/) · [Details](papers/drr-i21/README.md) |
+| Sharp local cyclicity of the complete quadratic graphic I₄¹ | 2026-10-20 | [PDF](papers/drr-i41/paper.pdf) · [Source](papers/drr-i41/source/) · [Details](papers/drr-i41/README.md) |
 | Mechanical renewal and D²(ln D)² lower bounds for Hilbert numbers | 2026-10-24 | [PDF](papers/mechanical-renewal-log2/paper.pdf) · [Source](papers/mechanical-renewal-log2/source/) · [Details](papers/mechanical-renewal-log2/README.md) · [DOI](https://doi.org/10.5281/zenodo.23603842) |
 | Common free-flight selection and contact-phase sensitivity in a compliant Painlevé oscillator | 2026-10-20 | [PDF](papers/painleve-path-selection/paper.pdf) · [Source](papers/painleve-path-selection/source/) · [Details](papers/painleve-path-selection/README.md) |
 | Beyond Tonnelier's conjectured bound: six cycles and uniform finiteness in continuous piecewise-affine Liénard systems | 2026-10-03 | [PDF](papers/tonnelier-six-cycles/paper.pdf) · [Source](papers/tonnelier-six-cycles/source/) · [Details](papers/tonnelier-six-cycles/README.md) · [DOI](https://doi.org/10.5281/zenodo.23113416) |

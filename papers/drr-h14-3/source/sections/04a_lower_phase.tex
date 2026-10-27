@@ -1,0 +1,233 @@
+\subsection{An exact phase on the lower strip}
+
+The lower strip contracts in the normal direction while its slow phase
+moves at order $\epsilon$.  The horizontal coordinate of the
+compactified chart also moves during fast contraction, so it cannot
+serve as this phase.  We first project along the zero-scale fast
+fibres, then correct the projection at positive scale to obtain an
+exact scalar equation.  In the incoming chart put
+\[
+ T=(-X)^{-1},\qquad v=Y/(-X),\qquad w=v+\epsilon T=\epsilon zT,
+ \qquad \frac{\dd\zeta}{\dd\xi}=-X>0.
+\]
+Direct substitution in the scaled original field gives
+\begin{equation}\label{rw:transitions:compact-lower}
+\begin{aligned}
+ \dot T={}&\epsilon T[\bar B-\bar aT+(1+\epsilon\bar m)T^2]
+       -(1+2\epsilon\bar m)T^2w+\bar mTw^2,\\
+ \dot w={}&\epsilon^2\nu T^2+
+ [-1+\epsilon\bar B+\epsilon(1+\epsilon\bar m)T^2
+                  -\epsilon(\bar a+\bar c+2\nu)T]w\\
+ &+[\bar c+\nu-(1+2\epsilon\bar m)T]w^2+\bar m w^3.
+\end{aligned}
+\end{equation}
+Dots in this subsection denote $\zeta$-time. The outgoing chart is
+obtained by reversing time and replacing
+$(\bar a,\bar c,\nu)$ by $(-\bar a,-\bar c,-\nu)$.
+
+Fix a small $R>0$ such that
+$1\pm\bar aX+\bar BX^2>3/4$ for $0\le X\le2R$ throughout
+the chosen bounded coefficient box, and put $T_R=1/R$.
+All constructions below take place first on a slightly larger
+$T$-interval than $[0,T_R]$.
+
+\begin{proposition}[Lower phase]\label{rw:phase}
+For each prescribed finite order $N$, there are a normal width and a
+scale cutoff for which the following statements hold on common smaller
+state and coefficient domains. There is an invariant graph
+\begin{equation}\label{rw:transitions:weak-graph}
+ w_g(T)=\epsilon^2\nu T^2H(T;\mathbf b,\epsilon),
+ \qquad H(0;\mathbf b,\epsilon)=\frac1{1+\epsilon\bar B},
+\end{equation}
+and coordinates $(x,Z)$, with $Z=w-w_g(T)$ and $x=T$ on that graph,
+in which the field is exactly
+\begin{equation}\label{rw:transitions:lower-triangular}
+ \dot x=\epsilon g_I(x),\qquad
+ g_I(x)=xF_I(x),\qquad \dot Z=-Z\beta_I(x,Z).
+\end{equation}
+Their finite mixed derivatives, including the ordinary scale derivatives
+used in their construction, are bounded. The normal rates satisfy
+\[
+ \beta_I>\beta_*,\qquad
+ \beta_I+Z\partial_Z\beta_I>\beta_*,\qquad
+ \beta_I(0,0)=1-\epsilon\bar B.
+\]
+Moreover,
+\begin{equation}\label{rw:transitions:lower-factor}
+\begin{aligned}
+ F_I(x)={}&\bar B-\bar ax+(1+\epsilon\bar m)x^2
+ -\epsilon\nu(1+2\epsilon\bar m)x^3H(x)
+ +\epsilon^3\nu^2\bar m x^4H(x)^2,\\
+ F_I(0)={}&\bar B,\qquad F_I'(0)=-\bar a.
+\end{aligned}
+\end{equation}
+Thus $F_I''>1$ after the scale cutoff is reduced, and $F_I$ has a
+positive margin near the fixed exit $x_R=T_R$.
+In the derivative convention of this section,
+$\beta_I(x,0)=1+O_{C^N}(\epsilon)$.
+Ordinary differentiation with respect to $\epsilon$ may remove the
+factor $\epsilon$ in this last estimate.
+\end{proposition}
+
+\begin{proof}
+At $\epsilon=0$ the field is
+\[
+ \dot T=Tw(\bar m w-T),\qquad
+ \dot w=w[-1+(\bar c+\nu-T)w+\bar m w^2].
+\]
+Choose the normal width small enough that the bracket in the second
+equation is less than $-2\beta_*$, and that the variation of $T$ before
+normal contraction is contained in the larger $T$-interval. Extend the
+field smoothly outside this larger interval, preserving $T=0$, $w=0$
+and this contraction. One can do this by bounded cutoffs in the
+coefficient functions multiplying their displayed factors. The extension
+is used only to define a complete auxiliary flow.
+
+Define its fast projection by
+\[
+ \pi_0(T,w)=\lim_{t\to\infty}T(t).
+\]
+The decay $|w(t)|\le C|w|e^{-2\beta_*t}$ makes $\dot T$ integrable.
+The variational system has a negative normal diagonal, an integrable
+horizontal diagonal, and horizontal and coefficient couplings containing
+$w(t)$. Variation of constants bounds horizontal variations and gives
+normal decay. Higher normal forcings and derivatives of $\dot T$ retain
+a normal state or lower normal variation; induction bounds them by
+$C(1+t)^Me^{-\beta_*t}$, including frozen coefficient derivatives. Hence
+\begin{equation}\label{rw:transitions:zero-phase}
+ \pi_0(T,0)=T,\qquad \pi_0(0,w)=0,\qquad
+ \pi_0-T=O\bigl(Tw(|T|+|w|)\bigr),\qquad
+ \partial_T\pi_0>1/2.
+\end{equation}
+The order follows by integrating $Tw(\bar m w-T)$, whose factors the
+flow preserves. A smaller normal width gives the derivative margin.
+
+Use $\chi=\pi_0(T,w)$ as base coordinate. Its velocity vanishes
+identically when $\epsilon=0$, and on $\chi=0$. Successive Hadamard
+integration therefore writes it as $\epsilon\chi A$. Its time-one
+state derivative in the base direction is $1+O(\epsilon)$, whereas
+the normal multiplier is at most $e^{-\beta_*}+O(\epsilon)$.
+The time-one graph transform is consequently a contraction on a small
+set of graphs over the extended base. For its $k$th state derivative
+the coefficient of the highest graph derivative is bounded by
+\[
+ e^{-\beta_*}(1+C|\epsilon|)^k+C|\epsilon|<1
+\]
+once $k$ is fixed and the scale cutoff is small enough. The lower
+terms depend on lower graph derivatives. This proves convergence in
+$C^k$ by induction, applied also to differences of consecutive iterates.
+
+Ordinary $\epsilon$ differentiation introduces an $O(1)$ base
+shear.  Order the induction first by total order, then by the number
+of coefficient derivatives.  The highest unknown retains the same
+contracting multiplier, and forcing of the same total order involves
+fewer coefficient derivatives.  The scalar
+variational equations give
+\begin{equation}\label{rw:transitions:slow-variations}
+ |D^\alpha\phi_t|\le C_\alpha(1+|t|)^{m_\alpha}
+                       e^{C_\alpha|\epsilon||t|}.
+\end{equation}
+An ordinary scale derivative adds the time factor in the
+variation-of-constants integral; iteration gives the displayed bound.
+Normal contraction absorbs all finite polynomial factors. The graph
+transform therefore converges with the prescribed mixed smoothness,
+and uniqueness makes its graph invariant under the whole flow.
+
+Return to the original $T$ parametrization. The graph is zero at
+$\nu=0$ and at $\epsilon=0$. Its first ordinary $\epsilon$
+derivative is also zero at $\epsilon=0$: differentiation of the
+invariance equation has zero forcing there, because the independent
+forcing in \eqref{rw:transitions:compact-lower} begins with
+$\epsilon^2\nu T^2$. Finally its value and first $T$ derivative at
+$T=0$ vanish. The point $(0,0)$ is invariant, and its weak and normal
+linear eigendirections are distinct. These statements give the five
+factors $\epsilon^2\nu T^2$ by finite-order Hadamard integration.
+To retain order $N+2$ afterwards, construct the graph with at least
+$N+7$ joint derivatives. Comparing the $T^2$ coefficient in its
+invariance equation gives
+\[
+ 2\epsilon\bar B\,w_{g,2}
+   =\epsilon^2\nu+(-1+\epsilon\bar B)w_{g,2},
+\]
+which proves the exact value of $H(0)$.
+
+Subtract the graph and reparametrize the base so that its coordinate
+$x_0$ agrees with $T$ on the graph. In these coordinates
+\[
+ \dot x_0=\epsilon a(x_0)+\epsilon Z\Gamma(x_0,Z),
+ \qquad \dot Z=-Z\widetilde\beta(x_0,Z).
+\]
+The factor $\epsilon$ survives because the zero-scale coordinate is
+$\pi_0$; invariance of $T=0$ also makes $\Gamma(0,Z)=0$.
+Let $\phi_t$ be the complete scalar flow of $\dot x_0=\epsilon a(x_0)$.
+Set
+\[
+ x=\lim_{t\to\infty}\phi_{-t}(x_0(t)).
+\]
+Indeed,
+\[
+ \frac{\dd}{\dd t}\phi_{-t}(x_0(t))
+   =\epsilon D\phi_{-t}(x_0(t))Z(t)\Gamma(x_0(t),Z(t)),
+\]
+and each selected derivative is bounded by
+$C(1+t)^M e^{-(\beta_*-C_N|\epsilon|)t}$, by
+\eqref{rw:transitions:slow-variations}. Reduce the scale cutoff so
+that $C_N|\epsilon|<\beta_*/8$ for all the finitely many variational
+products used below; the majorants are then integrable. The limit is a
+coordinate with the prescribed finite smoothness, equals $x_0$ on
+the graph, and differs from
+$x_0$ by $\epsilon x_0ZO_{C^N}(1)$. The flow identity for the limit
+gives $\dot x=\epsilon a(x)$ exactly. Restriction of the original
+$T$ equation to the graph now yields
+\eqref{rw:transitions:lower-factor}.
+
+The normal linear eigenvalue at $T=w=0$ is exactly
+$-1+\epsilon\bar B$. At zero scale its value along $w=0$ is $-1$.
+Continuity, on the common compact domains and with the stated finite
+jets, proves the normal estimates. Convexity follows from
+\eqref{rw:transitions:lower-factor}. Finally $x_R=1/R$ and the
+choice of $R$ give
+$\bar B-\bar ax_R+x_R^2>3x_R^2/4$; reducing the scale cutoff
+preserves a fixed positive margin there.
+\end{proof}
+
+\begin{lemma}[Sections and the actual exit]\label{rw:transitions:lower-sections}
+On the fixed horizontal section $v=v_h>0$, with $v_h$ sufficiently
+small, the phase input is
+$t=x(T,v_h+\epsilon T)=T k(T)$, where $k>c>0$ and $t_T>c>0$.
+The normal input has a positive lower bound. On the section $Y=0$
+with $T$ in a fixed compact subset of $(0,T_R)$, it is instead
+$w=\epsilon T$, the normal input is $\epsilon$ times a positive
+bounded unit, and $x=T+O_{C^N}(\epsilon)$.
+
+Restrict either entry to a fixed positive phase distance from $x_R$.
+Its forward orbit reaches the fixed phase exit $x=x_R$ if and only if
+\begin{equation}\label{rw:transitions:lower-passing}
+g_I(s)>0\qquad(t\le s\le x_R).
+\end{equation}
+This criterion concerns the phase exit in the signed tube. Positivity
+of the original central height is imposed separately after composition.
+The entire transit remains in the chosen strip, and its duration
+$T_f$ is at least $c/\epsilon$. Its selected finite time jets obey
+\[
+ |D^\alpha T_f|\le C\epsilon^{-M}(1+T_f)^M
+                         e^{C_N\epsilon T_f}.
+\]
+\end{lemma}
+\begin{proof}
+Equation~\eqref{rw:transitions:zero-phase} and
+$w_g=O(\epsilon^2T^2)$ give $Z>v_h/2$ on the horizontal entry and
+positive-unit $Z/\epsilon$ on the finite entry. They also give the
+phase margins, reversed in $q=1/T$ on fixed finite compact intervals.
+
+The normal coordinate contracts, so it stays in the selected tube.
+The scalar phase crosses exactly under \eqref{rw:transitions:lower-passing}:
+an equilibrium blocks finite-time crossing, whereas positivity on the
+closed interval gives a finite transit integral. The larger domain keeps
+the original orbit in the unchanged field. Bounded $g_I$ and separated
+sections give $T_f\ge c/\epsilon$. For the time jets apply the implicit
+hitting calculation of Appendix~\ref{rw:app:relative-variations} to
+$\phi_{T_f}(t)=x_R$, using \eqref{rw:transitions:slow-variations} and
+the exit speed $\epsilon g_I(x_R)\ge c\epsilon$. Thus no minimum-gap
+denominator is introduced.
+\end{proof}

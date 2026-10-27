@@ -1,0 +1,47 @@
+\begin{figure}[t]
+\centering
+\input{direct-sections/figure-sharpness-model-data}
+\begin{tikzpicture}[>=Stealth,font=\small]
+  \figModelCoordinates
+  % (a) linear scale in rho
+  \draw[->,gray] (0,0)--(5.8,0) node[right] {$\rho$};
+  \draw[->,gray] (0,-0.45)--(0,3.35);
+  \figModelFull{thick}
+  \draw[gray] (fB |- 0,0.06)--(fB |- 0,-0.06);
+  \node[below] at (fB |- 0,-0.2) {$\rho_{\rm b}$};
+  \draw[gray] (fC |- 0,0.06)--(fC |- 0,-0.06) node[below] {$\rho_{\rm c}$};
+  \draw[gray,dashed] (fC)--(fC |- 0,0);
+  \fill (fB) circle (1.5pt) (fC) circle (1.5pt);
+  \node[left] at (fC) {$+$};
+  \node at (2.9,-0.8) {(a)};
+  % (b) logarithmic scale in rho, near rho_a and rho_b
+  \begin{scope}
+    \clip (7.2,-2.85) rectangle (12.9,1.05);
+    \figModelZoom{thick}
+  \end{scope}
+  \draw[->,gray] (7.2,0)--(13.0,0) node[right] {$\rho$};
+  \draw[->,gray] (7.2,-2.85)--(7.2,1.2);
+  \foreach \x/\l in {\figModelZoomTickThree/{10^{-3}},\figModelZoomTickTwo/{10^{-2}},
+                     \figModelZoomTickOne/{10^{-1}}}
+    {\draw[gray] (\x,0.06)--(\x,-0.06) node[below,font=\scriptsize] {$\l$};}
+  \draw[gray,dashed] (zA)--(zA |- 0,0);
+  \node[above,font=\scriptsize] at (zA |- 0,0.35) {$\rho_{\rm a}$};
+  \draw[gray] (zB |- 0,0.06)--(zB |- 0,-0.06);
+  \node[above,font=\scriptsize] at (zB |- 0,0.1) {$\rho_{\rm b}$};
+  \fill (zA) circle (1.5pt) (zB) circle (1.5pt);
+  \node[above right] at (zA) {$+$};
+  \node[below] at (zB) {$-$};
+  \node at (10.05,-3.3) {(b)};
+\end{tikzpicture}
+\caption{The model profile \(D_*+g_{\lambda,\Lambda}(\rho)\) of
+\eqref{eq:sharpness-prepared-displacement} for \(C_0=65\), computed from
+its formula with \(\lambda=\Lambda_0=\e^{-\pi/2}\) and
+\(\Lambda=\Lambda_{\rm b}=\e^{\pi}\). The radii
+\(\rho_{\rm a}<\rho_{\rm b}<\rho_{\rm c}\) and the constant \(D_*\) are
+chosen as in the proof. (a) Linear scale in \(\rho\). (b) Logarithmic scale
+in \(\rho\) near \(\rho_{\rm a}\) and \(\rho_{\rm b}\), with the vertical scale
+enlarged. The two model zeros on the compact exit interval lie between
+the three marked radii. The fourth sign at a larger central height in
+\eqref{eq:sharpness-four-source-signs} gives the third displacement zero.}
+\label{fig:sharpness-model}
+\end{figure}

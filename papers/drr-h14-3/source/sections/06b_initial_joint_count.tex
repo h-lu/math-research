@@ -1,0 +1,288 @@
+\subsection{One count for the two initial energy classes}
+
+The compact and source functions describe the same return on their
+overlap. We identify their positive multiplier and show that their
+divided coefficient triples have the same limit there. This permits
+us to join the coefficients while preserving the Wronskian signs and
+count the two energy classes together.
+
+\begin{proposition}[The initial joint bound]
+\label{rw:initial-joint-bound}
+Keep the collar and the base threshold of Section~\ref{rw:geometry}.
+There are constants $\eta>0$ and $H_*>h(z_L)+1$, followed by a
+reflection-invariant original coefficient neighborhood, such that the
+two initial classes in \eqref{rw:geometry:energy-classes} together
+contain at most two isolated counted cycles, including multiplicity,
+for each fixed field. If $\ell=0$, their joint bound is one, and
+that cycle is simple. If also $\tau_0=\sigma_0=0$, the corresponding
+return is the identity and contributes no isolated cycle.
+\end{proposition}
+
+We use the same lower-section energy as in Appendix
+\ref{rw:appendix-base-ect}:
+\[
+ h(s)=s-1-\log s,\qquad
+ \Delta(h,\alpha)=h(P(h,\alpha))-h.
+\]
+Here $P$ is the actual positive central return, analytic on the compact
+energy tube used in \eqref{rw:ect-coefficients}. The source construction
+uses the fixed-field direction $\ell\ge0$; reflection transfers the
+count at periodic points afterwards.
+
+\begin{lemma}[Compact coefficient division]
+\label{rw:source:compact-division}
+Fix $[h_1,h_2]\Subset(H_{\rm ECT},\infty)$ and a slightly larger
+compact interval in that tail. On a sufficiently small coefficient
+neighborhood the analytic positive return on this larger interval has
+the exact representation
+\begin{equation}\label{rw:source:compact-columns}
+ \Delta=\tau_0\mathcal A+\sigma_0\mathcal C+\ell\mathcal B.
+\end{equation}
+The coefficient triple $(\mathcal A,\mathcal C,\mathcal B)$
+converges in $C^2([h_1,h_2])$ as the coefficients tend to zero to
+$(\mathfrak a,\mathfrak c,\mathfrak b)$ from Appendix
+\ref{rw:appendix-base-ect}. Consequently its three ordered Wronskians
+have signs $+,+,-$ on this fixed interval.
+\end{lemma}
+
+\begin{proof}
+Use independent coefficient coordinates
+$(\tau_0,\ell,a,t,B)$, where $t=B+m$ and $c=\tau_0-a$.
+First divide in the line-breaking coefficient:
+\[
+ \Delta=\Delta_0+\ell\mathcal B,\qquad
+ \Delta_0=\Delta|_{\ell=0},\qquad
+ \mathcal B=\int_0^1\partial_\ell\Delta
+                 (h,\tau_0,v\ell,a,t,B)\,\dd v.
+\]
+All coefficient segments stay in the common analytic return tube.
+On $\tau_0=a=\ell=0$ the field is reversible; on
+$\tau_0=t=\ell=0$ it is on the second center component.
+After a coefficient shrink, the real period domains of
+Section~\ref{rw:centers} contain the fixed compact family of base
+section points on both faces. The positive local return fixes these
+periodic inputs, since an increasing interval map has no nontrivial
+finite periodic orbit.
+
+Apply the same specified integral rule
+\eqref{rw:source:Hadamard-rule}, now to
+$\Psi(T,u,t,B)=\Delta_0(h,T,u,t,B)$ with $h$ passive.
+It gives $\Delta_0=\tau_0M+atN$. Since
+$at=\tau_0t-\sigma_0$, take
+$\mathcal A=M+tN$ and $\mathcal C=-N$.
+At zero parameter these are respectively
+$\partial_{\tau_0}\Delta$, $-\partial_a\partial_t\Delta$
+and $\partial_\ell\Delta$, with precisely the normalization
+in \eqref{rw:ect-coefficients}. Analyticity on a neighborhood of the
+fixed compact product gives their $C^2$ convergence.
+Corollary~\ref{rw:base-ect-compact} preserves the strict Wronskian
+signs after a further coefficient shrink.
+\end{proof}
+
+\begin{lemma}[Identification with the source displacement]
+\label{rw:source:common-displacement}
+On the positive-core source interval in the direction $\ell\ge0$,
+let $\mathcal D$ be the exact source function in
+\eqref{rw:source:matched}; thus
+\begin{equation}\label{rw:source:D-columns}
+ \mathcal D=\tau_0 f+\sigma_0 qf-\Phi,
+ \qquad f=h^{3/2}A>0,\quad q=hC/A.
+\end{equation}
+Then
+\begin{equation}\label{rw:source:positive-unit}
+ \mathcal D=W(h,\alpha)\Delta(h,\alpha),\qquad W>0.
+\end{equation}
+The factor is locally analytic on the actual positive-return domain.
+On each fixed compact overlap with the analytic return tube, the
+source coefficient triple
+\[
+ (f,qf,-\Phi/\ell)
+\]
+has a removable third member at $\ell=0$ and converges in $C^2$ to
+\begin{equation}\label{rw:source:common-base-triple}
+ W(h,0)(\mathfrak a,\mathfrak c,\mathfrak b).
+\end{equation}
+The comparison is made after dividing that member by $\ell$.
+\end{lemma}
+
+\begin{proof}
+Fix the source label $h$ and its actual field. Regard the core section
+$|x|=\sqrt h$ as fixed while changing a central comparison height.
+Let $E_h(u)$ be the incoming action at $y=0$ obtained by following
+the incoming comparison path backwards from central height $u$.
+The outgoing core, tail and upper arc give an action $E_{\mathrm{out}}$.
+For the actual positive return $P$,
+\[
+ E_{\mathrm{out}}=E_h(P),\qquad E_{\mathrm{in}}=E_h(s).
+\]
+Scalar order keeps the core solutions, tail inputs and actions between
+their positive endpoint paths in the common inverse intervals of
+Proposition~\ref{rw:source-maps}. The divided differences below
+therefore use actual paths.
+Scalar variation gives $z_-'(u)>0$ for the incoming core endpoint.
+Its logarithmic entry $-h^{-1}\log z_-(u)$ decreases, and the tail
+action increases with that entry, so $E_h'(u)<0$.
+Also $h'(u)<0$ on this positive central interval.
+
+Let $L_-$ be the unforced incoming tail action map used to form the
+inverse-tail source difference. It is increasing on its common
+action-input interval. The source construction gives exactly
+\[
+ \mathcal D=h\{L_-^{-1}(E_h(P))-L_-^{-1}(E_h(s))\}.
+\]
+Put $d=P-s$ and $e=E_h(P)-E_h(s)$. The integral mean-value formula
+now gives \eqref{rw:source:positive-unit} with
+\begin{equation}\label{rw:source:unit-formula}
+ W=h\left[\int_0^1(L_-^{-1})'(E_h(s)+ve)\,\dd v\right]
+ \frac{\displaystyle\int_0^1E_h'(s+vd)\,\dd v}
+      {\displaystyle\int_0^1h'(s+vd)\,\dd v}>0.
+\end{equation}
+The nonzero denominators and finite-time analytic transitions give a
+positive analytic unit, including $P=s$, on the actual overlap.
+
+At zero parameter, $E_h(u)=h(u)/h$ and the unforced tail is exactly
+\[
+ T_0(v)=\frac12+v+\frac{e^{-hv}-1}{h},\qquad
+ T_0'(v)=1-e^{-hv}>0.
+\]
+Writing $z_*(h)$ for the base height at $x=\sqrt h$, we obtain
+\begin{equation}\label{rw:source:base-unit}
+ W(h,0)=\frac1{1-z_*(h)}>0,
+ \qquad z_*(h)=s(h/2).
+\end{equation}
+On a fixed overlap, shrink the original coefficient neighborhood
+so that all signed line-breaking segments through zero lie inside
+the analytic compact return tube and the independent source domains.
+Hadamard division in $\ell$ then defines $\Phi/\ell$ with its
+two required energy derivatives. The unforced source uses the same
+$(\tau_0,a,t,B)$ division as the preceding lemma. Its first and mixed
+columns at zero are therefore the corresponding first and mixed
+derivatives of $W\Delta$. The only possible additional mixed terms
+are derivatives of $W$ times $\Delta$, $\partial_a\Delta$ or
+$\partial_t\Delta$ at zero, all of which vanish by the center
+identities and Appendix~\ref{rw:appendix-base-ect}. Thus the mixed
+column is $W(h,0)\mathfrak c$; the other two columns are
+$W(h,0)\mathfrak a$ and $W(h,0)\mathfrak b$.
+Analytic division gives the stated $C^2$ convergence.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{rw:initial-joint-bound}]
+The constants are chosen in a fixed order. Appendix
+\ref{rw:appendix-base-ect} first fixes $H_{\rm ECT}$, and the
+collar gives $h_L:=h(z_L)>H_{\rm ECT}+2$. Choose the small source
+coefficient box and then increase its threshold to a fixed
+$H_*>h_L+1$, retaining a little more source range to the left of
+$H_*$. The compact interval $[h_L,H_*+1]$ and a fixed enlargement
+are now fixed. Only then shrink the original coefficient neighborhood.
+Make this shrink reflection invariant and small enough that the fixed
+overlap $[H_*,H_*+1]$ belongs to all the retained domains: its scaled
+coefficients and $|\ell|/s(h)$ are uniformly small, and both core
+values are close to one there.
+
+Fix a field and first use the direction $\ell\ge0$.
+The source curvature and localization results give one positive-core
+source interval $J_s$ starting at $H_*$ and containing that overlap.
+Its upper endpoint is determined by the scaled-coefficient and core
+conditions, not by any closing zero. It may be infinite. The compact
+return on $[h_L,H_*+1]$ and the source return agree on their overlap,
+so together they give one actual positive return on the interval
+\[
+ J=[h_L,H_*]\cup J_s.
+\]
+Every counted cycle of the first two classes is represented on $J$.
+For the source class, Lemma~\ref{rw:geometry:cycle-height} gives
+$|\widehat\ell|<3$, and Proposition~\ref{rw:source:localization}
+puts it strictly inside the required core inequalities. Hence no
+counted zero of those classes is discarded by forming $J$.
+
+Extend $W$ from the source part to a positive smooth function
+$\widetilde W$ on $J$, agreeing with $W$ for $h\ge H_*$.
+For example, use its already retained slightly larger source overlap,
+multiply $\log W$ by a fixed cutoff which vanishes to the left of
+that overlap and is one by $H_*$, and exponentiate. Define one
+function
+\[
+ F=\widetilde W\Delta.
+\]
+Choose a fixed smooth cutoff $\chi_0(h)$ equal to one for
+$h\le H_*$ and zero for $h\ge H_*+1$. On the fixed overlap both
+coefficient representations are defined. Extend their cutoff products
+by their respective formulas outside it, and put
+\begin{equation}\label{rw:source:glued-columns}
+\begin{aligned}
+ f_1&=\chi_0\widetilde W\mathcal A+(1-\chi_0)f,\\
+ f_2&=\chi_0\widetilde W\mathcal C+(1-\chi_0)qf,\\
+ f_3&=\chi_0\ell\widetilde W\mathcal B-(1-\chi_0)\Phi.
+\end{aligned}
+\end{equation}
+The exact identities \eqref{rw:source:compact-columns} and
+\eqref{rw:source:positive-unit} give, throughout $J$,
+\begin{equation}\label{rw:source:single-F}
+ F=\tau_0 f_1+\sigma_0 f_2+f_3.
+\end{equation}
+Thus the cutoff has changed a representation of the same function.
+
+We next verify, on the whole interval,
+\begin{equation}\label{rw:source:joined-wronskians}
+ f_1>0,\qquad W[f_1,f_2]>0,\qquad
+ \operatorname{sign}W[f_1,f_2,f_3]=-\operatorname{sign}\ell
+ \quad(\ell\ne0).
+\end{equation}
+On the compact left portion this follows from
+Lemma~\ref{rw:source:compact-division} and the identities
+$W[wa,wc]=w^2W[a,c]$ and
+$W[wa,wc,wb]=w^3W[a,c,b]$ for a common positive multiplier.
+On the source right portion, Proposition~\ref{rw:source:curvature}
+gives $q_h>0$ and, with $g=\Phi/f$, strict positive $g_{qq}$
+when $\ell>0$. Direct differentiation gives
+\[
+ W[f,qf]=f^2q_h>0,\qquad
+ W[f,qf,-\Phi]=-f^3q_h^3g_{qq}<0.
+\]
+These derivatives are taken at fixed original coefficients, as in
+the physical derivative specified in the source construction.
+
+On $[H_*,H_*+1]$, divide the third column in
+\eqref{rw:source:glued-columns} by $\ell$ before taking a limit.
+By Lemma~\ref{rw:source:common-displacement}, the two triples being
+combined have the identical $C^2$ limit
+\eqref{rw:source:common-base-triple}. Since the cutoff is fixed,
+their combination has that limit as well. Its ordered Wronskians
+have strict margins on this fixed compact interval, by
+\eqref{rw:ect-wronskian-signs} and $W(h,0)>0$.
+One common coefficient shrink therefore proves
+\eqref{rw:source:joined-wronskians} also on the overlap. The same
+argument for the first two columns applies at $\ell=0$.
+
+Finally, set $r=f_2/f_1$. For $\ell>0$, equation
+\eqref{rw:source:single-F} and the Wronskian identities imply
+\[
+ r'>0,\qquad
+ \left(\frac{(F/f_1)'}{r'}\right)'
+ =\frac{W[f_1,f_2,f_3]}{f_1^3(r')^2}<0.
+\]
+The quotient and Rolle argument used in
+Proposition~\ref{rw:base-ect} now gives at most two zeros of $F$,
+including finite endpoints. Although the cutoff multiplier is only
+smooth, it is positive: zero orders up to two agree with those of
+$\Delta$, and an order at least three would contradict the strict
+displayed derivative. On an unbounded $J$ use each finite selection
+of zeros, as in Lemma~\ref{rw:counting:rolle}.
+
+When $\ell=0$, $f_3=0$ and
+$F/f_1=\tau_0+\sigma_0r$. If $\sigma_0\ne0$, its one possible
+zero is simple; if $\sigma_0=0\ne\tau_0$, it has no zero.
+When both vanish, the exact center identities give $F=0$ and no
+isolated return. Positive multiplication and the analytic energy
+coordinate preserve the Poincar\'e multiplicities.
+
+For an original field with $\ell<0$, apply the proved statement to
+its single reflected field. Reflection fixes the central height $s$,
+the energy $h$ and the sizes of the four scaled coefficients, so it
+preserves the two initial classes. Near each periodic point its
+forward return is the inverse of the original forward return, as in
+\eqref{rw:geometry:inverse-germ}; that identity preserves the order
+of every isolated displacement zero. These local inverse germs
+transfer the joint bound to the original field, while the interval
+of positive returns remains in the selected reflected direction.
+\end{proof}

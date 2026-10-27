@@ -1,0 +1,197 @@
+\subsection{Division on the common domains}
+
+Vanishing on both center components gives a representation in the
+generators $\bar a+\bar c$, $\nu$ and $\bar c(\bar B+\bar m)$.
+We prove a finite-order integral form of this statement, compare these
+generators with the passage coordinates, and apply it to transitions
+on the common input domains.
+
+\begin{proposition}[The center ideal and its local coordinates]
+\label{rw:generator-division}
+Put $\tau=\bar a+\bar c$, $\varsigma=\bar B+\bar m$ and
+$\sigma=\bar c\varsigma$. Let $f$ be $C^{N+2}$ on a common
+product coefficient box, with any section variables and $\bar B$
+treated as passive variables. Suppose
+\[
+ f(0,0,\varsigma,0)=0,\qquad
+ f(0,\bar c,0,0)=0,
+\]
+where the four arguments are $(\tau,\bar c,\varsigma,\nu)$.
+Then
+\begin{equation}\label{rw:centers:double-division}
+ f=\tau A+\sigma B+\nu C,
+\end{equation}
+where the coefficients have bounded total order $N$ on a smaller
+common box. Their bounds follow from the indicated derivatives of
+$f$ on the larger box. A common bound for those derivatives by a
+weight depending only on passive variables gives the same weight for
+the divided coefficients.
+
+For the finite three-saddle coordinates of
+Lemma~\ref{rw:coordinates:finite-splittings}, there are constants
+$0<c<C$ on a common smaller box such that
+\begin{equation}\label{rw:centers:ideal-comparison}
+ c\bigl(|\tau_1|+|\sigma_1|+|\nu|\bigr)
+ \le |\xi_2|+|\kappa\xi_1|+|\nu|
+ \le C\bigl(|\tau_1|+|\sigma_1|+|\nu|\bigr).
+\end{equation}
+Near a single component, the joint and weak coordinate blocks instead
+give, respectively,
+\begin{equation}\label{rw:centers:single-ideal-comparison}
+\begin{aligned}
+ |\tau_1|+|\sigma_1|+|\nu|
+   &\asymp |\tau|+|\zeta|+|\nu|,\\
+ |\tau_1|+|\sigma_1|+|\nu|
+   &\asymp |d_s|+|\varsigma|+|\nu|.
+\end{aligned}
+\end{equation}
+These comparisons concern coefficient functions on their inverse
+boxes. Dividing transition expressions additionally uses the common
+input domains constructed above.
+\end{proposition}
+
+\begin{proof}
+First subtract $f(0,\bar c,\varsigma,0)$ by integrating in
+$(\tau,\nu)$ along its straight segment:
+\[
+ f-f(0,\bar c,\varsigma,0)
+ =\tau\int_0^1f_\tau(s\tau,\bar c,\varsigma,s\nu)\,\dd s
+  +\nu\int_0^1f_\nu(s\tau,\bar c,\varsigma,s\nu)\,\dd s.
+\]
+The remaining function vanishes on both axes of its
+$(\bar c,\varsigma)$ plane. Two applications of the fundamental
+theorem give
+\[
+ f(0,\bar c,\varsigma,0)
+ =\bar c\varsigma\int_0^1\!\int_0^1
+   f_{\bar c\varsigma}(0,s\bar c,t\varsigma,0)\,\dd s\,\dd t.
+\]
+The segments lie in the prescribed box. Total-order differentiation
+spends at most two coefficient derivatives and commutes with Euler
+scale differentiation, proving the formula and its weighted version.
+
+By \eqref{rw:coordinates:finite-center-axes}, apply this formula to
+$\xi_2$ and $\kappa\xi_1$ in the original coefficient box for the
+upper bound in \eqref{rw:centers:ideal-comparison}. Conversely the
+same formula in the inverse product box
+$(\xi_1,\xi_2,\kappa,\nu)$ gives, for $f=\tau_1,\sigma_1$,
+\[
+ f=\xi_2 A_f+\kappa\xi_1 B_f+\nu C_f,
+\]
+with bounded coefficients, proving the reverse bound.
+
+In the joint block $\bar c$ has a positive lower bound, so
+$|\sigma_1|\asymp|\varsigma|$. The exact inverse coordinate
+map of Proposition~\ref{rw:center-coordinates} sends
+$\tau=\zeta=\nu=0$ to
+$\tau_1=\varsigma=\nu=0$. Integrating in these independent
+transverse variables in each direction gives the first comparison
+in \eqref{rw:centers:single-ideal-comparison}. In the weak block
+the same argument uses $(d_s,\varsigma,\nu)$ and its inverse;
+$\bar c$ again is a positive unit. These are single-component
+divisions, each spending only one derivative.
+\end{proof}
+
+For transition division, retain larger signed intervals for the regular
+outer legs and lower power inputs. Reduce the coefficient box so all
+$G_\pm$ images stay there. Proposition~\ref{rw:lower-preparation}
+gives the absolute zero extension at nonpositive deficits; extend the
+relative coefficients by the same finite linear rule on both reflected
+sides. Lower-deficit jets are ordinary. After singular $t^r$ composition,
+the upper-input jets are Euler jets $t\partial_t$.
+
+The following extension preserves the mixed total order.
+Fix distinct positive numbers $a_0,\ldots,a_N$ and solve the
+Vandermonde system
+$\sum_{j=0}^N c_j(-a_j)^k=1$ for $0\le k\le N$.
+For $x<0$ near zero set
+\[
+ (\mathcal Ef)(x;\mathbf b)=
+       \sum_{j=0}^N c_j f(-a_jx;\mathbf b).
+\]
+Choose the negative interval so all $-a_jx$ lie in the positive
+interval, with a cutoff farther from zero. The moments match input
+jets through order $N$; the formula commutes with coefficient and
+Euler derivatives and bounds mixed total order $N$ by that same
+order. Constants depend only on the fixed order and interval.
+
+The triangle identity holds on $u_0=z_0=\nu=0$, where every small
+positive upper input has positive lower deficits. Reflection and the
+common extension preserve the reversible identity at signed deficits.
+Lemma~\ref{rw:coordinates:two-center-upper} preserves both in its
+orbital remainder. Hence the integral paths
+\[
+ (s\xi_1,0,t\kappa,0),\qquad 0\le s,t\le1,
+\]
+and those removing $\xi_2,\nu$ lie in the auxiliary domains,
+with no restriction to the physical max-norm face.
+
+For the contact or weak comparison center, if
+$[\mathbf b_c,\mathbf b]$ lies in the larger construction domain
+and $f(p;\mathbf b_c)=0$ for every original input, then
+\begin{equation}\label{rw:centers:one-center-taylor}
+ f(p;\mathbf b)=
+ \int_0^1D_{\mathbf b}f
+       (p;\mathbf b_c+s(\mathbf b-\mathbf b_c))
+       (\mathbf b-\mathbf b_c)\,\dd s.
+\end{equation}
+Propositions~\ref{rw:domains:contact} and \ref{rw:domains:weak}
+bound the path length by the transverse size on the whole original
+interval. Second-order remainders use second derivatives on these
+same segments. The center choice is held fixed for the fibre.
+
+\begin{lemma}[Relative forcing from a closing zero]
+\label{rw:centers:relative-forcing}
+On one fixed coefficient fibre let the central closing function be
+\[
+ F=Z-\rho\nu H,\qquad \rho=\sqrt\epsilon,
+ \qquad H\ge h_*>0,
+\]
+where the reference gap $H$ is independent of the section input.
+Suppose division on one of the common domains above gives
+\begin{equation}\label{rw:centers:absolute-forcing-input}
+ |Z|\le C(I+|\nu|)\epsilon^{-M}e^{-S_*/\epsilon},
+ \qquad S_*>0,
+\end{equation}
+with a uniform positive action lower bound and an input-independent
+nonnegative size $I$ of the relevant center generators. At any closing
+zero one has
+\begin{equation}\label{rw:centers:relative-forcing-output}
+ |\nu|\le C' I\epsilon^{-M-1/2}e^{-S_*/\epsilon}.
+\end{equation}
+This is a constraint on the coefficients and hence holds on the whole
+input fibre. If $I=0$, it forces $\nu=0$; where the maps have the
+center identity there is no isolated closing zero.
+\end{lemma}
+
+\begin{proof}
+At a zero of $F$, the left side of
+\eqref{rw:centers:absolute-forcing-input} is
+$\rho|\nu|H\ge\sqrt\epsilon h_*|\nu|$. Divide by this lower
+factor. Since $S_*>0$ is fixed, the coefficient of $|\nu|$ on the
+right tends uniformly to zero. For a small enough common scale it
+is less than $1/2$ and can be absorbed. This proves
+\eqref{rw:centers:relative-forcing-output}, including $I=0$.
+\end{proof}
+
+In particular, the two-center division preserves an absolute weight
+$C\epsilon^{-M}e^{-S_*/\epsilon}$ with
+$I=|\tau_1|+|\sigma_1|$. Section~4 supplies it when the retained
+lower segment has a uniform positive action margin; that margin is
+checked in each application.
+
+The ideal comparisons transfer forcing to local generators:
+$|\nu|\le\eta(I_{\rm global}+|\nu|)$ and
+$I_{\rm global}\le C(I_{\rm local}+|\nu|)$ imply
+$|\nu|\le2C\eta I_{\rm local}$ for small $\eta$.
+The relation requires a closing zero.
+
+On a block where $|\bar B+\bar m|$ has a positive lower bound,
+$\bar c=\sigma_1/(\bar B+\bar m)$ and
+$\bar a=\tau_1-\bar c$ also give a bounded comparison with
+$(\bar a,\bar c)$. Near a finite upper saddle with regular lower
+legs, $\bar a$ and $\kappa$ may replace these variables because
+$\partial_{\bar c}\kappa=-1/\sqrt{\bar m}+O(\epsilon)$ there.
+At a weak or a second-scale boundary the relevant generator retains
+its small scale as a weight. We specify those weighted coordinates
+when constructing the corresponding passages.

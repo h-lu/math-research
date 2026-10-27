@@ -1,0 +1,356 @@
+\subsection{Positive offsets and the interior saddle}
+\label{sec:direct-positive-offset}
+
+For positive offsets large relative to \(q_1^2\), rescaling reveals
+a uniformly hyperbolic interior saddle. Its exponent determines the
+single logarithmic term of \(\mathcal L\) near the separatrices, even
+as that exponent crosses one. Continuing to the fixed sections adds
+a common, possibly unbounded tail multiplier, which cancels from the
+endpoint derivative ratio. Away from the saddle, exterior contraction
+makes \(\mathcal L\) negative. Together these estimates control all
+its zeros on \(\mathcal H_p\).
+
+\begin{proposition}[Positive offset]
+\label{prop:direct-positive-offset}
+There is a fixed \(\kappa_{\rm p}>0\) such that the return displacement
+has at most two distinct zeros when
+\[
+ q_0>0,\qquad 0\le q_1/\sqrt{q_0}\le\kappa_{\rm p},
+\]
+for all sufficiently small parameters.
+\end{proposition}
+
+\subsubsection{The saddle scale and its local passage}
+
+Put
+\[
+ \ell=\sqrt{q_0},\qquad \kappa=q_1/\ell,\qquad
+ \eta=\ell X,\quad z=\ell^2S,\quad \tau=\ell t .
+\]
+The scaled field is
+\begin{equation}
+\label{eq:direct-positive-scaled-field}
+ \begin{aligned}
+ X_\tau&=1+\kappa X+q_2X^2+\ell X^3R_q(\ell X)
+              -SB(\ell X,\ell^2S),\\
+ S_\tau&=-XS.
+ \end{aligned}
+\end{equation}
+On every fixed state box it is
+\(O_{C^k}(\kappa+|q_2|+\ell)\) close to
+\begin{equation}
+\label{eq:direct-positive-comparison}
+ X_\tau=1-B_0S,\qquad S_\tau=-XS,\qquad B_0=B(0,0,p).
+\end{equation}
+The comparison field depends on the independent parameters \(A,C\)
+through \(B_0\), which lies in a compact positive interval. Its first
+integral is
+\begin{equation}
+\label{eq:direct-positive-first-integral}
+ \mathscr H=B_0S-\log S-X^2/2 .
+\end{equation}
+
+The equilibrium of the scaled field is \(X=0,\ S=S_s\), where
+\(S_sB(0,\ell^2S_s)=1\). It is unique at positive height
+in the box in the coordinates \((\eta,z)\), since \(B+zB_z>0\).
+Its Jacobian is
+\[
+ \begin{pmatrix}
+ \kappa-\ell S_sB_\eta(0,\ell^2S_s)&
+       -(B+\ell^2S_sB_z)(0,\ell^2S_s)\\
+ -S_s&0
+ \end{pmatrix}.
+\]
+The positive quantities \(S_s\), \(\lambda_+\) and \(-\lambda_-\), where
+\(\lambda_+>0>\lambda_-\) are its eigenvalues, are bounded
+above and below uniformly. Moreover,
+\begin{equation}
+\label{eq:direct-positive-saddle-ratio}
+ \nu_p=-\lambda_-/\lambda_+=1+O(\kappa+\ell).
+\end{equation}
+For passing central heights, the normalized central height is
+\(\widehat h_+=h/q_0>S_s\).
+
+Choose small fixed incoming and outgoing sections in the passing
+quadrant of this saddle. On each, choose a positive transverse
+coordinate equal to \(\mathscr H-\mathscr H_s\) for the comparison
+field, and translate its zero to the perturbed separatrix. The
+local passage between these coordinates has the form
+\begin{equation}
+\label{eq:direct-positive-dulac}
+ \begin{gathered}
+ D_p(x)=u_px^{\nu_p}(1+r_p(x)),\qquad
+ u_p=1+O(\kappa+|q_2|+\ell),\\
+ |(x\partial_x)^jr_p(x)|\le C_jx^\vartheta,
+ \qquad 0\le j\le2,
+ \end{gathered}
+\end{equation}
+for a fixed \(\vartheta>0\). Parameter-uniform expansions of
+hyperbolic Dulac maps are developed in \cite{MV2024}. We derive the
+finite-order estimate and its leading coefficient below, uniformly as
+\(\nu_p\) crosses one.
+
+We first derive the power law on saddle sections where the nonlinear
+term is integrable along the passage. We then transfer it to the
+chosen sections, keeping the leading coefficient as well as the
+Euler remainder.
+The parameter-dependent stable manifold theorem
+\cite[Theorem~9.6]{Teschl2012}, applied and normalized in
+Appendix~\ref{app:positive-saddle-preparation}, gives on a common
+saddle box
+\begin{equation}
+\label{eq:direct-positive-saddle-preparation}
+ x'=x,\qquad y'=-\nu_p y+xy^2c_2(x,y).
+\end{equation}
+The required state derivatives of \(c_2\) are uniformly bounded
+for \(\nu_p\) near one.
+
+From input \((x,y_i)\) to output \(x=x_o\), set
+\(\tilde y(\xi;x)=y(\xi)(\xi/x)^{\nu_p}\), and write
+\[
+ k(t,x)=(x/t)^{\nu_p},\qquad
+ \mathscr G(t,x,\tilde y)=k(t,x)\tilde y^2c_2(t,k(t,x)\tilde y).
+\]
+The solution satisfies the Volterra equation
+\[
+ \tilde y(\xi;x)=y_i+\int_x^\xi
+           \mathscr G(t,x,\tilde y(t;x))\,dt .
+\]
+For \(3/4\le\nu_p\le5/4\) and fixed \(0<\vartheta<1/2\),
+\[
+ \int_x^{x_o}k(t,x)\,dt
+ \le x^{3/4}\int_x^{x_o}t^{-3/4}\,dt
+ \le Cx^{3/4}\le Cx^\vartheta .
+\]
+Fixed small sections therefore keep
+\(y_i/2\le\tilde y\le2y_i\). For \(\mathcal E_x=x\partial_x\),
+with \(t,\tilde y\) fixed in the integrand, one has
+\(\mathcal E_xk=\nu_pk\), hence
+\(\lvert\mathcal E_x^i\partial_{\tilde y}^j\mathscr G\rvert
+\le C_{i,j}k\) at every required finite order. Euler differentiation
+of the Volterra equation gives scalar linear variational equations
+with coefficient \(\mathscr G_{\tilde y}\); their forcing terms are
+bounded by \(k\) times lower variations. Moving-lower-limit terms
+are \(O(x)\): for the first derivative the term is
+\(-xy_i^2c_2(x,y_i)\), and another Euler derivative has the same bound.
+Variation of constants and the integral estimate give
+\[
+ |\tilde y(x_o;x)-y_i|
+       +\sum_{j=1}^2|\mathcal E_x^j\tilde y(x_o;x)|\le Cx^\vartheta.
+\]
+Division by the fixed positive \(y_i\) proves the relative Euler
+estimates and the leading power on the prepared sections.
+
+The prepared sections and the chosen incoming and outgoing sections
+lie in common regular collars at a fixed positive distance from
+the saddle. By \cref{lem:regular-transitions}, the transitions
+between them, followed by the changes of section coordinates,
+contribute positive units, with remainders \(O(x)\) at input and
+\(O(x^{\nu_p})\) at output. They preserve the stated Euler estimates. For
+\eqref{eq:direct-positive-comparison} the passage in these coordinates
+is exactly the identity, by its first integral. Uniform dependence
+of the graph constructions, coordinate changes, and fixed section
+maps gives \(u_p=1+O(\kappa+|q_2|+\ell)\).
+This proves \eqref{eq:direct-positive-dulac}.
+
+The orbits through central points with \(\widehat h_+\downarrow S_s\)
+meet the incoming and outgoing sections in their directed order. The
+two eigen-coordinates of these central points are positive multiples
+of \(\widehat h_+-S_s\), bounded above and below uniformly. Following
+backward to the incoming section decreases the unstable coordinate,
+so its incoming value tends uniformly to zero. The endpoint order in
+\cref{prop:central-displacement-interval-new}, together with the
+positive regular section derivative, makes this rebasing injective.
+Thus a sufficiently small preliminary interval
+\(0<\widehat h_+-S_s<\rho_0\) maps into a fixed collar \(0<x<x_c\).
+
+\subsubsection{Continuation to the fixed sections}
+
+We next continue the maps to the fixed endpoint windows. This step
+must include central heights tending to the saddle, whose local passage
+time is unbounded. Choose a large fixed \(M_h\), followed by
+\(M_t>2M_h+2\), beyond all saddle heights. For
+\(S_s<\widehat h_+\le M_h\), both outward graphs reach \(S=M_t\),
+with scaled energies \(\mathcal U_\sigma=X_\sigma^2/2
+=U_\sigma/q_0\) bounded above and below there. As
+\(\widehat h_+\downarrow S_s\), the local construction above makes
+the half-orbits converge to the upper separatrices, whose passage from
+the fixed saddle box to \(M_t\) is regular.
+For the comparison field their energies are exactly
+\[
+ \mathcal U_\sigma(M_t;\widehat h_+)
+   =B_0(M_t-\widehat h_+)-\log(M_t/\widehat h_+),
+\]
+including the continuous separatrix value at \(\widehat h_+=1/B_0\).
+For large \(M_t\) their ratios to \(M_t\) are close to \(B_0\),
+uniformly for \(\widehat h_+\le M_h\). Since
+\(B_0\in[b_0,\sup B]\) lies in the interior of the common cone, these
+ratios lie in that cone.
+Outside the saddle box these segments, including the limiting
+separatrices, form a compact regular family with uniformly transverse
+endpoints at \(S=M_t\). For a small fixed \(\rho_0>0\), use the local
+Dulac construction on \(0<\widehat h_+-S_s<\rho_0\), followed by
+\cref{lem:regular-transitions} from the saddle sections. On the compact
+complement \(S_s+\rho_0\le\widehat h_+\le M_h\), the same lemma applies
+from the central section, where the flux has a positive margin.
+These continuations preserve the energy bounds and common-cone entry
+at \(M_t\). The regular maps have positive bounded first derivatives
+and the required higher derivative bounds; the local Dulac map
+accounts for the unbounded time.
+
+At the common cut \(t=M_tq_0\),
+\[
+ q_0/t=1/M_t,\qquad
+ q_1/\sqrt t=\kappa/\sqrt{M_t},\qquad
+ \sqrt t=\ell\sqrt{M_t}.
+\]
+Taking \(M_t\) large and the parameters small permits
+\cref{lem:direct-weighted-tail} to continue both graphs to \(z_*\).
+Keep the tail multiplier in the common endpoint amplitude:
+\begin{equation}
+\label{eq:direct-positive-amplitude}
+ \varpi_{M_tq_0}=(z_*/(M_tq_0))^{-2q_2},\qquad E=q_0\varpi_{M_tq_0} .
+\end{equation}
+By \eqref{eq:direct-tail-amplitude} with \(t=M_tq_0\),
+\(E\le z_*^{1/4}q_0^{3/4}\to0\) as \(q_0\to0\), uniformly for
+\(|q_2|<1/8\).
+
+Let \(e_\sigma\) denote the chosen saddle-section coordinates,
+with \(e_+=x\) and \(e_-=D_p(x)\). For the comparison field the first
+derivatives of the regular maps from these sections to \(S=M_t\) are
+both one in the normalized \(I\) coordinate:
+at fixed \(S\), a change of \(\mathscr H\) is exactly a change
+of \(S-X^2/2\). Their quotient is consequently
+\(1+O_{M_t}(\kappa+|q_2|+\ell)\).
+The weighted tail gives the endpoint maps
+\begin{equation}
+\label{eq:direct-positive-endpoints}
+ I_\sigma(e)=b_\sigma+E\mathcal F_\sigma(e),\qquad \mathcal F_\sigma(0)=0,\qquad
+ c\le\mathcal F_\sigma'\le C,\qquad \|\mathcal F_\sigma\|_{C^3}\le C,
+\end{equation}
+and
+\begin{equation}
+\label{eq:direct-positive-slope-quotient}
+ \frac{\mathcal F_-'(0)}{\mathcal F_+'(0)}
+ \le \exp\left(2C_{\rm cone}\bigl(\sqrt{z_*}+\kappa/\sqrt{M_t}\bigr)\right)
+         [1+O_{M_t}(\kappa+|q_2|+\ell)].
+\end{equation}
+The tail normalization error is
+\(O_{C^3}(\ell\sqrt{M_t}+\kappa/\sqrt{M_t})\), and converting from the
+cut scale \(M_tq_0\) to \(q_0\) only changes fixed constants. Both tails
+start at the common cut, with normalized energies in the common cone
+after parameter reduction; their common multiplier \(\varpi_{M_tq_0}\) is
+contained in \(E\), and \eqref{eq:direct-tail-first-slope} bounds the
+logarithm of each normalized tail slope by
+\(C_{\rm cone}(\sqrt{z_*}+\kappa/\sqrt{M_t})\).
+
+If the saddle collar contains a central height in \(\cH_p\), all its
+endpoints differ from the admissible endpoints by \(O(E)\), so they lie
+in \(\widetilde W_\pm\) for small parameters, by
+\cref{lem:exterior-multiplier-new}.
+
+\subsubsection{The return displacement and the remaining central heights}
+
+In the incoming coordinate \(x\), the closing equation is
+\[
+ \widetilde\Delta_p(x)=\Pi_p(I_-(D_p(x)))-I_+(x)=0.
+\]
+Its derivative is
+\begin{equation}
+\label{eq:direct-positive-completed-derivative}
+ \widetilde\Delta_p'(x)=E\mathcal F_+'(x)\,[\exp\mathcal L_p(x)-1],
+\end{equation}
+where
+\[
+ \mathcal L_p(x)=
+ \log \Pi_p'(I_-(D_p(x)))+\log\mathcal F_-'(D_p(x))
+             -\log\mathcal F_+'(x)+\log D_p'(x).
+\]
+The common amplitude \(E\) has disappeared from this ratio. The local
+Dulac derivative supplies the logarithmic term, while the endpoint and
+exterior factors contribute a bounded constant and a small remainder.
+By \eqref{eq:direct-positive-dulac} and
+\eqref{eq:direct-positive-slope-quotient},
+\begin{equation}
+\label{eq:direct-positive-logarithm}
+ \mathcal L_p(x)=c_p+(\nu_p-1)\log x+e_p(x),\qquad
+ |e_p|+|xe_p'|\le Cx^\vartheta,
+\end{equation}
+and, after the fixed choices and parameter reductions,
+\[
+ c_p=\log\left[
+ \Pi_p'(b_-)\frac{\mathcal F_-'(0)}{\mathcal F_+'(0)}u_p\nu_p\right]\le-c_0<0.
+\]
+For the local factor differentiate
+\eqref{eq:direct-positive-dulac}: its relative derivative is
+\(1+r_p+(x/\nu_p)r_p'\), with the required Euler bound.
+The endpoint factors contribute \(O(x)+O(D_p(x))\);
+the nonlinear exterior term contributes \(O(ED_p(x))\).
+Their first Euler derivatives have the same bounds, by
+\eqref{eq:direct-positive-endpoints}. Decrease \(\vartheta\)
+if necessary to obtain \eqref{eq:direct-positive-logarithm}.
+
+Using the full constants in \eqref{eq:direct-positive-logarithm}, choose
+\(x_c<\min\{1,e^{-1/\vartheta}\}\) such that
+\(Cx_c^\vartheta<c_0/2\) and
+\(Cx_c^\vartheta|\log x_c|<c_0/4\).
+Decrease the preliminary \(\rho_0\) so that its incoming coordinates
+lie in \((0,x_c)\); the preceding estimates restrict to this collar.
+Use this final \(\rho_0>0\) in the compact complement below, fixing its
+continuation constants before the final parameter reduction.
+Then \cref{lem:one-logarithm-zero-count} and the negative bound for \(c_p\)
+give \(x\mathcal L_p'(x)<0\) at every zero of \(\mathcal L_p\).
+To return to the central height, observe that the ratio agrees with
+\eqref{eq:direct-completed-log-ratio}: the factor \(dx/dh\) cancels
+from the quotient of endpoint derivatives. Moreover,
+\(dx/dh=I_{+,h}/(E\mathcal F_+'(x))>0\). Thus the central heights in \(\cH_p\)
+with \(0<\widehat h_+-S_s<\rho_0\) form one interval on which
+every zero of \(\mathcal L\) has \(\mathcal L_h<0\), that is,
+\(\mathcal L_T>0\).
+
+For the remaining central heights we prove contraction. First, for
+\(h\ge M_hq_0\),
+\[
+ |q_0|/h\le1/M_h,\qquad q_1/\sqrt h\le\kappa/\sqrt{M_h}.
+\]
+For a sufficiently large fixed \(M_h\) and small \(|q_2|\),
+\cref{lem:relative-height-paired-new} therefore gives
+\(\Delta_h<0\) at these central heights when \(q_1>0\); when
+\(q_1=0\), \cref{prop:signed-contraction-new} gives the same sign.
+Second, on \(S_s+\rho_0\le\widehat h_+\le M_h\) the radial flux at
+the central point has a fixed positive margin. On its compact inner
+portion, the scaled linear integral in \eqref{eq:paired-log-derivative-new}
+is bounded by \(C_{\rho_0,M_h}\kappa\), and the other nonquadratic integrals
+are \(O_{\rho_0,M_h}(\ell)\). To make the tail constant
+independent of these height thresholds, continue first to a fixed
+large \(S=S_1\). For the comparison field its energy is
+\[
+ U/q_0=B_0(S-\widehat h_+)-\log(S/\widehat h_+).
+\]
+Uniformly on \(S_s+\rho_0\le\widehat h_+\le M_h\), its ratio to
+\(S\) tends to \(B_0\). Choose \(S_1\) to enter the interior
+of the common cone; the positive radial flux at the central point and
+finite-height continuation preserve this property for small
+\(\kappa,|q_2|,\ell\). The continuation constants depend on the height
+thresholds, while the tail constant is fixed by the common cone. By
+\eqref{eq:direct-tail-first-slope}, the two tails from \(S=S_1\)
+contribute at most \(2C_{\rm cone}(\sqrt{z_*}+\kappa/\sqrt{S_1})\), and
+hence
+\[
+ \left|\log(I_{-,h}/I_{+,h})\right|
+ \le 2C_{\rm cone}\sqrt{z_*}
+       +C_{\rho_0,M_h,S_1}(\kappa+\ell).
+\]
+The fixed common-cone choice of \(z_*\), followed by small
+\(\kappa_{\rm p},|q_2|,\ell\),
+makes this bound smaller than the exterior contraction margin.
+These two ranges join into the single interval of large central
+heights \(\widehat h_+\ge S_s+\rho_0\), on which \(\mathcal L\) is
+strictly negative, including the shared height thresholds.
+In increasing \(T\), this interval and the saddle collar, intersected
+with \(\cH_p\), cover \(\cH_p\). Since the endpoints of the collar lie in
+\(\widetilde W_\pm\), the collar represents this same displacement.
+Hence every zero of \(\mathcal L\) on \(\cH_p\) lies in the collar and
+crosses upward, and the second case of
+\cref{cor:ordered-cover-zero-count} gives at most two zeros of
+\(\Delta_p\), proving \cref{prop:direct-positive-offset}.

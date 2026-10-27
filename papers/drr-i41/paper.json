@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "slug": "drr-i41",
+  "title": "Sharp local cyclicity of the complete quadratic graphic I₄¹",
+  "authors": [
+    "Haibo Lu"
+  ],
+  "version": "2026-10-20",
+  "abstract": "Sharp local cyclicity three for the complete graphic in the full quadratic coefficient germ; the separate mathematical supplement gives optional ghost-path examples.",
+  "topics": [
+    "DRR program",
+    "quadratic vector fields",
+    "cyclicity"
+  ],
+  "doi": null,
+  "rights": {
+    "license": null,
+    "note": "No new license is granted by this collection."
+  },
+  "validation": {
+    "scope": "This collection provides the paper, its author TeX/figure build materials and the optional mathematical supplement. Separate numerical reproduction data associated with this exact manuscript have not been confirmed and are not included. It is not a complete numerical-reproduction package; no numerical integration or proof-assistant verification was performed here.",
+    "formal_verification": false
+  },
+  "artifacts": [
+    {
+      "path": "paper.pdf",
+      "role": "author-manuscript",
+      "sha256": "1b2aa47238c1a3900dcd68d66ed599d520ba825f87c020edd9cd18a6ad9c0c62"
+    },
+    {
+      "path": "source/README.md",
+      "role": "author-source",
+      "sha256": "4435f47ea019a9ae701c094818d80056750a23cc4b37479151f5d4f888d91ceb"
+    },
+    {
+      "path": "source/manuscript/Makefile",
+      "role": "author-source",
+      "sha256": "3f2ed93e5380924d38796b20a67e0cea7360b3a0d2db1335f7d786babd70eecd"
+    },
+    {
+      "path": "source/manuscript/analytical-contracts.tex",
+      "role": "author-source",
+      "sha256": "5e416353ae5a5d31c70db485b5dd9fddc34f68cb80980fddec061e128dd73c7a"
+    },
+    {
+      "path": "source/manuscript/bounded-action.tex",
+      "role": "author-source",
+      "sha256": "2a353808b812012011ae6eb0d3b5ca1d94c3c03085e307f86cfe643329d3b7fd"
+    },
+    {
+      "path": "source/manuscript/coefficient-budget.tex",
+      "role": "author-source",
+      "sha256": "1133e61ae4ae6491a3f7713675772245fdce13852f9a5a2e224641d2eaa35cd4"
+    },
+    {
+      "path": "source/manuscript/coefficient-dictionaries-proofs.tex",
+      "role": "author-source",
+      "sha256": "05e3285d2ecf2e98080a20e7650ab923f062bd53f211ed25d03544aca7e49ce7"
+    },
+    {
+      "path": "source/manuscript/coefficient-limits-degree.tex",
+      "role": "author-source",
+      "sha256": "0b1482e136498b1d50313a66427a19777200bb2c828cea06500ea38ad73758ec"
+    },
+    {
+      "path": "source/manuscript/coefficient-limits-dictionary.tex",
+      "role": "author-source",
+      "sha256": "7885fa6e8dec9b39d9bcc565e78dfd68655a2ae10648bdb94cea55fb11e17f29"
+    },
+    {
+      "path": "source/manuscript/coefficient-limits-moving.tex",
+      "role": "author-source",
+      "sha256": "7a48e5809aef756526446fb34a77ce23f926cc48e5c006e6d209fa7cf07c309c"
+    },
+    {
+      "path": "source/manuscript/coefficient-regimes.tex",
+      "role": "author-source",
+      "sha256": "d4c83623469d42ba9ebcdfd62fe3d235a8e8dab183537aa0e70b7de572b14036"
+    },
+    {
+      "path": "source/manuscript/common-capture.tex",
+      "role": "author-source",
+      "sha256": "dc591d65490dca48739ccc48197b5e1ec2593fa83d970d0a3863264df3d66e5b"
+    },
+    {
+      "path": "source/manuscript/compact-cubic-mechanism.tex",
+      "role": "author-source",
+      "sha256": "a16a74581ccac17dea093b912c70a230781a05355ce951822b12feac4b618963"
+    },
+    {
+      "path": "source/manuscript/compact-cubic-physical.tex",
+      "role": "author-source",
+      "sha256": "e14abc0346b5a700ca5cf20b3d5a87c4caa212b3565fa328e855f89312114067"
+    },
+    {
+      "path": "source/manuscript/comparisons-section.tex",
+      "role": "author-source",
+      "sha256": "5c441a0b0711d595f13175d74f66dbace504e4947c8c0a45ad5f6e62ab338a7a"
+    },
+    {
+      "path": "source/manuscript/completed-curvature.tex",
+      "role": "author-source",
+      "sha256": "55e8ebe5c2b4e9f4376325fd94d4daf99e55a52d2370882dee5b89c57e2f0f65"
+    },
+    {
+      "path": "source/manuscript/counting-tools.tex",
+      "role": "author-source",
+      "sha256": "b197a1d21a786f0693eb74c9e42e40d5671c69151a26e83f27c49ce2e0792eea"
+    },
+    {
+      "path": "source/manuscript/cover-index.tex",
+      "role": "author-source",
+      "sha256": "a998e80fb186ed75582c25b29dc001145558ff341029098d52c834b215ee5813"
+    },
+    {
+      "path": "source/manuscript/cubic-weighted-tail.tex",
+      "role": "author-source",
+      "sha256": "b7711d250a0eea205fd79c367f360dcd51eeb2787ad03f71f9e2eba0c5e9a59c"
+    },
+    {
+      "path": "source/manuscript/cyclicity-proof.tex",
+      "role": "author-source",
+      "sha256": "c613a52b8985f6fc889b92ee2f6a63917856a1386429c7cada14e223071342ee"
+    },
+    {
+      "path": "source/manuscript/degree-section.tex",
+      "role": "author-source",
+      "sha256": "875ca4855613e3a720fe4b2a9b67f38ec8920e6a16ec54388f7ff444d8255882"
+    },
+    {
+      "path": "source/manuscript/dictionary-section.tex",
+      "role": "author-source",
+      "sha256": "53dbb02d162c376a629620fc9a6850e73cbb66f7dba83444a08ee43ddd2bec94"
+    },
+    {
+      "path": "source/manuscript/dulac-section-matching.tex",
+      "role": "author-source",
+      "sha256": "2d67538dfa17a5c29fc3bb8a283c5d286aecf99e016deee8aaaad61eecb80826"
+    },
+    {
+      "path": "source/manuscript/escaping-saddle.tex",
+      "role": "author-source",
+      "sha256": "622655bc573bea33c2e5256f27e81fcef19dec59a0857164701728a0637c9826"
+    },
+    {
+      "path": "source/manuscript/figures/graphic-return.tex",
+      "role": "author-source",
+      "sha256": "17107b4754cbdf969df3c1402347333fd780524730f13abf9d59a46c4c6e5f28"
+    },
+    {
+      "path": "source/manuscript/figures/lower-action-profile.tex",
+      "role": "author-source",
+      "sha256": "8a37c1a0a42773b0af3589aa98b8dcbee649ab0c5537d4d704e98e36bcac116e"
+    },
+    {
+      "path": "source/manuscript/figures/trace-geometry.tex",
+      "role": "author-source",
+      "sha256": "e09eba2469ae8a74c2d8755c01200d25ef6e04e1db7ecae51a7ed7ce31182e7f"
+    },
+    {
+      "path": "source/manuscript/geometric-capture.tex",
+      "role": "author-source",
+      "sha256": "9fcc9c143286cc1a24f8ac566abe6216b74f415a617a476640a1f97f2f5391cc"
+    },
+    {
+      "path": "source/manuscript/geometry-return.tex",
+      "role": "author-source",
+      "sha256": "033ef224a814248b4370a2e2010ad91d461502b9ce922f5c0787de43374aeb3f"
+    },
+    {
+      "path": "source/manuscript/inverse-comparison.tex",
+      "role": "author-source",
+      "sha256": "da655c22c0446535062b32ed35cd72462eb0a51df722343c114c2ef616a4396b"
+    },
+    {
+      "path": "source/manuscript/long-tail-geometry.tex",
+      "role": "author-source",
+      "sha256": "b46d72e2c89ada15a0de6e406b567cc760281f4e38706deac8092ba04729870a"
+    },
+    {
+      "path": "source/manuscript/lower-coefficient-face.tex",
+      "role": "author-source",
+      "sha256": "fed2196b2831ba8ea4c31e1a000cb241afa9702fb75138f1d9ffd5310eb9d2fa"
+    },
+    {
+      "path": "source/manuscript/lower-coefficients-proof.tex",
+      "role": "author-source",
+      "sha256": "7dd8a9a961de9b6424e5858ed8e938e7328a5d47bcf6ae946bf898679ede78bd"
+    },
+    {
+      "path": "source/manuscript/lower-core-proof.tex",
+      "role": "author-source",
+      "sha256": "0874cad2b627754bc97a204f510516d281e36b4c5e1f107b098ff1a17675eb76"
+    },
+    {
+      "path": "source/manuscript/lower-model-proof.tex",
+      "role": "author-source",
+      "sha256": "205add84692efb2eff32ac46df51ff177a159b98938becd895bdbf9385ee0bbb"
+    },
+    {
+      "path": "source/manuscript/lower-tail-proof.tex",
+      "role": "author-source",
+      "sha256": "c115454b92c388b99aedb2486a6807e097836ee0180e458aa644bfa0740c58d6"
+    },
+    {
+      "path": "source/manuscript/main.tex",
+      "role": "author-source",
+      "sha256": "d36043e835691c73ccf11c31d171e02d64f12c1daed1b3cd0b2ac25810957031"
+    },
+    {
+      "path": "source/manuscript/moving-section-bookkeeping.tex",
+      "role": "author-source",
+      "sha256": "81b08ef54a6e6e1080d2ca1b128a53f9b8f7b0a0d63f54f6b3f7b43bf518462e"
+    },
+    {
+      "path": "source/manuscript/negative-action.tex",
+      "role": "author-source",
+      "sha256": "519feb56803df0146a6bd169d2a94f53d44f97d298a8493b8b9b0291ae87efa6"
+    },
+    {
+      "path": "source/manuscript/nonnegative-opening.tex",
+      "role": "author-source",
+      "sha256": "5088d7636723b8aa0cd0a40f31e960f622ef7f55d85dcc2fb5aa54f88dcbbe36"
+    },
+    {
+      "path": "source/manuscript/notation-index.tex",
+      "role": "author-source",
+      "sha256": "87a2a887b7214d03fac20ce90248f6092b051d889b1a7691177103442391570c"
+    },
+    {
+      "path": "source/manuscript/p2-physical-carrier-paper.tex",
+      "role": "author-source",
+      "sha256": "6dcd34ee55a64f93dde2354bd051189906484586192394c2c85a0cc9ad19c1e5"
+    },
+    {
+      "path": "source/manuscript/p4-internal-construction.tex",
+      "role": "author-source",
+      "sha256": "6b29871078c403e50bd7976706bc55927b428281daa1482ad1e2e7aea2d17d30"
+    },
+    {
+      "path": "source/manuscript/paired-raw-tails.tex",
+      "role": "author-source",
+      "sha256": "3457ca979fe6b143f38b27c2080c6f4116af389d566f4e5cfe5f78d57b40d3ca"
+    },
+    {
+      "path": "source/manuscript/physical-section-toolkit.tex",
+      "role": "author-source",
+      "sha256": "cb53d6ec936770973f7455b10f9bb887bc449a153fb8ad082e19a90dcd931d9f"
+    },
+    {
+      "path": "source/manuscript/raw-tail-stress.tex",
+      "role": "author-source",
+      "sha256": "7e3f9f41f40cc483f31cd10c3ca392e83799e060ea857f44dc4af8aa3db96dad"
+    },
+    {
+      "path": "source/manuscript/references.bib",
+      "role": "author-source",
+      "sha256": "4feee52dece45f3319fb0fee3350eae454d601c0cd21e7f184d77087350bacc5"
+    },
+    {
+      "path": "source/manuscript/regional-contracts.tex",
+      "role": "author-source",
+      "sha256": "dd3b05a5d1013806b81db9bc4a51bbbf15d5876c6aee4e410658d2ce983598fb"
+    },
+    {
+      "path": "source/manuscript/root-coalescence.tex",
+      "role": "author-source",
+      "sha256": "b54ccb7ccc734241cc23c781cf4c675363a71e2cf31e616b7f0f3412267f7397"
+    },
+    {
+      "path": "source/manuscript/root-cubic-section.tex",
+      "role": "author-source",
+      "sha256": "aae05237eed0fb1351f8f026676b7bd46deac997cb61512e121ae1dfb481c04f"
+    },
+    {
+      "path": "source/manuscript/saddle-comparisons.tex",
+      "role": "author-source",
+      "sha256": "808177f9d3d449f569b55877e74c137ceca1f0b26002e545cf1ff5e7f60dbc1a"
+    },
+    {
+      "path": "source/manuscript/scalar-normalization.tex",
+      "role": "author-source",
+      "sha256": "f3dee7fc91ba637b1166a7635ae70e276fd62a17171cf9360d26390404c89d2f"
+    },
+    {
+      "path": "source/manuscript/sharp-lower-bound.tex",
+      "role": "author-source",
+      "sha256": "842929b90713bcea52425589b95e7723b34df6c816943b3c6ae34eb183ade664"
+    },
+    {
+      "path": "source/manuscript/sharp-sector.tex",
+      "role": "author-source",
+      "sha256": "9df7a63f866e971f354f4870d7556da66d7fb33b0c9f31d948e33b41eb7e5e25"
+    },
+    {
+      "path": "source/manuscript/sharp-upper-bound.tex",
+      "role": "author-source",
+      "sha256": "7122c0d4235a3ba6015e9bf2ff4c2fd2aa7ff118d7af0e3c5db7c3fc9fa9b951"
+    },
+    {
+      "path": "source/manuscript/sharp-upper-cubic.tex",
+      "role": "author-source",
+      "sha256": "360c6a8c300e94573d751aaf9eae01963e2cb2a782afe535629967e976c79de1"
+    },
+    {
+      "path": "source/manuscript/sharp-upper-degenerate.tex",
+      "role": "author-source",
+      "sha256": "b30f290982acdf2130feb4db763c7bf3de24c67b4a3bd2c7c93ac9a820f0b7a1"
+    },
+    {
+      "path": "source/manuscript/sharp-upper-degree.tex",
+      "role": "author-source",
+      "sha256": "d0bac4d7276c130a87f810ef7472d055b5f53f807c14dd57b6b2ab511c666e73"
+    },
+    {
+      "path": "source/manuscript/sharp-upper-local-regional.tex",
+      "role": "author-source",
+      "sha256": "dcc0f6afb8cadcaecd3f80da63781d2037be3f55dff9fb7d7505d30d9a19aeb1"
+    },
+    {
+      "path": "source/manuscript/sharp-upper-local.tex",
+      "role": "author-source",
+      "sha256": "888f0240e7b1e78ecb667de327d0f92bbd3fa42b30350978374be54df62e57fc"
+    },
+    {
+      "path": "source/manuscript/source-normalization.tex",
+      "role": "author-source",
+      "sha256": "a328f751b583341188fb301abd80223bccf3611ca761915c819b15a05aba6d38"
+    },
+    {
+      "path": "source/manuscript/spectral-exterior.tex",
+      "role": "author-source",
+      "sha256": "55c25db92f07c3a9cbbd3a576f7176376d2d12eab4a239b427d82bb547158a86"
+    },
+    {
+      "path": "source/manuscript/strong-projection.tex",
+      "role": "author-source",
+      "sha256": "8ec6e070fd7eda38859ec9b652c26e820dd841233c6e6e0103533c40e991d905"
+    },
+    {
+      "path": "source/manuscript/three-cycle-concentration.tex",
+      "role": "author-source",
+      "sha256": "4ef977a5720aa8f7dbc3f97a35e3c7a4cc84ffced79f1b703fe876d6be1b60d7"
+    },
+    {
+      "path": "source/manuscript/trace-passage.tex",
+      "role": "author-source",
+      "sha256": "5c2e1dd9c3aa89c64b97d43b86d32aa769f992e4d3b3e6e72e32bab58da87ac9"
+    },
+    {
+      "path": "source/supplements/ghost-paths.tex",
+      "role": "author-source",
+      "sha256": "9d79bf4dac4327cc17f5c39cea80980f2f4425d456585de500f2a29a4fa63994"
+    },
+    {
+      "path": "supplement/paper.pdf",
+      "role": "mathematical-supplement",
+      "sha256": "061633e8f9f9e55f7340b7371c48dbd5d580b1f2f362bf2411bb6dc1a43dc199"
+    }
+  ]
+}

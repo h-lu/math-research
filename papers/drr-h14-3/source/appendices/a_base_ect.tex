@@ -1,0 +1,394 @@
+\section{The base annulus and its three coefficient functions}
+\label{rw:appendix-base-ect}
+
+The collar in Proposition~\ref{rw:collar} must lie beyond an energy
+threshold where three coefficient functions form an extended complete
+Chebyshev system.  We obtain this threshold from the base field
+\eqref{rw:base-field}.  Put $y=z-1$ and denote time by $\theta$.
+The first integral is
+\begin{equation}\label{rw:base-energy}
+ H_0(x,z)=\frac{x^2}{2}+z-1-\log z.
+\end{equation}
+As shown in Section~\ref{rw:geometry}, every level $H_0=h>0$ is
+a regular oval with two simple turning points. Its lower intersection
+with $x=0$ has height $s(h)\in(0,1)$, where
+$s(h)-1-\log s(h)=h$.
+
+The coefficient functions are derivatives of the energy displacement,
+so we first fix its parameter coordinates.  In this appendix $t=B+m$
+is a coefficient coordinate, whereas $\theta$ denotes time.
+Put $p=(\tau_0,\ell,a,t,B)$ and consider
+\begin{equation}\label{rw:ect-family}
+ \begin{aligned}
+ \frac{\dd x}{\dd\theta}
+   &=-y+Bx^2+(t-B)y^2+ax,\\
+ \frac{\dd z}{\dd\theta}
+   &=xz+(\tau_0-a+\ell)y^2+(\tau_0-a)y.
+ \end{aligned}
+\end{equation}
+Thus $c=\tau_0-a$, $d=c+\ell$ and $m=t-B$.
+On a compact energy interval $J\subset(0,\infty)$, the base flights
+are compact in $z>0$ and their two $x=0$ crossings are transverse,
+with the other crossing above $z=1$. The finite-flight argument in
+Lemma~\ref{rw:geometry:return-domains}, now on these compact ovals,
+gives a positive first lower return $P(h,p)$, jointly analytic near
+$J\times\{0\}$ after a finite covering of $J$.
+
+Define the energy displacement and its three coefficients by
+\begin{equation}\label{rw:ect-coefficients}
+ \begin{gathered}
+ \Delta(h,p)=P(h,p)-1-\log P(h,p)-h,\\
+ \mathfrak a(h)=\partial_{\tau_0}\Delta(h,0),\qquad
+ \mathfrak b(h)=\partial_\ell\Delta(h,0),\qquad
+ \mathfrak c(h)=-\partial_a\partial_t\Delta(h,0).
+ \end{gathered}
+\end{equation}
+Uniqueness of the local return identifies these definitions on
+overlapping compact intervals. Consequently the three functions are
+real analytic on $(0,\infty)$.
+
+For functions $f_1,\ldots,f_k$, we use the Wronskian convention
+\[
+ W[f_1,\ldots,f_k]
+   =\det\bigl(f_j^{(i-1)}\bigr)_{1\leq i,j\leq k}.
+\]
+An ordered family is an extended complete Chebyshev system on an
+interval if every nonzero linear combination of its first $k$
+members has at most $k-1$ zeros there, counted with multiplicity,
+for each $k$.
+
+\begin{proposition}[An independent Chebyshev threshold]
+\label{rw:base-ect}
+Put $u=\log z$ and $g(u)=e^u-1-u$. For $h>0$, let
+$u_-(h)<0<u_+(h)$ be the two roots of $g(u)=h$, and set
+$X_h(u)=\sqrt{2(h-g(u))}$ between them. The coefficients in
+\eqref{rw:ect-coefficients} satisfy
+\begin{equation}\label{rw:ect-integrals}
+ \begin{aligned}
+ \mathfrak a(h)&=2\int_{u_-(h)}^{u_+(h)}X_h(u)\,\dd u,\\
+ \mathfrak c(h)&=2\int_{u_-(h)}^{u_+(h)}X_h(u)(e^u-1)^2\,\dd u,\\
+ \mathfrak b(h)&=2\int_{u_-(h)}^{u_+(h)}X_h(u)(e^u-e^{-u})\,\dd u.
+ \end{aligned}
+\end{equation}
+There is a constant $H_{\rm ECT}>1$, depending only on the base field,
+such that on $(H_{\rm ECT},\infty)$
+\begin{equation}\label{rw:ect-wronskian-signs}
+ W[\mathfrak a]>0,\qquad
+ W[\mathfrak a,\mathfrak c]>0,\qquad
+ W[\mathfrak a,\mathfrak c,\mathfrak b]<0.
+\end{equation}
+In particular $(\mathfrak a,\mathfrak c,\mathfrak b)$ is an extended
+complete Chebyshev system on that interval.
+\end{proposition}
+
+\begin{proof}
+We first express the three variations as integrals over the base oval.
+Two exact differential identities then express $\mathfrak c$ and
+$\mathfrak b$ in terms of the area integral $\mathfrak a$.
+The Wronskian signs follow from the large-energy estimates for
+$\mathfrak a,\mathfrak a',\mathfrak a''$.
+
+\smallskip
+\noindent\emph{First and mixed variations.}
+Along \eqref{rw:ect-family}, differentiation of \eqref{rw:base-energy}
+gives the exact identity
+\begin{equation}\label{rw:ect-energy-variation}
+ \frac{\dd H_0}{\dd\theta}
+ =\tau_0y^2+\ell\frac{y^3}{z}
+     +a(x^2-y^2)+txy^2+B(x^3-xy^2).
+\end{equation}
+Its integral between successive lower intersections is $\Delta$.
+The right-hand side vanishes identically at $p=0$. Hence its first
+parameter derivatives are obtained by integrating the displayed
+coefficients along the base oval: derivatives of the flight and its
+endpoints give no first-order term. On the base field,
+\[
+ \frac{\dd}{\dd\theta}\left(xy+\frac{x^3}{3}\right)=x^2-y^2,
+ \qquad \frac{\dd u}{\dd\theta}=x.
+\]
+It follows that $\partial_a\Delta(h,0)=0$ and
+\[
+ \mathfrak a=\oint y^2\,\dd\theta
+             =\oint x^2\,\dd\theta=2\int_{u_-}^{u_+}X_h\,\dd u.
+\]
+The first $t$ and $B$ derivatives vanish as well: after
+$x\,\dd\theta=\dd u$, the integrands $y^2$ and $x^2-y^2$
+have equal values on the two branches, which are traversed in
+opposite $u$ directions.
+For the $\ell$ derivative, use $(X_h)_u=-(e^u-1)/X_h$ to obtain
+\[
+ \begin{aligned}
+ \mathfrak b
+ &=2\int_{u_-}^{u_+}\frac{(e^u-1)^3e^{-u}}{X_h}\,\dd u\\
+ &=-2\int_{u_-}^{u_+}(e^u-1)^2e^{-u}(X_h)_u\,\dd u
+   =2\int_{u_-}^{u_+}(e^u-e^{-u})X_h\,\dd u.
+ \end{aligned}
+\]
+The boundary terms vanish because $X_h$ vanishes at both endpoints.
+
+To compute the mixed derivative, restrict to $\tau_0=\ell=B=0$.
+At $a=0$ the field has the first integral
+\[
+ H_t(x,z)=H_0(x,z)-t\kappa(z-1),\qquad
+ \kappa(y)=\int_0^y\frac{v^2}{1+v}\,\dd v.
+\]
+In $(x,u)$ coordinates it is the Hamiltonian field
+$\dot x=-\partial_uH_t$, $\dot u=\partial_xH_t$, and the
+$a$ perturbation is $(x,-y)$. For $t$ sufficiently small on a fixed
+compact energy interval, the continued regular ovals $H_t=k$
+therefore have the first $a$-variation
+\begin{equation}\label{rw:ect-melnikov}
+ \begin{aligned}
+ M(k,t)&=\oint_{H_t=k}(x\,\dd u+y\,\dd x)\\
+       &=2\int_{u_-(k,t)}^{u_+(k,t)}
+          X_t(u,k)(1-e^u)\,\dd u,\qquad
+ X_t(u,k)=\sqrt{2\bigl(k-g(u)+t\kappa(e^u-1)\bigr)}.
+ \end{aligned}
+\end{equation}
+Here the dot refers to $\theta$, and $u_\pm(k,t)$ are the continued
+simple turning points. The first equality follows directly by
+integrating $\partial_a(\dd H_t/\dd\theta)$ on the unperturbed
+$a=0$ oval. In the second equality we integrated $y\,\dd x$ by
+parts.
+
+The mixed variation is defined using the original energy $H_0$.
+We must therefore convert both the incoming label and the outgoing
+energy in this Hamiltonian calculation back to $H_0$.  On the lower
+section,
+\[
+ H_t(0,s(h))=h-t\kappa(s(h)-1),\qquad
+ \frac{\partial_zH_0(0,s)}{\partial_zH_t(0,s)}
+     =\frac{1}{1-t(s-1)}.
+\]
+Since at $a=0$ the lower return is the identity, these formulas give
+\begin{equation}\label{rw:ect-energy-conversion}
+ \left.\partial_a\Delta(h,p)\right|_{\tau_0=\ell=a=B=0}
+ =\frac{M\bigl(h-t\kappa(s(h)-1),t\bigr)}{1-t(s(h)-1)}.
+\end{equation}
+At $t=0$, $M(k,0)=-2\int X_k g'\,\dd u=0$, because
+$X_k g'=-(X_k^3)_u/3$. Thus $M(k,0)$ and its $k$ derivative
+vanish for every $k>0$. Differentiating
+\eqref{rw:ect-energy-conversion} at $t=0$ leaves only $M_t(h,0)$.
+It follows that
+\[
+ \begin{aligned}
+ \mathfrak c(h)
+ &=-M_t(h,0)
+   =2\int_{u_-}^{u_+}\frac{\kappa(e^u-1)g'(u)}{X_h(u)}\,\dd u\\
+ &=-2\int_{u_-}^{u_+}\kappa(e^u-1)(X_h)_u\,\dd u
+   =2\int_{u_-}^{u_+}X_h(u)(e^u-1)^2\,\dd u.
+ \end{aligned}
+\]
+The differentiations of \eqref{rw:ect-melnikov} are legitimate on
+every fixed compact energy interval: a square-root coordinate at
+each simple turning point removes the moving endpoint, and the
+first derivative in the original coordinate has an integrable
+inverse-square-root singularity. This proves all three formulas
+in \eqref{rw:ect-integrals}.
+
+\smallskip
+\noindent\emph{Two Abel differential identities.}
+The same endpoint argument permits one energy derivative in
+\eqref{rw:ect-integrals}. Since $g''=1+g'$,
+\[
+ \mathfrak c'
+ =2\int_{u_-}^{u_+}\frac{(g')^2}{X_h}\,\dd u
+ =2\int_{u_-}^{u_+}g''X_h\,\dd u
+ =\mathfrak a,
+ \qquad
+ \int_{u_-}^{u_+}g'X_h\,\dd u=0.
+\]
+In particular $2\int e^uX_h\,\dd u=\mathfrak a$.
+Set $J_-(h)=2\int_{u_-}^{u_+}e^{-u}X_h\,\dd u$, so that
+$\mathfrak b=\mathfrak a-J_-$. Integrating
+\[
+ (e^{-u}X_h)_u=-e^{-u}X_h-\frac{1-e^{-u}}{X_h}
+\]
+between the turning points gives $J_-'=J_-+\mathfrak a'$.
+We have therefore proved
+\begin{equation}\label{rw:ect-abel-identities}
+ \mathfrak c'=\mathfrak a,\qquad
+ \mathfrak b'=\mathfrak b-\mathfrak a.
+\end{equation}
+As $h\downarrow0$, the ovals shrink to the nondegenerate minimum
+of $g$ and all three integrals tend to zero. Integrating
+\eqref{rw:ect-abel-identities} with these initial values yields
+\begin{equation}\label{rw:ect-abel-primitives}
+ \mathfrak c(h)=\int_0^h\mathfrak a(v)\,\dd v,\qquad
+ \mathfrak b(h)=-e^h\int_0^h e^{-v}\mathfrak a(v)\,\dd v.
+\end{equation}
+
+\smallskip
+\noindent\emph{The area integral through two derivatives.}
+Let $\omega(v)=u_+'(v)-u_-'(v)$ for $v>0$. Changing variables
+$v=g(u)$ on the two branches gives
+\begin{equation}\label{rw:ect-abel-density}
+ \mathfrak a(h)=2\sqrt2\int_0^h(h-v)^{1/2}\omega(v)\,\dd v.
+\end{equation}
+Write $E_\pm(v)=e^{u_\pm(v)}$. The defining equations imply
+\[
+ u_-=-v-1+E_-,\qquad E_+-\log E_+=v+1.
+\]
+For large $v$ they give $E_-=O(e^{-v})$ and
+$E_+=v+O(\log v)$. For the latter estimate, one first bounds
+$v<E_+<2v$ and then substitutes in $E_+=v+1+\log E_+$.
+The exact inverse derivative formulas
+\[
+ u_\pm'=(E_\pm-1)^{-1},\qquad
+ u_\pm''=-E_\pm(E_\pm-1)^{-3}
+\]
+consequently imply
+\begin{equation}\label{rw:ect-density-tail}
+ \omega(v)=1+v^{-1}+O(v^{-2}\log v),\qquad
+ \omega'(v)=-v^{-2}+O(v^{-3}\log v).
+\end{equation}
+Near zero, $q=\operatorname{sgn}(u)\sqrt{2g(u)}$ is an analytic
+coordinate with derivative one. Its analytic inverse gives
+$\omega(v)=\sqrt2\,v^{-1/2}+O(v^{1/2})$.
+
+Choose once a smooth cutoff equal to one near zero and zero for
+$v\geq V$, with a fixed $V>1$. Decompose
+$\omega-1=r_0+r_\infty$, where $r_0$ is the cutoff part. Then
+$r_0\in L^1(0,\infty)$ has support in $[0,V]$, whereas
+$r_\infty$ is smooth, vanishes near zero, and satisfies
+\[
+ |r_\infty(v)|\leq\frac{C}{1+v},\qquad
+ |r_\infty'(v)|\leq\frac{C}{(1+v)^2}.
+\]
+For $h>2V$, the compactly supported part contributes
+$O(h^{1/2-j})$ to the $j$th derivative, $0\le j\le2$.
+For $r_\infty$, a split at $v=h/2$ gives
+\[
+ \left|\frac{\dd^j}{\dd h^j}
+       \int_0^h(h-v)^{1/2}r_\infty(v)\,\dd v\right|
+       \leq Ch^{1/2-j}\log h,\qquad j=0,1.
+\]
+To obtain the second derivative, first transfer a derivative to
+$r_\infty$ by integration by parts:
+\[
+ \int_0^h(h-v)^{-1/2}r_\infty(v)\,\dd v
+ =2\int_0^h(h-v)^{1/2}r_\infty'(v)\,\dd v.
+\]
+The lower boundary term is zero since $r_\infty$ vanishes near
+zero. Differentiating this identity now gives
+\[
+ \frac{\dd^2}{\dd h^2}
+ \left(2\sqrt2\int_0^h(h-v)^{1/2}r_\infty(v)\,\dd v\right)
+ =\sqrt2\int_0^h(h-v)^{-1/2}r_\infty'(v)\,\dd v.
+\]
+Subtracting the constant kernel $h^{-1/2}$ on the right writes it as
+\[
+ \sqrt2\,h^{-1/2}r_\infty(h)
+ +\sqrt2\int_0^h\bigl((h-v)^{-1/2}-h^{-1/2}\bigr)
+                      r_\infty'(v)\,\dd v.
+\]
+On $[0,h/2]$ the kernel difference is at most $Cvh^{-3/2}$,
+which gives $Ch^{-3/2}\log h$. On $[h/2,h]$ the derivative
+$r_\infty'$ is bounded by $Ch^{-2}$, which gives $Ch^{-3/2}$;
+the boundary term has that same bound. Adding the explicit
+convolution with the constant density one proves
+\begin{equation}\label{rw:ect-area-tail}
+ \begin{aligned}
+ \mathfrak a(h)&=\frac{4\sqrt2}{3}h^{3/2}
+                    +O(h^{1/2}\log h),\\
+ \mathfrak a'(h)&=2\sqrt2\,h^{1/2}
+                    +O(h^{-1/2}\log h),\\
+ \mathfrak a''(h)&=\sqrt2\,h^{-1/2}
+                    +O(h^{-3/2}\log h).
+ \end{aligned}
+\end{equation}
+The convolution estimates establish each derivative bound directly,
+with constants fixed by $g$ and the chosen cutoff.
+
+\smallskip
+\noindent\emph{The three initial Wronskians.}
+The positive area integral gives $W[\mathfrak a]=\mathfrak a>0$
+for all $h>0$. Equations \eqref{rw:ect-abel-primitives} and
+\eqref{rw:ect-area-tail} give
+\[
+ \mathfrak c(h)=\frac{8\sqrt2}{15}h^{5/2}
+                   +O(h^{3/2}\log h),\qquad
+ \mathfrak c'=\mathfrak a,\qquad \mathfrak c''=\mathfrak a'.
+\]
+It follows that
+\begin{equation}\label{rw:ect-second-wronskian}
+ W[\mathfrak a,\mathfrak c]
+   =\mathfrak a^2-\mathfrak a'\mathfrak c
+   =\frac{64}{45}h^3+O(h^2\log h).
+\end{equation}
+To estimate the third column, evaluate the positive Laplace moment
+of $\mathfrak a$. Changing the order of integration is justified
+by nonnegativity, and gives
+\begin{equation}\label{rw:ect-laplace-moment}
+ \begin{aligned}
+ K_0:=\int_0^\infty e^{-h}\mathfrak a(h)\,\dd h
+ &=2\sqrt2\int_{-\infty}^{\infty}e^{-g(u)}\,\dd u
+                       \int_0^\infty e^{-v}v^{1/2}\,\dd v\\
+ &=\sqrt{2\pi}\int_{-\infty}^{\infty}e^{1+u-e^u}\,\dd u
+   =e\sqrt{2\pi}.
+ \end{aligned}
+\end{equation}
+The last integral uses $z=e^u$. Thus
+\[
+ \mathfrak b(h)=-K_0e^h
+                 +e^h\int_h^\infty e^{-v}\mathfrak a(v)\,\dd v
+              =-K_0e^h+O(h^{3/2}).
+\]
+The exact identities $\mathfrak b'=\mathfrak b-\mathfrak a$ and
+$\mathfrak b''=\mathfrak b-\mathfrak a-\mathfrak a'$ now show that
+\begin{equation}\label{rw:ect-third-column-tail}
+ \mathfrak b^{(j)}(h)=-K_0e^h+O(h^{3/2}),\qquad j=0,1,2.
+\end{equation}
+In the expansion along the third column, the $\mathfrak b''$
+minor is \eqref{rw:ect-second-wronskian}, while the other two minors
+are $O(h^2)$ and $O(h)$. Equation~\eqref{rw:ect-third-column-tail}
+therefore yields
+\begin{equation}\label{rw:ect-third-wronskian}
+ W[\mathfrak a,\mathfrak c,\mathfrak b]
+ =-\frac{64e\sqrt{2\pi}}{45}e^hh^3
+       \left(1+O\left(\frac{\log h}{h}\right)\right).
+\end{equation}
+Choose $H_{\rm ECT}>\max\{1,2V\}$ so large that the relative
+errors in \eqref{rw:ect-second-wronskian} and
+\eqref{rw:ect-third-wronskian} are at most $1/2$ for every
+$h>H_{\rm ECT}$. This choice involves only the base integral.
+It proves all signs in \eqref{rw:ect-wronskian-signs}.
+
+For completeness, the initial-Wronskian criterion
+\cite[Lemma~2.3(b)]{GMV2011} reduces here to the following two
+quotient identities. Put $r=\mathfrak c/\mathfrak a$ and
+$v=\mathfrak b/\mathfrak a$. Then
+\[
+ r'=\frac{W[\mathfrak a,\mathfrak c]}{\mathfrak a^2}>0,
+ \qquad
+ \left(\frac{v'}{r'}\right)'
+   =\frac{W[\mathfrak a,\mathfrak c,\mathfrak b]}
+          {\mathfrak a^3(r')^2}<0.
+\]
+After division by $\mathfrak a>0$, a three-function combination is
+$G=A+Cr+Dv$. If $D\ne0$, then $G'/r'=C+Dv'/r'$ is strictly
+monotone; otherwise $G=A+Cr$. Rolle's inequality with multiplicity
+(Lemma~\ref{rw:counting:rolle}) gives the bounds two, one and zero
+for the three initial subfamilies. This argument also applies to
+finite selections on the open tail and to included regular endpoints.
+\end{proof}
+
+\begin{corollary}[Stability on a fixed compact energy interval]
+\label{rw:base-ect-compact}
+Let $J=[h_1,h_2]\subset(H_{\rm ECT},\infty)$ with $h_1<h_2$.
+There is a number $\delta_J>0$ such that any three real analytic
+functions $(a_*,c_*,b_*)$ defined on a neighborhood of $J$ and
+satisfying
+\[
+ \|a_*-\mathfrak a\|_{C^2(J)}
+ +\|c_*-\mathfrak c\|_{C^2(J)}
+ +\|b_*-\mathfrak b\|_{C^2(J)}<\delta_J
+\]
+form an extended complete Chebyshev system on $J$. The permitted
+size $\delta_J$ depends on the fixed interval.
+\end{corollary}
+\begin{proof}
+Compactness gives nonzero margins for all three Wronskians on $J$.
+Their signs persist under a small $C^2(J)$ perturbation, and the same
+quotient argument gives the count, including the endpoint germs.
+\end{proof}

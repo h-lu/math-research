@@ -1,0 +1,315 @@
+\section{Coefficient dictionaries and passage domains}
+\label{app:coefficient-dictionaries}
+
+We express each coefficient limit in a chart where the corresponding
+passage estimate is uniform. The substitutions are exact, so the estimates
+apply to the original coefficient fibres. We then choose overlapping
+chart ranges in the order required by Section~\ref{sec:coefficient-limits}.
+All constants precede the common raw cap and final coefficient
+restrictions in Lemma~\ref{lem:common-raw-receiver}.
+
+\subsection{Proof of Lemma~\ref{deg:lem-small-source-routing}}
+\label{app:proof-small-source-routing}
+
+\begin{proof}
+If \(p\le0\), use Lemma~\ref{deg:lem-raw-jacobian}. For \(p>0\),
+first fix the positive-quadratic ghost and root-free reserves, and then
+the independent far-root rectangles.
+
+Fix a small number \(\mathfrak q_{\rm far}>0\) for which
+Proposition~\ref{deg:prop-positive-far} applies.  On the negative
+\(\gamma\)-side, Proposition~\ref{deg:prop-degree-infinity} and the
+dictionary below provide numbers \(\mathfrak q_- >0\) and
+\(\Pi_->1\).  Put
+\begin{equation}
+ \mathfrak q_\flat=\frac12\min(\mathfrak q_{\rm far},\mathfrak q_-),\qquad
+ \Pi_{\rm far}=\max\{\lambda_0^{-1/2},\Pi_-,2\sqrt{12}\},
+ \qquad \Pi_{\max}=2\Pi_{\rm far},
+ \label{deg:small-constant-1}
+\end{equation}
+where \(\lambda_0\) is the constant in
+\eqref{deg:positive-far-range}. Apply the whole-carrier estimate of
+Corollary~\ref{deg:cor-positive-quadratic-whole-carrier} and
+Proposition~\ref{deg:prop-negative-gamma} on
+\(0<\pi\le\Pi_{\max}\).
+
+For \(\mathfrak q=k\pi\ge \mathfrak q_\flat\), the degree-loss dictionary given below is
+uniform once \(k\le k_d(\mathfrak q_\flat)\).  Choose
+\(k_\flat>0\) so that \(2k_\flat\) is smaller than this number and than
+the \(k\)-bounds in both compact-\(\pi\) carriers, including the
+whole positive-carrier bound \(k_0\le k_{\rm tail}\).  Put
+\begin{equation}
+ G_{\max}=k_\flat^{-2/3}.
+ \label{deg:small-Gmax}
+\end{equation}
+For this fixed \(G_{\max}\), choose \(U_d\) so that the large-\(U\)
+dictionary below belongs to Proposition~\ref{deg:prop-degree-drop}, and
+then choose \(U_{\rm cub}>U_d+1\).  Apply Proposition~\ref{deg:prop-compact-cubic} on
+\(0\le U\le U_{\rm cub}\), \(|G|\le G_{\max}\). The bounded
+positive-quadratic \(k\to0\) face remains in the first compactification;
+it is distinct from this compact cubic rectangle.
+
+We first check that the two degree-loss substitutions reproduce the
+source coefficients exactly.  In the \(\gamma\)-dominant
+chart \eqref{deg:gamma-chart}, let
+\(\epsilon=\operatorname {sgn}\gamma\) and put \(t=k\xi\).
+The exact polynomial is
+\begin{equation}
+ F_{\epsilon,\mathfrak q,k}(t)=t^3+3\epsilon t^2-\mathfrak q t+k^2.
+ \label{deg:gamma-degree-polynomial}
+\end{equation}
+For \(\mathfrak q\ge \mathfrak q_\flat\) and \(k\) small it has roots
+\(-r<t_a<t_c\), all three simple.  Vieta's formulas are
+\[
+ t_a+t_c=r-3\epsilon,\qquad
+ rt_at_c=k^2,\qquad
+ \mathfrak q=r(r-3\epsilon)-\frac{k^2}{r}.
+\]
+Define
+\begin{equation}
+ \begin{gathered}
+ \tau=p^2,\qquad
+ \kappa=\frac{k^2}{\mathfrak q^{3/2}},\qquad
+ \mathcal R=\frac{r}{\sqrt{\mathfrak q}},\qquad
+ B=\frac{\mathfrak q}{r^2},\qquad \omega=\frac{\sqrt{\mathfrak q}}{r},\\
+ \nu=\frac{\epsilon}{r},\qquad
+ a=\frac{t_a}{r},\qquad c=\frac{t_c}{r},\qquad
+ A_d=\frac{B^{3/2}}{c}.
+ \end{gathered}
+ \label{deg:gamma-degree-dictionary}
+\end{equation}
+These identities imply \eqref{deg:degree-graph} exactly.  Moreover
+\[
+ (\Lambda_1,\Lambda_2,\Lambda_3)
+ =(1,\kappa^2,\epsilon/\pi^2),
+\]
+so
+\[
+ (\sqrt\tau\Lambda_1,\tau\Lambda_3,\tau^{3/2}\Lambda_2)
+ =(p,\gamma,s).
+\]
+For \(\mathfrak q\in[\mathfrak q_\flat,\infty]\), all positive-unit quantities in
+Proposition~\ref{deg:prop-degree-drop} have compact closure:
+\(r/\sqrt \mathfrak q\to1\) and
+\((B,\omega,c,\nu,A_d)\to(1,1,1,0,1)\) as \(\mathfrak q\to\infty\).
+
+On the negative-\(\gamma\) far face \(\mathfrak q\downarrow0\),
+\(\pi\to\infty\), use the roots of
+\[
+ F_{-,\mathfrak q,k}(t)=t^3-3t^2-\mathfrak q t+k^2.
+\]
+The exact regular coordinates of Proposition
+\ref{deg:prop-degree-infinity} are
+\begin{equation}
+ \begin{gathered}
+ a=\frac{t_a}{r},\qquad j=\frac{r}{t_c},\qquad
+ \kappa=a,\qquad \mathcal R=j,\qquad d=B=A_d=1,\\
+ \nu=-\frac1r,\qquad \omega=1-a+ja,\qquad
+ \tau=\frac{gt_c}{a}.
+ \end{gathered}
+ \label{deg:negative-far-dictionary}
+\end{equation}
+Vieta's formulas give
+\[
+ t_a+t_c=r+3,\qquad rt_at_c=k^2,\qquad
+ \mathfrak q=r(r+3)-\frac{k^2}{r},\qquad
+ \pi^2=\frac{t_c}{a}(1-a+ja)^2,\qquad
+ \tau=\frac{p^2}{\omega^2}.
+\]
+Hence
+\[
+ r\sim \mathfrak q/3,\quad t_c\to3,\quad a\sim3/\pi^2,\quad
+ j\sim \mathfrak q/9,\quad \tau\sim p^2.
+\]
+Thus \((j,\kappa,\tau)\to0\), the positive-unit entries stay in
+compact ranges, and \(j\nu=-1/t_c=(j-ja-1)/3\) stays bounded.
+The same source coefficients are recovered exactly. Fix
+\(\mathfrak q_-\), then \(\Pi_-\), so that
+\(\omega\ge\omega_{\min}>0\), and let \(\tau_-\) be the
+reciprocal radial bound. The rectangle
+\begin{equation}
+ 0<\mathfrak q\le \mathfrak q_-,\qquad \pi\ge\Pi_-,\qquad
+ p^2\le\tau_-\omega_{\min}^2
+ \label{deg:negative-far-rectangle}
+\end{equation}
+lies within the range of Proposition~\ref{deg:prop-degree-infinity}.
+The estimate therefore holds throughout this rectangle, independently
+of the relative rates of its parameters.
+
+For the complementary cubic chart \eqref{deg:cubic-chart}, the large
+\(U\) polynomial
+\[
+ y^3+3Gy^2-Uy+1
+\]
+has three simple roots \(-r<t_a<t_c\) when
+\(U\ge U_d(G_{\max})\).  Set
+\begin{equation}
+ \begin{gathered}
+ \tau=p^2,\qquad \kappa=U^{-3/2},\qquad
+ \mathcal R=\frac{r}{\sqrt U},\qquad
+ B=\frac{U}{r^2},\qquad \omega=\frac{\sqrt U}{r},\\
+ \nu=\frac{G}{r},\qquad a=\frac{t_a}{r},\qquad
+ c=\frac{t_c}{r},\qquad A_d=\frac{B^{3/2}}{c}.
+ \end{gathered}
+ \label{deg:cubic-degree-dictionary}
+\end{equation}
+Again Vieta's formulas imply \eqref{deg:degree-graph}, and
+\[
+ (\Lambda_1,\Lambda_2,\Lambda_3)=(1,U^{-3},GU^{-2})
+\]
+recovers \((p,\gamma,s)=(tU,t^2G,t^3)\) exactly.  Uniformly for
+\(|G|\le G_{\max}\), all positive units in
+\eqref{deg:cubic-degree-dictionary} tend to one and \(\nu\to0\).
+
+The compact-degree positive units have compact closure. Let
+\(\tau_d>0\) be their radial bound, and let the positive far-root
+bound \(\tau_0\) include its fixed core/high splice reserve. Choose once
+\begin{equation}\label{deg:small-ratio-choice}
+ 0<p_*^2<\tfrac12\min\{\tau_0,\tau_d,
+                                  \tau_-\omega_{\min}^2\}.
+\end{equation}
+Then the degree and positive far-root scales \(\tau=p^2\), and the
+negative far-root scale \(\tau=p^2/\omega^2\), lie in their required
+ranges. These radial restrictions must be chosen explicitly, since shrinking
+the raw coefficients alone does not control the chart ratios.
+
+The chosen chart ranges now cover every coefficient alternative. If \(\gamma\ne0\) and
+\(0<k\le2k_\flat\), then:
+\begin{itemize}
+ \item for \(0<\pi\le\Pi_{\max}\), use
+ Propositions~\ref{deg:prop-positive-quadratic} and
+ \ref{deg:prop-negative-gamma}, according to the sign of \(\gamma\);
+ \item for \(\pi>\Pi_{\rm far}\) and \(\mathfrak q\ge \mathfrak q_\flat\), use
+ Proposition~\ref{deg:prop-degree-drop} through
+ \eqref{deg:gamma-degree-dictionary};
+ \item for \(\pi>\Pi_{\rm far}\), \(\mathfrak q<\mathfrak q_\flat\), and \(\gamma>0\),
+ use Proposition~\ref{deg:prop-positive-far};
+ \item in the same range with \(\gamma<0\), use
+ Proposition~\ref{deg:prop-degree-infinity} through
+ \eqref{deg:negative-far-dictionary}.
+\end{itemize}
+The compact and far \(\pi\)-ranges, and the two \(\mathfrak q\)-ranges, overlap
+strictly.  If \(\gamma=0\), or if \(k\ge k_\flat\), then
+\[
+ |G|^{3/2}=\frac{|\gamma|^{3/2}}{s}\le k_\flat^{-1}.
+\]
+For \(U\le U_{\rm cub}\), use
+Proposition~\ref{deg:prop-compact-cubic}; for \(U\ge U_d\), use
+Proposition~\ref{deg:prop-degree-drop} through
+\eqref{deg:cubic-degree-dictionary}.  These intervals also overlap.
+
+The remaining radii \(g=|\gamma|\), \(t=s^{1/3}\), and \(s\)
+can be restricted independently. This gives eventual \(s_*,\gamma_*>0\);
+the common raw cap is fixed before their final reduction and the choice
+of \(m\). The closed alternatives include every equality face, and the bands in \(k,\pi,\mathfrak q,U\) overlap strictly. These choices depend only on the coefficients and are made before any
+phase point is selected.
+\end{proof}
+
+\subsection{Proof of Lemma~\ref{lem:large-ratio-height}}
+\label{app:proof-large-ratio-height}
+
+\begin{proof}
+At the central section,
+\[
+ Y_L(0)=p^{-2}Y_0\le K_0(1+p^{-2})\le2K_0.
+\]
+The graph equation obtained directly from
+\eqref{deg:central-field} is
+\begin{equation}
+ \frac{dY_L}{dX}=
+ \frac{Y_L\{q_\gamma X+r_LX^2+
+       Cr_L(\gamma+r_LX)Y_L\}}
+  {\ell(\gamma+r_LX)Y_L+p^{-2}-X+3\gamma X^2+r_LX^3}.
+ \label{eq:large-ratio-graph}
+\end{equation}
+The denominator is positive on a through graph. At low height it may
+approach zero, so we estimate growth only after the height has crossed
+a fixed positive threshold.  Choose \(M_0>2K_0+1\) so
+that, whenever \(Y_L\ge M_0\), the denominator is at least
+\(\ell_0Y_L/2\).  On that region
+\[
+ Y_L'\le C_{L_c}+Cr_L(|\gamma|+r_LL_c)Y_L
+       \le C_{L_c}+Y_L
+\]
+after a raw coefficient shrink.  Apply this inequality after the first crossing of \(M_0\), or
+equivalently to \(\max(M_0,Y_L)\).  Gronwall's
+inequality gives
+\[
+ Y_L(L_c)\le(M_0+C_{L_c}L_c)e^{L_c}=:B_c.
+\]
+Strict scalar order gives \(Y_L(L_c)>d_L\); since \(d_L\ge0\),
+\eqref{deg:large-ratio-gap} follows.  No derivative lower bound for the
+map from \(X=0\) to \(X=L_c\) has been used.
+\end{proof}
+
+\subsection{Proof of Lemma~\ref{deg:lem-large-source-routing}}
+\label{app:proof-large-source-routing}
+
+\begin{proof}
+Fix the constant \(K_0\) in Corollary~\ref{rew:cor-high-derivative-signed}.
+Its complete derivative bound applies on the connected high-height interval
+\begin{equation}
+ Y_0>K_0(1+p^2),\qquad 0<s^2Y_0<z_*.
+ \label{deg:large-high-height}
+\end{equation}
+It remains to cover the lower-height complement by the stopped-trace
+and strict source intervals.
+
+Use the positive signed trace chart
+\begin{equation}
+ \alpha _0=-r_L^2U_0d,\qquad
+ \alpha _1=r_Lp_L,\qquad
+ d=\frac{p_L^2}{U_0p^2},\qquad
+ \frac{s^2}{r_L^2}=\frac{p_L^2}{p^2},
+ \label{deg:large-trace-dictionary}
+\end{equation}
+where \(p_L\) and \(U_0\) are positive units.  In the notation of
+Proposition~\ref{deg:prop-stopped-trace}, the signed trace parameter is
+\[
+ a_L^{\rm tr}:=-U_0d=-\frac{p_L^2}{p^2},
+ \qquad \alpha _0=r_L^2a_L^{\rm tr}.
+\]
+The stopped-trace proposition therefore applies with the signed
+parameter \(a_L^{\rm tr}\), which includes the positive factor \(d\).
+By increasing \(P_*\),
+\(a_L^{\rm tr}\) lies in its signed trace block. For an orbit in
+the complementary range \(Y_0\le K_0(1+p^2)\),
+\[
+ Y_L(0)=\frac{s^2Y_0}{r_L^2}
+ \le K_0p_L^2(1+p^{-2})\le C.
+\]
+The height lemma also applies when \(p_L\) ranges over this compact
+positive interval: its coordinates are related to the
+\(r_L=\alpha_1\) coordinates by
+\(X=p_LX_{\rm old}\), \(Y_L=p_L^2Y_{\rm old}\).
+Its Gronwall bound is uniform for the corresponding cuts
+\(X_{\rm old}=L_c/p_L\) in a fixed compact interval.
+Lemma~\ref{lem:large-ratio-height} therefore gives a fixed number
+\(B_0\) such that
+\begin{equation}
+ 0<\frac{\mathfrak g_L}{r_L^2}\le B_0.
+ \label{deg:large-bounded-gap}
+\end{equation}
+
+Take \(\xi_*=\xi_0\) from \eqref{deg:trace-overlap}. The compact annulus
+\(\xi_*\le\mathfrak g_L/r_L^2\le B_0\) is covered by finitely many
+strict source intervals, overlapping the terminal range
+\(0<\mathfrak g_L/r_L^2\le2\xi_*\). On these intervals the coefficients satisfy
+\[
+ a_L^{\rm tr}=-\frac{p_L^2}{p^2}\in[-P_*^{-2}C,0],
+ \qquad p_L\in[1/2,3/2],
+\]
+and all orbit segments retain strict positive margins. Proposition
+\ref{deg:prop-stopped-trace}, with
+\eqref{deg:trace-domain-inclusion} and \eqref{deg:trace-overlap}, supplies
+their every-point physical cover. Proposition~\ref{sharp:upper-trace}
+controls the derivative on the connected union of these intervals. The choices are
+\begin{align*}
+ &K_0,\ L_c,\ B_c,\ B_0;
+   \quad \text{terminal interval},\ \xi_*;\\
+ &P_*,\ \text{finite strict cover},\ L_t;
+   \quad \text{common raw cap},\ \text{raw coefficient neighbourhood},\ m.
+\end{align*}
+The strict margins ensure that every later shrink preserves the domains
+and overlaps already chosen.
+\end{proof}

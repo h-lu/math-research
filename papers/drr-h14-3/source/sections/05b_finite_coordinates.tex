@@ -1,0 +1,198 @@
+\subsection{Finite saddle splittings and the two center axes}
+
+The two lower contacts at a finite upper saddle require independent
+splitting coordinates, including near the intersection of the two
+center families. Fix $\bar B=-\beta$ with
+$0<\beta_*\le\beta\le\beta^*$, and work near
+$\bar m=\beta$, $\bar c=-\bar a$, $\nu=0$.
+The lower roots are simple on this compact block. Let
+$\widehat p_+$ and $-\widehat p_-$ be their strong intersections with
+$Y=0$, and let $P_s$ and $-Q_s$ be the intersections of the upper
+saddle's two separatrices with that same section. Set
+\[
+ \delta_+=\widehat p_+-P_s,\qquad
+ \delta_-=\widehat p_--Q_s.
+\]
+Each intersection is defined by a single transverse connecting arc.
+We can therefore define both splittings before forming the complete
+upper passage; the following Jacobian calculation makes them
+coefficient coordinates.
+
+\begin{lemma}[Finite splitting coordinates]
+\label{rw:coordinates:finite-splittings}
+The variables $(\delta_+,\delta_-,r,\nu)$, with $\beta$ fixed,
+are coefficient coordinates on a common neighborhood of each compact
+part of the three-saddle center, where $r$ is the actual upper
+eigenvalue ratio. Near the reversible intersection, choose reflected
+lower power inputs and put
+\begin{equation}\label{rw:coordinates:finite-axes}
+ u_0=\chi_+(\delta_+),\quad z_0=\chi_-(\delta_-),\qquad
+ \xi_1=(u_0+z_0)/2,\quad \xi_2=(u_0-z_0)/2,\quad \kappa=r-1.
+\end{equation}
+Then $(\xi_1,\xi_2,\kappa,\nu)$ are coordinates with bounded
+finite inverse jets on a common product box. The two center components
+in this box are exactly
+\begin{equation}\label{rw:coordinates:finite-center-axes}
+ \xi_1=\xi_2=\nu=0,
+ \qquad\text{and}\qquad \xi_2=\kappa=\nu=0.
+\end{equation}
+At fixed $\kappa$ near their intersection,
+$\partial_{\bar a}\xi_2>c>0$ after the other independent coefficients
+are held fixed. These statements use ordinary coefficient and Euler
+scale derivatives of any finite order reserved in the preparations.
+\end{lemma}
+
+\begin{proof}
+The lower strong intersections and positive maps $\chi_\pm$ are
+supplied by Proposition~\ref{rw:lower-preparation}. The upper axes
+and their outer connections are supplied by
+Section~\ref{rw:upper-resonance}. For the present coordinate assertion
+only its invariant-axis construction is needed: the denominators
+$n\lambda_u-\lambda_s$ and $\lambda_u-n\lambda_s$ have the same
+positive linear margins on every fixed compact set of positive saddle
+ratios. Thus the axes and regular legs apply on the stated compact
+center block without the later resonant shears. The compensator
+estimates remain restricted to the neighborhood of ratio one.
+Continuation to $Y=0$ uses the low-layer carrier estimate, which gives
+convergence of the coefficient jets as $\epsilon\to0$. Since $|X|$
+has a positive lower bound on the final low layer, the connection
+remains uniformly transverse. We compute the coordinate Jacobian at
+zero scale and preserve its margin by one common reduction of the
+scale and coefficient domains.
+
+Write $\Delta=\sqrt{\bar a^2+4\beta}$. The zero-scale lower
+roots and upper thresholds are
+\begin{equation}\label{rw:coordinates:finite-limit}
+\begin{aligned}
+ p_l&=\frac{\bar a+\Delta}{2\beta},&
+ q_l&=\frac{-\bar a+\Delta}{2\beta},\\
+ P_s&=\frac2{\bar c+\sqrt{\bar c^2+4\bar m}},&
+ Q_s&=\frac2{-\bar c+\sqrt{\bar c^2+4\bar m}}.
+\end{aligned}
+\end{equation}
+The upper formulas follow by intersecting the affine saddle's two
+eigenlines with $Y=0$. On the center put $p=p_l=P_s$, $q=q_l=Q_s$.
+Implicit differentiation of
+$\bar mP_s^2+\bar cP_s=1$ and
+$\bar mQ_s^2-\bar cQ_s=1$ gives
+\[
+ \frac{\partial(\delta_+,\delta_-)}{\partial(\bar m,\bar c)}
+ =\frac1\Delta
+   \begin{pmatrix}p^2&p\\q^2&-q\end{pmatrix},\qquad
+ \det=-\frac1{\beta^2\Delta}.
+\]
+On the zero-splitting axis, $\bar m=\beta$, $\bar c=-\bar a$,
+the ratio is $r=(\Delta+\bar a)/(\Delta-\bar a)$, with
+$\dd r/\dd\bar a=2r/\Delta>0$. The two splitting directions
+and this remaining tangent direction therefore give an invertible
+three-variable map. The exact triangle identity of
+Lemma~\ref{rw:centers:triangle} supplies the positive-scale
+zero-splitting axis.
+
+At $\bar a=\bar c=0$, choose the two reflected power inputs to
+have the same positive linear coefficient $k_l(\beta)$ at zero.
+The Jacobian in $(\bar m,\bar a,\bar c)$ is then
+\begin{equation}\label{rw:coordinates:finite-jacobian}
+ \frac{\partial(\xi_1,\xi_2,\kappa)}
+      {\partial(\bar m,\bar a,\bar c)}
+ =\begin{pmatrix}
+ k_l/(2\beta^{3/2})&0&0\\
+ 0&k_l/(2\beta)&k_l/(2\beta)\\
+ 0&0&-1/\sqrt\beta
+ \end{pmatrix},\qquad
+ \det=-\frac{k_l^2}{4\beta^3}.
+\end{equation}
+Coefficient-jet convergence preserves these margins, so
+Lemma~\ref{rw:coordinates:inverse-box}, with $\beta$ and scale
+passive, supplies the common inverse boxes and jets.
+The positive $\bar a$ derivative at fixed $\kappa$ follows from
+the middle diagonal entry and continuity.
+
+On the second center both separatrices are the triangle sides, so
+$u_0=z_0=0$. Conversely the inverse coordinates and the nonzero tangent
+ratio derivative identify this entire nearby axis with that component.
+On the reversible component, reflection gives $u_0=z_0$ and $r=1$.
+Along it $\partial_{\bar m}\xi_1$ has the positive limit in
+\eqref{rw:coordinates:finite-jacobian}; it parametrizes the whole
+second axis in \eqref{rw:coordinates:finite-center-axes} on a smaller
+box. Thus the two center components fill precisely the two axes in
+\eqref{rw:coordinates:finite-center-axes}.
+\end{proof}
+
+Division of the upper orbital remainder requires one coordinate choice
+whose remainder vanishes on both center components. We now construct
+that choice together with its regular outer legs.
+
+\begin{lemma}[One upper coordinate choice on both centers]
+\label{rw:coordinates:two-center-upper}
+Near the intersection above, the analytic upper coordinates can be
+chosen so that their orbital equation is
+\[
+ \frac{\dd V}{\dd U}=-r\frac VU-V^2R(U,V),\qquad
+ R=\epsilon\widetilde R,
+\]
+and $R=0$ identically on each of the two center components. Their
+finite jets and inverse jets have the same uniformity as the finite
+saddle preparation. The two regular outer legs, expressed in the lower
+power inputs, have the form
+\[
+ G_+(t)=u_0+tA_0(t),\qquad
+ G_-(v)=z_0+vB_0(v),\qquad G_+',G_-'>c>0,
+\]
+on fixed signed connection intervals and on the common coefficient box.
+\end{lemma}
+
+\begin{proof}
+On the triangle use the coordinates from
+Lemma~\ref{rw:centers:triangle}; its first integral is
+$U^{\lambda_+}V^{\lambda_-}$, so its orbital equation is exactly
+$V_U=-rV/U$. On the reversible component the product coordinates
+constructed in Section~\ref{rw:upper-resonance} give $V_U=-V/U$.
+At their intersection $r=1$. The transition between these two analytic
+coordinates preserves the foliation $UV=\text{constant}$. To see the
+regularity at the axes, express either analytic first integral in the
+other product coordinates. Invariance under
+$U\partial_U-V\partial_V$ makes its power series a function of
+$UV$ alone. Its derivative in $UV$ is nonzero, by the saddle Hessian.
+Its analytic one-variable inverse shows that the transition and its
+inverse preserve the product foliation on a whole saddle box,
+including the axes.
+
+Apply this intersection transition, with its passive $\beta,\epsilon$
+dependence, to the entire reversible family. Its orbital equation stays
+exactly linear and its coordinates now agree with the triangle choice
+at the intersection. In coefficient variables
+$\tau=\bar a+\bar c$, $\eta=\bar m-\beta$, extend the two
+coordinate maps by taking their sum minus their common restriction:
+the triangle prescription is evaluated at $\eta=\tau=\nu=0$,
+the reversible prescription at $\bar a=\bar c=\nu=0$, and the
+subtracted intersection prescription at all four zero values.
+Use $\bar a$ as the remaining coordinate on the triangle and $\eta$
+on the reversible family, then extend independently in $\tau,\nu$.
+The maps agree on the intersection and retain an invertible state
+Jacobian on a smaller common neighborhood. Subtract the image of the
+actual saddle to center it; this subtraction vanishes on both prescribed
+families.
+
+Straighten the neighboring invariant axes and normalize the orbital
+coefficient on them, choosing every change to be the identity when the
+axes and coefficient are already normalized. The two center equations
+are preserved. At zero scale both prescriptions and the field are
+affine-linear, so the normalized remainder vanishes there; division
+by $\epsilon$ gives its bounded analytic quotient. The shear
+preparation and reciprocal estimates of
+Proposition~\ref{rw:upper:prepared-map} apply with the same finite
+ratio restriction, now preserving both centers.
+
+Each outer leg to $Y=0$ lies in a compact regular strip except for
+its final low layer, whose uniform jets were proved in Section~4.
+Compose it with the regular connection into the lower power input.
+The orientation is inward from the corresponding strong barrier, so
+the resulting derivatives $G_+',G_-'$ are positive with fixed margins.
+Reflect the sections and coordinate prescriptions together to obtain
+the two legs. The signed intervals extend these individual regular
+connections; the upper passage retains its original saddle quadrant.
+Choose $|u_0|,|z_0|$ smaller than a fixed fraction of the signed
+connection-image radius. The common inverse-box argument then gives
+the inverse jets on a smaller image.
+\end{proof}

@@ -1,0 +1,437 @@
+\section{Two rapidly degenerating ghost paths}
+\label{app:raw-tail-stress}
+
+These two coefficient paths illustrate why the complete physical gain
+must be estimated before its individual factors are simplified. In the
+quadratic chart, large common logarithms cancel in the exact centre
+matching. In the compact cubic chart, the positive bottleneck forces the
+negative lip extremely close to its simple root, and the resulting
+endpoint power remains in the output gain.
+Both paths use the affine input and divided closing of
+Lemma~\ref{lem:closing}, on the original buffered carrier below a fixed
+positive raw cap. Their actual centre maps and completed gain quotient
+are those of Proposition~\ref{rawpair:prop-original-tails}.
+We denote the circular constant by
+\(\pi_{\rm circ}\) when a coefficient \(\pi_0\) occurs in the same formula.
+
+\subsection{A quadratic path with an exponentially small chart ratio}
+\label{rawstress:subsec-quadratic}
+
+Fix \(\pi_0\) strictly inside the retained ghost band at \(k=0\), so
+\[
+ \pi_\flat<\pi_0<\sqrt{12},\quad \pi_0\le\Pi,\qquad
+                  -\Delta_0<\Delta(0,\pi_0)<0.
+\]
+Retain a compact raw interval
+\(\mathcal A\Subset[d_0,a_0)\), where \(a_0\) is the original positive
+outward reserve of Corollary~\ref{deg:cor-positive-large-S-outer}.
+
+\begin{proposition}\label{rawstress:prop-quadratic}
+For \(g\downarrow0\), take
+\begin{equation}\label{rawstress:eq-quadratic-coefficients}
+ \begin{gathered}
+ k=e^{-1/g^2},\qquad A=1,\quad C=1+g,\quad \mu_3=-g-g^2,\\
+ \mu_2=(3+\pi_0k)g^2,\qquad
+ \mu_1=-(2+\pi_0k+k^2)g^3.
+ \end{gathered}
+\end{equation}
+For every sufficiently small \(g>0\), the lips with
+\(a\in\mathcal A\), \(u=a/(gk)\), give actual inputs of the original
+carrier. Their matched negative radii \(R=kr\) satisfy, uniformly on
+\(\mathcal A\),
+\begin{equation}\label{rawstress:eq-quadratic-radius}
+ R\longrightarrow R_{\pi_0}:=
+ \frac{3e^{3D_{\pi_0}}}{1+e^{3D_{\pi_0}}},\qquad
+ D_{\pi_0}=\frac{\pi_0\pi_{\rm circ}}
+                       {3\sqrt{12-\pi_0^2}}.
+\end{equation}
+Their raw central heights obey
+\begin{equation}\label{rawstress:eq-quadratic-height}
+ \log H(a)=-\frac1{3g^3}-\frac2{3g^2}
+                                    +O(g^{-1}+|\log g|).
+\end{equation}
+The actual finite channel has \(K_{\rm fin}>0\) and \(m\to0\).
+The completed physical derivative satisfies
+\(0<\Pi'\le C(d_0)g^3\) on these inputs.
+\end{proposition}
+
+\begin{proof}
+The coefficients tend to \(\theta_0\), and the small transverse zero is
+exactly \(\gamma=g\). Substitution in \eqref{eq:polynomials} gives
+\[
+ P_\theta(g+t)=-M(t),\qquad
+ M(t)=t^3+3gt^2-\pi_0kg^2t+k^2g^3.
+\]
+Thus these are fibres of \eqref{deg:quadratic-field}. The finite
+discriminant expansion in Section~\ref{sec:normalization} gives
+\[
+ K_{\rm fin}=C-A+O(|\theta-\theta_0|^2)=g+O(g^2)>0.
+\]
+The actual multiplier \eqref{eq:finite-multiplier} consequently tends
+to zero and eventually satisfies the last multiplier restriction.
+
+Put \(S=ku=a/g\). Then \(u\ge2M\), \(S\ge\delta\), and \(a<a_0\)
+for sufficiently small \(g\). Corollary~\ref{deg:cor-positive-large-S-outer}
+places the positive raw image in the prescribed buffer. Its reserve is
+fixed using the raw section margin, with \(a_0<d_q/L\); it applies when
+\(a\) is fixed while \(S\to\infty\). The inward construction in
+\eqref{bp-tail:positive-inward-variation}--\eqref{bp-tail:positive-inward-absolute}
+gives a positive actual centre height. Its monotonicity and the original
+comparison give the unique negative match
+\eqref{bp-tail:whole-tail-matching}. Corollary
+\ref{deg:cor-negative-absolute-outer} constructs its outward continuation
+in the negative buffer, including the original bridge. The two inward
+graphs have the same height at \(v=g\); scalar uniqueness joins them
+to one through orbit. The finite closing is therefore evaluated on its
+prescribed image. The inward estimate on the fixed coefficient band gives
+\(H\le(gk)^2Cg e^{-c/g}\), and the raw speed at the centre is
+\(k^2g^3+\ell(g)H\). Both tend to zero. The orbits therefore satisfy the fixed height cap and speed restriction;
+their positive height places them above the stopped endpoint.
+
+To determine the matched radius, we keep the coefficient-dependent
+logarithms in the two action primitives until their difference is taken. Set
+\[
+ c=\mathfrak c,\quad q=c^{-1},\quad
+ \omega=\sqrt{-\Delta},\qquad
+ \mathcal Q_+(\xi)=(\xi-d)^2+\omega^2,\quad
+ \mathcal Q_-(r)=(r+d)^2+\omega^2.
+\]
+Then \(P(\xi)=(c+k\xi)\mathcal Q_+(\xi)\) and
+\(P_-(r)=(c-kr)\mathcal Q_-(r)\). Define
+\begin{equation}\label{rawstress:eq-quadratic-partial-coefficients}
+ \beta_q=\frac{1+2g+g(2dk+k^2/c^2)}{c+2dk+k^2/c^2},\qquad
+ \rho_q=k(g-\beta_q),\qquad \chi_q=-\rho_q/c^2.
+\end{equation}
+Direct multiplication yields
+\begin{equation}\label{rawstress:eq-quadratic-partial-fractions}
+ \begin{aligned}
+ \frac{\xi(1+2g+gk\xi)}{P(\xi)}
+   &=\frac{\rho_q}{c+k\xi}
+                      +\frac{\beta_q\xi+\chi_q}{\mathcal Q_+(\xi)},\\
+ \frac{r(1+2g-gkr)}{P_-(r)}
+   &=-\frac{\rho_q}{c-kr}
+                      +\frac{\beta_qr-\chi_q}{\mathcal Q_-(r)}.
+ \end{aligned}
+\end{equation}
+In particular,
+\[
+ \beta_q=\frac{1+2g}{3}+O(k),\qquad
+ \rho_q/k=g-\beta_q=-\frac{1-g}{3}+O(k),\qquad
+                         \rho_q/k+\beta_q=g.
+\]
+The last identity is exact.
+
+Let \(\mathcal A_+(u)=\int_0^u\xi B_+/P\,d\xi\) and
+\(\mathcal A_-(r)=\int_0^r vB_-/P_-\,dv\), with the same original
+centre as base point. Integrating \eqref{rawstress:eq-quadratic-partial-fractions}
+gives
+\begin{align}
+ \mathcal A_+(u)={}&(g-\beta_q)\log\frac{c+ku}{c}
+       +\frac{\beta_q}{2}\log\frac{\mathcal Q_+(u)}q\notag\\
+ &+\frac{\chi_q+\beta_qd}{\omega}
+   \left(\arctan\frac{u-d}{\omega}+\arctan\frac d\omega\right),\notag\\
+ \mathcal A_-(r)={}&(g-\beta_q)\log\frac{c-kr}{c}
+       +\frac{\beta_q}{2}\log\frac{\mathcal Q_-(r)}q\notag\\
+ &-\frac{\chi_q+\beta_qd}{\omega}
+   \left(\arctan\frac{r+d}{\omega}-\arctan\frac d\omega\right).
+ \label{rawstress:eq-quadratic-primitives}
+\end{align}
+For \(u=S/k\), \(r=R/k\), the common logarithmic term is exactly
+\(\beta_q\log(1/k)\). Subtracting the two primitives gives
+\begin{align}
+ \mathcal A_+(S/k)-\mathcal A_-(R/k)={}&
+  (g-\beta_q)\log\frac{c+S}{c-R}\notag\\
+ &+\frac{\beta_q}{2}\log
+   \frac{(S-kd)^2+k^2\omega^2}{(R+kd)^2+k^2\omega^2}\notag\\
+ &+\frac{\chi_q+\beta_qd}{\omega}
+  \left(\arctan\frac{S-kd}{k\omega}
+             +\arctan\frac{R+kd}{k\omega}\right).
+ \label{rawstress:eq-quadratic-action-difference}
+\end{align}
+The coefficient of the remaining large \(\log S\) in the combined
+radial terms is \(g\).
+
+The two inward constructions give the actual centre heights
+\[
+ \eta_0^+=g\ell_0P(u)e^{-\mathcal A_+(u)/g}E_+,\qquad
+ \eta_0^-=g\ell_0P_-(r)e^{-\mathcal A_-(r)/g}E_-,
+ \qquad E_\pm,E_\pm^{-1}\le C.
+\]
+The bounded factors contain the nonlinear ratio integrals and the
+compact continuations to the centre. Their bounds follow from the action-clock decay
+in the two inward constructions. Matching these actual heights gives
+\begin{equation}\label{rawstress:eq-quadratic-exact-memory}
+ \mathcal A_+(u)-\mathcal A_-(r)
+    =g\log\frac{P(u)}{P_-(r)}+g\log\frac{E_+}{E_-}.
+\end{equation}
+The initial polynomial factors in these heights have the exact quotient:
+\begin{equation}\label{rawstress:eq-quadratic-polynomial-memory}
+ \frac{P(S/k)}{P_-(R/k)}
+   =\frac{k^2-\pi_0kS+3S^2+S^3}
+          {k^2+\pi_0kR+3R^2-R^3}.
+\end{equation}
+On a fixed compact subinterval of \(0<R<3\), its logarithm is
+\(3\log S-\log[R^2(3-R)]+O(S^{-1}+k)\).
+Thus its contribution to \eqref{rawstress:eq-quadratic-exact-memory}
+is \(O(g(1+|\log g|))\). The common terms containing \(\log k\) cancel in the exact action and
+polynomial identities before the estimate is taken, although
+\(g\log(1/k)=g^{-1}\to\infty\) on this path.
+
+For a fixed \(R\in(0,3)\), \eqref{rawstress:eq-quadratic-action-difference}
+tends to
+\[
+ D_{\pi_0}+\frac13\log\frac{3-R}{R}.
+\]
+Indeed \(d\to\pi_0/6\),
+\(\omega\to\sqrt{12-\pi_0^2}/6\), and both arctangents tend to
+\(\pi_{\rm circ}/2\). This limiting expression has the single zero
+\(R_{\pi_0}\) in \eqref{rawstress:eq-quadratic-radius}.
+Choose fixed \(R_{\rm lo}<R_{\pi_0}<R_{\rm hi}\) in \((0,3)\).
+The exact matching residual has opposite signs at these two radii for
+small \(g\), uniformly on \(\mathcal A\). Strict monotonicity of the
+actual negative centre map places its match between them. The
+expansion is uniform on that compact interval; shrinking the brackets
+proves \eqref{rawstress:eq-quadratic-radius}. The limiting gap from the
+negative root is positive for this fixed \(\pi_0\).
+
+The positive primitive also gives
+\[
+ \mathcal A_+(u)=\frac{1+2g}{3}\log(1/k)+g\log S+O(1).
+\]
+Since \(H=\ell_0M(a)e^{-\mathcal A_+(u)/g}E_+\) and
+\(M(a)\to a^3\), this proves \eqref{rawstress:eq-quadratic-height}.
+In the scaled centre coordinate,
+\[
+ \log\eta_0^+=-\frac1{3g^3}+\frac4{3g^2}
+                                      +O(g^{-1}+|\log g|).
+\]
+
+Finally retain the two complete exterior gains. With
+\(\nu=6g/(1+2g)\), \(\lambda_g=2\nu\),
+\(p=\widehat P(R)/R^2\), and \(b_R=-R^2/2\), the negative gain is
+\begin{equation}\label{rawstress:eq-quadratic-full-gain}
+ \Gamma_{-,b_R}'=
+ c_-g^2\ell_0^{-1-\nu}g^{-\nu}(gR)^{-\lambda_g}
+                        p^{-\nu}\mathcal K_-,\qquad
+                         0<\mathcal K_-\le C.
+\end{equation}
+Its original label change is
+\(\Gamma_{-,b_r}'=k^2\Gamma_{-,b_R}'\), where \(b_r=-r^2/2\).
+The positive input gain in \(b_u=-u^2/2\) retains \((gk)^2\).
+Using the actual centre variations gives
+\begin{equation}\label{rawstress:eq-quadratic-consumed-gains}
+ \begin{gathered}
+ 0<\frac{d\Gamma_-}{d\log\eta_0^-}
+ \le Cc_-g^3g^{-\nu-\lambda_g}
+                       R^{2-\lambda_g}p^{1-\nu}\le Cc_-g^3,\\
+ \frac{d\Gamma_+}{d\log\eta_0^+}\ge c(d_0)c_+a^3.
+ \end{gathered}
+\end{equation}
+The bounded negative factor follows from the upper density estimate
+\eqref{bp-tail:negative-density-value}. Its root dwell has nonpositive
+density, as shown in \eqref{bp-tail:negative-exact-density}; it does
+not require an inverse bound on \(\mathcal K_-\). The exact quotient
+of \eqref{rawstress:eq-quadratic-consumed-gains} is the completed
+physical \(\Pi'\). This proves its stated bound. If the exterior gain is factored differently, the term
+\(k^{-\lambda_g}=\exp(12/[g(1+2g)])\) is unbounded on this path;
+the exact label change and centre variation account for it before the
+quotient is estimated.
+\end{proof}
+
+\subsection{A compact cubic path with a very small positive bottleneck}
+\label{rawstress:subsec-cubic}
+
+We write \(\tau_{\rm c}=\tau_{\rm cub}\) for the raw cubic scale and
+\(\kappa_{\rm c}\) for its positive ghost gap. Choose a compact block
+with \(U_0\ge1\) and \(G_0>1/3\). For small \(\kappa_{\rm c}>0\), set
+\begin{equation}\label{rawstress:eq-cubic-coefficients}
+ \begin{gathered}
+ \kappa_{\rm c}=e^{-1/\tau_{\rm c}^2},\qquad
+ c_{\rm c}=(1+\kappa_{\rm c}^2)^{-1},\qquad \alpha_{\rm c}=1,\\
+ U_{\rm c}=2c_{\rm c}-c_{\rm c}^{-1},\qquad
+ G_{\rm c}=(c_{\rm c}-2)/3.
+ \end{gathered}
+\end{equation}
+These coefficients belong to the block for sufficiently small
+\(\tau_{\rm c}\), and \(U_{\rm c}\ge0\). Their axis polynomial is
+\begin{equation}\label{rawstress:eq-cubic-polynomial}
+ P_{\rm c}(v)=(v+c_{\rm c})
+                   \{(v-1)^2+\kappa_{\rm c}^2\},
+ \qquad \Delta_{\rm c}=-\kappa_{\rm c}^2<0.
+\end{equation}
+
+There is a fixed raw reserve \(a_{\rm res}>0\) inside the positive
+window for this path. To see this, at \(\tau_{\rm c}=0\) consider the
+positive raw graph with \(M(t)=t^3\), initial height
+\(z(a)=\ell_0a^3\), and the organizing passive coefficients.
+The near-lip comparison of Lemma~\ref{deg:lem-raw-growing-section}
+puts \(z/t^2\) in a fixed positive strip at \(t=2a\). The subsequent
+equation is
+\(t(z/t^2)'=1-2z/t^2+O(t)\), with a negative normal diagonal on
+that strip. Its fixed-port value converges to the organizing strong
+graph as \(a\downarrow0\). The strict window margin therefore
+admits all these limiting raw images for \(0<a\le a_{\rm res}\),
+after decreasing \(a_{\rm res}\). Ordinary dependence on the regular
+raw interval from a fixed \(a>0\) to the port preserves this margin
+for small \(\tau_{\rm c}\), uniformly on compact raw subintervals.
+Choose the auxiliary \(d_0\), after the original windows and reserves,
+so that \(2d_0<a_{\rm res}\), while retaining the small-error
+requirements of its construction. We may therefore use \(a\in[d_0,2d_0]\) within the originally
+prescribed physical carrier.
+
+\begin{proposition}\label{rawstress:prop-cubic}
+The path \eqref{rawstress:eq-cubic-coefficients} is realized in the full
+coefficient germ by
+\begin{equation}\label{rawstress:eq-cubic-full-coefficients}
+ \begin{gathered}
+ A=1,\quad C=1+\tau_{\rm c},\quad
+ \gamma=\tau_{\rm c}G_{\rm c},\quad
+ \mu_3=-\gamma-\gamma^2,\\
+ \mu_2=\tau_{\rm c}^2(U_{\rm c}+3G_{\rm c}^2),\qquad
+ \mu_1=-\tau_{\rm c}^3(1+U_{\rm c}G_{\rm c}+2G_{\rm c}^3).
+ \end{gathered}
+\end{equation}
+For sufficiently small \(\tau_{\rm c}>0\), the lips with
+\(a\in[d_0,2d_0]\), \(u=a/\tau_{\rm c}\), are original admitted
+inputs. If \(X=c_{\rm c}-r\) is their matched negative root distance,
+then uniformly on this interval
+\begin{equation}\label{rawstress:eq-cubic-root-distance}
+ \kappa_{\rm c}\log(1/X)\longrightarrow2\pi_{\rm circ}.
+\end{equation}
+Their raw central height satisfies
+\begin{equation}\label{rawstress:eq-cubic-height}
+ \log H(a)=
+ -\frac{\pi_{\rm circ}B(1)}
+             {(1+c_{\rm c})\tau_{\rm c}\kappa_{\rm c}}
+                  +O(\tau_{\rm c}^{-1}+|\log\tau_{\rm c}|),
+\end{equation}
+so \(\tau_{\rm c}\kappa_{\rm c}\log H(a)\to-\pi_{\rm circ}/2\).
+The finite channel has \(K_{\rm fin}>0\), \(m\to0\), and the full
+physical derivative obeys \(0<\Pi'\le C(d_0)\tau_{\rm c}^3\).
+\end{proposition}
+
+\begin{proof}
+Translation of the raw polynomial gives
+\[
+ P_\theta(\gamma+t)=-M_{\rm c}(t),\qquad
+ M_{\rm c}(t)=t^3+3\tau_{\rm c}G_{\rm c}t^2
+                  -\tau_{\rm c}^2U_{\rm c}t+\tau_{\rm c}^3.
+\]
+The coefficients thus give exactly
+\eqref{deg:compact-cubic-field}--\eqref{deg:compact-cubic-polynomials}.
+Moreover
+\(K_{\rm fin}=\tau_{\rm c}+O(\tau_{\rm c}^2)>0\), so the actual
+finite multiplier tends to zero. The positive port images are buffered
+by the fixed reserve above. The inward construction
+\eqref{deg:compact-raw-tail-inward} and
+\eqref{deg:compact-reflected-inward} gives separate actual positive
+centre maps, with bounded nonlinear memory factors. Write their actions
+as \(\mathcal A_{{\rm c},+}\) and \(\mathcal A_{{\rm c},-}\), based at
+the original centre.
+
+For \(u=a/\tau_{\rm c}\), direct integration across the bottleneck gives
+\begin{equation}\label{rawstress:eq-cubic-positive-action}
+ \mathcal A_{{\rm c},+}(u)
+ =\frac{\pi_{\rm circ}B(1)}
+             {(1+c_{\rm c})\kappa_{\rm c}}
+                       +O(1+\tau_{\rm c}\log u).
+\end{equation}
+For completeness, put \(h(v)=vB(v)/(v+c_{\rm c})\). On a fixed
+symmetric interval about \(v=1\), subtract \(h(1)+h'(1)(v-1)\).
+The linear term integrates to zero against
+\(((v-1)^2+\kappa_{\rm c}^2)^{-1}\), and the quadratic remainder
+has bounded integral. Outside this interval the denominator has a
+fixed margin; for large \(v\), \(h(v)=O(1+\tau_{\rm c}v)\), giving
+the remaining \(O(1+\tau_{\rm c}\log u)\) bound. Thus
+\(\kappa_{\rm c}\mathcal A_{{\rm c},+}\to\pi_{\rm circ}/2\).
+
+At a fixed negative lip \(r_0<c_{\rm c}\), the negative action is
+bounded. The positive centre height from
+\eqref{rawstress:eq-cubic-positive-action} is smaller than its negative
+centre height for small \(\tau_{\rm c}\). The actual image
+\eqref{deg:compact-negative-centre-image} therefore gives a unique match,
+before an observer is attached. Its radius tends to \(c_{\rm c}\):
+on every fixed complement of that root, the negative action and
+polynomial logarithm stay bounded, whereas the positive action diverges.
+The negative root-collar construction in
+Lemma~\ref{deg:lem-weighted-cubic-tail} gives a positive-time outward
+passage on a fixed buffered invariant chord and continues it to the
+original negative raw section. It applies for arbitrarily small \(X\).
+This proves negative output and closing admission. Equality at the
+same centre joins the two graphs by scalar uniqueness.
+
+Both initial polynomial factors occur in the exact centre matching, so
+\begin{equation}\label{rawstress:eq-cubic-memory}
+ \mathcal A_{{\rm c},+}(u)-\mathcal A_{{\rm c},-}(r)
+ =\tau_{\rm c}\log\frac{P_{\rm c}(u)}{P_{\rm c}(-r)}+O(\tau_{\rm c}).
+\end{equation}
+Put
+\[
+ L_-(r)=(r+1)^2+\kappa_{\rm c}^2,\qquad
+ a_-:=\frac{c_{\rm c}B(-c_{\rm c})}{L_-(c_{\rm c})}\longrightarrow\frac14.
+\]
+The simple-root action and the source polynomial give, uniformly in a
+fixed negative collar,
+\[
+ \mathcal A_{{\rm c},-}(r)=a_-\log(1/X)+O(1),\qquad
+ \log\frac{P_{\rm c}(u)}{P_{\rm c}(-r)}
+                               =3\log u+\log(1/X)+O(1).
+\]
+Inserting these in \eqref{rawstress:eq-cubic-memory} yields
+\[
+ (a_-+\tau_{\rm c})\log(1/X)
+             =\mathcal A_{{\rm c},+}(u)
+                              +O(1+\tau_{\rm c}\log u).
+\]
+This proves \eqref{rawstress:eq-cubic-root-distance}. Also
+\(H=\ell_0M_{\rm c}(a)
+e^{-\mathcal A_{{\rm c},+}(u)/\tau_{\rm c}}E_+\), with
+\(E_+,E_+^{-1}\le C\) and \(M_{\rm c}(a)\to a^3\).
+Equation~\eqref{rawstress:eq-cubic-positive-action} proves
+\eqref{rawstress:eq-cubic-height}. The height is positive and below
+the fixed cap. The raw speed at the centre is
+\(\tau_{\rm c}^3+\ell(\gamma)H\), which tends to zero, so the
+original speed restriction holds as well.
+
+The root distance is too small to discard its power in the negative
+output gain. We keep that power while forming the physical derivative.
+With
+\[
+ \lambda_G=\frac{12\tau_{\rm c}G_{\rm c}}
+                       {1+2\tau_{\rm c}G_{\rm c}},\qquad
+ \beta_-=\frac{\tau_{\rm c}L_-(c_{\rm c})}
+                    {c_{\rm c}B(-c_{\rm c})}=\frac{\tau_{\rm c}}{a_-},
+\]
+the complete collar gain retains
+\begin{equation}\label{rawstress:eq-cubic-full-gain}
+ \Gamma_{-,b_-}'=
+ \tau_{\rm c}^{2-\lambda_G}\mathcal U_{\rm c}\,
+ \tau_{\rm c}^{\beta_-}X^{\beta_-}
+                      K_{\rm c}(X,X^{\beta_-}),\qquad b_-=-r^2/2.
+\end{equation}
+Here \(\mathcal U_{\rm c}\) and \(K_{\rm c}\) are bounded positive
+units; the fixed output bridge and divided closing are included in
+their bounded terminal factors. Equation
+\eqref{rawstress:eq-cubic-root-distance} gives
+\[
+ \beta_-\log(1/X)\sim
+             \frac{8\pi_{\rm circ}\tau_{\rm c}}{\kappa_{\rm c}}
+                   \longrightarrow\infty,
+ \qquad X^{\beta_-}\longrightarrow0.
+\]
+The input gain in \(b_+=-u^2/2\) satisfies
+\(\Gamma_{+,b_+}'\asymp_{d_0}\tau_{\rm c}^2\) by
+\eqref{deg:compact-raw-tail-input}. The physical quotient is exactly
+\begin{equation}\label{rawstress:eq-cubic-physical-ratio}
+ \Pi'=\frac{\Gamma_{-,b_-}'}{\Gamma_{+,b_+}'}
+       \frac{B_+P_-}{B_-P_+}\frac{\Lambda_+}{\Lambda_-}.
+\end{equation}
+Since \(\lambda_G=O(\tau_{\rm c})\),
+\(\tau_{\rm c}^{-\lambda_G}\) is bounded. The factors
+\(\tau_{\rm c}^{\beta_-}\) and \(X^{\beta_-}\) are at most one.
+The input polynomial satisfies \(P_+(u)\ge c(d_0)\tau_{\rm c}^{-3}\),
+whereas \(P_-\le C\) and the two centre variation factors are units.
+This proves
+\(0<\Pi'\le C(d_0)\tau_{\rm c}^3\), with the original divided closing
+and all exterior gains retained.
+\end{proof}

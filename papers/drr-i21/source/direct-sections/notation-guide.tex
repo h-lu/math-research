@@ -1,0 +1,141 @@
+\begingroup
+% Use nonshrinking vertical fill in the split table output.
+\let\vss\vfil
+\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr.3\textwidth-6pt}
+                >{\raggedright\arraybackslash}p{\dimexpr.7\textwidth-6pt}@{}}
+\caption{Notation used in more than one section.}
+\label{tab:notation-guide}\\
+\hline
+Symbol & Meaning\\
+\hline
+\endfirsthead
+\caption[]{Notation used in more than one section (continued).}\\
+\hline
+Symbol & Meaning\\
+\hline
+\endhead
+\(C_0\); \(A,C,\mu_1,\mu_2,\mu_3\); \(p\), \(\mathcal X_p\)
+  & Fixed organizing value; parameters of \eqref{eq:quadratic-family};
+    the parameter point \(p=(A,C,\mu_1,\mu_2,\mu_3)\) and its vector field.\\
+\(\GammaI\), \(\mathbb S^2\), \(\distH\)
+  & The graphic \(I_2^1\); the Poincar\'e sphere; Hausdorff distance on
+    \(\mathbb S^2\).\\
+\(\varepsilon\), \(V\), \(N(V,\varepsilon)\)
+  & Hausdorff radius, parameter neighborhood and the supremum over
+    \(p\in V\) of the number of limit cycles satisfying the Hausdorff
+    condition in \eqref{eq:cyclicity-definition}.\\
+\((v,z)\), \(P\), \(\eta\)
+  & Projective chart \eqref{eq:projective-coordinates-new};
+    \(P(v)=\mu_1+\mu_2v-v^3\); normal-rate coordinate
+    \eqref{eq:normal-rate-coordinate-new}.\\
+\(q\), \(q_0,q_1,q_2\), \(R_q\); \(B\), \(B_0\), \(b_0,b_1,b_2\)
+  & Boundary drift \(q=q_0+q_1\eta+q_2\eta^2+\eta^3R_q\); positive
+    coefficient in \eqref{eq:physical-normal-form-new}, with
+    \(B_0=B(0,0,p)\), and the margins
+    \(B\ge b_0\), \(B_\eta\ge b_1\),
+    \(3R_q+\eta\partial_\eta R_q\le-b_2\) in
+    \eqref{eq:normal-sign-margins-new}.\\
+\(z_*\), \(W_\pm\), \(\widetilde W_\pm\), \(\Pi_p\), \(I\)
+  & Height of the fixed section; capture windows and the enlarged windows
+    of \cref{lem:exterior-multiplier-new}; exterior map; section coordinate
+    \(I=z_*-\eta^2/2\).\\
+\(\Lambda_0\), \(\Lambda_\pm\), \(\Lambda_*\)
+  & Limit of the organizing exterior multiplier as \(z_*\downarrow0\);
+    bounds \(\Lambda_-\le\Pi_p'\le\Lambda_+\)
+    of \cref{lem:exterior-multiplier-new}; the value of \(\Lambda_+\) fixed
+    in \cref{sec:direct-parameter-cover}.\\
+\(h\), \(U_\sigma(z;h)\), \(\eta_\sigma\), \(\mathcal G_{\sigma,p}\)
+  & Central height; energy \(\eta_\sigma^2/2\) of the half-orbit of sign
+    \(\sigma\); right side of \eqref{eq:physical-graph-equation-new}.\\
+\(I_\sigma\), \(\cH_p\), \(\Delta_p\), \(\cD_p\)
+  & Endpoints; interval of admissible central heights; displacement;
+    domain of the central return.\\
+\(H\), \(s\), \(r\), \(\rho_1\)
+  & Coefficient scales of \cref{tab:direct-scale-guide};
+    \(\rho_1=\sqrt{q_1}\) is distinct from the annular exit radius
+    \(\rho\).\\
+\(a\), \(b\), \(\bar c\)
+  & Normalized constant, linear and quadratic coefficients of the drift
+    in each chart.\\
+\(\mathcal L\), \(m_\sigma\), \(M_\sigma\)
+  & Logarithmic slope ratio \eqref{eq:direct-completed-log-ratio};
+    endpoint slopes \(m_\sigma=hI_{\sigma,h}\) and, in the annulus,
+    \(M_\sigma=-\mathcal E I_\sigma\), where \(\mathcal E=\rho\partial_\rho\)
+    and \(m_\sigma=sM_\sigma/G_\sigma\) with
+    \(G_\sigma=-s\mathcal E\log h_\sigma>0\).\\
+\(T\), \(T_Q\), \(c_T\)
+  & Logarithmic height coordinate
+    \eqref{eq:direct-source-clock-convention}, with all parameter scales
+    fixed; \(T=-c_T\log(h/h_{\rm ref})\), \(T_Q=T+s\log Q\) in the positive
+    quadratic region.\\
+\(c_\pm\), \(C_{\rm cone}\), \(\varpi_t\)
+  & Common cone and its first-variation constant; tail multiplier
+    \(\varpi_t(z)=(z/t)^{-2q_2}\) of \cref{lem:direct-weighted-tail}.\\
+\(c_\sigma^{\rm lin}\), \(\mathfrak c_\sigma(p)\)
+  & Root-distance normalization constants in
+    \eqref{eq:direct-positive-root-distance-phase}; boundary-action
+    constants in \eqref{eq:direct-buffered-primary-action}.\\
+\(\delta\), \(\epsilon_3\), \(F\), \(K\)
+  & Small parameter and drift in \eqref{eq:direct-height-system}; outward
+    boundary drift \(K\), with \(F=K/X\);
+    \(\epsilon_3=\ell/\delta\) on the quadratic-prefix scales.\\
+\(\mathcal W\), \(w\), \(\chi\)
+  & Boundary-flow coordinate, projected state and inverse projection of
+    \cref{lem:direct-boundary-flow}.\\
+\(\mathcal U\), \(\Theta\), \(\Upsilon\)
+  & Scaled energy; logarithmic height correction; positive prefix unit,
+    with their scales and arguments specified in each construction.\\
+\(\ell\), \(E\), \(A_p\), \(U_p\)
+  & Radius scale, amplitude, amplitude constant and dimensionless
+    positive unit factor in an endpoint derivative,
+    \cref{lem:boundary-flow-endpoint}; in
+    \cref{sec:direct-positive-offset}, \(\ell=\sqrt{q_0}\).\\
+\(\mathcal A\), \(\mathfrak H\), \(Q_\sigma\)
+  & Boundary action integral; logarithmic endpoint rate in a common
+    logarithmic height coordinate; curvature coefficient
+    \((wK_\sigma''-K_\sigma')/w^2\).\\
+\(\widehat h\), \(\widehat h_+\)
+  & Rescaled central height \(h/q_1^2\) in
+    \cref{sec:direct-bounded-contact}; \(h/q_0\) in
+    \cref{sec:direct-positive-offset}.\\
+\(\kappa\), \(a_\circ\), \(\kappa_\circ\)
+  & Weak-root scale of \eqref{eq:weak-root-scales}; the constants of
+    \cref{prop:weak-root-passage}.\\
+\(\varrho\), \(\rho\)
+  & Positive unscaled radius; normalized annular radius, with
+    \(\varrho=s\rho\) as a coordinate relation in the negative quadratic
+    chart.\\
+\(\varrho_0\), \(\varrho^+\); \(\rho_e\), \(\varrho_e\)
+  & Fixed coefficient in \(u=\varrho_0/\varrho\); \(\varrho^+=s+\varrho\);
+    normalized and unscaled adaptive exit radii, \(\varrho_e=s\rho_e\).
+    The annular exit has unscaled radius \(s\rho\); at the same thin
+    threshold, \(\rho\le\rho_e\) in the buffered comparison of
+    \cref{sec:direct-buffered-negative}.\\
+\(\delta_{\rm an}\), \(\nu\), \(\epsilon_{\rm f}\)
+  & Thin threshold of \cref{sec:direct-negative-annulus}; margin of the
+    buffered region \eqref{eq:direct-buffered-region}; fold width in
+    \eqref{eq:direct-fold-region}.\\
+\(\mathcal Y\), \(m_{\rm land}\)
+  & Height-to-radius ratio \(\mathcal Y=z/\varrho^2\); fixed geometric
+    landing level.\\
+\(a_0^{\rm pr},a_0^+,a_0^-\), \(b_{*,+},b_{*,-}\), \(\underline b\)
+  & Regional coefficient thresholds in the primary, positive-secondary
+    and negative-secondary arguments; see \cref{tab:direct-constant-order}.\\
+\(\kappa_{\rm p}\); \(a_{\rm w},\kappa_{\rm w}\); \(a_\pm,\kappa_\pm\);
+\(r_{\rm d}\), \(b_{\rm cov}\), \(A_0\), \(m_{\rm cov}\); \(L\)
+  & Fixed thresholds, margins and overlaps of the parameter cover;
+    their choice order is given in \cref{tab:direct-constant-order}.\\
+\(\Lambda\), \(\Lambda_s\), \(\lambda_s\)
+  & Boundary-action multiplier; its value on the path of
+    \cref{sec:sharpness}; slope coefficient in the normalized
+    displacement \eqref{eq:sharpness-prepared-displacement}.\\
+\(c\), \(C\)
+  & Positive constants whose values may change from line to line, with
+    or without indices. The family parameter \(C\) appears only in
+    \eqref{eq:quadratic-family}, in \(p\), in the formulas of
+    \cref{sec:graphic-central-return}, and as \((A,C)\) or
+    \(C=C_0\).\\
+\hline
+\end{longtable}
+\endgroup

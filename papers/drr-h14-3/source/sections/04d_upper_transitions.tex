@@ -1,0 +1,474 @@
+\subsection{A finite upper saddle near ratio one}\label{rw:upper-resonance}
+
+We first treat the finite hyperbolic saddle, then the repeated and weak
+ends at infinity.  Near ratio one, expanding a power in the ratio
+would lose uniformity when its logarithmic input is large.  Instead
+we keep the exact compensator.  The original field is affine at zero
+scale, so its nonlinear orbital remainder has a factor $\epsilon$,
+which persists in the compensator and curvature estimates.  Fix a compact
+interval $0<m_*\le\bar m\le m^*$, bounded remaining coefficients and a
+small neighborhood on which its eigenvalue ratio satisfies
+$|r-1|\le1/64$. The ratio used below is the actual ratio of the original
+field. Dividing \eqref{rw:geometry:upper-field} by $Y+\epsilon>0$ gives
+\begin{equation}\label{rw:upper:divided-field}
+ \dot X=\frac{Y(\bar mY-1)+\epsilon(\bar BX^2+\bar aX)}{Y+\epsilon},
+ \qquad
+ \dot Y=X+\bar cY+\frac{\nu Y^2}{Y+\epsilon}.
+\end{equation}
+At $\epsilon=0$ this is an affine field. Its saddle is
+$(-\bar d/\bar m,1/\bar m)$, where $\bar d=\bar c+\nu$, and its two
+eigenvalues have opposite signs separated from zero. The implicit
+function theorem gives the perturbed saddle and its eigendirections on
+a common analytic coefficient neighborhood. Write its eigenvalues as
+$\lambda_u>0>\lambda_s$ and set $r=-\lambda_s/\lambda_u$.
+
+To bound the analytic jets near this finite saddle, choose a complex
+neighborhood whose real part lies in $Y>Y_s/2>0$.  On a sufficiently
+small such neighborhood, $Y+\epsilon$ stays away from zero.  In linear
+eigenvector coordinates the stable and unstable graph equations have
+coefficient denominators $n\lambda_u-\lambda_s$ and
+$\lambda_u-n\lambda_s$, respectively. Their absolute values are at
+least $c(n+1)$ for $n\ge1$ on a smaller complex coefficient disk.
+The nonlinear part of \eqref{rw:upper:divided-field} is $\epsilon$
+times an analytic function. On a sufficiently small state disk the
+coefficient recursion is therefore a contraction in the norm
+$\sum|a_n|\delta^n$; the factor $(n+1)^{-1}$ absorbs the derivative
+index in the graph equation. This constructs both axes on one disk,
+with their nonlinear parts divisible by $\epsilon$. Cauchy estimates
+on smaller disks give any prescribed finite state and coefficient jets,
+including Euler scale jets of the quotient by $\epsilon$.
+
+Straighten these axes, orient their coordinates $U,V$ positively in the
+quadrant of the local returning arc, and write the orbital equation as
+$V_U=-(V/U)H(U,V)$, with $H(0,0)=r>0$. Separate positive changes on the
+two axes, obtained by integrating
+$d\log\widetilde U/d\log U=H(U,0)/r$ and
+$d\log\widetilde V/d\log V=r/H(0,V)$, make the orbital coefficient
+constant on each axis. Its difference from $r$ is then divisible by
+$UV$. Dropping the tildes gives
+\begin{equation}\label{rw:upper:axis-equation}
+ \frac{dV}{dU}=-r\frac VU-V^2R(U,V),\qquad R=\epsilon\widetilde R,
+\end{equation}
+where $\widetilde R$ has common analytic bounds.  The local maps below
+follow this positive quadrant.  To obtain the complete upper path,
+they will be composed with its two regular connecting arcs.
+
+The coordinates can be chosen to preserve the reversible component
+$\bar a=\bar c=\nu=0$ exactly. Indeed, with $Y_s=1/\bar m$, put
+\begin{gather*}
+ W(Y)=\left(\frac{Y+\epsilon}{Y_s+\epsilon}\right)^{-2\epsilon\bar B},
+ \qquad
+ I(Y)=\int_{Y_s}^Y\frac{2s(\bar ms-1)}{s+\epsilon}W(s)\,ds.
+\end{gather*}
+Direct differentiation gives the first integral $WX^2-I$.
+Writing $I=(Y-Y_s)^2J$ yields
+$J(Y_s)=\bar m/(1+\epsilon\bar m)>0$. Thus
+$\eta=(Y-Y_s)\sqrt{J/\bar m}$,
+$\zeta=\sqrt{W/\bar m}X$ and
+$U=-(\eta+\zeta)/2$, $V=-(\eta-\zeta)/2$ transform that integral to
+$-4\bar mUV$. Extend these analytic coordinates to the coefficient
+neighborhood before straightening the perturbed axes. The subsequent
+axis changes are the identity on this component; there $r=1$ and
+$R=0$ exactly.  This local first integral supplies the normalization
+on the reversible component.
+
+\begin{proposition}[The uniform resonant passage]\label{rw:upper:prepared-map}
+After choosing common small local sections and positive coordinates on
+them, the passage from $(t,1)$ to $(1,v)$ has the form
+\begin{equation}\label{rw:upper:comp-map}
+ v=t^r e^{w(t)},\qquad
+ w=-\sigma t\omega(t;r-1)+R_w(t),\qquad
+ \omega(t;\kappa)=\int_0^{\log(1/t)}e^{-\kappa s}\,ds.
+\end{equation}
+For each prescribed finite integer $N$, the neighborhoods can be chosen
+so that, with $D=t\partial_t$,
+\begin{equation}\label{rw:upper:remainder}
+ |D^i\partial_{\mathbf b}^{\alpha}E_\epsilon^jR_w|
+ \le C_N\epsilon t^{7/4},\qquad i+|\alpha|+j\le N,
+ \qquad 0<t<e^{-6}.
+\end{equation}
+Ratio derivatives may also be included, counting towards the same total
+order. The coefficients satisfy $\sigma=O(\epsilon)$ in these norms.
+In particular $N=6$ supplies four input Euler derivatives and two
+coefficient derivatives of $R_w$. The estimate places no bound on
+$|(r-1)\log t|$.
+\end{proposition}
+
+\begin{proof}
+First remove the nonconstant restrictions of $R$ to its axes without
+dividing by $r-1$. Put $s_0=R(0,0)$ and, writing
+$R(U,0)=s_0+\sum_{n\ge1}R_{n0}U^n$, set
+\[
+ f(U)=-\sum_{n\ge1}\frac{R_{n0}U^{n+1}}{n+1-r},\qquad
+ V_1=\frac V{1+f(U)V}.
+\]
+A direct differentiation gives
+\[
+ R_1(U,V_1)=R\left(U,\frac{V_1}{1-f(U)V_1}\right)
+                  +f'(U)-rf(U)/U,
+ \qquad R_1(U,0)=s_0.
+\]
+Next set $U_1=U/(1+g(V_1)U)$, where $g(0)=g'(0)=0$ solves
+\[
+ g'(V)-\frac{g(V)}{rV}=\frac{R_1(0,V)-s_0}{r^2}.
+\]
+The new axis restriction is
+$R_2(0,V)=R_1(0,V)-r^2g'(V)+rg(V)/V=s_0$.
+Since $g=O(V^2)$, the previously normalized axis is unchanged.
+The denominators of the two series are $n+1-r$ and $n+1-1/r$,
+$n\ge1$. On $|r-1|\le1/64$ they have a fixed positive margin and
+grow linearly with $n$. The changes and their inverses therefore have
+uniform analytic bounds on smaller disks, and $f,g$ retain their factor
+$\epsilon$. Exact division of $R_2-s_0$ by $U_1V_1$, followed by one
+common positive rescaling of both sections, gives
+\begin{equation}\label{rw:upper:resonant-orbit}
+ V_U=-rV/U-\sigma V^2-UV^3\mathcal R(U,V),\qquad
+ |\sigma|+\|\mathcal R\|\le C\epsilon.
+\end{equation}
+The bound includes whatever finite jets are reserved before this
+construction. The two shears are also the identity on the reversible
+component considered above.
+
+The reciprocal equation before the shears has the exact integral
+representation
+\[
+ V(U)=\frac{(t/U)^r}{1+t^r\int_t^U s^{-r}R(s,V(s))\,ds}.
+\]
+It proves positivity and existence on the full rectangle for small
+$\epsilon$. In \eqref{rw:upper:resonant-orbit} put
+$U=te^\theta$, $V=e^{-r\theta}\zeta$, and
+$L=\log(1/t)$. Then, exactly,
+\begin{equation}\label{rw:upper:zeta}
+ \zeta_\theta=-\sigma te^{-(r-1)\theta}\zeta^2
+ -t^2e^{-2(r-1)\theta}\zeta^3
+        \mathcal R(te^\theta,e^{-r\theta}\zeta),\qquad \zeta(0)=1.
+\end{equation}
+With $\delta=1/64$ the two kernel integrals are bounded respectively by
+$t^{1-\delta}L$ and $t^{2-2\delta}L$. A bootstrap on the integral
+equation gives $1/2<\zeta<2$ and
+$\zeta-1=O(\epsilon t^{1-\delta}(1+L))$ on $[0,L]$.
+Integrating its logarithmic derivative now yields
+\begin{align*}
+ R_w={}&-\sigma t\int_0^L e^{-(r-1)\theta}(\zeta-1)\,d\theta\\
+ &-t^2\int_0^L e^{-2(r-1)\theta}\zeta^2
+                  \mathcal R(te^\theta,e^{-r\theta}\zeta)\,d\theta.
+\end{align*}
+Consequently $|R_w|\le C\epsilon t^{2-2\delta}(1+L)^2$.
+
+Differentiate \eqref{rw:upper:zeta} at fixed $\theta$. Ratio derivatives
+add polynomial factors in $\theta$; input Euler derivatives preserve
+$te^\theta$. The highest variation has the same small-$L^1$ linear
+kernel, so induction bounds it by the displayed powers of $t$ times a
+fixed power of $1+L$. Endpoint rows use $DL=-1$ and retain those powers.
+In the first integral for $R_w$, all variations of $\zeta-1$ retain
+their first-order smallness. Therefore
+\[
+ |D^i\partial_{\mathbf b}^{\alpha}E_\epsilon^jR_w|
+ \le C_N\epsilon t^{2-2/64}(1+L)^{M_N}.
+\]
+The strict exponent margin $2-2/64-7/4=7/32$ absorbs every such fixed
+logarithmic power and proves \eqref{rw:upper:remainder}. Ordinary
+$\epsilon$ derivatives can differentiate away the front factor
+$\epsilon$ and are not covered by that displayed conclusion.
+\end{proof}
+
+The curvature formula follows from the exact identity
+\[
+ E:=t\frac{v''}{v'}-(r-1)=Dw+\frac{D^2w}{r+Dw}.
+\]
+Inserting \eqref{rw:upper:comp-map} gives
+\begin{equation}\label{rw:upper:curvature}
+ E=-\sigma Q+R_E,\qquad
+ Q=2rt\omega(t;r-1)-(2+1/r)t,\qquad Q''=-2r^2t^{r-2}.
+\end{equation}
+Here $|D^i\partial_{\mathbf b}^{\alpha}E_\epsilon^jR_E|
+\le C\epsilon t^{7/4}$ for $i+|\alpha|+j\le N-2$ if $N$ orders were
+retained in \eqref{rw:upper:remainder}. Indeed the error in replacing
+$(r+Dw)^{-1}$ by $1/r$ is a product of two first corrections, bounded
+by the same $t^{2-2/64}(1+L)^M$ estimate. Thus a curvature use requiring
+four Euler and two coefficient derivatives reserves $N=8$, whereas
+four Euler and two coefficient derivatives of $w$ itself require
+$N=6$. Since $\omega\ge\int_0^6e^{-s/64}\,ds>5$ and
+$Q'=2r^2\omega-2r-2-1/r$, both $Q$ and $Q'$ are positive on
+$0<t<e^{-6}$ for the stated ratio interval.  Both estimates retain
+$t^{r-1}$ exactly and therefore remain valid when
+$|(r-1)\log t|$ is large.
+
+The finite connecting arcs contribute a separate regular factor. On a
+small low-height segment where $|X|\ge c>0$, the denominator of
+$dX/dY$ obtained from \eqref{rw:upper:divided-field} is bounded below
+in modulus by $c(Y+\epsilon)$. The numerator and all its fixed $X$
+and coefficient derivatives are $O(Y+\epsilon)$; Euler scale
+differentiation preserves this property. The equation in $Y$ and its
+finite variational equations consequently have bounded coefficients.
+Comparing it with its zero-scale equation leaves only the integrable
+layer carrier $\epsilon/(Y+\epsilon)$, whose integral is
+$\epsilon\log(1+\delta/\epsilon)$. Beyond this segment the vector
+field is regular on a compact arc. These arguments give the required
+finite section and coefficient jets, with zero-scale error
+$O(\epsilon(1+|\log\epsilon|)+|\nu|)$ when the comparison also sets
+$\nu=0$.  The scale derivatives in this estimate are Euler
+derivatives; ordinary $\epsilon$ derivatives of the error may be
+unbounded.
+
+\subsection{Repeated and weak upper passages}\label{rw:upper-degenerate-preparation}
+
+As an upper root becomes repeated or weak, the preceding hyperbolic
+preparation ceases to be uniform.  We instead use a small angular
+width to make the slow variational growth weaker than the normal
+contraction.  In projective coordinates
+$R=1/Y$, $\varphi=X/Y$, put $b=1-\epsilon\bar B$ and
+$\bar d=\bar c+\nu$. A positive projective time change gives the exact
+field
+\begin{equation}\label{rw:upper:projective}
+\begin{split}
+ R'&=-R(\varphi+\bar d)-\epsilon R^2(\varphi+\bar c),\\
+ \varphi'&=\bar m-b\varphi^2-\bar d\varphi
+       +R[-1+\epsilon\varphi(\bar a-\bar c-\varphi)].
+\end{split}
+\end{equation}
+We describe separately the quadratic angular minimum and the weak
+radial factor. In both constructions all finite derivative orders are
+fixed before shrinking the strip.
+
+\paragraph{The quadratic angular factor.}
+Fix a limiting repeated field $\bar c=2a_*>0$,
+$\bar m=-a_*^2$, $\epsilon=\nu=0$, with bounded $\bar B,\bar a$.
+The symbol $a_*$ here is a positive constant, unrelated to $\bar a$.
+On $R=0$ set
+\[
+ v_0=-\varphi-\frac{\bar d}{2b},\qquad
+ \mu_U=-\frac{\bar d^2+4b\bar m}{4b^2},\qquad
+ \Xi=\frac{\bar d(1-2\epsilon\bar B)}{2b}.
+\]
+Dividing the vector field by the positive factor $b$ makes its angular
+restriction exactly $v_0'=\mu_U+v_0^2$, and its normal rate is
+$(\Xi-v_0)/b$. Near the chosen field $\Xi/b$ has a fixed positive
+margin. The line $R=0$ is exactly invariant.
+
+Choose an angular outer width $\varpi>0$. Extend $v_0^2$ outside
+$|v_0|<\varpi$ to a smooth bounded function with first derivative
+$O(\varpi)$, and extend the normal coefficients preserving positive
+margins for $\beta$ and $\beta+R\beta_R$. The extension is made on a
+larger real rectangle than the one used for the original passage.
+Since its scalar derivative is $O(\varpi)$, the flow induction
+\eqref{rw:transitions:slow-variations}, now with $q=1$, gives
+$C(1+t)^Me^{C_N\varpi|t|}$ through order $N+2$, also for the inverse
+flow and parameter derivatives of $\mu_U$. Reserve all products of
+these and the exit-time jets in $C_N$, then choose
+$C_N\varpi<\beta_*/16$, followed by radial width and coefficient
+neighborhood. The angular equation has no small factor $\epsilon$.
+
+Let $\phi_t$ denote the complete scalar flow on $R=0$ and let
+$(v_0(t),R(t))$ be a trajectory of the complete auxiliary field. The
+phase integral
+\[
+ v=\lim_{t\longrightarrow\infty}\phi_{-t}(v_0(t))
+\]
+exists by the inverse-flow construction of Proposition~\ref{rw:phase}:
+the forcing $RO(1)$ gives the majorant
+$C(1+t)^Me^{-(\beta_*-C_N\varpi)t}$. The limit equals $v_0$ on the
+axis and obeys its scalar flow identity; hence $v=v_0+RO_{C^N}(1)$
+is a coordinate. Reusing $R$ for a positive normal coordinate, the original
+field, on the smaller rectangle, is exactly
+\begin{equation}\label{rw:upper:repeated-normal}
+ v'=\mu_U+v^2,
+ \qquad R'=-R\beta_U(v,R),\qquad
+ \beta_U(v,0)=\frac{\Xi-v}{b},\qquad
+ \beta_U,\ \beta_U+R\beta_{U,R}>\beta_*>0.
+\end{equation}
+Shrinking the radial rectangle retains the normal margins. Together
+with the angular variation bound and the fixed transverse exit below,
+these estimates give the hypotheses of
+Proposition~\ref{rw:relative-core} with $q=1$. The small angular width
+provides the required domination in this upper passage.
+
+For a fixed small radial input $R_0>0$ and a fixed positive angular
+exit $v_R<\varpi/2$, restrict $|\mu_U|<v_R^2/2$. The exit speed
+is then at least $v_R^2/2$. The actual outgoing normal value is
+\begin{equation}\label{rw:upper:repeated-output}
+ G(v)=R_0\exp\left[-\int_v^{v_R}
+       \frac{\beta_U(s,0)}{\mu_U+s^2}\,ds\right]e^{j_U(v)}.
+\end{equation}
+Its relative amplitude $j_U$ has the finite mixed bounds of
+Proposition~\ref{rw:relative-core} and
+Lemma~\ref{rw:transitions:moving-rate}, on the stated auxiliary
+domain. The physical domain is the whole-path condition
+\begin{equation}\label{rw:upper:quadratic-passing}
+ \mu_U+s^2>0\quad(v\le s\le v_R),
+ \quad\text{equivalently}\quad
+ \mu_U>0\ \text{or}\
+ [\mu_U\le0\ \text{and}\ v>\sqrt{-\mu_U}],
+ \qquad v<v_R.
+\end{equation}
+A scalar root cannot be crossed in finite time.  The exact phase
+coordinate carries this obstruction to every stable fibre of the
+original field.  A fixed passage from
+$-v_R$ to $v_R$ therefore requires $\mu_U>0$.  The full-interval
+condition is needed even when the slow factor is positive at both
+endpoints.
+
+To apply this preparation to the upper comparison, we next locate the
+entry reached from the finite section, on both sides of its limiting
+threshold.  At the limiting repeated field the affine upper
+system in \eqref{rw:upper:divided-field} has the exact coordinates
+\[
+ V=Y+a_*^{-2},\qquad Z=X+a_*Y-a_*^{-1},\qquad r_0=Z/V,
+\]
+which satisfy $V'=a_*V+Z$, $Z'=a_*Z$, and $r_0'=-r_0^2$.
+For an orbit starting at $(p,0)$, put $P=1/a_*$ and $Z_0=p-P$.
+At a fixed large $V=V_e$ reached at time $T$,
+\[
+ V_e=e^{a_*T}(a_*^{-2}+Z_0T),\qquad
+ \frac{\partial r_{0,e}}{\partial p}
+ =\frac{e^{a_*T}}{V_e}
+    \frac{p}{a_*Z_0T+Z_0+a_*^{-1}}>0.
+\]
+In particular the derivative at $p=P$ is $a_*^2$.
+Choose $v=-r_0$ and normal coordinate $1/V$ at this limiting field.
+Then \eqref{rw:upper:repeated-normal} is exact with
+$\beta_U=a_*-v$. Choose the auxiliary extension in these exact
+limiting coordinates, and extend this choice smoothly in the parameters;
+thus $j_U=0$ there. On each fixed compact finite entry
+interval about $P$ on which the connecting orbit reaches this section
+transversally, persistence and the low-layer estimate above give
+$v_e'(p)<-c<0$ and bounded finite section and coefficient jets.
+The limiting entry is zero at $P$ and negative for $p>P$; such negative
+entries are retained and pass precisely when
+\eqref{rw:upper:quadratic-passing} permits them. By the limiting
+normalization and continuity, $j_U$ tends to zero in the reserved norms
+as the coefficients tend to this limiting field.
+
+\paragraph{The weak radial factor.}
+Fix $\bar c_0>0$, $\bar m=0$, and $\epsilon=\nu=0$.
+On a sufficiently small coefficient neighborhood define the actual
+quantities
+\begin{equation}\label{rw:upper:weak-parameters}
+\begin{split}
+ \Delta&=\sqrt{\bar d^2+4b\bar m},\qquad
+ \varphi_s=\frac{-\bar d-\Delta}{2b},\\
+ \gamma&=\varphi_s+\bar d
+ =-\frac{2(\bar m+\epsilon\bar B\bar d^2)}
+              {\bar d(1-2\epsilon\bar B)+\Delta}.
+\end{split}
+\end{equation}
+The denominator is positive and bounded away from zero. In particular
+the finite-scale weak face is
+$\bar m+\epsilon\bar B\bar d^2=0$; replacing it by $\bar m=0$
+would move the radial root. Reverse the projective time in
+\eqref{rw:upper:projective} and put $y=\varphi-\varphi_s$.
+The exact system is
+\begin{equation}\label{rw:upper:weak-original}
+\begin{split}
+ \dot R&=R(\gamma+y)+\epsilon R^2(\varphi_s+y+\bar c),\\
+ \dot y&=-\Delta y+by^2
+ +R\{1-\epsilon(\varphi_s+y)(\bar a-\bar c-\varphi_s-y)\}.
+\end{split}
+\end{equation}
+Its normal eigenvalue has a fixed negative margin and its slow
+radial derivative is small when $|\gamma|$, the radial width and the
+normal width are small.
+
+We construct the weak graph with the prescribed finite smoothness on
+a common real domain. Extend \eqref{rw:upper:weak-original} smoothly
+outside a slightly larger rectangle, preserving $R=0$, normal
+contraction and the small radial derivative. The time-one graph
+transform has base variation at most $e^{C\varpi}$ and normal
+variation at most $e^{-\Delta_*/2}$ after reducing the rectangle.
+Choose its width so that
+$e^{-\Delta_*/2}e^{(N+2)C\varpi}<1$ and the bound
+$C_N\varpi<\beta_*/16$ holds for all the finite products reserved
+above.
+The mixed graph-transform induction of Proposition~\ref{rw:phase}, with
+this contracting highest-jet multiplier, constructs $y=h(R)$,
+$h(0)=0$, with the reserved mixed bounds on the common auxiliary domain.
+
+The linear graph equation gives
+\[
+ h'(0)=\alpha=
+ \frac{1-\epsilon\varphi_s(\bar a-\bar c-\varphi_s)}{\Delta+\gamma}.
+\]
+The reduced equation is $\dot R=RG(R)$, where
+\begin{equation}\label{rw:upper:weak-G}
+ G(R)=\gamma+h(R)+\epsilon R(\varphi_s+h(R)+\bar c),\qquad
+ G'(0)=\alpha+\epsilon(\varphi_s+\bar c)\longrightarrow1/\bar c_0>0.
+\end{equation}
+The same inverse-flow phase integral just used for the repeated strip,
+now relative to this reduced equation, gives a coordinate
+$\widetilde R$ constant on its strong fibres and equal to $R$ on the
+weak graph. Its normal forcing is divisible by $R$, since $R=0$ is
+invariant in \eqref{rw:upper:weak-original}. Thus
+$\widetilde R=R$ times a positive unit on the smaller rectangle.
+In particular physical $R>0$ corresponds exactly to
+$\widetilde R>0$. The mixed convergence follows from the normal
+margin and the chosen small slow width, as above.
+
+Define
+\[
+ u=G(\widetilde R)-\gamma=\widetilde R\widetilde G(\widetilde R),
+ \qquad \widetilde G(R)=\int_0^1G'(sR)\,ds>c>0.
+\]
+The positive time factor $G'/\widetilde G$ has bounded finite jets and
+is equal to one at $R=0$. Dividing the vector field by this factor,
+and straightening the weak graph, gives exactly
+\begin{equation}\label{rw:upper:weak-normal}
+ \dot u=u(\gamma+u),\qquad \dot Z=-Z\beta(u,Z),\qquad
+ \beta(0,0)=\Delta,\qquad
+ \beta,\ \beta+Z\beta_Z>\beta_*>0.
+\end{equation}
+Only one derivative of $G$ was spent here; it was reserved before the
+graph construction.  The change is regular across $\gamma=0$.
+Its slow derivative $\gamma+2u$ is $O(\varpi)$ on the extended small
+strip, while its normal rate has the stated positive margin. All
+hypotheses of Proposition~\ref{rw:relative-core} are therefore again
+verified for $q=1$.
+
+Fix a positive weak exit $u_R$ and count inputs below
+$u_0<u_R/2$, taking $|\gamma|<u_R/2$. The actual passage domain is
+\begin{equation}\label{rw:upper:weak-passing}
+ \max(0,-\gamma)<u<u_0.
+\end{equation}
+This is precisely positivity of $u(\gamma+u)$ on the entire path to
+$u_R$. At $\gamma<0$ its positive root $-\gamma$ blocks every entry
+on its left. The phase projection and normal contraction give the
+same obstruction for the original two-dimensional field.
+
+The finite outgoing normal value, followed by its regular connector
+to $Y=0$, is the inverse upper map. Choose its positive displacement
+$t$ from the weak intersection $\hat p$ so that $p=\hat p-t(u)$.
+The limiting weak graph is $X+\bar c_0Y=1/\bar c_0$; hence
+$\hat p\to1/\bar c_0$, and its finite continuation is transverse.
+The low-layer equation above bounds all the required section and
+coefficient jets of this continuation. With $f=u(\gamma+u)$, the
+relative normal formula and this connector give
+\begin{equation}\label{rw:upper:weak-rate}
+ t,t'>0,\qquad
+ \frac{t'}t=\frac{N_U}{f},\qquad
+ \frac{t''}{t'}=\frac{A_U}{f},\qquad
+ N_U=\beta(u,0)+f\widetilde j'(u),\qquad
+ A_U=N_U-f'+f\frac{N_U'}{N_U}.
+\end{equation}
+Here $\widetilde j$ includes the logarithm of the positive regular
+connector unit and has the finite bounds from
+Lemma~\ref{rw:transitions:moving-rate}. Since $f$ and $f'$ are
+uniformly small, $N_U,A_U>c>0$ on a sufficiently small input and
+coefficient neighborhood. The absolute output and all its selected
+finite derivatives tend to zero uniformly as these neighborhoods
+shrink: the travel time diverges, and normal decay dominates the
+finite slow variational growth.
+
+\paragraph{Moving inputs and lost exits.}
+The phase maps were constructed on larger domains.  Their bounded
+mixed jets therefore also control their restrictions to moving
+transverse sections by composition.  For a full
+repeated strip,
+$T=\int_{-v_R}^{v_R}(\mu_U+s^2)^{-1}\,ds$ and
+$|\partial_{\mu_U}^jT|\le C_j(1+T)^{2j+1}$.
+For moving entries and the weak factor, apply the fixed-exit calculation
+of Appendix~\ref{rw:app:relative-variations} with $q=1$, the stated
+positive exit speeds and slow exponent $C_N\varpi$. This verifies
+Proposition~\ref{rw:relative-core}; its extensions and
+Corollary~\ref{rw:transitions:relative-continuity} apply in the reserved
+mixed orders. The physical domains
+remain \eqref{rw:upper:quadratic-passing} and
+\eqref{rw:upper:weak-passing}, with the stated regular connections.

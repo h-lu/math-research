@@ -1,0 +1,63 @@
+\phantomsection\label{app:lower-technical-proofs}
+\phantomsection\label{app:lower-model-proof}
+
+\begin{proof}[Proof of Lemma~\ref{p4:model}]
+The partial fractions of $\xi/P_\eps(\xi)$ have residues
+\[
+ a_N=-\frac1{(1+\eps)(1+k\eps)},\quad
+ a_P=-\frac2{1+\eps},\quad
+ a_B=\frac3{1+k\eps},\quad a_N+a_P+a_B=0.
+\]
+The action difference in \eqref{p4:action} is therefore
+\begin{equation}\label{p4:action-difference}
+ a_N\log\frac{1+u}{1-r}
+ +a_P\log\frac{\eps-u}{r+\eps}
+ +a_B\log\frac{k\eps-u}{r+k\eps}.
+\end{equation}
+Put $\eps=h^2$, $u=h^2-dh^3$ in \eqref{p4:action-difference}.
+The coefficient of $\log h$ is exactly
+$3a_P+2a_B=-3h^2/((1+h^2)(1+kh^2))$; all remaining terms extend
+smoothly to $h=0$, with limit $\log((1-r)/(8r))-2\log d$.
+On positive compact $(d,r)$ rectangles the full $C^1_{d,r}$ error is
+$O(h+h^2|\log h|)$. The limiting $d$ derivative $-2/d$ and the
+implicit function theorem give
+\begin{equation}\label{p4:d-error}
+ d_\eps(r)=\frac{\eps-u_\eps(r)}{\eps^{3/2}},\qquad
+ \left\lVert d_\eps-d_0\right\rVert_{C^1(J)}
+ \le C_J(\sqrt\eps+\eps|\log\eps|),\quad
+ d_0(r)=\sqrt{\frac{1-r}{8r}}.
+\end{equation}
+Uniqueness in \eqref{p4:action} identifies this local solution with
+$u_\eps$.
+
+The center terms cancel exactly:
+\begin{equation}\label{p4:center-cancellation}
+ Q_\eps(r)=d_\eps(r)-\frac{\sqrt\eps}{2}d_\eps(r)^2
+               +r^2-\frac{101}{100}.
+\end{equation}
+This and \eqref{p4:d-error} prove \eqref{p4:model-error}.
+
+The values at $r=1/20,1/2,49/50,999/1000$ have signs $+,-,+,-$,
+as follows by evaluating
+\[
+ \frac{1-r}{8r}-\left(\frac{101}{100}-r^2\right)^2
+ =-\frac{10000r^5-20200r^3+11451r-1250}{10000r}.
+\]
+Furthermore
+\[
+ \Phi'(r)=2r-\frac1{4\sqrt2\,r^{3/2}\sqrt{1-r}}.
+\]
+Its zeros are exactly the solutions of $r^5(1-r)=1/128$.
+The left side increases on $(0,5/6)$ and decreases on $(5/6,1)$;
+its maximum is $3125/46656>1/128$.
+Thus $\Phi'$ has exactly two zeros. The alternating signs and Rolle's
+theorem give exactly three roots of $\Phi$, all simple: a nonsimple
+root and the two intervening Rolle points would give a third root
+of $\Phi'$.
+Choose $J$ containing the four test points and choose disjoint
+neighborhoods $U_j$ of the three roots, indexed in increasing $r$ order,
+with opposite endpoint
+signs and $|\Phi'|\ge2\kappa>0$ on their union.
+Reduce $\eps_*$ so that \eqref{p4:model-error} preserves these
+signs and gives $|Q_\eps'|\ge\kappa$ there.
+\end{proof}

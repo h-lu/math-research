@@ -1,0 +1,361 @@
+\subsection{Coordinates defined by the actual passages}
+\label{rw:coordinates}
+
+Coefficient paths must control both the slow factors and their moving
+entries on the original sections. We define the gaps and splittings
+from the actual weak graphs and strong fibres, then obtain common
+inverse boxes at fixed normalization. To retain order $N$ through the
+minimum, Morse coordinate and time unit, reserve $N+4$ reduced-phase
+orders before choosing the larger domains. Connections to $Y=0$ use
+Euler scale derivatives.
+
+We use the following elementary uniform inverse construction repeatedly.
+\begin{lemma}[Common inverse boxes]\label{rw:coordinates:inverse-box}
+Let $F_\epsilon$ be a family of coefficient maps on a fixed real
+neighborhood, with bounded derivatives through a prescribed order,
+uniformly for sufficiently small $\epsilon\ge0$, and suppose
+$F_\epsilon\to F_0$ in the coefficient $C^1$ norm. Suppose its Jacobian
+at a base point and $\epsilon=0$ is invertible. After reducing the
+neighborhood, there are nested fixed product boxes $Q\Subset Q^+$ in
+the new coordinates on which all $F_\epsilon$ have single-valued
+inverses with bounded finite jets. Any additional passive coefficients
+can be included in these boxes. The assertion remains valid with Euler
+scale jets when that is the regularity of $F_\epsilon$.
+\end{lemma}
+\begin{proof}
+Write $A=DF_0$ at the base point. On a small convex source ball arrange
+$\|A^{-1}(DF_\epsilon-A)\|<1/2$, uniformly in the passive parameters
+and scale. The equation $F_\epsilon(x)=y$ is then the contraction
+\[
+ x=x_*+A^{-1}\{y-F_\epsilon(x_*)
+              -[F_\epsilon(x)-F_\epsilon(x_*)-A(x-x_*)]\}.
+\]
+Choose a common target ball whose contractions stay in the source
+ball, and nested product boxes $Q,Q^+$ inside it. The inverse
+Jacobian is bounded by $2\|A^{-1}\|$; differentiating
+$F_\epsilon\circ F_\epsilon^{-1}=\mathrm{id}$ gives all higher
+jets inductively, including passive and Euler derivatives.
+\end{proof}
+
+\begin{proposition}[Actual gap and splitting coordinates]
+\label{rw:center-coordinates}
+On the joint repeated and weak blocks specified below, the actual
+passages admit the following coefficient coordinates on common nested
+boxes, with uniformly bounded selected finite inverse jets:
+\[
+ (\bar B,\delta,\tau,\zeta,\nu),\qquad
+ (\bar B,\bar c,d_s,\varsigma,\nu),
+\]
+respectively. The joint gaps are exactly $\delta-\zeta$ and
+$\delta+\zeta$; their center axis is $\tau=\zeta=\nu=0$.
+The weak splitting is $d_s=P_L-\widehat p$, and its center axis is
+$d_s=\varsigma=\nu=0$. The joint entries can be calibrated on the
+original finite section so that both equal $\Xi-\bar Bp$ on the
+center and have bounded coefficient Lipschitz constants. On the weak
+block the regular horizontal input $\chi(u)$ has bounded coefficient
+jets, while the exact moving eigenvalue $\gamma$ and the composed
+horizontal factor $F_I(\chi(u))$ have the positive center $\bar B$
+derivatives stated below. All these constructions precede
+comparison of coefficient paths or zeros of a displacement.
+\end{proposition}
+\begin{proof}
+\leavevmode\par\smallskip\noindent\textit{The joint repeated block.}
+Fix $g_*>0$ and the limiting coefficients
+\[
+ \bar B=g_*^2,\qquad \bar m=-g_*^2,\qquad
+ \bar a=-2g_*,\qquad \bar c=2g_*,\qquad \nu=\epsilon=0.
+\]
+Write $b=1-\epsilon\bar B$ and keep $\bar B$ and $b$ bounded away
+from zero. The upper gap is the exact quantity already prepared in
+\eqref{rw:upper:repeated-normal}:
+\begin{equation}\label{rw:coordinates:upper-gap}
+ \mu_U=-\frac{(\bar c+\nu)^2+4b\bar m}{4b^2}.
+\end{equation}
+For the lower passage we select the phase within the freedom of the
+construction in Proposition~\ref{rw:phase}. The following calibration
+both specifies its gap and identifies the center input.
+
+On the second center $\bar a=-\bar c$, $\bar m=-\bar B$, $\nu=0$,
+define
+\begin{equation}\label{rw:coordinates:center-quotient}
+ \Xi=\frac{\bar c(1-2\epsilon\bar B)}{2b},\qquad
+ \delta_c=\frac{4\bar Bb-\bar c^2}{4b^2},\qquad
+ V=\frac{\Xi/\bar B-X-\bar cY/(2b)}{Y+1/\bar B}.
+\end{equation}
+Its denominator has a positive margin on each strip under
+consideration. In the notation of the real center construction,
+$V=\bar B\chi+\Xi$; alternatively direct differentiation in
+\eqref{rw:geometry:upper-field} gives
+\begin{equation}\label{rw:coordinates:center-scalar}
+ V_\xi=bY(V^2+\delta_c),\qquad
+ V(X,-\epsilon)=\frac{\bar c/2-\bar BX}{b},\qquad
+ V(p,0)=\Xi-\bar Bp.
+\end{equation}
+These identities hold for positive, zero and negative $\delta_c$.
+
+In the lower strip choose a fixed $0<z_h<1$ and reverse time.
+Division by the positive factor $b(1-z)$ gives
+$\dot V=\epsilon(V^2+\delta_c)$ on the center.
+The normal coordinate $z$ contracts there: its linear rate on $z=0$
+is $(X-\epsilon\bar c)/b$, with a positive margin near
+$X=1/g_*$. In a smaller strip both this rate and the derivative
+of $z$ times its rate remain positive. Extend the equations first
+in these center coordinates, retaining the exact scalar equation and
+normal contraction, and retaining $z=0$ invariance whenever $\nu=0$;
+extend only the off-center defect by cutoffs.
+This is an admissible choice in the graph and phase construction of
+Section~\ref{rw:transitions}. It keeps the exact quotient on the
+center and preserves the factor $\epsilon$ in the slow equation.
+The latter also follows directly: $V_X=O(1)$, $V_z=O(\epsilon)$,
+while the original $X$ velocity contains $\epsilon$.
+
+The resulting actual lower weak equation is
+$\dot w=\epsilon f_L^0(w;\mathbf b,\epsilon)$, with uniformly
+bounded finite jets and $(f_L^0)_{ww}>1$. Its minimum $w_0$ is
+therefore a finite-smooth coefficient function. Set
+\begin{equation}\label{rw:coordinates:lower-gap}
+ \mu_L=f_L^0(w_0),\qquad
+ u=(w-w_0)\left[\int_0^1(1-s)
+    (f_L^0)_{ww}(w_0+s(w-w_0))\,ds\right]^{1/2}.
+\end{equation}
+This is an increasing state coordinate, and $f_L^0=\mu_L+u^2$.
+Dividing by its positive derivative gives exactly
+$\dot u=\epsilon(\mu_L+u^2)$ while preserving the normal margin.
+On the center, $w=V$, $w_0=0$ and $u=V$.
+
+The normalization in \eqref{rw:coordinates:lower-gap} is fixed by the
+preceding time and phase choice. To calculate it, take $\nu=0$.
+The original line $z=0$ is invariant, and on it
+$w=(\bar c/2-\bar BX)/b$. Restriction of the reversed field divided
+by $b(1-z)$ gives, with $\tau=\bar a+\bar c$,
+\begin{equation}\label{rw:coordinates:lower-exact}
+ f_L^0(w)=w^2-\frac{\tau}{b}w
+  +\frac{\bar B(1+\epsilon\bar m)+\bar a\bar c/2+\bar c^2/4}{b^2},
+ \qquad
+ \mu_L=\frac{\bar B(1+\epsilon\bar m)-\bar a^2/4}{b^2}.
+\end{equation}
+Thus $\mu_L$ is the finite-$X$ minimum multiplied by the positive
+unit $\bar B/b^2$; the compact horizontal factor $F_I$ has a
+different normalization. For $\nu\ne0$,
+\eqref{rw:coordinates:lower-gap} continues to use the actual weak
+graph and the chosen phase.
+
+Set
+\begin{equation}\label{rw:coordinates:joint}
+ \delta=\frac{\mu_U+\mu_L}{2},\qquad
+ \zeta=\frac{\mu_U-\mu_L}{2},\qquad
+ \tau=\bar a+\bar c,\qquad \varsigma=\bar B+\bar m.
+\end{equation}
+At $\nu=0$ the exact identity
+\begin{equation}\label{rw:coordinates:zeta-identity}
+ \zeta=-\frac{\bar c\tau}{4b^2}
+          +\frac{\tau^2}{8b^2}-\frac{\varsigma}{2b^2}
+\end{equation}
+follows by subtraction of the two gaps. At $\tau=\varsigma=0$,
+\begin{equation}\label{rw:coordinates:joint-jacobian}
+ \det\frac{\partial(\delta,\tau,\zeta)}
+                 {\partial(\bar c,\tau,\varsigma)}
+       =\frac{\bar c}{4b^4}>c_*>0.
+\end{equation}
+For example, on this axis $\delta_{\bar c}=-\bar c/(2b^2)$ and
+$\zeta_{\varsigma}=-1/(2b^2)$, while
+$\zeta_{\bar c}=0$, which proves the determinant. Continuity of the
+actual phase and minimum derivatives retains a uniform nonzero margin
+for both signs of small $\nu$ and small positive scale.
+
+Consequently $(\bar B,\delta,\tau,\zeta,\nu)$ are coefficient
+coordinates on common boxes as in
+Lemma~\ref{rw:coordinates:inverse-box}. On these boxes
+\begin{equation}\label{rw:coordinates:joint-center-axis}
+ \tau=\zeta=\nu=0
+ \quad\Longleftrightarrow\quad
+ \bar a=-\bar c,\quad\bar m=-\bar B,\quad\nu=0.
+\end{equation}
+Indeed \eqref{rw:coordinates:zeta-identity} first gives
+$\varsigma=0$ when $\tau=\zeta=\nu=0$; the converse follows from
+the gap formulas. The center with prescribed $(\bar B,\delta)$ has
+\begin{equation}\label{rw:coordinates:center-c}
+ \bar c_c=2\sqrt{\bar Bb-b^2\delta}>0.
+\end{equation}
+All these inverse jets have uniform finite bounds on the larger box.
+The two factors are exactly $u^2+\delta-\zeta$ and
+$v^2+\delta+\zeta$. Thus fixed full passages across both minima
+pass exactly when $\delta>|\zeta|$; moving entries use the whole-path tests
+of Section~\ref{rw:transitions}.
+
+\par\smallskip\noindent\textit{Entries on one initial section.}
+The common boxes must also control the entry functions. At a finite
+joint contact fix $p$ in a small interval about $P=1/g_*$ on $Y=0$.
+Continue the outgoing lower branch backwards to $z=z_h$ and the upper
+branch forwards to a fixed positive radial section. Both segments are
+chosen before their slow passages. On the lower segment use $z$ as
+the independent variable; $X$ has a positive margin and $z\ge z_h$,
+so its equation and its finite parameter variations have bounded
+coefficients. The upper segment first uses the low-height estimate
+following \eqref{rw:upper:curvature}, then a compact regular arc.
+Even at the repeated limiting input $p=P$ it reaches the fixed radial
+section in finite affine time. The entry maps and their transverse
+inverses have bounded ordinary $p$, coefficient and Euler scale jets
+on a slightly larger common domain.
+
+Choose the upper auxiliary phase to preserve
+\eqref{rw:coordinates:center-quotient} on the center as well.
+This agrees with its boundary coordinate at $R=0$ and with its exact
+gap \eqref{rw:coordinates:upper-gap}. On the center the positive
+upper time factor is $bY$, and the lower reversed time factor is
+$b(1-z)$. Record their accumulated scalar times on the initial
+segments, denoted $T_U$ and $T_L$. These have bounded selected jets:
+the upper time integral has integrand $bY/(Y+\epsilon)$ times a
+bounded regular factor, and the lower one is taken on a fixed
+$z$-interval. The upper original transit time may contain
+$|\log\epsilon|$, but this scalar time does not.
+
+Let $u_e,v_e$ be the prepared entries at the fixed fast sections.
+Apply the inverse scalar flows for these bounded recorded times to
+define entries $e_L,e_U$ on the original initial section. Off the
+center use the same smooth time integrals and the same complete scalar
+extensions. Finite-time scalar flow and its inverse have bounded jets
+on the larger box. Their roots and their through components are
+invariant, so this change of entry does not alter the whole-path
+passing tests in a smaller contact neighborhood. On the center, the
+exact flow identities in \eqref{rw:coordinates:center-scalar} give
+\begin{equation}\label{rw:coordinates:calibrated-entry}
+ e_L(p)=e_U(p)=U_c(p):=\Xi-\bar Bp.
+\end{equation}
+The bounded regular segments therefore calibrate the entries before
+the weak Dulac passage.
+
+With $\mathbf q=(\bar B,\delta,\tau,\zeta,\nu)$ in the common
+larger box, the chain rule and the inverse bounds just proved give,
+for some fixed $L$,
+\begin{equation}\label{rw:coordinates:entry-lipschitz}
+ |e_i(p;\mathbf q_1)-e_i(p;\mathbf q_2)|
+       \le L|\mathbf q_1-\mathbf q_2|,\qquad i=L,U.
+\end{equation}
+The bound also holds for each lower-order selected input jet when
+one more coefficient derivative is reserved. Since
+$\partial_pU_c=-\bar B$, both entry derivatives have a fixed
+negative margin after reducing the transverse parameter box.
+For $A=|\tau|+|\zeta|+|\nu|$, comparison at fixed
+$(\bar B,\delta)$ yields
+\begin{equation}\label{rw:coordinates:entry-center-error}
+ |e_i(p;\mathbf q)-U_c(p;\bar B,\delta)|\le CA.
+\end{equation}
+The same construction on a separated finite-entry patch uses fixed
+slow sections. At its radial end the common actual input of
+Lemma~\ref{rw:transitions:common-input} supplies the transition jets.
+The comparison paths below use these patchwise coordinate and entry
+bounds to preserve an entire passing interval.
+
+\par\smallskip\noindent\textit{The weak boundary with either sign of $\bar B$.}
+Fix $\bar c_0>0$ and the limiting coefficients
+$\bar B=\bar m=0$, $\bar a=-\bar c=-\bar c_0$.
+Keep the exact $\gamma$ of \eqref{rw:upper:weak-parameters}; it is a
+finite-smooth function on an ordinary coefficient neighborhood open in
+both $\bar B$ and $\bar m$. Let $P_L$ be the actual outgoing lower
+strong intersection with $Y=0$, and let $\widehat p$ be the actual
+upper weak intersection used in \eqref{rw:upper:weak-rate}. Define
+\begin{equation}\label{rw:coordinates:weak}
+ d_s=P_L-\widehat p,\qquad \varsigma=\bar B+\bar m,
+ \qquad\mathbf q_w=(\bar B,\bar c,d_s,\varsigma,\nu).
+\end{equation}
+These are actual section positions, before either one is changed to a
+normalized power coordinate.
+
+Choose the upper auxiliary graph to preserve the affine branch of
+Lemma~\ref{rw:centers:weak-boundary}. In the present notation put
+\begin{equation}\label{rw:coordinates:weak-center-branch}
+ \Delta_b=\sqrt{\bar c^2-4b\bar B},\quad
+ k_s=\frac{-\bar c-\Delta_b}{2b},\quad
+ p_c=\frac{2(1-\epsilon\bar c^2)}
+              {\bar c(1-2\epsilon\bar B)+\Delta_b}.
+\end{equation}
+Thus $p_c=\widehat p_C$ from
+Lemma~\ref{rw:centers:weak-boundary}; its denominator has a positive
+margin through $\bar B=0$. That lemma identifies the invariant line
+$X=p_c+k_sY$ and both of its actual intersections with $Y=0$.
+Subtract this known graph before making the auxiliary extension and
+extend only its off-center defect. The graph transform then retains
+this exact branch on the center for either sign of $\bar B$.
+
+The lower simple-root preparation and the upper weak graph with its
+finite connector supply the coefficient jets. At the zero-scale limiting
+point the lower root solves $1+\bar aP_L+\bar BP_L^2=0$, while
+the affine upper weak line has intersection $\widehat p=1/\bar c$
+independent of $\bar a$. Implicit differentiation therefore gives
+\begin{equation}\label{rw:coordinates:weak-jacobian}
+ \partial_{\bar a}d_s\longrightarrow1/\bar c_0^2>0.
+\end{equation}
+The zero-scale limit holds in the coefficient jets on a fixed small
+block: the only nonregular connector correction is the integrable
+low-layer carrier $\epsilon/(Y+\epsilon)$. Hence this derivative
+retains a fixed positive margin. Together with
+$\partial_{\bar m}\varsigma=1$ and $\partial_{\bar a}\varsigma=0$,
+this verifies the hypotheses of
+Lemma~\ref{rw:coordinates:inverse-box} for the weak coefficient map.
+
+The second center is exactly
+\begin{equation}\label{rw:coordinates:weak-center-axis}
+ d_s=\varsigma=\nu=0.
+\end{equation}
+One direction follows from the invariant branch. Conversely at
+$\varsigma=\nu=0$ the actual center $\bar a=-\bar c$ gives
+$d_s=0$; the nonzero splitting derivative and uniqueness in the
+common inverse box show it is the only such $\bar a$.
+On this center, direct substitution into the actual weak eigenvalue
+in \eqref{rw:upper:weak-parameters} gives
+\begin{equation}\label{rw:coordinates:gamma-center}
+ \gamma_c=\bar Bp_c,\qquad
+ \left.\partial_{\bar B}\gamma_c\right|_{\bar B=0}
+   =\frac{1-\epsilon\bar c^2}{\bar c}>c_*>0.
+\end{equation}
+This is also the eigenvalue of the restricted equation
+\eqref{rw:centers:weak-restricted}. Continuity retains its positive
+derivative margin on a smaller common center block.
+
+Finally we specify the regular connection used together with the
+weak inverse map. Select the outgoing fast section of the reversed
+weak block on the side $\varphi<\varphi_s$, a fixed small distance
+from the weak point. Following the original forward field from this
+section to the incoming horizontal section $\varphi=-1/v_h$ gives
+a compact angular connection; choose $v_h$ small enough. At the
+limiting field its angular velocity is
+$-\varphi(\varphi+\bar c_0)<0$ on this closed arc, with a fixed
+margin, and it retains that margin nearby. Both sections are
+transverse. The radial equation is divisible by $R$, so its transfer
+is $R$ times a positive unit with bounded jets and positive derivative
+at zero. The weak input $u$ is likewise $R$ times a positive unit on
+the first section. At the horizontal end $T=R/(-\varphi)$ and the
+lower phase is a positive regular function of $T$. Their composition
+therefore gives
+\begin{equation}\label{rw:coordinates:weak-connector}
+ x=\chi(u;\mathbf q_w,\epsilon),\qquad
+ \chi(0)=0,\quad \chi_u>c_*>0,
+\end{equation}
+with bounded finite jets and inverse jets on a common signed
+auxiliary input interval. It gives the horizontal entry before the
+slow passage, so its regular inverse remains bounded even when
+$t(u)$ is exponentially small.
+
+Let $H(\mathbf q_w,u)=F_I(\chi(u;\mathbf q_w))$.
+It and $\gamma(\mathbf q_w)$ have bounded coefficient derivatives
+on the whole larger box. On the center, $\nu=0$ and
+\eqref{rw:transitions:lower-factor} gives exactly
+\[
+ F_{I,c}(x)=\bar B+\bar cx+(1-\epsilon\bar B)x^2.
+\]
+Because $\chi_c(0)=0$ for all passive parameters, Hadamard integration
+gives $\partial_{\bar B}\chi_c(u)=O(u)$, with the required input
+jets. Consequently
+\begin{equation}\label{rw:coordinates:horizontal-B-margin}
+ \partial_{\bar B}H_c
+ =1+\bar c\partial_{\bar B}\chi_c-\epsilon\chi_c^2
+       +2b\chi_c\partial_{\bar B}\chi_c
+ =1+O(u+\epsilon)>1/2.
+\end{equation}
+Equations \eqref{rw:coordinates:gamma-center} and
+\eqref{rw:coordinates:horizontal-B-margin}, together with the common
+inverse box and coefficient Lipschitz bounds, will select one weak
+comparison center for the whole input interval, independently of
+closing zeros.
+\end{proof}

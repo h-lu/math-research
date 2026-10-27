@@ -1,0 +1,109 @@
+\subsection{Strong fibres and positive root factors}
+
+Adjacent phase preparations must give the same passing condition on
+their overlap. We identify their strongly contracting root fibres on
+one original transverse section, then divide along the common root
+surface. The resulting positive unit and its inverse have bounded
+jets because the section coordinates are regular.
+
+\begin{proposition}[Compatibility of prepared slow factors]
+\label{rw:phase-compatibility}
+Consider two of the finite-order phase preparations on a common smaller
+original tube and a common initial section. Assume their input derivatives
+have nonzero margins, with compatible orientations, and their positive
+time changes have bounded ratios and inverses. Use the normal domination
+chosen in Section~\ref{rw:transitions} for the prescribed finite order.
+Then the root fibres of the two preparations agree. Near a double root,
+their pulled-back quadratic slow factors differ by a positive unit with
+bounded finite jets and inverse jets. The same conclusion holds after
+removing the common invariant-axis factor at a weak or horizontal cubic
+boundary. The unit estimates use one additional derivative for each
+division performed.
+\end{proposition}
+
+\begin{proof}
+We first identify the root fibre at a positive scale. If $x=r$ is an
+equilibrium of the scalar phase equation, its normal fibre consists of
+orbits approaching that equilibrium at the normal contraction rate.
+Conversely, for an orbit with $x\ne r$, uniqueness for the scalar
+equation and its Lipschitz bound give
+\[
+ |x(t)-r|\ge |x(0)-r|e^{-C\varpi t}.
+\]
+Here $\varpi=\epsilon$ for the lower phase and is the selected small
+angular width for the upper preparation. A regular phase projection is
+Lipschitz in the original state. Such an orbit cannot approach the
+equilibrium at the faster normal rate. Thus the strongly contracting
+orbit set is exactly the root fibre of either preparation. Bounded
+positive time changes preserve the strict separation after the widths
+are chosen to include their bounds. This proves equality of the two
+root fibres in the original tube, within the unextended field. The
+finite-smooth parameter limit gives their identity at zero scale.
+
+Choose the first Morse input $s$ and its gap $\mu$ so that its factor
+is $s^2+\mu$. Pull the second preparation back to that same section:
+\[
+ F_2(s,\mu,\mathbf c)=h(s,\mu,\mathbf c)^2+\eta_2(\mu,\mathbf c).
+\]
+Here $\mathbf c$ denotes the passive coefficients and $\eta_2$ is
+the second slow gap, independent of $s$ and distinct from $\nu$.
+At the common double root $h=\eta_2=0$ and $|h_s|>c>0$.
+Equality of root fibres gives the exact identity
+\begin{equation}\label{rw:centers:root-identity}
+ F_2(s,-s^2,\mathbf c)=0.
+\end{equation}
+Its second derivative at the double root is
+\[
+ (F_2)_{ss}-2(F_2)_\mu=0,\qquad
+ (F_2)_{ss}=2h_s^2.
+\]
+Consequently $(F_2)_\mu=h_s^2>0$ there, with a uniform positive
+margin on a smaller coefficient block. Choose a product box
+$|s|<r$, $|\mu|<2r^2$ inside that block. The segment between
+$-s^2$ and $\mu$ stays in the larger box, and
+\begin{equation}\label{rw:centers:root-division}
+ F_2=(s^2+\mu)U,\qquad
+ U=\int_0^1(F_2)_\mu
+       (s,-s^2+\theta(\mu+s^2),\mathbf c)\,\dd\theta>u_*>0.
+\end{equation}
+Differentiation of this integral gives the finite jets of $U$;
+the positive margin gives those of $U^{-1}$. This also proves the
+comparison on the positive-gap side, where neither factor has a root.
+
+For a weak factor $u(\gamma+u)$, the common invariant axis and the
+regular orientation give a second input $v=u h(u,\gamma,\mathbf c)$,
+where $h>h_*>0$. Its full pulled-back factor is
+$u h(\gamma_2+u h)$, up to a positive time unit. Remove the factor
+$u$ first. The other root gives
+$\gamma_2(-u,\mathbf c)+u h(u,-u,\mathbf c)=0$.
+At $u=\gamma=0$, differentiation shows
+$\partial_\gamma\gamma_2=h(0,0,\mathbf c)$; hence the derivative
+in $\gamma$ of the divided factor is $h(0,0,\mathbf c)^2>0$.
+Integration from $\gamma=-u$ now gives a positive unit times
+$\gamma+u$, as in \eqref{rw:centers:root-division}. A bounded positive
+time unit preserves its sign and finite jets.
+
+At the horizontal cubic boundary, first remove the invariant factor
+$x$. The first remaining factor is the exact $F_I$ of
+\eqref{rw:transitions:lower-factor}, with
+$\partial_{\bar B}F_I=1+O(\epsilon)>1/2$ near the origin.
+It has a unique root surface
+$\bar B=\mathcal B(x,\bar a,\mathbf c,\epsilon)$.
+At the cubic point the two divided factors have positive quadratic
+coefficients, since the state and time orientations are positive.
+At zero scale and $\bar a=0$, the first surface is $\bar B=-x^2$.
+Twice differentiating the second divided factor on this surface gives
+its positive transverse $\bar B$ derivative, exactly as above.
+Continuity preserves that margin for small scale and coefficients.
+Divide each factor in $\bar B$ from the same surface $\mathcal B$;
+the ratio of their two positive integral units proves the assertion.
+All these segments are chosen in one larger coefficient box before
+restricting to actual passing points. A simple root uses the same
+one-variable division in its nondegenerate splitting coordinate.
+\end{proof}
+
+Use the finite-root comparison where the time-change ratio is bounded;
+use the horizontal weak/cubic coordinates when a root escapes to
+infinity. These comparisons identify the slow passing conditions and
+their regular factors. To form a logarithmic derivative ratio, both
+paths must also end in the same original central-height coordinate.

@@ -1,0 +1,136 @@
+\section{Common domains and parameter-dependent coordinates}
+\label{rw:app:domains}
+
+Coefficient division compares a local map with its center value while
+holding a common input fixed. A coefficient-dependent input change
+therefore enters the coefficient derivative. We record this rule,
+then check that phase changes preserve the whole passage and regular
+connections preserve flat outputs. The physical domain is the
+intersection of the scalar whole-path conditions, regular connection
+domains, positive central heights and the chosen collar. The integral
+comparisons use larger signed domains before this physical restriction.
+
+\begin{lemma}[A fixed input under coefficient division]
+\label{rw:app:fixed-input-division}
+Let $b=(b_0,\eta)\in B_0\times\R^k$, and let a parameterized
+input change $x=\phi(s,b)$ be defined on a common product $J\times B$.
+Assume its inverse exists on a slightly larger common interval and both
+maps have bounded derivatives through total order $N+1$.
+Suppose $F(x,b)$ has those bounds on the entire image and
+$F(x,b_0,0)=0$ for every represented center input. Define
+$G(s,b)=F(\phi(s,b),b)$ and suppose
+$(s,b_0,t\eta)$ remains in the common domain for $0\le t\le1$.
+Then the actual divided columns are
+\[
+ G_i(s,b)=\int_0^1\partial_{\eta_i}G(s,b_0,t\eta)\,\dd t,
+ \qquad G=\sum_i\eta_iG_i.
+\]
+They have bounded total order $N$ on $J\times B$. In general these
+columns are not obtained by composing previously divided columns of $F$
+with $\phi(s,b)$.
+\end{lemma}
+\begin{proof}
+Apply the fundamental theorem of calculus to
+$t\mapsto G(s,b_0,t\eta)$ with $s$ fixed. Its value at zero
+vanishes by the center identity on the entire represented interval.
+At each coefficient point the chain rule reads
+\[
+ \partial_{\eta_i}G
+ =F_{\eta_i}(\phi,b)+F_x(\phi,b)\phi_{\eta_i}(s,b).
+\]
+Even though $F_x=0$ at the center, the second term need not vanish
+along the coefficient segment. It must be retained in the divided
+column.
+Repeated chain and product rules through order $N$ use only the
+bounded $N+1$ jets of $F$ and $\phi$ on the stated image. Integration
+proves the bounds, and the prescribed inverse margins make this a
+common coordinate on every open overlap.
+\end{proof}
+
+In Section~\ref{rw:joint-section}, form the separated columns only
+after fixing the actual common input. Two input derivatives of these
+columns use three input and one coefficient derivatives of the
+nonconstant critical logarithm. Their coefficient Lipschitz bounds use
+two of each. Both requirements have total order four and follow from
+the order-five primitive estimate. Counting only derivatives at a fixed
+coefficient would miss the second chain-rule term.
+
+\begin{lemma}[Changing a scalar phase]
+\label{rw:app:scalar-phase}
+Suppose $x'=qg_1(x,b)$ and $y=\Phi(x,b)$ is an increasing regular
+phase change, with positive bounded derivative and inverse derivative,
+on a common entry-to-exit interval. Allow also a time change
+$d\widetilde t/dt=a(x,b)>0$, with bounded positive unit $a$.
+The exact new scalar factor is
+\[
+ g_2(\Phi(x,b),b)=\frac{\Phi_x(x,b)}{a(x,b)}g_1(x,b).
+\]
+The whole-path passing conditions are equivalent in the two phases.
+For a normally contracting equation $Z'=-Z\beta(x,Z,b)$, the
+linear normal action and the nonlinear relative integral are unchanged
+when their time and phase factors are transformed together.
+\end{lemma}
+\begin{proof}
+Differentiate $y=\Phi(x,b)$. Its positive multiplier and increasing
+$\Phi$ preserve positivity on the whole closed entry-to-exit interval;
+corresponding scalar zeros cannot be crossed in finite time. The normal
+rate becomes $\widetilde\beta=\beta/a$, so change of variables gives
+\[
+ \int_{x_e}^{x_R}\frac{\beta(x,0,b)}{qg_1(x,b)}\,\dd x
+ =\int_{\Phi(x_e)}^{\Phi(x_R)}
+       \frac{\widetilde\beta(y,0,b)}{qg_2(y,b)}\,\dd y.
+\]
+The same substitution applies to the relative integral along the
+actual orbit. At a separated lost exit, the normal domination and
+integrable-tail bound of Appendix~\ref{rw:app:relative} justify taking
+the infinite-time limit.
+\end{proof}
+
+The positive phase factors in Section~5 identify the entire passages
+and their contractions.
+For a quadratic factor a nonpositive gap retains only entries above
+the positive root, toward the fixed right exit. For a weak factor
+$u(\gamma+u)$ it retains $u>\max(0,-\gamma)$. For the cubic raw
+factor $xF_I(x)$ one uses the positive component of $F_I$ adjoining
+the fixed exit. Each condition must hold on the whole entry-to-exit
+path; two endpoint values do not determine passage.
+
+\begin{lemma}[Regular maps and flat outputs]
+\label{rw:app:flat-composition}
+Suppose a normally contracting transition has the form
+$G(r,b)=L(b)r e^{j(r,b)}$, with bounded selected mixed derivatives
+of $j$ and of the absolute factor $L$, while derivatives of
+$\log L$ may be unbounded. Let two regular maps fixing zero have
+positive bounded units
+$\Phi_{\rm in}(r,b)=r a(r,b)$ and
+$\Phi_{\rm out}(z,b)=z c(z,b)$. Their composition has the exact form
+\[
+ \Phi_{\rm out}\circ G\circ\Phi_{\rm in}
+       =L a(0,b)c(0,b)r e^{\psi(r,b)},
+\]
+where the selected jets of $\psi$ are bounded on the common domain.
+They extend to a lost passage whenever the relative unit and absolute
+factor have the corresponding extensions. This statement supplies no
+uniform inverse derivative for the composite map.
+\end{lemma}
+\begin{proof}
+The exact relative logarithm is
+\[
+ \psi=\log\frac{a(r,b)}{a(0,b)}+j(ra(r,b),b)
+ +\log\frac{c(Lra(r,b)e^{j(ra(r,b),b)},b)}{c(0,b)}.
+\]
+Every denominator has a fixed positive margin. The mixed derivatives
+use absolute derivatives of $L$, so no factor $L^{-1}$ or coefficient
+derivative of $\log L$ occurs. The chain rule gives the bounds and
+extensions. At $L=0$ the composite and its input derivative vanish,
+so the assertion gives no uniform inverse bound.
+\end{proof}
+
+For the contact and weak-center arguments, a displacement such as
+$\delta\mapsto\delta+3(|\tau|+|\zeta|+|\nu|)$ chooses a center
+with the original coefficient vector held fixed. Apply Taylor's formula
+on that prescribed segment in the larger domain; the absolute values
+are not differentiated. The center identity holds on an open passing
+neighborhood of each retained input, so its passive center-gap
+derivative vanishes. This gives the linear transverse term and the
+quadratic remainder used in those arguments.

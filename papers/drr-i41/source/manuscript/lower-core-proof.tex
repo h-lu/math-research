@@ -1,0 +1,80 @@
+\phantomsection\label{app:lower-core-proof}
+
+\begin{proof}[Proof of Lemma~\ref{p4:core}]
+Use the same lip height $h_\rho=(k\eps^2\rho)^{12}$ on both sides.
+On each outer part put $H=\eta-\xi^2/2$ and use $\log\eta$ as a clock.
+Direct differentiation gives
+\begin{equation}\label{p4:fast-clock}
+ \frac{\dd H}{\dd\log\eta}
+ =-\frac{\rho\xi P_\eps+\xi\eta(\ell_\rho-B_\rho)
+                    -\zeta_\rho\eta^2}
+             {\xi B_\rho+\zeta_\rho\eta}.
+\end{equation}
+For the selected negative $H$ windows,
+$\xi=\pm\sqrt{2(\eta-H)}$ stays a positive distance from zero.
+On their fixed enlarged neighborhoods the denominator in
+\eqref{p4:fast-clock} has the appropriate nonzero sign, while its
+right side and the mixed derivatives needed for a first phase
+variation are $O_\eps(\rho)$. Its clock length is
+$O_\eps(1+|\log\rho|)$.
+Integration and the scalar variational equation therefore give
+\begin{equation}\label{p4:fast-error}
+ |H_{\rm out}-H_{\rm in}|+
+ |\partial_{H_{\rm in}}H_{\rm out}-1|
+ \le C_\eps\rho(1+|\log\rho|).
+\end{equation}
+Applying this estimate up to a first exit from the enlarged windows
+excludes such an exit for small $\rho$.
+
+Starting at a positive lip foot $u$ and integrating outward in
+reverse time gives at $\xi=L$
+$b=-u^2/2+O_\eps(\rho(1+|\log\rho|))$ in $C^1_u$.
+Its derivative is $-u+o(1)$, bounded away from zero.
+Thus it can be inverted on the entire enlarged entry interval.
+The negative lip gives in positive time
+$b=-r^2/2+O_\eps(\rho(1+|\log\rho|))$ in $C^1_r$.
+Near each foot, $P_\eps>0$. Away from its small foot neighborhood,
+the limiting height $(\xi^2-u^2)/2$ or $(\xi^2-r^2)/2$
+has a positive lower bound. This lower bound dominates the bounded
+term $\rho P_\eps$, so $\rho P_\eps+\ell_\rho\eta>0$
+throughout both fast parts. The hits of $\xi=\pm L$ are unique
+and transverse.
+
+Between the lips use $Q=\rho\log(\eta/h_\rho)$. In the region
+$Q\le0$ the exact graph equation is
+\begin{equation}\label{p4:thin}
+ Q_\xi=\frac{\xi B_\rho+\zeta_\rho\eta}
+                 {P_\eps+\ell_\rho\eta/\rho},
+ \qquad \eta=h_\rho e^{Q/\rho}.
+\end{equation}
+The compact traversed $\xi$ interval, with its exit buffer, has
+$P_\eps\ge p_\eps>0$.
+Replace $e^{Q/\rho}$ for $Q>0$ by a bounded smooth function of
+$Q/\rho$ equal to the exponential for $Q\le0$.
+This defines an open scalar ODE domain and changes no solution
+before its first return to the lip.
+For total derivative order at most three in $Q,\xi,A,C$, the
+right side differs from $\xi/P_\eps$ by at most
+\begin{equation}\label{p4:thin-error}
+ C_\eps\{\rho+\rho^{11-j}\},\qquad 0\le j\le3,
+\end{equation}
+where $j$ is the number of $Q$ derivatives. Indeed,
+$h_\rho/\rho=O_\eps(\rho^{11})$, and each $Q$ derivative
+costs one power of $\rho$.
+The scalar integral equation and its first variational equation converge
+on the fixed $\xi$ interval.
+
+The limiting solution starting at $u$ is
+$Q_0(\xi)=\int_u^\xi s/P_\eps(s)\dd s$.
+It is strictly negative before its negative exit $-r$, except at
+the entrance, and $Q_0'(-r)=-r/P_\eps(-r)<0$.
+Uniform signs of $Q_\xi$ near entrance and exit, and a strictly
+negative upper bound for $Q_0$ between them, exclude an early first
+return and persist under \eqref{p4:thin-error}.
+Between two buffered negative exit cuts with opposite limiting signs,
+the implicit function theorem gives a unique first lip hit. The thin
+field and first variations have $O_\eps(\rho)$ error and the exit has
+a fixed inverse bound. Composition with \eqref{p4:fast-error} proves
+\eqref{p4:core-limit}; the denominator signs and $P_\eps>0$ on the
+thin part give $\xi'<0$ everywhere.
+\end{proof}

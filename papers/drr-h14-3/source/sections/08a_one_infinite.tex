@@ -1,0 +1,923 @@
+\subsection{One finite endpoint and one infinite endpoint}
+\label{rw:infinity:one-finite-section}
+
+Label the infinite endpoint by $q\to\infty$ and the finite
+outgoing input by $p\to p_*>0$.
+If this labeling reverses the fixed-field direction, both signs of
+the resulting
+$\ell$ are retained on the same actual positive-central passing set;
+reflection is transferred back by the inverse return germ of Section~2.
+The lower restrictions are those of
+Lemma~\ref{rw:finite:lower-cones}. The upper alternatives are a
+strict real pair with $\bar m<0$, a repeated pair
+$\bar m=-\gamma^2$, $\bar c=2\gamma>0$, or the weak boundary
+$\bar m=0$, $\bar c>0$. In the repeated case $p_*\ge1/\gamma$
+is retained, since the strict barrier does not exclude these larger
+inputs.
+
+At a regular finite lower endpoint, incoming contraction dominates
+any polynomial growth of the upper derivative in the large exit.
+The next lemma gives this polynomial bound through a repeated
+eigenvalue. Lower losses will then require a comparison of the two
+slow rates.
+
+\begin{lemma}[Upper expansion with negative $\bar m$]
+\label{rw:infinity:polynomial-upper}
+On a compact coefficient block with $\bar m<-m_0<0$ and
+$\bar c>c_0>0$, and a compact interval of positive finite inputs,
+every actual upper return with sufficiently large exit $q$ satisfies
+$0<q_p\le C(1+q)^N$. The constants are uniform for small scale
+and either sign of $\nu$, including at zero discriminant.
+\end{lemma}
+\begin{proof}
+Put $Z=Y+\epsilon$, $\theta=\epsilon\bar B$,
+$d=\bar c+\nu$ and
+\[
+ g(Z)=dZ-\epsilon(\bar c+2\nu)+\nu\epsilon^2/Z,
+ \quad U=\frac{Z^{1-\theta}}{1-\theta},\quad
+ W=Z^{-\theta}(X+g(Z)).
+\]
+Divide time by $Z$. Differentiating these coordinates in the original
+upper field gives
+\[
+ U'=W,\qquad W'=-G(U)+f(Z)W,
+\]
+where
+\begin{align*}
+ f(Z)&=(1-2\theta)d+
+ \frac{\epsilon\bar a+2\theta\epsilon(\bar c+2\nu)}Z
+       -\frac{(1+2\theta)\nu\epsilon^2}{Z^2},\\
+ G(U)&=Z^{-\theta-1}Y
+       [1+\epsilon\bar a e_Y-(\bar m+\theta e_Y^2)Y],
+ \qquad e_Y=\bar c+\nu Y/Z.
+\end{align*}
+Since $|f|\le C$ and $G>0$ for $Y>0$, every zero of $W$ is a
+downward crossing. A returning arc therefore has one height maximum.
+For large $Z$, separate the linear part:
+\[
+ \binom{U}{W}'=\mathcal L\binom{U}{W}+\binom0{\mathcal E},\qquad
+ \mathcal L=\begin{pmatrix}0&1\\-k&\tau\end{pmatrix},\quad
+ k=-(1-\theta)(\bar m+\theta d^2)>0,\quad
+ \tau=(1-2\theta)d>0,
+\]
+where $|\mathcal E|\le CZ^{-1}(|U|+|W|)$.
+The eigenvalues of $\mathcal L$ have uniformly positive real parts,
+since $k,\tau>0$ on this compact block. The Lyapunov integral
+\[
+ \mathcal S=\int_0^\infty e^{-\mathcal L^{\mathsf T}t}
+                                  e^{-\mathcal Lt}\,dt
+\]
+gives a positive matrix with uniform bounds for $\mathcal S$ and
+$\mathcal S^{-1}$, also at zero discriminant, and
+$\mathcal L^{\mathsf T}\mathcal S+\mathcal S\mathcal L=I$.
+Choose a fixed large
+$Z_0$. Then
+$\mathcal V=(U,W)^{\mathsf T}\mathcal S(U,W)$ satisfies
+$\mathcal V'\ge c\mathcal V$ on $Z\ge Z_0$.
+
+On each monotone-height portion below $Z_0$,
+\[
+ \left|\frac{d\sqrt{1+W^2}}{dU}\right|
+ =\left|\frac{-G+fW}{\sqrt{1+W^2}}\right|\le C.
+\]
+The positive margin of the initial value
+$W=\epsilon^{-\theta}p$ bounds the outgoing time in a small initial
+strip.
+Away from its bottom, $G$ has a positive margin: whenever positive
+$W$ is small, $W'<-c$, so that such a visit has bounded duration
+and cannot be repeated before the height maximum. Otherwise $W$
+stays away from zero. On the incoming low strip the preceding
+inequality gives $|W|\ge cq-C$, so its time is $O(1/q)$.
+For large $q$ the arc must reach $Z_0$, since the same inequality
+would bound $q$ if it stayed below it. At its first crossing
+$\mathcal V\ge c$, and at its last crossing
+$\mathcal V\le C(1+q^2)$. Exponential growth on the high part and
+the low-part bounds yield $T\le C(1+\log(1+q))$.
+The divergence of the $(U,W)$ equation is $f$. Its section determinant
+formula gives
+\[
+ q_p=\frac pq\exp\int_0^T f\,dt\le C(1+q)^N.
+\]
+The endpoint factor $\epsilon^{-\theta}$ cancels exactly. The
+quadratic estimate uses no inverse eigenvalue difference, which gives
+the required uniformity at the repeated eigenvalue.
+\end{proof}
+
+\begin{lemma}[A coarse count for attracting collar cycles]
+\label{rw:infinity:attracting-count}
+Suppose every periodic orbit in the collar whose ray labels lie
+between two retained label bounds has return multiplier less than
+one. Require the same property for every periodic orbit nested
+between two of them, without assuming isolation beforehand. Then
+there are at most four such cycles, all hyperbolic attracting.
+\end{lemma}
+\begin{proof}
+The family \eqref{rw:family} has at most four affine equilibria.
+For $\ell\ne0$, elimination using
+$x=-y(dy+c)/(1+y)$ gives $yR(y)=0$, where
+\[
+ R(y)=-(1+y)^2+By(dy+c)^2+my(1+y)^2-a(dy+c)(1+y).
+\]
+This has degree at most three and $R(0)=-(1+ac)\ne0$;
+there is no equilibrium on $y=-1$, since $Q(x,-1)=\ell$.
+The elimination divides only by $1+y$, so a zero of $dy+c$
+elsewhere simply gives $x=0$ and is retained. For $\ell=0$, the branches
+$y=-1$ and $x=-cy$ give respectively
+$Bx^2+ax+1+m=0$ and
+$y[(Bc^2+m)y-(1+ac)]=0$. Each has at most two roots, since
+$1+m$ and $1+ac$ have positive margins. The origin lies inside
+every counted cycle, leaving at most three equilibria between them.
+
+Two nested collar cycles bound a compact affine annulus in the collar;
+the connected southern hemisphere lies outside it. If the annulus has
+no equilibrium, the boundary of the inner attracting cycle's basin
+is a nonempty compact invariant subset of its interior, separated from
+both attracting boundary collars. The Poincare--Bendixson theorem
+\cite[Chapter~7]{Teschl2012} gives a periodic orbit on that boundary.
+It cannot attract a neighborhood, since that would make its basin
+boundary point interior to a disjoint basin. Its intermediate ray labels
+contradict the hypothesis. Hence the disjoint annuli between any finite
+ordered selection of cycles each contain an equilibrium. There are at
+most three such equilibria and therefore at most four cycles, even
+without an initial finiteness assumption.
+\end{proof}
+
+\begin{proposition}[A regular finite arc with negative $\bar m$]
+\label{rw:infinity:negative-regular}
+If $\bar m<0$, $\bar c>0$ and $F_+>0$ on $[0,p_*]$, then
+near this one-infinite configuration all counted cycles are simple
+and attracting and there are at most four of them. On each common
+positive-central passing interval the ratio of incoming to outgoing
+central derivatives is less than $1/2$, so $K<0$ and there is at most
+one closing zero on that interval. The coarse bound of four does not
+require connected saturation. The statement holds for either sign of $\ell$.
+\end{proposition}
+\begin{proof}
+Choose a fixed incoming crosscut $R$ before its first root with
+$A_-(R)>A_{\rm out}+3$. Such a choice is possible: the action
+diverges at a first root, and if no root occurs it diverges as
+$R\to\infty$, since $F_-(R)\le C(1+R+R^2)$.
+Lemma~\ref{rw:finite:incoming-contraction} applies on the actual
+common positive-central passing set. Its power
+$[(1+R^2)/(1+q^2)]^{1/(24\epsilon)}$ absorbs the fixed polynomial
+from Lemma~\ref{rw:infinity:polynomial-upper}. The ratio of the
+complete incoming and outgoing central derivatives is therefore
+less than $1/2$. At any periodic closing point this is the return
+multiplier, including one not initially assumed isolated.
+By the ray ordering of Lemma~\ref{rw:geometry:endpoints}, an
+intermediate collar cycle has input in the same finite interval and
+exit above the same large $q$ threshold. Thus every intermediate
+cycle satisfies the multiplier estimate, and
+Lemma~\ref{rw:infinity:attracting-count} gives the bound of four
+across all passing components. On each common passing interval,
+$K<0$ gives the stated one-zero bound directly.
+\end{proof}
+
+\subsection{A strict real upper pair and a finite lower loss}
+
+When the finite lower arc loses its exit, its contraction can compete
+with the upper passage. We compare their logarithmic rates, beginning
+with $\bar m<0$, $\bar c>0$ and $\bar c^2+4\bar m>0$.
+In the projective field
+\eqref{rw:upper:projective} put
+\[
+ b=1-\epsilon\bar B,\quad d=\bar c+\nu,\quad
+ \Delta=\sqrt{d^2+4b\bar m},\quad
+ \gamma_s=\frac{d(1-2\epsilon\bar B)-\Delta}{2b},\quad
+ r_s=\gamma_s/\Delta>0.
+\]
+At $R=0$, $\varphi=(-d-\Delta)/(2b)$ the eigenvalues are
+$-\gamma_s,\Delta$. Its strong intersection is
+$P_s=p_c+O_N(\epsilon(1+|\log\epsilon|))+\nu O_N(1)$,
+and its returning side is $p<P_s$.
+The analytic invariant axes, constructed on a small projective
+rectangle with fixed hyperbolic margins and continued through the
+compact arc and low layer, separate the returning quadrant from the
+adjacent node. Axis normalization and the reciprocal integral give
+the complete radial output
+\[
+ s(t)=k t^{r_s}e^{w_s(t)},\qquad k>c,\qquad
+ |D^i\partial_{\mathbf b}^{\alpha}w_s|\le C_Nt^{\alpha_0}.
+\]
+Here $D=t\partial_t$ and a fixed $\alpha_0>0$ is smaller than
+half the minimum of $1,r_s$ on the chosen block. Integrals of
+$t^{r_s}s^{-r_s}$ and their finite logarithmic derivatives prove
+this bound also when a higher saddle resonance is present; the
+strict exponent reduction absorbs those logarithms. Fix all section
+and coefficient derivative orders needed below before
+choosing the rectangle.
+
+If $\bar B>0$, the incoming half-line is regular whenever the
+finite outgoing lower arc loses positivity, since then $\bar a<0$.
+The horizontal preparation is
+$D_I(s)=K_Is^{h_I/\epsilon}e^{P_I(s)/\epsilon}$,
+$h_I=b/\bar B$, $P_I(0)=0$, with bounded selected jets of $P_I$.
+The bounded amplitude is $P_I$; its quotient by $\epsilon$ need not
+be bounded. Composing with the upper passage gives
+\begin{equation}\label{rw:infinity:strict-rate}
+ J(t)=K_Jt^{h_\infty/\epsilon}e^{\Psi(t)/\epsilon},\quad
+ h_\infty=r_sh_I>c,\qquad
+ \epsilon tJ''/J'=h_\infty-\epsilon+E(t),
+\end{equation}
+where $\Psi=h_Iw_s+P_I(s(t))$ after constants have been removed,
+and
+$E=D\Psi+\epsilon D^2\Psi/(h_\infty+D\Psi)$.
+Its prescribed Euler and coefficient jets are $O(t^{\alpha_0})$.
+The denominator has a positive margin on a fixed smaller section.
+
+\begin{proposition}[Strict real pair with lower loss]
+\label{rw:infinity:strict-lower-loss}
+For $\bar B>0$, a first simple lower root at $p_c$ has local
+closing count three. A double lower root at $p_c$ also has count
+three; a double lower root strictly before $p_c$ has count two.
+The bounds include multiplicity and either sign of $\ell$.
+\end{proposition}
+\begin{proof}
+At a simple root choose its regular power input as
+$u=\delta+t$, where $t>0$ is the upper returning coordinate.
+The exact splitting is the difference of the two strong intersections
+in this coordinate. Write $\lambda_+=h_+/\epsilon$ and
+$g=h_+-h_\infty$. The physical interval has
+$t>0$, $\delta+t>0$, and positive central outputs. The logarithmic
+critical function has the full cleared numerator
+\[
+ M=\delta(h_\infty-\epsilon)-gt+(\delta+t)E(t)
+                       -\epsilon t(\delta+t)R_+(\delta+t),
+ \qquad M=t(\delta+t)K'.
+\]
+Here $R_+$ is the bounded ordinary correction to
+$D_+''/D_+'=(\lambda_+-1)/u+R_+(u)$.
+
+On the zero-scale matching surface, with $p=p_c$, the exponent
+difference is
+\[
+ g_0=\frac{p^2(\bar B+\bar m)}
+ {\bar B(1-\bar Bp^2)(1+\bar mp^2)}.
+\]
+Indeed the lower exponent is $p^2/(1-\bar Bp^2)$ and the
+incoming exponent is $-\bar mp^2/[\bar B(1+\bar mp^2)]$.
+At $\bar m=-\bar B$, $\bar a=-\bar c$, the Jacobian of
+$(\delta_{\rm raw},g)$ in $(\bar a,\bar m)$ tends to
+$p^4/[\bar B(1-\bar Bp^2)^3]>0$. This follows by multiplying
+$\partial_{\bar a}\delta_{\rm raw}=p^2/(1-\bar Bp^2)$ by
+the derivative of $g_0$ along the matching surface.
+The input change multiplies this determinant by a positive unit.
+Thus $(\delta,g,\nu)$ give uniform inverse coefficient boxes.
+The second real center of Proposition~\ref{rw:real-centers}
+lies exactly on $\delta=g=\nu=0$: its actual maps agree up to
+the common strong endpoint, and comparison of their positive leading
+powers forces $\lambda_+=r_sh_I/\epsilon$ there. Conversely the
+nonzero Jacobian makes this the local center axis.
+
+The center identity removes the constant transverse term in the
+critical numerator. Extend the relative coefficients to the larger
+box as in Section~5 and divide there to obtain
+\[
+ M=\delta A(t)-gtB(t)+\nu tQ(t),\quad A,B>c,
+ \quad |A'|+|B'|\le Ct^{\alpha_0-1},
+ \quad |Q|+|tQ'|\le C.
+\]
+For example first set $\delta=0$ and divide $M/t$ in $g,\nu$,
+then integrate its $\delta$ derivative. The constant columns are
+$h_\infty-\epsilon$ and $-1$, and the differentiated remainders
+are the Euler-small terms of \eqref{rw:infinity:strict-rate}.
+Each absolute lower map has a fixed positive action before its
+central output. Its finite derivatives are exponentially small;
+center division and Lemma~\ref{rw:centers:relative-forcing} therefore
+give $|\nu|=o(1)(|\delta|+|g|)$ on a fibre with a closing zero.
+At a zero of $M$ these estimates force
+$\delta g>0$ and $|\delta|\asymp|g|t$; differentiating the
+displayed division then gives sign $M'=-\operatorname{sign}g$.
+All zeros are therefore simple crossings in the same direction, so
+there is at most one. Away from $g_0=0$, the undivided numerator
+gives the same conclusion after a fixed section restriction.
+Since $M$ is a positive multiple of $K'$, two Rolle steps give
+three closing zeros, with multiplicity.
+
+For a double root, retain the complete moving slow input $u(t)$,
+$u'>c>0$, and $f_L=\mu_L+u^2$. Its rate after the regular input
+change has numerator
+$\widehat A=A_L(u)u'+\epsilon f_Lu''/u'>c$.
+The whole-path condition on $f_L$ is imposed. The exact critical
+numerator is
+\[
+ M=f_L(h_\infty-\epsilon+E)-t\widehat A.
+\]
+At a double root at $p_c$, $u(0)$ tends to zero. At a zero,
+$f_L\asymp t$, and differentiation gives
+\[
+ M'=2uu'(h_\infty-\epsilon+E)+f_LE'
+                      -\widehat A-t\widehat A'<0.
+\]
+Indeed $tE'=O(t^{\alpha_0})$, and all other positive-size errors
+are small compared with $\widehat A$. Hence $M$ has at most one
+zero. If the double root is strictly before $p_c$, the limiting
+entry is negative and $f_L(0)$ has a positive margin, so $M>0$
+on a smaller section. Thus the critical numerator has at most one zero
+at contact and none in the separated case, giving the asserted counts. The scalar and
+central-output restrictions are monotone passing conditions, whose
+intersection is one interval.
+\end{proof}
+
+\subsection{Repeated upper roots and signed horizontal parameters}
+
+At $\bar c=2\gamma$, $\bar m=-\gamma^2$ put $P=1/\gamma$.
+Section~\ref{rw:upper-degenerate-preparation} provides the exact
+upper factor $f_U(v)=\mu_U+v^2$, its normally contracting radial
+map, and the finite entry $v_e(p)$ with $v_e'<-c$.
+The limiting entry is zero at $p=P$ and negative for $p>P$.
+Throughout this subsection retain the full test
+\begin{equation}\label{rw:infinity:quadratic-test}
+ \mathcal P(\mu,v):\quad
+ \mu>0\quad\hbox{or}\quad[\mu\le0\hbox{ and }v>\sqrt{-\mu}],
+ \qquad v<v_R.
+\end{equation}
+This tests positivity on the entire interval to the fixed right exit:
+a root between two positive endpoint values still blocks passage.
+For $\bar B>0$, the horizontal power and the regular angular
+connector give the complete incoming rate
+\begin{equation}\label{rw:infinity:repeated-rate}
+ J(v)=K_J\exp\left[-\frac{h_I}{\epsilon}
+         \int_v^{v_R}\frac{\beta_U(s,0)}{f_U(s)}\,ds
+                      +\frac{\Psi(v)}\epsilon\right],\qquad
+ \frac{J''}{J'}=\frac{A_U(v)}{\epsilon f_U(v)}.
+\end{equation}
+Here $h_I=(1-\epsilon\bar B)/\bar B$ and
+\[
+ N=h_I\beta_U+f_U\Psi',\qquad
+ A_U=N-\epsilon f_U'+\epsilon f_UN'/N>c.
+\]
+The relative integral of Section~4, composed with independent normal
+inputs, bounds the prescribed mixed jets of $\Psi$, the regular
+connector terms and the rate coefficients. Any section-independent
+divergent contraction remains in $K_J$. The input-dependent normal
+output enters only through its bounded absolute jets.
+
+\begin{proposition}[Repeated upper root away from the joint center]
+\label{rw:infinity:repeated-lower-loss}
+Suppose $\bar B>0$, the finite lower polynomial loses positivity
+at or before $p_*\ge P$, and
+$(\bar B,\bar a)\ne(\gamma^2,-2\gamma)$.
+The local closing count is at most three, and at most two unless
+a simple lower root lies at $p_*=P$.
+\end{proposition}
+\begin{proof}
+For a simple root at $P$, use its positive power input $t$.
+The upper input $v(t)$ has $v'>c$ and tends to zero at the limiting
+endpoint. Clearing the critical derivative gives
+\[
+ M=tC-f_U(v)H_o,\qquad
+ C=A_U(v)v'+\epsilon f_U(v)v''/v'>c,
+ \quad H_o=h_+-\epsilon+\epsilon tR_+(t)>c.
+\]
+Since $t,v,f_U$ are small, the bounded jets and $H_o'=O(\epsilon)$
+give $M'>c$ on a fixed smaller interval. It has at most one zero.
+If a simple or double lower root lies at $p_*>P$, its rate has
+vanishing denominator while the upper entry factor has a positive
+margin. After multiplying by the lower denominator, the critical
+numerator is strictly negative. If $p_*=P$ and a double lower
+root lies strictly before $P$, the lower entry factor instead has
+a positive margin, and the upper rate dominates with a strictly
+positive numerator. These cases give two closing zeros.
+
+It remains to compare a double lower root $r=1/\sqrt{\bar B}$
+and the repeated upper threshold $P$ when both precede $p_*$.
+The entries then stay a fixed distance beyond their slow minima.
+Subtract the divergent actions, which are constant in $p$, before
+differentiating. The limiting logarithmic rates in this coordinate are
+\[
+ \epsilon\partial_p\log|D_{+,p}|\longrightarrow
+                   -\frac p{\bar B(p-r)^2},\qquad
+ \epsilon\partial_p\log|J_p|\longrightarrow
+                   -\frac p{\bar B(p-P)^2}.
+\]
+For the first, the moving lower rate at its regular entry is
+$-A_+'(p)$. For the second take the exact affine upper field with
+$\bar m=-\gamma^2-\omega^2$. At fixed $p>P$ its return has
+\[
+ T=\pi/\omega-1/[\gamma^2(p-P)]+o(1),\qquad
+ q=(p-P)e^{\gamma T}(1+o(1)).
+\]
+Thus $\partial_p\log q\to p/(p-P)^2$, and the incoming
+horizontal rate multiplies it by $-1/\bar B$.
+To pass from the affine calculation to the original maps, use the
+positive margins of the reduced denominators on these entry intervals
+and the common integrable majorants for the differentiated relative
+normal integrals from Section~4. At the repeated limiting field
+its exact $1/V$ normal coordinate makes the upper relative logarithm
+zero, as established in Section~\ref{rw:upper-degenerate-preparation}.
+The connector's nonconstant terms
+are evaluated at a normal output tending to zero. These facts prove
+convergence in the finitely many ordinary input jets used here,
+without differentiating the divergent constant action.
+Subtracting the two displayed rates gives
+\[
+ \frac{p(r-P)(2p-r-P)}
+      {\bar B(p-r)^2(p-P)^2},
+\]
+whose sign is nonzero. Equality $r=P$ is exactly the excluded joint
+center. The strict rate difference gives two closing zeros.
+All the counts are on the intersection of the whole-path conditions
+and the positive central-output interval, and include multiplicity.
+\end{proof}
+
+When $r=P$, neither rate dominates. Both signed gaps must then be
+retained in the joint-center chart of Section~\ref{rw:joint-section}.
+\label{rw:infinity:signed-horizontal}
+We next cover $\bar B=0$, where replacing the horizontal factor
+by a power with exponent $1/\bar B$ would not be legitimate.
+Here a finite lower loss is simple and $\bar a<0$.
+The exact phase of Proposition~\ref{rw:phase} has $F_I'>c$ near
+zero. Set $u=F_I(x)-\bar B$ and divide time by the positive unit
+$xF_I'(x)/u$. This produces
+\[
+ \dot u=\epsilon u(\bar B+u),\qquad
+ \dot Z=-Z\widetilde\beta(u,Z),\qquad
+ \widetilde\beta,\ \widetilde\beta+Z\widetilde\beta_Z>c.
+\]
+The unit extends through $u=0$ and both signs of $\bar B$.
+The exact normal input supplies
+\[
+ \frac{D_I''}{D_I'}=\frac{A_I(u)}{\epsilon u(\bar B+u)},
+ \qquad A_I>c,\qquad u>\max(0,-\bar B).
+\]
+The moving-entry formula bounds the ordinary and mixed jets of
+$A_I$. This exact quadratic factor remains valid through
+$\bar B=0$ without dividing by $\bar B$.
+
+For a strict upper pair write the input as $u=u(t)$ and put
+$\mathcal R=tu'/u=r_s+O_D(t^{\alpha_0})$,
+$tu''/u'=r_s-1+E_1$, $E_1=O_D(t^{\alpha_0})$.
+With the simple lower input $\delta+t$, set
+\[
+ Q=A_I(u)\mathcal R+\epsilon(\bar B+u)(r_s-1+E_1)>c,
+ \quad H_o=h_+-\epsilon+\epsilon(\delta+t)R_+(\delta+t)>c.
+\]
+The full numerator is
+\[
+ M=(\delta+t)Q-t(\bar B+u)H_o.
+\]
+Its clearing factor is positive on
+$t>0$, $\delta+t>0$, $u>\max(0,-\bar B)$.
+At a zero $(\delta+t)/t\asymp\bar B+u$ is small. Since
+$|tQ'|\le Ct^{\alpha_0}$, $tu'=u\mathcal R$ and
+$H_o'=O(\epsilon)$, differentiation gives $M'=Q+o(1)>c/2$
+there. The same-direction crossing argument gives at most one numerator
+zero and three closing zeros, for both signs of nearby $\bar B$.
+
+For a repeated upper pair let $u=u(v)$ include its regular angular
+connector. Write
+\[
+ f(v)=\mu_U+v^2,\quad S(v)=\bar B+u(v),\quad
+ L(v)=fu_v/u>c.
+\]
+The input-independent normal contraction is separated first.
+Its relative formula and the bounded absolute jets of $u$ show that
+$L$ and its needed ordinary jets are bounded. The exact incoming rate is
+\[
+ \mathcal B:=\epsilon fS\frac{J_{vv}}{J_v}
+ =A_I(u)L+\epsilon S(L-f'+fL'/L)>c.
+\]
+In a positive finite lower power input $t$, the regular entry $v(t)$
+has $v'>c$. Set
+$C=\mathcal B(v)v'+\epsilon f(v)S(v)v''/v'$ and
+$H_o=h_+-\epsilon+\epsilon tR_+(t)$. The numerator and derivative are
+\[
+ M=tC-f(v)S(v)H_o,\qquad
+ M'=C+tC'-[2vv'S+uLv']H_o-fS H_o'.
+\]
+Use $fu_v=uL$ before estimating to cancel the apparent singularity
+in the composition derivative. Fix the finite upper entry neighborhood
+and its bounded jets first, then shrink $t$, $|\bar B|$ and the
+normal output $u$. The result is $M'>c$ on the entire passing
+interval, hence three closing zeros. Both
+\eqref{rw:infinity:quadratic-test} and $u>\max(0,-\bar B)$ remain
+imposed. This also covers finite entries strictly beyond $P$.
+
+\subsection{The inverse upper map at the primary weak boundary}
+\label{rw:infinity:weak-section}
+
+At the primary weak boundary, the upper return is best described by
+its inverse: the absolute output becomes flat, while the scalar factor
+still records the passing side. Fix $\bar m=0$, $\bar c=c_0>0$
+and $P=1/c_0$.
+Use the actual weak parameter and normal form of
+\eqref{rw:upper:weak-parameters} and
+Section~\ref{rw:upper-degenerate-preparation}; the actual weak face is
+$\bar m+\epsilon\bar B(\bar c+\nu)^2=0$.
+In reversed projective time the exact scalar factor is
+$f(u)=u(\gamma+u)$ and the fast direction contracts uniformly.
+The complete inverse upper displacement, including its regular finite
+connection, is
+\begin{equation}\label{rw:infinity:weak-upper}
+ p=\widehat p-t(u),\qquad
+ \frac{t'}t=\frac Nf,\quad \frac{t''}{t'}=\frac{A_U}f,
+ \qquad N,A_U>c,\quad u>\max(0,-\gamma).
+\end{equation}
+Here $N=\beta_U+f\widetilde j'$, $A_U=N-f'+fN'/N$.
+Their required ordinary and mixed jets are bounded. The absolute output
+$t$ and its selected derivatives tend uniformly to zero when the
+input and $\gamma$ neighborhoods shrink. At a lost exit, extend the
+absolute output by zero and the relative coefficients by the complete auxiliary flow. Coefficient division uses
+these extensions rather than an inverse of the flat map.
+
+The incoming horizontal entry $x=\chi(u)$ is the regular connector
+of Proposition~\ref{rw:center-coordinates}. Thus
+\[
+ \chi(0)=0,\quad\chi'>c,\quad
+ L=u\chi'/\chi,\quad L(0)=1,\quad R_\chi=\chi''/\chi'
+\]
+have bounded required jets. Keep the exact raw factor of
+Proposition~\ref{rw:phase}, with no division by $\bar B$ or
+$\bar a$. Its complete rate is
+\begin{equation}\label{rw:infinity:raw-horizontal}
+ \frac{D_I''(x)}{D_I'(x)}
+       =\frac{A_I(x)}{\epsilon xF_I(x)},\qquad
+ A_I=1+O_{C^N}(\epsilon),\quad A_I(0)=1-2\epsilon\bar B.
+\end{equation}
+The whole condition is $F_I(s)>0$ for $\chi(u)\le s\le x_R$.
+Since $F_I''>1$ and $F_I(x_R)>c$, its retained side is the interval
+to the right of its last root, or the whole input interval if there
+is no root. This remains valid at the cubic boundary
+$\bar B=\bar a=0$, where checking the entry value alone would
+not exclude a later root.
+
+If an incoming finite double root is separated from the horizontal
+input, put fixed sections on both sides of it. Its whole-passage
+condition is a positive minimum, independent of $u$. The relative
+normal integral separates its possibly divergent contraction into
+an input-independent linear factor. Estimate the horizontal output first
+and then compose the bounded relative unit. This preserves \eqref{rw:infinity:raw-horizontal}
+and its required ordinary input jets. The divergent constant is not
+differentiated in coefficients. If the whole-passage condition fails,
+the corresponding input set is empty.
+
+\begin{proposition}[A regular outgoing arc at the weak boundary]
+\label{rw:infinity:weak-regular}
+At $\bar m=0$, $\bar c>0$, $p_*=P$, $q_*=\infty$, a regular
+finite outgoing lower arc has local closing count three. An incoming
+finite double root, either sign of $\ell$, and the reflected case
+are included.
+\end{proposition}
+\begin{proof}
+The regular outgoing deviation $D_o(p)$ has
+$R_o=-\epsilon D_o''/D_o'>c$ and bounded needed ordinary input
+jets, by Lemma~\ref{rw:finite:regular-lower}. Put
+$I(u)=D_o(\widehat p-t(u))$ and $J(u)=D_I(\chi(u))$.
+Both have positive derivatives. For $K=\epsilon\log(J'/I')$,
+direct differentiation gives the exact numerator
+\begin{equation}\label{rw:infinity:weak-regular-numerator}
+\begin{aligned}
+ M&=uF_I(\chi)(\gamma+u)K'\\
+  &=A_I(\chi)L(\gamma+u)-\epsilon F_I(\chi)A_U
+    +\epsilon uF_I(\chi)(\gamma+u)R_\chi
+    -F_I(\chi)R_o(\widehat p-t)Nt.
+\end{aligned}
+\end{equation}
+Apply Lemma~\ref{rw:weak:rate-calculus} with
+$h=F_I(\chi)$, $A=A_I L$, $R=F_I(\chi)R_\chi$ and
+$E=F_I(\chi)R_oN$. Their required $C^1$ bounds follow from the
+prepared rates and regular outgoing arc; $A=1+O(u+\epsilon)$ and
+$\|t\|_{C^1}\to0$. It gives $M'>1/2$ and three closing zeros by
+Lemma~\ref{rw:zero-calculus}, on the intersection of the whole upper,
+horizontal and positive-central passing conditions. A separated double
+passage imposes its additional coefficient condition. All nearby
+counted cycles with $q\to\infty$ reach this horizontal crosscut
+with $u\to0$ and follow the unique inverse upper transition.
+\end{proof}
+
+\subsection{Finite lower loss at the weak boundary}
+
+The weak upper output may also meet a lower loss. First keep
+$\bar B_0>0$. The necessary outgoing alternatives are
+a first simple root at $P$, with
+$\bar a=-\bar c-\bar B/\bar c$ and $0<\bar B<\bar c^2$;
+a double root at $P$, with $\bar a=-2\bar c$,
+$\bar B=\bar c^2$; or a double root strictly before $P$.
+Here $\bar a<0$, so the incoming half-line is regular.
+For a root at $P$, choose a decreasing lower slow input $v_L(p)$,
+put $\delta_L=v_L(\widehat p)$ and replace $t$ by
+$v_L(\widehat p-t)-v_L(\widehat p)$. This is a positive regular
+change of the absolute upper displacement; its rates still have the
+form \eqref{rw:infinity:weak-upper} with bounded positive $N,A_U$.
+The lower rate is
+\[
+ \frac{D_L''(v)}{D_L'(v)}=\frac{A_L(v)}{\epsilon f_L(v)},\qquad
+ f_L(v)=v\quad\hbox{or}\quad f_L(v)=\mu_L+v^2,
+ \qquad A_L>c.
+\]
+For a double root impose positivity of $f_L$ throughout its entire
+slow path. Both inputs now have positive derivatives:
+$I(u)=D_L(\delta_L+t(u))$ and $J(u)=D_I(\chi(u))$.
+
+Their critical numerator is
+\begin{equation}\label{rw:infinity:weak-loss-numerator}
+\begin{aligned}
+ M&=f_L(\delta_L+t)C-Dt,\\
+ C&=A_I(\chi)L(\gamma+u)-\epsilon F_I(\chi)A_U
+             +\epsilon uF_I(\chi)(\gamma+u)R_\chi,\\
+ D&=F_I(\chi)A_L(\delta_L+t)N.
+\end{aligned}
+\end{equation}
+Its clearing factor is $uF_I(\chi)(\gamma+u)f_L(\delta_L+t)>0$.
+The upper inverse curvature contributes $-\epsilon F_I A_U$ to
+$C$; it remains in all subsequent rate comparisons.
+
+\begin{proposition}[Weak boundary with positive $\bar B$ and lower loss]
+\label{rw:infinity:weak-loss}
+At a root at $P$ the unanchored local bounds are $Z(K')\le2$,
+$Z(K)\le3$ and $Z(F)\le4$, including multiplicity.
+A double root strictly before $P$ has closing count three.
+\end{proposition}
+\begin{proof}
+The coefficients in \eqref{rw:infinity:weak-loss-numerator} have
+bounded $C^2$ input norms, $C'>1/2$, and arbitrarily small $|C|$.
+Moreover $D>c$ because $\bar B_0>0$.
+Write $f_L(\delta_L+t)=A+rt$, with
+$(A,r)=(\delta_L,1)$ or
+$(\mu_L+\delta_L^2,2\delta_L+t)$, and put $E=D-rC>c$.
+Then $M=AC-tE$. At any zero the original expression
+$f_L C=Dt$ forces $C>0$, hence also $A>0$.
+For $A>0$ define $R_0=C/(tE)$ on the entire passing interval.
+Its derivative has sign opposite to
+\[
+ V=NCE+f(CE'-EC'),\qquad
+ R_0'=-V/(ftE^2).
+\]
+One differentiation gives
+\[
+ V'=NC'E+N'CE+NCE'+f'(CE'-EC')+f(CE''-EC'')>0.
+\]
+The first term has a positive margin and the others are
+$O(|C|+|f'|+|f|)$, so $V'>c$ on a common neighborhood.
+The argument uses only small $C$, $C'>c$, $E>c$ and their bounded
+$C^2$ norms; this is the quotient estimate used again at the weak center.
+Every critical point of $C/(tE)$ is a strict maximum, since
+$R_0''=-V'/(ftE^2)<0$ there. Its strict superlevel sets are intervals
+and each level has at most two intersections with multiplicity.
+At $C\le0$, $V=C(NE+fE')-fEC'<0$, so every nonpositive-level
+crossing is strictly increasing. In particular the level $1/A$
+proves the first count.
+If the double root precedes $P$, use fixed sections around it and
+separate its input-independent contraction. The outgoing entry rate
+is regular with positive $R_o$; the proof of
+Proposition~\ref{rw:infinity:weak-regular} then applies unchanged.
+\end{proof}
+
+\subsection{Center division through \texorpdfstring{$\bar B=\bar m=0$}{B=m=0}}
+\label{rw:infinity:weak-center-section}
+
+At $\bar B=\bar m=0$, the preceding positive lower bound for $D$
+is lost. Near the remaining threshold $\bar a=-\bar c<0$, divide
+by the center generators in the weak coefficient box of
+Proposition~\ref{rw:center-coordinates}:
+\[
+ (\bar B,\bar c,d_s,\varsigma,\nu),\qquad
+ d_s=P_L-\widehat p,\quad\varsigma=\bar B+\bar m.
+\]
+It includes both signs of $\bar B$ and $\bar m$ and has center
+axis $d_s=\varsigma=\nu=0$. The lower coordinate is the unnormalized
+deficit $v=P_L-p$. Its simple-root map has the form
+\[
+ D_L(v)=K_Lv^\lambda e^{\Psi_L(v)/\epsilon},\qquad
+ \frac{D_L''}{D_L'}=\frac{A_L(v)}{\epsilon v},\quad
+ A_L(0)=\epsilon(\lambda-1),\quad\epsilon\lambda>c.
+\]
+The scaled unit $\Psi_L$ has bounded mixed jets, since a regular
+power coordinate $v k(v)$ adds $\epsilon\lambda\log k(v)$.
+The unscaled logarithm need not be bounded. Since $\bar a<0$
+has a fixed margin, the raw horizontal factor is increasing here.
+
+The actual interval is precisely
+\begin{equation}\label{rw:infinity:weak-center-domain}
+ u>0,\qquad\gamma+u>0,\qquad F_I(\chi(u))>0,\qquad d_s+t(u)>0,
+\end{equation}
+together with positive central outputs. All four displayed conditions
+are one-sided monotone restrictions. Put $v=d_s+t(u)$ and reuse $C,D$
+from \eqref{rw:infinity:weak-loss-numerator}, with $f_L(v)=v$.
+The exact numerator is
+\begin{equation}\label{rw:infinity:weak-center-numerator}
+ M=d_s C-tE,\qquad E=D-C,\qquad
+ M=uF_I(\chi)(\gamma+u)(d_s+t)K'.
+\end{equation}
+We have $C'=1+O(u+|\gamma|+\epsilon)$ and a small bounded $C$.
+The following center division replaces the missing positive lower
+bound for $D$ across $\bar B=0$.
+
+\begin{proposition}[The weak-center local bound]
+\label{rw:infinity:weak-center}
+On a common neighborhood of this threshold, every noncenter fibre
+has at most four isolated closing zeros, counting multiplicity,
+on its actual passing interval. On a fibre with a closing zero,
+\begin{equation}\label{rw:infinity:weak-relative-forcing}
+ |\nu|\le\eta(\epsilon)(|d_s|+|\varsigma|),\qquad\eta(\epsilon)\to0.
+\end{equation}
+If the two generators vanish, the field is a center and contributes
+no isolated zero.
+\end{proposition}
+\begin{proof}
+Reserve sufficient primitive orders for $C_u^2C_{\mathbf b}^2$
+of the multiplied rates, including the two input derivatives spent
+in each logarithmic derivative. For example total order ten in the
+relative maps and connections suffices. The lower large power, on
+a fixed small deficit interval, and the horizontal normal contraction
+followed by the fixed central core give
+\[
+ \|D_L\|_{C_v^4C_{\mathbf b}^2}
+       +\|D_I\|_{C_x^4C_{\mathbf b}^2}\le Ce^{-c/\epsilon}
+\]
+after reducing $c$ to absorb the finite inverse-scale powers.
+For the first term choose the deficit radius so its logarithm
+dominates the bounded scaled amplitude. For the second keep a fixed
+positive-time final segment of the horizontal/core passage. Its
+normal contraction supplies a positive action independent of all
+weak gaps. Finite parameter variations are bounded by the normally
+dominated relative construction; the same exponential absorbs their
+polynomial losses. Both absolute maps have the zero extensions of
+Section~4. Their rate coefficients have bounded higher mixed
+extensions on the larger auxiliary coefficient domain.
+
+For $A=|d_s|+|\varsigma|+|\nu|$, Proposition~\ref{rw:domains:weak}
+supplies the single real center
+$(\bar B+K_*A,\bar c,0,0,0)$ through every original passing input.
+Its complete deviations agree there, and therefore $E=0$.
+Comparison of the absolute maps on that common domain yields
+$|I-J|\le CAe^{-c/\epsilon}$. With the fixed central gap
+$\rho\nu H$, $H>h_*$, Lemma~\ref{rw:centers:relative-forcing}
+proves \eqref{rw:infinity:weak-relative-forcing}.
+
+The same center supplies the rate identity needed for division.
+Each point of the original interval lies in a strictly passing open
+center neighborhood, so both $E$ and its passive $\bar B$
+derivative vanish there. Taylor expansion gives
+\[
+ E=d_s E_d^c+\varsigma E_\varsigma^c+\nu E_\nu^c+R,\qquad
+ \|R\|_{C_u^2}\le CA^2.
+\]
+For a fixed nonzero transverse vector $g=(d_s,\varsigma,\nu)$
+set $e_i=E_i^c+g_iR/|g|^2$.
+These provide an exact division $E=d_s e_d+\varsigma e_\varsigma+\nu e_\nu$
+with bounded $C_u^2$ norms and error $O_{C_u^2}(A)$ from the center
+columns. Only the fixed-fibre division is used; smooth dependence of
+this choice at $g=0$ is unnecessary.
+
+To determine the sign of the $\varsigma$ column, use the exact
+endpoint identity. At $u=t=d_s=0$, the actual coefficients satisfy
+\[
+ N(0)=\Delta,\quad A_U(0)=\Delta-\gamma,\quad
+ F_I(0)=\bar B,\quad A_I(0)=1-2\epsilon\bar B,
+\]
+so
+\begin{equation}\label{rw:infinity:weak-endpoint-E}
+ E(0)=\epsilon\bar B\lambda\Delta-(1-\epsilon\bar B)\gamma.
+\end{equation}
+At $\bar B=0$ this is $-\gamma$ for every $d_s$.
+Since $\bar m=\varsigma-\bar B$, at the zero center
+$\partial_\varsigma E(0)=1/\bar c>0$ and
+$\partial_{d_s}E(0)=0$, at each small positive scale.
+The bounded mixed extension then gives $e_\varsigma>c>0$
+on a fixed smaller domain.
+
+Absorb the $d_s$ column into $\overline C=C-te_d$.
+It is small, bounded in $C^2$, and $\overline C'>1/2$.
+The numerator becomes
+\[
+ M=d_s\overline C-t(\varsigma e_\varsigma+\nu e_\nu).
+\]
+On a fibre with a closing zero put $I_0=|d_s|+|\varsigma|$.
+If $|\varsigma|\ge\sqrt\eta I_0$, then
+$e=e_\varsigma+(\nu/\varsigma)e_\nu>c/2$.
+For $d_s=0$ there is no numerator zero. Otherwise apply the quotient
+calculation of
+Proposition~\ref{rw:infinity:weak-loss} with
+$(C,E)=(\overline C,e)$. It makes
+$R_0=\overline C/(te)$ unimodal and gives at most two intersections
+with the level $\varsigma/d_s$. Its hypotheses hold because
+$\overline C$ is small, $\overline C'>1/2$, $e>c/2$ and both
+have the required bounded $C^2$ norms.
+In the complementary case $|d_s|\ge(1-\sqrt\eta)I_0>0$, and
+\[
+ M/d_s=\overline C-t[(\varsigma/d_s)e_\varsigma
+                                      +(\nu/d_s)e_\nu]
+\]
+is strictly increasing. Hence $M$ has at most two zeros in either
+case. Its positive multiplier and two Rolle steps give four closing
+zeros. The auxiliary extensions enter only the coefficient estimates.
+The zeros counted by Rolle's theorem lie in
+\eqref{rw:infinity:weak-center-domain}.
+\end{proof}
+
+\begin{lemma}[Weak-chart entrance data]
+\label{rw:infinity:weak-entry-data}
+The weak charts above supply the following data independently of any
+preceding zero count. Outward motion is increasing $p$ and decreasing
+$u$, and $\operatorname{sign}K_p=-\operatorname{sign}M$.
+In the positive-$\bar B$ lower-loss chart, a numerator zero requires
+$A>0$ and $C>0$, and the strict superlevel sets of $C/(tE)$ are
+intervals. The limiting regular critical function is positive on
+its whole regular interval; this gives a positive actual margin on
+any retained compact regular overlap.
+
+In the weak-center chart, on each noncenter fixed fibre satisfying
+\eqref{rw:infinity:weak-relative-forcing}, on the same actual passing
+interval, the coefficient division in
+Proposition~\ref{rw:infinity:weak-center} gives
+\[
+ M=d_s\overline C-t(\varsigma e_\varsigma+\nu e_\nu),
+ \qquad \overline C=C-te_d,\qquad
+ e_\varsigma>c>0,\quad\overline C'>1/2.
+\]
+The divided coefficients have bounded $C_u^2$ norms and
+$\overline C$ is small on the same common neighborhood; the division
+is chosen on each fixed nonzero transverse vector.
+Put $I_0=|d_s|+|\varsigma|$. If
+$|\varsigma|<\sqrt\eta I_0$, then $d_s\ne0$ and $M/d_s$ is
+strictly increasing. Otherwise $\varsigma\ne0$ and
+$e=e_\varsigma+(\nu/\varsigma)e_\nu>c/2$.
+For $d_s\ne0$ in this alternative, $R_0=\overline C/(te)$
+increases and then decreases, either portion possibly absent.
+Its strict superlevel sets are intervals, and every nonpositive-level
+crossing is strictly increasing. Each level has at most two
+intersections, counted with multiplicity; in particular $Z(M)\le2$.
+The identity
+\[
+ M=d_s t e(R_0-\varsigma/d_s)
+\]
+records which of those superlevel sets contains an entrance with a
+prescribed sign of $M/d_s$. The norms of $(d_s,\varsigma)$ and
+$(\tau,\sigma_1)$, $\sigma_1=\bar c(\bar B+\bar m)$, are
+comparable under the relative forcing condition. These facts will
+be used to anchor the terminal interval in Section~12.
+\end{lemma}
+\begin{proof}
+The first statement follows from $p=\widehat p-t(u)$, $t'>0$,
+and the positive multipliers defining $M$.
+The quotient calculation in Proposition~\ref{rw:infinity:weak-loss}
+gives the superlevel, multiplicity and nonpositive-level assertions
+for both $(C,E)$ and $(\overline C,e)$.
+Norm comparison is \eqref{rw:centers:single-ideal-comparison},
+with its $|\nu|$ term absorbed using
+\eqref{rw:infinity:weak-relative-forcing}.
+
+For the remaining regular sign at $\bar B>0$, the threshold
+coefficients have $\tau<0$ and $\sigma_1=\bar c\bar B>0$.
+At $\bar m=0$ the exact limiting upper return is parametrized by
+\[
+ p=P-\frac{T}{e^{\bar cT}-1},\qquad q=T-p.
+\]
+For large $T$, $A_-(q)=O(\log T)$. At a simple outgoing root
+$A_+(p)\sim\bar cT/(\bar c^2-\bar B)$; at a double root
+$A_+(p)\sim e^{\bar cT}/(\bar c^3T)$.
+These follow by integrating the respective simple or double pole
+of $p/F_+(p)$ and inserting $P-p\sim Te^{-\bar cT}$.
+Thus $K^0=A_+(p)-A_-(q)>0$ near $P$. It is positive near zero
+as well, by \eqref{rw:finite:small-columns} and $\tau<0$.
+Lemma~\ref{rw:regular-columns} allows at most one simple zero,
+so there is none between these two ends. The finite-scale regular
+convergence proves the positive margin on each fixed compact overlap.
+This is the entry sign used in Section~12 to count the regular and
+weak parts together; their separate local bounds are not added.
+\end{proof}
+
+\begin{proposition}[Local exhaustion for one infinite endpoint]
+\label{rw:infinity:one-infinite}
+Every necessary limiting configuration with exactly one finite and one
+infinite ray endpoint, except the joint center reserved for
+Section~\ref{rw:joint-section}, has a neighborhood with a common
+small-scale bound of four isolated counted cycles, including multiplicity.
+The neighborhoods are open in the original normalized coefficients
+and include their signed slow gaps and both line-breaking signs.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{rw:finite:upper-return} and its strict barrier give the
+three upper alternatives stated above. For $\bar m<0$, apply
+Proposition~\ref{rw:infinity:negative-regular} to a regular finite
+lower arc. A lower loss has $\bar a<0$, $\bar B\ge0$ and is a
+first simple root at the endpoint or a double root at or before it.
+Propositions~\ref{rw:infinity:strict-lower-loss} and
+\ref{rw:infinity:repeated-lower-loss}, together with the signed
+horizontal construction at $\bar B=0$, cover these losses except
+for the reserved joint center.
+
+At $\bar m=0$, regular finite data are covered by
+Proposition~\ref{rw:infinity:weak-regular}. Positive-$\bar B$
+losses are Proposition~\ref{rw:infinity:weak-loss}. At
+$\bar B=0$ the two lower nonnegativity conditions give
+$-\bar c\le\bar a\le0$: strict inequality at the left endpoint
+is regular, and equality is the weak-center chart of
+Proposition~\ref{rw:infinity:weak-center}. The raw horizontal
+construction includes $\bar a=0$ and its cubic factor.
+For an outgoing infinite endpoint reflect the field. The lower
+restrictions of Lemma~\ref{rw:finite:action-order} require a loss
+at or before its new finite outgoing endpoint; all those proofs
+allowed either sign of the reflected $\ell$.
+
+An empty whole-path domain contributes no cycle. On a nonempty
+physical interval the original maps are analytic transverse
+finite-time maps. The finite-smooth auxiliary coordinates and positive
+multipliers used in Rolle's theorem preserve their zero multiplicities.
+Reflection preserves the same return-germ multiplicity.
+The neighborhood and scale cutoff in each argument are fixed near
+one one-infinite limit. When the finite endpoint also tends to
+infinity, the next subsection supplies the required neighborhoods.
+\end{proof}

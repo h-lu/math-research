@@ -1,0 +1,653 @@
+\subsection{Bounded negative action and the central source interval}
+\label{subsec:bounded-action}
+
+The bounded-footpoint passage and the central source passage use different
+sections and phase labels. We connect them by following the same orbits
+between those sections. This gives the overlap needed to combine a
+negative-curvature estimate with a bounded-derivative estimate.
+
+Let \(\tau>0\), \(\sigma>0\), and
+\begin{equation}\label{bd:polynomial}
+\begin{split}
+ P_\sigma(\xi)
+ &=(1+\sigma\xi)(1-\xi/x_*)(1-\sigma j\xi)
+   =1-\Lambda_1\xi+3\Lambda_3\xi^2+\Lambda_2\xi^3,\\
+ \Lambda_1&=x_*^{-1}-\sigma+\sigma j,\qquad
+ \Lambda_2=\sigma^2j/x_*,\qquad
+ 3\Lambda_3=\sigma(j-1)/x_*-\sigma^2j .
+\end{split}
+\end{equation}
+Here \(x_*\) ranges in a positive compact interval and \(j\) in a
+fixed compact subset of \([0,\infty)\).  Physical raw sections require
+\(j>0\).  The value \(j=0\) denotes only a one-sided normalized limit.
+We take either a positive compact \(j\)-interval, or a sufficiently
+small interval \(0\le j\le j_0<1\).  In the latter case
+\(\Lambda_3<0\).  In both cases, after decreasing \(\sigma\),
+\[
+ \Lambda_1\ge\lambda_1>0,\qquad
+ 0\le\Lambda_2\le C\sigma^2,\qquad |\Lambda_3|\le C\sigma.
+\]
+No comparison between \(\tau\) and \(\sigma\), or between either of
+them and \(j\), is imposed.
+
+The source parameters and physical coordinates are
+\begin{equation}\label{bd:source-dictionary}
+\begin{gathered}
+ (a,p_{\rm s},\gamma_{\rm s},s_{\rm s})
+ =(-1,\sqrt\tau\Lambda_1,\tau\Lambda_3,\tau^{3/2}\Lambda_2),\\
+ \xi=\sqrt\tau X,\quad\eta=\tau Y,\qquad
+ v-\gamma_{\rm s}=e\xi,\quad z=e^2\eta,\quad e=\tau\Lambda_2.
+\end{gathered}
+\end{equation}
+For a source quartet, denote its positive graph denominator by
+\[
+ \mathcal D_{a,p,\gamma,s}(X,Y)
+ =\{1-A(\gamma+sX)+C(\gamma+sX)^2\}Y
+       -a-pX+3\gamma X^2+sX^3.
+\]
+We write \(\mathcal D_{\rm s}\) for the quartet in
+\eqref{bd:source-dictionary}; barred subscripts below mean the same
+formula with the displayed barred quartet. These denominators determine
+where an orbit can be written as a graph.
+Writing
+\[
+ B_\tau=1+\tau(2\Lambda_3+\Lambda_2\xi),\quad
+ L_\tau=\Lambda_3+\Lambda_2\xi,\quad
+ Q_\tau=1-A\tau L_\tau+C\tau^2L_\tau^2,
+\]
+the exact graph equation is
+\begin{equation}\label{bd:graph}
+ \eta_\xi=
+ \frac{\eta\{\xi B_\tau+C\tau^2\Lambda_2L_\tau\eta\}}
+      {Q_\tau\eta+\tau P_\sigma}.
+\end{equation}
+Fix \(L>4(1+\sup x_*)\).  On the actual incoming section \(\xi=L\)
+use the increasing coordinates
+\begin{equation}\label{bd:incoming-phase}
+ h_L=\eta+\tau\log(2\eta)-L^2/2,
+ \qquad \beta_L=h_L/\tau-\log(2\tau).
+\end{equation}
+These formulas prescribe initial points; neither expression is asserted
+to be constant along a perturbed orbit.  In particular,
+\(h_L=0\), or \(\beta_L=b_\tau:=-\log(2\tau)\), is an actual
+interior source orbit.
+
+\begin{lemma}[Source ranges on the actual incoming section]
+\label{bd:lem-source-ranges}
+There is a fixed \(\delta_\sharp>0\) such that the following
+constructions are uniform on \(-\delta_\sharp\le h_L\le0\), with
+enlarged input and output intervals.
+\begin{enumerate}
+\item For \(B_0\le\beta_L\le b_\tau\), where \(B_0\) is fixed
+large, the source passage exists and its actual central height obeys
+\begin{equation}\label{bd:positive-height}
+ |Y(0)+\log Y(0)-\beta_L|\le C_L,
+ \qquad Y(0)=\beta_L-\log\beta_L+O_L(1).
+\end{equation}
+\item Every fixed compact \(\beta_L\)-interval reaches a fixed
+compact strict source family: on fixed internal source intervals,
+\begin{equation}\label{bd:compact-height}
+ 0<m_B\le Y(0)\le M_B,\qquad
+ Y>0,\qquad \mathcal D_{\rm s}\ge c_B(Y+1)>0.
+\end{equation}
+\item At a negative base \(\beta_L=-B\), \(B\ge B_-\), freeze
+\begin{equation}\label{bd:frozen-dictionary}
+ q=B^{-1/2},\quad \rho=\sqrt{\tau B},\quad
+ (x,y)=(\xi/\rho,\eta/\rho^2),\quad
+ (\lambda_1,\lambda_2,k)
+       =(\rho\Lambda_1,\rho^3\Lambda_2,\rho^2\Lambda_3).
+\end{equation}
+For fixed cuts \(x=\pm L_{\rm f}\), \(L_{\rm f}=8\), this orbit
+belongs to a common enlarged negative-action family with core
+\(|x|\le R_{\rm f}=5\) and \(P_\sigma(\rho x)\ge3/4\).
+The input and output energy windows can be taken respectively inside
+\([-7/4,-3/8]\) and \([-2,-1/4]\), with strict margins.
+\end{enumerate}
+All these same-orbit passages reach \(\xi=\pm L\) with
+\begin{equation}\label{bd:parabolic-cuts}
+ \eta(\pm L)=L^2/2+
+ O_L\bigl(\delta_\sharp+\tau|\log\tau|\bigr).
+\end{equation}
+Their outward continuations to the fixed physical sections have
+positive graph denominators and retain the actual regular maps.
+\end{lemma}
+\begin{proof}
+For the first assertion, freeze \(B=\beta_L\ge B_0\), put
+\(q=B^{-1/2}\), \(\rho=\sqrt{\tau B}\), and use the source
+scaling \((\xi,\eta)=(\rho x,\rho^2y)\).  Its coefficients are
+\[
+ (\bar a,\bar p,\bar\gamma,\bar s)
+ =(-q^2,\sqrt\tau\Lambda_1q,\tau\Lambda_3,
+                         \tau^{3/2}\Lambda_2/q).
+\]
+Set \(H=y+q^2\log(2y)-x^2/2\) and \(R=L/\rho\).
+On a provisional quadratic corridor \(y\asymp1+x^2\), direct
+subtraction in the exact graph equation gives
+\begin{equation}\label{bd:energy-estimates}
+\begin{split}
+ |H_x|&\le C_L\{|
+ \bar p|+|\bar\gamma|(1+|x|)+\bar s(1+x^2)\},\\
+ |\partial_HH_x|&\le C_L\left\{
+ \frac{|\bar p|}{1+x^2}+
+ \frac{|\bar\gamma|}{1+|x|}+\bar s\right\}.
+\end{split}
+\end{equation}
+The terms with \(\bar p=\bar\gamma=\bar s=0\) cancel exactly.
+The first integral on \([-R,R]\) is \(O_L(q^2)\), since its three
+largest products are
+\(L|\Lambda_1|q^2,L^2|\Lambda_3|q^2,L^3\Lambda_2q^2\).
+The second integral tends to zero uniformly for
+\(B_0\le B\le b_\tau\).  Start at \(x=0\) with
+\(H(0,y)\in[1/4,3]\).  The monotonicity of
+\(y+q^2\log(2y)\) improves the bounds at any first contact with the corridor boundary:
+\[
+ (1+x^2)/16<y<4(1+x^2),\qquad \mathcal D_{\rm bar}\ge cy.
+\]
+Thus both cuts are reached.  The scalar energy variation is a positive
+exponential with exponent bounded by the second integral in
+\eqref{bd:energy-estimates}; hence the incoming energy map has an
+actual inverse on a common enlarged interval.  Its prescribed value at
+\(x=R\) is exactly \(1+B^{-1}\log(2/B)\).  Inverting and undoing
+the scale gives \eqref{bd:positive-height}.  This also constructs the
+orbit \(h_L=0\) and a real larger source chord through it.
+
+For compact \(\beta_L\), work instead in \((X,Y)\) and put
+\(H_0=Y+\log(2Y)-X^2/2\), \(R_0=L/\sqrt\tau\).
+At the incoming cut, \(H_0=\beta_L+\log2\).  On a provisional
+bounded energy region the denominator is at least \(c(Y+1)\): near
+\(\xi=0\), \(P_\sigma\ge1/2\), while away from that fixed small
+interval bounded energy forces \(Y\ge X^2/4\), which dominates
+the bounded polynomial.  The exact energy subtraction gives
+\[
+ |H_0'|\le C_L\{p_{\rm s}+|\gamma_{\rm s}|(1+|X|)
+                +s_{\rm s}(1+X^2)\}(1+|H_0|).
+\]
+Its coefficient has a bounded integral because
+\(p_{\rm s}R_0=L\Lambda_1\),
+\(|\gamma_{\rm s}|R_0^2=L^2|\Lambda_3|\), and
+\(s_{\rm s}R_0^3=L^3\Lambda_2\).  Gronwall's inequality improves a
+fixed sufficiently large energy bound, and proves continuation.
+Inverting \(Y+\log(2Y)\) at the centre proves
+\eqref{bd:compact-height}.  Choose larger compact incoming labels
+first to obtain strict image margins.  The resulting internal energy
+coordinate may retain a bounded translation; no identity with
+\(\beta_L+\log2\) on another section is used.
+
+For the negative base in \eqref{bd:frozen-dictionary}, the energy
+\(H_{\rm f}=y+q^2\log(2y)-x^2/2\) at \(x=L/\rho\) is
+\begin{equation}\label{bd:frozen-incoming}
+ b_B(\beta)=q^2\beta+q^2\log(2q^2),\qquad
+ b_B(-B)=-1-\frac{\log(B/2)}B.
+\end{equation}
+Also \(\rho^2=-h_L+\tau\log(2\tau)\le-h_L\).
+Choose \(\delta_\sharp\) so that
+\(P_{\rm f}(x):=P_\sigma(\rho x)\ge3/4\) on
+\([-8,8]\).  On the positive quadratic tail the exact subtraction
+gives
+\[
+ |(H_{\rm f})_x|
+ \le Cq^2\{\rho\Lambda_1+
+             \rho^2|\Lambda_3||x|+\rho^3\Lambda_2x^2\}.
+\]
+Its integral to \(L/\rho\) is \(O_L(q^2)\).  A first-contact
+argument in a quadratic corridor therefore reaches \(x=8\), with
+the actual energy in the interior of \([-3/2,-1/2]\), after increasing \(B_-\). This places the orbit in the negative-action
+family. Its relative curvature estimate will be proved below.
+
+To obtain phase derivatives on a neighbourhood of these orbits, we
+construct the full negative core on the larger input window
+\([-7/4,-3/8]\).  Fix the finite derivative budget \(m\) and an
+integer \(M>2m+8\).  Follow the positive fast arc to
+\(y=q^{M+2}\).  The logarithmic-height equation has
+\(dH_{\rm f}/d\log y=O_{C^m}(q^2\rho)\); its clock length is
+\(O(|\log q|)\).  It cannot reach \(x=1/2\) first, since that
+would imply \(H_{\rm f}\ge-1/8+o(1)\).  Hence its actual lip
+coordinate satisfies
+\[
+ p=\sqrt{-2b}+O_{C^m}(q^2|\log q|),\qquad 1/2<p<2.
+\]
+In the thin core put \(\mathfrak q=q^2\log(y/q^2)\) and
+\[
+ Q_{\rm f}(x)=1-Aq^2(k+\lambda_2x)
+                        +Cq^4(k+\lambda_2x)^2.
+\]
+Until its first return to the same lip height, its exact equation is
+\begin{equation}\label{bd:frozen-core}
+ \mathfrak q_x=
+ \frac{x\{1+q^2(2k+\lambda_2x)\}
+       +Cq^6\lambda_2(k+\lambda_2x)e^{\mathfrak q/q^2}}
+      {P_{\rm f}(x)+Q_{\rm f}(x)e^{\mathfrak q/q^2}}
+ =\frac{x}{P_{\rm f}(x)}+O(q^2\rho)+O(q^M).
+\end{equation}
+The actions \(\int_0^p v/P_{\rm f}(v)\,dv\) and
+\(\int_0^r v/P_{\rm f}(-v)\,dv\) have opposite comparison
+differences at \(r=p/2\) and \(r=2p\), with fixed margins.
+The logarithmic height first decreases, stays a fixed amount below
+the lip near zero, then increases strictly on the negative half.
+It therefore has one first exit before \(|x|=5\), with
+\[
+ r=p+O(\rho+q^2|\log q|)>1/4.
+\]
+The denominator in \eqref{bd:frozen-core} is at least \(3/4\).
+Each exponential derivative costs at most two powers of \(q^{-1}\);
+the choice of \(M\) and the transverse exit equation give bounded
+finite phase derivatives on nested windows.  The negative fast arc
+then reaches \(x=-8\), with
+\(b_-=b+O_{C^m}(\rho+q^2|\log q|)\) strictly inside
+\([-2,-1/4]\).  The exact independent energy coordinates of
+Theorem~\ref{neg:thm-relative} differ from \(H_{\rm f}\) by
+\(O_{C^m}(|k|)\) at these fixed positive-height cuts.  Slightly larger
+windows thus contain those coordinates and their images as well.
+
+The same energy estimates on both outward tails prove
+\eqref{bd:parabolic-cuts}.  In raw variables, the quadratic corridor
+of \eqref{eq:parabolic-tail} has a denominator comparable to the
+squared radial variable.  Choose \(L\) large and
+\(\delta_\sharp\) small first.  All the enlarged chords above enter
+its interior, so the first-contact argument continues them to the
+fixed raw sections, across any intervening axis root at positive
+height.  The fixed regular transitions are then included.  These
+are actual first hits of the original field throughout.
+\end{proof}
+
+\begin{lemma}[The bounded annulus]
+\label{bd:lem-annulus}
+Fix positive constants \(p_-,r_{\rm a},R_{\rm BD}\), with
+\(p_-<\inf x_*\).  Consider one connected family with positive and
+negative strong-axis footpoints
+\[
+ p_-\le p<x_*,\qquad r_{\rm a}/2\le r\le2R_{\rm BD},
+ \qquad b_+=-p^2/2,\quad b_-=-r^2/2.
+\]
+The projections are synchronized to fixed weak sections, and their
+outward continuations use the fixed physical sections of
+Lemma~\ref{lem:closing}.  On slightly larger such domains, normalize
+each actual embedding by its own exact value and positive first
+derivative.  The resulting complete map
+\(\Pi=\phi_-\circ S\circ\phi_+^{-1}\) satisfies
+\begin{equation}\label{bd:annular-curvature}
+ \phi_+'\frac{P_\sigma(p)}{p+r}\frac{\Pi''}{\Pi'}
+ =3\Lambda_2-\frac{\Lambda_1}{pr}+E,\qquad
+ \|E\|_{C^1_{b_+}}\longrightarrow0 .
+\end{equation}
+The derivative of the error follows the actual matched family.
+That family has a uniform positive gap from the positive root, as
+proved below; convergence includes the reciprocal coefficient face
+\(j=0\). For sufficiently small coefficients this map is strictly concave and its displacement
+has at most two zeros.
+\end{lemma}
+\begin{proof}
+The curvature formula is uniform only after the incoming footpoint has
+been separated from the positive root. We first obtain this separation
+by matching the two normal heights. On fixed
+small strong lips the normal rates are positive units, including at
+\(p=x_*\), since
+\[
+ -P_\sigma'(x_*)\ge c_*,\qquad
+ P_\sigma(-r)\ge c_-,\qquad rB_\tau(-r)\ge c_- .
+\]
+The strong projection and its integrating normal coordinate are uniform
+through the required finite phase order: the backward tangential Green
+factor is at most \(Ce^{C\tau t}\), whereas the normal variations are
+\(C(1+t)^Ne^{-ct}\). Their integral therefore defines the projection
+and the coordinate satisfying exactly \(\dot z=-pB_\tau(p)z\) on
+the positive side, with the corresponding equation in reversed time on the negative side.
+Use the original fixed weak cuts \(c_+<p_-\) and \(c_-<r_{\rm a}/2\).
+Integration along the projected axis gives their actual normal heights
+\[
+ w_+(p)=u_+(p)e^{-J_+(p)/\tau},\qquad
+ w_-(r)=u_-(r)e^{-J_-(r)/\tau},\qquad u_\pm^{\pm1}\le C,
+\]
+where the units and their finite phase derivatives are bounded on the
+fixed lips, independently of any outer cut, and
+\[
+ J_+(p)=\int_{c_+}^p\frac{xB_\tau(x)}{P_\sigma(x)}\,dx,
+ \qquad J_-(r)=\int_{c_-}^r\frac{xB_\tau(-x)}{P_\sigma(-x)}\,dx .
+\]
+
+On the intervening weak interval \(P_\sigma,Q_\tau\ge c>0\), so
+\(-\dot\xi=\tau P_\sigma+Q_\tau\eta\ge c\tau\) and its travel
+time is at most \(C/\tau\). Put
+\(H=\xi B_\tau+C\tau^2\Lambda_2L_\tau\eta\), so
+\(d\log\eta/dt=-H\). At a critical height,
+\(d^2\log\eta/dt^2=H_\xi(\tau P_\sigma+Q_\tau\eta)>0\).
+The standing passive neighborhood has \(C>0\), and
+\(H_\xi=1+\tau(2\Lambda_3+2\Lambda_2\xi)
++C\tau^2\Lambda_2^2\eta>1/2\) on this word. Thus there is no
+interior height maximum; the buffered weak endpoint heights bound the
+whole passage and its logarithmic rate. At each fixed weak section
+the integrating normal coordinate and \(\eta\) differ by a positive
+unit. For the actual map \(M_\tau\) between those normal coordinates,
+\[
+ \left|\tau\log\frac{M_\tau(w)}w\right|\le K .
+\]
+Its positive first multiplier \(M_\tau'(0)\) is retained. Matching
+the two heights now bounds \(J_+(p)\) by \(\sup J_-(r)+K+C\tau\).
+The latter is uniform for \(r\le2R_{\rm BD}\), whereas the simple
+positive root gives
+\[
+ J_+(p)\ge a_*\log\frac{\ell_*}{x_*-p}-C,
+ \qquad a_*>0 .
+\]
+The logarithmic residue \(x_*B_\tau(x_*)/[-P_\sigma'(x_*)]\)
+is bounded below by \(a_*\).
+Consequently every actual member has \(p\le x_*-d_{\rm a}\), for
+one fixed \(d_{\rm a}>0\). This gap depends only on the fixed lips and middle passage, so the
+outer cuts can now be chosen without changing it.
+
+Enlarge the input within \(p<x_*-d_{\rm a}/2\). The limiting
+root-free action has a fixed compact output envelope: at \(\sigma=0\),
+its negative action grows linearly at infinity. Choose strict lower
+and upper exit brackets there, then decrease \(\sigma\) independently
+so they and their polynomial margins persist. Denote an enlarged
+upper output bound by \(R_{\rm a}\ge2R_{\rm BD}\). We can therefore choose the annular cuts
+\[
+ L_{\rm a}>4(1+\sup x_*+R_{\rm a}).
+\]
+The source cut \(L\), its label \(h_L\), and
+\(\delta_\sharp(L)\) stay fixed. The positive-height arcs from the
+fixed lips to \(\pm L_{\rm a}\) and their small enlarged chords
+have uniform height and denominator margins. Independent final
+coefficient bounds place \(eL_{\rm a}\) inside the original raw
+ports; scalar uniqueness identifies both decompositions there.
+
+Apply the compact coefficient-annulus argument in the proof of
+Corollary~\ref{neg:cor-rootfree}, with \(t^2=\tau\),
+\(\lambda=(\Lambda_1,\Lambda_2)\), and \(k=\Lambda_3\).
+The root-free polynomial margin, strict exit brackets and nonzero
+negative exit slope established above are its inputs. The lip and
+first-exit estimates give absolute \(C^3\) error
+\(O(\tau(1+|\log\tau|))\), including synchronized resection;
+no division by the reversible coefficient distance is needed. If
+\(S_0(-p^2/2)=-r_0^2/2\) is defined by the exact limiting action,
+\begin{equation}\label{bd:annular-first}
+ \|S-S_0\|_{C^3}\longrightarrow0,\qquad
+ S_0'=\frac{P_\sigma(-r_0)}{P_\sigma(p)} .
+\end{equation}
+The exact polynomial identity therefore gives
+\[
+ \frac{P_\sigma(p)}{p+r_0}\frac{S_0''}{S_0'}
+ =\frac{P_\sigma'(p)/p+P_\sigma'(-r_0)/r_0}{p+r_0}
+ =3\Lambda_2-\frac{\Lambda_1}{pr_0} .
+\]
+
+The two outer embeddings may have very different first derivatives.
+We estimate each embedding relative to its own exact first derivative.
+On a fixed small positive-height lip let \(p(t)\) be the synchronized
+axis solution and \(w=\eta-\xi^2/2+p(t)^2/2\).
+The exact field gives
+\[
+ \dot w=\tau\{\xi P_\sigma(\xi)-pP_\sigma(p)\}
+ +\xi\eta(Q_\tau-B_\tau)
+ -C\tau^2\Lambda_2L_\tau\eta^2.
+\]
+Since \(|\xi+p|\) is bounded below, this has the form
+\(\dot w=\tau a(t)w+\tau\eta d(t)\), with bounded finite
+derivatives and exponentially decreasing \(\eta\).  The fixed
+weak section is a positive axis distance away and the axis speed is
+\(O(\tau)\), so its remaining time is at least \(c/\tau\).
+Terminal hitting-time derivatives multiply the same exponentially
+small normal height.  Variation of constants, with four phase
+derivatives, gives \(w=O_{C^4}(\tau)\); resecting a moving lip
+costs \(O_{C^4}(\tau|\log\tau|)\).  On both fixed outer cuts,
+therefore,
+\begin{equation}\label{bd:annular-tail-data}
+ \eta_\pm(\pm L_{\rm a},b)=L_{\rm a}^2/2+b+
+                  O_{C_b^4}(\alpha_\tau),\qquad
+ \alpha_\tau=\tau(1+|\log\tau|).
+\end{equation}
+
+Set \(s=e\xi\), \(Z=e^2\eta\), \(k_0=\Lambda_3\).
+The exact raw tail equation is
+\[
+ Z_s=\frac{n_2Z^2+n_1Z}{\ell_oZ+m_o},\quad
+ \begin{aligned}
+ \ell_o&=1-A(\tau k_0+s)+C(\tau k_0+s)^2,\\
+ m_o&=s^3+3\tau k_0s^2-\tau\Lambda_1es+\tau e^2,\\
+ n_1&=s(1+s+2\tau k_0),\quad n_2=C(\tau k_0+s).
+ \end{aligned}
+\]
+The initial data \eqref{bd:annular-tail-data} enter the invariant
+corridor \(Z\asymp s^2\), \(\ell_oZ+m_o\asymp s^2\).
+Division writes the right side as
+\(F=(n_2/\ell_o)Z+q_o+\mathfrak r/(\ell_oZ+m_o)\), where
+\[
+ |\mathfrak r|\le C(|s|^4+\tau|k_0||s|^3
+                       +\tau e|s|^2+\tau e^2|s|).
+\]
+If \(j\) is bounded away from zero,
+\(\tau|k_0||\log e|\to0\), because
+\(k_0=O(\sigma)\) and \(e\asymp\tau\sigma^2\).
+Thus the first variation \(J_1=Z_b\) is comparable to \(e^2\).
+For the reciprocal range \(j\to0\), retain instead \(k_0<0\).
+Direct differentiation gives the exact first cocycle
+\[
+ F_Z=\frac{n_2\ell_oZ^2+m_o(n_1+2n_2Z)}{(\ell_oZ+m_o)^2},
+ \qquad \operatorname{sgn}(s)(n_1+2n_2Z)\ge c|s| .
+\]
+The latter follows from \(Z\asymp s^2\) and the small fixed raw
+radius. At the actual common denominator,
+the term \(3\tau k_0s^2\) in \(m_o\) contributes nonpositively
+to \(\operatorname{sgn}(s)F_Z\) on both outward tails.  The rest gives
+\[
+ \operatorname{sgn}(s)F_Z\le
+ C(1+\tau e/|s|^2+\tau e^2/|s|^3),\qquad 0<J_1\le Ce^2.
+\]
+The normalization below uses this exact positive derivative and requires
+only the displayed upper bound. For \(2\le n\le3\), in both cases,
+\[
+ \int |F_{Z^n}|J_1^{n-1}\,d|s|
+ \le C(eL_{\rm a}^{3-2n}+\tau|k_0|L_{\rm a}^{2-2n}
+                       +\tau L_{\rm a}^{1-2n}+\tau L_{\rm a}^{-2n})\le C\tau.
+\]
+The quantitative normalization following
+\eqref{tail:relative-jet-equations}, through order three, now applies
+with initial errors from \eqref{bd:annular-tail-data} and
+\(\int|F_{Z^n}|J_1^{n-1}=O(\tau)\), \(n=2,3\).
+Each tail and its actual-image inverse are consequently
+\(\mathrm{id}+O_{C^3}(\alpha_\tau)\) after normalization by
+the retained \(J_1(b_*)>0\). At this actual image the ordinary
+\(C^3\) observer adds \(O_{C^3}(J_1(b_*))\) by
+\eqref{phys:eq-observer-normalization}. Thus
+\(\phi_\pm=\mathrm{id}+o_{C^3}(1)\), including when their
+individual gains are much smaller than \(e^2\).
+
+Finally the exact chain rule is
+\[
+ \frac{\Pi''}{\Pi'}=\frac1{\phi_+'}
+ \left\{\frac{S''}{S'}+
+       \frac{\phi_-''(S)}{\phi_-'(S)}S'
+       -\frac{\phi_+''}{\phi_+'}\right\}.
+\]
+On the compact family, \(S\), its first three derivatives and
+its positive first inverse derivative are bounded. Multiply by
+\(P_\sigma(p)/(p+r)\) and use \(r-r_0\to0\) in phase
+\(C^3\). Both exterior corrections are \(o_{C^1_{b_+}}(1)\).
+This proves \eqref{bd:annular-curvature}.  Its principal term is at most
+\(3C\sigma^2-\lambda_1/(2(\sup x_*)R_{\rm BD})<0\).
+Positive affine changes preserve this sign in the actual input.
+Thus \(x-m\Pi(x)\) is strictly convex, proving the two-zero bound.
+\end{proof}
+
+\begin{proposition}[Bounded-footpoint domains and derivatives]
+\label{bd:prop-bounded-action}
+On one ordered through interval ending at the actual cut \(h_L=0\),
+suppose the two fixed comparisons described below and the enlarged
+annular domains of Lemma~\ref{bd:lem-annulus} use the same actual
+physical sections. The union of the central source interval
+\(-\delta_2\le h_L\le0\) and the part with negative strong
+footpoint \(0<r\le2R_{\rm BD}\) has an overlapping cover by the
+bounded annulus and the negative, compact, and positive source-label
+intervals constructed below. All endpoints are fixed before choosing
+a displacement zero.
+
+The completed map has strictly negative curvature on the annulus and
+on the entire negative source interval. On the compact and positive
+source intervals its derivative in the actual affine input is bounded
+by one constant. After one common multiplier shrink, the displacement
+has positive derivative on these latter intervals, including the cut
+\(h_L=0\). The same assertions hold on the enlarged intervals used
+for the overlaps. The degree-loss passage below verifies all domain
+and overlap hypotheses of this proposition.
+\end{proposition}
+\begin{proof}
+Fix the strict source domain and the constants for its finite phase
+derivatives. Choose $B_-$ large, then $\delta_\sharp$ small enough
+for the relative negative-curvature estimate below. Choose a fixed $0<\delta_1\le\delta_\sharp/8$,
+set $p_0=\sqrt{2\delta_1}$, and require $P_\sigma\ge1/2$ on
+$[-2p_0,2p_0]$.
+The orbit prescribed by \(h_L=-\delta_1\) is constructed by a
+compact fast arc to a small lip, followed by the core first-exit
+argument in \eqref{bd:frozen-core}.  Its limiting incoming footpoint
+is \(p_0\), and the limiting outgoing footpoint is determined by
+\[
+ \int_0^r\frac{v}{P_\sigma(-v)}\,dv
+       =\int_0^{p_0}\frac{v}{P_\sigma(v)}\,dv.
+\]
+The comparison values \(r=p_0/2,2p_0\) have strict opposite action
+differences.  Thus the actual two footpoints lie in
+\((p_0/2,2p_0)\) after shrinking \(\tau\).
+Choose \(r_{\rm a}<p_0/4\).  A second fixed comparison
+\(h_L=-p_{\rm a}^2/2\), with \(0<p_{\rm a}<r_{\rm a}/8\), has
+\(r<r_{\rm a}/4\) and \(p>p_{\rm a}/2\).
+Scalar order and the actual synchronized projections imply that
+every \(r\ge r_{\rm a}/2\) in the bounded annulus has
+\(p\ge p_{\rm a}/2\), while every \(r<r_{\rm a}\) lies in
+\(-\delta_1<h_L\le0\).  Both comparisons have strict margins,
+so these ranges have an open overlap.  The comparison uses order along the same orbits; \(h_L\) need not equal
+the footpoint energy on the other section.
+
+Fix \(\delta_1<\delta_2<\delta_\sharp\).  On
+\(-\delta_2\le h_L\le0\), divide the actual incoming labels into
+\[
+ [\beta_{\min},-B_-],\quad[-B_-,B_+],\quad[B_+,b_\tau],
+ \qquad \beta_{\min}=-\delta_2/\tau-\log(2\tau).
+\]
+Each interval is used with slightly larger fixed phase thresholds.
+For a negative base, Lemma~\ref{bd:lem-source-ranges} supplies the
+independent enlarged windows $\widehat J_+=[-7/4,-3/8]$ and
+$\widehat J_-=[-2,-1/4]$, frozen cuts $L_f=8$ and core $R_f=5$.
+The actual incoming frozen energy is strictly inside $[-3/2,-1/2]$;
+its separate ideal coordinate differs by $O(|k|)$. Choose a fixed
+$J\Subset\widehat J_+$ containing these values with a strict buffer.
+With the frozen dictionary~\eqref{bd:frozen-dictionary}, put
+\[
+ \rho_{\rm id}=(\lambda_1^2+\lambda_2^2)^{1/2}.
+\]
+Use the tail part of the proof of Theorem~\ref{neg:thm-relative}
+with \(t=q\), \(\lambda=(\lambda_1,\lambda_2)\) and the frozen
+\(k\). Its coefficients are exactly
+\((a,p,\gamma,s)=(-q^2,q^2\lambda_1,q^2k,q^2\lambda_2)\),
+and its auxiliary cuts are \(v=q^2k\pm d_H\), with fixed \(d_H\).
+The enlarged windows above supply its quadratic corridors;
+at \(L_f=8\) its fourth-order kernel majorants become small after
+a \(q\) shrink. The same sequential intrinsic \(p\)- and
+\(s\)-secants, with the two reference labels fixed, give
+\begin{equation}\label{bd:intrinsic-relative-tails}
+ \|\phi_\pm^{\rm int}-\mathrm{id}\|_{C^3}
+ +\|(\phi_\pm^{\rm int})^{-1}-\mathrm{id}\|_{C^3}
+ \le Cq^2\rho_{\rm id}.
+\end{equation}
+For the actual ordinary \(C^3\) observers, including divided closing,
+the separate raw gains satisfy, for fixed \(0<\nu<1\),
+\begin{equation}\label{bd:relative-observer-gain}
+ 0<d\le Cs_f^{2-\nu}\le Cs_f
+   =Cq^2\lambda_2\le Cq^2\rho_{\rm id},\qquad
+ s_f=q^2\lambda_2=e\rho .
+\end{equation}
+Equation~\eqref{phys:eq-observer-normalization} on the fixed
+buffered cut-label chord therefore preserves
+\eqref{bd:intrinsic-relative-tails} for the observed tails and their
+actual-image inverses. The fourth phase order is used only in the
+intrinsic polynomial kernel, before composing with these observers.
+
+On the negative source interval the limiting curvature tends to zero
+with the reversible coefficient distance. We therefore compare the
+actual core \(S_q\) with its limiting action \(S_0\) before dividing
+by that distance. The exact reversible energy gives
+\(S_q(0,k)=S_0(0,k)=\mathrm{id}\). Integrating the coefficient
+variation in \eqref{neg:compact-mixed-convergence} before taking any
+limit yields
+\[
+ \|S_q-S_0\|_{C^2}
+ \le C\rho_{\rm id}q^2(1+|\log q|).
+\]
+One intrinsic coefficient secant with two phase derivatives produces
+the factor \(\rho_{\rm id}\). This makes the error small relative
+to the core curvature even as that curvature vanishes.
+For \(b\in J\), put \(p=\sqrt{-2b}\), and let \(r_0\) be its
+limiting action exit. Equation~\eqref{neg:action-curvature} gives
+\[
+ \frac{S_0''(b)}{S_0'(b)}
+ =\frac{p+r_0}{P_{\rm f}(p)}
+       \left(3\lambda_2-\frac{\lambda_1}{pr_0}\right).
+\]
+The even coefficient \(k\) cancels exactly. Here
+\(\rho^2=\tau B\le-h_L\), \(\rho_{\rm id}\asymp\rho\),
+\(\lambda_1/\rho_{\rm id}\ge c_1>0\), and
+\(\lambda_2/\rho_{\rm id}=O(\rho^2\sigma^2)\).
+The compact root-free margins and positive first variation thus give
+\(S_0''/\rho_{\rm id}\le-c_0<0\), without a Taylor error in \(k\).
+
+The complete curvature also contains the two section terms:
+\[
+ \Pi''(\phi_+(b))=
+ \frac{\phi_-'(S_q(b))}{\phi_+'(b)^2}
+ \left\{S_q''+(S_q')^2\frac{\phi_-''(S_q)}{\phi_-'(S_q)}
+                  -S_q'\frac{\phi_+''}{\phi_+'}\right\}.
+\]
+The separate tail bounds above make the two section terms
+\(O(q^2\rho_{\rm id})\), while the prefactor is a positive unit
+and differs from one by that amount. Consequently, at the actual
+normalized input \(u_*=\phi_+(b)\),
+\begin{equation}\label{bd:relative-negative-curvature}
+ \frac{\Pi''(u_*)}{\rho_{\rm id}}
+ =\frac{S_0''(b)}{\rho_{\rm id}}
+       +O\bigl(q^2(1+|\log q|)\bigr)<-c .
+\end{equation}
+Choose \(B_-\) large enough to absorb this error, then
+\(\delta_\sharp\) small enough for the root-free domain and the
+fixed relative coefficient margins. No comparison of \(q\) with \(\rho\) is used.
+The incoming resection identifies the point $u_*$ at which this sign
+is evaluated. For the two retained positive first gains,
+\begin{equation}\label{bd:relative-raw-curvature}
+ (\Pi^{\rm raw})''=\frac{g_-}{g_+^2}\Pi'',\qquad g_+,g_->0.
+\end{equation}
+Each negative base is fixed while differentiating, so this is one
+strict sign on the whole negative interval, including nonroot inputs.
+
+On the compact middle interval, \eqref{bd:compact-height} and the
+larger label windows give a compact strict core and positive variation
+units $A_\pm$. Before normalization its two auxiliary raw variations are
+\begin{equation}\label{bd:compact-raw-variation}
+ \frac{dz_\pm}{dY_0}
+ =s_s^{2-\lambda_\gamma}(d_{H,\pm}/L_t)^{\lambda_\gamma}A_\pm U_\pm,
+ \quad s_s=\tau^{3/2}\Lambda_2,\quad
+ \lambda_\gamma=\frac{12\gamma_s}{1+2\gamma_s},\quad
+ A_\pm^{\pm1},U_\pm^{\pm1}\le C.
+\end{equation}
+The common singular power cancels in $dz_-/dz_+$; distinct fixed
+port radii have a bounded ratio. The actual regular bridges and divided
+closing have positive derivative units, so $0<\Pi'\le C_B$.
+This cancellation gives the derivative bound without a lower bound on a
+raw gain or a bound on $\gamma_s\log s_s$.
+On the positive interval, \eqref{bd:positive-height} gives, after
+choosing \(B_+\) large,
+\[
+ Y(0)>K(1+p_{\rm s}^2),\qquad
+ 0<s_{\rm s}^2Y(0)\le C_L\tau^3\sigma^4j^2|\log\tau|<z_*.
+\]
+Since \(\alpha_0=-s_{\rm s}^2\) and
+\(\alpha_1=s_{\rm s}p_{\rm s}\), these are the hypotheses of
+Corollary~\ref{rew:cor-high-derivative-signed} on the actual central
+section. Its complete derivative bound holds on this entire interval,
+including \(h_L=0\) and the enlarged source chord through that orbit.
+Take the maximum of the compact and high-height derivative constants,
+then choose \(m\) so that \(\Delta'>1/2\) on both intervals.
+The annular curvature comes from Lemma~\ref{bd:lem-annulus}, on its
+open overlap with the source interval constructed by the two fixed
+comparisons. All assertions concern restrictions of one physical
+map and every input in those overlaps. Boundary coefficients denote
+normalized one-sided limits; no orbit at a collapsed raw section is
+asserted.
+\end{proof}

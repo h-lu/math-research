@@ -1,0 +1,68 @@
+\documentclass[a4paper,11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[a4paper,textwidth=160mm,textheight=240mm]{geometry}
+\usepackage[expansion=false]{microtype}
+\usepackage{booktabs,array,float,graphicx,tikz}
+\usepackage[hidelinks]{hyperref}
+\raggedbottom
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Gam}{\Gamma}
+\newcommand{\dd}{\,\mathrm d}
+\numberwithin{equation}{section}
+\hypersetup{pdftitle={Exact cyclicity two of the degenerate quadratic graphic DF1b},
+ pdfauthor={Haibo Lu},pdfsubject={Whole-graphic cyclicity in quadratic vector fields}}
+\title[Exact cyclicity two of $DF_{1b}$]{Exact cyclicity two of the degenerate quadratic graphic $DF_{1b}$}
+\author{Haibo Lu}
+\date{}
+\subjclass[2020]{34C07, 34E15, 37G15}
+\keywords{Quadratic vector field, degenerate graphic, cyclicity,
+ nilpotent contact, actual return map, singular perturbation}
+\begin{document}
+\begin{abstract}
+We prove that, in the full local space of planar quadratic vector fields,
+the degenerate graphic $DF_{1b}$ has whole-graphic cyclicity exactly two
+for every fixed $0<b<2$. In the normalized unfolding, the upper bound
+counts actual minimal-return multiplicity for periodic orbits close to
+the entire graphic in two-sided Hausdorff distance, is uniform on compact
+modulus intervals, and imposes no relative-rate restrictions on the
+parameters. The proof controls a weighted derivative crossing through
+slow-root collision and a flat-source double-saddle composition with
+signed splitting at simultaneous endpoint degeneration. A complement on
+a full signed source rectangle realizes two cycles of the same field,
+one repelling and one attracting; their hyperbolic continuations yield
+nonempty open coefficient sets approaching the base field, with both
+cycles converging separately to the entire graphic.
+\end{abstract}
+\maketitle
+\enlargethispage{3pt}
+\input{sections/introduction}
+\input{sections/return-framework}
+\input{sections/normal-coordinates}
+\input{sections/counting}
+\input{sections/collision}
+\input{sections/two-endpoints}
+\input{sections/parameter-cover}
+\input{sections/lower}
+\input{sections/combination}
+\input{sections/quadratic-transfer}
+\appendix
+\input{appendices/geometry}
+\input{appendices/whole-period}
+\input{appendices/transition-estimates}
+\input{appendices/simple-contact}
+\input{appendices/contact-forcing}
+\input{appendices/lower-complement}
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}

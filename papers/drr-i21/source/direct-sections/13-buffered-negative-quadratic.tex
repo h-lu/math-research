@@ -1,0 +1,502 @@
+\subsection{Negative quadratic drift away from the secondary fold}
+\label{sec:direct-buffered-negative}
+
+We first treat the part of
+\eqref{eq:direct-negative-secondary-scales} on which
+\begin{equation}
+\label{eq:direct-buffered-region}
+ b^2-4a\le-\nu<0 .
+\end{equation}
+The fixed margin implies \(a\ge\nu/4\). Both secondary passages therefore
+have regular prefixes. The remaining comparison must match their exits
+at the same central height, even when the individual actions become
+large.
+
+\begin{proposition}[Buffered negative quadratic drift]
+\label{prop:direct-buffered-negative}
+For every fixed \(\nu>0\), the return displacement \(\Delta_p\) on
+\eqref{eq:direct-buffered-region} has at most
+three distinct zeros, for all sufficiently small independent
+\(s,r>0\) and all central heights in \(\cH_p\).
+Moreover, the logarithmic slope ratio \(\mathcal L\) has
+at most two distinct zeros on \(\cH_p\).
+\end{proposition}
+
+\subsubsection{Actions and the regular prefix}
+
+On a small fixed interval \(0\le t\le v_1\),
+\[
+ D_\sigma(t)=ar^2-\sigma brt+t^2
+                    -\sigma t^3R_q(\sigma st)
+                 \asymp r^2+t^2.
+\]
+Indeed the two quadratic forms have a uniform positive
+margin by \eqref{eq:direct-buffered-region}, and the cubic
+term is absorbed by reducing \(v_1\).
+Set
+\begin{equation}
+\label{eq:direct-buffered-actions}
+ \mathcal A_\sigma(\rho)=
+                    \int_0^\rho t/D_\sigma(t)\,dt .
+\end{equation}
+The positive action is defined up to any fixed positive primary radius;
+we use the negative action first on compact subintervals below its
+far root near \(\rho=1\).
+At \(\rho_i=K_0r\), the central scale
+\(\ell=sr,\ Q=s^3r^2\) has drifts
+\[
+ a-\sigma bx+x^2-\sigma rx^3R_q(\sigma srx),
+                 \qquad 0\le x\le K_0 .
+\]
+They have a fixed positive margin for sufficiently small \(r\).
+The central-height construction and composition with the
+annular coordinate therefore give
+\eqref{eq:direct-annulus-prefix}, with
+\(\mathcal A_{\sigma,i}=\mathcal A_\sigma(K_0r)\).
+
+At a common small primary radius,
+\begin{equation}
+\label{eq:direct-buffered-action-difference}
+ |\mathcal A_+(\rho)-\mathcal A_-(\rho)|
+ \le C\int_0^\rho
+          \frac{brt^2+t^4}{(r^2+t^2)^2}\,dt
+ \le C(b+\rho).
+\end{equation}
+The substitution \(t=rx\) gives an integrable density for the first
+term, and the second integrand is bounded. This bounds the difference
+even when the individual actions grow like \(\log(1/r)\).
+
+\subsubsection{The intermediate annulus}
+
+We prove that there are fixed \(M_0>2K_0\) and \(v_0>0\) such that the
+interval of central heights in \(\mathcal H_p\) with positive thin exit in
+\begin{equation}
+\label{eq:direct-buffered-intermediate}
+ M_0r\le\rho\le v_0
+\end{equation}
+contains at most three zeros of \(\Delta_p\).
+We first construct the negative exit for each of these central heights.
+It has the form \(\omega=\Omega\rho\), where
+\begin{equation}
+\label{eq:direct-buffered-comparable}
+ 0<\Omega_0\le\Omega\le\Omega_1,\qquad
+ |\log\Omega|\le C(b+\rho+s).
+\end{equation}
+By \eqref{eq:direct-negative-secondary-scales}, \(0\le b\le1\).
+Fix the lower action-slope
+margin \(c_{\rm a}>0\) on the whole regular range
+\(K_0r\le t\le v_1\).  Choose fixed factors
+\(0<\Omega_0<1<\Omega_1\) so far apart that
+\begin{equation}
+\label{eq:direct-buffered-trial-separation}
+ c_{\rm a}\min\{|\log\Omega_0|,\log\Omega_1\}>8C_{\rm act},
+\end{equation}
+where \(C_{\rm act}\) is a fixed bound for the \(b\)-dependent part of the
+full \(\Phi(1;\rho)\) comparison, including the action and bounded
+height-factor terms, when \(0\le b\le1\) and \(0<\rho\le1\).
+The terms proportional to \(s\log\Omega\) are handled after the fixed
+trial factors have been chosen.
+Then choose \(M_0>2K_0/\Omega_0\) and \(v_0>0\) so small
+that \(\Omega_1v_0<v_1\).  On
+\([\Omega_0\rho,\Omega_1\rho]\), with \(M_0r\le\rho\le v_0\),
+the positive margin in \eqref{eq:direct-buffered-region} gives
+\begin{equation}
+\label{eq:direct-buffered-negative-action-slope}
+ 0<c_{\rm a}\le
+ \frac{t^2}{D_-(t)}\le C_{\rm a},\qquad
+ \left|\frac{t^2}{D_-(t)}-\frac{t^2}{D_+(t)}\right|\le C(b+t),
+\end{equation}
+after reducing \(v_0\).  Let \(h_\sigma(\rho)\) denote the central height
+obtained from \eqref{eq:direct-annulus-source} at the first thin exit
+\(\rho\) on branch \(\sigma\).  The event equation and
+\eqref{eq:direct-annulus-source-rate} imply that \(h_\sigma\) is \(C^3\)
+and strictly decreasing, and that
+\begin{equation}
+\label{eq:direct-buffered-height-comparison}
+ \Phi(\Omega;\rho):=s\log\frac{h_-(\Omega\rho)}{h_+(\rho)},\qquad
+ \partial_{\log\Omega}\Phi
+ =-\frac{(\Omega\rho)^2}{D_-(\Omega\rho)}+O(s)\le-\frac12c_{\rm a}.
+\end{equation}
+At \(\Omega=1\), the action difference estimate
+\eqref{eq:direct-buffered-action-difference}, together with the bounded
+height factors in \eqref{eq:direct-annulus-source}, gives
+\begin{equation}
+\label{eq:direct-buffered-height-at-one}
+ |\Phi(1;\rho)|\le C_{\rm act}+C(v_0+s),
+\end{equation}
+with \(C_{\rm act}\) as chosen above. First fix the trial separation in
+\eqref{eq:direct-buffered-trial-separation}; then reduce \(v_0\) and
+finally \(s\).  The bound in
+\eqref{eq:direct-buffered-height-at-one} is then smaller than
+\(\frac14c_{\rm a}\min\{|\log\Omega_0|,\log\Omega_1\}\) uniformly in
+\(b\in[0,1]\).  Integrating
+\eqref{eq:direct-buffered-height-comparison} then gives
+\(\Phi(\Omega_0;\rho)>0>\Phi(\Omega_1;\rho)\), uniformly for
+\(M_0r\le\rho\le v_0\). The intermediate value theorem therefore gives an exit
+\(\omega=\Omega\rho\) with \(h_-(\omega)=h_+(\rho)\).  Strict decrease in
+\eqref{eq:direct-buffered-height-comparison} gives uniqueness of the
+matching radius, and each passage has a unique first exit by
+\eqref{eq:direct-annulus-source-rate}.
+
+At the matching radius, combine the equal-height equation with
+\eqref{eq:direct-buffered-action-difference}. The lower bound
+in \eqref{eq:direct-buffered-height-comparison} yields
+\begin{equation}
+\label{eq:direct-buffered-log-omega-bound}
+ |\log\Omega|\le C(b+\rho+s),
+\end{equation}
+after absorbing the \(O(s)\) height factors, proving the second bound in
+\eqref{eq:direct-buffered-comparable} for sufficiently small parameters.
+Differentiation of the equation of equal central heights gives
+\[
+ \mathcal E\log\omega=G_+(\rho)/G_-(\omega),\qquad
+ \mathcal E\log\Omega=O(u+v).
+\]
+
+For \(b\ge b_{*,-}>0\), where the threshold will be fixed by the
+small-\(b\) estimate below, the preceding prefixes and comparable exit
+radii meet \cref{cor:direct-annular-pair} after choosing the annular
+margins small relative to \(b_{*,-}\), then reducing \(s\). It gives
+\(\mathcal L''<0\) in \(T=-s\log h\), and at most three zeros of \(\Delta_p\).
+
+For small \(b\), curvature need not have a uniform margin. We bound the
+endpoint slope quotient and use the exterior contraction. The quotient is
+\[
+ \frac{I_{-,h}}{I_{+,h}}
+       =\frac{M_-(\omega)}{M_+(\rho)}
+                         \frac{G_+(\rho)}{G_-(\omega)}.
+\]
+The logarithm of this quotient has, by
+\eqref{eq:direct-annulus-slope-calibration},
+\eqref{eq:direct-buffered-comparable}, and
+\eqref{eq:direct-annulus-source-rate}, the upper bound
+\[
+ C\{b+u_0+v_0+s(1+|\log s|)\}
+       +2C_{\rm cone}\sqrt{z_*}.
+\]
+Choose \(b_{*,-}>0\) and the annular margins small to make this less than
+\(-\log\Lambda_+\) for \(b\le b_{*,-}\), after reducing \(s\).
+Then \(\Pi_p'I_{-,h}/I_{+,h}<1\), so \(\Delta_p\) has at most
+one zero. Shrink the annular margins further for the curvature
+argument with this same \(b_{*,-}\), then reduce \(s\).
+This proves the three-zero bound on
+\eqref{eq:direct-buffered-intermediate}.
+
+\subsubsection{Exits on a compact primary interval}
+\label{sec:direct-buffered-compact-primary}
+
+Fix \(0<\rho_{\rm lo}<\rho_{\rm hi}<\infty\). Suppose the positive first exit
+at \(y=z/(s|\eta|^2)=\delta_{\rm an}\) satisfies \(\rho_{\rm lo}\le\rho\le\rho_{\rm hi}\).
+On this compact interval we first match the two exits, then prepare their
+endpoints and the return displacement. The matching equation gives a
+rational leading relation with a controlled remainder.
+Choose a small fixed reference radius \(v_b>0\), and set
+\[
+ L_+(\rho)=\log\frac{\rho}{1+\rho},\qquad
+ L_-(\rho)=\log\frac{\rho}{1-\rho},\qquad
+ \mathfrak c_\sigma(p)=\mathcal A_\sigma(v_b)-L_\sigma(v_b).
+\]
+On compact positive intervals away from zero, and for
+the negative sign away from one,
+\begin{equation}
+\label{eq:direct-buffered-primary-action}
+ \mathcal A_\sigma(\rho)
+       =\mathfrak c_\sigma+L_\sigma(\rho)+O_{C^j}(r+s).
+\end{equation}
+Subtract the integrands on the interval between \(v_b\)
+and \(\rho\). Their denominators have fixed positive
+margins, and \(R_q(\sigma st)=-1+O_{C^j}(s)\);
+integration and differentiation give this estimate.
+Equation \eqref{eq:direct-buffered-action-difference} implies
+\[
+ \Lambda=\exp(\mathfrak c_+-\mathfrak c_-),\qquad
+ 0<\underline\Lambda_{\rm act}\le\Lambda
+     \le\overline\Lambda_{\rm act}<\infty.
+\]
+
+The annular height construction extends to any such fixed
+compact primary interval with positive drift margin.
+For these exits, the increase of action from \(K_0r\)
+is at least \(c_1\log(\rho/(K_0r))\).
+The equation for the central height therefore makes the expanded
+prefix input and its first \(j\) radius derivatives
+\(O(s^{-j}\e^{-c_2/s})\), uniformly in small \(r\).
+Both signs have thin central prefixes: the positive action
+gap can be made larger than their fixed central action
+difference by reducing \(r\).
+Thus the equation for the central height is
+\begin{equation}
+\label{eq:direct-buffered-primary-source}
+ s\log(h/s^3)=-\mathcal A_\sigma(\rho_\sigma)
+                 +sM_\sigma^0(\rho_\sigma),\qquad
+ \|M_\sigma^0\|_{C^4}\le C .
+\end{equation}
+Here \(M_\sigma^0=2\log\rho_\sigma+\log\Psi_\sigma-\log\Upsilon_\sigma\).
+Equating the two equations for the central height gives
+\[
+ L_-(\omega)-L_+(\rho)=\log\Lambda+O_{C^3}(r+s).
+\]
+For each value of the parameter-dependent multiplier \(\Lambda\),
+the leading scalar relation has the solution
+\[
+ f_\Lambda(\rho)=\frac{\Lambda\rho}{1+(1+\Lambda)\rho}.
+\]
+For \(\rho_{\rm lo}\le\rho\le\rho_{\rm hi}\), \(f_\Lambda(\rho)\) lies
+in a fixed compact subset of \((0,1)\). Comparing the central-height
+equations at slightly wider negative exits gives opposite signs;
+first-exit order gives the matching negative passage.
+The lower bound on \(L_-'\) then gives, by implicit differentiation,
+\begin{equation}
+\label{eq:direct-buffered-fractional-relation}
+ \omega=f_\Lambda(\rho)+O_{C^3}(r+s).
+\end{equation}
+
+The rational profile is the inverse, after a sign change and positive
+rescaling, of the base-point relation of Huzak--Kristiansen
+\cite[(2.13) and (6.8)]{HK2026}.
+For this scalar relation, the substitutions
+\[
+ \rho=-\beta_{\rm HK}x_{\rm out}^{b_{\rm HK}},\qquad
+ \omega=\beta_{\rm HK}x_{\rm in}^{b_{\rm HK}},\qquad
+ \Lambda=\e^{-K_{\rm HK}},\qquad
+ K_{\rm HK}=\frac{\lambda_1^{\rm HK}\pi}
+            {\sqrt{-4\lambda_0^{\rm HK}-(\lambda_1^{\rm HK})^2}}
+\]
+give \(\omega=f_\Lambda(\rho)\); their domain becomes
+\(\rho>0\), \(0<\omega<\Lambda/(1+\Lambda)\).
+The two-scale \(C^3\) remainder in
+\eqref{eq:direct-buffered-fractional-relation} follows by matching the
+two central-height equations above.
+
+For the endpoints apply \cref{lem:direct-small-height-continuation}
+with \(\ell=\delta=s\), \(x=\rho_\sigma\) and
+\(\zeta_0(x)=\delta_{\rm an}x^2\). The coefficient ratios are bounded,
+and \(K_\sigma(x)=-s^{-3}q(\sigma sx)=D_\sigma(x)\) has a fixed
+positive margin on the compact exit intervals above. The entrance
+factor is positive with bounded \(C^3\) norm, including its moving
+height. Choose a common \(Z_1=Z_0\) and put
+\(b_\sigma^e=b_\sigma\), \(a_\sigma^e=\varpi_{s^2Z_0}A_\sigma\).
+Since \(q_2=-s\), the multiplier is
+\(\varpi_{s^2Z_0}=1+O(s(1+|\log s|))\). Thus \(a_\sigma^e\) has fixed
+positive bounds, and
+\begin{equation}
+\label{eq:direct-buffered-primary-endpoints}
+ I_\sigma(\rho_\sigma)=b_\sigma^e
+       -\tfrac12s^2a_\sigma^e\rho_\sigma^2
+       +s^2O_{C^3}(s(1+|\log s|)).
+\end{equation}
+
+The endpoint preparation now turns the matching relation into an
+expansion of the return displacement. Substituting
+\eqref{eq:direct-buffered-fractional-relation} and
+\eqref{eq:direct-buffered-primary-endpoints} into the exterior map gives
+\begin{equation}
+\label{eq:direct-buffered-prepared-displacement}
+ \frac{2\Delta}{s^2a_+^e}
+ =D(p)+\rho^2-\lambda(p)f_\Lambda(\rho)^2
+                 +O_{C^3}(r+s(1+|\log s|)),
+ \qquad
+ \lambda=\Pi_p'(b_-^e)a_-^e/a_+^e .
+\end{equation}
+Here \(D(p)\) depends only on \(p\), and \(\lambda\) has fixed positive
+bounds. For every \(h\in\mathcal H_p\) whose positive first exit lies in
+\([\rho_{\rm lo},\rho_{\rm hi}]\), the reference endpoints \(b_\sigma^e\)
+differ from the corresponding admissible endpoints by \(O(s^2)\).
+Thus, whenever this set of heights is nonempty, the reference endpoints
+lie in the enlarged exterior windows. The exterior Taylor remainder adds
+\(O_{C^3}(s^2)\) after normalization.
+For the principal part \(\widehat\Delta_{\rm m}=D+\rho^2-\lambda f_\Lambda^2\),
+\[
+ \left(\frac{\widehat\Delta_{\rm m}'}{2\rho}\right)'
+ =\frac{3\lambda\Lambda^2(1+\Lambda)}
+             {[1+(1+\Lambda)\rho]^4}>c_*>0 .
+\]
+Apply \cref{lem:direct-derivative-ratio-count} with
+\(\phi=\rho^2\), \(\psi=f_\Lambda^2\), and
+\(\widehat\Delta=2\Delta/(s^2a_+^e)\). The compact positive radius
+interval gives \(\phi'\ge2\rho_{\rm lo}\); the displayed margin
+therefore persists under the remainder in
+\eqref{eq:direct-buffered-prepared-displacement}. It gives at most two
+zeros on this interval and
+\[
+ \left(\frac{\widehat\Delta_\rho}{2\rho}\right)_\rho>0.
+\]
+For the crossing direction, use the same endpoint identity as in
+\eqref{eq:direct-quadratic-prefix-zero-orientation}, here in the exit
+coordinate:
+\[
+ \frac{\widehat\Delta_\rho}{2\rho}
+ =\frac{I_{+,\rho}}{s^2a_+^e\rho}(\e^{\mathcal L}-1),
+ \qquad I_{+,\rho}<0.
+\]
+At a slope zero it gives \(\mathcal L_\rho<0\). Since
+\eqref{eq:direct-buffered-primary-source} gives
+\(T_\rho=\mathcal A_+'-s(M_+^0)'>0\), every such zero has
+\(\mathcal L_T<0\).
+
+\subsubsection{Large positive exits}
+
+We now treat the central heights in \(\mathcal H_p\) whose positive
+half-orbit is thin at \(\rho_i\), with the prefix
+\eqref{eq:direct-annulus-prefix}, and whose adaptive exit, at
+\(z=\delta_{\rm an}\varrho^2(s+\varrho)\) in the notation of
+\cref{lem:positive-branch-adaptive-exit}, has radius
+\(\varrho_e=s\rho_e\) with \(\rho_e\ge1\). The adaptive exit is the
+unique upward crossing of that level, so \(\rho_e\ge1\) means
+\(z(s;h)\le2\delta_{\rm an}s^3\). By \cref{lem:central-height-order},
+this condition and thinness at \(\rho_i\) each define an interval;
+their intersection is the interval considered here. For each such height,
+the negative annular thin exit at \(z/(s|\eta|^2)=\delta_{\rm an}\) remains
+in a fixed compact interval strictly below its far root, and for large
+\(\rho_e\) the return contracts.
+
+At \(\rho_i\), \eqref{eq:direct-annulus-prefix} reads
+\[
+ K_0^2\Psi_+(1/K_0,K_0r,y_i)=\xi_+\Upsilon_+(\xi_+),\qquad
+ y_i=\frac{z(\varrho_i;h)}{K_0^2Q},\qquad \varrho_i=K_0sr .
+\]
+Inverting this height coordinate gives
+\[
+ V_{\rm an}(\xi)=\frac{K_0^2}{\xi}
+   \Psi_+^{-1}\bigl(1/K_0,K_0r;\xi\Upsilon_+(\xi)/K_0^2\bigr),
+ \qquad z(\varrho_i;h)/Q=\xi_+V_{\rm an}(\xi_+).
+\]
+Thinness keeps the inverse in its fixed domain. Its derivative at zero
+is one, so \(V_{\rm an}(0)=1\), and the annular coordinate bounds
+supply the unit, reciprocal and inverse bounds required by
+\eqref{eq:positive-adaptive-prefix}. Thus
+\cref{lem:positive-branch-adaptive-exit} applies with
+\(\mathcal V=V_{\rm an}\) and \(\mathcal A_i=\mathcal A_{+,i}\).
+
+For \(1\le\rho\le\varrho_*/s\), where \(\varrho_*\) is a small
+fixed unscaled radius, subtraction of the positive
+action integrands gives the value estimate
+\[
+ \mathcal A_+(\rho)=\mathfrak c_++L_+(\rho)
+            +O\{r+s(1+\log(1+\rho))\}.
+\]
+Indeed \(D_+(t)\asymp t^2(1+t)\) and
+\(R_q(st)+1=O(s+st)\); the difference is bounded by
+\(Cr/t^2+Cs/(1+t)\) for \(t\ge v_b\).
+The action increment from \(K_0r\) to \(1\) gives the gap in part
+(iv) of the lemma, with \(\rho_{\rm g}=1\): since \(D_+>0\), the annular
+bound \(\mathcal J_+(\rho)\ge c\log(\rho/(K_0r))\) at \(\rho=v_1\) gives
+\(\mathcal J_+(1)\ge \mathcal J_+(v_1)\ge\frac c2\log(1/r)\) for small \(r\).
+Taking logarithms in \eqref{eq:direct-no-root-adaptive-input}, with
+\(\mathcal A_{+,i}+s\mathcal J_a(s\rho_e)=\mathcal A_+(\rho_e)\) and
+\(\varrho_e^2(s+\varrho_e)/Q=\rho_e^2(1+\rho_e)/r^2\), gives the equation
+for the central height at the adaptive exit:
+\[
+ s\log(h/s^3)=-\mathcal A_+(\rho_e)
+   +s\log[\rho_e^2(1+\rho_e)\Psi_a(u_e,v_e,\varrho_e,\delta_{\rm an})]
+   -s\log\Upsilon_a(\xi_+).
+\]
+By \eqref{eq:positive-adaptive-input-weight}, \(\xi_+\) and
+\(\log\Upsilon_a(\xi_+)\) are at most \(Cs^{-3}r^{c/(2s)-2}\). After
+reducing \(r\), the negative input
+\(\xi_-=\e^{(\mathcal A_{-,i}-\mathcal A_{+,i})/s}\xi_+\) is exponentially
+small as well, since
+\eqref{eq:direct-buffered-action-difference} bounds the difference of the
+central actions. The remaining height prefactor
+\(\rho_e^2(1+\rho_e)\Psi_a\) is at least \(c\delta_{\rm an}\) and, since the
+unscaled exit radius is bounded, at most a fixed power of \(s^{-1}\).
+Thus
+\[
+ s\log(h/s^3)=-\mathfrak c_+-L_+(\rho_e)
+                    +O(r+s(1+|\log s|)).
+\]
+Since \(f_\Lambda(\rho_e)\), for \(\rho_e\ge1\), lies
+in a fixed compact subset of \((0,1)\), comparison with
+\eqref{eq:direct-buffered-primary-source} at two wider
+negative endpoints proves existence of the negative exit.
+Keep these negative comparison endpoints fixed when choosing the
+large-exit threshold below.
+
+Differentiation of the equation for the central height on the
+negative branch gives
+\[
+ \frac{d\omega}{d\log h}
+   =-\frac{s}{\mathcal A_-'(\omega)
+                         -s(M_-^0)'(\omega)},\qquad
+ 0<hI_{-,h}\le Cs^3
+\]
+by \eqref{eq:direct-buffered-primary-endpoints}.
+On the positive branch, parts (ii) and (iv) of
+\cref{lem:positive-branch-adaptive-exit} give
+\(d\lambda_{\rm in}/d\log h=1+O(\xi_+)=1+O(s^N)\). By part (iii), the
+landing satisfies \eqref{eq:direct-tail-smallness}. These are the
+hypotheses of \eqref{eq:direct-adaptive-source-slope}. Since \(q_2=-s\),
+the condition \(q_2\le C_2s\) of \cref{cor:large-exit-contraction} holds
+with \(C_2=0\); take \(C_1\) the constant of the negative bound above, and
+fix \(R_0\ge1\) satisfying the condition on \(M_1\) there. The corollary
+gives \(\mathcal L<0\), and at most one zero of \(\Delta_p\), for
+\(\rho_e\ge R_0\).
+Writing \(\rho\) for the radius of the annular thin exit and \(\rho_e\)
+for that of the adaptive exit, we have
+\(\rho\le\rho_e\) by \eqref{eq:positive-annular-adaptive-heights}.
+On the interval \(\rho\ge\rho_{\rm lo}>0\),
+any zero of \(\mathcal L\) must have \(\rho_e<R_0\), because
+the large-exit estimate gives \(\mathcal L<0\) otherwise.
+Such a central height has \(\rho_{\rm lo}\le\rho<R_0\), so the compact-primary
+comparison proves \(\mathcal L_T<0\) at that zero. Thus every
+zero of \(\mathcal L\) on this entire later interval of central
+heights is a strict downward crossing.
+
+\subsubsection{Covering all central heights}
+
+We now join the comparisons in their central-height order. On the
+overlaps they concern the same slope ratio, so their crossing
+directions give one zero count on the whole interval.
+Use the same sufficiently small thin threshold \(\delta_{\rm an}\)
+at \(z_e=s^3r^2\delta_{\rm an}\). The quadratic-prefix lemma,
+with \(\delta\) there replaced by \(s\), \(\ell=sr\),
+and comparison drifts \(a-\sigma bx+x^2\), gives at most two
+zeros on
+\[
+ h\ge z_e,\qquad\hbox{or}\qquad
+ h<z_e,\quad |\eta_+(z_e;h)|/(sr)\le M_0 .
+\]
+The compact negative inverse follows from the first assertion of
+\cref{lem:prefix-root-cover},
+since \(a\ge\nu/4\) and the positive margin holds up to \(M_0\).
+Every other central height has its positive half-orbit below
+height \(z_e\) at all radii up to \(M_0sr\). For \(K_0r\le\rho\le M_0r\),
+it therefore satisfies
+\[
+ y(\rho)<\delta_{\rm an}(r/\rho)^2<\delta_{\rm an}.
+\]
+Its positive thin exit occurs beyond \(M_0r\).
+Such an exit exists before the admissible endpoint: the
+boundary coefficient satisfies \(q(\eta)<0\) on the positive branch throughout the
+small box in the coordinates \((\eta,z)\), whereas the endpoint has
+\(y\asymp s^{-1}>\delta_{\rm an}\). At a crossing of \(y=\delta_{\rm an}\),
+the right side of \eqref{eq:direct-annulus-level-crossing} is positive,
+because \(sK_+=O(s+|\eta|)\) past the inner cut.
+Thus every crossing is upward, and the first exit is unique.
+
+Take \(\rho_{\rm lo}=v_0/2\) in the compact-primary comparison and reduce \(r\)
+so that \(M_0r<\rho_{\rm lo}\). In increasing
+\(T\), the early central heights, the annular interval
+\(M_0r\le\rho\le v_0\), and the later interval \(\rho\ge\rho_{\rm lo}\)
+can be cut within their overlaps to give an ordered cover of
+\(\mathcal H_p\). Their order
+follows from the decrease of the central height with the exit radius.
+The first join has an overlap: an annular exit at \(M_0r\)
+has height \(s^3r^2M_0^2\delta_{\rm an}>z_e\), whereas at the height
+threshold of the early interval the positive half-orbit has height
+\(z_e\) at that radius. The second overlap is
+\(v_0/2\le\rho\le v_0\). These assertions persist after
+intersection with \(\mathcal H_p\), including empty end pieces.
+
+On the early interval, \cref{lem:direct-quadratic-prefix} gives
+\(\mathcal L_T>0\) at every zero of \(\mathcal L\).
+On the middle interval, either \(\mathcal L''<0\), for
+\(b\ge b_{*,-}\), or \(\mathcal L<0\), for \(b\le b_{*,-}\).
+In the latter case merge the nonvanishing middle interval with the
+initial interval; all zeros on their union cross upwards.
+On the later interval every zero has \(\mathcal L_T<0\), by the
+compact-primary and large-exit comparisons above.
+\Cref{lem:direct-oriented-zero-count} therefore gives at most two
+zeros of \(\mathcal L\) on the whole interval \(\mathcal H_p\), and
+\cref{cor:ordered-cover-zero-count} gives at most three zeros of
+\(\Delta_p\). This proves \cref{prop:direct-buffered-negative}.

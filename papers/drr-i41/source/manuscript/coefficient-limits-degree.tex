@@ -1,0 +1,1666 @@
+\subsection{Degree-loss and remote-root compactifications}
+\label{subsec:deg-degree-drop}
+
+At degree loss the three equatorial roots occupy two scales, and the two
+incident saddle exponents vanish at different rates. We construct one
+through interval before dividing it according to accumulated action.
+This ensures that the local estimates can later be combined for the
+complete physical displacement.
+
+\begin{proposition}[Degree-loss passage preparation]\label{deg:prop-degree-drop}
+Let \(\delta=\kappa\tau\), with \(0<\kappa,\tau\ll1\), and assume
+\begin{equation}
+ \begin{gathered}
+ a=\kappa A_{\rm d},\qquad
+ \mathcal R a c=B\kappa,\qquad
+ a+c=1-3\nu,\\
+ \mathcal R(1-3\nu)=\omega+B\kappa .
+ \end{gathered}
+ \label{deg:degree-graph}
+\end{equation}
+The quantities
+\[
+ B,\ \omega,\ \mathcal R,\ A_{\rm d},\ c,\ 1-3\nu,\ c-a
+\]
+and their reciprocals are required to lie in prescribed compact
+intervals.  Consider the source coefficients
+\begin{equation}
+ (a_s,p_s,\gamma_s,s_s)=
+ \left(-1,\sqrt\tau\frac{\omega}{\sqrt B},
+       \tau\kappa\mathcal R\nu,
+       \tau^{3/2}\kappa^2\mathcal R\sqrt B\right).
+ \label{deg:degree-source}
+\end{equation}
+On the fixed physical passage, below the common raw-height bound, the
+ordered through interval is covered by the bounded-source, growing-action,
+finite-middle-height, and fixed-exit ranges constructed below, together
+with their high-height continuation. The actual matching maps,
+derivative estimates, and strict overlaps are uniform on the displayed
+compact coefficient family for positive \(\kappa,\tau\). At
+\(\kappa\tau=0\), only the one-sided limits of normalized estimates
+are asserted. The finite-\(V\) and fixed-exit ranges retain the original
+section maps and finite closing on their actual buffered domains.
+\end{proposition}
+
+\begin{proof}
+Set
+\[
+ r_s=\delta\mathcal R,\qquad
+ v-\gamma_s=r_su,\qquad z=r_s^2w,\qquad
+ \gamma_s=r_s\nu .
+\]
+The full two-dimensional system, after a positive change of time, is
+\begin{equation}
+ \dot u=\delta p_d(u)-K_d(u)w,\qquad
+ \dot w=-w\{L_d(u)+E_d(u)w\},
+ \label{deg:degree-field}
+\end{equation}
+where \(p_d=p_{\rm d}\) from \eqref{fx:pd} and
+\((K_d,L_d,E_d)=(K,L,E)\) from \eqref{fx:coefficients}.
+Thus the saddle rates and exponents are exactly those in
+\eqref{fx:exponents}. On the present coefficient family,
+\begin{equation}
+ \chi=\frac{\delta\ell_+}{b_+}=\tau X_d,\qquad
+ \beta=\frac{\delta\ell_-}{b_-}=\kappa\tau B_d,\qquad
+ \frac{\beta}{\chi}=\kappa Q_d,
+ \label{deg:degree-exponents}
+\end{equation}
+with \(X_d,B_d,Q_d\) positive units.  These identities provide the
+uniform spectral gaps used in the two local saddle charts.
+
+Fix \(0<\eta_\pm<1\), set
+\(u_+=a(1-\eta_+)\), \(u_-=-1+\eta_-\), and on
+\([u_-,u_+]\) write
+\[
+ h=-\delta p_d
+   =\delta\mathcal R(u+1)(a-u)(c-u)>0,\qquad
+ A_m={L_d\over h}.
+\]
+The scalar equation and its partial fractions are
+\eqref{eq:comparison-middle} and \eqref{fx:partial-fractions}.
+For \(J(u)=\exp\int_{u_+}^uA_m\) and \(J_-=J(u_-)\),
+\begin{equation}
+ J(u)=
+ \left({1+u_+\over1+u}\right)^{1/\beta}
+ \left({a-u_+\over a-u}\right)^{1/\chi}
+ \left({c-u\over c-u_+}\right)^{1+1/\beta+1/\chi}.
+ \label{deg:degree-middle-cocycle}
+\end{equation}
+Writing
+\[
+ \Lambda_\beta=
+ \log{(1+u_+)(c-u_-)\over(1+u_-)(c-u_+)},
+ \qquad \Lambda_\chi=\log a+O(1),
+\]
+we obtain
+\begin{equation}
+ \log J_-={\Lambda_\beta+(\beta/\chi)\Lambda_\chi\over\beta}
+             +O(1),\qquad J_-\ge e^{c_0/\beta}.
+ \label{deg:degree-large-cocycle}
+\end{equation}
+Indeed \(\Lambda_\beta\ge c_0>0\), while
+\((\beta/\chi)|\log a|=O(\kappa|\log\kappa|)=o(1)\).
+
+To measure how the middle passage concentrates near its negative end,
+use the normalized action \(\rho=h(u_-)J/(J_-h)\) of
+\eqref{fx:rho-gamma}, so
+\(\rho(u_-)=1\).
+If \(D_m=L_d-h'\), direct differentiation gives
+\[
+ {d\rho\over\rho}={D_m\over h}\,du,\qquad
+ D_m'(u)=1-4\delta\mathcal R(u+\nu)>0.
+\]
+For one fixed \(u_0\in(u_-,0)\), this implies
+\(\rho(u_0)\le e^{-c/\beta}\) and
+\(\operatorname {Var}\rho\le2\).  Since
+\[
+ {h'\over h}={1\over u+1}-{1\over a-u}-{1\over c-u},
+\]
+the explicit expression \eqref{deg:degree-middle-cocycle} also yields
+\begin{equation}
+ \int_{u_-}^{u_+}\rho
+ \left(|E_d|+\left|{h'\over h}\right|\right)du=o(1).
+ \label{deg:degree-small-mass}
+\end{equation}
+The only noncompact term is bounded by
+\(C\beta+C(1+|\log a|)e^{-c/\beta}/a\).  Thus no quotient
+\(\nu/\kappa\) has entered the estimate.
+
+We next place this middle transition inside a single interval of
+trajectories joining the fixed physical sections.  Put
+\begin{equation}
+ s_0=\kappa\sqrt B,\qquad
+ x_*={a\over s_0}={A_d\over\sqrt B},\qquad
+ u=s_0\xi,\qquad w=s_0^2\tau y.
+ \label{deg:degree-parabolic-dictionary}
+\end{equation}
+With
+\[
+ \Lambda_1=\frac{\omega}{\sqrt B},\qquad
+ \Lambda_2=\kappa^2\mathcal R\sqrt B,\qquad
+ \Lambda_3=\kappa\mathcal R\nu,
+\]
+the exact axis polynomial is
+\begin{equation}
+ P_s(\xi)=(1+s_0\xi)
+       \left(1-{\xi\over x_*}\right)
+       \left(1-{s_0\xi\over c}\right),
+ \label{deg:degree-source-polynomial}
+\end{equation}
+and the full source system has the form
+\begin{equation}
+ \dot\xi=-\tau\{P_s+Q_\tau y\},\qquad
+ \dot y=-y\{\xi B_\tau+C\tau^3\Lambda_2
+                   (\Lambda_3+\Lambda_2\xi)y\},
+ \label{deg:degree-source-field}
+\end{equation}
+where
+\[
+ B_\tau=1+\tau(2\Lambda_3+\Lambda_2\xi),\qquad
+ Q_\tau=1-A\tau(\Lambda_3+\Lambda_2\xi)
+          +C\tau^2(\Lambda_3+\Lambda_2\xi)^2.
+\]
+
+We construct two boundaries of the relevant through interval on the
+same fixed physical sections.  For the upper comparison, prescribe the
+actual point \(h_L=0\) of \eqref{bd:incoming-phase}, with
+\(\eta=\tau y\).  Put
+\(b_\tau=-\log(2\tau)\), \(q_\tau=b_\tau^{-1/2}\).
+Freezing the source height scale changes the active quartet to
+\begin{equation}
+ \left(-q_\tau^2,\sqrt\tau\Lambda_1q_\tau,
+       \tau\Lambda_3,{\tau^{3/2}\Lambda_2\over q_\tau}\right)
+       \longrightarrow0.
+ \label{deg:degree-zero-source}
+\end{equation}
+Lemma~\ref{bd:lem-source-ranges} constructs this orbit by an actual
+incoming-to-central first hit, together with a real larger source
+chord, using \eqref{bd:graph} with \(P_\sigma=P_s\).
+Choose the fixed \(L>4(1+\sup x_*)\) of that lemma. Its energy
+comparison gives, uniformly also on the larger source chord,
+\begin{equation}
+ \eta(\pm L)={L^2\over2}+O_L(\tau b_\tau),\qquad
+ Q_\tau\eta+\tau P_s\ge c\eta .
+ \label{deg:degree-zero-cuts}
+\end{equation}
+The same proof gives
+\(\eta\asymp\tau b_\tau+\xi^2\) and the denominator margin
+throughout the central source chord.  Thus \(h_L=0\) is an interior physical orbit, with neighbouring
+through trajectories on both sides.
+
+To continue to the fixed raw sections, put \(W=w/u^2\) and
+\(r=|u|\).  Direct substitution in \eqref{deg:degree-field} gives
+\begin{equation}
+ rW_r={WA_\pm(r,W)\over
+ K_d(\pm r)W-\delta p_d(\pm r)/r^2}-2W,
+ \label{deg:degree-reciprocal}
+\end{equation}
+where
+\[
+ A_+={L_d(r)+E_d(r)r^2W\over r},\qquad
+ A_-=-{L_d(-r)+E_d(-r)r^2W\over r}.
+\]
+After choosing a fixed \(U>2\max(1,c,|\nu|)+2\), then \(L\), the
+strip
+\begin{equation}
+ {1\over3}<W<{3\over4},\qquad
+ K_d(\pm r)W-\delta p_d(\pm r)/r^2>c_1
+ \label{deg:degree-parabolic-strip}
+\end{equation}
+is invariant from \(s_0L\) to \(U\).  Equation
+\eqref{deg:degree-zero-cuts} enters its interior.  The same reciprocal
+equation in raw coordinates continues it to the fixed sections and
+crosses each intervening equatorial root at positive height.
+
+The lower boundary is the broken trajectory
+\begin{equation}
+ W^s_+(a,0)\cup\{(u,0):-1\le u\le a\}\cup W^u_+(-1,0).
+ \label{deg:degree-stopped-curve}
+\end{equation}
+The invariant-manifold theorem in the two fixed weighted half-boxes
+constructs the upper stable and unstable branches.  Their graph
+denominators have a positive margin after division by the local
+transverse scale.  To attach them to the fixed sections, first leave
+the positive box at \(\xi=x_*+\ell_*\), with \(\ell_*>0\) fixed.
+Its height and denominator are bounded below by \(c\ell_*\).
+The graph equation therefore reaches \(\xi=L\), with
+\[
+ \eta_+^{\rm st}(L)=(L^2-x_*^2)/2+o(1).
+\]
+On the negative side leave the weighted box at \(u=-R\), with
+\(R=1+\rho_*\), \(\rho_*>0\) fixed.  Its outgoing graph has
+\[
+ w_-^{\rm st}(-R)=(R^2-1)/2+o(1),\qquad
+ K_dw_-^{\rm st}-\delta p_d\ge c(R^2-1).
+\]
+The barriers \(2(r^2-1)/5\) and \(3(r^2-1)/5\) continue this
+graph until it enters \eqref{deg:degree-parabolic-strip}.  Both
+branches then reach \(u=\pm U\), and afterwards the fixed raw
+sections.  The source cuts \(u=\pm s_0L\) occur before all three equatorial
+roots have been passed. The intermediate fixed cuts complete that
+continuation before the raw tails are attached.
+
+Between the saddle boxes \(p_d<0\), so
+\(\dot u=-(h+K_dw)<0\) for every \(w\ge0\).  On either exterior
+side the stopped branch has \(\dot u<0\) away from its saddle and
+\(\partial_w\dot u=-K_d<0\).  Scalar order thus keeps every graph
+between the stopped and upper comparison graphs in the same positive
+denominator domain.  The inclination lemma in the two saddle boxes,
+together with Lemma~\ref{lem:loc-through}, identifies the stable
+branch as the lower endpoint of the through interval.  Write the two
+actual positive-section traces as
+\(h_{\rm in}^{\rm st}<h_{\rm in}^0\), where \(h_{\rm in}^0\) is the
+trace of \(h_L=0\). There is no cycle at or below
+\(h_{\rm in}^{\rm st}\).
+
+The quadratic outer equation contracts towards its organizing corridor
+in logarithmic radius.  More explicitly, for a fixed small raw cut
+\(v_0\), its deviation at \(\pm v_0\) is bounded by
+\[
+ C(r_sU/v_0)^\alpha+Cr_s/v_0
+       +C(|A-1|+|C-1|),\qquad 1<\alpha<2.
+\]
+This follows from \(\mu_i=O(r_s^{4-i})\), \(i=1,2,3\), and
+variation of constants after \(u=\pm U\), retaining the passive
+coefficient differences from the organizing equation. The fixed regular maps
+then put both boundary traces, and by scalar order the whole interval
+\((h_{\rm in}^{\rm st},h_{\rm in}^0)\), in the prescribed raw section
+windows.
+This scalar order locates the orbits in the raw windows. We estimate
+the derivatives separately on the enlarged chords transported into
+those windows.
+
+The two fixed comparisons of Proposition~\ref{bd:prop-bounded-action}
+supply the overlapping source interval $-\delta_2\le h_L\le0$ and
+bounded strong-footpoint annulus. Their enlarged independent windows
+reach the same raw sections by \eqref{bd:parabolic-cuts} and the outer
+bridges above.
+
+Let \(r_b\) be the negative strong footpoint where that section is
+met.  On the lower part of the through interval let \(r_\ell\) be
+the first point on the actual curve \(y/P_s=\ell_0\).
+Choose a fixed \(r_c>2\).  A fixed real comparison through orbit
+has a positive ratio at \(-r_c\); choose \(\ell_0\) below that
+ratio.  Scalar order gives a unique lower interval on which the
+initial ratio is smaller than \(\ell_0\).  Before its first hit,
+directly from \eqref{deg:degree-source-field},
+\begin{equation}
+ {d\over dr}\log{y(-r)\over P_s(-r)}
+ \ge {c\over\tau(1-s_0r)}
+ \label{deg:degree-ratio-monotonicity}
+\end{equation}
+on the full interval \(r_c\le r<1/s_0\).  A strict through graph
+has positive height at the negative root while \(P_s(-r)\to0\).
+Hence the hit exists.  Its uniqueness and the positive first
+variation at a fixed section give
+\begin{equation}\label{deg:degree-phase-order}
+ \partial_{h_{\rm in}}r_\ell<0,\qquad
+ \partial_{h_{\rm in}}r_b<0,\qquad
+ \frac{dr_\ell}{dr_b}>0
+\end{equation}
+on the common domain, with \(h_{\rm in}\) the actual raw input height.
+No equality between the two footpoint coordinates has been used.
+
+We need a coefficient-independent threshold at which a first ratio
+hit has sufficiently large action.  Fix a positive weak-section input \(P_0\) in
+the positive saddle box.  Its local Dulac formula and
+\(\chi\asymp\tau\) give
+\(-\tau\log z_+\le C(P_0)\) for inputs \(P\ge P_0\).
+The exact core equation consequently gives
+\(\log(y/P_s)(-r_c)\ge-C(P_0)/\tau\), unless the first hit
+has already occurred.  If there were no hit before \(R\),
+\eqref{deg:degree-ratio-monotonicity} would imply
+\[
+ \log(y/P_s)(-R)\ge
+             \{-C(P_0)+c(R-r_c)\}/\tau.
+\]
+Choosing \(R=R(P_0)\) large is a contradiction.  Thus
+\(r_\ell\to\infty\) forces \(P\to0\) uniformly.  Choose
+\(P_0\) so that its positive action exceeds the fixed middle
+variational exponent by two; then fix
+\(r_{\rm ge}^{\rm out}>R(P_0)\) and
+\(r_{\rm ge}>r_{\rm ge}^{\rm out}\).  The growing-action estimates below therefore start with a strict lower
+action margin.
+
+At \(r_\ell=r_{\rm ge}\), the actual strong projection has a
+compact image.  Choose an independent \(R_{\rm BD}\) so that
+this image lies strictly below \(2R_{\rm BD}\).  The transverse
+inverse and \eqref{deg:degree-phase-order} then give a fixed
+\(r_{\rm ge}^{\sharp}>r_{\rm ge}\) whose entire closed interval
+\([r_{\rm ge},r_{\rm ge}^{\sharp}]\) lies inside the enlarged
+annular resection.  In particular,
+\[
+ r_b>2R_{\rm BD}\ \Longrightarrow\ r_\ell>r_{\rm ge}.
+\]
+Only now decrease the upper \(s_0\)-bound so that this whole fixed
+overlap lies in the growing-action product range.  Fix \(V_1>1\) and
+\(0<\sigma_1<\sigma_2<\sigma_0<1/4\), with
+strictly enlarged ranges at every endpoint.
+The four passage regions will be restrictions of this ordered through
+interval.
+
+Choose one coefficient-only real action offset \(A_{c,0}(\theta)\),
+held fixed by every phase derivative, and put
+\[
+ \mathcal P(r)=P_s(-r)/B_\tau(-r),\qquad
+ \mathcal D=(\mathcal P(r)/r)\partial_r,\qquad
+ \mathcal A_-(r)=\int_{r_c}^r\frac{vB_\tau(-v)}{P_s(-v)}\,dv-A_{c,0}.
+\]
+Lemma~\ref{deg:lem-growing-matching-direct} constructs the two
+centre maps independently, retaining the exact initial polynomial
+and both core multipliers. Its product rows
+\eqref{deg:source-growing-product-phase-rows} and matched identity
+\eqref{deg:degree-growing-matching} give the actual graph, with
+\(|\zeta|+|X\partial_X\zeta|\le C\tau\) on its enlarged image.
+
+Construct one negative section map for both the growing and fixed-exit
+ranges. Fix \(u_c\in(-1,u_-)\) with \(|u_c|>2\sigma_0\), retain
+its enlarged product buffer \(\sigma_0\le\bar\sigma<|u_c|/2\), and choose
+\(\Delta>0\) below one third of the minimum of the gap
+\eqref{fx:overlap-gap} on \([\sigma_1,\sigma_2]\), also with
+\(\Delta<\frac14\inf_c\Gamma_{-,c}\). Enlarge the intervals of
+\eqref{fx:W-limit} once more, with uniform strict margins:
+\[
+ \mathcal J_c\Subset\mathcal J_c^\sharp
+ \Subset\mathcal J_c^{\sharp\sharp}\Subset(0,u_c^2/2).
+\]
+Apply Lemma~\ref{deg:lem-growing-landing-direct} on the original
+enlarged lip range, with its fixed lower threshold and product buffer.
+Equations \eqref{deg:landing-direct-value} and
+\eqref{deg:landing-direct-gamma-unit} give the actual landing value,
+its strict derivative and its positive first-variation unit.
+The action supremum in \eqref{deg:landing-direct-first-row} is
+$O(\tau(1+|\log\tau|))$, uniformly in independent $\kappa,j$.
+Since \(s_0r\le\sigma_0\), these heights lie strictly inside
+\[
+ \mathcal J_{\rm gr}=[u_c^2/4,3u_c^2/4]
+ \Subset\mathcal J_{\rm gr}^{\sharp}=(u_c^2/8,7u_c^2/8).
+\]
+Choose a fixed compact positive-height interval \(\mathcal I_{\rm out}\)
+containing the closures of \(\mathcal J_{\rm gr}^{\sharp}\) and
+\(\mathcal J_c^{\sharp\sharp}\) with a strict buffer, uniformly in
+\(c\). Thus it contains \(u_c^2/2\), while the fixed-exit chord
+stays strictly below that height.
+
+For every \(W\in\mathcal I_{\rm out}\), the limiting graph
+\(w(u)=W+(u^2-u_c^2)/2\) has a uniform positive height from
+\(u_c\) to a fixed large negative cut \(-U_-\). Ordinary ODE
+dependence gives a positive exact denominator, including at \(u=-1\),
+and uniform \(C^5\) bounds for this finite passage and its inverse.
+Choose \(U_-\) to enter \eqref{deg:degree-parabolic-strip}.
+The tail estimates
+\eqref{ann:tail-first-variation}--\eqref{eq:N-parameter-bound},
+with the exact first cocycle extracted through three variations, give
+\[
+ \begin{gathered}
+ z_-(W)=z_-^{\rm st}+\Omega Z_-(W),\qquad
+ \Omega=r_s^{\,2-\lambda_\gamma},\quad
+ \lambda_\gamma=\frac{12\gamma_s}{1+2\gamma_s},\\
+ Z_-'>c,\qquad \|Z_-\|_{C^3}+\|Z_-^{-1}\|_{C^3}\le C.
+ \end{gathered}
+\]
+Since \(\Omega\to0\) and the stopped trace lies inside its fixed raw
+window, the whole chord is in the domain of \(d_\theta\) after shrinking
+the coefficients. Compose with that map, put \(t_b=d_\theta(z_-^{\rm st})\),
+and fix an interior reference \(W_\circ\). With
+\(U_{\rm out}=\Omega^{-1}(d_\theta\circ z_-)'(W_\circ)\),
+this defines a single actual map
+\begin{equation}\label{deg:fixed-exit-actual-output}
+ \begin{gathered}
+ \Xi(W)=t_b+\Omega U_{\rm out}D^n(W),\qquad U_{\rm out}^{\pm1}\le C,\\
+ (D^n)'>c,\qquad \|D^n\|_{C^3}+\|(D^n)^{-1}\|_{C^3}\le C.
+ \end{gathered}
+\end{equation}
+For compact \(\nu\), \(|\lambda_\gamma\log r_s|\to0\), so
+\(\Omega\asymp r_s^2\); the exact power is retained for the remote-root
+face. In particular \(\Xi'\asymp\Omega\) and
+\(|\Xi''/\Xi'|\le C\) on the entire common chord.
+
+Fix \(r_\circ\) inside the enlarged growing domain and define
+\[
+ \begin{gathered}
+ a_{\rm grow}=\Omega s_0^2U_{\rm out},\qquad
+ t_\dagger=\Xi(W_\theta(r_\circ))+a_{\rm grow}r_\circ^2/2,\\
+ T(r)=\Xi(W_\theta(r))=t_\dagger-a_{\rm grow}\mathcal B(r).
+ \end{gathered}
+\]
+The fixed-endpoint variation in
+Lemma~\ref{deg:lem-growing-landing-direct} gives
+\begin{equation}\label{deg:degree-growing-output}
+ \mathcal B'(r)=rG(r),\qquad
+ G(r)=\Gamma_\theta(r)
+              \frac{\Xi'(W_\theta(r))}{\Omega U_{\rm out}}>0.
+\end{equation}
+Its exact chain rule is
+\begin{equation}\label{deg:source-growing-output-log-row}
+ \mathcal D\log G=
+ \mathcal D\log\Gamma_\theta
+ -s_0^2\mathcal P(r)\Gamma_\theta(r)
+                  \frac{\Xi''(W_\theta(r))}{\Xi'(W_\theta(r))}.
+\end{equation}
+Estimates~\eqref{deg:landing-direct-raw-first-row} and
+\eqref{deg:source-growing-actual-quotient-estimates} control the two
+terms that enter the complete displacement after finite closing.
+
+On the positive side use the fixed local cuts and stopped outer chord
+of Lemma~\ref{lem:actual-dulac-matching}. Its backward-integral and tail
+construction holds through five phase derivatives. Thus the natural
+raw input is
+\begin{equation}\label{deg:fixed-exit-natural-input}
+ P=\frac{x_{\rm raw}-x_b}{s_{\rm in}},\qquad
+ s_{\rm in}=\Omega a^{2-\lambda_\gamma}U_{\rm in},\qquad
+ U_{\rm in}^{\pm1}\le C,
+\end{equation}
+and the normalized map from the fixed outer chord and its inverse
+have uniform \(C^5\) bounds. In the positive saddle coordinates
+\(x=(u-a)/a,y=w/a^2\), write the invariant restrictions on
+\(x=-\eta_+\) as
+\[
+ A_+(y)=-\Xi_{+,m}(y),\quad A_0=A_+(0)>0,\qquad
+ Z_{+,m}(y)=z_+y g_+(y),\quad g_+(0)=1.
+\]
+Here \(A_0,z_+\) are positive units and \(A_+,g_+\) have uniform
+finite derivative bounds. On the outer chord the invariant coordinate
+constructed in that lemma is
+\(\mathscr L_\theta(P)=-I(P)/A_0=\Phi_+(P)/A_0\); hence
+\[
+ \mathscr L_\theta(0)=0,\qquad \mathscr L_\theta'>c>0,\qquad
+ \|\mathscr L_\theta\|_{C^5}
+       +\|\mathscr L_\theta^{-1}\|_{C^5}\le C.
+\]
+Choose \(p_0>0\) small, independently of the coefficients, so that
+\(\mathscr L_\theta(P)\le\vartheta<1\) on \([0,p_0]\).
+Equality of the two invariants is exactly
+\begin{equation}\label{deg:fixed-exit-middle-invariant}
+ \mathscr L_\theta(P)=\frac{A_+(y)}{A_0}
+                         \{z_+y g_+(y)\}^{\chi}.
+\end{equation}
+This equation has a unique small nonnegative solution \(y=y(P)\).
+Indeed, on \(0<y\le\chi^2\) the logarithmic derivative of its
+right side, multiplied by \(y\), is
+\[
+ B_\chi(y)=\chi+y\frac{A_+'(y)}{A_+(y)}
+                   +\chi y\frac{g_+'(y)}{g_+(y)}
+          =\chi+O(y)\ge\chi/2.
+\]
+The right side of \eqref{deg:fixed-exit-middle-invariant} tends
+uniformly to one at \(y=\chi^2\), while its limit at zero is zero.
+Thus it covers \([0,\vartheta]\) for
+all sufficiently small \(\chi\). Taking logarithms gives
+\[
+ y=z_+^{-1}\mathscr L_\theta(P)^{1/\chi}
+       \exp O(y/\chi+y).
+\]
+In particular the exponential factor is a positive unit. From
+\(dy/d\mathscr L=y/(\mathscr L B_\chi(y))\), differentiation
+twice more and the bounded derivatives of \(A_+,g_+\) give
+\begin{equation}\label{deg:fixed-exit-flat-height}
+ |\partial_P^j y(P)|\le
+ C_j\chi^{-j}\mathscr L_\theta(P)^{1/\chi-j},
+ \qquad 0\le j\le3,\quad P>0.
+\end{equation}
+For \(\chi<1/4\) these derivatives have zero limits at \(P=0\).
+Their suprema on the fixed interval tend to zero, since
+\(\chi^{-j}\vartheta^{1/\chi-j}\to0\).
+
+Define, with its continuous value at zero,
+\begin{equation}\label{deg:fixed-exit-exact-weak-coordinate}
+ \Phi_\theta(P)=\{z_+y(P)\}^{\chi}
+ =\mathscr L_\theta(P)\frac{A_0}{A_+(y(P))}
+                          g_+(y(P))^{-\chi}.
+\end{equation}
+The second expression and \eqref{deg:fixed-exit-flat-height} show
+that \(\Phi_\theta-\mathscr L_\theta\to0\) in \(C^3\).
+Consequently \(\Phi_\theta'>c>0\), its \(C^3\) norm and inverse
+norm are uniform, and \(\Phi_\theta(P)=PU_\theta(P)\) with
+\(U_\theta\) a positive unit on \([0,p_0]\).
+Only phase derivatives are used here.
+
+Use \(\lambda=\ell_0\) in the normalized middle action
+\(w=\ell_0h\rho V\) of \eqref{eq:comparison-action}.
+The exact reference value follows directly from that raw height. Put
+\[
+ \varepsilon_+=\frac{\lambda h_-}{a^2J_-},\qquad
+ \Lambda_+^m=(z_+\beta\varepsilon_+)^\chi,
+ \qquad
+ \Phi_\theta(a_{\rm in})=\Lambda_+^m.
+\]
+Write \(q_s=\beta/\chi\), \(j=1/c\), \(d=\mathcal Rc\), and
+\(\mathscr R=(1-ju_-)/(1-ju_+)\). The logarithms in
+\eqref{deg:degree-middle-cocycle} are exactly
+\[
+ \Lambda_\beta=\log\frac{(1+u_+)\mathscr R}{1+u_-},\qquad
+ \Lambda_\chi=\log\frac{(a-u_+)\mathscr R}{a-u_-}.
+\]
+The reference telescope is
+\begin{equation}\label{p2:reference-telescope}
+ \begin{gathered}
+ \beta\log(z_+\beta\varepsilon_+)
+ =-\Lambda_\beta-q_s\Lambda_\chi+\beta\log(\tau^2U_{\rm tel}),\\
+ U_{\rm tel}=\frac{z_+\ell_0\beta\delta d}{a^2\tau^2}
+                (1+u_-)(a-u_-)(1-ju_+),\qquad U_{\rm tel}^{\pm1}\le C.
+ \end{gathered}
+\end{equation}
+Here \(\delta=\kappa\tau\), \(a=\kappa A_d\), and
+\(\beta=\kappa\tau B_d\); hence all factors of \(\kappa\)
+cancel in \(U_{\rm tel}\). Since
+\(\Lambda_\beta=\Gamma_{-,c}+O(a)\) and
+\(\Lambda_\chi=\log a+O(1)\), the error is bounded by
+\(C\{a+q_s(1+|\log a|)+\beta(1+|\log\tau|)\}\).
+It tends to zero under independent coefficient bounds, giving
+\begin{equation}\label{deg:degree-fixed-exit-gap}
+ q_s\log\Phi_\theta(a_{\rm in})
+ =\beta\log(z_+\beta\varepsilon_+)
+ =-\Gamma_{-,c}+o(1).
+\end{equation}
+Thus \(\Lambda_+^m\to0\) and the reference
+\(a_{\rm in}\in(0,p_0)\) exists uniquely. It corresponds to
+\(y=\beta\varepsilon_+\), hence to the raw middle input \(V=\beta\).
+For every orbit in this local input interval, the exact height dictionary is
+\begin{equation}\label{fx:height-dictionary}
+ \begin{gathered}
+ y=\varepsilon_+V,\qquad
+ V=\beta\left(\frac{\Phi_\theta(P)}
+                    {\Phi_\theta(a_{\rm in})}\right)^{1/\chi},\\
+ \frac{w(u_+)}{h(u_+)}=\lambda\rho(u_+)V.
+ \end{gathered}
+\end{equation}
+
+We have constructed the through interval, its first ratio hits and its
+input, output and centre-height maps. Proposition~\ref{p2:prop-unified-carrier-cover}
+uses them to cover every input, including truncated intervals and
+boundaries between the four ranges. Proposition~\ref{p2:prop-finite-v-fe-actual-budget}
+constructs the last two transitions on the same shooting chord and
+buffered closing image.
+\end{proof}
+
+The remote positive root requires a different coordinate at infinity.
+Its reciprocal keeps the finite passage coefficients regular while the
+physical tail scales are retained exactly.
+
+\begin{proposition}[The remote-root face]\label{deg:prop-degree-infinity}
+Let \(d,A_d\) range in positive compact intervals and put
+\begin{equation}
+ \begin{gathered}
+ 0\le j\le j_0,\qquad a=\kappa A_d,\qquad
+ \mathcal R=dj,\qquad B=dA_d,\\
+ \omega=d(1-a+ja),\qquad
+ j\nu={j-ja-1\over3},\qquad \delta=\kappa\tau .
+ \end{gathered}
+ \label{deg:degree-infinity-graph}
+\end{equation}
+For \(j>0\) this is \eqref{deg:degree-graph} with \(c=j^{-1}\).
+For \(j>0\), the conclusion of Proposition~\ref{deg:prop-degree-drop}
+extends uniformly as \(j\downarrow0\). At \(j=0\) this denotes only the
+one-sided closure of the analytic estimates, not an additional physical
+coefficient fibre or an asserted inverse raw gate.
+\end{proposition}
+
+\begin{proof}
+The factorization and translated root are
+\begin{equation}
+ p_d(u)=d(u+1)(u-a)(1-ju),\qquad
+ \gamma_s={\kappa\tau d\over3}(j-ja-1).
+ \label{deg:degree-infinity-factor}
+\end{equation}
+All coefficients of the exact field on bounded \(u\)-intervals are
+analytic at \(j=0\).  In the middle calculation the apparently singular
+quantities reduce to
+\[
+ {1-ju\over1+j},\qquad {j\over1-ju},\qquad
+ D_m'=1-4\gamma_s-4\kappa\tau dju.
+\]
+The limiting functions needed in the accumulated-action and fixed-exit
+arguments are
+\[
+ H_{0,j}(u)=-{u(1+u)(1-ju)\over1+j},\qquad
+ \Gamma_j(u)=
+ \log{(1+u)(1-ju_-)\over(1+u_-)(1-ju)},
+\]
+and
+\[
+ \Gamma_{-,j}-\Gamma_j(-\sigma)
+ =\log{1+j\sigma\over1-\sigma}>0.
+\]
+Thus the small-mass, Lambert, and fixed-exit estimates above extend
+continuously to \(j=0\).
+
+The bounded-action domains also have regular coordinates.  Put
+\(\sigma=s_0=\kappa\sqrt B\), \(x_*=A_d/\sqrt B\).  Then
+\[
+ P_\sigma(\xi)=(1+\sigma\xi)(1-\xi/x_*)(1-\sigma j\xi),\qquad
+ \Lambda_2=\sigma^2j/x_*,\quad
+ 3\Lambda_3=\sigma(j-1)/x_*-\sigma^2j<0.
+\]
+The positive root remains simple and the negative compact-output
+interval has a positive polynomial margin.  The two fixed phase
+comparisons, the compact central-height estimate, and the negative
+frozen first-exit construction in
+Lemma~\ref{bd:lem-source-ranges} are consequently uniform on the
+compact \(j\)-block.  Lemma~\ref{bd:lem-annulus} uses the sign
+\(\Lambda_3<0\) on this face: its actual first tail cocycle is only
+bounded above by \(Ce^2\), with \(e=\tau\Lambda_2\), and is
+retained exactly in the relative normalization.  Thus it requires
+no bound on \(\tau|\Lambda_3||\log e|\), even when \(j\) is
+arbitrarily small.  The bounded-action estimate is therefore uniform even as the third root
+escapes the compact root chart.
+
+It remains to check the unbounded tails.  Their exact source coefficients
+are
+\[
+\begin{array}{c|cccc}
+ &a_\pm&p_\pm&\gamma_\pm&s_\pm\\ \hline
+ +&-\tau d/A_d&\tau d(1-a+ja)/A_d&\gamma_s&r_sa\\
+ -&-\kappa^2\tau dA_d&\kappa\tau d(1-a+ja)&\gamma_s&r_s,
+\end{array}
+\qquad r_s=\kappa\tau dj.
+\]
+After the transverse blow-down, the two maps to the fixed raw sections
+have first-cocycle scales
+\begin{equation}
+ r_s^{\,2-\lambda_\gamma}U_-,\qquad
+ r_s^{\,2-\lambda_\gamma}a^{\,2-\lambda_\gamma}U_+,
+ \qquad \lambda_\gamma={12\gamma_s\over1+2\gamma_s},
+ \label{deg:degree-common-scale}
+\end{equation}
+with normalized phase derivatives bounded.  The common factor
+\(r_s^{2-\lambda_\gamma}\) cancels in the complete transition, while
+\(|\lambda_\gamma\log a|=o(1)\). With \(q_s=\beta/\chi\),
+the exact telescope \eqref{p2:reference-telescope} gives
+\[
+ q_s\log\Lambda_+^{m}=-\Lambda_\beta+o(1),\qquad
+ e^{-C/q_s}\le\Lambda_+^{m}\le e^{-c/q_s},
+\]
+and contains no term \(\beta\log j\). The common section scales are
+\(s_{\rm in}=\Omega a^{2-\lambda_\gamma}U_{\rm in}\) and
+\(a_{\rm out}=\Omega U_{\rm out}\), with
+\(\Omega=r_s^{2-\lambda_\gamma}\).
+
+The local boxes and normalized outer maps have uniform finite phase
+bounds on the compact $j$-block, so the weak-coordinate construction
+\eqref{deg:fixed-exit-middle-invariant}--\eqref{deg:fixed-exit-flat-height}
+has exact reference
+\[
+ \Phi_\theta(a_{\rm in})=(z_+\beta\varepsilon_+)^\chi,
+ \qquad q_s\log\Phi_\theta(a_{\rm in})=-\Gamma_{-,j}+o(1).
+\]
+Proposition~\ref{p2:prop-finite-v-fe-actual-budget} uses these regular
+functions \(H_{0,j},\Gamma_j\), their strict action gap and the exact
+raw scales to extend the last two passage estimates to this face.
+
+For the outer geometry no fixed cut beyond \(|\nu|\) is available.
+Choose instead the positive source cut \(\xi=x_*L_t\), so that
+\(u/a=L_t\) exactly.  The actual source construction gives
+\(1/3<\eta/\xi^2<3/4\) and a positive divided denominator there.
+On the negative side continue from \(u=-s_0L\) only to
+\(u=-L_t\).  On this interval the regular factorization gives
+\[
+ |p_d(-r)|\le Cr,\qquad
+ |\delta p_d(-r)|/r^2\le C\tau/L,\qquad
+ |K_d-1|+|-L_d(-r)/r-1|\le C\kappa\tau.
+\]
+The equation for \(w/u^2\) therefore has the same invariant strip
+and positive denominator.  These are the two finite entry chords
+for the bounded source quartets in the table.  Their normalized
+tail equations \eqref{eq:parabolic-tail} continue to the fixed raw
+sections; the positive tail crosses \(u=c=j^{-1}\), if that root
+lies before the section, at positive height.  The stopped branches
+are attached by the same weighted local graphs and finite bridges.
+Since \(p_d<0\) on \(-1<u<a\), and \(\partial_w\dot u=-K_d<0\),
+every intermediate graph remains on the through side of these
+branches.  This constructs the entire ordered interval before its
+zero bounds are applied.
+
+The same ratio and strong-projection orders retain the bounded/growing
+overlap. The positive $\Gamma_j$ gap retains the fixed-exit overlap.
+On the real enlarged source chord through the actual cut \(h_L=0\),
+\eqref{bd:positive-height} again gives
+\(Y_0\asymp b_\tau\to\infty\), while
+\(s_s^2Y_0\le C\tau^3\kappa^4j^2b_\tau\to0\).
+Hence this chord supplies the overlap of the actual high interval
+with the low carrier through $h_L=0$.
+All four domains and estimates are uniform for $j>0$;
+$j=0$ retains only the normalized one-sided meaning.
+\end{proof}
+
+\subsection{Direct negative landing and its first action variation}
+
+A negative ratio hit must be continued to a fixed section before it can
+be used in the physical return. The next lemma constructs this landing
+and estimates its first action derivative. The terminal section is kept
+fixed while the starting lip moves.
+
+\begin{lemma}\label{deg:lem-growing-landing-direct}
+Use the exact field \eqref{deg:degree-field} on either the compact
+coefficient graph \eqref{deg:degree-graph} or the reciprocal graph
+\eqref{deg:degree-infinity-graph}, with physical \(j>0\).
+Keep the original sections, compact passive coefficients, and
+coefficient-only scales. Put
+\[
+ \epsilon_d=\kappa\tau,\qquad s_0=\kappa\sqrt B,\qquad
+ x_c=-u_c,\qquad \sigma=s_0r .
+\]
+Choose the original enlarged product buffer
+\(0<\sigma_0\le\bar\sigma<x_c/2<1/2\), and fix
+\(R_0>r_c\). On the original enlarged range
+\begin{equation}\label{deg:landing-direct-domain}
+ R\le r\le\bar\sigma/s_0,\qquad R\ge R_0,\qquad
+ q_\ell=\frac{\epsilon_d}{\sigma}=\frac{\tau}{\sqrt B\,r},
+ \qquad L_\ell=1+|\log q_\ell|,
+\end{equation}
+the graph from the original lip \(w=\ell_0h\) reaches \(u_c\)
+in positive time, and its inverse reaches the original centre
+\(u=0\). Both graphs have positive height and denominator.
+
+Write \(W_\theta(r)=w(u_c;r)\). There is an exact positive unit
+\(\Gamma_\theta(r)\) such that
+\begin{equation}\label{deg:landing-direct-value}
+ \left|W_\theta(r)-\frac{x_c^2-\sigma^2}{2}\right|
+ \le C\epsilon_d\{1+\sigma L_\ell\},\qquad
+ W_\theta'(r)=-s_0^2r\Gamma_\theta(r),
+\end{equation}
+and
+\begin{equation}\label{deg:landing-direct-gamma-unit}
+ c\le\Gamma_\theta\le C,\qquad
+ |\Gamma_\theta-1|\le C(q_\ell L_\ell+\epsilon_d).
+\end{equation}
+If \(\Gamma(\sigma)=\Gamma_\theta(\sigma/s_0)\), then, with all
+coefficients frozen,
+\begin{equation}\label{deg:landing-direct-first-row}
+ \begin{aligned}
+ |\partial_\sigma\log\Gamma|
+ &\le C\left\{\frac{q_\ell}{\sigma}L_\ell+\epsilon_d\right\},\\
+ |\mathcal D\log\Gamma_\theta|
+ &\le C\left\{\frac{q_\ell}{r}L_\ell+s_0\epsilon_d\right\},
+ \qquad \mathcal D=\frac{\mathcal P(r)}r\partial_r .
+ \end{aligned}
+\end{equation}
+Constants are fixed by the original compact ranges, \(R_0,r_c,\ell_0\)
+and the section buffers, independently of the later \(R,\kappa,\tau,j\).
+In particular the supremum of the action row is
+\(O(\tau(1+|\log\tau|))\) as \(\tau\to0\), uniformly in independent
+\(\kappa,j\). At fixed \(r,\tau>0\), sending only \(\kappa\to0\)
+does not assert that this row tends to zero or that \(\Gamma_\theta\to1\).
+\end{lemma}
+
+\begin{proof}
+Put \(x=-u\), \(H(x)=h(-x)\), \(k(x)=K(-x)\),
+\(b(x)=-L(-x)\), and \(e(x)=-E(-x)\). The exact graph is
+\begin{equation}\label{deg:landing-direct-graph}
+ w_x=F(x,w)=\frac{w(b+ew)}{H+kw},\qquad
+ w(\sigma;\sigma)=\ell_0H(\sigma).
+\end{equation}
+Indeed the original dictionary gives
+\(s_0^2\tau P_s(-r)=h(-s_0r)\) exactly.
+In the compact and reciprocal graphs, respectively,
+\[
+ H=\epsilon_d\mathcal R(1-x)(a+x)(c+x),\qquad
+ H=\epsilon_dd(1-x)(a+x)(1+jx).
+\]
+On \([\sigma,x_c]\), \(a/\sigma\le C/R_0\).
+The exact coefficients \eqref{fx:coefficients} therefore give
+\begin{equation}\label{deg:landing-direct-coefficients}
+ \begin{gathered}
+ H\asymp\epsilon_dx,\quad |H'|+|H''|\le C\epsilon_d,\quad
+ |H'/H|\le C/x,\qquad k\asymp1,\\
+ |k-1|+|k'|\le C\epsilon_d,\qquad |b-x|\le C\epsilon_dx,\\
+ |(b/x)'|\le C\epsilon_d,\quad
+ |b'/b|\le C/x,\qquad |e|+|e'|\le C\epsilon_d^2 .
+ \end{gathered}
+\end{equation}
+At the reciprocal face these estimates use
+\(\epsilon_d\mathcal R=\epsilon_ddj\) and
+\(\epsilon_d\mathcal R\nu=\gamma_s\); no bound on \(\nu\) or
+\(\log j\) is required. A common small upper bound on \(\tau\)
+makes \(q_\ell\) small without comparing any radial parameters.
+
+First admit the graph. On a provisional band \(0<w<Mx^2\),
+the denominator and \(b+ew\) are positive, and
+\[
+ 0<F\le Cx+C\epsilon_d^2w,\qquad
+ F\ge\frac{cxw}{C\epsilon_dx+Cw}.
+\]
+A fixed large \(M\) prevents first contact with \(Mx^2\);
+the lip is below it since \(H(\sigma)/\sigma^2=O(q_\ell)\).
+Thus the graph stays positive and reaches \(x_c\).
+On \([\sigma,2\sigma]\), height is increasing and
+\[
+ \frac{dx}{dw}\le C\frac{\epsilon_d\sigma+w}{\sigma w}.
+\]
+For fixed small \(m>0\), the time to height \(m\sigma^2\) is at
+most \(C\epsilon_dL_\ell+Cm\sigma<\sigma\), after a common
+coefficient shrink. A smaller quadratic lower barrier then gives
+\begin{equation}\label{deg:landing-direct-corridor}
+ 0<w\le Cx^2,\quad b+ew\asymp x,\qquad
+ w\asymp x^2\quad(2\sigma\le x\le x_c).
+\end{equation}
+
+For the inverse to the centre, the same exact coefficients give,
+on \([s_0r_c,\sigma]\) while \(w/H\le\ell_0\),
+\[
+ \frac{d}{dx}\log(w/H)
+ =\frac{b+ew}{H+kw}-\frac{H'}H
+ \ge c/\epsilon_d-C/x>0.
+\]
+Here \(\epsilon_d/x\le C\tau/r_c\). Backward continuation remains
+below this lip, whose hit at \(\sigma\) is therefore the first hit
+after the inner cut. At that cut its height \(w_b\) satisfies
+\(w_b\le C\epsilon_d(a+s_0r_c)\le C\kappa^2\tau\).
+On \([0,s_0r_c]\), \(H\ge c\epsilon_da>0\), and for
+\(0<w\le2w_b\) the exact derivative satisfies
+\[
+ F\ge-C\frac{\epsilon_d^2}{\epsilon_da}w^2\ge-C\tau w^2.
+\]
+In the inverse direction this prevents first contact with \(2w_b\).
+Positive denominator and scalar uniqueness give a positive centre
+height. This argument permits either sign of \(e(0)w\).
+
+Write \(D=H+kw\) and
+\[
+ N=\frac{H'+(k'+e)w}{D},\qquad
+ I_x=\int_\sigma^xN(t,w(t;\sigma))\,dt,\qquad I=I_{x_c}.
+\]
+Direct differentiation along the graph gives
+\(F_w=(\log(w/D))_x+N\).
+The near height change and the quadratic corridor imply
+\[
+ \int_\sigma^{2\sigma}\frac{\epsilon_d}{D}\,dx
+ \le Cq_\ell L_\ell,\qquad
+ \int_{2\sigma}^{x_c}\frac{\epsilon_d}{D}\,dx\le Cq_\ell.
+\]
+The remaining part of \(N\) has integral \(O(\epsilon_d)\), so
+\(|I_x|\le C(q_\ell L_\ell+\epsilon_d)\).
+Keep the complete moving initial factor
+\begin{equation}\label{deg:landing-direct-initial-factor}
+ C_\sigma=(1+\ell_0k(\sigma))H'(\sigma)
+                 -b(\sigma)-\ell_0e(\sigma)H(\sigma).
+\end{equation}
+The moving initial point contributes the intrinsic derivative
+\(\ell_0H'(\sigma)-F(\sigma,\ell_0H(\sigma))\). Combining this
+with the Jacobian to the fixed terminal section gives exactly
+\begin{equation}\label{deg:landing-direct-exact-variation}
+ w_\sigma(x;\sigma)=\frac{w(x;\sigma)}{D(x;\sigma)}C_\sigma e^{I_x},
+ \qquad
+ \Gamma(\sigma)=\frac{w(x_c;\sigma)}{D(x_c;\sigma)}
+                       \frac{-C_\sigma}{\sigma}e^I .
+\end{equation}
+Here \(-C_\sigma/\sigma=1+O(q_\ell+\epsilon_d)\), and the terminal
+ratio is \(1+O(\epsilon_d)\). These identities prove the strict sign,
+the unit estimate, and \(|w_\sigma(x;\sigma)|\le C\sigma\).
+The value estimate follows by integrating the exact residual
+\[
+ F-x=\frac{w(b-xk)+ew^2-xH}{D}.
+\]
+The first two terms cost \(O(\epsilon_d)\); the near \(xH/D\) term
+costs \(O(\epsilon_d\sigma L_\ell)\), and the far term
+\(O(\epsilon_d)\). Include the original initial value
+\(\ell_0H(\sigma)\) to obtain \eqref{deg:landing-direct-value}.
+
+Apply Lemma~\ref{deg:lem-spectral-exterior} to this same intrinsic
+landing graph, with starting abscissa \(\sigma\), terminal cut \(x_c\),
+and identity observer. Its constant coefficients are
+\[
+ t=-r_s,\qquad b_{\rm k}=2\gamma_s,\qquad v_{\rm k}=\gamma_s,
+ \qquad
+ (\mu_2,\mu_1,\mu_0)
+   =(3\gamma_s,\epsilon_d\omega,\epsilon_d\kappa B),
+ \qquad r_s=\epsilon_d\mathcal R .
+\]
+Here \(b_{\rm k},v_{\rm k}\) denote the lemma's constant coefficients.
+The two exact coefficient graphs give
+\[
+ H(x)=-r_sx^3+3\gamma_sx^2+\epsilon_d\omega x
+                         +\epsilon_d\kappa B,
+ \qquad b(x)=x(1+2\gamma_s-r_sx),
+\]
+so its \(M,Q,\zeta\) are precisely \(H,k,e\) in
+\eqref{deg:landing-direct-graph}. On the original enlarged range,
+\(2\sigma<x_c\), and \eqref{deg:landing-direct-coefficients} gives
+\[
+ H(x)/x^2\asymp q_\ell\quad(\sigma\le x\le2\sigma),\qquad
+ |\gamma_s|+r_s\le C\epsilon_d,\qquad
+ \kappa/\sigma\le C/R_0 .
+\]
+Thus the lemma's mass bounds hold with \(\rho=q_\ell\), its
+\(\Theta\le Cq_\ell\), and, since the observer is the identity,
+\(\mathcal T\le C\epsilon_d\). Its smallness conditions follow from
+one independent upper bound on \(\tau\) and the original coefficient
+bounds, uniformly on the compact and reciprocal graphs. The actual
+corridor and terminal height are those already constructed above.
+
+Take the lemma's frozen quadratic-label scale equal to one, so that
+\(\beta_\ell=-\sigma^2/2\). By
+\eqref{deg:landing-direct-exact-variation}, the terminal slope in this
+label is exactly \(\Gamma(\sigma)=-w_\sigma(x_c;\sigma)/\sigma\).
+With \(E_\sigma=\sigma\partial_\sigma\),
+\eqref{deg:spectral-exterior-rows} gives
+\[
+ \left|E_\sigma\log\Gamma+\lambda_\gamma\right|
+ \le C\{q_\ell L_\ell+\epsilon_d(\sigma/x_c)^e\},\qquad
+ \lambda_\gamma=\frac{12\gamma_s}{1+2\gamma_s},\quad
+ e=2-\lambda_\gamma>3/2 .
+\]
+The spectral power \(\sigma^{-\lambda_\gamma}\) has its exact exponent
+held fixed in this phase derivative. Since
+\(|\lambda_\gamma|\le C\epsilon_d\), \(\sigma<1\), and \(e>1\),
+division by \(\sigma\) yields
+\[
+ |\partial_\sigma\log\Gamma|
+ \le C\{(q_\ell/\sigma)L_\ell+\epsilon_d\}.
+\]
+The original action identity
+\(\mathcal D=s_0(\mathcal P/r)\partial_\sigma\), with
+\(\mathcal P/r\asymp1\), gives the second row of
+\eqref{deg:landing-direct-first-row}. For \(r\ge R_0\),
+\(q_\ell=\tau/(\sqrt B\,r)\) and \(s_0\epsilon_d=O(\kappa^2\tau)\)
+give its supremum \(C\tau(1+|\log\tau|)\), independently of the later
+\(R\) and of the reciprocal parameter.
+\end{proof}
+
+\begin{corollary}\label{deg:cor-growing-landing-fixed-product}
+On a fixed original band \(0<\sigma_1\le\sigma\le\sigma_2\le\bar\sigma\),
+\begin{equation}\label{deg:landing-direct-fixed-product}
+ \left\|W_\theta(\sigma/s_0)-\frac{u_c^2-\sigma^2}{2}\right\|_
+                  {C^2_\sigma[\sigma_1,\sigma_2]}
+ \le C\epsilon_d(1+|\log\epsilon_d|)\longrightarrow0
+ \quad\text{as }\epsilon_d\to0 .
+\end{equation}
+If, independently, the actual scalar inverse phase
+\(\Psi_\theta\to\Psi_0\) in \(C^2\) on a fixed buffered interval
+containing this band's height image, then
+\(\Psi_\theta(W_\theta(\sigma/s_0))\) converges in \(C^2_\sigma\)
+to \(\Psi_0((u_c^2-\sigma^2)/2)\), under the hypotheses of that
+independent convergence.
+\end{corollary}
+\begin{proof}
+On the fixed band, \eqref{deg:landing-direct-gamma-unit} and
+\eqref{deg:landing-direct-first-row} give
+\(\Gamma-1,\Gamma_\sigma=O(\epsilon_d(1+|\log\epsilon_d|))\).
+Apply these to \(W_\sigma=-\sigma\Gamma\), then use the value
+row \eqref{deg:landing-direct-value}. The composition claim is the
+ordinary \(C^2\) chain rule on the assumed buffered image; for the
+inverse phase use Proposition~\ref{fx:prop-inverse-phase} under its
+own limiting hypotheses.
+\end{proof}
+
+In coordinates scaled by the starting lip, the fixed terminal section
+has a moving coordinate. Its contribution remains in the derivative: if \(x=\sigma t\), \(w=\sigma^2v\), then
+\[
+ \frac{d}{d\sigma}W_\theta(\sigma/s_0)
+ =2\sigma v(x_c/\sigma;\sigma)
+  +\sigma^2v_\sigma(x_c/\sigma;\sigma)
+  -x_cv_t(x_c/\sigma;\sigma).
+\]
+The limiting heights lie inside the original buffered
+\(\mathcal I_{\rm out}\), including \(u_c^2/2\); the value estimate
+places the whole enlarged landing image there after a common shrink.
+With the actual raw map \eqref{deg:fixed-exit-actual-output},
+\[
+ T(r)=\Xi(W_\theta(r)),\qquad
+ T'(r)=-s_0^2r\Gamma_\theta(r)\Xi'(W_\theta(r)).
+\]
+Its raw endpoint, exact power \(\Omega=r_s^{2-\lambda_\gamma}\),
+and ordinary \(C^3\) normalized observer bounds are retained.
+No coefficient derivative of a moving raw endpoint is asserted.
+For the positive unit \(G=\Gamma_\theta\Xi'/(\Omega U_{\rm out})\),
+the original chain rule gives the explicit bound
+\begin{equation}\label{deg:landing-direct-raw-first-row}
+ |\mathcal D\log G|
+ \le C\left\{\frac{q_\ell}{r}L_\ell+s_0\epsilon_d
+                           +s_0^2\mathcal P(r)\right\}.
+\end{equation}
+The last term comes from the bounded logarithmic derivative
+\(\Xi''/\Xi'\) of the independently constructed output map;
+the exact common tail power cancels.
+The error in the \(\Gamma_\theta\) derivative tends to zero with
+$\tau$; the output-composition error also requires $s_0\to0$.
+We now construct the matching independently of this landing estimate.
+
+\subsection{Separate source heights in the growing range}
+
+The positive and negative half-orbits reach the common centre with
+exponentially small heights. We construct these two height maps
+separately, retaining their linear multipliers and initial polynomial
+factors. Equality of their logarithms then gives the matched action
+derivative while allowing both centre multipliers to tend to zero.
+
+\begin{lemma}[Actual source matching at degree loss]
+\label{deg:lem-growing-matching-direct}
+Fix the original compact or reciprocal coefficient ranges, sections,
+passive coefficient neighbourhood and buffered positive weak chord
+of \eqref{deg:fixed-exit-exact-weak-coordinate}.
+For one fixed \(R_0>r_c\), the separate centre-height maps on
+\(0<P<p_0\) and \(R_0\le r\le\bar\sigma/s_0\) have the
+pure rows \eqref{deg:source-growing-negative-source-rows} and
+\eqref{deg:source-growing-positive-source-rows}.
+Their product remainder has the total-order-two rows
+\eqref{deg:source-growing-product-phase-rows} before matching.
+There is a fixed \(R=r_{\rm ge}^{\rm out}>R_0\), chosen before
+the independent coefficient bounds, such that every negative lip
+with \(R\le r\le\bar\sigma/s_0\) matches one actual input in
+the original strict positive chord. On this entire enlarged graph,
+\[
+ -X\partial_Xr=e_s\frac{\mathcal P(r)}r(1+\zeta),\qquad
+ |\zeta|+|X\partial_X\zeta|\le C\tau,
+ \qquad e_s=\tau/\chi\asymp1.
+\]
+All phase derivatives freeze the coefficients and retain the original
+centre, action constants, physical scales and raw section windows.
+\end{lemma}
+\begin{proof}
+\emph{The two centre-height maps.}
+Use the fixed coefficient field and positive weak chord, with scales
+\begin{equation}
+ \epsilon=\kappa\tau,\qquad s_0=\kappa\sqrt B,\qquad
+ a=\kappa A_d,\qquad x_* =A_d/\sqrt B,\qquad
+ r_s=\epsilon\mathcal R,\qquad \gamma_s=\epsilon\mathcal R\nu .
+ \label{deg:source-growing-phase-scales}
+\end{equation}
+Distinguish the positive unit $B$ from $\mathscr B=B_\tau(-r)$.
+For the original inner cut $r_c>2$ and fixed $R_0>r_c$, use
+\begin{equation}
+ R\le r\le\bar\sigma/s_0,\qquad R\ge R_0,\qquad
+ 0<\bar\sigma<1/2 .
+ \label{deg:source-growing-separate-domains}
+\end{equation}
+Constants are independent of the later $R$. The positive domain is
+$0\le P\le p_0$ with its original larger chord buffer.
+
+\smallskip
+\noindent\emph{The negative source equation.}
+
+Write \(x=-u=s_0r\), \(w=s_0^2\tau y\), and
+\begin{equation}
+ P_-(r)=P_s(-r),\qquad K_-(r)=K(-s_0r),\qquad
+ e_-(r)=-E(-s_0r).
+ \end{equation}
+The exact polynomial is
+\begin{equation}
+ P_-(r)=\frac{\mathcal R}{\sqrt B}
+       (1-s_0r)(x_*+r)(c+s_0r)
+ \quad\hbox{on the compact graph},
+ \label{deg:source-growing-negative-polynomial-compact}
+\end{equation}
+and
+\begin{equation}
+ P_-(r)=\frac d{\sqrt B}
+       (1-s_0r)(x_*+r)(1+js_0r)
+ \quad\hbox{on the reciprocal graph}.
+ \label{deg:source-growing-negative-polynomial-remote}
+\end{equation}
+The identities $\mathcal RA_dc=B$ and $B=dA_d$, respectively,
+give exactly the original $P_s(-r)$.
+Set
+\begin{equation}
+ \mathscr B(r)=1+2\gamma_s-\epsilon\mathcal R s_0r,\quad
+ \mathfrak d(r)=\frac{P_-(r)}{r\mathscr B(r)},\quad
+ \mathcal D=\mathfrak d(r)\partial_r,\quad
+ h_1(r)=\frac{P_-'(r)}{r\mathscr B(r)} .
+ \label{deg:source-growing-negative-action-operator}
+\end{equation}
+Use the chosen coefficient-only real action offset \(A_{c,0}(\theta)\)
+and define
+\begin{equation}
+ \mathcal A_-(r)=\int_{r_c}^r\frac{dt}{\mathfrak d(t)}
+                       -A_{c,0},\qquad \mathcal D\mathcal A_-=1.
+ \label{deg:source-growing-chosen-action-offset}
+\end{equation}
+Direct differentiation of \eqref{deg:source-growing-negative-polynomial-compact}, \eqref{deg:source-growing-negative-polynomial-remote}, and \eqref{deg:source-growing-negative-action-operator} gives
+\begin{equation}
+ \begin{gathered}
+ P_-\asymp1+r,\quad \mathscr B\asymp1,\quad
+ \mathfrak d\asymp1,\quad
+ |\mathcal D^m\mathfrak d|\le C_m,\quad
+ |\mathcal D^mh_1|\le C_m/r\quad(0\le m\le3),\\
+ |K_--1|\le C\epsilon,\quad
+ |\mathcal D^mK_-|\le C_m\tau\quad(1\le m\le3).
+ \end{gathered}
+ \label{deg:source-growing-negative-coefficient-bounds}
+\end{equation}
+For the polynomial monotonicity used below, put \(\sigma=s_0r\).
+On the compact graph,
+\[
+ P_-'=\frac{\mathcal R}{\sqrt B}
+ \{c(1-2\sigma)+2\sigma-3\sigma^2
+                         +a(1-c-2\sigma)\},
+\]
+whereas on the reciprocal graph
+\[
+ P_-'=\frac d{\sqrt B}
+ \{1-2\sigma+j\sigma(2-3\sigma)
+                         +a(j(1-2\sigma)-1)\}.
+\]
+The fixed bound \(\bar\sigma<1/2\) and a common \(a\)-shrink
+give \(P_-'\ge c\) in either graph.  Since
+\(\mathscr B'=-\epsilon\mathcal R s_0\le0\), it follows that
+\begin{equation}\label{deg:degree-negative-polynomial}
+ \mathcal P:=P_-/\mathscr B\asymp1+r,\qquad
+ \mathcal P'\ge c .
+\end{equation}
+
+Indeed, $P_-'$, $P_-''$, $P_-'''$ are bounded by
+$C,Cs_0,Cs_0^2$, with $s_0\le\bar\sigma/r$. Also
+\begin{equation}
+ K_-=1-A(\gamma_s-\epsilon\mathcal R s_0r)
+           +C(\gamma_s-\epsilon\mathcal R s_0r)^2.
+ \label{deg:source-growing-negative-K}
+\end{equation}
+Its positive-order action rows are $O(\epsilon s_0)=O(\tau)$.
+On the reciprocal graph, $\mathcal R=dj$ and
+$\gamma_s=\epsilon d(j-ja-1)/3$ are regular at $j=0$.
+
+From the original rational graph equation one obtains exactly
+\begin{equation}
+ y_r=\frac{y\{r\mathscr B+e_-s_0\tau y\}}
+                 {\tau(P_-+K_-y)}.
+ \label{deg:source-growing-negative-scalar-equation}
+\end{equation}
+Along the inverse passage introduce accumulated action \(q\)
+by \(r_q=-\tau\mathfrak d(r)\), starting at \(r\), and put
+\(W=y/P_-\).  The source lip is exactly \(W(0)=\ell_0\).
+Then
+\begin{equation}
+ (\log W)_q=
+ -\frac{1+\varpi(r)W}{1+K_-(r)W}+\tau h_1(r)
+ =-1+\tau h_1(r)+G(r,W),
+ \label{deg:source-growing-stable-ratio-equation}
+\end{equation}
+where
+\begin{equation}
+ \varpi=e_-s_0\tau\mathfrak d,\qquad
+ G(r,W)=\frac{(K_--\varpi)W}{1+K_-W}.
+ \label{deg:source-growing-stable-ratio-nonlinearity}
+\end{equation}
+Here \(|e_-|\le C\epsilon^2\); direct differentiation gives
+\begin{equation}
+ |\mathcal D^m\varpi|\le C_m\tau,\qquad 0\le m\le3.
+ \label{deg:source-growing-stable-coefficient-rows}
+\end{equation}
+These derivative bounds apply to the exact nonlinear coefficient.
+
+\smallskip
+\noindent\emph{Negative source variations.}\par\nopagebreak[4]
+
+The endpoint at the original inner cut is
+\begin{equation}
+ T(r)=\frac1\tau\int_{r_c}^r\frac{dt}{\mathfrak d(t)}
+     =\frac{\mathcal A_-(r)+A_{c,0}}{\tau}.
+ \label{deg:source-growing-inward-terminal}
+\end{equation}
+It satisfies
+\begin{equation}
+ T\ge c(r-r_c)/\tau,\qquad
+ \mathcal DT=1/\tau,\qquad
+ \mathcal D^2T=\mathcal D^3T=0 .
+ \label{deg:source-growing-inward-terminal-action-rows}
+\end{equation}
+Apply Lemma~\ref{deg:lem-stable-ratio-ledger} with
+\((\kappa,H,Q,\omega,\rho)=(\tau,h_1,K_-,\varpi,\tau)\)
+and density \(L=G\). Its phase derivative is the initial action
+derivative \(\delta\) at fixed \(q\):
+\begin{equation}\label{deg:source-growing-initial-action-flow}
+ \delta f(r(q;r))=(\mathcal Df)(r(q;r)),\qquad
+ \partial_q f=-\tau\mathcal Df,
+\end{equation}
+because \(\mathcal A_-(r(q;r))=\mathcal A_-(r)-\tau q\).
+In particular \(\delta\) commutes with \(\partial_q\).
+The polynomial factors remain positive on the whole route
+\(r_c\le v\le r\), with \(s_0v\le\bar\sigma<1/2\), and on
+a fixed enlargement at \(r_c\). Equations
+\eqref{deg:source-growing-negative-coefficient-bounds} and
+\eqref{deg:source-growing-stable-coefficient-rows} give the required
+phase and mixed rows with \(\alpha=0\). Since \(K_-\) is close
+to one and \(\varpi,\tau h_1\) are small, both
+\(\mathcal F/W\) and \(\mathcal F_W\) have a fixed negative
+margin on \(0\le W\le\ell_0\). The lemma therefore gives
+\begin{equation}\label{deg:source-growing-stable-ratio-corridor}
+ 0<W(q;r)\le\ell_0e^{-cq},\qquad 0\le q\le T(r),
+\end{equation}
+and the fixed-clock rows
+\begin{equation}
+ |\delta^iG|\le C\tau(1+q)^Ne^{-cq}\quad(i=1,2),
+ \qquad |G|+|G_q|\le C(1+q)^Ne^{-cq}.
+ \label{deg:source-growing-stable-kernel-rows}
+\end{equation}
+The inverse passage thus reaches the inner cut positively, with positive
+denominator, and its lip is the first ratio hit.
+Define on this actual passage
+\begin{equation}
+ J(r)=\int_0^{T(r)}G(r(q;r),W(q;r))\,dq .
+ \label{deg:source-growing-nonlinear-action-integral}
+\end{equation}
+The ratio equation gives exactly
+\(G=-K_-W_q+(\tau K_-h_1-\varpi)W\). Integration by parts
+therefore isolates the nonlinear mass:
+\begin{equation}\label{deg:source-growing-exact-action-integral}
+ J=\ell_0K_-(r)-K_-(r_c)W(T;r)+\int_0^T QW\,dq,
+ \qquad Q=\tau(K_-h_1-\mathcal DK_-)-\varpi .
+\end{equation}
+Here \(\mathcal D^iQ=O(\tau)\), \(0\le i\le2\), using
+\(\mathcal D^3K_-\) in the second row. The same fixed-clock
+estimates give an integrable \(C\tau(1+q)^Ne^{-cq}\) bound for
+\(QW\) and its phase rows through order two. Apply the endpoint formulas
+\eqref{deg:stable-ratio-terminal-rows} to this density and the
+terminal chain rules of Lemma~\ref{deg:lem-stable-ratio-ledger}
+to \(K_-(r_c)W(T;r)\), with
+\(T_1=1/\tau\), \(T_2=0\). The fixed gap \(R_0-r_c>0\)
+makes all endpoint terms \(\tau^{-N}(1+T)^Ne^{-cT}\) flat.
+Together with \(K_-(r)-1=O(\epsilon)=O(\tau)\), this proves
+\begin{equation}
+ |J-\ell_0|+|\mathcal DJ|+|\mathcal D^2J|\le C\tau .
+ \label{deg:source-growing-nonlinear-action-rows}
+\end{equation}
+The constants depend on \(R_0-r_c>0\), not on the later \(R\).
+
+The polynomial-memory identity
+\eqref{deg:stable-ratio-polynomial-memory} retains the initial factor:
+\begin{equation}
+ \int_0^T\tau h_1(r(q;r))\,dq
+             =\log P_-(r)-\log P_-(r_c).
+ \label{deg:source-growing-polynomial-memory}
+\end{equation}
+Consequently the actual height at the inner cut is
+\begin{equation}
+ y_c(r)=\ell_0P_-(r)e^{-T(r)}e^{J(r)} .
+ \label{deg:source-growing-inner-cut-height}
+\end{equation}
+Uniformly for \(r\ge R_0\),
+\begin{equation}
+ 0<y_c(r)\le C(1+r)e^{-c(r-r_c)/\tau}
+           \le C_N\tau^N\quad\hbox{for every fixed }N .
+ \label{deg:source-growing-inner-cut-flatness}
+\end{equation}
+Its first two logarithmic rows are
+\begin{equation}
+ \mathcal D\log y_c=h_1-1/\tau+\mathcal DJ,\qquad
+ \mathcal D^2\log y_c=\mathcal Dh_1+\mathcal D^2J .
+ \label{deg:source-growing-inner-cut-log-rows}
+\end{equation}
+
+We now continue to the original common centre, without
+renormalizing it to an image-dependent section.
+On \(0\le v\le r_c\), \(P_-(v)\) and \(\mathscr B(v)\)
+are positive units.  The exact linear multiplier is
+\begin{equation}
+ L_-(v)=\exp\left\{-\frac1\tau
+               \int_v^{r_c}\frac{t\mathscr B(t)}{P_-(t)}\,dt
+                  \right\}\le1,\qquad
+ A_{\rm core,-}=\int_0^{r_c}\frac{t\mathscr B(t)}{P_-(t)}\,dt.
+ \label{deg:source-growing-negative-core-linear-factor}
+\end{equation}
+The exact equation on this fixed compact segment is
+\(y_v=A_-y+\mathcal K_-y^2\), where
+\begin{equation}
+ A_- =\frac{v\mathscr B}{\tau P_-},\qquad
+ \mathcal K_-(v,y)=\frac{e_-s_0}{P_-+K_-y}
+       -\frac{v\mathscr B K_-}{\tau P_-(P_-+K_-y)} .
+ \label{deg:source-growing-negative-core-equation}
+\end{equation}
+On the original fixed small height buffer, all normal derivatives
+through order three of \(\mathcal K_-\) are bounded by \(C/\tau\).
+Its inward linear propagator is exactly \(L_-\le1\), and
+\eqref{deg:source-growing-inner-cut-flatness} gives \(y_c/\tau\ll1\).
+Lemma~\ref{deg:lem-compact-height-continuation}, with
+\(\kappa_c=\tau\), gives
+an actual positive centre hit and
+\(y(0;y_c)=L_-(0)y_c\mathcal U_-(y_c)\), where
+\begin{equation}
+ |\log\mathcal U_-|+
+ \sum_{i=1}^2|(y_c\partial_{y_c})^i\log\mathcal U_-|
+                                  \le Cy_c/\tau .
+ \label{deg:source-growing-negative-core-height-rows}
+\end{equation}
+This uses the full multiplier, with no reciprocal bound on it, and
+holds for either sign of \(e_-(0)\).
+
+Use the same centre-height scale as on the positive side:
+\begin{equation}
+ Z_-(r)=\frac{w(0;r)}{s_0^2\tau}
+ =\ell_0P_-(r)
+       \exp\left\{-\frac{\mathcal A_-(r)+A_{c,0}
+                             +A_{\rm core,-}}{\tau}\right\}
+       e^{J(r)}\mathcal U_-(y_c(r)).
+ \label{deg:source-growing-negative-centre-height}
+\end{equation}
+Choose the coefficient-only logarithmic constant
+\begin{equation}
+ c_-=\log\ell_0-(A_{c,0}+A_{\rm core,-})/\tau .
+ \label{deg:source-growing-negative-coefficient-constant}
+\end{equation}
+The separate negative remainder is
+\begin{equation}
+ S_-(r)=\log Z_-(r)+\mathcal A_-(r)/\tau
+                            -\log P_-(r)-c_-
+       =J(r)+\log \mathcal U_-(y_c(r)).
+ \label{deg:source-growing-negative-source-remainder}
+\end{equation}
+The chain rule, \eqref{deg:source-growing-inner-cut-flatness}--\eqref{deg:source-growing-inner-cut-log-rows}, and \eqref{deg:source-growing-negative-core-height-rows} bound the two
+core contributions by \(Cy_c/\tau^2\) and \(Cy_c/\tau^3\).
+Combining with \eqref{deg:source-growing-nonlinear-action-rows} gives
+\begin{equation}
+ |S_-|\le C,\qquad
+ |\mathcal DS_-|+|\mathcal D^2S_-|\le C\tau .
+ \label{deg:source-growing-negative-source-rows}
+\end{equation}
+The physical centre height is therefore
+\begin{equation}\label{deg:source-growing-physical-negative-height}
+ z_-(r)=r_s^2s_0^2\tau e^{c_-}P_-(r)
+                  e^{-\mathcal A_-(r)/\tau}e^{S_-(r)}.
+\end{equation}
+The factor \(e^{S_-}\), its inverse and its first two action
+rows are uniformly bounded.
+
+
+\smallskip
+\noindent\emph{Positive source variations.}
+
+The positive weak coordinate from
+\eqref{deg:fixed-exit-exact-weak-coordinate} satisfies
+\begin{equation}
+ \Phi(P)=\{z_+y(P)\}^{\chi},\qquad
+ \chi=\tau X_d,\qquad z_+^{\pm1}+X_d^{\pm1}\le C .
+ \label{deg:source-growing-positive-exact-coordinate}
+\end{equation}
+The local invariant gives
+\begin{equation}
+ 0\le y(P)\le C\vartheta^{1/\chi},\quad
+ 0<\vartheta<1,\quad 0\le P\le p_0,
+ \label{deg:source-growing-positive-weak-flatness}
+\end{equation}
+and \(\Phi'>c>0\) with its stated uniform phase bounds.
+Fix \(P_\dagger\in(0,p_0)\), independently of coefficients,
+and set \(X=\Phi(P)/\Phi(P_\dagger)\).  On \(P>0\),
+\begin{equation}
+ \frac{y(P)}{y(P_\dagger)}=X^{1/\chi},\qquad
+ \mathcal E:=X\partial_X=\chi^{-1}y\partial_y .
+ \label{deg:source-growing-positive-log-phase}
+\end{equation}
+Use this exact logarithmic derivative.
+
+Construct \(Z_+(P)\) independently by following positive time
+from \(u_+=a(1-\eta_+)\), with \(w=a^2y(P)\), to \(u=0\).
+In \(v=u/a\), \(v_+=1-\eta_+\), put
+\begin{equation}
+ h(av)/a^2=\tau H_+(v),\qquad
+ L(av)/a=v\mathscr B_+(v),\qquad K_+(v)=K(av).
+ \end{equation}
+The original exact functions are
+\begin{equation}
+ H_+(v)=\frac{\mathcal R}{A_d}
+        (1+av)(1-v)(c-av)
+ \end{equation}
+on the compact graph, and
+\begin{equation}
+ H_+(v)=\frac d{A_d}(1+av)(1-v)(1-jav)
+ \end{equation}
+on the reciprocal graph.  On \(0\le v\le v_+\),
+\(H_+,\mathscr B_+,K_+\) are positive units, with uniform
+finite coefficient-function bounds.  In particular the
+positive core has no inverse \(\kappa\) scale.
+Its exact scalar equation is
+\begin{equation}
+ y_v=\frac{y\{v\mathscr B_++aE(av)y\}}
+                         {\tau H_++K_+y}.
+ \label{deg:source-growing-positive-core-equation}
+\end{equation}
+Its linear multiplier and positive core action are
+\begin{equation}
+ L_+(v)=\exp\left\{-\frac1\tau
+              \int_v^{v_+}\frac{t\mathscr B_+(t)}{H_+(t)}\,dt
+                    \right\}\le1,\qquad
+ A_{\rm core,+}=\int_0^{v_+}\frac{t\mathscr B_+(t)}{H_+(t)}\,dt.
+ \label{deg:source-growing-positive-core-linear-factor}
+\end{equation}
+Freeze the coefficients and set \(y(v)=\tau^2\eta(v)\),
+with initial height \(\eta_{\rm in}=y(P)/\tau^2\) at the same cut
+\(v_+\). Exact division gives
+\begin{equation}\label{deg:source-growing-positive-core-rescaled-equation}
+ \eta_v=\frac{v\mathscr B_+}{\tau H_+}\eta
+                         +\widetilde{\mathcal K}_+(v,\eta)\eta^2,
+ \qquad
+ \widetilde{\mathcal K}_+
+ =\frac{\tau aE(av)}{H_++\tau K_+\eta}
+ -\frac{v\mathscr B_+K_+}{H_+(H_++\tau K_+\eta)}.
+\end{equation}
+Choose a fixed small buffer \(0\le\eta\le\eta_b<\inf X_d^2\).
+The nonlinear coefficient and its first three ordinary height
+derivatives are bounded uniformly. Indeed the
+displayed denominators are positive units and each such derivative
+introduces a bounded factor \(\tau K_+\).
+Then \(\tau^2\eta_b<\chi^2\) lies inside the original height range;
+\eqref{deg:source-growing-positive-weak-flatness} puts every original
+\(0<P\le p_0\) in a smaller initial subbuffer after a common
+\(\tau\)-shrink.
+The inward propagator remains exactly \(L_+\le1\), without a
+reciprocal reserve. Thus
+Lemma~\ref{deg:lem-compact-height-continuation}, with
+\(\kappa_c=1\), supplies the actual positive centre hit
+and its Euler-height rows. Since
+\(\eta_{\rm in}\partial_{\eta_{\rm in}}=y_+\partial_{y_+}\)
+for \(y_+=y(P)\), these give
+\begin{equation}
+ |\log \mathcal U_+(y_+)|+
+ \sum_{i=1}^2|(y_+\partial_{y_+})^i\log \mathcal U_+(y_+)|
+                                      \le Cy_+/\tau^2 ,
+ \label{deg:source-growing-positive-core-height-rows}
+\end{equation}
+where \(\mathcal U_+\) is the normalized factor at \(v=0\).
+The actual central height is
+\begin{equation}
+ Z_+(P)=C_+(\theta)y(P)\mathcal U_+(y(P)),\qquad
+ C_+(\theta)=\frac{a^2}{s_0^2\tau}
+                                      e^{-A_{\rm core,+}/\tau}.
+ \label{deg:source-growing-positive-centre-height}
+\end{equation}
+This retains exactly \(a^2/(s_0^2\tau)=A_d^2/(B\tau)\).
+The prefactor of the exponential is a coefficient-only unit times
+\(\tau^{-1}\).
+Scalar first variation gives \(Z_+'(P)>0\) for \(P>0\).
+
+Define on the original independent positive domain
+\begin{equation}
+ S_+(P)=\log Z_+(P)-\log Z_+(P_\dagger)-\chi^{-1}\log X
+ =\log \mathcal U_+(y(P))-\log \mathcal U_+(y(P_\dagger)).
+ \label{deg:source-growing-positive-source-remainder}
+\end{equation}
+The coefficient-only multiplier cancels as an exact reference
+difference.  Equations \eqref{deg:source-growing-positive-log-phase} and \eqref{deg:source-growing-positive-core-height-rows} give
+\begin{equation}
+ |\mathcal E^iS_+|
+ \le C\chi^{-i}\tau^{-2}y(P)
+ \le C\tau^{-i-2}\vartheta^{1/\chi},\qquad i=1,2 .
+ \label{deg:source-growing-positive-source-rows}
+\end{equation}
+The rows vanish continuously at $P=0$. This positive map remains
+independent of the negative image.
+
+\smallskip
+\noindent\emph{Admission to the positive input chord.}
+
+Choose any fixed \(p_*\in(0,p_0)\) inside the original counted
+weak chord, with its larger original raw chord buffer.
+Put \(j(P)=\Phi(P)/\Phi'(P)\).  Its uniform phase bounds give
+\(j'(P)=1+O(P)\); choose \(p_*\) small enough that \(j'(P)>3/4\)
+on \(0\le P\le p_*\).  The endpoint is fixed before \(R\).
+By \(\Phi'>c\), \(\Phi(p_*)\) is bounded below by a fixed
+positive constant.  Equations \eqref{deg:source-growing-positive-exact-coordinate}, \eqref{deg:source-growing-positive-core-linear-factor}, and \eqref{deg:source-growing-positive-centre-height} give
+\begin{equation}
+ -\tau\log Z_+(p_*)\le C_*(p_*) ,
+ \label{deg:source-growing-positive-endpoint-action-budget}
+\end{equation}
+uniformly in \(\kappa,\tau,j\) after a common small bound.
+Indeed, $-\tau\log y(p_*)=-(\tau/\chi)\log\Phi(p_*)
++\tau\log z_+$ and $A_{\rm core,+}$ are bounded; the remaining
+scale costs $O(\tau(1+|\log\tau|))$.
+
+On the negative side, \eqref{deg:source-growing-negative-centre-height} gives
+\begin{equation}
+ -\tau\log Z_-(R)\ge
+ c(R-r_c)-\tau\log\{\ell_0P_-(R)\}-C\tau .
+ \label{deg:source-growing-negative-endpoint-action-budget}
+\end{equation}
+First choose a fixed \(R=r_{\rm ge}^{\rm out}>R_0\), larger than any
+already prescribed original growing threshold, so that
+\(c(R-r_c)>C_*(p_*)+2d_*\) for a fixed \(d_*>0\).
+Only afterwards decrease the coefficient bounds so that
+\(\tau\log(1+R)\) and the fixed terms in \eqref{deg:source-growing-negative-endpoint-action-budget} are below
+\(d_*\).  This preserves the full independent coefficient
+family.
+Choose the counted threshold \(r_{\rm ge}>R\) with a fixed
+positive buffer before decreasing the coefficients. It follows that
+\begin{equation}
+ 0<Z_-(R)<e^{-d_*/\tau}Z_+(p_*).
+ \label{deg:source-growing-positive-image-inclusion}
+\end{equation}
+Furthermore \eqref{deg:source-growing-negative-source-remainder}--\eqref{deg:source-growing-negative-source-rows} imply
+\begin{equation}
+ \mathcal D\log Z_-=-1/\tau+h_1+\mathcal DS_-<0 .
+ \label{deg:source-growing-negative-centre-order}
+\end{equation}
+Thus every actual growing lip in \eqref{deg:source-growing-separate-domains} has centre height
+strictly between zero and \(Z_+(p_*)\).
+The continuous strictly increasing positive map \(Z_+\)
+maps \([0,p_*]\) onto \([0,Z_+(p_*)]\).
+There is a unique \(P(r)\in(0,p_*)\) with
+\(Z_+(P(r))=Z_-(r)\).
+Scalar uniqueness at the common centre identifies the two
+actual graph segments with the same orbit.
+
+The local weak chord is the one parameterized by the original
+raw input
+\begin{equation}
+ P=(x_{\rm raw}-x_b)/s_{\rm in},\qquad
+ s_{\rm in}=\Omega a^{2-\lambda_\gamma}U_{\rm in},\qquad
+ \Omega=r_s^{2-\lambda_\gamma},\quad U_{\rm in}^{\pm1}\le C.
+ \label{deg:source-growing-positive-raw-input-scale}
+\end{equation}
+The independently constructed stopped outer chord and its
+local invariant give the actual continuation to this raw
+section for all \(0\le P\le p_0\), with its original buffers.
+The matched inputs lie in the strict interior \(P<p_*\).
+Both local points are on the same invariant level in the
+original coordinate box; the monotone positive invariant
+coordinate gives the intervening orbit segment there.
+Thus every lip has the actual positive-time continuation from raw
+input through the positive middle cut and centre to the negative lip.
+The separate annular overlap remains the earlier construction.
+
+\smallskip
+\noindent\emph{The matched action derivative.}
+
+On the separate original product domain define
+\begin{equation}
+ R_{\rm prod}(P,r)=\log P_-(r)+S_-(r)-S_+(P).
+ \label{deg:source-growing-product-remainder}
+\end{equation}
+It remains defined whether or not the two images intersect.
+Its phase rows satisfy
+\begin{equation}
+ \begin{gathered}
+ |\mathcal ER_{\rm prod}|+|\mathcal E^2R_{\rm prod}|
+                  \le C\tau^{-4}\vartheta^{1/\chi},\\
+ |\mathcal DR_{\rm prod}|+|\mathcal D^2R_{\rm prod}|\le C,
+ \qquad \mathcal E\mathcal DR_{\rm prod}=0 .
+ \end{gathered}
+ \label{deg:source-growing-product-phase-rows}
+\end{equation}
+Although \(\log P_-(r)\) can grow, its two action derivatives have
+the bounds needed here.
+On the actual matched graph the exact identity is
+\begin{equation}
+ \mathcal A_-(r)=
+ \tau\{c_--\log Z_+(P_\dagger)\}
+             -e_s\log X+\tau R_{\rm prod}(P,r),
+ \qquad e_s=\tau/\chi=1/X_d .
+ \label{deg:degree-growing-matching}
+\end{equation}
+The constant retains all coefficient-only terms; $e_s$ is a positive unit.
+
+Define separate product functions
+\begin{equation}
+ N_-=1-\tau\{h_1+\mathcal DS_-\},\qquad
+ N_+=1+\chi\mathcal ES_+,\qquad n(P,r)=N_+(P)/N_-(r).
+ \label{deg:source-growing-separate-action-numerators}
+\end{equation}
+For a common small \(\tau\) bound,
+\begin{equation}
+ N_\pm\ge1/2,\quad
+ |N_--1|+|\mathcal DN_-|\le C\tau,\quad
+ |N_+-1|+|\mathcal EN_+|
+                       \le C\tau^{-3}\vartheta^{1/\chi}.
+ \label{deg:source-growing-action-numerator-rows}
+\end{equation}
+Differentiate equality of the two actual centre heights:
+\(\mathcal E\log Z_+=N_+/\chi\) and
+\(\mathcal D\log Z_-=-N_-/\tau\).
+It gives exactly
+\begin{equation}
+ -\mathcal E r=e_s\mathfrak d(r)n(P,r)
+     =e_s\frac{\mathcal P(r)}r(1+\zeta),\qquad \zeta=n-1 .
+ \label{deg:source-growing-actual-matching-slope}
+\end{equation}
+The matched graph is consequently strictly decreasing. To differentiate
+the quotient along this graph, both separate variables must be varied:
+\begin{equation}
+ \mathcal E_{\rm graph}\zeta=
+ \mathcal E_+n-e_sn\mathcal D_-n .
+ \label{deg:source-growing-actual-quotient-first-row}
+\end{equation}
+Here \(\mathcal E_+\) and \(\mathcal D_-\) act on the separate
+positive and negative variables of the product.
+The second pure derivatives in \eqref{deg:source-growing-negative-source-rows}
+and \eqref{deg:source-growing-positive-source-rows} bound precisely
+the two derivatives in \eqref{deg:source-growing-actual-quotient-first-row}.  Thus
+\begin{equation}
+ |\zeta|+|\mathcal E_{\rm graph}\zeta|
+ \le C\{\tau+\tau^{-3}\vartheta^{1/\chi}\}
+ \le C\tau .
+ \label{deg:source-growing-actual-quotient-estimates}
+\end{equation}
+This is uniform on the whole enlarged graph with independent
+$\kappa,\tau,j$; the error tends to zero with $\tau$.
+
+The normalized source heights retain the physical conversion
+\(z(\gamma_s)=r_s^2s_0^2\tau Z\), the exact raw power
+\(\Omega\), the positive and negative tail quartets on the
+reciprocal graph
+\begin{equation}
+ \left(-\frac{\tau d}{A_d},
+       \frac{\tau d(1-a+ja)}{A_d},\gamma_s,r_sa\right),
+ \qquad
+ \left(-\kappa^2\tau dA_d,
+       \kappa\tau d(1-a+ja),\gamma_s,r_s\right),
+ \label{deg:source-growing-remote-raw-quartets}
+\end{equation}
+and the passive coefficient restrictions used to construct the raw
+chords.  No estimate of \(\gamma_s\log r_s\), no derivative
+with respect to a coefficient, and no frozen moving raw endpoint
+is used.  At \(j=0\) only the one-sided normalized estimates
+are intended; actual raw sections are asserted for \(j>0\).
+\end{proof}
+
+
+\begingroup
+\let\degreecarriersubsection\subsection
+\let\degreecarriersubsubsection\subsubsection
+\let\section\degreecarriersubsection
+\let\subsection\degreecarriersubsubsection
+\input{p2-physical-carrier-paper}
+\endgroup
+
+The growing-action estimates can now be applied on the physical
+interval. They control the matched quotient, which determines
+curvature before finite closing:
+\begin{equation}\label{deg:degree-growing-elasticity}
+ \mathcal E\log\frac{\mathfrak j(P)}
+    {e_sG(r)\mathcal P(r)n(P,r)}>\frac12,
+ \qquad \mathcal E=X\partial_X.
+\end{equation}
+This is \textnormal{(GC14)--(GC15)}. To compose with the finite
+closing, we also need the full output and its first two action derivatives:
+\begin{equation}\label{deg:growing-actual-output-action}
+ |T|+|\mathcal E T|+|\mathcal E^2T|\le C,
+ \qquad \mathcal E=X\partial_X,\quad \mathcal E T>0.
+\end{equation}
+Estimate \textnormal{(GC8)} gives this bound on the buffered growing
+image, and \textnormal{(GC9)} transfers it through the finite closing.

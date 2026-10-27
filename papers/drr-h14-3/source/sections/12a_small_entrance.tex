@@ -1,0 +1,146 @@
+\subsection{What a small cycle supplies at the common entrance}
+
+Use the fixed-field orientation $\ell\ge0$ of
+Section~\ref{rw:geometry}, with the reflection-symmetric thresholds
+of Section~\ref{rw:counting}. The coefficient divisions are those
+of the original signed auxiliary maps.
+The source representative counts the small cycles and determines the
+ratio of the two homogeneous generators. To obtain the entrance sign
+of $K$, we then evaluate the regular comparison in the original central
+height. This change of representation is necessary because a unit
+relating closing functions need not preserve their derivative zeros.
+
+\begin{proposition}\label{rw:small-entrance}
+After a common neighborhood restriction, suppose $\rho>0$ and
+\eqref{rw:counting:forcing} holds. There is at most one counted
+cycle with $p<p_\sharp/4$, and it is simple. A counted cycle with
+$p<p_\sharp/8$ implies
+\begin{equation}\label{rw:upper:small-ratio}
+ \tau_1\sigma_1<0,\qquad
+ 0<-\tau_1/\sigma_1\le p_\sharp^2/300.
+\end{equation}
+The actual regular comparison at $p_0=p_\sharp/4$ then satisfies
+$\operatorname{sign}K(p_0)=-\operatorname{sign}\sigma_1$.
+Thus it supplies the precise signed entrance of hypothesis
+\textup{(III)} in Section~\ref{rw:counting}.
+\end{proposition}
+\begin{proof}
+The endpoint action bound of Section~\ref{rw:finite:geometry},
+with the fixed primary normalization, places every parameter-dominant
+cycle beyond $p>\eta/8\ge p_\sharp$; the same bound is recorded
+in the physical cover of Section~11. Hence the small cycles here
+belong to the two initial energy classes, and are zeros of the one
+function constructed in Proposition~\ref{rw:initial-joint-bound}.
+In the source class its outgoing action satisfies
+\[
+ p^2=2e_+\epsilon h,\qquad |e_+-1|<1/1024.
+\]
+For a cycle with $p<p_\sharp/4$ this gives
+$\epsilon h<p_\sharp^2/31$. On the compact energy class the
+same inequality follows from $h\le H_*$ after the scale cutoff
+is reduced. Let $J_0$ be the initial-energy interval up to that
+upper bound; it contains all these cycles, with their multiplicities.
+Its lower energy bound is the fixed $h(z_L)>H_{\rm ECT}+2$.
+We do not use any ECT assertion near energy zero.
+
+Write the actual source representative as
+\[
+ F_{\rm src}=\tau_0 f_1+\sigma_0 f_2+f_3,
+ \qquad Q=f_2/f_1,\quad g=f_3/f_1.
+\]
+The compact overlap and the source derivative estimates in Section~6
+give on this single initial-energy interval
+\[
+ Q\ge q_*>0,\qquad Q'\ge q_0>0,\qquad Q\le C_Qh.
+\]
+On the compact interval these inequalities follow from the first two
+ordered Wronskians and fixed coefficient convergence; on the source
+tail they follow from $Q=hC/A$, $Q_h>1/5$. The fixed overlap joins
+the same two columns, so their signs can be tested on the union.
+
+On $J_0$ we need the line-breaking contribution and its ordinary
+energy derivative to be exponentially smaller than the homogeneous
+coefficient norm. The signed compact contribution is $\ell$ times a
+bounded coefficient. On the source part it is the exact logarithmic
+forcing divided by $h^{3/2}A$.
+Since $\widehat\ell=\ell/s$ and $s^{-1}=e^{h+1-s}\le e^{h+1}$,
+\eqref{rw:counting:forcing} and the source logarithmic estimates
+yield
+\begin{equation}\label{rw:upper:small-forcing}
+ |g|+|g'|\le C\exp\left(1-\frac{11p_\sharp^2}{620\epsilon}\right)
+                      (|\tau_0|+|\sigma_0|)
+       =:\vartheta_0(|\tau_0|+|\sigma_0|).
+\end{equation}
+Here $1/20-1/31=11/620$. The same bound applies to the fixed cutoff
+terms on the compact overlap. The source logarithms are evaluated at
+$\widehat\ell=o(1)$ on this smaller interval, so their denominators
+have fixed margins. The derivative is the actual fixed-coefficient
+energy derivative, not an independent source derivative.
+
+If both homogeneous generators vanish, forcing gives $\ell=0$,
+and the center identity contributes no isolated zero. Otherwise
+\[
+ F_{\rm src}/f_1=\tau_0+\sigma_0Q+g,
+ \qquad (F_{\rm src}/f_1)'=\sigma_0Q'+g'.
+\]
+If $|\sigma_0|q_0>\vartheta_0(|\tau_0|+|\sigma_0|)$,
+this derivative has a strict sign on all of $J_0$. Every zero is
+therefore simple and there is at most one. In the complementary
+case $|\sigma_0|\le2\vartheta_0|\tau_0|/q_0$ at small scale,
+and
+\[
+ |F_{\rm src}/f_1|\ge |\tau_0|
+ \left(1-\frac{2\vartheta_0 C_Qp_\sharp^2}{31q_0\epsilon}
+                         -2\vartheta_0\right)>0.
+\]
+The exponential absorbs $\epsilon^{-1}$, so there is no zero.
+This proves uniqueness and simplicity on the whole small-cycle set.
+
+At the smaller cycle, with energy $h_y$, the same equation gives
+\[
+ -\frac{\tau_0}{\sigma_0}
+ =Q(h_y)+g(h_y)/\sigma_0,
+ \qquad |g/\sigma_0|\le\vartheta_0(1+|\tau_0/\sigma_0|).
+\]
+For small $\vartheta_0$, absorb the ratio on the right. The positive
+lower bound $Q\ge q_*$ proves the strict negative sign of
+$\tau_0/\sigma_0$. Moreover $\epsilon h_y<p_\sharp^2/127$.
+The independent source constants give $C/A\to2/5$. Choose a fixed
+$H_1\ge H_*+1$ so that its scale-tail error is below $1/100$,
+then choose $p_\sharp$ small so that the coefficient error on this
+energy range is below $1/100$. For $h\ge H_1$, $Q\le0.42h$;
+below it $Q\le C_QH_1$. Therefore
+\[
+ \epsilon Q(h_y)\le
+ \max(0.42p_\sharp^2/127,\epsilon C_QH_1)
+                    \le p_\sharp^2/302
+\]
+after reducing the primary scale. The strict inequality
+$0.42/127<1/302$ and the exponential error leave the margin to
+$1/300$. Since $\tau_1/\sigma_1=\epsilon\tau_0/\sigma_0$,
+this proves \eqref{rw:upper:small-ratio}.
+
+The generator ratio now determines the entrance sign of the original
+central comparison.
+The physical-fibre construction in Section~11 includes the regular
+point $p_0=p_\sharp/4$. The two regular columns in
+Lemma~\ref{rw:regular-columns} satisfy
+$C/A=p^2/5+O(p^3)$, uniformly on the normalized compact coefficient
+set. Thus at this fixed point $C/A\ge p_\sharp^2/85$ after
+choosing $p_\sharp$ small. Let
+$w=(\tau_1,\sigma_1)/(|\tau_1|+|\sigma_1|)$.
+Equation \eqref{rw:upper:small-ratio} makes
+$w_1+w_2C/A$ have sign $\sigma_1$ and modulus at least
+$p_\sharp^2/200$. The exact regular representation, divided by
+this generator norm, is
+\[
+ K(p_0)/(|\tau_1|+|\sigma_1|)
+          =-A(p_0)(w_1+w_2C(p_0)/A(p_0))+e(p_0).
+\]
+The positive $A(p_0)$ has a fixed margin, and regular coefficient
+convergence together with the fixed-field forcing makes $e(p_0)$
+smaller than half the preceding margin. Consequently $K(p_0)$ has
+sign $-\sigma_1$, as required. All choices preceded the fixed field
+and its cycle. Reflection transfers this statement with its actual
+outgoing label and the identity \eqref{rw:counting:reflection}.
+\end{proof}

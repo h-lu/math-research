@@ -1,0 +1,165 @@
+\section{The hemicycle and the main result}\label{rw:main-results}
+
+The quadratic field
+\[
+ \dot x=-y,\qquad \dot y=x(1+y)
+\]
+has a center whose period annulus fills the half-plane $y>-1$.
+On the Poincar\'e sphere its outer boundary is a hemicycle: the
+compactified line $y=-1$ joins two semi-hyperbolic points at infinity,
+and the upper equatorial semicircle joins them through a nilpotent
+point. We denote this graphic by $\Gamma=H_{14}^{3}$.
+The question is how many isolated periodic orbits can appear near
+this entire boundary under arbitrary quadratic perturbations.
+
+The reduction of the quadratic finiteness problem to cyclicity
+questions for a finite collection of graphics was developed by
+Dumortier, Roussarie and Rousseau~\cite{DRR1994}.
+For center graphics through a nilpotent point, Roussarie and Rousseau
+\cite{RoussarieRousseau2015} prove finite cyclicity of the boundary
+limit periodic sets for several neighboring configurations.
+Their Theorem~1.1 explicitly leaves $H_{14}^{3}$ aside.
+Their family $\dot x=-y+B_0x^2$, $\dot y=x+xy$ is treated for
+$B_0>0$; the field above has $B_0=0$.
+At the end of their introduction they identify the two
+semi-hyperbolic equatorial points as the additional difficulty
+in this hemicycle. A bound near a fixed positive $B_0$ does not
+give a bound uniform as these points degenerate at $B_0=0$.
+The hemicycles studied by Mar\'in and Villadelprat
+\cite{MarinVilladelprat2025} have two hyperbolic saddles at infinity;
+the semi-hyperbolic and nilpotent points here require additional
+slow-passage estimates.
+
+We use the ordinary Euclidean topology on the twelve coefficients
+of a planar quadratic vector field. All neighborhoods of $\Gamma$
+are taken on the closed northern hemisphere. A cycle is counted only
+when its entire affine periodic orbit lies in that neighborhood.
+Its multiplicity is the order of the isolated zero of a local
+Poincar\'e displacement; a period annulus contributes no isolated
+cycles.
+
+\begin{theorem}[Cyclicity three]\label{rw:main:cyclicity}
+Let $X_0=(-y,x(1+y))$ and let $\Gamma$ be its hemicycle described
+above.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item There are an open neighborhood $\mathscr U$ of $\Gamma$ and
+an open coefficient neighborhood $\mathscr V$ of $X_0$ such that
+every quadratic field in $\mathscr V$ has total multiplicity at most
+three among its isolated periodic orbits contained in $\mathscr U$.
+\item For every open neighborhood $\mathscr U_1$ of $\Gamma$ and
+every open coefficient neighborhood $\mathscr V_1$ of $X_0$, some
+quadratic field in $\mathscr V_1$ has three distinct simple limit
+cycles contained in $\mathscr U_1$.
+These fields can be chosen in a sequence tending to $X_0$ such that
+each of the three cycles converges to the entire $\Gamma$ in spherical
+Hausdorff distance.
+\end{enumerate}
+Consequently the cyclicity of $H_{14}^{3}$ in the full quadratic
+family is exactly three.
+\end{theorem}
+
+The upper bound controls all isolated cycles whose entire orbits lie
+in the fixed neighborhood, with their full return multiplicities.
+The lower bound also gives cyclicity three in the usual Hausdorff
+sense of \cite[Definition~2.1]{RoussarieRousseau2015}. It is realized
+in the five-parameter family
+\[
+ \dot x=-y+Bx^2+my^2+ax,\qquad
+ \dot y=x(1+y)+cy+dy^2.
+\]
+Near-identity affine transformations and positive time changes make
+this family a local slice for every quadratic perturbation. The two
+parts of the theorem are proved independently in
+Theorems~\ref{rw:upper-bound} and~\ref{rw:three-simple-cycles}.
+
+\input{figures/hemicycle}
+
+\subsection{The mechanism of the proof}
+
+Two difficulties intervene between local passage estimates and a sharp
+bound. Several passages can lose their exit simultaneously, making
+their linear contraction actions arbitrarily large. Near the nilpotent
+end, a coefficient direction can also reveal a second scale with
+unrestricted separation from the first. These phenomena require
+estimates uniform in the complete passing domains. Even with such
+estimates, adding the counts of neighboring charts would exceed three.
+We instead compare the same two actual paths on one interval and
+keep the direction in which their critical values cross zero.
+
+The two paths start at the same outgoing point on $y=0$: one follows
+the lower arc backward to the central section, and the other follows
+the upper arc and the incoming lower arc forward. We compare their
+outputs in the original central height $z=1+y$.
+They have outputs $s_++U$ and $s_-+V$, where the reference
+difference $s_--s_+$ depends on the field and is independent of the
+section input. With $\epsilon>0$ the primary scale of
+Definition~\ref{rw:normalization}, we study
+\[
+ F=U-V-(s_--s_+),\qquad
+ K=\epsilon\log(V'/U').
+\]
+The derivatives $U',V'$ have the same nonzero sign, and
+\[
+ F'=U'(1-e^{K/\epsilon}).
+\]
+Hence $F'$ and $K$ have the same zero multiplicities. Once $K$ has
+at most two zeros on that interval, Rolle's theorem gives at most
+three closing zeros. If a sufficiently small cycle occurs before
+the interval, it is unique and simple. It supplies a signed entrance
+at which the bound for $K$ improves to one, leaving at most two
+further closing zeros. Section~\ref{rw:counting} states the precise
+thresholds and proves this counting implication.
+
+Two additional facts make this implication applicable to the whole
+hemicycle. The bounded-energy orbits and the large-energy orbits on
+which the coefficients remain small are counted together by one
+source return. Whenever one monotone comparison does not already
+settle the outer cycles, an outer cycle supplies a coefficient
+inequality and bounds three equilibrium-free returning strips.
+Every intermediate input, including a nonclosing one, then
+has both complete central outputs. This is the physical interval
+proved in Proposition~\ref{rw:saturation}. The source bound is not
+added to a count on this interval when it already includes those
+source cycles.
+
+Proposition~\ref{rw:ordered-cover} arranges the physical interval as
+a regular prefix followed by at most one terminal union. The regular
+crossings have one direction and supply the signs at its entrance.
+The hardest endpoint charts initially allow four closing zeros.
+Their derivative estimates alone therefore do not prove the theorem.
+On a fixed coefficient fibre, Proposition~\ref{rw:coefficient-transport}
+transports the outer-cycle inequality to each actual open overlap.
+The three-saddle and weak-end arguments then use the already fixed
+entrance to obtain a two-zero bound for $K$ on the whole union,
+with a one-zero bound under the small-cycle entrance.
+These are the exceptional steps in Propositions
+\ref{rw:anchors:three-saddle} and \ref{rw:anchors:primary-weak};
+Proposition~\ref{rw:anchored-unions} joins them to the other endpoints.
+
+At secondary scale the entrance is carried through the
+primary--wedge--secondary regular chain; the actual saddle ratio
+and the increasing weak numerator give the terminal bounds in
+Propositions~\ref{rw:secondary:saddle-anchor}
+and~\ref{rw:secondary:weak-anchor}.
+
+Sections~4--5 construct the original passages and their real center
+comparison domains before coefficient division. Relative amplitudes
+are estimated separately from possibly divergent contraction actions.
+This distinction permits simultaneous small gaps, moving weak roots
+and exact cancellation of common powers. Sections~7--10 then classify
+the finite, infinite and secondary endpoints on their whole passing
+domains. The long secondary passage retains its exact scale exponent
+even when the product of the primary scale and the logarithm of the
+secondary scale is unbounded.
+
+The lower bound starts from the reversible face $B=0$, $m=\epsilon$.
+Section~\ref{rw:lower:preview} describes its three-root variation after
+the basic passages and real centers are available.
+Section~\ref{rw:lower-bound-section} constructs the coefficient curve,
+preserves all three real return paths for one field, and proves that
+each resulting cycle approaches the entire hemicycle.
+
+The appendices provide the independent Abelian-integral threshold,
+the common-domain calculus, the endpoint algebra and uniform relative
+estimates. The domains and derivative orders are stated with the
+transitions and endpoint comparisons that use them.

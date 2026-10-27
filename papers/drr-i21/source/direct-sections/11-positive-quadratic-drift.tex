@@ -1,0 +1,283 @@
+\subsection{Positive quadratic-drift estimates}
+\label{sec:direct-positive-quadratic}
+
+Each branch on this chart has a first boundary root. When the central
+coefficient keeps these roots away from the central line, we compare
+the endpoint slopes either by curvature or, near the symmetric limit,
+by distances to the roots. A further rescaling treats the root that
+approaches the central line.
+
+Suppose
+\(q_2=s>0,\ q_0<0,\ q_1>0\), and write
+\begin{equation}
+\label{eq:direct-positive-secondary-chart}
+ r=\max\{\sqrt{|q_0|/s^3},q_1/s^2\},\quad
+ q_0=-as^3r^2,\quad q_1=bs^2r,\quad
+ \max\{\sqrt a,b\}=1 .
+\end{equation}
+The small parameters \(s,r>0\) are independent. Put
+\(t_0=s^2r^2,\ Q=st_0\), and \(X=|\eta|/(sr)\).
+Here \(sr\) is the radius scale, \(Q=s^3r^2\) the central
+height scale, and \(t_0\) the fixed-output height scale;
+the common logarithmic height coordinate used below is \(T=-s\log h\).
+The outward drifts are
+\begin{equation}
+\label{eq:direct-positive-secondary-drifts}
+ K_\sigma(X)=a-\sigma bX-X^2
+                 -\sigma rX^3R_q(\sigma srX),\qquad
+ F_\sigma=K_\sigma/X .
+\end{equation}
+\begin{proposition}[Positive quadratic drift]
+\label{prop:direct-positive-quadratic}
+There is \(\kappa_+>0\) such that, for all sufficiently small
+independent \(s,r>0\) and every \(L>1/\kappa_+\), the return
+displacement has at most three distinct zeros on the part of
+\eqref{eq:direct-positive-secondary-chart} outside the strip
+\(|q_0|\le Lq_1^2\).
+\end{proposition}
+
+\subsubsection{Constant coefficient bounded away from zero}
+
+First fix \(a\ge a_0^+>0\). This lower bound keeps both roots in a
+compact positive radius interval, where we can prepare the endpoint
+maps uniformly. The roots are simple and satisfy
+\[
+ \alpha_\sigma
+ =\frac{\sqrt{b^2+4a}-\sigma b}{2}+O(r),\qquad
+ c\le\alpha_\sigma\le C,\qquad
+ K_\sigma'(\alpha_\sigma)<-c .
+\]
+At height \(z=t_0Y\),
+\[
+ X_{\log Y}=sF_\sigma(X)+YB(\sigma srX,t_0Y)/X .
+\]
+The boundary-flow coordinate applies with \(\delta=s\),
+since the error in \(B\) is \(O(sr)=O(s)\).
+At a fixed small output height \(Y_f>0\) the coefficient ratios
+are \(O(s)\), and \cref{lem:boundary-flow-endpoint} with
+\(\ell=sr\) and \(\delta=s\) gives
+\begin{equation}
+\label{eq:direct-positive-secondary-endpoints}
+ -I_{\sigma,w}=EA_\sigma wV_\sigma(w),\qquad
+ E=t_0(z_*/(t_0Y_f))^{-2s}\to0,\qquad
+ V_\sigma=1+O_{C^3}(s),
+\end{equation}
+on fixed intervals of positive projected states up to the roots.
+Here \(A_\sigma\asymp1\) and
+\(A_-/A_+\le\exp(2C_{\rm cone}\sqrt{z_*}+Cs)\).
+
+Use the shifted coordinate \(T_Q=T+s\log Q\), as in \eqref{eq:direct-source-clock-convention}.
+The phases are
+\begin{equation}
+\label{eq:direct-positive-secondary-phases}
+ \begin{aligned}
+ w_\sigma&=\Phi_{F_\sigma}^{\,T_Q+C_\sigma+
+                                  s\Xi_\sigma(\xi_\sigma)}(x_{L,\sigma}),
+ &T_Q&=-s\log(h/Q),\\
+ \xi_\sigma&=\e^{\mathcal A_\sigma(x_{L,\sigma})/s}h/Q,
+ &C_\sigma&=s\log(Y_f/s)-\mathcal A_\sigma(x_{L,\sigma}),\\
+ \mathcal A_\sigma(x)&=\int_0^x u/K_\sigma(u)\,du .
+ \end{aligned}
+\end{equation}
+Choose both regular entry actions below one quarter of the minimum
+positive terminal action. Then \(w_+\ge\alpha_+/2\) forces a
+fixed advance on both legs. The negative state lies in a fixed
+interval away from zero; by \cref{rem:direct-projected-continuation}
+it stays below \(\alpha_-\), and the inverse projection continues the
+negative graph.
+
+Suppose also \(b\ge \underline b>0\). The drifts
+\eqref{eq:direct-positive-secondary-drifts} have
+\(K_\sigma'(0)=-\sigma b\) and, in the notation of
+\eqref{eq:direct-curvature-coefficient-cubic},
+\(R_{K_\sigma}(w)=-\sigma rR_q(\sigma srw)=O_{C^2}(r)\). Hence
+\eqref{eq:direct-curvature-coefficient-cubic} gives, on these compact
+intervals,
+\[
+ \frac{wK_+''-K_+'}{w^2}=\frac b{w^2}+O(r)>c,\qquad
+ \frac{wK_-''-K_-'}{w^2}=-\frac b{w^2}+O(r)<-c .
+\]
+Since the negative state stays in a fixed interval away from zero,
+\cref{lem:curvature-criterion} gives \(\mathcal L''<0\) on this root
+interval, including all approaches to its ends.
+
+To extend this comparison to larger central heights, join the root
+interval to the regular prefix.
+Apply \cref{lem:prefix-root-cover} with \(\delta=s\), \(\ell=sr\),
+\(\epsilon_3=r\), comparison drifts \(a-\sigma bx-x^2\),
+\(R=3\alpha_+/4\) and \(w_a=\alpha_+/2\).
+The positive drift margin and the gap \(R-w_a\) are fixed, and the
+boundary-flow inverse is defined up to \(\alpha_+\) at \(Y_f\).
+Since \(\mathcal L_{TT}<0\) on this root range, the lemma gives at most
+three zeros of \(\Delta_p\) on \(\cH_p\).
+
+\subsubsection{Small linear coefficient: comparison in root-distance coordinates}
+
+For small \(b\), the curvature comparison loses its fixed margin.
+We use linearizing coordinates for the two scalar boundary flows to
+obtain a power relation between the distances to the roots, then
+combine it with the exterior contraction. Put
+\[
+ k_\sigma=-F_\sigma'(\alpha_\sigma)
+                  =2+O(b+r)>c .
+\]
+There is a positive root-distance coordinate
+\(\ell_\sigma(w)\), decreasing to zero, such that
+\begin{equation}
+\label{eq:direct-positive-root-distance}
+ F_\sigma(w)\ell_\sigma'(w)=-k_\sigma\ell_\sigma(w),
+ \qquad \ell_\sigma'(\alpha_\sigma)=-\alpha_\sigma .
+\end{equation}
+To construct this coordinate, factor out \(\alpha_\sigma-w\).
+The logarithmic derivative of the remaining unit is
+\(-k_\sigma/F_\sigma+1/(\alpha_\sigma-w)\), whose pole
+is removable. Integration and normalization at the root
+give uniform derivative bounds and a regular inverse.
+Extend to the regular entry using the same scalar equation.
+At \(b=r=0\) the formulas are
+\[
+ F_\sigma=(a-w^2)/w,\qquad k_\sigma=2,\qquad
+ \ell_\sigma=(a-w^2)/2 .
+\]
+
+The constants
+\[
+ c_\sigma^{\rm lin}=\ell_\sigma(x_{L,\sigma})
+              \exp[k_\sigma \mathcal A_\sigma(x_{L,\sigma})]
+\]
+are independent of the entry chosen, by
+\eqref{eq:direct-positive-root-distance}.
+They have positive bounded values and smooth dependence on
+the compact coefficients. The phase identities give
+\begin{equation}
+\label{eq:direct-positive-root-distance-phase}
+ \ell_\sigma(w_\sigma)
+ =c_\sigma^{\rm lin}(Y_f/s)^{-sk_\sigma}
+       \e^{-k_\sigma T_Q}\e^{-sk_\sigma\Xi_\sigma(\xi_\sigma)} .
+\end{equation}
+Put \(x=\ell_+(w_+)\), \(y=\ell_-(w_-)\), and
+\(\nu_k=k_-/k_+\). Since \(\nu_k k_+=k_-\),
+\[
+ \frac{y}{x^{\nu_k}}
+ =\frac{c_-^{\rm lin}}{(c_+^{\rm lin})^{\nu_k}}
+   \exp\!\left(-sk_-[\Xi_-(\xi_-)-\Xi_+(\xi_+)]\right).
+\]
+The exponential factors involving \(T_Q\) and \(Y_f/s\) cancel, giving
+\begin{equation}
+\label{eq:direct-positive-two-root-power}
+ y=u_px^{\nu_k}(1+\rho_p(x)),\qquad
+ \nu_k=k_-/k_+=1+O(b+r),\qquad
+ u_p=c_-^{\rm lin}/(c_+^{\rm lin})^{\nu_k}=1+O(b+r).
+\end{equation}
+At \(b=r=0\), \(c_+^{\rm lin}=c_-^{\rm lin}=a/2\) and
+\(\nu_k=1\), so the leading unit is exactly one. Its estimate
+is uniform because \(a\ge a_0^+\).
+
+On a sufficiently small fixed collar \(0<x<x_c\), a fixed root
+distance forces a positive phase gap on both legs. The argument of
+\cref{lem:direct-weighted-phase}, now using
+\(F_\sigma\asymp\ell_\sigma\) near the simple roots, gives
+\[
+ |\partial_T^j\xi_\sigma|
+ \le\varepsilon_{N,j}(s)\ell_\sigma(w_\sigma)^N,
+ \qquad\varepsilon_{N,j}(s)\to0
+\]
+for every fixed \(N,j\). The two distances are comparable through fixed
+positive powers by \eqref{eq:direct-positive-root-distance-phase}, and
+\(d\log x/dT=-k_+\partial_T\tau_+\) stays bounded away from zero.
+Thus substitution in \eqref{eq:direct-positive-two-root-power} gives
+\[
+ |(x\partial_x)^j\rho_p(x)|\le C_jx^\vartheta,
+ \qquad 0\le j\le2,
+\]
+with fixed \(\vartheta>0\), uniformly as \(h\downarrow0\).
+
+In these root-distance coordinates the endpoints are
+\[
+ I_\sigma(\ell_\sigma)=b_\sigma+E\mathcal F_\sigma(\ell_\sigma),\qquad
+ \mathcal F_\sigma(0)=0,\quad
+ c\le\mathcal F_\sigma'\le C,\quad
+ \|\mathcal F_\sigma\|_{C^3}\le C .
+\]
+The normalization
+\(\ell_\sigma'(\alpha_\sigma)=-\alpha_\sigma\) and
+\eqref{eq:direct-positive-secondary-endpoints} give
+\[
+ \mathcal F_-'(0)/\mathcal F_+'(0)
+                   \le\exp(2C_{\rm cone}\sqrt{z_*}+C(s+b+r)).
+\]
+If some central height in the collar lies in \(\cH_p\), the endpoints
+on the collar, including the reference endpoints \(b_\sigma\), differ
+from admissible endpoints by \(O(E)\), so they lie in \(\widetilde W_\pm\)
+by \cref{lem:exterior-multiplier-new}.
+In these coordinates, the logarithmic slope ratio is
+\[
+ \mathcal L(x)
+ =\log\left[\Pi_p'(I_-(y(x)))
+       \frac{\mathcal F_-'(y(x))y'(x)}{\mathcal F_+'(x)}\right]
+ =c_p+(\nu_k-1)\log x+e_p(x),
+\]
+where
+\[
+ c_p=\log\left[\Pi_p'(b_-)
+        \frac{\mathcal F_-'(0)}{\mathcal F_+'(0)}u_p\nu_k\right]
+       <-c_0,\qquad |e_p|+|xe_p'|\le Cx^\vartheta.
+\]
+Choose \(b_{*,+}\), then \(r,s\), for this strict margin.
+The nonlinear exterior contributes \(O(Ey(x))\) with
+the same Euler estimate. Since
+\(dx/dh=I_{+,h}/(E\mathcal F_+'(x))>0\), the common factor
+\(dx/dh\) cancels from the displayed quotient, and \(x_T<0\).
+\Cref{lem:one-logarithm-zero-count} shows that every zero in a
+sufficiently small fixed collar satisfies \(x\mathcal L_x<0\), and that
+such zeros occur only if \(\nu_k<1\). Consequently
+\(\mathcal L_T>0\) at every collar zero.
+
+Choose \(R=(1-\epsilon_R)\alpha_+\), with fixed small \(\epsilon_R>0\), strictly inside
+the prepared collar. The positive drift margin is fixed. Apply
+\cref{lem:prefix-root-cover} on the same scales, choosing \(w_a<R\)
+inside this collar with a fixed gap. Every collar zero has \(\mathcal L_T>0\), so
+\(\Delta_p\) has at most two zeros for \(0\le b\le b_{*,+}\).
+Taking \(b\ge b_{*,+}/2\) in the curvature
+argument gives an overlap and covers the compact \(a\) region.
+
+\subsubsection{The central weak root}
+\label{sec:positive-quadratic-weak-root}
+
+It remains to allow the constant coefficient to approach zero. For
+small \(a>0\), normalization in
+\eqref{eq:direct-positive-secondary-chart} forces \(b=1\).
+Put \(\kappa=s/a\). With \(\ell=sra\), the scales
+\eqref{eq:weak-root-scales} hold with \(\hat r=r\) and \(\epsilon_2=-a\).
+At the radius \(\ell_d=srd\) the negative drift is
+\[
+ K_d(x)=a_d+x-dx^2+rd^2x^3R_q(-\ell_dx),
+\]
+so \eqref{eq:weak-root-negative-drift} holds for small fixed
+\(d_{\max}=d_0\) and \(r\le r(d_0)\).
+
+For \eqref{eq:weak-root-outer}, consider the negative graphs with
+\(z<Y_b|\eta|^2\) at \(|\eta|=srd_0\). In the secondary radius
+\(X=|\eta|/(sr)\) the negative drift is
+\[
+ K_-(X)=a+X-X^2+rX^3R_q(-srX),
+\]
+which is the drift \(K_1\) of \cref{cor:weak-root-negative-first-root},
+since \(\ell/a=sr\). Its first root is \(\beta=1+O(a+r)\le2\), and
+\(K_-'/X\ge-C\) on \([d_0/2,\beta]\).
+\Cref{cor:weak-root-negative-first-root}, with \(d_{\max}=d_0\) and
+\(\beta^*=2\), gives \(\mathfrak H_-\ge-C-1\) and \(|I_{-,T}|=o(1)\) for
+these graphs, up to the limiting root. \Cref{prop:weak-root-passage} gives
+at most two zeros of \(\Delta_p\) for \(0<a\le a_+\) and
+\(0<\kappa\le\kappa_+\), where \(a_+\) and \(\kappa_+\) are its constants
+\(a_\circ\) and \(\kappa_\circ\).
+
+The complement of \(\kappa\le\kappa_+\) in the region \(0<a\le a_+\) has
+\(|q_0|/q_1^2=a/s<1/\kappa_+\), and lies in the strip
+\(|q_0|\le Lq_1^2\) for every \(L>1/\kappa_+\). The compact-\(a\)
+argument, applied down to a threshold \(a_0^+<a_+\), overlaps the
+weak-root region. The curvature, root-distance, and weak-root
+comparisons give bounds three, two, and two, respectively, so their
+maximum is three outside that strip. The thresholds for \(s,r\) are those
+of the three regions and are independent of \(L\).
+This proves \cref{prop:direct-positive-quadratic}.

@@ -1,0 +1,66 @@
+% Figure contract: the complete marked graphic and its positive-time return.
+% Native LaTeX picture; schematic, not a numerical phase portrait.
+\begin{figure}[H]
+\centering
+\setlength{\unitlength}{1pt}
+\begin{picture}(430,190)
+  % Panel (a): the two marked branches and the repeated projective vertex.
+  \linethickness{.35pt}
+  \put(18,164){\line(1,0){144}}
+  \put(129,171){\makebox(0,0)[l]{\small equator}}
+  \linethickness{.8pt}
+  \qbezier(88,164)(23,164)(26,105)
+  \qbezier(26,105)(29,50)(88,50)
+  \qbezier(88,50)(147,50)(150,105)
+  \qbezier(150,105)(153,164)(88,164)
+  \put(26,109){\vector(0,-1){14}}
+  \put(150,96){\vector(0,1){14}}
+  \put(31,101){\makebox(0,0)[l]{\scriptsize (+t)}}
+  \put(145,103){\makebox(0,0)[r]{\scriptsize (+t)}}
+  \put(88,164){\circle*{3}}
+  \put(88,50){\circle*{3}}
+  \put(88,179){\makebox(0,0){\(q_*^-=q_*^+=q_*\)}}
+  \put(88,39){\makebox(0,0){\(p_*\)}}
+  \put(45,87){\makebox(0,0){\(\Gamma_-\)}}
+  \put(132,87){\makebox(0,0){\(\Gamma_+\)}}
+  \linethickness{.4pt}
+  \put(18,127){\line(3,1){32}}
+  \put(120,137){\line(3,-1){32}}
+  \put(9,129){\makebox(0,0)[r]{\(\Sigma_-\)}}
+  \put(159,129){\makebox(0,0)[l]{\(\Sigma_+\)}}
+  \put(88,20){\makebox(0,0){\small
+    \(q_*^-\xrightarrow{\,\Gamma_-\,}p_*
+      \xrightarrow{\,\Gamma_+\,}q_*^+\quad(+t)\)}}
+  \put(88,0){\makebox(0,0){\small (a) The complete marked graphic}}
+
+  % Panel (b): all four positive-time first-hit factors of the return.
+  \put(255,150){\makebox(0,0){\(\Sigma_-\)}}
+  \put(395,150){\makebox(0,0){\(\Sigma_+\)}}
+  \put(255,70){\makebox(0,0){\(\eta_{\rm in}\)}}
+  \put(395,70){\makebox(0,0){\(\eta_{\rm out}\)}}
+  \put(379,150){\vector(-1,0){108}}
+  \put(255,138){\vector(0,-1){56}}
+  \put(271,70){\vector(1,0){108}}
+  \put(395,82){\vector(0,1){56}}
+  \put(325,162){\makebox(0,0){\(T_\theta\)}}
+  \put(245,110){\makebox(0,0)[r]{\(E_\theta\)}}
+  \put(405,110){\makebox(0,0)[l]{\(C_\theta\)}}
+  \put(325,58){\makebox(0,0){\(M_m(\eta)=m\eta\)}}
+  \put(325,25){\makebox(0,0){\small
+    \(\mathcal R_\theta=C_\theta\circ M_m\circ E_\theta\circ T_\theta\)}}
+  \put(325,0){\makebox(0,0){\small (b) The positive-time return composition}}
+\end{picture}
+\caption{The complete marked graphic and the return used to count its nearby
+cycles.  In panel~(a), \(\Gamma_-\) runs from \(q_*^-\) to \(p_*\) and
+\(\Gamma_+\) from \(p_*\) to \(q_*^+\) in positive time.  The equality
+\(q_*^-=q_*^+=q_*\) records two occurrences in the return word of one
+repeated projective vertex, not two points.  The branches have a common
+tangent there, and no equatorial arc belongs to \(\Gamma_{I4}\).  Panel~(b)
+shows the complete composition of positive-time first-hit maps on their
+common through-side domain: the infinity transition \(T_\theta\), the regular
+entry map \(E_\theta\), the finite saddle--node multiplier
+\(M_m(\eta)=m\eta\), and the regular closing map \(C_\theta\).  Its arrows
+denote maps, not additional trajectories.  All shapes and distances are
+schematic.}
+\label{fig:graphic-sections}
+\end{figure}

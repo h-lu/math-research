@@ -1,0 +1,162 @@
+\section{Full coefficient space and open realization}
+\label{sec:quadratic-transfer}
+Identify the space $\mathcal Q_2$ of real planar quadratic vector
+fields with $\R^{12}$ by their coefficients. The affine and positive-time
+normalization of Dumortier and Rousseau transfers the whole-graphic
+count to this full coefficient space.
+
+\begin{corollary}\label{cor:quadratic-space}
+Fix $b_0\in(0,2)$. There are an open coefficient neighborhood
+$\mathcal W\subset\mathcal Q_2$ of $X_{b_0,0}$ and $\eta>0$ such
+that every $Q\in\mathcal W$ satisfies
+\[
+ \sum_{\substack{L\ {\rm isolated\ periodic\ orbit\ of}\ Q\\
+                    d_{\rm H}(L,\Gamma_{b_0})<\eta}}m_Q(L)\le2.
+\]
+There is a sequence $Q_n\to X_{b_0,0}$ in $\mathcal Q_2$ for which
+each $Q_n$ has two distinct isolated periodic orbits converging
+separately to $\Gamma_{b_0}$ in two-sided Hausdorff distance.
+Both orbits are eventually hyperbolic. Thus the whole-graphic
+cyclicity of $\Gamma_{b_0}$ in the full quadratic coefficient space
+is exactly two.
+\end{corollary}
+
+\begin{proof}
+We verify the local normalization of
+\cite[Proposition~2.1]{DR2009} by computing its differential.
+For $d\in\R^2$, $A\in GL(2,\R)$ and $c>0$, set
+\[
+ \Phi(d,A,c,b,\mu)(u)
+   =cA X_{b,\mu}\bigl(A^{-1}(u-d)\bigr).
+\]
+Its domain and target both have dimension twelve. At
+$(0,I,1,b_0,0)$, an affine variation
+$V=(p+az+\ell y,q+ez+fy)$ contributes $DVX-DXV$, where
+$X=X_{b_0,0}$; write $\kappa,\beta,\nu$ for the variations of
+$c,b,\mu$. If the total variation vanishes, its second component is
+\[
+ \nu_4-qz+(e-p)y-ez^2+(b_0e-a+\kappa)zy-(e+\ell)y^2=0.
+\]
+Hence $q=e=p=\ell=\nu_4=0$ and $\kappa=a$.
+The $y$ and $y^2$ coefficients of the first component now give
+$f=2a$ and $2a=0$. Its remaining coefficients give
+$\beta=\nu_1=\nu_2=\nu_3=0$. The differential is therefore
+invertible. The analytic inverse-function theorem supplies, for all
+$Q$ in one coefficient neighborhood, analytic choices
+$H_Q(u)=A_Qu+d_Q$, $c_Q>0$, $b_Q$ and $\mu_Q$ such that
+\[
+ Q(H_Q(u))=c_QA_QX_{b_Q,\mu_Q}(u),\qquad
+ (H_Q,c_Q,b_Q,\mu_Q)\longrightarrow(\mathrm{id},1,b_0,0).
+\]
+
+Choose a compact interval $J\Subset(0,2)$ with $b_0$ in its interior,
+and let $K,V,\rho_{\rm H}$ be given by
+Theorem~\ref{thm:main}(i). The fast terminal intersection satisfies
+$y'=f_b<0$, so continuous dependence and transversality give
+Hausdorff continuity of $b\mapsto\Gamma_b$
+(Appendix~\ref{sec:geometry}). Consequently
+\[
+ E_Q:=d_{\rm H}(H_Q\Gamma_{b_Q},\Gamma_{b_0})\longrightarrow0.
+\]
+After shrinking the coefficient neighborhood, let $M\ge1$ bound
+both $\|A_Q\|$ and $\|A_Q^{-1}\|$. For $\widetilde L=H_Q^{-1}L$,
+the two triangle inequalities give
+\begin{align*}
+ d_{\rm H}(\widetilde L,\Gamma_{b_Q})
+ &\le M\bigl(d_{\rm H}(L,\Gamma_{b_0})+E_Q\bigr),\\
+ d_{\rm H}(L,\Gamma_{b_0})
+ &\le M d_{\rm H}(\widetilde L,\Gamma_{b_Q})+E_Q.
+\end{align*}
+Choose $\kappa_0>0$ so that the $\kappa_0$-neighborhood of
+$\bigcup_{b\in J}\Gamma_b$ is contained in $K$, and set
+$\theta=\min(\kappa_0,\rho_{\rm H})$.
+Shrink $\mathcal W$ so that $b_Q\in J$, $\mu_Q\in V$ and
+$E_Q<\theta/(4M)$, and take $\eta=\theta/(4M)$.
+Every orbit counted in the corollary then gives
+$\widetilde L\subset K$ and
+$d_{\rm H}(\widetilde L,\Gamma_{b_Q})<\theta/2$.
+These inequalities also show that fixed-base and moving-graphic
+Hausdorff convergence are equivalent as $Q\to X_{b_0,0}$.
+
+The positive constant time factor and affine map preserve isolated
+periodic orbits, their minimal returns and their multiplicities, by
+Section~\ref{sec:return-framework}. Theorem~\ref{thm:main}(i) gives
+the upper bound.
+
+Finally, the full coefficient space contains
+$Q_n=X_{b_0,\mu_n}$ from Theorem~\ref{thm:main}(ii). These fields
+eventually belong to $\mathcal W$ and realize two separate
+whole-graphic limits at the fixed modulus $b_0$.
+This proves sharpness in $\mathcal Q_2$.
+\end{proof}
+
+\begin{corollary}[Open realization]\label{cor:open-quadratic-realization}
+Fix $b_0\in(0,2)$, and let $\mathcal W$ and $\eta$ be as in
+Corollary~\ref{cor:quadratic-space}. There are fields
+$Q_n\to X_{b_0,0}$ and nonempty open coefficient balls $U_n$
+centered at $Q_n$, with
+\[
+ Q_n\in U_n\subset\mathcal W\cap B(Q_n,1/n)\subset\mathcal Q_2
+\]
+such that, for every $Q\in U_n$, the isolated periodic orbits satisfying
+$d_{\rm H}(L,\Gamma_{b_0})<\eta$ consist exactly of two hyperbolic
+cycles $L_n^-(Q)$ and $L_n^+(Q)$. Their characteristic multipliers
+satisfy
+\[
+ \lambda_Q(L_n^-(Q))>1,\qquad
+ 0<\lambda_Q(L_n^+(Q))<1,
+\]
+and each cycle converges to the whole graphic uniformly on its ball:
+\[
+ \max_{\sigma\in\{-,+\}}\ \sup_{Q\in U_n}
+ d_{\rm H}(L_n^\sigma(Q),\Gamma_{b_0})\longrightarrow0.
+\]
+Moreover,
+$\sup_{Q\in U_n}\|Q-X_{b_0,0}\|\to0$.
+For the local normalization $Q\mapsto(b_Q,\mu_Q)$ constructed above,
+the balls may be chosen so that $\nu(Q):=-(\mu_Q)_4>0$ throughout
+each $U_n$.
+\end{corollary}
+
+\begin{proof}
+Take $Q_n=X_{b_0,\mu_n}$ from Theorem~\ref{thm:main}(ii) and delete
+finitely many terms so that $Q_n\in\mathcal W$ and the two cycles
+have the multipliers in \eqref{eq:realizing-multipliers} and each lies
+within Hausdorff distance $\eta/2$ of $\Gamma_{b_0}$. Put
+\[
+ d_n=\max_{\sigma\in\{-,+\}}
+ d_{\rm H}(L_n^\sigma,\Gamma_{b_0})\longrightarrow0.
+\]
+For each fixed $n$, hyperbolic persistence gives distinct continuations
+$L_n^\sigma(Q)$ in disjoint tubes. Indeed the finite minimal returns
+are analytic and their displacement derivatives are
+$\lambda-1\ne0$, so the implicit-function theorem applies. The same
+flow-box clearances preserve minimality, and finite-orbit continuous
+dependence gives Hausdorff continuity; the multipliers remain on their
+respective sides of one.
+
+Shrink an open coefficient ball $U_n$ about $Q_n$ so that
+$U_n\subset\mathcal W\cap B(Q_n,1/n)$ and, for every $Q\in U_n$,
+\[
+ d_{\rm H}(L_n^\sigma(Q),L_n^\sigma)<1/n,\qquad
+ d_{\rm H}(L_n^\sigma(Q),\Gamma_{b_0})<\eta
+ \quad(\sigma\in\{-,+\}).
+\]
+The two hyperbolic cycles each have multiplicity one.
+Corollary~\ref{cor:quadratic-space} excludes a third counted isolated
+cycle, proving the asserted exact count. The triangle inequality gives
+\[
+ \max_{\sigma\in\{-,+\}}\ \sup_{Q\in U_n}
+ d_{\rm H}(L_n^\sigma(Q),\Gamma_{b_0})\le d_n+1/n\longrightarrow0,
+\]
+and
+$\sup_{Q\in U_n}\|Q-X_{b_0,0}\|
+ \le\|Q_n-X_{b_0,0}\|+1/n\to0$.
+
+The local inverse defining the normalization gives
+$\mu_{Q_n}=\mu_n$, whose fourth component is $-\nu_n<0$.
+By continuity, a further shrinking of $U_n$ ensures
+$(\mu_Q)_4<-\nu_n/2<0$ throughout the ball.
+The radii are chosen separately for each $n$, so finite flight time
+for each realizing cycle suffices even if their periods increase.
+\end{proof}

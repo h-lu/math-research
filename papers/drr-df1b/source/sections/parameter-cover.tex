@@ -1,0 +1,286 @@
+\section{A common upper bound in the full parameter neighborhood}
+\label{sec:parameter-cover}\label{sec:upper-main}
+The preceding propositions bound all counted cycles of a fixed field
+on open coefficient windows. To obtain Theorem~\ref{thm:main}(i), we
+must cover every raw parameter direction and choose common phase,
+parameter, and Hausdorff neighborhoods. The difficulty is that the
+strict simple-contact margins vanish at the positive-quadratic and
+two-endpoint directions. We cover these boundary directions first,
+then take minima on the remaining compact set.
+
+Use the radius $\varepsilon$ and direction $(E_0,E_1,E_2,D)\in S^3$
+defined in Section~\ref{sec:return-framework}. The root-collision and
+two-endpoint estimates are supplemented by the
+exclusions and positive-value estimate of Appendix~\ref{sec:whole-period},
+the simple-contact comparison of Appendix~\ref{sec:simple-contact},
+and the forcing estimates of Appendix~\ref{sec:contact-forcing}.
+
+\subsection{The positive quadratic direction}
+Near $(E_0,E_1,E_2,D)=(0,0,1,0)$, a second weighted radius separates
+the forcing, constant, and linear terms from the quadratic term.
+Replacing
+\[
+ \varepsilon\mapsto\varepsilon\sqrt{E_2},\qquad
+ (E_0,E_1)\mapsto(E_0,E_1)/E_2,\qquad D\mapsto D/E_2^{3/2}
+\]
+normalizes $E_2=1$ without changing the field. Write
+\begin{equation}\label{eq:coefficient-sphere}
+ R=\max(|E_1|,\sqrt{|E_0|},|D|^{1/3}),\quad
+ P=z^2+Ra z+R^2c,\quad D=R^3d.
+\end{equation}
+At $R=0$ there is no positive periodic orbit by
+Lemma~\ref{lem:damping}. Otherwise
+$\max(|a|,\sqrt{|c|},|d|^{1/3})=1$. Use the six faces in
+the order $d=1,d=-1,c=-1,c=1,a=1,a=-1$, assigning ties once.
+Proposition~\ref{prop:scaled-positive-forcing} bounds the first face
+by one, and Lemma~\ref{lem:scaled-negative-gates} excludes the next
+two. Proposition~\ref{prop:positive-constant} treats $c=1$.
+On $a=1$, $c\le1/8$
+is excluded; for $c\ge1/8$ the substitution
+\[
+r=R\sqrt c,\qquad a_*=1/\sqrt c,\qquad d_*=d/c^{3/2}
+\]
+again gives the compact positive-constant family.
+
+The exclusion on $a=1$ also holds on an open coefficient set.  For
+$a>15/16$ and $c<5/32$, take $\alpha=1/2$ in
+Lemma~\ref{lem:scaled-negative-gates}, since
+\[
+ R^{-2}P(-R/2)=\tfrac14-\tfrac a2+c<-\tfrac1{16}.
+\]
+For $c>1/16$ use the positive-constant substitution above, with $a$
+in a fixed neighborhood of one.  These two open sets overlap and
+cover the whole $a=1$ face.
+
+These face estimates extend to open coefficient windows. For $d>0$ put
+\[
+ \widehat R=R d^{1/3},\qquad
+ \widehat a=a/d^{1/3},\qquad
+ \widehat c=c/d^{2/3},\qquad \widehat d=1 .
+\]
+On a neighborhood with $d$ bounded below, the hatted coefficients range
+in a fixed compact set. Proposition~\ref{prop:scaled-positive-forcing}
+therefore treats a neighborhood of the $d=1$ face, including its ties
+with $a$ or $c$. If $c>0$ is bounded below, the substitution
+\(\widehat R=R\sqrt c\), \(\widehat a=a/\sqrt c\), and
+\(\widehat d=d/c^{3/2}\) gives the positive-constant family.  The strict
+negative margins defining the $d=-1$ and $c=-1$ faces persist on their
+respective neighborhoods. Ties are assigned after these overlapping
+open regions have been chosen.
+
+For a neighborhood of the remaining face $a=-1$, take $a<0$
+bounded away from zero and put
+
+\[
+ A=-Ra>0,\qquad \widehat c=\frac{c}{a^2},\qquad
+ \widehat d=\frac{d}{(-a)^3}.
+\]
+
+After the change $z=A\,\widehat z$, the polynomial and forcing become
+$P=A^2(\widehat z^2-\widehat z+\widehat c)$ and
+$D=A^3\widehat d$. On the face itself $A=R$.
+Choose numbers
+\(0<c_{\rm in}<c_{\rm out}\) and
+\(0<d_{\rm in}<d_{\rm out}\), all sufficiently small, so that
+Proposition~\ref{prop:simple-contact} applies on the inner box
+$|\widehat c|<c_{\rm out}$, $|\widehat d|<d_{\rm out}$, with $C=1$.
+The outer reductions start at the smaller thresholds $c_{\rm in}$
+and $d_{\rm in}$, so their windows overlap this box.
+If $|\widehat d|>d_{\rm in}$, change radius
+to $A|\widehat d|^{1/3}$. The new forcing is $1$ or $-1$; the other
+coefficients, $-|\widehat d|^{-1/3}$ and
+$\widehat c|\widehat d|^{-2/3}$, range in fixed
+compact sets, to which the forcing results apply. If
+$|\widehat d|<d_{\rm out}$
+and $\widehat c<-c_{\rm in}$, change radius to
+$A\sqrt{|\widehat c|}$ and apply
+the negative-constant exclusion. If $|\widehat d|<d_{\rm out}$ and
+ $\widehat c>c_{\rm in}$,
+put
+\[
+ r=A\sqrt{\widehat c},\qquad a_*=-1/\sqrt{\widehat c},\qquad
+ d_*=\widehat d/\widehat c^{3/2},
+\]
+and use Proposition~\ref{prop:positive-constant}, including its
+separated positive roots and their collision. Each new coefficient
+range is compact and fixed before the corresponding radial scale is made
+small. Each substitution reaches one of the stated regional estimates,
+so the six-face decomposition ends here.
+
+Each parameter therefore belongs to an open window whose estimate
+bounds all its counted cycles by two. At a positive-root collision,
+localization and finite-event gluing count the through and fiber-exit
+pieces together on one source interval. Elsewhere the bound is no
+larger. Fix the physical sections and coefficient thresholds, then
+take the finitely many required shrinkings of $R$, $\varepsilon$,
+the source interval, and the Hausdorff neighborhood. This gives an
+open-neighborhood bound of two at the positive-quadratic direction,
+with arbitrary relative rates of the coefficients.
+
+\subsection{The remaining normalized directions}
+Classify the other directions first by the signs of the polynomial
+and forcing, then by the endpoint-root configuration.
+Fix $b_*$ and let $P_*,D_*$ denote a direction on $S^3$.
+Lemma~\ref{lem:negative-gates} excludes an open neighborhood
+unless $P_*\ge0$ on $[f_{b_*},0]$ and $D_*\ge0$.
+If $P_*(0)>0$, Proposition~\ref{prop:positive-value} gives a
+neighborhood bound of one. If $P_*(0)=0$ and $D_*>0$,
+Proposition~\ref{prop:positive-forcing} gives a bound of two.
+The remaining directions satisfy
+\begin{equation}\label{eq:remaining-polynomial}
+ E_{0*}=D_*=0,\qquad
+ P_*(z)=z(-A_*+C_*z),\qquad A_*^2+C_*^2=1.
+\end{equation}
+For $x=-z\in[0,-f_{b_*}]$,
+$P_*(-x)=x(A_*+C_*x)\ge0$. Hence $A_*\ge0$. If $A_*=0$,
+then $C_*=1$, the positive-quadratic direction treated above. If $A_*>0$ and
+$P_*>0$ on $[f_{b_*},0)$, the negative preceding interval has
+a fixed positive polynomial margin. In a neighborhood use
+$A=-E_1$, $c=E_0/A^2$, $d=D/A^3$ in
+Proposition~\ref{prop:simple-contact}; here $A$ is bounded away
+from zero and $C=E_2$ may have either sign. This gives at most two.
+The only other possibility is
+\[
+ A_*>0,\qquad C_*<0,\qquad C_*f_{b_*}=A_*.
+\]
+The roots $f_{b_*}$ and zero are simple, with derivatives $A_*$
+and $-A_*$. Proposition~\ref{prop:two-endpoints} supplies a
+neighborhood bound of two. This list is exhaustive. In particular,
+an interior double root or a double root at the lower endpoint must
+have $P_*(0)>0$ and has already been treated. If $P_*\equiv0$,
+normalization forces $D_*=1$ or $-1$, also already treated.
+
+\subsection{Necessary directions and the order of the residual cover}
+\label{sec:effective-residual-cover}
+Fix a compact interval $J\Subset(0,2)$.
+Let $\mathcal R_J^-$ be the compact set of possible limiting
+directions, including the modulus $b\in J$, of negative-forcing
+whole-graphic cycles. The gate and damping identities give
+\[
+ D=0,\qquad E_1\le0,\qquad
+ P(z)\ge0\quad(f_b\le z\le0).
+\]
+In the zero-constant subset $E_0=0$ these reduce to
+$P=z(-A+Cz)$, $A\ge0$, $A^2+C^2=1$.
+The only non-strict simple-contact boundaries are $A=0,C=1$
+and $A>0,C<0,Cf_b=A$.
+
+More precisely, for every relatively open
+$N\supset\mathcal R_J^-$ there exist $\varepsilon_N,\rho_N>0$
+such that every $D<0$ field with
+$0<\varepsilon<\varepsilon_N$ and a cycle within
+$\rho_N$ of the whole graphic has direction in $N$.
+If not, choose $\varepsilon_n,\rho_n\to0$ and counterexamples
+outside $N$. Compactness gives a direction subsequence
+$(b_n,q_n)\to(b_*,q_*)$. A strictly negative limiting $D_*$ or
+a negative value of $P_*$ is excluded by
+Lemma~\ref{lem:negative-gates}; continuity of the positive
+half-plane damping restriction gives $E_{1*}\le0$.
+Their whole-Hausdorff convergence supplies the descending crossing
+required by the gate argument.
+Thus the limit belongs to $\mathcal R_J^-\subset N$,
+contradicting the complement's closedness.
+The two thresholds depend on the chosen $N$.
+
+Choose effective smaller positive-quadratic and two-endpoint
+windows first. Their complements in the compact zero-constant
+necessary set form a compact strict simple-contact remainder.
+Only on that remainder fix the positive minima of $A$ and
+the negative preceding polynomial margin.
+Finitely many strict simple-contact windows cover it.
+The resulting open union contains the zero-constant necessary
+set. Compactness then gives an $\eta>0$ such that the
+remaining necessary directions satisfy $E_0\ge2\eta$.
+Cover these by finitely many positive-value windows with fixed
+$E_0$ margin. Now apply the preceding necessary-direction
+statement to this effective open union.
+Directions with $D\ge0$ are covered directly by the
+negative-polynomial gate, positive-value, positive-forcing,
+simple-contact, and two-endpoint windows.
+Thus every strict minimum is taken on a fixed compact remainder
+after the boundary windows have been chosen.
+
+\begin{lemma}[Compactness of the graphic family]
+\label{lem:compact-graphic-family}
+For every compact $J\Subset(0,2)$, the set
+\[
+ \mathcal G_J:=\bigcup_{b\in J}\Gamma_0^b
+\]
+is compact.  More precisely, let $J_\nu\Subset(0,2)$ be finitely many
+compact subintervals and, for each $\nu$, let
+$\mathcal O_{\nu i}$ ($i\in\mathcal I_\nu$) be the finitely many local phase
+neighbourhoods used by the coefficient charts over $J_\nu$.  If
+$\mathcal G_{\nu i}$ denotes the union of the corresponding graphic
+family and the finitely many section cores for chart $(\nu,i)$, and
+$\mathcal G_{\nu i}\Subset\mathcal O_{\nu i}$, then
+\[
+ \delta_{\nu i}:=\operatorname{dist}
+   (\mathcal G_{\nu i},\,\mathbb R^2\setminus\mathcal O_{\nu i})>0,
+ \qquad
+ \delta_*:=\min_{\nu,i}\delta_{\nu i}>0.
+\]
+The global compact phase neighborhood $K$ contains the union of the
+graphic families and section cores. Each chart uses its own local
+neighborhood $\mathcal O_{\nu i}$ and the common clearance $\delta_*$.
+\end{lemma}
+\begin{proof}
+The explicit fast orbit in~\eqref{eq:fast-orbit} and the implicit-function
+construction of $t_b$ and $f_b$ in Section~\ref{sec:geometry} make
+$b\mapsto t_b$ and $b\mapsto f_b$ continuous on $J$.  Hence the two maps
+\[
+ (b,s)\longmapsto \gamma_b(st_b),\qquad
+ (b,s)\longmapsto (sf_b,0),
+ \qquad (b,s)\in J\times[0,1],
+\]
+are continuous and have compact images. Their union is exactly
+$\mathcal G_J$.  For each fixed pair $(\nu,i)$, the same argument applies
+to the compact set $\mathcal G_{\nu i}$, so its distance to
+ $\mathbb R^2\setminus\mathcal O_{\nu i}$ is positive.  There are only finitely many
+pairs, and hence their minimum $\delta_*$ is positive.
+\end{proof}
+
+\begin{proof}[Proof of assertion (i) of Theorem~\ref{thm:main}]
+Fix $J\Subset(0,2)$. At each $b_0\in J$, take a finite subcover of
+$S^3$ by the open coefficient windows above, intersect their modulus
+intervals and take the minima of their radial and Hausdorff thresholds.
+Choose each chart's phase neighborhood to contain the graphic and
+closed enlarged section cores. Their continuity
+(Lemmas~\ref{lem:compact-graphic-family} and~\ref{lem:sections})
+allows a common shrinking of this modulus interval preserving these
+inclusions over its closure. Now take a finite cover of $J$ by such
+intervals $I_\nu$, and compact subintervals $J_\nu\Subset I_\nu$
+still covering $J$. The corresponding finite chart sets
+$\mathcal I_\nu$ and fixed phase neighborhoods satisfy
+$\mathcal G_{\nu i}\Subset\mathcal O_{\nu i}$, with the notation of
+Lemma~\ref{lem:compact-graphic-family}.
+
+By Lemma~\ref{lem:compact-graphic-family}, choose a compact phase
+neighborhood $K$ of $\mathcal G_J$ containing the finitely many required
+transverse sections. The same lemma gives a common positive clearance
+$\delta_*$ for the chartwise inclusions
+$\mathcal G_{\nu i}\Subset\mathcal O_{\nu i}$. Choose the common
+Hausdorff radius below $\delta_*$, all local phase clearances, and all
+section-core radii. Let $\varepsilon_*$ be the minimum of the positive
+radial thresholds, and take
+\begin{equation}\label{eq:raw-neighborhood-main}
+ V=\left\{\mu:
+ \frac{\mu_1^2+\mu_2^2+\mu_3^2}{\varepsilon_*^4}
+ +\frac{\mu_4^2}{\varepsilon_*^6}<1\right\}.
+\end{equation}
+Equation~\eqref{eq:weighted-radius-main} puts every nonzero $\mu\in V$ below
+the common radial threshold.
+
+For fixed $b\in J$ and nonzero raw parameter, select a compact core
+$J_\nu$ containing $b$ and an applicable coefficient window. Its regional
+result bounds the total actual multiplicity of all isolated cycles at the
+chosen Hausdorff distance: Lemma~\ref{lem:sections} places them on the
+same signed source interval. Every regional bound is at most two, so
+selecting any applicable window gives the bound two for this field.
+Each regional result already counts multiplicities on all its
+transition intervals and finite seams;
+in particular, a quadratic late zero cannot be accompanied by an early
+or threshold zero. At $\mu=0$, Lemma~\ref{lem:damping} excludes positive
+periodic orbits. Finite transition endpoints are included; equilibrium
+limits and infinite-time passages are not periodic orbits. Thus one
+$K,V,\rho_{\rm H}$ works for the whole interval $J$.
+\end{proof}

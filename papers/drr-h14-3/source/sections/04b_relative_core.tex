@@ -1,0 +1,295 @@
+\subsection{Relative contraction and the original central height}
+
+The exact phase reduces a passage to scalar transit and normal
+contraction.  Its linear normal factor may have a divergent action,
+so we first estimate the nonlinear amplitude relative to that factor.
+These relative estimates remain uniform as the transit time diverges.
+We then compute the rates for a moving entry and connect the output
+to $X=0$, where the closing difference is measured.
+
+\begin{proposition}[Relative normal contraction]\label{rw:relative-core}
+Fix $N\ge1$ and a slightly larger state and coefficient domain on which
+\begin{equation}\label{rw:relative:field}
+ \dot w=q f(w;\mathbf b),\qquad
+ \dot Z=-Z\beta(w,Z;\mathbf b),\qquad
+ \beta,\ \beta+Z\beta_Z\ge b_*>0.
+\end{equation}
+Here $0<q\le1$, the coefficients and the field have bounded selected
+jets through order $N+2$. The triangular field has a complete auxiliary
+extension preserving these bounds and the normal margins.
+The selected derivatives are ordinary normal-input, slow-entry and
+coefficient derivatives and, when $q=\epsilon$, Euler scale derivatives.
+Suppose that their scalar flow variations through the required order
+are bounded by
+\begin{equation}\label{rw:relative:slow-growth}
+ C_N(1+t)^{M_N}e^{c_N\varpi t}.
+\end{equation}
+Choose the normal neighborhood and slow width so that
+$c_N\varpi<b_*/8$, increasing $c_N$ first to cover all products of
+variations through this order. At the fixed slow exit suppose that its
+velocity has magnitude at least $cq$ and that its hitting time satisfies
+\begin{equation}\label{rw:relative:time-jets}
+ |D^\alpha T|\le C_Nq^{-M_N}(1+T)^{M_N}e^{c_N\varpi T},
+ \qquad 1\le|\alpha|\le N+1.
+\end{equation}
+If $q$ tends to zero, also require $T\ge c/q$.
+
+For every actual passing orbit and signed normal input $z$ in a fixed
+small interval, its normal output is
+\begin{equation}\label{rw:relative:output}
+ G(z)=Lz e^{j(z)},\qquad
+ L=\exp\left[-\int_0^T\beta(w(t),0;\mathbf b)\,\dd t\right]>0,
+ \qquad j(0)=0.
+\end{equation}
+The selected jets of $j$ through order $N$ are bounded uniformly in
+$T$ and the minimum positive slow gap. The jets of $L$ and $G$ have
+absolute bounds $C_Ne^{-b_*T/4}$, after increasing $C_N$; this assertion
+includes mixed normal-input derivatives of $G$. In particular, normal
+input zero is included in the relative statement.
+
+If $z_*(\mathbf b)$ has bounded selected jets and stays in the smaller
+normal interval, then
+\begin{equation}\label{rw:relative:difference}
+ G(z_*+u)-G(z_*)=G'(z_*)u e^{r(u)},\qquad
+ r(0)=0,\qquad \|r\|_{N}\le C_N,
+\end{equation}
+on a fixed smaller $u$ interval. At a slow-root loss of the exit,
+with entry and exit sections remaining separated and $T\to\infty$,
+define the relative
+integral along the complete auxiliary flow up to infinite time and
+extend $L$ and the absolute output by zero. These definitions give
+extensions of class $C^N$ in the selected ordinary variables through
+each such boundary, with the stated Euler bounds.
+At $\epsilon=0$ this assertion uses the Euler scale class just specified,
+not ordinary scale derivatives. They do not assign a physical passage
+to a nonpassing parameter.
+\end{proposition}
+
+\begin{proof}
+Write $g(w,Z)=Z\beta(w,Z)$. The normal equation and its first variation
+give
+\[
+ |Z(t;z)|\le |z|e^{-b_*t},\qquad
+ G_t'(z)=\exp\left[-\int_0^t g_Z(w(s),Z(s;z))\,\dd s\right]>0.
+\]
+Subtracting the invariant-graph rate leaves the nonlinear defect
+\begin{equation}\label{rw:relative:integral}
+ j(z)=-\int_0^T\mathcal I(t,z)\,\dd t,\qquad
+ \mathcal I=\beta(w(t),Z(t;z))-\beta(w(t),0)
+ =Z(t;z)\int_0^1\beta_Z(w(t),sZ(t;z))\,\dd s.
+\end{equation}
+The mixed normal induction in Appendix~\ref{rw:app:relative-variations} gives
+\begin{equation}\label{rw:relative:majorant}
+ |D^\alpha\mathcal I(t,z)|
+ \le C_N(1+t)^{M_N}e^{-(b_*-c_N\varpi)t},\qquad |\alpha|\le N.
+\end{equation}
+Its endpoint calculation uses \eqref{rw:relative:time-jets} and, for
+$q\to0$, $q^{-1}\le T/c$. It bounds the relative jets and proves the
+absolute estimates for $G,L$ separately.
+
+For the difference formula, use instead
+\[
+ \log\frac{G'(z)}{L}
+ =-\int_0^T[g_Z(w(t),Z(t;z))-\beta(w(t),0)]\,\dd t.
+\]
+The same majorant makes
+$G'(z_*+\theta u)/G'(z_*)$ a positive unit with bounded
+selected jets. Integrate it for $0\le\theta\le1$ and take its logarithm
+to obtain \eqref{rw:relative:difference}.
+
+Persistence of a finite transverse exit forces $T\to\infty$ at the
+specified separated-section slow-root boundary. The appendix proves the
+relative extension by differentiated tails and the absolute zero extension.
+Entry--exit collision, where $T\to0$, is excluded.
+\end{proof}
+
+For the lower phase, take $q=\epsilon$ and
+$\varpi=O(\epsilon)$; separated sections give $T\ge c/\epsilon$.
+For an upper angular passage, take $q=1$ and use a small angular
+width to obtain normal domination.  In both cases the estimates allow
+independently vanishing slow gaps.  The action $-\log L$ remains in
+the linear factor, with no bound required for it or its gap derivatives.
+
+\begin{corollary}[Continuity of the relative passage]
+\label{rw:transitions:relative-continuity}
+Consider a family satisfying Proposition~\ref{rw:relative-core}
+with common domains, margins and finite-order bounds. Suppose its
+auxiliary trajectories and reserved mixed jets converge on bounded
+time intervals, and its exit times converge to the corresponding
+finite exit or to infinity. Then the relative amplitude and the
+logarithm of the normal derivative divided by its linear factor
+converge in the selected finite norms, including at a lost exit.
+No derivative of the divergent linear action is included.
+\end{corollary}
+\begin{proof}
+Use \eqref{rw:relative:majorant} and the differentiated endpoint bound
+\eqref{rw:app:endpoint-term}: pass to the limit on a fixed time interval,
+then send its endpoint to infinity. At a finite exit, transversality
+also gives convergence of the time jets.
+\end{proof}
+
+\begin{lemma}[A moving slow entry]\label{rw:transitions:moving-rate}
+In Proposition~\ref{rw:relative-core}, fix a normal input $Z_0>0$ and
+the exit $v_R$. Let the slow entry $v$ vary with
+$f(s)>0$ on the whole interval $[v,v_R]$. With
+$\beta_0(s)=\beta(s,0)$, the actual output is
+\begin{equation}\label{rw:relative:moving-output}
+ G(v)=Z_0\exp\left[-q^{-1}\int_v^{v_R}
+                    \frac{\beta_0(s)}{f(s)}\,\dd s+j(v)\right].
+\end{equation}
+The relative function $j$ has the selected jets of the preceding
+proposition, with $v$ counted as an ordinary input. Put
+\begin{equation}\label{rw:relative:rates}
+ N_0=\beta_0+qf j',\qquad
+ A_0=N_0-qf'+qf\frac{N_0'}{N_0}.
+\end{equation}
+Where $N_0\ge n_*>0$,
+\[
+ \frac{G'}G=\frac{N_0}{qf},\qquad
+ \frac{G''}{G'}=\frac{A_0}{qf}.
+\]
+For a regular change $v=v(t)$, $v'\ne0$, the latter formula becomes
+\begin{equation}\label{rw:relative:curvature-rate}
+ \frac{(G\circ v)''}{(G\circ v)'}
+ =\frac{A_0v'+qf\,v''/v'}{qf}.
+\end{equation}
+Thus bounds through order $k$ for $A_0$ use $k+2$ entry derivatives
+of $j$, and the numerator after a change of input uses $k+2$
+derivatives of that change and a bound for $1/v'$.
+\end{lemma}
+
+\begin{proof}
+Separate the linear rate in \eqref{rw:relative:integral} and logarithmically
+differentiate; the chain rule gives \eqref{rw:relative:curvature-rate}.
+The denominators $N_0,v'$ require the stated margins and derivative
+orders. The transit integral uses $f>0$ along the whole path.
+\end{proof}
+
+\begin{lemma}[The fixed phase exit in original coordinates]
+\label{rw:transitions:curved-exit}
+Choose a fixed lower phase exit away from $T=0$. Use the compact lower
+coordinates and their inverse from Proposition~\ref{rw:phase}. At this
+exit write $Z=Z_{\rm out}$ and set $\eta=Z_{\rm out}/\epsilon$.
+On a fixed sufficiently small signed $\eta$ interval, passage from this
+curved exit to a fixed original section $|X|=R$ has bounded ordinary
+$\eta$, coefficient and Euler scale jets of every prescribed finite
+order, provided the phase construction retains these orders. After
+orienting the normal coordinate positively, the deviation from the
+same weak reference on $|X|=R$ is
+\begin{equation}\label{rw:relative:curved-section}
+ W=\eta u_c(\eta,\mathbf b,\epsilon),\qquad
+ u_c\ge c_*>0,
+\end{equation}
+with bounded jets of $\log u_c$. The original horizontal displacement
+at the curved exit is $O_{C^N}(\epsilon\eta)$.
+\end{lemma}
+
+\begin{proof}
+At the fixed phase exit, inversion gives $T=T_b+ZO_{C^N}(1)$,
+with $T_b>c>0$; hence $X=-1/T$ moves by $ZO_{C^N}(1)$.
+The exact compact relation is $w=\epsilon zT$ and
+$w=\epsilon^2\nu T^2H(T)+Z$. Hence
+\[
+ z=\epsilon\nu TH(T)+\frac{Z}{\epsilon T}.
+\]
+Subtract the same weak reference at the shifted $T$ and substitute
+$Z=\epsilon\eta$ before differentiation. The deviation is $\eta/T$,
+a positive bounded unit times $\eta$.
+
+Put $|X|=R+\epsilon\xi$. Its graph equation has bounded finite jets
+on a fixed $(\xi,\eta)$ box, since $R>0$ and the horizontal denominator
+has a positive margin. The section moves by $\xi=O(\eta)$; finite
+ODE dependence and the positive normal derivative give
+\eqref{rw:relative:curved-section} and the inverse bounds.
+
+For an actual lower slow passage, retain a fixed final piece with
+time at least $c/\epsilon$. Proposition~\ref{rw:relative-core} then
+implies that $Z_{\rm out}/\epsilon$ and all selected jets are
+exponentially small. Thus the actual output lies in the signed box
+used for this construction.
+\end{proof}
+
+\begin{proposition}[The Gaussian central connection]
+\label{rw:transitions:central-core}
+Fix $0<R_0<R_1$ and a compact coefficient box such that
+\[
+ F_+(X)=1+\bar aX+\bar BX^2\ge f_*>0
+ \quad(0\le X\le R_1).
+\]
+Let $R\in[R_0,R_1]$ be fixed independently of the section input, with
+bounded selected coefficient and Euler jets if it varies with parameters.
+Continue the chosen weak reference from
+$z_b(R)=\epsilon\nu h_b$, where $h_b$ has bounded selected jets.
+For sufficiently small $\epsilon>0$ and $|\nu|$, this continuation
+exists on $0\le X\le R$ and satisfies
+\begin{equation}\label{rw:relative:reference-weight}
+ |z_b(X)|\le\frac{C\epsilon|\nu|}{X+\sqrt\epsilon},\qquad
+ |D^\alpha z_b(Ry)|\le
+       \frac{C_N\epsilon}{Ry+\sqrt\epsilon},\quad |\alpha|\le N.
+\end{equation}
+Here $0\le y\le1$ is fixed when taking coefficient or Euler
+derivatives. The factor $\nu$ remains whenever no $\nu$ derivative
+is taken.
+
+For signed input $z(R)=z_b(R)+W$ in a fixed small interval, its
+central height is
+\begin{equation}\label{rw:relative:central-output}
+ z(0)=s_b+e^{-S_c/\epsilon}a_cW e^{j_c(W)},\qquad
+ s_b=z_b(0),\qquad S_c=\int_0^R\frac{X}{F_+(X)}\,\dd X>0.
+\end{equation}
+The positive factors $a_c,a_c^{-1}$ and the selected jets of
+$\log a_c,j_c$ through order $N$ are bounded, and $j_c(0)=0$.
+Ordinary $W$ derivatives are included. Composing with
+\eqref{rw:relative:curved-section} gives the same statement with
+$W$ replaced by $\eta$ and with adjusted positive units.
+All reference choices are independent of the moving section input.
+\end{proposition}
+
+\begin{proof}
+The exact original graph equation is
+\begin{equation}\label{rw:relative:core-field}
+ \frac{\dd z}{\dd X}=\mathfrak f(X,z)
+ =\frac{(X/\epsilon)z+\bar c z(z-1)+\nu(1-z)^2}{D(X,z)},
+ \quad
+ D=F_++\epsilon\bar m-(1+2\epsilon\bar m)z
+                         +\epsilon\bar m z^2.
+\end{equation}
+Its denominator stays positive on a fixed small signed tube.
+The weighted Gaussian kernel and Volterra estimates in
+Appendix~\ref{rw:app:relative-core} give
+\eqref{rw:relative:reference-weight}, including its selected mixed jets.
+
+Put $v=z-z_b$. Exact Taylor division gives
+\[
+ v_X=a(X)v+B_c(X,v)v^2,\quad
+ a(X)=\frac{X}{\epsilon F_+(X)}+a_r(X),\quad
+ |a_r|\le C,\quad
+ |\partial_v^jB_c|\le C_j(X/\epsilon+1).
+\]
+These bounds include selected coefficient and Euler jets because
+\eqref{rw:relative:reference-weight} controls $(X/\epsilon)z_b$.
+Set $E(X)=\exp[-\int_X^R a(s)\,\dd s]$ and solve directly for the
+relative logarithm:
+\begin{equation}\label{rw:relative:normalized-volterra}
+ Q(X)=-W\int_X^R B_c(s,WE(s)e^{Q(s)})E(s)e^{Q(s)}\,\dd s.
+\end{equation}
+The weighted kernel bound \eqref{rw:app:normalized-kernel-bound} and
+the differentiated contraction proof in Appendix~\ref{rw:app:relative-core}
+give $\|Q\|_\infty\le C|W|$ and bounded selected jets on a fixed
+small $W$ interval, including zero. Thus $v(X)=WE(X)e^{Q(X)}$.
+Set
+$a_c=\exp[-\int_0^R a_r]$ and $j_c(W)=Q(0,W)$.
+This proves \eqref{rw:relative:central-output}, retaining the exponentially
+small factor in $E$ throughout.
+\end{proof}
+
+The Gaussian layer is controlled by the weighted reference estimate;
+ordinary high-order $X$ derivatives there may be unbounded.  All
+derivatives of the finitely smooth phase and reference are taken on
+their real parameter domains.  The signed construction supplies the
+estimates and coefficient comparisons, and its physical restriction
+consists of positive-height original trajectories with finite
+transverse passages.
+For the incoming core, apply the same construction after reflection
+with $(\bar a,\bar c,\nu)$ replaced by
+$(-\bar a,-\bar c,-\nu)$.

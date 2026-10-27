@@ -1,0 +1,117 @@
+\subsection{Coefficient geometry and the regime decision map}
+\label{sec:coefficient-regimes}
+
+Different relative sizes of the five coefficients in \eqref{eq:slice}
+lead to different passage scales. We introduce these scales here and
+summarize the resulting cases in Figure~\ref{fig:coefficient-phase-decision}.
+The corresponding bounds are proved in the later face propositions.
+Before counting zeros, every phase chart is transported to the physical
+sections of \eqref{eq:return}.
+
+Translate the zero of the transverse eigenvalue to the origin and put
+\begin{equation}
+ \xi=v-\gamma,
+ \qquad \alpha _0=P(\gamma),
+ \qquad \alpha _1=P'(\gamma),
+ \qquad q_\gamma=1+2\gamma,
+ \qquad \ell(v)=1-Av+Cv^2.
+ \label{deg:central-coordinates}
+\end{equation}
+Then \eqref{eq:raw} becomes
+\begin{equation}
+ \begin{split}
+  \dot \xi&=\alpha _0+\alpha _1\xi-3\gamma \xi^2-\xi^3
+                 -\ell(\gamma+\xi)z,\\
+  \dot z&=-z\{q_\gamma \xi+\xi^2+C(\gamma+\xi)z\}.
+ \end{split}
+ \label{deg:central-field}
+\end{equation}
+Thus \((A,C,\gamma,\alpha _0,\alpha _1)\) are analytic coordinates on
+the five-parameter slice near the organizing field. After one common
+coefficient shrink, \(q_\gamma\) and \(\ell\) are positive units on the
+fixed raw rectangle, and the regular transition maps between fixed sections
+and their inverses have uniform bounds through every derivative order fixed
+in advance.
+
+For negative opening write
+\begin{equation}
+ \alpha _0=-s^2,
+ \qquad p=\frac{\alpha _1}{s},
+ \qquad v=\gamma+sX,
+ \qquad z=s^2Y.
+ \label{deg:source-dictionary}
+\end{equation}
+This gives the source field \eqref{ann:source-field} with parameters
+\((a,p,\gamma,s)=(-1,p,\gamma,s)\). Two exact compactifications cover
+its small-\(p\) coefficient ends. For \(\gamma\ne0\), set
+\begin{equation}
+ g=|\gamma|,\qquad k=\frac{s}{g^{3/2}},\qquad
+ \pi=\frac{p}{\sqrt g},\qquad \mathfrak q=k\pi .
+ \label{deg:gamma-chart}
+\end{equation}
+Here \(g\) is always a coefficient radius, never a section height. In the
+cubic chart set
+\begin{equation}
+ t=s^{1/3},\qquad U=\frac{p}{t},\qquad
+ G=\frac{\gamma}{t^2},\qquad \tau_{\rm cub}=t^2.
+ \label{deg:cubic-chart}
+\end{equation}
+We write \(\tau_{\rm cub}\) for this cubic scale throughout. The
+far-root, two-saddle and degree-loss arguments each use an unadorned
+\(\tau\) for their local scale; any relation such as \(\tau=p^2\)
+is stated where that scale is introduced.
+
+\begin{figure}[H]
+\centering
+\small
+\fbox{\begin{minipage}{0.94\linewidth}
+\centering
+\(\theta\) in the five-parameter slice
+\(\longrightarrow (\gamma,\alpha _0,\alpha _1;A,C)\)
+
+\medskip
+\begin{tabular}{@{}p{.27\linewidth}@{\(\longrightarrow\)}p{.62\linewidth}@{}}
+\shortstack[l]{\(K\le0\) or no\\through passage}
+ & stopped/no-passage endpoint; it is not a periodic-orbit zero\\[2pt]
+\(K>0\), high central height
+ & affine high-height estimate, Corollary~\ref{rew:cor-high-derivative-signed}\\[2pt]
+\(\alpha _0\ge0\), low height
+ & determinant chart or signed trace chart,
+   Lemma~\ref{deg:lem-nonnegative-domain}\\[2pt]
+\(\alpha _0<0,\ p\le0\)
+ & raw Jacobian contraction, Lemma~\ref{deg:lem-raw-jacobian}\\[2pt]
+\(\alpha _0<0,\ 0<p\ll1\)
+ & gamma-dominant, cubic, degree-loss, or remote-root face,
+   Lemma~\ref{deg:lem-small-source-routing}\\[2pt]
+\(\alpha _0<0,\ p\asymp1\)
+ & compact positive-ratio passage,
+   Lemma~\ref{ann:lem-compact-positive-domains}\\[2pt]
+\(\alpha _0<0,\ p\gg1\)
+ & signed-trace terminal block plus compact annuli,
+   Lemma~\ref{deg:lem-large-source-routing}
+\end{tabular}
+
+\medskip
+Each row \(\longrightarrow\) zeros of the same exact displacement
+\(x-m\Pi(x)\) on one coefficient fibre
+\(\longrightarrow\) one bound on each whole phase fibre, then the
+maximum across coefficient alternatives
+\(\longrightarrow\) one common coefficient neighborhood and one common
+Hausdorff collar
+\(\longrightarrow\) lift from five to twelve coefficients.
+\end{minipage}}
+\caption{Global coefficient--phase decision map. The arrows specify the
+logical routing, not additional coordinate changes. Strict overlaps between
+adjacent phase and coefficient blocks are recorded in
+Table~\ref{tab:coefficient-phase-cover}.}
+\label{fig:coefficient-phase-decision}
+\end{figure}
+
+For later reference, the symbols with global scope are
+\(\theta=(A,C,\mu_1,\mu_2,\mu_3)\),
+\((\gamma,\alpha _0,\alpha _1)\), the finite multiplier \(m\), and the
+actual input of \eqref{eq:return}. Symbols such as \(g,k,\pi,\mathfrak q\),
+\(t,U,G\), and the degree-loss exponents are local to the chart in which
+they are defined. Actual phase heights carry labels such as \(h\),
+\(h_L\), \(V\), \(\widehat V\), \(W\), or \(\Theta\); they are never
+identified with a coefficient radius or with a stopped trace gap.

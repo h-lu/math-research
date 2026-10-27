@@ -1,0 +1,250 @@
+\subsection{Two columns on the regular interval}
+
+On a compact regular interval, the two center generators give two
+positive action columns with a strictly monotone quotient. This controls
+both the number of critical zeros and their crossing direction. We first
+state the elementary perturbation argument used to pass from the action
+to the actual return.
+
+\begin{lemma}[Two columns and their crossing direction]
+\label{rw:atlas:two-columns}
+On one interval let $A,B$ have uniformly bounded $C^1$ norms, with
+$|B|>b_*>0$ and $(A/B)'$ of constant sign and magnitude greater
+than $r_*>0$. Put $Q=aA+bB+e$, where $a,b$ are constant,
+$I=|a|+|b|>0$ and $\|e\|_{C^1}\le\eta I$.
+For a sufficiently small common $\eta$, every zero is simple,
+$|a|\ge cI$ there, and its derivative has sign
+$aB(A/B)'$. Thus $Q$ has at most one zero, including multiplicity.
+If moreover $A,B,A',B'$ and $(A/B)'$ have positive margins, then
+$Q'$ has sign $a$ wherever $Q=0$ or $Q$ has sign $a$.
+When $a=0$, both $Q$ and $Q'$ have sign $b$.
+\end{lemma}
+\begin{proof}
+At a zero, $a(A/B)+b=-e/B$, so the bounded ratio and nonvanishing
+$B$ give $|a|\ge cI$. Differentiating at that zero gives
+\[
+ Q'=aB(A/B)'+e'-B'e/B.
+\]
+The last two terms are $O(\eta I)$, proving the strict direction.
+Two crossings with this same direction are impossible.
+For the additional assertion, if $a,b$ have the same sign, use the
+positive column derivatives. If their signs are opposite, at a point
+where $Q=0$ or $Q$ has sign $a$,
+$\operatorname{sign}(a)[a(A/B)+b]\ge-|e|/B$, again forcing
+$|a|\ge cI$. In
+$Q'=B'[a(A/B)+b]+aB(A/B)'+e'$ the second term has sign $a$ and dominates the possible
+$O(\eta I)$ contribution of the opposite sign. The case $a=0$ follows from
+the margins of $B,B'$.
+\end{proof}
+
+We keep the original central height as output. Write
+\[
+ \tau=\bar a+\bar c,\qquad
+ \varsigma=\bar B+\bar m,\qquad \sigma=\bar c\varsigma.
+\]
+Intersect the upper return range $0<p<p_c$ with $F_+>0$ on
+$[0,p]$ and $F_->0$ on $[0,\mathcal U_0(p)]$. Since
+$\mathcal U_0$ increases, this regular limiting domain is one interval
+with left endpoint zero. On it set
+$\mathcal A=A_-(\mathcal U_0(p))-A_+(p)$.
+A polynomial quasi-invariant of the affine upper field expresses
+$\mathcal A$ in the two center generators. Its columns are positive
+integrals, and two weighted-average arguments prove that their quotient
+increases. The same calculation will determine the direction in which
+the actual critical function crosses zero.
+
+\begin{lemma}[The regular action columns]\label{rw:regular-columns}
+For the upper orbit of flight time $T$ in
+Lemma~\ref{rw:finite:upper-return}, define
+\[
+ J_1(T)=\int_0^T e^{-\bar ct}(1-\bar mY(t))\,\dd t,
+ \qquad J_2(T)=\int_0^T e^{-\bar ct}Y(t)\,\dd t.
+\]
+Then $J_1=p+e^{-\bar cT}q>0$, $J_2>0$, and
+\begin{equation}\label{rw:finite:quasi-invariant}
+ F_-(q)-e^{\bar cT}F_+(p)
+       =-e^{\bar cT}(\tau J_1+\sigma J_2).
+\end{equation}
+On the regular interval,
+\begin{equation}\label{rw:finite:action-columns}
+ \mathcal A=\tau A+\sigma C,\qquad
+ A=\int_0^T\omega J_1\,\dd t,
+ \quad C=\int_0^T\omega J_2\,\dd t,
+ \quad \omega=\frac{p p_Te^{\bar cT}}{F_+(p)F_-(q)}>0.
+\end{equation}
+Both columns and their $p$ derivatives are positive, and
+$(C/A)'>0$. Every nonzero constant combination of $A,C$ has at
+most one zero, which is simple. At the small endpoint, uniformly
+on bounded normalized coefficient sets,
+\begin{equation}\label{rw:finite:small-columns}
+ A=\tfrac23p^3(1+O(p)),\qquad
+ C=\tfrac2{15}p^5(1+O(p)),\qquad C/A=\tfrac15p^2(1+O(p)).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Introduce the polynomial
+\[
+ V=1+\bar aX+\bar BX^2+(2\bar B+\bar c\bar a)Y
+                  +\bar c\bar BXY-\bar B\bar mY^2.
+\]
+Substitution of \eqref{rw:finite:principal-upper}, grouping its
+constant and $Y$ terms, gives
+$V'-\bar cV=-\tau(1-\bar mY)-\sigma Y$.
+Its endpoint values are $F_+(p)$ and $F_-(q)$, so integration
+proves \eqref{rw:finite:quasi-invariant}.
+The upper arc has $Y>0$ in its interior, giving $J_2>0$.
+Using $1-\bar mY=-X'$ and
+$e^{-\bar ct}X=(e^{-\bar ct}Y)'$, integration by parts gives
+$J_1=p+e^{-\bar cT}q$.
+
+For monotonicity, put $u_1(T)=\int_0^T e^{-\bar ct}\,\dd t$.
+Then $J_1=u_1-\bar mJ_2$.
+From $Y=p(T)S-I$ and the formulas for $W,p_T,q$ above,
+\[
+ J_2'=p_T\int_0^T e^{-\bar ct}S(t)\,\dd t
+       =e^{-\bar cT}W^2/S^2=e^{-\bar cT}q^2.
+\]
+Thus $J_2'/u_1'=q^2$ is strictly increasing. Since both integrals
+vanish at zero, $J_2/u_1$ is its weighted average and is strictly
+smaller than its terminal value. Hence
+\[
+ (J_2/u_1)'=\frac{u_1'}{u_1}(q^2-J_2/u_1)>0,
+ \qquad
+ (J_2/J_1)'=
+ \frac{(J_2/u_1)'}{(1-\bar mJ_2/u_1)^2}>0.
+\]
+Here $1-\bar mJ_2/u_1=J_1/u_1>0$.
+
+Differentiate $A_-(q)-A_+(p)$ and use
+$q_T=(p/q)e^{\bar cT}p_T$. The result is
+\[
+ \mathcal A_T=
+ \frac{p p_T}{F_+(p)}
+       \left(\frac{e^{\bar cT}F_+(p)}{F_-(q)}-1\right)
+             =\omega(\tau J_1+\sigma J_2).
+\]
+Both actions vanish at zero, so this proves
+\eqref{rw:finite:action-columns}. The ratio $C/A$ is the weighted
+average of the strictly increasing $J_2/J_1$ with positive weight
+$\omega J_1$. The same averaging argument gives $(C/A)_T>0$,
+hence also $(C/A)_p>0$. It proves the zero assertion directly;
+positivity of the derivatives follows from the positive integrands.
+Finally scale $X=p\xi$, $Y=p^2\eta$, $t=p\theta$ in the
+affine field. It tends uniformly to
+$\xi'=-1$, $\eta'=\xi$, whose arc is
+$\eta=(1-\xi^2)/2$. Thus
+$T=2p(1+O(p))$, $J_1=2p(1+O(p))$,
+$J_2=\frac23p^3(1+O(p))$ and $\omega=p/2(1+O(p))$.
+Integration with $\dd T=2(1+O(p))\dd p$ gives
+\eqref{rw:finite:small-columns}.
+\end{proof}
+
+\begin{proposition}[The regular critical function]
+\label{rw:finite:regular-count}
+Fix compact regular upper and lower data, with the input bounded
+away from zero. On common slightly larger tubes the closing function
+is exactly
+\[
+ F(p)=U(p)-V(p)-\rho\nu H,
+ \qquad V=V_0\circ\mathcal U_{\epsilon,\nu},
+ \qquad K=\epsilon\log(V'/U').
+\]
+Here $U',V'<0$, and $H>h_*>0$ is input independent.
+There are uniform choices of tubes, $\theta_0>0$ and a scale cutoff
+such that, on any one interval contained in the tubes, if
+\begin{equation}\label{rw:finite:regular-forcing}
+ |\nu|\le\theta_0(|\tau|+|\sigma|),
+\end{equation}
+then either the field is a center or $K$ has at most one zero,
+which is simple. Consequently $F$ has at most two isolated zeros,
+counting multiplicity, on the positive central passing interval.
+The coefficient condition holds with a factor tending to zero in
+place of $\theta_0$ whenever the fibre contains a closing zero
+in one of these compact regular tubes.
+\end{proposition}
+\begin{proof}
+Use the references of Lemma~\ref{rw:finite:regular-lower}, fixed
+before the input is varied. Put $q=\mathcal U_{\epsilon,\nu}(p)$
+and
+\[
+ r_U=A_+'-\epsilon(\log\alpha_U)',\qquad
+ r_V=A_-'-\epsilon(\log\alpha_V)'.
+\]
+They have positive margins. Direct differentiation gives the exact
+identity
+\begin{equation}\label{rw:finite:regular-logarithm}
+ -K=A_-(q)-A_+(p)
+       +\epsilon\log\frac{\alpha_U(p)r_U(p)}
+        {\alpha_V(q)r_V(q)\mathcal U_{\epsilon,\nu}'(p)}.
+\end{equation}
+The argument of the logarithm is positive and its logarithm has
+bounded selected finite jets. Thus the right side converges, with
+those jets, to $\mathcal A$ at $\nu=0$, with error
+$O(\epsilon(1+|\log\epsilon|))$; changing $\nu$ adds $O(\nu)$.
+
+The real period domains of Section~5 contain each compact regular
+center tube under consideration. On the second component, the
+separated coordinate at $Y=0$ is $\chi=-p$ and
+$A_C(-p)=F_+(p)+O(\epsilon)$ throughout the bounded interval.
+Its positive margin places the entire arc in the actual center
+domain. On the reversible component the compact upper arc lies
+strictly inside the central potential well. Hence in either case
+the complete central maps agree. Since the reference values vanish
+at $\nu=0$, $K=0$ there. The zero-scale action has the same two
+identities by \eqref{rw:finite:action-columns}.
+
+Choose a common larger regular coefficient domain near each
+center tube and apply Proposition~\ref{rw:generator-division} to
+the difference between \eqref{rw:finite:regular-logarithm} and
+$\mathcal A$. Two additional coefficient derivatives suffice.
+Away from the center set the generator norm has a positive margin,
+so the error can instead be divided by that norm. On the resulting
+compact cover we have
+\begin{equation}\label{rw:finite:perturbed-columns}
+ -K=\tau A_\epsilon+\sigma C_\epsilon+\nu E_\epsilon,
+ \qquad (A_\epsilon,C_\epsilon)\longrightarrow(A,C)
+                  \quad\hbox{in }C^2_p,
+ \quad \|E_\epsilon\|_{C^2_p}\le C.
+\end{equation}
+The common center domain is essential here: it allows division of
+the relative logarithmic error by the exact generators, with the
+stated input-derivative bounds.
+
+On the larger tubes both actions have a common lower bound $S_*>0$.
+The amplitude and upper-map estimates bound the required absolute
+coefficient derivatives by $C\epsilon^{-M}e^{-S_*/\epsilon}$,
+also on the small $\nu$ box after reducing $S_*$. The same center
+division preserves this weight. Lemma~\ref{rw:centers:relative-forcing},
+with $I=|\tau|+|\sigma|$, therefore gives
+$|\nu|=o(1)I$ at a closing zero; for $I=0$ it gives the center
+identity and no isolated zero.
+
+Choose $\theta_0$ and then the scale so that
+\eqref{rw:finite:perturbed-columns} satisfies
+Lemma~\ref{rw:atlas:two-columns}, with columns $(C,A)$ and
+coefficients $(\sigma,\tau)$. The strict quotient margin of
+Lemma~\ref{rw:regular-columns} gives at most one simple zero of $K$.
+Lemma~\ref{rw:zero-calculus} gives the stated count for $F$.
+Since $L_+(p)$ and $L_-(q(p))$ decrease, their positive sets are
+initial subintervals. Intersecting them with the regular tube gives
+one positive-central passing interval, to which the count applies.
+\end{proof}
+
+\begin{lemma}[Direction on the regular part]
+\label{rw:finite:regular-direction}
+Under the preceding choices, if $\sigma\ne0$, then at every point
+where $K=0$ or $K$ has sign $-\sigma$, its derivative in increasing
+$p$ has sign $-\sigma$. After its possible zero it therefore keeps
+this sign and increases in absolute value on the rest of the regular
+passing interval. If $\sigma=0$, $\tau\ne0$, both $K$ and $K'$
+have sign $-\tau$.
+\end{lemma}
+\begin{proof}
+The positive margins of $A,A',C,C'$ and $(C/A)'$ on each compact
+regular tube allow the last clause of Lemma~\ref{rw:atlas:two-columns}
+to be applied to $-K$ in \eqref{rw:finite:perturbed-columns}.
+At a zero, $-K$ crosses into the side of sign $\sigma$, and its
+derivative keeps that sign there. Thus it stays on that side. A regular
+input change preserves this direction for the same original-central
+function $K$.
+\end{proof}

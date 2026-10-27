@@ -1,0 +1,119 @@
+Subtracting a reference orbit and dividing by its first variation removes
+the affine part of a scalar transition. The remaining equation vanishes
+to second order in the normalized phase variable. An integrable bound on that
+equation gives uniform endpoint maps even when the unnormalized first
+variation has no uniform bound.
+
+\begin{lemma}[Normalized scalar transitions]\label{lem:scalar-normalization}
+Let \(k\ge1\). Consider equations
+\[
+ \eta_r=N_\vartheta(r,\eta),\qquad L\le r\le R_\vartheta,
+ \qquad N_\vartheta(r,0)=\partial_\eta N_\vartheta(r,0)=0,
+\]
+on \(|\eta|\le a\), where \(L\) and \(a>0\) are fixed.
+Suppose that, uniformly in the parameters,
+\[
+ \|N_\vartheta(r,\cdot)\|_{C^{k+1}([-a,a])}\le g(r),
+ \qquad g\in L^1([L,\infty)).
+\]
+Then there is a fixed neighborhood of zero on which all endpoint
+maps have bounded \(C^{k+1}\) norms and positive first derivatives
+bounded away from zero. Their inverses have the same bounds on a
+fixed smaller neighborhood of zero.
+
+Suppose also that \(R_\vartheta\to\infty\) and the kernels converge
+in \(C^0([L,M];C^{k+1}_\eta)\) for every fixed \(M>L\).
+Then the endpoint maps
+and their inverses converge in \(C^{k+1}\) on smaller neighborhoods.
+For a chosen parameter derivative \(\partial_\ell\), convergence
+in \(C^k\) holds for the differentiated maps if the differentiated
+kernels converge in \(C^0([L,M];C^k_\eta)\), have a common integrable
+majorant, and
+\[
+ \|N_\vartheta(R_\vartheta,\cdot)
+               \partial_\ell R_\vartheta\|_{C^k}\longrightarrow0.
+\]
+The convergence is joint in an additional compact parameter family
+if these local convergences, \(R_\vartheta\to\infty\), and the
+vanishing endpoint term are uniform in that family.
+\end{lemma}
+\begin{proof}
+Taylor's formula gives \(|N_\vartheta(r,\eta)|\le g(r)|\eta|^2/2\).
+Comparison with \(y'=g(r)y^2/2\) keeps all solutions from a common
+enlarged initial interval inside \(|\eta|<a\). The first variation is
+\[
+ \exp\left(\int_L^r
+          \partial_\eta N_\vartheta(t,\eta(t))\,dt\right)>0.
+\]
+It and its reciprocal are bounded. Induction in the triangular
+variational equations and Gronwall's inequality bound all remaining
+rows through order \(k+1\). The slope lower bound gives a common
+image interval, and the inverse identity gives the inverse bounds.
+
+Subtracting the integral equations and their variations gives convergence
+on \([L,M]\); each remaining tail costs at most \(C\int_M^\infty g\).
+Let the parameters tend to their limit and then \(M\to\infty\).
+For the parameter derivative, the variation satisfies
+\[
+ Z_r=\partial_\eta N_\vartheta\,Z+\partial_\ell N_\vartheta,
+ \qquad Z(L)=0.
+\]
+The endpoint derivative adds
+\(N_\vartheta(R_\vartheta,\eta(R_\vartheta))
+\partial_\ell R_\vartheta\). The same argument proves \(C^k\)
+convergence under the endpoint assumption: differentiating a coefficient
+\(N_{\eta^h}(r,\eta)\) adds
+\(N_{\eta^{h+1}}(r,\eta)Z\), which requires the extra phase order.
+Finally, \(C^{k+1}\) convergence of the endpoint maps \(A_\vartheta\) and
+\[
+ \partial_\ell A_\vartheta^{-1}
+ =-\left(\frac{\partial_\ell A_\vartheta}{A_\vartheta'}\right)
+     \circ A_\vartheta^{-1}
+\]
+give \(C^k\) convergence of the differentiated inverses. Each estimate
+is uniform in the additional compact family under the stated assumptions.
+\end{proof}
+
+For a graph equation \(Y_r=F(r,Y)\), a reference solution \(Y_*\)
+and its first variation \(j>0\), the substitution
+\(\eta=(Y-Y_*)/j\) gives the exact kernel
+\begin{equation}\label{tail:normalized-kernel}
+ N(r,\eta)=j\eta^2\int_0^1(1-t)
+                  F_{YY}(r,Y_*+tj\eta)\,dt.
+\end{equation}
+For \(h\ge2\), \(\partial_\eta^hN=j^{h-1}F_{Y^h}(r,Y_*+j\eta)\).
+At fixed \(r,\eta\), a parameter derivative is therefore
+\begin{equation}\label{deg:det-parameter-phase-derivative}
+\begin{split}
+ \partial_\ell\partial_\eta^hN
+ =j^{h-1}\bigl\{&(h-1)(\partial_\ell\log j)F_{Y^h}
+ +\partial_\ell^{\rm exp}F_{Y^h}\\
+ &+F_{Y^{h+1}}(Y_{*,\ell}+j_\ell\eta)\bigr\}.
+\end{split}
+\end{equation}
+Here \(\mathrm{exp}\) holds the graph coordinates fixed. The orders
+zero and one follow by integrating in \(\eta\), since
+\(N(r,0)=N_\eta(r,0)=0\). Thus \(C^3\)-valued parameter
+derivatives require \(F_{Y^4}\) and \(N_{\eta^4}\).
+Integrating the indicated parameter derivative gives the sequential
+parameter secants used below. This requires neither a mixed parameter
+derivative nor convergence of \(j\).
+
+A quantitative form controls how close the normalized map is to the
+identity when only an upper bound on the first variation is available.
+For an actual graph family
+write \(J_n=\partial_b^nY\), \(Q_n=J_n/J_1\), and
+\(a_n=F_{Y^n}J_1^{n-1}\). Direct differentiation gives
+\begin{equation}\label{tail:relative-jet-equations}
+ Q_2'=a_2,\qquad Q_3'=3a_2Q_2+a_3,\qquad
+ Q_4'=a_2(4Q_3+3Q_2^2)+6a_3Q_2+a_4.
+\end{equation}
+If, uniformly on an enlarged label interval,
+\(Q_n(L)=O(\varepsilon)\) and
+\(\int|a_n|\,dr=O(\varepsilon)\), \(2\le n\le4\),
+these identities give \(Q_n=O(\varepsilon)\).
+Since \(\partial_b\log J_1=Q_2\), the endpoint map in \(b-b_*\),
+normalized by its exact value and slope at \(b_*\), and its inverse on a
+smaller common interval, are \(\mathrm{id}+O_{C^3}(\varepsilon)\)
+for sufficiently small \(\varepsilon\).
+This conclusion is independent of the size of \(J_1(b_*)>0\).

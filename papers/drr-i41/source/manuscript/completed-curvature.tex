@@ -1,0 +1,51 @@
+\subsection{Weighted curvature of a completed passage}
+
+To use an action calculation in the physical input, we must include the
+curvature contributed by each section map. The following identity keeps
+these contributions separate and allows a positive weight adapted to
+the coefficient chart.
+
+\begin{lemma}[Weighted curvature of a completed passage]
+\label{neg:lem-completed-curvature}
+Let \(u,v>0\) be radial coordinates, with \(P_\pm,B_\pm>0\)
+on the two strict through intervals, and suppose
+\[
+ v_u=\frac{uB_+(u)P_-(v)}{vB_-(v)P_+(u)}(1+\varrho)>0,
+ \quad S(-u^2/2)=-v^2/2,\quad
+ \Pi=\phi_-\circ S\circ\phi_+^{-1},
+\]
+Here \(P_\pm,B_\pm\) are \(C^2\), \(\varrho=\varrho(u,v)\)
+is \(C^2\) on the product of the two radial intervals, and
+\(\phi_\pm\) are the separately normalized actual \(C^3\) section
+maps with positive derivatives. Put
+\(\mathcal D_+=P_+\partial_u/(uB_+)\),
+\(\mathcal D_-=P_-\partial_v/(vB_-)\), and \(R_B=B_+/B_-\).
+For any smooth positive weight \(W=W(u,v)\), one has exactly
+\begin{align}
+ \phi_+'\frac{P_+}{W}\frac{\Pi''}{\Pi'}
+ ={}&\frac{P_+' /u-R_B(1+\varrho)P_-'/v}{W}
+ -\frac{P_+}{uW}\frac d{du}\log R_B \notag\\
+ &-\frac{B_+}{W}
+       \{\mathcal D_++(1+\varrho)\mathcal D_-\}\log(1+\varrho)
+       \notag\\
+ &-\frac{B_+(1+\varrho)}{W}\mathcal D_-\log\phi_-'
+ +\frac{P_+}{u^2W}(u\partial_u)\log\phi_+'.
+ \label{deg:weighted-exact-curvature-chain}
+\end{align}
+Primes on each \(\phi_\pm\) use its own quadratic label; primes on
+\(P_\pm\) use the displayed radial variable. The derivative \(d/du\)
+follows the matched graph. In particular both section terms remain in
+the curvature of the actual affine input.
+\end{lemma}
+\begin{proof}
+One has \(S'=R_BP_-(1+\varrho)/P_+\). Logarithmically differentiate
+this identity using \(d/db_+=-u^{-1}d/du\), and substitute in
+\[
+ \phi_+'\frac{\Pi''}{\Pi'}=
+ \frac{S''}{S'}+S'\frac{\phi_-''}{\phi_-'}-
+                         \frac{\phi_+''}{\phi_+'}.
+\]
+Multiplication by \(P_+/W\) gives the formula. Its coefficients need
+not extend without weights to a stopped endpoint.
+\end{proof}
+

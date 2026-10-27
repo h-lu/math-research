@@ -1,0 +1,71 @@
+\section{Logarithmic slopes and zero-counting tools}
+\label{sec:standard-tools}
+
+To pass from local derivative estimates to a bound on the whole height
+interval, we must retain the order and direction of zero crossings.
+We first give the scalar counting tools for this step. The coefficient
+scales then identify which passage estimates supply their hypotheses.
+\input{direct-sections/zero-counting-tools}
+
+\subsection{Coefficient scales}
+There are two covers in the argument. The ordered height cover above
+combines estimates for one fixed parameter on subintervals of
+\(\mathcal H_p\). The parameter cover selects a regional result
+that already bounds the zeros on that whole interval, so its bound
+is the maximum of the regional bounds. Signed contraction treats
+\(q_1\le0\); the scales below distinguish the regions for \(q_1>0\).
+We use the coefficient scales
+\[
+ H=\max\{|q_0|^{1/3},\sqrt{q_1},|q_2|\},\qquad
+ \rho_1=\sqrt{q_1}.
+\]
+For \(q_0<0\) and \(q_2\ne0\), the secondary parameters are
+\[
+ s=|q_2|,\qquad
+ r=\max\{\sqrt{|q_0|/s^3},q_1/s^2\}.
+\]
+The central-height unit reflects the balance between the boundary drift
+\(q\) and \(zB\) in \eqref{eq:physical-normal-form-new}; the output-height
+unit reflects the comparability of \(U=\eta^2/2\) and \(z\) in the common
+cone. On the primary scale, \(q(HX)=O(H^3)\) for bounded \(X\), whereas
+\(|\eta|=O(H)\) gives \(U=O(H^2)\), yielding the height units \(H^3\)
+and \(H^2\), respectively.
+\Cref{tab:direct-scale-guide} lists the coordinate normalizations;
+the rescaled central height ranges over the corresponding image of
+\(\mathcal H_p\). Near a weak root, whose radius tends to zero relative
+to the current coefficient scale, we rescale again.
+
+For \(q_1>0\), the contact strip \(|q_0|\le Lq_1^2\) is treated by
+the scattering comparison. Positive offsets outside this strip are
+treated by the interior saddle.
+
+For negative offsets, we use the primary scale when \(|q_0|/H^3\)
+has a fixed positive lower bound. At smaller ratios, the secondary
+scale treats small \(r\), separately for the two signs of \(q_2\).
+The remaining parameters are treated either on the linear scale
+\(\rho_1\), by the weak-root comparison, or in the contact strip.
+After the regional estimates, \cref{sec:direct-parameter-cover} fixes
+\(L\) and the overlaps needed to make this classification exhaustive.
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Coordinate scales for \(|\eta|\), \(h\) and \(z\), respectively.
+  Output heights are fixed positive multiples of the listed scale.}
+\label{tab:direct-scale-guide}
+\begin{tabular}{@{}lccc@{}}
+\hline
+Region & Radius scale & Height scale & Output scale\\
+\hline
+Contact & \(q_1\) & \(q_1^2\) & \(q_1^2\)\\
+Positive offset & \(\sqrt{q_0}\) & \(q_0\) & \(q_0\)\\
+Primary negative drift & \(H\) & \(H^3\) & \(H^2\)\\
+Secondary negative offset & \(sr\) & \(s^3r^2\) & \(s^2r^2\)\\
+\hline
+\end{tabular}
+\end{table}
+
+\Cref{tab:direct-cover-guide} in \cref{sec:direct-parameter-cover}
+lists the parameter regions and the bound each provides on the whole
+height interval \(\mathcal H_p\). Appendix~\ref{app:notation-terminology} collects the recurring notation
+and passage terminology.

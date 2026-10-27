@@ -1,0 +1,178 @@
+\section{Strong projection and physical section heights}
+\label{sec:strong-projection}
+\label{subsec:normal-time-projection}
+
+The outgoing passages are parametrized by their projection to the
+equatorial axis. We construct this projection for a common normal-time
+field, with bounds independent of the length of the logarithmic corridor.
+An integrating coordinate then converts the axis action into the height
+of the actual orbit on a fixed section.
+
+\begin{lemma}\label{lem:normal-time-projection}
+Fix \(0<w_0<1/4\).  Let \(h,c,k\) be \(C^4\) functions on
+\(\R\), with
+\[
+ \|h\|_{C^4}+\|c-1\|_{C^4}+\|k\|_{C^4}\le\epsilon,
+\]
+and let \(V\) denote the field
+\begin{equation}\label{eq:normal-time-field}
+ u'=h(u)+c(u)w,\qquad
+ w'=w\{1-2h(u)+(k(u)-2c(u))w\}.
+\end{equation}
+For \(\epsilon\) sufficiently small, this field has a \(C^3\)
+projection \(\widehat\pi\) to \(w=0\), satisfying
+\(V\widehat\pi=h(\widehat\pi)\) and
+\(\widehat\pi(u,0)=u\).  Uniformly on \(\R\times[0,w_0]\),
+\[
+ \left\|\widehat\pi-u-\tfrac12\log(1-2w)\right\|_{C^3}
+ \le C\epsilon.
+\]
+Writing \(q=e^u\), \(Y=q^2w\), and
+\(\pi(q,Y)=e^{\widehat\pi(u,w)}\), we have
+\begin{equation}\label{eq:normal-time-footpoint-bounds}
+ c_1w\le\log q-\log\pi\le C_1w,\qquad
+ 1\le q/\pi<2,\qquad \partial_u\widehat\pi\ge\tfrac12.
+\end{equation}
+There is also a uniformly \(C^3\) function \(J\) in \((u,w)\),
+with \(J=O(w)\), for which \(Z=Ye^{-J}\) satisfies
+\(V\log Z=1\) when \(Y>0\).  The constants depend on \(w_0\)
+and the indicated coefficient bounds.
+\end{lemma}
+
+\begin{proof}
+Let \(\phi_h^T\) be the axis flow \(u'=h(u)\). Transporting the
+backward orbit's base coordinate by this flow defines the footpoint:
+\begin{equation}\label{deg:trace-projection}
+\begin{split}
+ \widehat\pi(u,w)
+ &=\lim_{T\to\infty}\phi_h^T(u(-T))\\
+ &=u-\int_0^\infty
+ D\phi_h^T(u(-T))c(u(-T))w(-T)\,dT,\\
+ \pi(q,Y)&=\exp\!\bigl(\widehat\pi(\log q,Y/q^2)\bigr).
+\end{split}
+\end{equation}
+The integral identity follows by differentiation in \(T\).
+Write the backward field \(G\), with \(n=1-2h\), \(d_n=k-2c\), as
+\[
+ \dot U=-h(U)-c(U)W,\qquad
+ \dot W=-n(U)W-d_n(U)W^2.
+\]
+The strip \(0\le W\le w_0\) is invariant. After decreasing \(\epsilon\),
+\(n+2d_nW\ge\lambda:=\tfrac12(1-4w_0)>0\) and
+\(W(T)\le w e^{-\lambda T}\).
+For initial directions \(i,j,k\in\{u,w\}\), put
+\(z_i=(U_i,W_i)\), \(M=DG(U,W)\). The variational rows are
+\begin{equation}\label{proj:backward-ordinary-jets}
+ \begin{aligned}
+ \dot z_i&=Mz_i,\\
+ \dot z_{ij}&=Mz_{ij}+D^2G[z_i,z_j],\\
+ \dot z_{ijk}&=Mz_{ijk}
+ +\sum_{\rm cyc}D^2G[z_{ij},z_k]+D^3G[z_i,z_j,z_k].
+ \end{aligned}
+\end{equation}
+The normal diagonal is at most \(-\lambda\), the base diagonal
+is \(O(\epsilon)\), and the product of their off-diagonal couplings
+is \(O(\epsilon W)\). Integrating the normal row first therefore
+leaves an integrable Volterra coupling in the base row. Higher normal
+forcings contain \(W\) or a lower normal variation, while pure base
+forcings have \(O(\epsilon)\) coefficients. Induction gives
+\[
+ |D^jU(T)|\le C(1+T)^N e^{C_3\epsilon T},\qquad
+ |D^jW(T)|\le C(1+T)^N e^{-(\lambda-C_3\epsilon)T},
+ \quad 1\le j\le3.
+\]
+The scalar axis-flow equations give the same growth bound through order
+four. Thus the integrand of \eqref{deg:trace-projection}, through three
+ordinary derivatives, is bounded by
+\(C(1+T)^Ne^{-(\lambda-C\epsilon)T}\), with an additional \(w\)
+in order zero. This proves uniform \(C^3\) dependence; comparison with
+\((h,c,k)=(0,1,0)\) gives the stated error. More generally, row \(j\)
+uses axis-flow order \(j+1\), giving \(C^4\) under the small \(C^5\)
+bounds used in the compact-positive passage. Flow translation gives
+\(V\widehat\pi=h(\widehat\pi)\).
+
+Exponentiation gives \(\pi(q,0)=q\), \(V\pi=b(\pi)\), where
+\(b(q)=qh(\log q)\). Positivity of the projection integral and
+comparison with its unperturbed value prove
+\eqref{eq:normal-time-footpoint-bounds}.
+
+Finally set
+\begin{equation}\label{eq:normal-time-integrating-coordinate}
+ J(q,Y)=\int_0^\infty k(U(T))W(T)\,dT,
+ \qquad Z=Ye^{-J}.
+\end{equation}
+The same majorant gives three ordinary derivatives in \((u,w)\)
+and \(J=O(w)\).  Translation along the flow gives \(VJ=kw\).
+Since \eqref{eq:normal-time-field} gives
+\(V\log Y=1+kw\), we obtain \(V\log Z=1\).
+\end{proof}
+
+On a logarithmic corridor with fixed-length collars, extend the same
+triple \((h,c,k)\) by smooth retractions with uniformly bounded
+fourth derivatives. This preserves the coefficient bounds and
+\(V\log Y=1+kw\), independently of corridor length. Each application
+checks that its physical passage stays in the unchanged region.
+
+We now relate the divergence of the axis action at a stopped endpoint
+to a physical height tending to zero. The next lemma makes this relation
+quantitative without dividing by the axis rate at that endpoint.
+
+\begin{lemma}[Physical height from the axis action]
+\label{lem:normal-time-action-height}
+Use the preceding projection for a field unchanged on
+\(Q/2\le q\le2R\), and write \(h(q)=h(\log q)\) in physical
+coordinates. Suppose \(b(q)=qh(q)>0\) on \([Q/2,R)\),
+\(b\ge b_0>0\) on \([Q/2,Q]\), and
+\(\mathcal A(s)=\int_Q^s b(q)^{-1}\,dq\to\infty\) at \(R\).
+For \(2Q<R_0<R<\infty\) and every \(R_0\le s<R\), the strong section
+\(Y/q^2=w_0\) with footpoint \(s\) has a unique backward crossing of
+\(q=Q\), of height \(y(s)>0\). With \(\mathcal D=b(s)\partial_s\),
+\begin{equation}\label{eq:normal-time-action-height}
+ \log y=-\mathcal A(s)+2\log s+\log U(s)+E_Q(y),\qquad
+ E_Q(y)=J(Q,y)+\mathcal A(\pi(Q,y)),
+\end{equation}
+where \(U,U^{-1}\) and three logarithmic derivatives of \(U\) are
+bounded, \(E_Q(0)=0\), and \(\|E_Q\|_{C^3}\le C_Q\).
+If also \(b\le P_*\) on \([Q,R_0]\), then
+\[
+ 0<y(s)\le e_0:=C_QR_0^2e^{-(R_0-Q)/P_*}.
+\]
+Once \(C_Qe_0\) is small, \(y\) decreases to zero at \(R\), and
+\begin{equation}\label{eq:normal-time-action-jets}
+ \mathcal D\log y=-K,\qquad
+ |K-1|+|\mathcal DK|\le C\epsilon+C_Qe_0,\qquad K\ge\tfrac12.
+\end{equation}
+The constants are independent of \(R\) and of the axis rate at \(R\).
+\end{lemma}
+\begin{proof}
+The footpoint bounds give a unique strong-section abscissa
+\(q_s(s)=sU_s(s)\in(s,2s)\), with \(q_s'\asymp1\) and
+three bounded logarithmic derivatives of \(U_s\). In backward
+normal time both \(w\) and the footpoint decrease. While
+\(Q/2\le\pi<R\),
+\(u'=h(\pi)+cw+O(\epsilon w)>0\).
+The axis reaches \(Q/2\) in finite backward time for each \(s<R\);
+there \(q<Q\). Thus the physical orbit crosses \(q=Q\) exactly
+once, with \(0<y<w_0Q^2\) and \(Q/2<\pi(Q,y)<Q\).
+The entire segment stays in the unchanged corridor.
+
+The first integral \(\log Z-\mathcal A(\pi)\) gives
+\eqref{eq:normal-time-action-height}, with the explicit unit
+\[
+ U(s)=w_0(q_s/s)^2e^{-J(q_s,w_0q_s^2)}.
+\]
+The fixed-interval lower bound for
+\(b\) bounds \(E_Q\) on the whole possible height segment.
+Since \(\mathcal D\log(s^2e^{-\mathcal A})=2h-1\le-1/2\),
+\(y(s)\le C_QR_0^2e^{-\mathcal A(R_0)}\le e_0\).
+Differentiating this identity after the small-height bound gives
+\[
+ K=\frac{1-2h-\mathcal D\log U}{1-yE_Q'(y)}.
+\]
+The Euler bounds imply \(\mathcal D\log U=O(\epsilon)\) and
+\(\mathcal D^2\log U=O(\epsilon^2)\). Using
+\(\mathcal Dy=-Ky\) and the bounded derivatives of \(E_Q\)
+proves \eqref{eq:normal-time-action-jets}. Finally the exact
+height identity and \(\mathcal A(s)\to\infty\), for each fixed
+coefficient fibre with finite \(R\), give \(y(s)\to0\).
+\end{proof}

@@ -1,0 +1,370 @@
+\section{The full signed complement for the realizing family}
+\label{sec:lower-complement}
+We prove Lemma~\ref{lem:realizing-complement} on the full source
+rectangle. The main estimate compares contraction on a fixed negative
+slow interval with the amplification between that interval and the
+positive saddle. The former has a fixed action, whereas the latter
+has action $O(c)$; choosing $c$ first leaves enough contraction to
+absorb every finite-power loss as $\varepsilon$ decreases. All
+passages use positive physical time. Time is reversed only to
+construct normal coordinates, with finite phase order, cuts, and
+normal gap fixed before the small parameters.
+
+\subsection{The same stable graph and the exact local power}
+On a fixed interval about $X=1$, put $Y=\lambda_+k$. The auxiliary
+equations
+\[
+ X'=e^2\mathcal F(X,\lambda_+k),\qquad k'=Xk-1
+\]
+extend regularly to $\lambda_+=0$. Translation $k=1/X+v$ gives
+\[
+ v'=Xv+e^2\mathcal F(X,\lambda_+(1/X+v))/X^2.
+\]
+Reverse time, extend the base with a fixed cutoff to a circle, and
+keep its normal coefficient at most $-\sigma_0<0$. At $e=0$ the
+critical circle has zero tangential speed and a fixed normal gap.
+For a prescribed finite order $K\ge2j+11$, $j\ge4$, the source order
+is fixed at $K+2$. Fenichel's persistence theorem
+\cite[Theorem~3, p.~215]{Fenichel1971} supplies a small finite-order
+graph on this compact boundaryless extension.
+The limiting circle is a compact invariant manifold with hyperbolic
+normal splitting. Its tangential rates vanish and remain $O_K(e^2)$
+under perturbation, so the fixed normal gap gives the finite-order
+domination required by the theorem. The circle, cutoff, and finite
+order are chosen before $e$ is made small.
+
+Its graph equation is
+$e^2A(X,v)v'=B(X)v+e^2R(X,v)$, with $|B|\ge\sigma_0$.
+The differentiated-maximum induction of
+Lemma~\ref{lem:pc-selected-graph}, with forcing size $e^2$, gives
+$\|v\|_{C^K}\le C_K e^2$; the transport coefficients are $O_K(e^2)$
+and the top normal coefficient stays separated from zero.
+Reconstructing the physical graph retains the forcing factor:
+\begin{equation}\label{eq:realizing-stable-graph}
+ h(X)=\lambda_+/X+O_{C^K}(e^2\lambda_+),\qquad
+ h|_{\lambda_+=0}=0 .
+\end{equation}
+Thus the reconstructed graph also covers $\lambda_+=0$ without
+division by the forcing parameter.
+
+Let $v_b(X)=\mathcal F(X,h(X))$. Then
+$v_b=1-X+cX^2+O_{C^1}(\lambda_+)$ and
+$v_b'=-1+O(c+\lambda_+)$ near one. It has a unique simple root
+$X_s=1+O(c+\lambda_+)$. Graph invariance gives
+$X_sh(X_s)=\lambda_+$, so this is an actual equilibrium.
+Its tangent eigenvalue $e^2v_b'(X_s)$ is negative for $e>0$,
+and its normal eigenvalue is a positive unit.
+The graph approaching it from the left is its actual weak stable
+branch.
+
+With $u=Y-h(X)$ the exact translated equations are
+\[
+ X'=e^2v_b(X)+e^2C(X,u)u,\qquad u'=B(X,u)u,
+\]
+\[
+ C=1+bcX-c^2e^2(2h+u),\qquad B=X-e^2h'C .
+\]
+They meet Lemma~\ref{lem:uniform-normal-product} on the same
+selected graph, with $\tau=\rho=e^2$ and $B$ a positive unit.
+The product construction preserves
+\begin{equation}\label{eq:realizing-product}
+ \theta'=e^2v_b(\theta),\quad \omega'=b_N(\theta)\omega,\quad
+ X=\theta+e^2\omega L(\theta,\omega),\quad
+ Y=h(X)+\omega A(\theta,\omega),\quad A>0 .
+\end{equation}
+In particular $X_\omega=O_{C^j}(e^2)$.
+
+The common phase and amplitude estimates of
+Lemma~\ref{lem:uniform-normal-product}, with $\tau=\rho=e^2$, give
+these bounds directly on the selected graph. In particular its phase
+integral retains the outside factor $e^2$, so the section shear is
+$X_\omega=O_{C^j}(e^2)$ without an inverse weak eigenvalue.
+
+After the positive rescaling $ds=b_N(\theta)d\tau$, apply the
+scalar simple-root linearizer for
+$g=v_b/b_N$, using the removable integrand
+$g'(\theta_s)/g(\theta)-1/(\theta-\theta_s)$.
+It gives the exact equations \eqref{eq:lower-exact-power-main},
+with $\beta_s=-g'(\theta_s)$ a positive unit.
+Take $\theta_b=1-2\sigma$. The incoming value
+$\xi_0(p)=\xi(\theta_b)$ has common bounds
+$0<\xi_-\le\xi_0(p)\le\xi_+$ by the scalar linearizer above.
+Fix a small $\omega_0>0$ and then $a_2<\xi_-/4$.
+Include the unstable outlet $\xi=0$ and choose the cuts so that
+the entire outgoing interval has
+$\theta\ge\theta_b+\sigma$.
+
+\subsection{Every outgoing source reaches the same fast core}
+Choose a horizontal $Y=\delta_1$ above the entire outgoing cut
+and the incoming cut for $0\le\omega\le\omega_0/4$,
+and still in the local tube. Restrict $\lambda_0$ below a fixed
+multiple of $\omega_0$. On the outgoing cut,
+$\mathcal F\ge k\omega_0$ and $Y'\ge kY$.
+Thus every $a\in[0,a_2]$, including zero, reaches this horizontal
+cut in bounded positive $\tau$ time.
+Its abscissa $x_1(a,p)$ has $-C\le x_{1,a}\le-k<0$.
+Indeed the source tangent $(1,0)$ has determinant
+$-\omega_0$ with the canonical field, while the
+$(\xi,\omega)$ to $(X,Y)$ Jacobian is negative.
+The target determinant is
+$-(X\delta_1-\lambda_+)x_{1,a}$.
+The finite-flight determinant identity preserves its strict sign
+and unit bounds.
+
+Use $Y$ as phase from $\delta_1$ to $e^{-2}$:
+\[
+ X_Y=\frac{e^2\mathcal F}{XY-\lambda_+}.
+\]
+The speed $\mathcal F$ cannot have a first zero: at such a zero
+$X_Y=0$ and
+$d\mathcal F/dY=1+bcX-2c^2e^2Y>1/2$.
+Consequently $X$ increases and has a fixed positive lower bound.
+Choose $\lambda_0<x_{\min}\delta_1/2$. Young's inequality
+$cX\le1+c^2X^2$ gives
+\[
+ (X^2)_Y\le Ce^2(1+Y^{-1})
+                     +Ce^2(c^2+c/Y)X^2 .
+\]
+The coefficient integrals up to $e^{-2}$ are bounded.
+Gronwall gives a common upper bound for $X$.
+The integral of the first-variation coefficient is likewise
+bounded by the integral of $Ce^2(1+Y^{-1})$.
+At the terminal physical point $y=c^2$ the abscissa is $cx_t$,
+where $x_t$ remains in a fixed positive compact interval and
+$x_{t,a}$ is a negative unit. The physical flight time is
+$O_c(1+|\log\varepsilon|)$.
+
+For the continuation put $z=cU$, $y=c^2V$. The equations are
+\[
+ U'=V(1+bcU-c^2V)+e^2(1-U+cU^2),\qquad
+ V'=UV-e^2\lambda_+ .
+\]
+From $V=1$, $U=x_t$, ordinary compact continuous dependence
+gives passage to a fixed $U_0>x_{\max}+1$:
+at $c=e=0$ its graph is
+$V=1+(U^2-x_t^2)/2$ with both speeds positive.
+Choose a small $\gamma$ and large $M$ placing these initial
+points between $\gamma(1+U^2)$ and $M(1+U^2)$.
+Fix $z_c$ small enough that $M(c_0^2+z_c^2)<1/4$.
+Only then make $e$ small. On $U_0\le U\le z_c/c$,
+the ratio of the horizontal speed to $V$ is between $1/2$ and
+$3$, and $UV-e^2\lambda_+\ge UV/2$.
+The lower barrier has slope $2\gamma U<U/6$, while the actual
+slope is at least $U/6$. The upper barrier has slope
+$2MU>2U$, while the actual slope is at most $2U$.
+Neither barrier can be crossed at a first exit. This proves the
+parabolic passage and its $O(1/c)$ physical time bound.
+
+On any fixed $d\le z\le z_c$, the scalar equation converges to
+$y_z=z/(1+bz-y)$. At $z=d$ every initial height is at most
+$M(c^2+d^2)$. First take $d$ small and then $c,e,\lambda_+$
+small. The fast scalar Lipschitz bound identifies the limiting
+curve with the zero-height fast solution.
+The entire outgoing collar therefore reaches a smaller interior
+core of the fixed fast section in the joint limit
+$c,e,\lambda_+\to0$.
+
+\subsection{Moving descent and its finite-power variation}
+Apply the ordinary fast holonomy of Lemma~\ref{lem:sections}
+from that core to a fixed small descending height $d_0$.
+Choose it so that the fast foot strip is strictly left of
+$-q_0<0$. On this strip $z\le-q_*<0$,
+$\dot y=zy-\nu\le-q_*y$ until $y=K\varepsilon^3$.
+The time is $O(1+|\log\varepsilon|)$ and
+\[
+ |\Delta z|\le Cd_0/q_*+
+                       C\varepsilon^2(1+|\log\varepsilon|).
+\]
+Fix $d_0$ first and then shrink $\varepsilon$. A first-exit
+argument keeps every source in the strip and proves the
+transverse finite hit $z=\Lambda_p(a)$.
+
+On the horizontal positive source,
+$z_a=cx_{1,a}<0$ and
+$G=c^2\varepsilon^2(X\delta_1-\lambda_+)$ is a positive
+unit times $c^2\varepsilon^2$.
+The whole upstream physical time is at most
+$T_c(1+\log(1/\varepsilon))$, and the divergence is bounded by
+$M_K$ on a fixed compact phase set.
+The determinant identity at the moving hit is
+\begin{equation}\label{eq:realizing-descent-jacobian}
+ -G_{\rm hit}\Lambda'_p(a)
+  =\det(X_{\rm source},\gamma'_a)
+                   \exp\int_0^{T(a)}\operatorname{div}X\,dt .
+\end{equation}
+Since $-G_{\rm hit}\ge q_*K\varepsilon^3$, it gives
+$0<\Lambda'_p(a)\le C_c\varepsilon^{-N_c}$.
+The determinant accounts for the derivative of the hitting time.
+
+\subsection{The common negative action}
+On a fixed negative interval from all descending entries to
+$-q_g$, $P_c=z^2-z+c$ has a uniform positive margin.
+The auxiliary substitution $y=\nu k$ has limiting graph
+$k=1/z$ and a fixed negative normal gap.
+The same compact-circle and differentiated-maximum argument
+used above gives a single graph
+$h_\nu=\nu/z+O_{C^K}(\varepsilon^2\nu)$ when
+$\nu\le\varepsilon^4$.
+For $W=y-h_\nu$ the exact equations are
+\begin{equation}\label{eq:realizing-negative-identities}
+ W_z=\frac{z-h_\nu'(1+bz-2h_\nu-W)}F W,\qquad
+ R_y=\frac{z(y^2+\varepsilon^2P_c)+
+                     \nu(1+bz-2y)}{F^2},\quad R=G/F .
+\end{equation}
+Choose $K_0>K+C_h$ before shrinking $\varepsilon$.
+The tube $0<W<K_0\varepsilon^3$ is forward invariant,
+has $F\asymp\varepsilon^2$, and includes all descending sources.
+It allows negative $y$; uniqueness of the scalar flow preserves $W>0$.
+At the fixed cut $-q_0$, the height $B_p(a)$ satisfies
+\[
+ B'_p(a)=-R(\Lambda,K\varepsilon^3)\Lambda'_p(a)
+                       \exp\int_\Lambda^{-q_0}R_y\,dz>0 .
+\]
+Here $R(\Lambda,K\varepsilon^3)<0$, its magnitude is $O(\varepsilon)$,
+and the integral is nonpositive after shrinking.
+
+On $I_N=[-q_0,-q_g]$, fix $p_*\le P_c\le p^*$ before the final
+$c$ choice. The exact identities give
+$W_z\le-\kappa_WW/\varepsilon^2$ and
+$R_y\le-\kappa_J/\varepsilon^2$, with
+$\kappa_W=q_g/(4p^*)$ and
+$\kappa_J=q_gp_*/[8(p^*)^2]$.
+Set
+$m_N=\frac12\min(\kappa_W,\kappa_J)(q_0-q_g)>0$.
+Consequently
+\begin{equation}\label{eq:realizing-negative-action}
+ 0<W(-q_g)\le K_0\varepsilon^3e^{-2m_N/\varepsilon^2},
+ \qquad
+ 0<y_a(-q_g)\le C_c\varepsilon^{-N_c}e^{-2m_N/\varepsilon^2}.
+\end{equation}
+Now define $\nu_+$ by \eqref{eq:lower-forcing-window}.
+For each fixed $c$, decreasing $\varepsilon$ puts the entire
+$\nu$ interval in the auxiliary and saddle windows and makes
+$\nu_+\le\varepsilon^4$. In particular
+$|y(-q_g)|\le A_0\varepsilon^3e^{-m_N/\varepsilon^2}$,
+where $A_0$ was fixed beforehand.
+
+\subsection{A positive-time adjustment of signed entry}
+The incoming cut is at $\theta_b=1-2\sigma$.
+In physical coordinates the same stable graph is
+$h_s(z)=c\varepsilon^2h(z/c)$.
+Choose $\ell>2\delta\sup|L|+1$ and the physical vertical cut
+$z_v=c\theta_b-\varepsilon^2\ell>0$.
+If $u=(y-h_s(z_v))/(c\varepsilon^2)$ is its signed normal
+displacement, \eqref{eq:realizing-product} gives
+$\theta_0<\theta_b-e^2/2$.
+On the intervening strip $v_b\ge k\sigma$, so the finite
+positive $\tau$ time to $\theta_b$ is at most a fixed $T_v$.
+Choose $\delta_v$ small enough that normal growth over $T_v$
+keeps every $|u|\le\delta_v$ within $\delta/4$.
+Choose this common $\delta_v$ before any trajectory.
+The hitting equation divided by $e^2$ has time derivative
+$v_b(\theta_b)\ge k\sigma$, while $\theta_u=O(e^2)$.
+The implicit-function and determinant identities give a map
+\[
+ E_p(0)=0,\qquad 0<k_E\le E'_p(u)\le C_E
+                  \quad (|u|\le\delta_v).
+\]
+This positive-time adjustment is defined for positive, zero, and
+negative signed inputs. At zero it reaches the incoming cut on
+the stable branch before the saddle.
+
+\subsection{The entire signed connector and its variation}
+Let $t_\sigma=1-2\sigma$,
+$I_\sigma=-t_\sigma-\log(1-t_\sigma)>0$, and
+$J_c=\log(1+q_g/c)+\log(1/(2\sigma))$.
+On $[-q_g,z_v]$,
+\[
+ P_c\ge c-z\ge2\sigma c,\quad
+ \int_0^{ct_\sigma}\frac z{P_c}\,dz\le cI_\sigma,\quad
+ \int_{-q_g}^{z_v}\frac {dz}{P_c}\le J_c .
+\]
+Choose $q_g,c_0<1/8$ and
+$\varepsilon^2\sup P_c\le1$.
+In the temporary tube $|y|\le\varepsilon^2P_c/4$ one has
+$|1+bz-y|\le2$ and
+$\varepsilon^2P_c/2\le F\le3\varepsilon^2P_c/2$.
+We use these bounds to close the height estimate.
+Variation of constants in the exact equation
+$y_z=(z/F)y-\nu/F$, with $F$ evaluated along the orbit, gives
+\begin{equation}\label{eq:realizing-connector-height}
+ |y(z)|\le
+ (A_0\varepsilon^3+8q_gK_0J_c\varepsilon)
+           e^{-(m_N-2I_\sigma c)/\varepsilon^2}.
+\end{equation}
+Choose $c$ so that $6I_\sigma c<m_N/4$, then make
+$\varepsilon$ small enough that this is below
+$\varepsilon^2\sigma c/8$. It is strictly inside the temporary
+tube, so first exit is impossible. All signed sources reach
+$z_v$ in time at most $2\varepsilon^{-2}J_c$, finite for each
+field. Their final signed input belongs to $|u|<\delta_v/2$.
+Thus $H_p(a)=E_p(u_v(a))$ exists on the full claimed rectangle
+and has $|H_p(a)|<\omega_0/4$.
+
+The positive part of $R_y$ on the negative connector is at most
+$8\nu/(\varepsilon^4P_c^2)$, and on the positive part at most
+$6z/(\varepsilon^2P_c)+8\nu/(\varepsilon^4P_c^2)$.
+Using
+$\int_{-q_g}^0P_c^{-2}\,dz\le1/c$ and
+$\int_0^{z_v}P_c^{-2}\,dz\le t_\sigma/(4\sigma^2c)$ yields
+\begin{equation}\label{eq:realizing-connector-variation}
+ \int_{-q_g}^{z_v}R_y\,dz
+ \le6I_\sigma c/\varepsilon^2+
+                   B_\sigma\nu/(c\varepsilon^4)
+ \le6I_\sigma c/\varepsilon^2+1 .
+\end{equation}
+The last inequality holds for the entire $\nu$ interval.
+Combining the moving-entry derivative with the physical scaling gives
+\[
+ H'_p(a)=\frac{E'_p(u_v)}{c\varepsilon^2}
+ B'_p(a)\exp\int_{-q_0}^{z_v}R_y\,dz>0 .
+\]
+Together with \eqref{eq:realizing-negative-action}, this is bounded
+by
+$C_c\varepsilon^{-(N_c+2)}
+ e^{-(m_N-6I_\sigma c)/\varepsilon^2}$.
+For this fixed $c$, take $\varepsilon$ small enough that
+$\log C_c+(N_c+2)\log(1/\varepsilon)+1
+\le m_N/(4\varepsilon^2)$.
+It gives \eqref{eq:lower-complement-contract}.
+Thus the fixed negative action dominates the positive
+$O(c)/\varepsilon^2$ amplification, forcing cost, and finite-power
+upstream loss on the full complement.
+
+\subsection{Continuity, endpoint signs, and whole images}
+On a fixed circle extension the small graph is unique.
+Subtracting two invariance equations at a maximum of their
+difference leaves the fixed normal gap; the transport difference
+has an $O(e^2)$ coefficient and is absorbed.
+Compactness of the common finite-order graph bounds therefore
+gives continuity for fixed $c,\varepsilon$ as $\nu$ varies.
+The product kernels are dominated and continuous.
+All complementary section hits are finite and transverse;
+their parameter continuity and source differentiability follow.
+Continuity in $\nu$ is all that the splitting argument requires.
+
+At $\nu=0$ the unstable positive branch stays positive through
+the full complement and the stable branch is the axis, giving
+$H_0(0)>0$. At $\nu=\nu_+$,
+$h_\nu(-q_g)\le-\nu/(2q_g)$ and
+\eqref{eq:realizing-negative-action} give $y(-q_g)<0$.
+The axis field has $G=-\nu$, so this output cannot become
+positive again. The signed connector carries it to the same incoming
+cut, whose stable height is positive.
+Hence $H_{\nu_+}(0)<0$.
+
+The local images are $O(c)$ in abscissa and
+$O(c\varepsilon^2)$ in height. The height-phase exit has
+$|z|\le Cc$, $y\le c^2$; the parabolic passage has the fixed
+bounds already proved. The ordinary outer tube covers each
+compact fast subarc, and the scalar descending comparison of
+Lemma~\ref{lem:sections} gives
+$\sup_a|\Lambda_p(a)-f_b|\to0$ in the joint limit.
+Its final tail displacement is
+$O(\rho)+O(\varepsilon^2(1+|\log\varepsilon|))$.
+The negative graph and \eqref{eq:realizing-connector-height}
+bound the whole slow image, while $F>0$ covers all its
+abscissae. The estimates are uniform on the rectangle and give
+both Hausdorff inclusions for each return orbit in
+Section~\ref{sec:lower-main}, completing the proof of
+Lemma~\ref{lem:realizing-complement}.

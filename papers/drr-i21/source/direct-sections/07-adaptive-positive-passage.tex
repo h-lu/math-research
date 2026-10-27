@@ -1,0 +1,316 @@
+\subsection{Positive passages beyond a coefficient scale}
+\label{sec:direct-adaptive-positive}
+
+The bounded-radius estimates do not control positive graphs that leave
+every fixed multiple of the coefficient scale. To treat these graphs
+in the primary and secondary regions, we follow them within a small
+unscaled radius box. An adapted height coordinate gives exact action
+transport and estimates for the moving exit radius. Continuation from
+that exit to a cone then permits the weighted-tail estimate to give
+the positive endpoint slope. The corollary below compares it with the
+negative endpoint slope to prove contraction after a sufficiently
+large exit.
+
+Write \(\varrho=\eta>0\) for the positive radius; in the negative
+quadratic-drift application below, \(\varrho=s\rho\). Suppose that
+\begin{equation}
+\label{eq:direct-adaptive-drift}
+ -q(\varrho)=\varrho^2(s+\varrho)\mathcal K(u,v,\varrho,p),\qquad
+ u=\varrho_0/\varrho,\quad v=\varrho/(s+\varrho),\qquad s,\varrho_0\ge0,
+\end{equation}
+where \(\mathcal K\) has fixed positive upper and lower bounds
+and uniform derivative bounds on an enlarged compact box of
+the displayed base variables. Both \(s\) and the unscaled radius
+are small. The coefficient \(\varrho_0\) is held fixed along a graph.
+A restriction of the box in \(v\) is handled by a smooth
+extension preserving positivity.
+The factor \(\varrho^2(s+\varrho)=s\varrho^2+\varrho^3\) joins the
+quadratic range \(\varrho\ll s\) to the cubic range
+\(\varrho\gg s\).
+
+Put
+\[
+ \varrho^+=s+\varrho,\qquad y=\frac{z}{\varrho^2\varrho^+},\qquad \mathfrak l=\log\varrho,
+ \qquad \frac{d\tau}{d\mathfrak l}=\frac1{\varrho^+},\qquad
+ \mathcal B=B(\varrho,\varrho^2\varrho^+y,p).
+\]
+The graph equation gives the extended system
+\begin{equation}
+\label{eq:direct-adaptive-system}
+ \begin{aligned}
+ u_\tau&=-(s+\varrho)u,& \varrho_\tau&=(s+\varrho)\varrho,& v_\tau&=sv,\\
+ y_\tau&=\mathfrak a\,y+y^2\mathcal N,&
+ \mathfrak a&=\mathcal K^{-1}-2s-3\varrho,&
+ \mathcal N&=-\frac{\mathcal B}{\mathcal K(\mathcal K+\mathcal B y)} .
+ \end{aligned}
+\end{equation}
+The defining relations among the base variables are invariant.
+For a small fixed \(y_0>0\), the quantities
+\(\mathfrak a,\ y_\tau/y,\ \partial_y y_\tau\) have fixed
+positive lower bounds on \(|y|\le2y_0\).
+
+\begin{lemma}[Adaptive height and cone landing]
+\label{lem:direct-adaptive-positive}
+For every fixed finite order \(k\), after reducing \(s\) and the
+radius box, there is a uniformly regular coordinate
+\[
+ \Psi(u,v,\varrho,y,p)=y\exp\Theta(u,v,\varrho,y,p),\qquad
+ \Theta=y\widetilde\Theta,\quad
+ \|\widetilde\Theta\|_{C^k}\le C_k,
+\]
+with positive height derivative and bounded inverse derivatives,
+such that \(\Psi_\tau=\mathfrak a\Psi\).
+The adapted unscaled height \(\widehat z=\varrho^2(s+\varrho)\Psi\)
+therefore satisfies exactly
+\begin{equation}
+\label{eq:direct-adaptive-action}
+ \widehat z(\varrho)=
+ \exp\left(\int_{\varrho_i}^{\varrho}\frac{t\,dt}{-q(t)}\right)
+ \widehat z(\varrho_i)
+\end{equation}
+as long as the passage is thin, \(y\le y_0\).
+
+For an exit at \(y=y_0\), let \(\varrho_e\) be its radius and
+\(\lambda_{\rm in}=\log\widehat z(\varrho_i)\). Then
+\begin{equation}
+\label{eq:direct-adaptive-exit}
+ -C(s+\varrho_e)\le\frac{d\log\varrho_e}{d\lambda_{\rm in}}
+                 \le-c(s+\varrho_e),\qquad
+ \left|\frac{d^j\log\varrho_e}{d\lambda_{\rm in}^j}\right|
+                 \le C_j(s+\varrho_e)^j,\quad 1\le j\le k .
+\end{equation}
+There is a subsequent first landing on \(z=m_{\rm land}\varrho^2\), for a
+small fixed \(m_{\rm land}>0\), with radius \(\varrho_l\) satisfying
+\begin{equation}
+\label{eq:direct-adaptive-landing}
+ \begin{gathered}
+ \varrho_e\le\varrho_l\le2\varrho_e,\qquad
+ \partial_{\log\varrho_e}\log\varrho_l=1+O(\epsilon_e)>c>0,\\
+ \bigl|\partial_{\log\varrho_e}^j\log\varrho_l\bigr|\le C_j\epsilon_e
+       \quad(2\le j\le k),\qquad
+ \epsilon_e=m_{\rm land}+(s+\varrho_e)|\log(s+\varrho_e)|,
+ \end{gathered}
+\end{equation}
+with constants independent of \(m_{\rm land}\).
+If a graph has \(y\ge y_0\) and \(z<m_{\rm land}\varrho^2\) at a radius
+\(\bar\varrho\) of the box, its first landing after \(\bar\varrho\) has
+radius at most \(2\bar\varrho\).
+The construction applies to admissible graphs before their
+endpoint.
+\end{lemma}
+
+\begin{proof}
+\emph{The adapted height coordinate.}
+At backward time \(t\ge0\), the base flow of
+\eqref{eq:direct-adaptive-system} is explicitly
+\[
+ g_s(t)=\frac{1-\e^{-st}}s,\quad
+ \varrho_b(t)=\frac{\varrho \e^{-st}}{1+\varrho g_s(t)},\quad
+ u_b(t)=u\e^{st}(1+\varrho g_s(t)),\quad v_b(t)=v\e^{-st},
+\]
+where \(g_0(t)=t\). Since \(0\le g_s(t)\le t\) and the
+denominator is at least one, each fixed-order state derivative
+is bounded by a polynomial in \(t\) times \(\e^{jst}\).
+The bounds are uniform for initial base points in the original compact
+box. To cover backward trajectories that leave it, extend the
+coefficients by smooth bounded retractions of the base variables into
+the enlarged positive box, preserving the positive height-rate and
+height-derivative margins. The extension agrees with the original
+coefficients and makes \(\mathfrak a,\mathcal N\), together with their
+required derivatives, bounded on the entire nonnegative base domain
+and a small negative-height strip. Along the backward trajectories,
+\(\varrho\) decreases.
+
+Choose \(c_y>0\) so that \(\partial_y y_\tau\ge2c_y\)
+on the extended box, and reduce \(s\) so that
+\((k+1)s<c_y\). The base-flow bounds above verify
+\cref{lem:direct-contracting-height-coordinate} with \(c_x=s\).
+It supplies \(\Theta\) with the asserted bounds on
+\(\Theta/y\) and the inverse, and \(\Psi_\tau=\mathfrak a\Psi\).
+The logarithmic derivative of \(\varrho^2(s+\varrho)\) in \(\tau\) is
+\(2s+3\varrho\), so
+\((\log\widehat z)_{\mathfrak l}=1/(\varrho^+\mathcal K)\).
+This is \eqref{eq:direct-adaptive-action}, by
+\eqref{eq:direct-adaptive-drift}.
+
+\emph{The exit radius.}
+At the thin exit, \(\mathfrak l_e=\log\varrho_e\) solves
+\[
+ \mathcal M(\mathfrak l_e)=\lambda_{\rm in},\qquad
+ \mathcal M(\mathfrak l)=
+ \log[\varrho^2(s+\varrho)\Psi(u,v,\varrho,y_0,p)]
+          -\int_{\varrho_i}^{\varrho}\frac{t\,dt}{-q(t)} .
+\]
+The transport equation gives
+\[
+ \mathcal M'(\mathfrak l)
+ =-\frac{f_0}{\varrho^+}\,\partial_y\log\Psi(u,v,\varrho,y_0,p)
+ =-\frac{g(u,v,\varrho,p)}{\varrho^+},\qquad c\le g\le C,
+\]
+where \(f_0=\mathfrak a y_0+y_0^2\mathcal N(u,v,\varrho,y_0,p)\) is the
+height velocity at the exit. Fixed logarithmic radial derivatives of \(g\) are
+bounded. The corresponding base vector field is
+\(-u\partial_u+v(1-v)\partial_v+\varrho\partial_\varrho\), whose
+fixed iterates applied to \(\varrho^+\) are \(O(\varrho^+)\). Set
+\(\phi_0=-\varrho^+/g\), so that \(\partial_{\mathfrak l}^j\phi_0=O_j(\varrho^+)\).
+Inverse differentiation gives
+\[
+ \frac{d^j\mathfrak l_e}{d\lambda_{\rm in}^j}
+ =\bigl[(\phi_0\partial_{\mathfrak l})^{j-1}\phi_0\bigr]_{\mathfrak l=\mathfrak l_e}.
+\]
+Each expanded term contains exactly \(j\) factors, each a
+radial derivative of \(\phi_0\) of some nonnegative order.
+It is therefore \(O_j((s+\varrho_e)^j)\). The sign and two-sided
+bound at first order follow from \(c\le g\le C\), proving
+\eqref{eq:direct-adaptive-exit}.
+Since the thin height increases and scalar order holds, the
+exit is unique and its existence set is one
+interval of incoming heights.
+
+\emph{Passage to the cone.}
+After exit use \(\mathcal Y=z/\varrho^2=\varrho^+y\) as the independent height.
+The equations become
+\[
+ \mathcal Y_{\mathfrak l}=\frac{\mathcal Y}{B\mathcal Y+\varrho^+\mathcal K}-2\mathcal Y,\qquad
+ \frac{d\mathfrak l}{d\mathcal Y}
+ =\frac{\varrho^+\mathcal K+B\mathcal Y}
+        {\mathcal Y(1-2\varrho^+\mathcal K-2B\mathcal Y)} .
+\]
+Choose \(m_{\rm land}\) small and then the radius box and \(s\) small,
+so that the last denominator factor is at least \(1/2\)
+on \(\mathcal Y\le m_{\rm land}\). Starting at \(\mathcal Y_e=(s+\varrho_e)y_0\), bootstrap
+\(\varrho\le2\varrho_e\). With \(\varrho_e^+=s+\varrho_e\), integration gives
+\[
+ 0\le\log(\varrho_l/\varrho_e)
+ \le C\{m_{\rm land}+\varrho_e^+\log(m_{\rm land}/(y_0\varrho_e^+))\}<\log2 .
+\]
+This closes the bootstrap and proves arrival at \(\mathcal Y=m_{\rm land}\).
+For the derivatives, write \(x=\log\varrho_e\) and
+\(\mathfrak l(\mathcal Y;x)=\log\varrho(\mathcal Y;x)\). Denote by \(R(\mathfrak l,\mathcal Y)\) the
+right side of the equation for \(\mathfrak l\) in the variable \(\mathcal Y\), with
+parameters fixed, so that
+\[
+ \mathfrak l_{\mathcal Y}=R(\mathfrak l,\mathcal Y),\qquad \mathfrak l(\mathcal Y_e(x);x)=x.
+\]
+On the preceding bootstrap range,
+\[
+ |\partial_{\mathfrak l}^jR|\le C_j(\varrho_e^+/\mathcal Y+1),\qquad
+ \int_{\mathcal Y_e}^{m_{\rm land}}(\varrho_e^+/\mathcal Y+1)\,d\mathcal Y
+       \le C\epsilon_e,\quad
+ \epsilon_e=m_{\rm land}+\varrho_e^+|\log \varrho_e^+|.
+\]
+Since the last denominator factor is at least \(1/2\), the constants
+\(C_j\) depend only on the bounds for \(\mathcal K\) and \(B\), and not on
+\(m_{\rm land}\).
+The moving initial height is treated as in the moving-entrance part
+of \cref{lem:direct-weighted-tail}: near the entrance set
+\(\mathcal Y=\mathcal Y_e(x)\zeta\) and
+\(\mathfrak l=x+\tilde{\mathfrak l}\). The rescaled equation has
+right side \(\mathcal Y_eR\), whose required mixed derivatives are
+\(O_j(\varrho_e^+)\) on a fixed \(\zeta\)-interval. Conversion back to
+fixed \(\mathcal Y\) uses
+\(\partial_x|_{\mathcal Y}=\partial_x|_\zeta-v_e\zeta\partial_\zeta\),
+where \(v_e=\varrho_e/\varrho_e^+\) has bounded derivatives. Thus the
+initial data for \(P_j=\partial_x^j\mathfrak l|_{\mathcal Y}\) are
+\[
+ P_1(\mathcal Y_e)=1-R(x,\mathcal Y_e)y_0\varrho_e
+       =1+O(\varrho_e^+),\qquad
+ P_j(\mathcal Y_e)=O_j(\varrho_e^+)\quad(j\ge2).
+\]
+Their triangular variational equations have linear coefficient
+\(R_{\mathfrak l}\) and higher forcing coefficients
+\(\partial_{\mathfrak l}^mR\). The displayed integral bound and
+variation of constants therefore give
+\(P_1(m_{\rm land})=1+O(\epsilon_e)\) and
+\(P_j(m_{\rm land})=O_j(\epsilon_e)\) for \(j\ge2\), proving
+\eqref{eq:direct-adaptive-landing}.
+
+For an input above the thin threshold at a radius \(\bar\varrho\), the
+same equation in \(\mathcal Y\), started at a larger value of \(\mathcal Y\), gives radial
+growth to \(\mathcal Y=m_{\rm land}\) no larger than for an input at that
+threshold; hence its landing radius is at most \(2\bar\varrho\).
+An input with \(\mathcal Y\ge m_{\rm land}\) already has the required cone height.
+
+\emph{Reaching the cone before the endpoint.}
+The organizing endpoints satisfy
+\(\eta_\pm^0=\pm a_*r_*+r_*^2\), in the notation of
+\cref{lem:exterior-multiplier-new}, by
+\eqref{eq:normal-rate-coordinate-new}. Hence
+\(z_*/(\eta_\pm^0)^2\to1/2\) as \(z_*\downarrow0\).
+For each sufficiently small fixed \(z_*\), the endpoint windows and
+parameter neighborhood can therefore be chosen so that
+\(\mathcal Y_*=z_*/\varrho_*^2\ge c_{\rm end}>0\), with one
+\(c_{\rm end}\) independent of \(z_*\). Thus
+\(m_{\rm land}<c_{\rm end}/2\) can be fixed before \(z_*\). The endpoint's normalized thin height is
+\(y_*=\mathcal Y_* /(s+\varrho_*)>y_0\) on the small box in the coordinates
+\((\eta,z)\).
+Thus every admissible graph that starts thin exits and lands before
+the fixed endpoint section. Monotonicity of the positive
+radius keeps the construction in the chosen radius box.
+\end{proof}
+
+The preceding lemma controls the moving exit and its first cone
+landing. To obtain a return-map estimate, we now differentiate the
+endpoint reached from this landing. At
+\(t=m_{\rm land}\varrho_l^2\), the entrance energy is \(U=t/(2m_{\rm land})\).
+By the choice \(1/(2m_{\rm land})>4\sup B\), the moving-cone
+part of \cref{lem:direct-weighted-tail} applies whenever
+\eqref{eq:direct-tail-smallness} holds there. The endpoint energy
+then has
+\[
+ \frac{dU(z_*;t/(2m_{\rm land}))}{dt}
+       =(z_*/t)^{-2q_2}a(t),\qquad c<a(t)<C.
+\]
+Under this tail condition, suppose also that the adapted
+incoming height satisfies
+\(0<c\le d\lambda_{\rm in}/d\log h\le C\), where
+\(\lambda_{\rm in}=\log\widehat z(\varrho_i)\). Then
+\begin{equation}
+\label{eq:direct-adaptive-source-slope}
+ hI_{+,h}\asymp \varrho_e^2(s+\varrho_e)
+                    (z_*/(m_{\rm land}\varrho_l^2))^{-2q_2}.
+\end{equation}
+Indeed \eqref{eq:direct-adaptive-exit} and
+\eqref{eq:direct-adaptive-landing} give
+\(-dt/d\log h\asymp t(s+\varrho_e)\), and \(I_+=z_*-U(z_*)\).
+
+\begin{corollary}[Contraction after a large exit]
+\label{cor:large-exit-contraction}
+In the setting of \cref{lem:direct-adaptive-positive}, let
+\(\mathcal J\subset\cH_p\) be an interval of central heights whose positive
+half-orbits are thin at \(\varrho_i\), satisfy
+\eqref{eq:direct-tail-smallness} at their landings, and have
+\(c\le d\lambda_{\rm in}/d\log h\le C\). Let \(c_1\) be the constant of the
+lower bound in \eqref{eq:direct-adaptive-source-slope}. Suppose that
+\(q_2\le C_2s\) and \(0<m_-\le C_1s^3\) on \(\mathcal J\), with fixed
+\(C_1,C_2\), and fix \(M_1\ge1\) with
+\(c_1M_1^2(1+M_1)>2\Lambda_+C_1\). Then, for sufficiently small \(s\),
+the central heights in \(\mathcal J\) with \(\varrho_e\ge M_1s\) form an
+interval on which \(\mathcal L<0\). In particular \(\Delta_p\) is strictly
+decreasing there and has at most one zero.
+\end{corollary}
+
+\begin{proof}
+By \eqref{eq:direct-adaptive-exit} and the lower bound for
+\(d\lambda_{\rm in}/d\log h\), the exit radius decreases with \(h\), so
+these central heights form an interval. The landing precedes the
+endpoint, so \(t=m_{\rm land}\varrho_l^2<z_*\), and the multiplier in
+\eqref{eq:direct-adaptive-source-slope} is at least one if \(q_2\le0\).
+If \(0<q_2\le C_2s\), then \(\varrho_l\ge\varrho_e\ge s\) gives
+\(t\ge m_{\rm land}s^2\), and
+\[
+ (z_*/t)^{-2q_2}\ge\exp[-2C_2s\log(z_*/(m_{\rm land}s^2))]\ge\tfrac12
+\]
+for small \(s\). In both cases
+\(m_+\ge\frac12c_1\varrho_e^2(s+\varrho_e)\), and therefore
+\[
+ \frac{m_-}{m_+}\le\frac{2C_1}{c_1}\,
+        \frac1{(\varrho_e/s)^2(1+\varrho_e/s)} .
+\]
+The endpoints of central heights in \(\cH_p\) lie in the windows, where
+\(\Pi_p'\le\Lambda_+\) by \cref{lem:exterior-multiplier-new}. For
+\(\varrho_e\ge M_1s\), the choice of \(M_1\) gives
+\(\e^{\mathcal L}=\Pi_p'(I_-)m_-/m_+<1\), and
+\(\Delta_p'=I_+'(\e^{\mathcal L}-1)<0\) by
+\eqref{eq:direct-completed-log-ratio}.
+\end{proof}

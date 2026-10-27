@@ -1,0 +1,207 @@
+\section{Contact-scale forcing and return bounds}\label{sec:contact-forcing}
+We prove the exclusions and complete-return contraction used in the
+directional cover of Section~\ref{sec:parameter-cover}. Let
+\begin{equation}\label{eq:contact-scale-family}
+ P_R(z)=Cz^2+Ra z+R^2c,\qquad D=R^3d,
+ \qquad 0<C_-\le C\le C_+,
+\end{equation}
+where $a,c,d$ lie in fixed compact sets and $R,\varepsilon>0$
+are independently small. The fixed negative interval has a positive
+polynomial margin. Thus Lemma~\ref{lem:sections} supplies the same
+complete positive-speed contact interval for all these parameters.
+All return maps in this section are restricted to that common interval.
+The constants $L$, the contact height, and the section markers are fixed
+after the compact coefficient sets are chosen and before $R,\varepsilon$
+are shrunk.  Consequently every barrier and variational estimate below
+has the same source and target sections for the whole parameter family.
+
+On this common interval, barriers exclude negative forcing or a negative
+polynomial value. For positive forcing, a rescaled core supplies a lower
+height bound, which controls expansion on the positive arc. Contraction
+on the negative arc then dominates in the complete return, uniformly in
+the relative sizes of $R$ and $\varepsilon$.
+
+\begin{samepage}
+\begin{lemma}\label{lem:scaled-negative-gates}
+There is no counted cycle in either of the following cases:
+\begin{enumerate}
+\item $d=-1$;
+\item $P_R(-\alpha R)\le-pR^2$, where $p>0$ and
+      $0<\alpha_0\le\alpha\le\alpha_1$ are fixed.
+\end{enumerate}
+In particular the second case includes $c=-1$ with bounded $a$,
+and, when $C=1$, $a=1$, $c\le1/8$.
+\end{lemma}
+\end{samepage}
+\begin{proof}
+Both exclusions begin with an upper height bound on the negative tail.
+Choose $L$ sufficiently large that, for $x\ge LR$,
+$P_R(-x)\asymp x^2$ and $|P_R'(-x)|\le C_1x$.
+The graph $B(z)=\varepsilon^2P_R(z)$ is an upper barrier there:
+\[
+ G-B'F\le\varepsilon^2xP_R(-x)
+           [-1+C_2\varepsilon^2+C_3\varepsilon L^{-3}]<0.
+\]
+At the fixed negative entry, $y\le K\varepsilon^3$; consequently
+$y(-LR)\le K_1\varepsilon^2R^2$ on every
+putative counted passage. If $d=-1$, then on
+$[-LR,-(L-1)R]$ the height decreases and
+\[
+ G\le-\varepsilon^3R^3,\qquad
+ 0<F\le K_2\varepsilon^2R^2,
+ \qquad \frac{dy}{dz}\le-\frac{\varepsilon R}{K_2}.
+\]
+Integration over a length $R$ would make $y$ negative for small
+$\varepsilon$. This proves the first assertion.
+
+For a negative polynomial value, we first improve the height bound by
+one power of $\varepsilon$. Enlarge $L$ past $\alpha_1+2$ and take
+$H>2\sup|d|/\alpha_0+1$. While
+$y\ge H\varepsilon^3R^2$ on the first coefficient-scale strip,
+\[
+ G\le-\tfrac12(L-1)Ry,\qquad
+ \frac{d\log y}{dz}\le-\frac{L-1}{2K_2\varepsilon^2R}.
+\]
+Therefore the orbit enters $y\le H\varepsilon^3R^2$ before
+$z=-(L-1)R$, since otherwise its height is reduced by
+$\exp[-(L-1)/(2K_2\varepsilon^2)]$, contradicting the assumed
+lower height. This horizontal upper bound is invariant for
+$z\le-\alpha_0R$. At $z=-\alpha R$ it gives
+$F\le2H\varepsilon^3R^2-p\varepsilon^2R^2<0$,
+contrary to the counted positive-speed passage. If $c=-1$,
+choose a fixed small $\alpha$ with
+$C_+\alpha^2+\sup|a|\alpha\le1/2$. If $C=a=1$ and
+$c\le1/8$, use $\alpha=1/2$.
+\end{proof}
+
+\begin{proposition}\label{prop:scaled-positive-forcing}
+For $d=1$ in~\eqref{eq:contact-scale-family}, there is at most
+one cycle sufficiently close to the graphic, uniformly for bounded
+$a,c$ and independently small $R,\varepsilon$.
+\end{proposition}
+\begin{proof}
+Write $\delta=\varepsilon^3R^3$ and $\mathcal R=G/F$.
+On a positive-speed contact graph, the exact variational coefficient is
+\begin{equation}\label{eq:scalar-density}
+ \mathcal R_y
+ =\frac{z(y^2+\varepsilon^2P_R(z))
+                   -\delta(1+bz-2y)}{F^2}.
+\end{equation}
+We will bound its integral over the full contact arc: the negative
+part supplies a logarithmic contraction, while the positive part has
+only a smaller logarithmic loss.
+
+On the fixed negative interval down to $-LR$, the preceding upper
+barrier gives $0<y\le\varepsilon^2P_R$ and
+$\varepsilon^2P_R\le F\le3\varepsilon^2P_R$. Thus
+\begin{equation}\label{eq:forcing-negative-density}
+ \mathcal R_y\le-\frac{c_1}{\varepsilon^2|z|},
+ \qquad -q_g\le z\le-LR.
+\end{equation}
+To keep the variational coefficient negative from $-LR$ to zero, compare
+the orbit with the positive nullcline. Let $h=-\delta/z$ and
+$w=y-h$. Exactly,
+\[
+ w_z=(z/F)w-h',\qquad h'=\delta/z^2>0.
+\]
+With $E(z,s)=\exp\int_s^z\zeta/F(\zeta,y(\zeta))\,d\zeta$,
+\[
+ w(-LR)=E(-LR,-q_g)w(-q_g)
+                      -\int_{-q_g}^{-LR}E(-LR,s)h'(s)\,ds.
+\]
+The first term is at most
+$C\varepsilon^3(LR/q_g)^{c_2/\varepsilon^2}$. On the last
+interval of length $\varepsilon^2R$, the lower bound for $F$
+gives $E(-LR,s)\ge c_3$ and $h'(s)\ge c_4\delta/R^2$.
+The negative integral is therefore at least $c_5\varepsilon^5R^2$.
+It dominates the first term uniformly: for fixed $R_+$ with
+$LR_+/q_g<1/2$ and $N=c_2/\varepsilon^2>2$,
+\[
+ \sup_{0<R\le R_+}\varepsilon^{-2}R^{-2}(LR/q_g)^N
+ =\varepsilon^{-2}R_+^{-2}(LR_+/q_g)^N\longrightarrow0.
+\]
+Hence $w(-LR)<0$, and $w_z|_{w=0}=-h'<0$ keeps $y<h$ up to zero.
+While $h$ remains in the small contact rectangle, $F_y>0$ and
+$F(z,h)>F(z,y)>0$. The identity
+\begin{equation}\label{eq:nullcline-density}
+ \mathcal R_y=\frac{z[(y-h)^2+F(z,h)]}{F(z,y)^2}
+\end{equation}
+then gives $\mathcal R_y<0$. When $h$ exceeds the fixed height
+$\eta$, use~\eqref{eq:scalar-density} instead: $|z|\le\delta/\eta$
+and its numerator is at most
+$\delta(\varepsilon^2|P_R|/\eta-c_6)<0$.
+At $z=0$ it equals $-\delta F_y<0$. We obtain
+\begin{equation}\label{eq:forcing-negative-integral}
+ \int_{-q_g}^0\mathcal R_y\,dz
+       \le-\frac{c_1}{\varepsilon^2}\log\frac{q_g}{LR}.
+\end{equation}
+
+The positive forcing determines the core scale $s=\varepsilon R$.
+For the positive arc put $z=sU$, $y=s^2V$,
+and $d\tau=s\,dt$. The equation becomes
+\[
+ U'=VQ+C\varepsilon^2U^2+a\varepsilon U+c,
+ \qquad V'=UV+1,
+ \qquad Q=1+bsU-s^2V.
+\]
+We first obtain a positive core height, then propagate it with a lower
+parabola. Every counted passage crosses $-1\le U\le0$ with $U'>0$.
+When $V\le1/4$, $V'\ge3/4$ and $U'\le M_0$ for a fixed
+$M_0$. Thus it cannot remain below
+$v_0=\min(1/4,3/(8M_0))$ across that interval, and it cannot
+recross the level $v_0$ downward. Hence $V(0)\ge v_0$.
+For a sufficiently small fixed $\gamma>0$, the lower parabola
+$V=v_0+\gamma U^2$ satisfies
+\[
+ V'-2\gamma UU'
+ =1+UV(1-2\gamma Q)-2\gamma C\varepsilon^2U^3
+                         -2\gamma a\varepsilon U^2-2\gamma cU
+ \ge1+v_0U/4+\gamma U^3/4.
+\]
+Indeed choose $\gamma\le\min(1/6,v_0/[16(\sup|c|+1)])$,
+use $2\gamma|a|\varepsilon U^2\le\gamma U^3/8+
+8\gamma a^2\varepsilon^2U$, and then shrink $\varepsilon$.
+Consequently $y\ge v_0s^2+\gamma z^2$.
+
+Fix $c_0\le v_0/8$. If $c\le-c_0$, a fixed small
+$\alpha>0$ gives $P_R(-\alpha R)\le-c_0R^2/2$, and
+Lemma~\ref{lem:scaled-negative-gates} excludes the cycle.
+For $c\ge-c_0$, Young's inequality and the parabola give
+$U'\ge V/4$, hence $F\ge y/4$. In~\eqref{eq:scalar-density}
+discard the negative forcing term to obtain
+\[
+ \mathcal R_y\le16z+C\varepsilon^2
+                  \frac{z^3+Rz^2+R^2z}{(s^2+z^2)^2}.
+\]
+The three integrals up to a fixed positive $\xi$ are bounded
+respectively by $\log(1+\xi/s)$, $\pi/(4s)$, and $1/(2s^2)$.
+As $s=\varepsilon R$, this proves
+\begin{equation}\label{eq:forcing-positive-integral}
+ \int_0^\xi\mathcal R_y\,dz
+             \le C_7+C_8\varepsilon^2\log(1+\xi/(\varepsilon R)).
+\end{equation}
+
+It remains to include the fast arc and the moving entry in the complete
+multiplier. Take the fixed positive marker as the source of the return
+$\mathcal P$. Its fast arc to the descending entry has bounded
+derivatives. At $y=K\varepsilon^3$, differentiating the moving
+initial abscissa gives $J=-\mathcal R\Lambda_q=O(\varepsilon)$,
+with $J>0$ in this orientation. On the remaining fixed negative
+interval $\mathcal R_y<0$ for small $\varepsilon$, since the
+$z\varepsilon^2P_R$ term dominates the bounded forcing term.
+Hence $0<J(-q_g)\le C\varepsilon$. Combining this with
+\eqref{eq:forcing-negative-integral}--\eqref{eq:forcing-positive-integral}
+yields, with $T_R=\log(q_g/(LR))\ge\log2$,
+\[
+ \log\mathcal P'\le\log(C\varepsilon)+C_7
+       -c_1\varepsilon^{-2}T_R
+       +C_8\varepsilon^2\log(1+\xi/(\varepsilon R))<0.
+\]
+For the last inequality use
+$\log(1+\xi/(\varepsilon R))\le T_R+
+\log(1+L\xi/(q_g\varepsilon))$ and then shrink $\varepsilon$.
+This choice is uniform even for arbitrarily small $R$ relative to $\varepsilon$.
+The complete domain is an interval by Lemma~\ref{lem:sections},
+after the fixed regular source change. Thus
+$0<\mathcal P'<1$ gives at most one fixed point and proves the proposition.
+\end{proof}

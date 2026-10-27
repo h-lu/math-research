@@ -1,0 +1,584 @@
+\subsection{The contact strip}
+\label{sec:direct-bounded-contact}
+
+We treat the contact strip, with fixed \(L<\infty\),
+\begin{equation}
+\label{eq:direct-contact-region}
+ q_1>0,\qquad q_0=\widehat q_0 q_1^2,\qquad |\widehat q_0|\le L .
+\end{equation}
+The limits of \(q_1\) and \(q_2\) are independent, including
+\(q_2=0\); constants may depend on \(L\) and \(C_0\).
+The difficulty is to compare the two passages uniformly through
+contact, without relating the sizes of \(q_1\) and \(q_2\).
+The paired identity gives opposite derivative signs at the two ends
+of the height interval. On the compact interval between them,
+\cref{lem:direct-contact-scattering-ratio} gives a strictly decreasing
+ratio of the limiting scattering derivatives. We transfer its derivative
+margin to the endpoint maps by a \(C^2\) estimate. Every middle zero
+of \(\mathcal L\) then crosses upwards in \(T\), and the outer signs
+complete the count on \(\mathcal H_p\).
+
+\begin{proposition}[Bounded contact offsets]
+\label{prop:direct-bounded-contact}
+For every fixed \(L\), the return displacement
+\eqref{eq:central-displacement-new} has at most two
+distinct zeros on the height interval \(\cH_p\) in
+\eqref{eq:direct-contact-region}, for all sufficiently small parameters.
+\end{proposition}
+
+\subsubsection{Barrier and tail estimates}
+
+With the contact scales of \cref{tab:direct-scale-guide}, put
+\[
+ d_{\rm c}=\max\{|q_2|,\sqrt{q_1}\},\qquad
+ z=q_1^2 Z,\qquad h=q_1^2 \widehat h,\qquad
+ |\eta_\sigma|=q_1u_\sigma,\qquad
+ \mathcal U_\sigma=u_\sigma^2/2 .
+\]
+The rescaled equations are
+\begin{equation}
+\label{eq:direct-contact-equations}
+ (\mathcal U_\sigma)_Z
+ =B(\sigma q_1u_\sigma,q_1^2Z)
+  +\frac{-\widehat q_0-\sigma u_\sigma-q_2u_\sigma^2
+               -\sigma q_1u_\sigma^3R_q(\sigma q_1u_\sigma)}{Z}.
+\end{equation}
+They are the graphs of the analytic outward time equations
+\begin{equation}
+\label{eq:direct-contact-time}
+ (u_\sigma)_\tau=-\widehat q_0-\sigma u_\sigma-q_2u_\sigma^2
+               -\sigma q_1u_\sigma^3R_q+ZB,\qquad
+ Z_\tau=u_\sigma Z .
+\end{equation}
+The central point is \(u_\sigma=0,\ Z=\widehat h\). Its radial flux is
+\[
+ f(\widehat h)=\widehat h B(0,q_1^2\widehat h)-\widehat q_0,\qquad
+ f_{\widehat h}=B(0,q_1^2\widehat h)
+   +q_1^2\widehat h B_z(0,q_1^2\widehat h)\ge b_0.
+\]
+Thus all \(\widehat h>0\) pass when \(\widehat q_0\le0\); when \(\widehat q_0>0\)
+the passing interval is \(\widehat h>\widehat h_0\), where \(f(\widehat h_0)=0\).
+
+The negative graph has the uniform upper barrier
+\begin{equation}
+\label{eq:direct-contact-cap}
+ U_-(z)\le C(d_{\rm c}^2+z),\qquad |\eta_-(z)|\le C(d_{\rm c}+\sqrt z).
+\end{equation}
+Indeed, for \(x\ge Kd_{\rm c}\), the coefficient bounds give
+\[
+ q(-x)\ge cx^3-d_{\rm c}x^2-q_1x-Lq_1^2\ge0.
+\]
+After division by \(x^3\), the three adverse terms are at most
+\(K^{-1},K^{-2},Ld_{\rm c}/K^3\). Choose \(K\) large and then \(d_{\rm c}\)
+small. On the line \(U=C(d_{\rm c}^2+z)\), with \(\sqrt{2C}>K\),
+the graph derivative \(B-q(-\sqrt{2U})/z\) is at most
+\(\sup B<C\). The line starts above the central point, so first contact
+proves \eqref{eq:direct-contact-cap}.
+
+To continue from bounded rescaled central heights to the fixed section,
+we first obtain the following cone bounds. For each fixed bounded set
+of rescaled central heights, they hold for a sufficiently large fixed
+\(Z_0\):
+\begin{equation}
+\label{eq:direct-contact-cones}
+ cz\le U_\pm(z),\qquad U_+(z)\le Cz,\qquad
+ z_0:=q_1^2Z_0\le z\le z_*.
+\end{equation}
+For continuation on a fixed interval \(\widehat h\le Z\le Z_1\),
+first bound the positive radius by \(M_{L,Z_1}\). At a fixed
+\(M>2(L+(\sup B)Z_1+1)\), the first right side of
+\eqref{eq:direct-contact-time} is negative, after reducing
+\(|q_2|\) and \(q_1\). Hence the graph cannot first reach \(M\).
+Choose \(Z_1\) larger than twice these rescaled central heights and
+so large that \(L/Z_1<b_0/4\). On the lower comparison line
+\(\mathcal U=m(Z-Z_1)\), the adverse terms in
+\eqref{eq:direct-contact-equations} are bounded by
+\[
+ L/Z_1+C\sqrt{m/Z_1}+2d_{\rm c}m+C m^{3/2}\sqrt{z_*}.
+\]
+Choose \(m>0\) small after \(Z_1\), and use the common-cone choice of
+\(z_*\) already fixed before the regional thresholds.  Reducing
+\(d_{\rm c}\) and \(q_1\) after these choices makes the graph derivative
+greater than \(m\).  This proves a lower bound for both
+signs. For the positive upper bound use \(W=C_2Z+C_3\), choosing
+\(C_3\) to dominate the energy at \(Z_1\) and to have
+\(\sqrt{2W}\ge2L\). The term \(-\widehat q_0-\sqrt{2W}\) is then
+nonpositive, and the remaining derivative is at most
+\[
+ \sup B+2d_{\rm c}W/Z+Cq_1W^{3/2}/Z<C_2
+\]
+for \(C_2\) fixed large and the same successive reductions.
+Enlarge \(Z_0\) relative to \(Z_1,C_3\). These comparisons give
+\eqref{eq:direct-contact-cones}, with fixed cone constants, up
+to \(z_*\). Together with \eqref{eq:direct-contact-cap}
+they keep both graphs inside the box in the coordinates \((\eta,z)\).
+
+The negative graph may remain above the upper cone for part of the
+passage. To estimate the resulting loss in the paired identity, set
+\(v_0=|\eta_-(z_0)|/q_1\) and
+\(t_h=\log(Z_0/\widehat h)\). For \(z\ge z_0\), discard the favorable
+negative cubic term and use
+\(q_1\sqrt{2U}\le U/8+4q_1^2\). Taking \(Z_0\ge L+4\)
+and then \(d_{\rm c}\) small yields
+\begin{equation}
+\label{eq:direct-contact-upper-comparison}
+ U_-'\le C+\tfrac12 U_-/z,\qquad
+ U_-(z)\le Cz+U_-(z_0)(z/z_0)^{1/2}.
+\end{equation}
+The second term is at most \(z\) once
+\(z\ge z_0\max\{1,(U_-(z_0)/z_0)^2\}\).
+Below that height use \eqref{eq:direct-contact-cap}; above it use
+the resulting upper cone. Splitting the integral, also when this
+height exceeds \(z_*\), gives
+\begin{equation}
+\label{eq:direct-contact-tail-loss}
+ \int_{z_0}^{z_*}\frac{|\eta_-(z)|}{z}\,dz
+       \le C\sqrt{z_*}+Cd_{\rm c}\log(1+v_0).
+\end{equation}
+
+The tail loss must be smaller than the gain in the paired identity
+at small central heights. We therefore express its last logarithm in
+terms of the central height. In the
+negative equation use \(t=\log(Z/\widehat h)\) and
+\(\mathcal V=\sqrt{1+u_-^2}\). Dropping the favorable cubic
+term, and using \(|\widehat q_0|\le L\), gives
+\[
+ \mathcal V_t\le C_L+d_{\rm c}\mathcal V+(\sup B)\widehat h \e^t,\qquad
+ \mathcal V(t)\le \e^{d_{\rm c}t}(1+C_Lt)+C\widehat h \e^t .
+\]
+In particular,
+\begin{equation}
+\label{eq:direct-contact-source-growth}
+ \log(1+v_0)\le C_{L,Z_0}+d_{\rm c}t_h+\log(1+t_h).
+\end{equation}
+This bounds the tail loss in terms of \(t_h\), uniformly
+in \(d_{\rm c}|\log q_1|\).
+
+\subsubsection{The two ends of the height interval}
+
+For the fixed contact width \(L\), choose \(Z_0\) after the bounded-height
+comparison, then fix the cone and barrier constants. Reduce \(q_1\)
+so that
+\begin{equation}
+\label{eq:direct-contact-prefix-absorption-choice}
+ q_1Z_0\le \frac{b_1}{4C_B},
+ \qquad z_0=q_1^2Z_0\le \frac{q_1}{4C_B},
+\end{equation}
+where \(C_B\) bounds \(\lvert B_\eta\rvert\) on the comparison box and
+\(b_1\) is the positive coefficient margin in
+\eqref{eq:normal-sign-margins-new}. With \(z_*\) already fixed by the
+common-cone construction, reduce \(\lvert q_2\rvert\) (and hence
+\(d_{\rm c}\)) relative to this \(z_*\), after \(q_1\). The absorptions
+below are then uniform in the independent limits of \(q_1\) and \(q_2\).
+
+For \(\widehat q_0\le0\), choose initially \(\widehat h\le1/2\).
+On \(h\le z\le z_0\), the terms \(B_\eta/|\eta_\sigma|\) in the
+paired identity \eqref{eq:paired-log-derivative-new} are absorbed
+by half of the positive terms \(q_1/(|\eta_\sigma|z)\): indeed,
+\eqref{eq:direct-contact-prefix-absorption-choice} gives
+\(z\le z_0\le q_1/(4C_B)\), so
+\( |B_\eta|/|\eta_\sigma|\le q_1/(4|\eta_\sigma|z)\).
+The fixed positive-radius bound
+gives a gain at least \(c_Lt_h\). By
+\eqref{eq:direct-contact-cap}, the cubic loss in this prefix is at most
+\(C_Ld_{\rm c} t_h\). On \(z\ge z_0\), the lower cones bound the
+\(B_\eta/|\eta_\sigma|\) integrals; the positive upper cone bounds
+the cubic integral on the positive branch, and
+\eqref{eq:direct-contact-tail-loss} bounds it on the negative branch.
+Therefore
+\[
+ \log\frac{I_{-,h}}{I_{+,h}}
+ \ge (c_L-C_Ld_{\rm c})t_h-C\sqrt{z_*}-Cd_{\rm c}\log(1+v_0)
+ \ge \tfrac12c_Lt_h-C_L .
+\]
+The last step uses \eqref{eq:direct-contact-source-growth} and
+\(\log(1+t_h)\le t_h\), reducing \(d_{\rm c}\) after \(L,Z_0\) and
+\eqref{eq:direct-contact-prefix-absorption-choice} so that the
+coefficient of \(t_h\) remains at least \(c_L/2\).
+Choose a fixed \(\widehat h_{\rm lo}>0\)
+so small that this bound exceeds \(\log(1/\Lambda_-)\) for
+\(\widehat h\le \widehat h_{\rm lo}\). Then \(\Delta_h>0\) there.
+
+For \(\widehat q_0\ge0\), the lower end of the passing interval is
+controlled by the radial flux. Consider central heights with small positive flux
+\(0<f\le1\). Then
+\[
+ \widehat h\le (L+1)/b_0,\qquad \widehat h\ge f/\sup B .
+\]
+For \(0\le t\le1\), subtracting the value of \(ZB\)
+at the central point in \eqref{eq:direct-contact-equations} gives
+\[
+ (u_-^2/2)_t\le C_Lu_-+d_{\rm c}u_-^2+f+C_Lt .
+\]
+The explicit upper comparison
+\[
+ \bar v=K(t+\sqrt{ft}),\qquad
+ (\bar v^2/2)'=K^2(t+\tfrac32\sqrt{ft}+f/2)
+\]
+proves \(u_-\le\bar v\). Choose \(K\) large first to dominate the
+linear, \(f\), and \(t\) terms, then \(d_{\rm c}\) small to absorb
+\(d_{\rm c}\bar v^2\). A fixed provisional radius box larger than
+\(4K\) completes the first-contact continuation argument.
+Thus the favorable negative-branch term in the paired identity
+satisfies
+\[
+ \int_0^1\frac{dt}{u_-(t)}
+ \ge \frac2K\log(1+f^{-1/2})
+ \ge c_L\log(1/f)-C_L .
+\]
+Choose \(Z_0>\e(L+1)/b_0\), so this interval lies in the prefix.
+The other prefix losses and the whole tail are bounded
+as above. Since \(t_h\le\log(C_L/f)\), the result is
+\begin{equation}
+\label{eq:direct-contact-flux-gain}
+ \log\frac{I_{-,h}}{I_{+,h}}
+ \ge \tfrac12c_L\log(1/f)-C_L .
+\end{equation}
+Choose \(f_{\rm lo}>0\) so small that the right side exceeds
+\(\log(1/\Lambda_-)\) for \(f\le f_{\rm lo}\). Thus \(\Delta_h>0\)
+on this interval, whose connectedness follows from \(f_{\widehat h}>0\).
+This estimate is uniform as \(f/\widehat h\to0\).
+
+At the other end let \(\theta_0\) be the constant of
+\cref{lem:relative-height-paired-new}, and choose
+\(\widehat h_{\rm hi}>(L+1)/b_0+\widehat h_{\rm lo}\) so large that
+\(L/\widehat h_{\rm hi}+\widehat h_{\rm hi}^{-1/2}\le\theta_0/2\).
+For \(h\ge q_1^2\widehat h_{\rm hi}\),
+\[
+ |q_0|/h\le L/\widehat h_{\rm hi},\qquad
+ q_1/\sqrt h\le \widehat h_{\rm hi}^{-1/2},
+\]
+and \(|q_2|\le\theta_0/2\) for small parameters. Hence
+\cref{lem:relative-height-paired-new} applies and gives
+\(\Delta_h<0\) at these central heights.
+
+Write \(\widehat h_{\rm a}=\widehat h_{\rm lo}\) when \(\widehat q_0\le0\), and otherwise
+let \(\widehat h_{\rm a}\) be the unique solution of \(f(\widehat h_{\rm a})=f_{\rm lo}\).
+Put \(\widehat h_{\rm b}=\widehat h_{\rm hi}\). Taking \(f_{\rm lo}\le1\), the choice
+of \(\widehat h_{\rm b}\) gives \(f(\widehat h_{\rm b})>1\) for \(\widehat q_0>0\), so \(\widehat h_{\rm a}<\widehat h_{\rm b}\) in both
+cases. At central heights in \(\cH_p\), the displacement has
+\(\Delta_h>0\) for \(\widehat h\le \widehat h_{\rm a}\) and \(\Delta_h<0\) for
+\(\widehat h\ge \widehat h_{\rm b}\), including the height thresholds whenever they
+are admissible.
+The middle interval is \([\widehat h_{\rm a},\widehat h_{\rm b}]\). On bounded heights,
+\[
+ f(\widehat h)-(B_0\widehat h-\widehat q_0)
+       =O(q_1^2\widehat h^2),\qquad B_0=B(0,0,p).
+\]
+Consequently the central heights of the middle interval belong, after
+parameter reduction, to
+\begin{equation}
+\label{eq:direct-contact-compact-passing}
+ \mathcal K_{\rm c}=\left\{(\widehat h,\widehat q_0,B_0):
+ \begin{array}{c}
+ b_0\le B_0\le B_{\max},\quad |\widehat q_0|\le L,\\
+ h_*\le\widehat h\le\widehat h_{\rm hi},\quad
+ B_0\widehat h-\widehat q_0\ge f_*
+ \end{array}\right\},
+\end{equation}
+where
+\[
+ h_*:=\min\{\widehat h_{\rm lo},f_{\rm lo}/(2B_{\max})\}>0,
+ \qquad f_*:=\min\{b_0\widehat h_{\rm lo},f_{\rm lo}/2\}>0.
+\]
+Here \(B_{\max}\) is a fixed upper bound for \(B_0\).
+Every fixed \((\widehat q_0,B_0)\) fibre of \(\mathcal K_{\rm c}\) is an interval,
+possibly empty. This compact set lies strictly inside the model passing domain
+\begin{equation}
+\label{eq:direct-contact-model-domain}
+ |\widehat q_0|\le L,\qquad b_0\le B_0\le B_{\max},\qquad
+ \widehat h>\max\{0,\widehat q_0/B_0\}.
+\end{equation}
+For the estimates below, choose one fixed
+\(\widehat h_{\rm ref}>\widehat h_{\rm hi}+1+2L/b_0\),
+and let $\mathcal K_{\rm c}^+$ be the compact set obtained from $\mathcal K_{\rm c}$
+by replacing its upper height bound by $\widehat h_{\rm ref}+1$
+and its lower height and flux bounds by $h_*/2$ and $f_*/2$.
+Every fibre contains the reference height $\widehat h_{\rm ref}$ and
+is still an interval. By the estimate of \(f\) above, the radial flux
+at the central point is positive on a neighborhood of this enlarged
+set for small parameters.
+
+\subsubsection{Scattering and a strictly decreasing derivative ratio}
+
+The outer signs leave only the compact passing set
+\(\mathcal K_{\rm c}\). On this set we compare the derivatives of the
+limiting scattering maps, and then transfer their strict ratio
+margin to the endpoint maps.
+For fixed contact heights the limiting equations are
+\begin{equation}
+\label{eq:direct-contact-model}
+ (\mathcal U_\sigma^0)_Z=B_0-\frac{\widehat q_0+\sigma\sqrt{2\mathcal U_\sigma^0}}{Z},
+ \qquad \mathcal U_\sigma^0(\widehat h;\widehat h)=0 .
+\end{equation}
+Define
+\begin{equation}
+\label{eq:direct-contact-scattering}
+ S_\sigma(\widehat h;\widehat q_0,B_0)=
+ \lim_{Z\to\infty}
+ [\mathcal U_\sigma^0(Z;\widehat h_{\rm ref})-\mathcal U_\sigma^0(Z;\widehat h)] .
+\end{equation}
+The limit exists with local $C^2$ convergence of order $O(Z^{-1/2})$
+in $\widehat h$, uniformly on compact passing sets. Fix a height beyond
+all the rescaled central heights of such a set. The time equations
+\eqref{eq:direct-contact-time} with
+$q_1=q_2=0$ have positive initial radial flux, and their solutions
+meet this height section transversely. The resulting
+finite-height maps are analytic.
+The limiting barriers put both graphs in $cZ\le \mathcal U_\sigma^0\le CZ$
+above a sufficiently large fixed cut. There
+\[
+ \partial_{\mathcal U}\mathcal G_\sigma^0=-\frac{\sigma}{Z\sqrt{2\mathcal U_\sigma^0}},\qquad
+ |\partial_{\mathcal U}\mathcal G_\sigma^0|\le CZ^{-3/2},\qquad
+ |\partial_{\mathcal U}^2\mathcal G_\sigma^0|\le CZ^{-5/2}.
+\]
+The mean-value equation for two graphs and the triangular first- and
+second-variation equations have these integrable coefficients. Hence
+the graph difference and its first two \(\widehat h\)-derivatives remain
+bounded, and their \(Z\)-derivatives are \(O(Z^{-3/2})\). Integration to
+infinity gives the asserted \(C^2\) convergence and rate. The same
+majorants give continuous dependence on \((\widehat q_0,B_0)\), and
+\(S_\sigma(\widehat h_{\rm ref})=0\).
+
+The variation formula for a moving initial point gives
+\begin{equation}
+\label{eq:direct-contact-model-derivative}
+ S_\sigma'(\widehat h)=
+ \left(B_0-\frac{\widehat q_0}{\widehat h}\right)
+ \exp\left[-\sigma\int_{\widehat h}^\infty
+          \frac{dZ}{Z\sqrt{2\mathcal U_\sigma^0(Z;\widehat h)}}\right]>0 .
+\end{equation}
+Indeed, the initial factor of $\partial_{\widehat h}\mathcal U_\sigma^0$
+is $-(B_0-\widehat q_0/\widehat h)$ for both signs. The integral in
+\eqref{eq:direct-contact-model-derivative} converges both at the
+central point and at infinity.
+
+\begin{samepage}
+\begin{lemma}[Scattering derivative ratio]
+\label{lem:direct-contact-scattering-ratio}
+For fixed $(\widehat q_0,B_0)$, the function
+\[
+ \mathscr R(\widehat h):=S_-'(\widehat h)/S_+'(\widehat h)
+\]
+is strictly decreasing throughout the passing interval
+\eqref{eq:direct-contact-model-domain}. On each fixed compact
+passing set there are constants $c_1,c_2>0$ such that
+\begin{equation}
+\label{eq:direct-contact-ratio-margins}
+ S_+'\ge c_1,\qquad -\mathscr R'\ge c_2.
+\end{equation}
+\end{lemma}
+\end{samepage}
+
+\begin{proof}
+Put $t=\log(Z/\widehat h)$ and
+$W_\sigma(t;\widehat h)=\mathcal U_\sigma^0(\widehat h \e^t;\widehat h)$.
+The initial time is now fixed, and
+\[
+ (W_\sigma)_t=B_0\widehat h \e^t-\widehat q_0-\sigma\sqrt{2W_\sigma},
+ \qquad W_\sigma(0;\widehat h)=0.
+\]
+Take $V_\sigma=\partial_{\widehat h}W_\sigma$ at fixed $t$.
+With $f^0=B_0\widehat h-\widehat q_0>0$,
+the regular time equations at the central point give, uniformly on compact
+passing sets,
+\[
+ W_\sigma=f^0t+O(t^{3/2}),\qquad
+ V_\sigma=B_0t+O(t^{3/2}).
+\]
+For example, in the analytic time variable $\tau$,
+$u_\sigma=f^0\tau+O(\tau^2)$ and
+$t=f^0\tau^2/2+O(\tau^3)$; inversion in $\sqrt t$ gives these
+expansions with their derivatives in $\widehat h$.
+For $t>0$ the variation equation is
+\[
+ (V_\sigma)_t=B_0\e^t-\frac{\sigma V_\sigma}{\sqrt{2W_\sigma}},
+ \qquad V_\sigma(0)=0.
+\]
+Its coefficient is $O(t^{-1/2})$ at zero. Variation of constants,
+first from positive time and then by passage to zero, yields
+\begin{equation}
+\label{eq:direct-contact-fixed-time-variation}
+ V_\sigma(t)=B_0\int_0^t \e^{\bar t}
+ \exp\left[-\sigma\int_{\bar t}^t\frac{du}{\sqrt{2W_\sigma(u)}}\right]d\bar t>0.
+\end{equation}
+For large $t$, the cone estimates give $W_\sigma\asymp \e^t$.
+The tail coefficient of this variation equation is integrable,
+so \eqref{eq:direct-contact-fixed-time-variation} gives
+$V_\sigma=O(\e^t)$. Thus both
+$(2W_\sigma)^{-1/2}$ and
+$V_\sigma(2W_\sigma)^{-3/2}$ are bounded by
+$Ct^{-1/2}$ near zero and by $C\e^{-t/2}$ at infinity,
+uniformly on every compact passing set. Dominated differentiation gives
+\[
+ \mathcal T_\sigma(\widehat h):=\int_0^\infty
+            \frac{dt}{\sqrt{2W_\sigma(t;\widehat h)}},\qquad
+ \mathcal T_\sigma'=-\int_0^\infty
+       \frac{V_\sigma(t;\widehat h)}{(2W_\sigma(t;\widehat h))^{3/2}}\,dt<0,
+\]
+and $\mathcal T_\sigma'$ is continuous in the passing parameters.
+The common positive factor $B_0-\widehat q_0/\widehat h$ in
+\eqref{eq:direct-contact-model-derivative} cancels, giving
+\[
+ \mathscr R=\exp(\mathcal T_-+\mathcal T_+),\qquad
+ \mathscr R'=\mathscr R(\mathcal T_-'+\mathcal T_+')<0.
+\]
+Continuity and compactness give \eqref{eq:direct-contact-ratio-margins}.
+\end{proof}
+
+\subsubsection{Endpoint preparation and the two-zero bound}
+
+To transfer the scattering comparison to the endpoint maps, we must
+retain the quadratic tail factor even when its logarithm is unbounded.
+The common endpoint amplitude is
+\begin{equation}
+\label{eq:direct-contact-amplitude}
+ E=q_1^2(z_*/q_1^2)^{-2q_2}.
+\end{equation}
+By \eqref{eq:direct-tail-amplitude} with \(t=q_1^2\),
+\(E\le z_*^{1/4}q_1^{3/2}\to0\) for \(|q_2|<1/8\), while
+\(q_2\log q_1\) may be unbounded.
+Let \(b_\sigma=I_\sigma(q_1^2\widehat h_{\rm ref})\) and set
+\[
+ A_\sigma(p)=
+ \frac{\partial_{\widehat h} I_\sigma(q_1^2\widehat h)|_{\widehat h=\widehat h_{\rm ref}}}
+      {E S_\sigma'(\widehat h_{\rm ref})}.
+\]
+On the enlarged compact passing set above,
+\begin{equation}
+\label{eq:direct-contact-actual-preparation}
+ I_\sigma(q_1^2\widehat h)=b_\sigma+
+ E A_\sigma(p)[S_\sigma(\widehat h)+R_\sigma(\widehat h,p)],\qquad
+ \|R_\sigma\|_{C^2}\longrightarrow0,
+\end{equation}
+where \(A_\sigma\) and \(A_\sigma^{-1}\) are bounded and positive.
+The signs \(\sigma=-\) and \(\sigma=+\) label the negative and positive
+branches, as in \eqref{eq:direct-contact-equations}. The coefficient
+ratio satisfies
+\begin{equation}
+\label{eq:direct-contact-slope-quotient}
+ A_-/A_+\le \exp(2C_{\rm cone}\sqrt{z_*})+o(1).
+\end{equation}
+Choose a large fixed matching height \(Z_c>2\widehat h_{\rm ref}\), and put
+\[
+ D_{\sigma,c}(\widehat h)
+ =\mathcal U_\sigma(Z_c;\widehat h_{\rm ref})-\mathcal U_\sigma(Z_c;\widehat h).
+\]
+At each fixed \(Z_c\), the finite-height analytic flow
+\eqref{eq:direct-contact-time} converges, with all state derivatives
+through any prescribed finite order, to \eqref{eq:direct-contact-model}. The
+scattering estimate therefore gives
+\[
+ \|D_{\sigma,c}-S_\sigma\|_{C^2}
+ \le CZ_c^{-1/2}+C(Z_c)(q_1+|q_2|).
+\]
+After fixing \(Z_c\) and reducing the parameters, these differences
+have bounded $C^2$ norms. Integration of the comparison equation gives
+\(\mathcal U_\sigma^0(Z;\widehat h)=B_0Z+O(\sqrt Z+\log Z)\), uniformly on
+each fixed compact set of rescaled central heights. Since
+\(B_0\in[b_0,\sup B]\) lies in the interior of the common cone, a
+sufficiently large \(Z_c\) puts the normalized energies
+\(\mathcal U_\sigma^0(Z_c;\widehat h)/Z_c\), and after parameter reduction also
+\(\mathcal U_\sigma(Z_c;\widehat h)/Z_c\), in that cone. At \(t=q_1^2Z_c\),
+moreover,
+\[
+ |q_0|/t\le L/Z_c,\qquad q_1/\sqrt t=Z_c^{-1/2}.
+\]
+Apply \cref{lem:direct-weighted-tail} at \(t=q_1^2Z_c\), retaining
+\((z_*/t)^{-2q_2}\). Its centered map is
+\(a_{\sigma,c}x+N_\sigma(x)\), where
+\(N_\sigma(0)=N_\sigma'(0)=0\),
+\(\|N_\sigma\|_{C^4}\le Ce(t)\), and
+\(e(t)=q_1\sqrt{Z_c}+Z_c^{-1/2}\). Here
+\(x=-D_{\sigma,c}/Z_c=O_{C^2}(Z_c^{-1})\), so Taylor's formula gives
+\(\|N_\sigma(x)\|_{C^2}\le Ce(t)/Z_c^2\). Since
+\(t(z_*/t)^{-2q_2}/E=Z_c^{1+2q_2}\), the resulting endpoint is
+\[
+ \frac{I_\sigma(q_1^2\widehat h)-b_\sigma}{E}
+ =Z_c^{2q_2}a_{\sigma,c}
+       [D_{\sigma,c}(\widehat h)+n_{\sigma,c}(\widehat h)],\qquad
+ \|n_{\sigma,c}\|_{C^2}\le Ce(t)/Z_c,
+\]
+with \(n_{\sigma,c}=n_{\sigma,c}'=0\) at \(\widehat h_{\rm ref}\).
+Normalize by the positive reference derivative
+\[
+ A_\sigma=Z_c^{2q_2}a_{\sigma,c}
+ \frac{D_{\sigma,c}'(\widehat h_{\rm ref})}
+      {S_\sigma'(\widehat h_{\rm ref})}.
+\]
+The scattering margin bounds the denominator below, and the preparation
+\eqref{eq:direct-contact-actual-preparation} follows with
+\[
+ \|R_\sigma\|_{C^2}
+ \le CZ_c^{-1/2}+C(Z_c)(q_1+|q_2|)
+           +C(q_1/\sqrt{Z_c}+Z_c^{-3/2}).
+\]
+Choose \(Z_c\) large and then \(q_1,|q_2|\) small. With this fixed
+\(Z_c\), \(q_2\log Z_c\to0\), so \(A_\sigma^{\pm1}\) are bounded.
+
+Since the normalized energies at \(t\) lie in the common cone,
+\eqref{eq:direct-tail-first-slope} gives
+\[
+ |\log a_{\sigma,c}|\le C_{\rm cone}\bigl(\sqrt{z_*}+Z_c^{-1/2}\bigr).
+\]
+The factor \(Z_c^{2q_2}\) cancels from \(A_-/A_+\), and
+the two reference derivative ratios tend to one in the
+successive choices above, proving \eqref{eq:direct-contact-slope-quotient}.
+
+We now combine this preparation with the outer derivative signs on
+the same admissible height interval. Let
+\(\widehat{\mathcal H}_p=q_1^{-2}\cH_p\) be its rescaling in the
+coordinate \(\widehat h\). If \(\widehat{\mathcal H}_p\cap[\widehat h_{\rm a},\widehat h_{\rm b}]\) is empty, connectedness puts
+\(\widehat{\mathcal H}_p\) in one outer interval, where the strict derivative sign already
+gives at most one zero. Otherwise, the endpoint graphs are defined on
+the whole fibre of $\mathcal K_{\rm c}^+$, and every endpoint on this fibre, including
+the reference endpoint, is within $O(E)$ of the corresponding
+admissible endpoint. By \cref{lem:exterior-multiplier-new}, all these
+endpoints lie in \(\widetilde W_\pm\) for small parameters.
+By \eqref{eq:direct-contact-slope-quotient} and the choice of \(z_*\),
+a reduction of parameters gives
+\[
+ 0<\lambda_0\le\lambda(p):=
+ \Pi_p'(b_-)A_-/A_+\le\bar\lambda<1.
+\]
+Put $G(\widehat h;\widehat q_0,B_0,\lambda)=\lambda S_-(\widehat h)-S_+(\widehat h)$.
+Taylor's formula for the exterior map and
+\eqref{eq:direct-contact-actual-preparation} give
+\begin{equation}
+\label{eq:direct-contact-completed-preparation}
+ \frac{\Delta(q_1^2\widehat h)}{EA_+}
+ =D(p)+G(\widehat h;\widehat q_0,B_0,\lambda(p))+R_\Delta(\widehat h,p),
+ \qquad \|R_\Delta\|_{C^2}\to0 .
+\end{equation}
+Here \(D=(\Pi_p(b_-)-b_+)/(EA_+)\).
+The exterior Taylor remainder is
+\(O_{C^2}(E)\), since the normalized endpoint functions have
+bounded \(C^2\) norms and the exterior map has bounded
+derivatives through order four.
+
+Write \(\widehat\Delta=\Delta(q_1^2\widehat h)/(EA_+)\).
+Apply \cref{lem:direct-derivative-ratio-count} on each fibre of
+\(\mathcal K_{\rm c}\) to \(-\widehat\Delta\), with
+\(\phi=S_+\), \(\psi=S_-\) and
+\(\lambda\in[\lambda_0,\bar\lambda]\). The uniform margins of
+\cref{lem:direct-contact-scattering-ratio} give
+\begin{equation}
+\label{eq:direct-contact-completed-ratio}
+ \left(\frac{\widehat\Delta'}{S_+'}\right)'<0 .
+\end{equation}
+In increasing \(T\), the large-height, compact and small-height
+intervals are ordered by the cuts
+\(\widehat h_{\rm b}\) and \(\widehat h_{\rm a}\). The outer signs
+exclude slope zeros there, including at the cuts. In the middle,
+\eqref{eq:direct-completed-log-ratio} writes
+\(\widehat\Delta'/S_+'\) as \(\e^{\mathcal L}-1\) times the positive
+factor \(q_1^2I_{+,h}/(EA_+S_+')\). Thus the displayed inequality gives
+\(\mathcal L_{\widehat h}<0\), or \(\mathcal L_T>0\), at every slope
+zero. All preparations represent the same displacement on the enlarged
+windows. The second case of \cref{cor:ordered-cover-zero-count} gives
+at most two zeros on the whole interval.
+
+This proves \cref{prop:direct-bounded-contact}, with
+\[
+ N_{\rm ct}(L)=2.
+\]

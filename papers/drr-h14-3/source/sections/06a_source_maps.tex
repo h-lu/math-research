@@ -1,0 +1,541 @@
+\subsection{Independent core, tail and upper maps}
+\label{rw:source:construction}
+
+For each fixed field choose the reflection convention of
+\eqref{rw:geometry:reflection} so that $\ell\ge0$, and retain this
+direction throughout the count. The analytic constructions use signed
+independent forcing parameters before this fixed-field restriction.
+For a central height $s$ put
+\begin{equation}\label{rw:source:scales}
+ h=s-1-\log s,\quad L=-\log s,\quad
+ \vartheta=h^{-1/2},\quad\widehat\ell=\ell/s,\qquad
+ \beta=(Bh,mh,a\sqrt h,c\sqrt h).
+\end{equation}
+For the construction and coefficient division, first regard
+$\vartheta,s,\beta,\widehat\ell$ as independent, with
+\begin{equation}\label{rw:source:independent-box}
+ 0<\vartheta<\vartheta_0,\qquad
+ 0<s\le e^{-1/\vartheta^2},\qquad
+ |\widehat\ell|\le3,\qquad |\beta_i|\le b_0.
+\end{equation}
+Here $b_0>0$ is fixed sufficiently small and $\vartheta_0>0$
+is fixed afterwards. A selected jet is a word in
+$E_\vartheta=\vartheta\partial_\vartheta$, $E_s=s\partial_s$,
+$\partial_{\beta_i}$, $\partial_{\widehat\ell}$, and ordinary independent
+section derivatives. Every estimate refers to a prescribed finite
+number of such derivatives. The physical relations in
+\eqref{rw:source:scales} are imposed after
+these independent estimates. Since $\widehat\ell=\ell/s$, their
+weighted forcing jets give no bound for unweighted $\partial_\ell$.
+
+On the outgoing core use $X=\vartheta x$, $0\le X\le1$, and set
+\begin{equation}\label{rw:source:core-data}
+\begin{split}
+ F(X)&=1+\beta_BX^2+\beta_aX+\vartheta^2\beta_m,\\
+ D(X,z)&=F(X)-(1+2\vartheta^2\beta_m)z+\vartheta^2\beta_mz^2,\\
+ J(X)&=\exp\int_0^X\frac{t/\vartheta^2-\beta_c}{F(t)}\,dt,
+ \qquad I(X)=\int_0^X\frac{dt}{\vartheta F(t)J(t)}.
+\end{split}
+\end{equation}
+The exact original graph equation is
+\begin{equation}\label{rw:source:core-equation}
+ z_X=\frac{s\widehat\ell+(X/\vartheta-\vartheta\beta_c-2s\widehat\ell)z
+                      +(\vartheta\beta_c+s\widehat\ell)z^2}
+                 {\vartheta D(X,z)},\qquad z(0)=s.
+\end{equation}
+The incoming core is the same construction after replacing
+$(\beta_a,\beta_c,\widehat\ell)$ by $(-\beta_a,-\beta_c,-\widehat\ell)$.
+Denote their endpoint quantities by subscripts $+$ and $-$.
+
+\begin{proposition}[Source transition maps]\label{rw:source-maps}
+After the preceding fixed choices the following statements hold on
+common neighborhoods of their real domains.
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item The signed normalized solution $U=z/(sJ)$ extends through
+$z=0$ and satisfies
+\begin{equation}\label{rw:source:core-expansion}
+ \begin{gathered}
+ U(X)=1+\widehat\ell I(X)+R(X),\qquad
+ |R|_N\le C_N e^{-1/(3\vartheta^2)},\\
+ |U|<10,
+ \quad |z|<1/8,\quad D>27/32.
+ \end{gathered}
+\end{equation}
+The selected jets of $I$ are bounded, $4/9<I(1)<2$, and
+$U_{\widehat\ell}(1)>1/4$. There is a unique simple threshold
+$\widehat\ell_c\in(-3,0)$; the outgoing core stays positive through
+$X=1$ exactly when $\widehat\ell>\widehat\ell_c$. At equality its first zero
+is at $X=1$.
+\item For an independent entry $v\in[7/16,9/16]$, the substitution
+$z=\exp[-(1-r)v/\vartheta^2]$ gives the tail equation
+\begin{equation}\label{rw:source:tail-equation}
+ X_r=v\frac{1-z+\beta_BX^2+\beta_aX+
+                    \vartheta^2\beta_m(1-z)^2}
+ {X+\vartheta^2\beta_c(z-1)+\vartheta s\widehat\ell(1-z)^2/z},
+ \qquad X(0)=1.
+\end{equation}
+It reaches $r=1$, hence $z=1$, in finite positive original time,
+with $3/4<X<2$ and denominator $>3/4$.
+Its action map $T(v)=X(1)^2/2$ has bounded selected jets,
+$63/64<T_v<65/64$, and is uniformly close to $1/2+v$.
+Its image contains the fixed interval $[31/32,33/32]$.
+The inverse on that interval has the same jet bounds. Moreover
+\begin{equation}\label{rw:source:tail-forcing}
+ T_{\widehat\ell}-T_0=\widehat\ell H_T,\qquad
+ |H_T|_N\le C_Ne^{-1/(3\vartheta^2)},
+\end{equation}
+and the corresponding inverse difference has the same divided bound.
+\item With $Y=\vartheta^2y$, $\lambda=\vartheta^2$ and
+$\alpha=s\widehat\ell/\vartheta$, the upper field is
+\begin{equation}\label{rw:source:upper-field}
+ X_\xi=Y(\beta_mY-1)+\lambda(\beta_BX^2+\beta_aX),\qquad
+ Y_\xi=(Y+\lambda)(X+\beta_cY)+\alpha Y^2.
+\end{equation}
+For sufficiently small $|\alpha|+\sum|\beta_i|$, each action
+$e=X^2/2\in[3/4,5/4]$ at $Y=0$, $X>0$, has a first upper
+passage to $Y=0$, $X<0$. It remains in $|X|<2$, $0\le Y<3/2$.
+Its action map $\mathcal U_\alpha(e)$ satisfies
+$|\mathcal U_\alpha(e)-e|<1/128$, with bounded finite jets in
+$e,\alpha,\beta,E_\lambda$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Appendix~\ref{rw:app:source-estimates} proves the independent-entry
+jets and real passage conditions using the reciprocal Gaussian
+$J^{-1}$ in the core, the exponentially small tail forcing $s/z$,
+and the integrable upper carrier $\lambda/(Y+\lambda)$.
+All three estimates precede substitution of logarithmic core values
+into the tail entries.
+\end{proof}
+
+Now impose the physical relation \eqref{rw:source:scales}. Fix
+$\delta_0=1/8192$ and retain the positive-core set
+\begin{equation}\label{rw:source:positive-core}
+ U_+\ge s^{2\delta_0},\qquad U_-\ge s^{2\delta_0}.
+\end{equation}
+The actual tail entries are
+\[
+ v_\pm=-h^{-1}\log(sJ_\pm(1)U_\pm).
+\]
+Since $h^{-1}\log J_\pm(1)=1/2+O(b_0)$,
+$L/h=1+O(1/h)$, and $|U_\pm|<10$, they lie in a fixed small
+neighborhood of $1/2$, strictly inside $[7/16,9/16]$.
+Choose the coefficient box smaller once more and then $h$ large so
+that their actions $e_\pm=T_{\pm,\widehat\ell}(v_\pm)$ satisfy
+$|e_\pm-1|<1/1024$. Both $e_-$ and
+$\mathcal U_\alpha(e_+)$ then belong to the common tail-inverse
+interval. On this domain the exact shooting function is
+\begin{equation}\label{rw:source:shooting}
+ F_{\widehat\ell}=\mathcal U_\alpha(e_+)-e_-.
+\end{equation}
+Its zero joins the two independent lower arcs by the actual upper arc.
+Action is injective on the negative $Y=0$ section, so this is exactly
+the closing condition for these five pieces. Near a closing orbit the
+backward incoming section map is an analytic diffeomorphism; its
+nonzero derivative shows that \eqref{rw:source:shooting} has the
+same zero multiplicity as the Poincare displacement. This argument
+also applies at retained finite endpoints of
+\eqref{rw:source:positive-core}, because all tube inequalities there
+are strict. Existence of a positive forward central return throughout
+this set is proved below in the fixed direction $\ell\ge0$.
+
+\subsection{Center division and the physical derivative}
+
+At $\widehat\ell=0$ write $L_\pm=T_{\pm,0}$,
+$v_{\pm,0}=v_\pm|_{\widehat\ell=0}$, and define, on a fixed entry
+interval about $1/2$,
+\begin{equation}\label{rw:source:unforced-map}
+ \mathcal M=L_-^{-1}\circ\mathcal U_0\circ L_+,
+ \qquad G_0=\mathcal M(v_{+,0})-v_{-,0}.
+\end{equation}
+The common tail-inverse domain makes this composition well defined.
+We now divide $G_0$ by the two center generators. The divided
+coefficients will give a positive amplitude and an increasing energy
+coordinate for the forced closing equation.
+
+\begin{lemma}[Divided unforced source function]
+\label{rw:source:center-division}
+On a fixed smaller coefficient box,
+\begin{equation}\label{rw:source:unforced-division}
+ G_0=\tau_0\sqrt h\,A+\sigma_0h^{3/2}C,
+ \qquad \tau_0=a+c,\quad\sigma_0=c(B+m).
+\end{equation}
+After $s=s(\vartheta)$ is imposed, $A,C$ have bounded selected
+Euler and scaled-coefficient jets of every prescribed finite order.
+Their limiting functions as $\vartheta\to0$ are analytic in $\beta$,
+and their errors in these jets are
+$O(r_s)$, where $r_s=\vartheta^2(1+|\log\vartheta|)$.
+At $\beta=0$ their limits are
+\begin{equation}\label{rw:source:moments}
+ A_*={4\sqrt2}/{3},\qquad C_*={8\sqrt2}/{15},\qquad
+ \mathcal M_{\rm pr}(v,0)=v.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use the scaled coefficient coordinates
+$T=\beta_a+\beta_c$, $u=\beta_a$, $t=\beta_B+\beta_m$ and
+$\beta_B$. The cube
+$(T,u,t)\mapsto(q_1T,q_2u,q_3t)$, $0\le q_i\le1$, remains
+inside the larger independent coefficient box after a fixed initial
+shrinking. Indeed
+$\beta_m'=q_3\beta_m-(1-q_3)\beta_B$ and
+$\beta_c'=q_1\beta_c+(q_1-q_2)\beta_a$.
+At $\widehat\ell=0$ both normalized cores are $1+R>1/2$, so the entire
+cube has all the strict real passage margins.
+
+The unforced shooting function vanishes on $T=u=0$ by reversibility:
+reflection interchanges the lower arcs and the two halves of the
+upper arc. It also vanishes on $T=t=0$. This is the second real
+center of Proposition~\ref{rw:real-centers}, applied to the scaled
+coefficients $(\beta_B,\beta_m,\beta_a,\beta_c)$ and scale
+$\lambda=\vartheta^2$. Its polynomial $A_C$ is positive on
+$[-2,2]$ in the small source box; hence the actual outgoing $Y=0$
+point lies in its period annulus. Uniqueness identifies its periodic
+arc with the constructed passages. Thus both center identities hold
+on the whole contraction cube used for division.
+
+If $\Psi(T,u,t,\beta_B)=F_0$, successive fundamental-theorem
+integrals give
+\begin{equation}\label{rw:source:Hadamard-rule}
+\begin{gathered}
+ \Psi=TM+utN,\quad
+ M=\int_0^1\Psi_T(qT,u,t,\beta_B)\,dq,\\
+ N=\int_0^1\!\int_0^1\Psi_{ut}(0,qu,rt,\beta_B)\,dq\,dr.
+\end{gathered}
+\end{equation}
+Since $ut=Tt-\beta_ct$, the coefficients of
+$T$ and $\beta_ct$ are $A_0=M+tN$ and $C_0=-N$.
+The mean-value formula for $L_-^{-1}$ gives
+$G_0=R_0F_0$, with
+\[
+ R_0=\int_0^1(L_-^{-1})'(e_{-,0}+qF_0)\,dq>0.
+\]
+Thus $A=R_0A_0$ and $C=R_0C_0$ give
+\eqref{rw:source:unforced-division}. These specified integrals also
+fix the divided coefficients on a compact overlap used later.
+
+To justify physical substitution, note that
+$E_\vartheta s=2hs/(1-s)$. Each fixed number of derivatives adds
+only polynomial factors of $h$ to an exponentially small core term.
+The exact unforced entries are
+\[
+ v_{\pm,0}=1+\vartheta^2(1-s)
+ -\int_0^1\frac{t}{F_\pm(t)}\,dt
+ +\vartheta^2\beta_{c,\pm}\int_0^1\frac{dt}{F_\pm(t)}
+ -\vartheta^2\log(1+R_\pm).
+\]
+They consequently have the stated bounded jets. Two extra coefficient
+orders before the Hadamard integrations supply any desired final order.
+
+The limiting lower endpoints $\xi_+>0$, $\xi_-<0$ solve
+\[
+ S_\beta(\xi_\pm)=1,\qquad
+ S_\beta(X)=\int_0^X\frac{t}{1+\beta_at+\beta_Bt^2}\,dt.
+\]
+The limiting upper system is $X'=-1+\beta_mY$,
+$Y'=X+\beta_cY$. Appendix~\ref{rw:app:source-principal}
+compares the exact and limiting integral equations in the reserved
+jets, giving error $O(r_s)$ on the whole coefficient cube. The same
+Hadamard formulas and common tail inverse give that error for $A,C$.
+
+For the constants take $\beta_c=0$, when the upper first integral is
+$X^2/2+Y-\beta_mY^2/2$. At input action $e$, put
+$q_e=e-X^2/2$ and $a_e=\sqrt{2e}$. Along this arc
+$Y=q_e+\tfrac12\beta_mq_e^2+O(\beta_m^2)$, and variation in
+$\beta_c$ gives $\partial_{\beta_c}\mathcal U_{\rm pr}
+=\int_{-a_e}^{a_e}Y\,dX$. Hence
+\[
+ \int_{-a_e}^{a_e}q_e\,dX=\frac{4\sqrt2}{3}e^{3/2},\qquad
+ \frac12\int_{-a_e}^{a_e}q_e^2\,dX
+                         =\frac{8\sqrt2}{15}e^{5/2}.
+\]
+The lower endpoints are independent of $\beta_m,\beta_c$ in this
+limit. The same Hadamard rule, in particular $C_0=-N$, gives the
+positive constants in \eqref{rw:source:moments}. At $\beta=0$ the
+tail map is $v\mapsto1/2+v$ and $R_0=1$ in the limit.
+\end{proof}
+
+On the unforced coefficients, after physical substitution, define
+\begin{equation}\label{rw:source:physical-E}
+ \mathfrak E=E_\vartheta-2\beta_B\partial_{\beta_B}
+ -2\beta_m\partial_{\beta_m}-\beta_a\partial_{\beta_a}
+ -\beta_c\partial_{\beta_c}.
+\end{equation}
+Holding the original field fixed gives $d/dh=-\mathfrak E/(2h)$.
+Analyticity of the principal coefficients and their jet comparison
+imply $C/A=2/5+O(|\beta|+r_s)$, with its first two
+$\mathfrak E$ derivatives $O(|\beta|+r_s)$. Thus, after fixed
+restrictions,
+\begin{equation}\label{rw:source:q-rates}
+ A>A_*/2,\quad C>C_*/2,\qquad
+ q=hC/A,\qquad q_h>1/5,\qquad
+ q_{hh}=O((|\beta|+r_s)/h).
+\end{equation}
+For instance, if $R=C/A$ then
+$q_h=R-\mathfrak ER/2$ and
+$q_{hh}=(\mathfrak E^2R-2\mathfrak ER)/(4h)$.
+
+\subsection{The exact logarithmic forcing}
+
+Let $U_{\pm,0}=U_\pm|_{\widehat\ell=0}$. Hadamard division of the
+signed core equations gives the exact secants
+\begin{equation}\label{rw:source:secants}
+ \frac{U_+}{U_{+,0}}=1+\widehat\ell\widetilde I_+,
+ \qquad
+ \frac{U_-}{U_{-,0}}=1-\widehat\ell\widetilde I_-,
+ \qquad 1/3<\widetilde I_\pm<3.
+\end{equation}
+Here $\widetilde I_\pm=I_\pm/U_{\pm,0}
++O(e^{-h/3})$ in the selected independent jets. The actual
+fixed-field derivative, before suppressing any independent variable,
+is
+\begin{equation}\label{rw:source:physical-D}
+ D_L:=\frac d{dL}
+ =\widehat\ell\partial_{\widehat\ell}-E_s
+   -\frac{1-s}{2h}\left(E_\vartheta
+       -2\beta_B\partial_{\beta_B}-2\beta_m\partial_{\beta_m}
+       -\beta_a\partial_{\beta_a}-\beta_c\partial_{\beta_c}\right).
+\end{equation}
+In particular $D_L\widehat\ell=\widehat\ell$, $D_Lh=1-s$, $D_L^2h=s$,
+and
+$D_L\widetilde I_\pm=O(h^{-1})$,
+$D_L^2\widetilde I_\pm=O(h^{-2})$. Derivatives of
+$U_{\pm,0}-1$ remain exponentially small.
+
+The normalized cores can approach zero, so the tail entries require
+the full logarithms
+\[
+ \zeta_+=\log(1+\widehat\ell\widetilde I_+),\qquad
+ \zeta_-=-\log(1-\widehat\ell\widetilde I_-).
+\]
+They are defined on \eqref{rw:source:positive-core}; for $h$ large,
+$|\zeta_\pm|/h<1/1024$. Write
+$a_\pm=\widehat\ell\widetilde I_\pm$,
+$u_\pm=D_L\widetilde I_\pm/\widetilde I_\pm$ and
+$w_\pm=D_L^2\widetilde I_\pm/\widetilde I_\pm$.
+Exact differentiation gives
+\begin{equation}\label{rw:source:log-jets}
+\begin{aligned}
+ D_L\zeta_+&=\frac{a_+(1+u_+)}{1+a_+},
+ &D_L^2\zeta_+&=
+ \frac{a_+[1+2u_++w_++a_+(w_+-u_+^2)]}{(1+a_+)^2},\\
+ D_L\zeta_-&=\frac{a_-(1+u_-)}{1-a_-},
+ &D_L^2\zeta_-&=
+ \frac{a_-[1+2u_-+w_-+a_-(u_-^2-w_-)]}{(1-a_-)^2}.
+\end{aligned}
+\end{equation}
+For $0<\widehat\ell\le3$, their values and first two derivatives are
+positive. The smallness of $u_\pm,w_\pm$, $|a_\pm|\le9$ and
+elementary logarithm inequalities give fixed constants such that
+\begin{equation}\label{rw:source:log-comparison}
+ |\zeta_\pm|\le C|D_L\zeta_\pm|\le C^2|D_L^2\zeta_\pm|,
+ \quad |D_L\zeta_\pm|^2\le C|D_L^2\zeta_\pm|,
+ \quad D_L^j\zeta_\pm\ge c\widehat\ell\quad(j=0,1,2).
+\end{equation}
+The denominators in \eqref{rw:source:log-jets} are retained in
+these comparisons, even if a core value is small.
+
+Apply the unforced incoming tail inverse to the two actions in
+\eqref{rw:source:shooting}, keeping its two entries independent.
+The divided tail estimate and the bounded $\alpha$ derivative of the
+upper map yield an exact identity
+\begin{equation}\label{rw:source:independent-forcing}
+\begin{split}
+ &L_-^{-1}\mathcal U_\alpha T_{+,\widehat\ell}(v_+)
+                   -L_-^{-1}T_{-,\widehat\ell}(v_-)\\
+ &\hspace{12mm}=\mathcal M(v_+)-v_-
+       +\widehat\ell\mathcal E(v_+,v_-,\vartheta,s,\beta,\widehat\ell),
+ \qquad |\mathcal E|_N\le C_Ne^{-1/(3\vartheta^2)}.
+\end{split}
+\end{equation}
+The quotient is removable at $\widehat\ell=0$ by analytic dependence.
+The actual entries satisfy
+$v_+=v_{+,0}-\zeta_+/h$ and
+$v_-=v_{-,0}+\zeta_-/h$. After their substitution,
+\begin{equation}\label{rw:source:forced-error}
+ |D_L^j(h\widehat\ell\mathcal E)|\le C\widehat\ell e^{-h/4},
+ \qquad j=0,1,2.
+\end{equation}
+At most two inverse core factors occur: their cost is bounded by
+$s^{-4\delta_0}$, and $1/3-4\delta_0>1/4$ absorbs them and all
+fixed polynomial factors of $h$.
+
+Multiply the left side of \eqref{rw:source:independent-forcing}
+by $h$ and call the resulting exact function $\mathcal D$. Then
+\begin{equation}\label{rw:source:matched}
+\begin{split}
+ \mathcal D&=\tau_0 f+\sigma_0qf-\Phi,\qquad
+ f=h^{3/2}A>0,\quad q=hC/A,\\
+ \Phi&=\zeta_+S+\zeta_--h\widehat\ell\mathcal E,\qquad
+ S=\int_0^1\mathcal M_v(v_{+,0}-t\zeta_+/h)\,dt.
+\end{split}
+\end{equation}
+This exact section comparison retains the full dependence on
+$\widehat\ell$. Its zeros and their multiplicities agree with those
+of \eqref{rw:source:shooting}.
+On every fixed compact energy interval in its domain, $\Phi/\ell$
+has a removable analytic extension at $\ell=0$ with its ordinary
+energy derivatives: first divide the independent maps by $\widehat\ell$,
+then use $\widehat\ell=\ell/s$ and the positive lower bound of $s$ on
+that fixed interval. The same statement holds for any selected
+coefficient derivatives after reserving their orders.
+
+\begin{proposition}[Source curvature on one interval]
+\label{rw:source:curvature}
+There are fixed $\eta>0$ and $H_*<\infty$ such that for every
+fixed field in the selected direction $\ell\ge0$, the set
+\[
+ \mathcal I_s=\{h\ge H_*: |\beta_i|\le\eta,
+                  \ 0\le\widehat\ell\le3,
+                  \ U_\pm\ge s^{2\delta_0}\}
+\]
+is an interval, possibly empty. On it $q_h>1/5$.
+If $\ell>0$, the function $g=\Phi/f$ satisfies
+$g_{qq}>0$. If $\ell=0$, then $\Phi=0$ identically and the
+closing equation divided by $f$ is $\tau_0+\sigma_0q=0$.
+All statements extend across retained finite endpoints as germs of
+analytic section maps.
+\end{proposition}
+\begin{proof}
+At a fixed independent entry, the limiting-map comparison gives
+\[
+ |\mathcal M_v-1|+|\mathcal M_{vv}|+|\mathcal M_{vvv}|
+ +h|D_{L,\mathrm{ind}}\mathcal M_v|
+ +h|D_{L,\mathrm{ind}}\mathcal M_{vv}|
+ +h^2|D_{L,\mathrm{ind}}^2\mathcal M_v|
+ \le C(|\beta|+r_s).
+\]
+The first two physical derivatives of $v_{+,0}$ have the
+corresponding $h^{-1}$ and $h^{-2}$ bounds.
+Appendix~\ref{rw:app:source-moving-entry} differentiates the integral
+for $S$, keeping also its $\mathcal M_{vvv}(D_Lv)^2$ term.
+Using \eqref{rw:source:log-comparison} gives
+\[
+ |D_L^j\{\zeta_+(S-1)\}|\le C\varepsilon_1
+                         |D_L^j\zeta_+|,\qquad j=0,1,2,
+\]
+where $\varepsilon_1$ is made arbitrarily small by first shrinking
+$\eta$ and then increasing $H_*$. Combining this with
+\eqref{rw:source:forced-error} proves
+\begin{equation}\label{rw:source:Phi-rates}
+ \Phi,D_L\Phi,D_L^2\Phi>0,\qquad
+ \Phi\le C D_L\Phi\le C^2D_L^2\Phi,
+ \qquad D_L\Phi\ge c\widehat\ell.
+\end{equation}
+In addition \eqref{rw:source:q-rates} gives
+$D_Lq\ge c_q>0$, $D_L^2q=O(h^{-1})$,
+$D_Lf/f=O(h^{-1})$ and $D_L^2f/f=O(h^{-2})$.
+In the exact quotient
+\[
+ g_{qq}=
+ \frac{(D_L^2g)(D_Lq)-(D_Lg)(D_L^2q)}{(D_Lq)^3},
+\]
+the principal numerator is $(D_Lq)D_L^2\Phi/f>0$.
+Every other term is bounded by
+$C(|D_L\Phi|/h+|\Phi|/h^2)/f$, less than half of that principal
+term when $H_*$ is large. This proves strict curvature.
+
+Before the core restrictions, $h,|\beta_i|,\widehat\ell=\ell e^L$
+are nondecreasing functions of $L$, so the permitted energies form
+an interval. For $\widehat\ell\ge0$ the outgoing core inequality is
+automatic. At any zero of $U_--s^{2\delta_0}$, the secant identity
+gives exactly
+\[
+ D_L(U_--s^{2\delta_0})
+ =-U_{-,0}(1+u_-)
+ +s^{2\delta_0}\left(1+u_-+2\delta_0
+                          +D_LU_{-,0}/U_{-,0}\right)<-1/2.
+\]
+Thus that boundary can only be crossed downwards, and its retained
+side is one interval. At $\ell=0$ both restrictions are automatic.
+The strict tube margins prove the endpoint assertion.
+\end{proof}
+
+\subsection{Positive return and localization in the chosen direction}
+
+To use the curvature bound for counted cycles, we need a return on
+the full interval and a core margin for every such cycle. We first
+complete the forward stable core, then use the closing condition to
+place each cycle inside the retained positive-core domain.
+
+\begin{proposition}[The actual source return]
+\label{rw:source:localization}
+Choose the fixed constants and coefficient neighborhood smaller if
+necessary. In the direction $\ell\ge0$, the shooting construction
+has a positive central first return throughout $\mathcal I_s$, before
+its closing equation is imposed. Every counted cycle with
+$h\ge H_*$ and $\mathscr M(h)\le\eta$ satisfies the stronger bounds
+\begin{equation}\label{rw:source:localization-margin}
+ U_+,U_-\ge e^{-\delta_0h}>s^{2\delta_0},
+\end{equation}
+and is one of its shooting zeros. The positive-return assertion is
+for this chosen direction; for an originally negative $\ell$ it
+represents the reflected forward, hence original backward, return.
+\end{proposition}
+\begin{proof}
+For $0\le\widehat\ell\le3$, $U_+\ge U_{+,0}>1/2$. The outgoing
+entry differs from its unforced value by
+$-h^{-1}\log(1+\widehat\ell\widetilde I_+)$, of size at most
+$3\widehat\ell/h$. Therefore its positive core, tail and upper arc exist
+without any incoming-core assumption. Their negative-axis action is
+within $9/1024$ of one. The actual incoming tail inverse, whose domain
+was constructed with independent input, gives a unique
+$v_{\mathrm{out}}\in[7/16,9/16]$ and a forward endpoint
+$x=-\vartheta^{-1}$, $z=e^{-hv_{\mathrm{out}}}>0$.
+
+On the remaining stable core, $-\vartheta^{-1}\le x\le0$,
+$0\le z\le1/8$, the original graph denominator exceeds $27/32$.
+The field itself gives
+\[
+ z_x\le2s\widehat\ell+2\vartheta b_0z.
+\]
+At $z=0$ the normal forcing is nonnegative. For $\ell>0$ its sign
+prevents a positive trajectory from crossing downwards; for $\ell=0$
+uniqueness preserves positivity. Gronwall on this $x$-interval
+gives
+\[
+ 0<z(x)\le C e^{-7h/16}+C\sqrt h\,e^{-h}<1/8.
+\]
+There is no exit through its upper boundary; the positive horizontal
+velocity carries the graph to $x=0$ in finite time. Its height is
+below the fixed central-section cutoff after increasing $H_*$.
+This is the first return: both lower cores have increasing $x$, the
+tails keep their respective signs of $x$, and the upper intersection
+with $x=0$ has $y>0$. The core heights tend uniformly to zero,
+the tails have $|x|\ge3/(4\vartheta)$ and $-1<y\le0$, and the
+upper action has a positive lower bound. Their compactifications
+therefore lie in the prescribed collar for sufficiently small scale.
+
+Now consider a counted cycle. Lemma~\ref{rw:geometry:cycle-height}
+gives $|\ell|<3s$, so all its independent source parameters belong
+to the boxes above. The outgoing construction follows its actual
+orbit by uniqueness. At a cycle the returned central height is $s$;
+backward uniqueness on the incoming core first proves $U_->0$,
+without a quantitative core margin. It also gives
+\[
+ v_{\mathrm{out}}-v_{-,0}
+                  =-h^{-1}\log(U_-/U_{-,0}).
+\]
+Center division, the bounded upper and tail derivatives, and the
+divided forcing estimates imply
+\[
+ |v_{\mathrm{out}}-v_{-,0}|
+ \le C\bigl(|\beta_a+\beta_c|
+          +|\beta_c(\beta_B+\beta_m)|+\widehat\ell/h\bigr).
+\]
+The independently constructed tail inverse makes this estimate
+available before a quantitative incoming-core margin. Consequently
+\[
+ -h^{-1}\log U_-\le C/h+C(2\eta+2\eta^2+3/h).
+\]
+Choose $\eta$ first to make its contribution less than
+$\delta_0/4$, and then $H_*$ large enough for the remaining terms.
+The resulting bound is strictly smaller than $\delta_0$.
+The outgoing bound follows from $U_+\ge U_{+,0}>1/2$.
+This proves \eqref{rw:source:localization-margin} and the claimed
+identification with shooting zeros. All constants were selected in
+reflection-symmetric boxes; reflection exchanges the two independent
+cores and preserves this localization for the original negative sign.
+Only the local inverse-return identity near a periodic orbit is needed
+later to transfer its multiplicity.
+\end{proof}

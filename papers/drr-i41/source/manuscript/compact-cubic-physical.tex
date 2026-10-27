@@ -1,0 +1,639 @@
+\subsection{The complete physical return in the compact cubic block}
+
+Fix the passive coefficient set and the margins in the raw sections.
+Let \(z_*>0\) be the
+unscaled height cap supplied by Corollary~\ref{rew:cor-high-derivative-signed};
+its high-height estimate is used below after the cubic low-height analysis.
+
+\begin{proposition}[Compact cubic coefficients]
+\label{deg:prop-compact-cubic}
+Fix \(U_0,G_0<\infty\), the original passive compact set and buffered
+sections. For \(0\le U\le U_0\), \(|G|\le G_0\),
+\(p=tU,\gamma=t^2G,s=t^3\), put \(\tau=\tau_{\rm cub}=t^2\).
+Choose a positive unscaled raw cap \(0<h_c<z_*\) before the final
+coefficient and multiplier bounds. On the entire original interval
+\[
+ I_\theta=\{x:a_\theta+x\in J_\theta^{\rm out},\quad
+                 0<H(x)=z_\theta(\gamma;a_\theta+x)<h_c\},
+ \qquad F(x)=x-m\Pi_{\theta,m}(x),
+\]
+the connected lower curvature receiver satisfies
+\(\Pi''=0\Rightarrow\Pi'''<0\). Its bounded and growing descriptions
+have actual resection overlap. The remaining admitted ghost raw tail has
+\(0<\Pi'\le C(d_0)\tau^3\); its upper core and signed high complement
+have bounded complete derivative and strictly overlap. After the common
+multiplier shrink the same \(F'\) has at most two zeros, and \(F\)
+has at most three isolated zeros, counted with multiplicity, on the whole
+coefficient fibre. All original window, inverse-image, speed, stop and
+height clips and intervening nonroot inputs are retained. Real-root and
+fold endpoints are one-sided; the stopped fold continuation is excluded.
+\end{proposition}
+
+\begin{proof}
+We construct normal sections on which the action controls curvature,
+then continue their estimates to the original raw sections. Near the
+roots, the two section variables must be estimated independently before
+they are matched. The ghost tail and upper continuation require only a
+bound on the complete first derivative. These estimates will cover one
+connected physical interval to which the counting lemma applies.
+
+In raw coordinates \(v-\gamma=\tau\xi,z=\tau^2\eta\), the exact field is
+\begin{equation}\label{deg:compact-cubic-field}
+ \dot\xi=-D,\quad\dot\eta=-\eta H,\qquad
+ D=\tau P+Q\eta,\quad H=\xi B+C\tau^2(G+\xi)\eta,
+\end{equation}
+\begin{equation}\label{deg:compact-cubic-polynomials}
+ P=1-U\xi+3G\xi^2+\xi^3,\quad B=1+\tau(2G+\xi),\quad
+ Q=1-A\tau(G+\xi)+C\tau^2(G+\xi)^2.
+\end{equation}
+The unique simple negative root is \(-c\), by Descartes' rule, and
+\begin{equation}\label{deg:compact-factorization}
+ P(\xi)=(\xi+c)[(\xi-\alpha)^2-\Delta],\quad
+ c-2\alpha=3G,\quad c(\alpha^2-\Delta)=1,\quad
+ 2\alpha c=U+c^{-1}.
+\end{equation}
+The four positive quantities \(c,c^{-1},\alpha,\alpha^{-1}\) are units.
+A triple root would force \(P=(\xi+1)^3,U=-3\), outside this block.
+
+Choose \(\ell_0\) so the original positive input window exceeds the
+first-lip height at its raw port with a fixed margin. The actual lips
+\(\eta=\tau\ell_0P\), with abscissae \(u,-r\), obey
+\begin{equation}\label{deg:compact-lip-speed}
+ \frac d{dt}\log\frac\eta P=-\xi B+\tau P'(1+Q\ell_0)
+                              -C\tau^3(G+\xi)\ell_0P.
+\end{equation}
+Beyond a fixed positive threshold the signs are negative on the positive
+lip and positive on the negative lip; their first hits are unique. At
+\(a=\tau u\) the raw height is
+\begin{equation}\label{deg:compact-lip-height}
+ z=\ell_0[a^3+3G\tau a^2-U\tau^2a+\tau^3].
+\end{equation}
+Choose \(0<d_{\rm in}<d_0<\delta\), then \(\ell_0\delta\ll1\),
+and finally \(\tau\ll d_{\rm in}\). Comparison with the organizing
+arc and Lemma~\ref{lem:loc-capture} place captured low-height cycles at
+\begin{equation}\label{deg:compact-raw-range}
+                         0<a=\tau u<d_{\rm in}.
+\end{equation}
+The analytic carrier still includes all its original through inputs.
+To continue them to the raw sections, set
+\(v-\gamma=\sigma q\), \(\sigma=\pm1\), and
+\(\mathcal W=z/q^2\). The graph equation becomes
+\begin{equation}\label{deg:compact-raw-corridor}
+ q\mathcal W_q=\mathcal W
+ \frac{B_\sigma(q)+\sigma Cv_\sigma(q)q\mathcal W}
+      {\ell(v_\sigma(q))\mathcal W+M(\sigma q)/q^2}-2\mathcal W.
+\end{equation}
+Here
+\[
+ v_\sigma(q)=\gamma+\sigma q,\qquad
+ B_\sigma(q)=1+2\gamma+\sigma q,\qquad
+ M(x)=x^3+3\gamma x^2-spx+s^2,
+\]
+and \(\ell\) is defined in \eqref{deg:central-coordinates}.
+At fixed relative distance from a lip this is a small perturbation of
+\(q\mathcal W_q=1-2\mathcal W\); constants around \(1/2\) give a
+strict invariant strip to both original raw sections. The negative
+continuation crosses its axis root at positive height. The original
+windows and scalar order supply one through component.
+
+\paragraph{Normal sections and independent root distances.}
+In the bounded normal-section calculation below, \(p\) denotes the
+positive axis footpoint; the fixed coefficient \(p=tU\) is represented
+by \(U\) in \eqref{deg:compact-cubic-polynomials}.
+Choose \(v>0\) with \(P\ge3/4\) on \([-4v,4v]\).
+The limiting action exit for \(p=v\) lies in \([v/2,2v]\), because
+both densities are \(s(1+O(v))\). Opposite strict action brackets and
+Corollary~\ref{neg:cor-rootfree} give an actual comparison orbit,
+independently of the return equation, with both footpoints in fixed
+subintervals of \((0,3v)\).
+Fix normal boxes and independent weak cuts \(p_w,r_w\) below these
+footpoints. Scalar order selects the lower receiver, whose footpoints
+have fixed positive lower bounds. The strong projections and normal
+linearization give
+\[
+ \begin{gathered}
+ \dot p=-\tau P(p),\quad\dot\zeta=-pB(p)\zeta,\quad\zeta_{\rm section}=u_+(p),\\
+ J_+(p)=\int_{p_w}^p\frac{\xi B}{P}\,d\xi,\qquad
+ J_-(r)=\int_{r_w}^r\frac{sB(-s)}{P(-s)}\,ds.
+ \end{gathered}
+\]
+The projections have integrable kernels
+\(C(1+T)^N e^{-(c_*-C\tau)T}\). To retain the higher rows, write
+the attracting field as
+\(V=(h-qy,-ny-ky^2)\), where \(h=O_{C^6}(\tau)\),
+\(n\ge c_*>0\), and \(q,n,k\) have bounded finite derivatives.
+Apply the variational induction in the proof of
+Lemma~\ref{lem:normal-time-projection} to this attracting field.
+The normal forcing always contains a height or a lower normal
+variation, while pure tangential forcing has an \(O(\tau)\)
+coefficient. Integrating the normal row first gives the same integrable
+Volterra kernel. At phase order five it yields tangential rows
+\(C(1+T)^Ne^{C\tau T}\) and normal rows
+\(C(1+T)^Ne^{-(c_*-C\tau)T}\), using axis-flow order six.
+A selected coefficient derivative requires mixed order seven of the
+explicit coefficients and adds only polynomial time factors to this
+majorant. Taylor division thus gives the required \(C^4\) units
+\(u_\pm,u_\pm^{-1}\). The normal gap persists at the fold; these
+coordinates are defined on the actual normal sections.
+
+The action exponential must absorb derivative losses as either endpoint
+approaches a root. We estimate those losses in five overlapping charts.
+For \(\Delta=s_0^2\), \(a_0=\alpha-s_0\), \(X=a_0-p\), use
+\((X,s_0/X)\) and \((s_0,X/s_0)\); the singular action integral is
+\[
+ \frac1{2s_0}\log\frac{\ell(X+2s_0)}{X(\ell+2s_0)},
+                    \qquad s_0=0:\quad X^{-1}-\ell^{-1}.
+\]
+For \(\Delta=-\kappa^2\), use the left, central and right charts
+\((X,\kappa/X)\), \(p=\alpha+\kappa z,|z|\le Z_0\), and
+\((\widetilde X,\kappa/\widetilde X)\). Their arctangent action is
+\(\kappa^{-1}[\arctan((p-\alpha)/\kappa)+\arctan(\ell/\kappa)]\).
+Restoring the smooth positive density gives lower bounds
+\(c/X-C\), \(cs_0^{-1}(1+|\log(X/s_0)|)-C\), or
+\(c_{Z_0}/\kappa-C\). Every required ordinary phase derivative loses
+only fixed powers of these independent variables. For example the real
+inner loss is bounded by
+\(s_0^{-N}z^{-N}e^{-c(1+|\log z|)/(2\tau s_0)}\), uniformly after
+\(c/(2\tau_0s_{0,\max})>N+1\). Thus \(e^{-J_+/(2\tau)}\) pays
+all root-distance losses, without comparing the two gaps.
+
+\paragraph{Matching through the weak core.}
+To compare the two actions, we need a core map defined all the way to
+zero height. We construct that map on the whole chord below each
+admitted orbit, before choosing an action cutoff. In raw height the
+fixed weak-core equation is
+\[
+ \eta_\xi=f_\tau(\xi,\eta)
+ =\frac{\eta(a+c_1\eta)}{T+Q\eta},\qquad
+ a=\xi B,\quad c_1=C\tau^2(G+\xi),\quad T=\tau P.
+\]
+Here \(P\ge p_c>0\), \(Q\ge q_c>0\), and the coefficients are
+bounded on a fixed enlarged weak slab. Direct differentiation gives
+\[
+ \partial_\eta f_\tau
+ =\frac{aT+c_1\eta(2T+Q\eta)}{(T+Q\eta)^2},\qquad
+ |\partial_\eta f_\tau|
+ \le\frac{|a|}{T}+\frac{|c_1|}{Q}\le\frac C\tau,
+ \qquad \eta\ge0.
+\]
+The constants use neither endpoint root distance.
+
+Retain the actual intrinsic weak cuts from the projection construction
+above. Write their raw parametrizations as
+\(\iota_\pm(w)=(\psi_\pm(w),h_\pm(w))\), where \(w=\zeta_\pm\),
+\(\psi_+(0)=p_w\), \(\psi_-(0)=-r_w\), and \(h_\pm(0)=0\).
+The projection and normal linearization above, constructed by the
+backward integrals of Lemma~\ref{lem:normal-time-projection} with the
+displayed higher rows, give uniformly \(C^4\) inverse charts;
+\(h_\pm'\) and the chart Jacobians
+\(\Delta_\pm=\det D_{(v,\eta)}(\pi_\pm,\zeta_\pm)\),
+in the respective radii \(v=\xi,-\xi\), are positive units.
+Their axis values are one.
+Use reversed physical time in the negative radial chart, so that both
+attracting projected equations are
+\(\dot\pi_\pm=-\tau P(\pm\pi_\pm)\).
+The sections are \(\pi_+=p_w\), \(\pi_-=r_w\), while
+\(\psi_-\) records the raw abscissa \(-v\).
+Their exact projected axis equations give the transverse factors
+\[
+ \begin{aligned}
+ A_+(w)&:=h_+'(w)-f_\tau(\iota_+(w))\psi_+'(w)
+       =\frac{\tau P(p_w)}{D(\iota_+(w))\Delta_+(w)},\\
+ A_-(w)&:=h_-'(w)-f_\tau(\iota_-(w))\psi_-'(w)
+       =\frac{\tau P(-r_w)}{D(\iota_-(w))\Delta_-(w)}.
+ \end{aligned}
+\]
+The reflection on the negative side reverses the abscissa and the
+attracting time orientation, leaving both factors positive.
+Since the weak buffers have fixed bounded height, \(c\tau\le A_\pm\le C\).
+
+Fix any already admitted through orbit of the lower receiver, with weak
+heights \(z>0\) and \(w>0\). Its core segment, the axis and the two
+weak-section arcs from zero to these heights bound a strip. At either
+cut the positive-time derivative of
+\(\xi-\psi_\pm(h_\pm^{-1}(\eta))\) is \(-DA_\pm/h_\pm'<0\).
+The strip lies to the left of the positive arc and to the right of the
+negative arc, making these respectively incoming and outgoing.
+Scalar uniqueness prevents a trajectory from crossing the
+axis or this admitted orbit, and \(-\dot\xi\ge\tau p_c\) gives a
+finite passage. Thus every point of \(0\le z_0\le z\) reaches the
+negative arc inside this strip. The same actual intrinsic map
+\(M_\tau\) is consequently defined on the entire chord, with
+\(M_\tau(0)=0\) and \(0\le M_\tau(z_0)\le w\).
+Uniqueness identifies these chord maps with each other and with the
+local map of the weak-core flow.
+
+Let \(V\) be the raw initial-height variation between the two actual
+endpoint abscissae. Its equation \(V_\xi=(\partial_\eta f_\tau)V\)
+on a slab of fixed length gives \(e^{-K/\tau}\le V\le e^{K/\tau}\).
+Differentiating the actual endpoint equation yields
+\[
+ M_\tau'(z_0)=V\,
+ \frac{A_+(z_0)}{A_-(M_\tau(z_0))}>0.
+\]
+Absorbing the fixed powers of \(\tau\) in the exponential constant,
+\[
+ e^{-K/\tau}\le M_\tau'(z_0)\le e^{K/\tau},\qquad
+ \frac{M_\tau(z)}z=\int_0^1M_\tau'(tz)\,dt.
+\]
+The matching of these same intrinsic heights is
+\(w_-=M_\tau(w_+)\), \(w_\pm=u_\pm e^{-J_\pm/\tau}\).
+The positive \(C^4\) units \(u_\pm,u_\pm^{-1}\) therefore give
+\[
+ J_+-J_-
+ =\tau\log\frac{M_\tau(w_+)}{w_+}
+   +\tau\log\frac{u_+}{u_-},\qquad
+ |J_+-J_-|\le K+C\tau\le K_0.
+\]
+Thus the actions differ by a bounded amount on every admitted through
+orbit in the original independent section domains. The bound is obtained
+before choosing an action cutoff and uses no return equation.
+
+On the fixed weak core \(D\ge\tau p_c+q_c\eta\), the first four
+normalized variational equations have bounds \(e^{K_j/\tau}\).
+Factor the map just constructed at zero height as
+\(M_\tau(z)=m_\tau zQ_\tau(z)\),
+\(Q_\tau(0)=1,m_\tau^{\pm1}\le e^{K/\tau}\).
+In particular, the exact quotient is
+\[
+ Q_\tau(z)=m_\tau^{-1}\int_0^1 M_\tau'(vz)\,dv.
+\]
+Four core variational equations bound its three ordinary derivatives.
+Enlarge the exponential
+constant to include this quotient, \(m_\tau^{-1}\), and the actual
+input and output chord reserves; then choose \(J_*\) larger than
+twice that constant with a fixed buffer. Thus
+\(w_+=u_+(p)e^{-J_+/\tau}\) lies on the actual core chord and its
+image lies in the negative weak image. Since
+\(u_-(r)e^{-J_-/\tau}\downarrow0\) as \(r\uparrow c\), it has a
+unique actual inverse. Taking logarithms on the product of separate
+section domains gives
+\begin{equation}\label{rc:strong-matching}
+ \begin{gathered}
+ J_+-J_-=C_\theta+\tau R(p,r),\qquad C_\theta=\tau\log m_\tau,\\
+ R=\log u_+-\log u_-+\log Q_\tau(w_+),\\
+ |C_\theta|\le K_0,\qquad\|R\|_{C^3_{p,r}}\le C(1+|\log\tau|).
+ \end{gathered}
+\end{equation}
+Split the positive action exponential to absorb the core bounds and the
+losses in the five root charts. Differentiation in the negative section
+variable acts directly on \(u_-\); this avoids differentiating an
+exponentially large inverse. Since the heights are intrinsic normal
+coordinates, there is no moving initial \(\log P\) term.
+On the actual matched graph, with \(P_+=P(p),P_-=P(-r)\),
+\begin{equation}\label{rc:strong-variation}
+ r_p=\frac{pB_+P_-}{rB_-P_+}(1+\rho),\qquad
+ 1+\rho=\frac{1-\tau P_+R_p/(pB_+)}{1+\tau P_-R_r/(rB_-)},
+ \qquad\|\rho\|_{C^2_{p,r}}\le\epsilon_\tau:=C\tau(1+|\log\tau|).
+\end{equation}
+The polynomial multipliers and their derivatives are bounded; all
+remaining denominators are units, including when \(P_+,P_-\) vanish
+independently.
+
+\paragraph{Curvature in the physical input.}
+Let \(\Gamma_\pm(b)=a_\pm+c_\pm\phi_\pm(b)\), \(c_\pm>0\), be
+these actual outward embeddings into the incoming raw height \(h\)
+and divided output, with \(b=-p^2/2,S(b)=-r^2/2\).
+The fixed normal-height equation
+\(d(\eta-\xi^2/2)/d\log\eta=\tau\Phi\) has four bounded height
+rows and clock \(O(1+|\log\tau|)\), independently of the axis gap.
+For the exterior continuation retain \(\lambda_G=12\tau G/(1+2\tau G)\).
+At each frozen bounded base \(q>0\),
+\begin{equation}\label{deg:compact-section-integral}
+ \int_1^{\delta/(\tau q)}\rho^{-(2-\lambda_G)}
+ [\tau q^{-2}\rho^{-2}+\tau Uq^{-1}\rho^{-1}+\tau q\rho]
+ (1+|\log\rho|^2)\frac{d\rho}\rho\le C\tau(1+q).
+\end{equation}
+The actual relative hierarchy yields
+\(\phi_\pm=\mathrm{id}+O_{C^3}(\epsilon_\tau)\), including inverse
+maps on their actual images. At an ordinary observer with exact small
+gain \(a_\tau\asymp\tau^{2-O(\tau)}\), the normalized second and
+third rows are \(a_\tau\chi''/\chi'_*,a_\tau^2\chi'''/\chi'_*\).
+Only its ordinary \(C^3\) bounds are used. Outgoing and incoming
+cocycles at every cut cancel before normalization; the output closing
+retains \(f'(md)d'\) and its ordinary third chain rule.
+Thus \(\widehat\Pi=\phi_-\circ S\circ\phi_+^{-1}\) is the actual
+completed map up to its two retained positive affine gains.
+The exact chain rule gives
+\begin{equation}\label{deg:compact-finite-curvature}
+ \phi_+'(b)\frac{P(p)}{p+r}\frac{\widehat\Pi''}{\widehat\Pi'}
+ =3-\frac U{pr}+E(p,r),\qquad\|E\|_{C^1_{p,r}}\le\epsilon_\tau.
+\end{equation}
+To display the error, put \(W=p+r\),
+\(K_{\rm mat}=B_+(1+\rho)/B_-\), and
+\(L_\pm=\phi_\pm''/\phi_\pm'\), each in its own quadratic label.
+Then
+\[
+ \begin{aligned}
+ E={}&-\frac{(K_{\rm mat}-1)P_-'}{rW}
+       -\frac{P_+}{pW}\partial_p\log K_{\rm mat}
+       -\frac{K_{\rm mat}P_-}{rW}\partial_r\log K_{\rm mat}\\
+    &+\frac{K_{\rm mat}P_-}{W}L_-
+       -\frac{P_+}{W}L_+ .
+ \end{aligned}
+\]
+Here \(P_-'\) uses the radial variable \(r\).
+Since \(K_{\rm mat}-1=O_{C^2}(\epsilon_\tau)\) and
+\(L_\pm=O_{C^1}(\epsilon_\tau)\), every term has the asserted
+\(C^1\) bound on the product of the two normal-section domains:
+\(P_\pm\) occur as multipliers and the remaining denominators are units.
+Near a zero, \(U\ge U_*>0\), and restriction to the matched graph gives
+\[
+ \begin{aligned}
+ \frac d{dp}\left(3-\frac U{pr}\right)
+ &=\frac U{pr}\left(\frac1p+\frac{r_p}{r}\right)
+ \ge c(1+r_p),\\
+ \left|\frac d{dp}E(p,r(p))\right|
+ &\le\epsilon_\tau(1+r_p).
+ \end{aligned}
+\]
+Since \(w_p=(\phi_+(-p^2/2))_p<0\), every curvature zero is
+simple and downward in the physical input.
+
+On \(J_+\le J_{\rm rf}>J_*+1\),
+both actions are bounded. The five singular integrals give a fixed
+positive polynomial margin on the whole traversed segment and its
+buffered exits. Corollary~\ref{neg:cor-rootfree}, with cubic coefficient
+one, gives actual absolute \(C^3\) comparison there. The limiting map has
+\(S_0'=P_-/P_+\),
+\(S_0''/S_0'=(p+r)(3-U/(pr))/P_+\), and
+\((pr)_b=-r/p-pP_-/(rP_+)<0\).
+At \(U=3pr\) its \(S_0'''\) has a uniform negative margin; away
+from that set the curvature has a nonzero margin. This transfers the
+same crossing orientation to the bounded-action region. That comparison
+strictly overlaps the high-action estimate for the same map.
+
+On ghost fibres choose \(M\) above all roots and bottlenecks, large
+for Lemma~\ref{deg:lem-weighted-cubic-tail}. Its actual growing
+receiver \(u\ge2M,\tau u\le d_0\) has matched \(r_0\le r<c\)
+and \eqref{deg:compact-curvature}, with error
+\(C\tau(1+u)(1+|\log(\tau(1+u))|)^4\). Choose
+\(M>2U_0/r_0\), then \(d_0\) with
+\(Cd_0(1+|\log d_0|)^4<1/4\), then \(\tau\). Its curvature is
+positive throughout this growing range.
+To establish actual overlap, take a buffered band
+\([2M-\beta,3M+\beta]\), \(0<\beta<M/2\), in the fixed normal
+boxes. The lip projection is \(k_\tau(u)=u+O_{C^3}(\tau)\),
+its linearized height is \(v_{\rm lip}=\tau\ell_0P(u)V_\tau(u)\),
+with \(V_\tau\) a \(C^3\) unit. The same-orbit invariant gives
+\begin{equation}\label{deg:compact-resection}
+ \int_{k_\tau(u)}^{p_\tau(u)}\frac{qB(q)}{P(q)}\,dq
+ =\tau\log\frac{u_+(p_\tau(u))}{v_{\rm lip}(u)},\qquad
+ \|p_\tau-\mathrm{id}\|_{C^3}\le C\tau(1+|\log\tau|),\quad p_\tau'>0.
+\end{equation}
+The divergent bottleneck prefix cancels in this local integral. Its
+\(p\)-derivative after subtracting \(\tau u_+'/u_+\) is a unit,
+so the implicit equation gives all three rows. The closed band
+\([2M+\beta,3M-\beta]\) has \(p_\tau<3M,u>2M\); the inverse
+image of \(p=3M\) also has \(u>2M\), leaving no gap. These actual
+orbits retain the original windows: their bounded normal labels have
+raw gains \(\tau^{2-\lambda_G}\) times units, their reference images
+lie inside the original passive organizing-arc buffers, and the raw
+corridor continues them across the negative root at positive height.
+Scalar order keeps the band in the comparison component. Resection
+identifies orbits; each curvature estimate uses its own actual adapters.
+
+\paragraph{The remaining raw ghost tail.}
+On a ghost fibre, through trajectories can continue beyond the cutoff
+\(\tau u=d_0\) of the growing estimate. The first-lip abscissa differs from the minimum
+speed \(\sigma_\theta\); small central height may coexist with
+\(a=\tau u>d_0\). Put \(a_b=d_0/2\), and let
+\(x_*=\delta-\gamma\) be the actual positive raw port. For every
+admitted \(a_b\le a\le x_*\), at fixed coefficients set
+\[
+ \begin{gathered}
+ M_\tau=x^3+3\tau Gx^2-\tau^2Ux+\tau^3,\qquad B_0=1+2\tau G+x,\\
+ Q_0=1-A(\tau G+x)+C(\tau G+x)^2,\quad
+ \zeta_0=C(\tau G+x),\quad D_0=M_\tau+Q_0z.
+ \end{gathered}
+\]
+The true graph is \(z_x=z(xB_0+\zeta_0z)/D_0\),
+\(z(a)=\ell_0M_\tau(a)\). On \([a,x_*]\), \(M_\tau\ge c(d_0)>0\)
+and \(Q_0\) is a positive unit. The graph satisfies
+\(z_x\le Cx+Cz\), so its positive initial height and Gronwall
+give \(z\le C\delta^2\), below the fixed upper chart boundary.
+Its numerator is positive after the coefficient shrink, and hence
+\(z\ge\ell_0M_\tau(a)>0\). This constructs the regular outward
+passage, including its auxiliary zero-flight endpoint. Append the
+observer only when the image lies in its original buffer; the auxiliary
+endpoint needs no observer value when its image is outside that buffer.
+Use \eqref{deg:scalar-polynomial-lip-slope}, with \(\sigma=\tau\),
+\(K_{\rm lip}=K\), \(I_0=I\), and \(x_T=x_*\):
+\begin{equation}\label{deg:compact-raw-tail-input}
+ \Gamma_{+,a}'=-a\chi'(z_{\rm port})\frac{z_{\rm port}}{D_0(x_*,z_{\rm port})}
+                   B_0(a)K_{\rm lip}(a)e^{I_0(a)}.
+\end{equation}
+The original lip transversality makes \(K_{\rm lip}\) a positive
+unit. All admitted factors have bounds and reciprocals depending on
+\(d_0\), so \(c(d_0)\le-\Gamma_{+,a}'\le C(d_0)\), or
+\(c(d_0)\tau^2\le\Gamma_{+,b_+}'\le C(d_0)\tau^2\)
+for \(b_+=-a^2/(2\tau^2)\).
+
+We match this outward map to the negative branch by their actual central
+heights. Differentiate the positive inward passage directly. For its height
+\(\eta_0^+(u)\), \(W=\eta/(\tau P)\),
+\(H_+=P'/(\xi B)\), \(\varpi=C\tau^3(G+\xi)P/(\xi B)\),
+\begin{equation}\label{deg:compact-raw-tail-inward}
+ \partial_u\log\eta_0^+=-\frac{uB_+}{\tau P_+}\Lambda_+,
+ \quad\Lambda_+=\frac{K_{\rm lip}(a)}{1+Q_+\ell_0}
+       \exp\int_u^0\frac{\xi B}{\tau P}
+                         \frac{W(\varpi-Q)}{(1+QW)^2}\,d\xi.
+\end{equation}
+In the action clock \(dq=-\xi B\,d\xi/(\tau P)\),
+\[
+ W_q=W\left[-\frac{1+\varpi W}{1+QW}+\tau H_+\right],\qquad W(0)=\ell_0.
+\]
+On the original raw chart \(Q-\varpi>0\); the braces increase with
+\(W\), and at \(\ell_0\) equal
+\(-K_{\rm lip}/(1+Q\ell_0)\le-c_1\). Thus
+\(W\le\ell_0e^{-c_1q}\) down to a fixed small scaled cut
+\(\delta_c\), on the entire original raw range. The integral in
+\eqref{deg:compact-raw-tail-inward} becomes the bounded integral
+\(\int W(Q-\varpi)/(1+QW)^2\,dq\).
+For the negative branch put \(P_-(v)=P(-v)=(c-v)L_-(v)\),
+\(B_-(v)=B(-v)\), \(Q_-(v)=Q(-v)\), with
+the exact unit \(L_-\) used in
+Lemma~\ref{deg:lem-weighted-cubic-tail}. Its inverse inward graph is
+\[
+ \eta_v=f_-(v,\eta)
+ =\frac{\eta\{vB_-+\zeta_-\eta\}}{\tau P_-+Q_-\eta},\qquad
+ \zeta_-=-C\tau^2(G-v),\qquad
+ \eta(r)=\tau\ell_0P_-(r).
+\]
+On \(\delta_c\le v\le r<c\), set
+\(H_-=P_-'/ (vB_-)\) and
+\(\varpi_-=\tau P_-\zeta_-/(vB_-)\).
+The compact coefficient block gives bounded \(H_-\),
+\(\varpi_-=O(\tau^3)\), and positive-unit \(Q_-\), even at
+the simple root. The reflected ratio \(W_-\) has the same action-clock
+equation and strict decay. Its complete moving-initial factor is
+\[
+ K_-=1-\tau H_-(1+\ell_0Q_-)+\ell_0\varpi_->c_K>0.
+\]
+
+Choose \(2\delta_c<r_0\). A fixed positive band below every
+positive raw-tail label and the fixed negative band
+\([\delta_c,r_0]\) supply action margins \(A_+,A_->0\).
+Thus both inward graphs reach their central slab with heights
+\(\eta_i\le C\tau e^{-c_1A_{\rm in}/\tau}\),
+\(A_{\rm in}=\min(A_+,A_-)\). On that slab \(P_\pm\ge p_c>0\).
+In the decreasing radial coordinate each graph satisfies
+\(\eta_t\le C\tau\eta^2\); first exit keeps \(0<\eta\le2\eta_i\)
+and gives an actual finite continuation to \(\xi=0\).
+For \(f_+\) use the positive graph, with
+\(\zeta_+=C\tau^2(G+v)\). The exact rational difference is
+\[
+ f_{\pm,\eta}-f_\pm/\eta
+ =\frac{\eta\{\zeta_\pm\tau P_\pm-n_\pm Q_\pm\}}
+             {(\tau P_\pm+Q_\pm\eta)^2},\qquad n_\pm=vB_\pm.
+\]
+Its central integral is bounded by \(C\eta_i/\tau^2\).
+Together with the bounded noncentral ratio integral this proves the
+positive \(\Lambda_+\) bound and, independently, the reflected identity
+\begin{equation}\label{deg:compact-reflected-inward}
+ \begin{gathered}
+ -\partial_r\log\eta_0^-(r)=\frac{rB_-}{\tau P_-}\Lambda_-,\\
+ \Lambda_-=
+ \frac{K_-(r)}{1+\ell_0Q_-(r)}
+       \exp\int_r^0(f_{-,\eta}-f_-/\eta)\,dv,\qquad
+ 0<c_\Lambda\le\Lambda_\pm,\Lambda_\pm^{-1}\le C_\Lambda.
+ \end{gathered}
+\end{equation}
+No root factor has been inverted in these error bounds.
+
+The ratio memory and the central linear cocycle give
+\(\eta_0^-(r)=\tau\ell_0P_-(r)e^{-A_-(r)/\tau}E_-(r)\),
+where \(E_-,E_-^{-1}\le C\) and
+\(A_-(r)=\int_0^r vB_-/P_-\,dv\).
+The simple root makes \(A_-(r)\to\infty\) as \(r\uparrow c\).
+Hence the actual negative centre map is strictly decreasing with range
+\begin{equation}\label{deg:compact-negative-centre-image}
+              \eta_0^-([r_0,c))=(0,\eta_0^-(r_0)].
+\end{equation}
+Start with an admitted shot \(u_{\rm ref}\) in the fixed resection
+band, whose negative match has \(r_{\rm ref}\ge r_0\).
+For small \(\tau\), \(\tau u_{\rm ref}<a_b\).
+The weighted inward construction, before either port observer is
+attached, is strictly decreasing up to \(u_b=a_b/\tau\), since
+\(\tau u\le a_b<d_0\). Thus
+\(\eta_0^+(u_b)<\eta_0^-(r_{\rm ref})\), and the full negative
+image gives a unique \(r_b\ge r_{\rm ref}\).
+This auxiliary centre match does not require the formal \(a_b\) port
+image to lie in an observer window.
+Positive centre-height monotonicity and this full negative range then
+give every original admitted \(a\ge a_b\) its unique negative match.
+Scalar uniqueness at the same \(\xi=0\) identifies the joined graph
+with the original through orbit; its negative output and closing
+images therefore retain their original buffers. Matching them
+gives \(S'=B_+P_-\Lambda_+/(B_-P_+\Lambda_-)\).
+In the root collar the negative output embedding keeps its own endpoint
+and exterior gains:
+\[
+ \begin{gathered}
+ \Gamma_{-,b_-}'=d_c\theta_cX^{\beta_-}K_c(X,X^{\beta_-}),\quad X=c-r,\\
+ d_c=\tau^{2-\lambda_G}U_c,\quad\theta_c=\tau^{\beta_-},\quad
+ \beta_-=\tau P'(-c)/(cB(-c))>0.
+ \end{gathered}
+\]
+Here \(U_c,K_c\) are bounded positive units. On the fixed complement
+the ordinary negative exterior calculation gives
+\(\Gamma_{-,b_-}'=\tau^{2-\lambda_G}\) times a bounded positive
+unit. These estimates overlap on a fixed collar band and give
+\(0<\Gamma_{-,b_-}'\le C\tau^2\) on the entire \(r_0\le r<c\),
+since \(\tau^{-\lambda_G}\) is a unit. The closing contributes its actual
+bounded positive first derivative. Now \(P_+(u)=\tau^{-3}M_\tau(a)
+\ge c(d_0)\tau^{-3}\), while \(P_-\le C\). Therefore
+\begin{equation}\label{deg:compact-raw-tail-derivative}
+ 0<\Pi'=\frac{\Gamma_{-,b_-}'}{\Gamma_{+,b_+}'}
+           \frac{B_+P_-}{B_-P_+}\frac{\Lambda_+}{\Lambda_-}
+                       \le C(d_0)\tau^3.
+\end{equation}
+The two absolute gains are retained in this ratio. The estimate covers
+\(a_b\le a\le d_0\) and every original admitted \(a>d_0\), subject
+to all the original window, speed and height restrictions. It therefore
+continues the derivative bound beyond the growing estimate's cutoff.
+
+\paragraph{The upper continuation.}
+For the upper complement continue the fixed comparison outward to
+\(\xi=\pm4v\). The fixed-normal fast invariants give positive-unit
+heights there; scalar order preserves these lower bounds for all larger
+inputs, and the field bounds them above through a fixed
+\(\eta_{\max}>0\). With \(f=\eta H/D\), specialization of
+\eqref{deg:scalar-raw-cocycle} gives
+\begin{equation}\label{deg:compact-core-variation}
+ f_\eta=\frac d{d\xi}\log\frac\eta D+
+       \frac{\tau P'+(Q'+C\tau^2(G+\xi))\eta}{D}.
+\end{equation}
+Endpoint quotients are units, and \(D\ge\tau p_c+q_c\eta\) bounds
+the integral even at exponentially small central height. The two outward
+first variations have the same exact factor \(\tau^{2-\lambda_G}\);
+their ratio and closing give \(0<\Pi'\le C_{\rm core}\).
+The comparison orbit and a fixed action neighborhood lie in both the
+lower and core regions. The comparison height \(\eta_{\rm comp}\)
+is exponentially small.
+The signed threshold is
+\(H_H=\tau^3K_H(1+\tau U^2)\), \(\eta_H=H_H/\tau^2\).
+After all fixed cuts and caps, choose \(\tau_0\) so
+\(\eta_{\rm comp}<\eta_H<\eta_{\max}/2\) and
+\(\tau^2\eta_{\max}<h_c/2\). Core and signed high then strictly
+overlap on the original height axis.
+
+\paragraph{Covering and counting the whole interval.}
+The through lemma and increasing \(H,\sigma_\theta\) make
+\(I_\theta\) connected. The comparison is admitted: its raw outward
+images retain the original buffers, its central speed is
+\(O(\tau^3+\tau^2\eta_{\rm comp})<d_{\rm out}\), and \(H<h_c\).
+At its transverse positive lip every lower input has \(W<\ell_0\).
+On a ghost fibre the fixed lower height of the original positive window
+and the original lip reserve give \(W>\ell_0\) at the raw port.
+Every input in \(I_\theta\) already has an actual through trajectory;
+scalar order below the comparison gives \(W<\ell_0\) at its positive
+lip. Thus a hit exists. Every hit has negative transverse derivative,
+so it is unique. At the hit the radial derivative of \(W\) is positive,
+whereas its input-height derivative is positive by scalar variation.
+The implicit hit equation therefore gives \(a_x<0\) in the original
+affine input, before any return-zero argument.
+On real/fold fibres a through orbit crosses the incident inner root at
+positive height, with \(W\to\infty\) on its inner side, giving the
+same unique hit. An outer-component lip hit would force
+\(\eta\le\tau\ell_0P\to0\) at the next root and a stopped passage.
+Thus all lower through inputs have one of the actual descriptions above.
+The bounded and growing ones have no gap by
+\eqref{deg:compact-resection}; the growing one reaches \(a=d_0\),
+and \eqref{deg:compact-raw-tail-derivative} continues every admitted tail.
+The whole original carrier has the exact allocation
+\begin{equation}\label{deg:compact-physical-cover}
+ \begin{split}
+ I_{\rm tail}&=\{x\in I_\theta:x\le x_{\rm comp},\ \Delta<0,\ a(x)>d_0\},\\
+ I_{\rm lower}&=\{x\in I_\theta:x\le x_{\rm comp}\}\setminus I_{\rm tail},\\
+ I_{\rm core}&=\{x\in I_\theta:x>x_{\rm comp},\ H(x)\le H_H\},\\
+ I_{\rm high}&=\{x\in I_\theta:H(x)>H_H\},\qquad
+ I_\theta=I_{\rm tail}\cup I_{\rm lower}\cup I_{\rm core}\cup I_{\rm high}.
+ \end{split}
+\end{equation}
+They are intervals or empty clips, since \(a(x)\) decreases. Equality
+\(a=d_0\) and the comparison belong to the lower piece; \(H=H_H\)
+belongs to the core. Closed action dividers are retained, and all estimate
+packages have the strict overlaps above. Natural stopped endpoints and
+the infinite-time fold branch are excluded.
+Choose \(m\) last with
+\(m\max(C_{\rm core},C_H,C(d_0)\tau_0^3)<1/2\).
+Then \(F'>1/2\) on tail, core and high. On the lower receiver the
+exact two-gain composition gives
+\[
+ F=a_+-a_\theta-ma_-+c_+w-mc_-\widehat\Pi(w),\qquad
+ F''=-\frac{mc_-}{c_+^2}\widehat\Pi'',\quad
+ F'''=-\frac{mc_-}{c_+^3}\widehat\Pi'''.
+\]
+With \(J=I_{\rm lower}\), Lemma~\ref{sharp:upper-curvature-count}
+applies on the connected \(I_\theta\): the positive factors preserve
+the lower downward curvature crossings, and \(F'>1/2\) on
+\(I_\theta\setminus J\). It gives at most one curvature zero on \(J\),
+at most two zeros of \(F'\), counted with multiplicity, and at most
+three isolated zeros of the
+same physical \(F\) on \(I_\theta\), counted with multiplicity.
+All choices depend only on the fixed coefficient block and section
+margins. The estimates allow the two gains and the two root gaps to
+vary independently.
+\end{proof}
+

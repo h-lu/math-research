@@ -1,0 +1,97 @@
+\subsection{The secondary root approaching the central line}
+\label{sec:direct-negative-weak-root}
+
+The remaining part of the coefficient cover has \(a\downarrow0\).
+Normalization in \eqref{eq:direct-negative-secondary-scales} then
+forces \(b=1\). To treat the positive root approaching the central
+line, apply \cref{prop:weak-root-passage} with
+\[
+ \kappa=s/a,\qquad \ell=sra,\qquad \hat r=r,\qquad \epsilon_2=a.
+\]
+These choices give \eqref{eq:weak-root-scales} and the logarithmic
+height coordinate \(T=-s\log h\). The remaining hypothesis concerns
+the negative branch outside the local weak-root region. We verify it
+by separating bounded secondary outputs from graphs that reach the
+annulus while still thin. The first group has a positive endpoint
+rate; for the second, the annular and far-root estimates give the
+uniform lower bound required by the weak-root comparison.
+
+\begin{proposition}[Negative quadratic drift at the weak root]
+\label{prop:direct-negative-weak-root}
+There are fixed \(a_-,\kappa_->0\) such that \(\Delta_p\) has at
+most two zeros on
+\[
+ 0<a\le a_-,\qquad 0<s/a\le\kappa_-
+\]
+for all sufficiently small independent \(s,r>0\). Consequently, for all
+sufficiently small independent \(s,r>0\) and every \(L>1/\kappa_-\),
+\(\Delta_p\) has at most three zeros on the part of
+\eqref{eq:direct-negative-secondary-scales} outside the strip
+\(|q_0|\le Lq_1^2\).
+\end{proposition}
+
+\begin{proof}
+At the radius \(\ell_d=srd\), the outward drift on the negative branch is
+\[
+ K_d(x)=a_d+x+dx^2+rd^2x^3R_q(-\ell_dx).
+\]
+For a fixed large \(M\) and \(r\le r(M)\),
+\eqref{eq:weak-root-negative-drift} holds with \(d_{\max}=M\), with
+constants depending on \(M\). We verify
+\eqref{eq:weak-root-outer} for the negative graphs with
+\(z<Y_b|\eta|^2\) at \(|\eta|=srM\).
+
+Let \(X=|\eta|/(sr)\), and follow such a graph to the height
+\(\ell_M^2Y_b\). At \(d=M\), the local radius in the weak-root estimate
+is \(x=X/M\). If \(X\le4M\) at this height, the corresponding projected
+state lies in \([0.9,4]\), and
+\cref{lem:weak-root-branches}(ii) with \(d=M\) gives
+\(\mathfrak H_-\ge c/M\) and \(|I_{-,T}|=o(1)\).
+
+If \(X>4M\) at that height, the graph is thin at the annular cut \(X=M\):
+\[
+ z(-srM;h)/(s^3r^2M^2)<\delta_{\rm an},
+\]
+where \(\delta_{\rm an}\) is the thin threshold of
+\cref{sec:direct-negative-annulus}. To obtain this estimate, use
+\(|\eta|=\ell_Mx\), \(z=\ell_M^2Y\) with the same \(d=M\).
+The outward graph reaches \(x=4\) below \(Y_b\) and lies in the box between
+\(x=1\) and \(x=4\). Also, \(8B_0Y_b\le15\) since \(Y_b\) is
+small. For small \(s\), apply \cref{lem:direct-radial-advance} in
+\(x\), with \(\delta=s/M\), \(X_1=1\), \(X_2=4\) and
+\(C_F=\sup|K_M/x|\) on the box. The height at \(x=1\) is at most
+\(Y_b\e^{-3M/(2C_Fs)}<s\delta_{\rm an}\), as required.
+
+For this thin input, take \(M\) large enough for the annular margins
+on the negative branch. In the secondary coordinate \(X=|\eta|/(sr)\),
+the negative drift is comparable to \(a+X\) and its derivative is
+bounded below on this fixed box. Here
+\(\delta=s\) and the weak-root condition gives \(a/s\ge1/\kappa_-\);
+\cref{lem:direct-source-height} supplies the height unit at a fixed
+secondary cut below \(M\), uniformly as \(a\to0\).
+\Cref{lem:negative-branch-far-root}, whose constants are uniform down
+to \(a=0\), gives, for exits of the negative branch up to \(\rho=0.9\),
+\[
+ \mathfrak H_-=2-3\rho+
+                O(r/\rho+s(1+|\log s|))\ge-C_n,\qquad
+ |I_{-,T}|\le C(s\rho)^{2-4s}=o(1).
+\]
+Graphs still thin at \(\rho=0.9\) satisfy \(\mathfrak H_-\ge-C_n\) and
+\(|I_{-,T}|\le Cs^2\). Thus \eqref{eq:weak-root-outer} holds in both
+cases. \Cref{prop:weak-root-passage} gives at most two zeros of
+\(\Delta_p\), with \(a_-\) and \(\kappa_-\) equal to its constants
+\(a_\circ\) and \(\kappa_\circ\).
+
+To obtain the assertion outside the contact strip, combine the weak-root
+bound with the compact coefficient cover of
+\cref{sec:direct-negative-separated}, which gives the bound three on
+\(a\ge a_-/2\), overlapping the weak-root region. On the remaining
+small-\(a\) part, where \(s/a>\kappa_-\), normalization gives
+\(b=1\) and \(|q_0|/q_1^2=a/s<1/\kappa_-\). This part lies in
+\(|q_0|\le Lq_1^2\) for every \(L>1/\kappa_-\).
+Hence the weak-root and compact-coefficient regions cover the parameter
+set outside the contact strip. Their bounds on the whole interval
+\(\mathcal H_p\) give at most three zeros there.
+The thresholds for \(s,r\) are those of these two regions and are
+independent of \(L\).
+\end{proof}

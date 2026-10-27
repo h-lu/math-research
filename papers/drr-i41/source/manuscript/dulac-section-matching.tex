@@ -1,0 +1,276 @@
+\subsection{Actual section coordinates at both stopped endpoints}
+\label{subsec:actual-dulac-matching}
+
+For bounded amplified height, the middle passage is close to its linear
+normalization up to an early negative cut. We stop there and use exact
+saddle invariants to continue to both actual sections. This retains the
+nonlinear section maps needed to compare the two small powers.
+
+\begin{lemma}[Uniform actual-section matching]
+\label{lem:actual-dulac-matching}
+Consider \eqref{fx:pd}--\eqref{fx:coefficients}, with the compact
+coefficient conditions stated there. Fix \(V_1<\infty\) and let
+\(V\) be the raw middle input in \eqref{eq:comparison-action}.
+Choose the local cuts sufficiently small in the order in the proof,
+before decreasing \(\kappa,\tau\).
+On \(0\le V\le V_1+1\) there is an increasing change
+\(\widehat V=V+O_{C^3}(\epsilon_\theta)\), fixing zero, where
+\(\epsilon_\theta/\chi\to0\). The two actual section coordinates,
+including the finite closing map on the negative side, have the form
+\begin{equation}\label{eq:actual-dulac-pair}
+ x_{\rm in}=x_b+P_*\Psi(\widehat V^\chi),\qquad
+ f_\theta(mt_{\rm out})=b_*+a_*D
+       \bigl(\beta^{-\beta}C(\widehat V)^\beta\bigr),
+ \qquad P_*,a_*>0,
+\end{equation}
+for \(m>0\). Put \(e_C(v)=vC'(v)/C(v)>0\) for \(v>0\).
+Uniformly for \(0<V\le V_1+1\),
+\begin{equation}\label{eq:actual-dulac-bounds}
+ \begin{gathered}
+ C(0)=0,\quad C'(0)=1,\quad
+ \|C-\mathrm{id}\|_{C^3}\le\epsilon_\theta,\qquad
+ \left|\frac{V e_C'(V)}{e_C(V)}\right|=o(\chi),\\
+ D'>c_D>0,\qquad |D''/D'|\le C_D,\qquad
+ \sup_{0\le t\le(V_1+2)^\chi}
+       |t\Psi''(t)/\Psi'(t)|\longrightarrow0,\qquad P_*\to0 .
+ \end{gathered}
+\end{equation}
+The maps \(\widehat V,C,D,\Psi\) extend in \(C^3\) to their
+zero endpoints; this does not assert ordinary \(C^3\) regularity
+of the compositions with the small powers of \(\widehat V\).
+The normalized estimates have a uniform one-sided extension as
+\(j=1/c\downarrow0\) at the remote-root face. Actual raw section
+maps and their positive affine scales are asserted only for \(j>0\).
+\end{lemma}
+
+\begin{proof}
+We first construct local coordinates in which the saddle invariant is
+exact and the derivative bounds remain uniform as its exponent vanishes.
+After dividing by the positive normal rate, and reversing time at
+the positive saddle, both fields on a fixed small box take the form
+\begin{equation}\label{eq:saddle-normal-time}
+ \dot x=-\rho x p(x)+c(x)y,\qquad
+ \dot y=y\{1+k(x)y\},\qquad \rho\in\{\beta,\chi\}.
+\end{equation}
+Here \(p(0)=1\), \(p>c_p>0\), and \(p,c,k\) have uniform
+bounds through any prescribed finite order. At the negative saddle
+\(x=u+1,y=w\), \(c=K/L<0\); at the positive saddle
+\(x=(u-a)/a,y=w/a^2\), \(c>0\). Both \(|c|\) and its
+reciprocal are bounded. These assertions follow by substituting the
+displayed scalings in \eqref{fx:coefficients}; in particular the
+positive normal rate is divided out only after scaling by \(a\).
+
+Put \(h=-\rho xp(x)\). Construct the footpoint \(\pi\) by backward
+axis transport as in Lemma~\ref{lem:normal-time-projection}, and put
+\(J=\int_0^\infty k(X(-T))Y(-T)\,dT\), using bounded extensions.
+Here \(Y(-T)\le ye^{-T/2}\), \(h=O_{C^4}(\rho)\), and the
+couplings \(c_xY,k_xY^2\) have integrable mass. The same triangular
+argument bounds tangential rows by \(C(1+T)^Ne^{C\rho T}\) and
+normal rows by \(C(1+T)^Ne^{-(1/2-C\rho)T}\).
+For a normalized coefficient parameter \(\vartheta\), its new forcing
+is \(-\bigl(h_\vartheta+c_\vartheta Y,k_\vartheta Y^2\bigr)\):
+the tangential term adds polynomial factors, while normal terms keep a
+decaying height factor. Thus the backward integrals and their mixed rows
+through five phase derivatives and one parameter derivative have an
+integrable majorant \(C(1+T)^Ne^{-(1/2-C\rho)T}\), after fixing the
+finite order and then decreasing \(\rho\). These mixed rows use axis-flow
+derivatives through order seven, supplied by the prescribed finite
+coefficient bounds.
+
+Consequently \(\dot\pi=h(\pi)\), and \(Z=ye^{-J}\) satisfies
+\(\dot Z=Z\). The axis coordinate
+\[
+ \ell(x)=x\exp\int_0^x\frac{p(s)^{-1}-1}{s}\,ds
+\]
+has uniform finite-order bounds and positive derivative. Hence
+\(\Xi=\ell(\pi)\) gives the exact invariant
+\begin{equation}\label{eq:exact-saddle-invariant}
+ \dot\Xi=-\rho\Xi,\qquad I=\Xi Z^\rho,\qquad \dot I=0.
+\end{equation}
+This is a uniformly regular local coordinate change. Since
+\(\pi_y(x,y)=-c(x)+o_\rho(1)+O(y)\) and \(|c|\) is bounded below,
+choose the height strip first and then \(\rho\) to preserve its sign.
+All these bounds concern intrinsic coordinates, before extracting raw
+section scales.
+
+Fix a permissible small upper height \(y_{\max}\) in the negative
+box. Choose \(x_->0\) small compared with this height, and then
+\(\eta_0>0\) sufficiently small compared with both, as quantified
+in the output construction below. Finally fix
+\(0<\eta_-<\eta_0\) and put \(u_0=-1+\eta_0\).
+This cut lies in the negative box, and
+strictly before the cut \(u_-\) in positive time. If
+\(J_m(u)=\exp\int_{u_+}^u L/h\), put
+\[
+ \varepsilon_+=\frac{\lambda h_-}{a^2J_m(u_-)},\qquad
+ \varepsilon_0=\frac{\lambda h_-J_m(u_0)}{J_m(u_-)}.
+\]
+The raw heights at \(u_+\) and \(u_0\) are respectively
+\(a^2\varepsilon_+V\) and \(\varepsilon_0 M_0(V)\).
+Partial fractions \eqref{fx:partial-fractions} imply, for some
+fixed \(c_0>0,N<\infty\),
+\begin{equation}\label{eq:early-saddle-smallness}
+ \varepsilon_++\varepsilon_0
+       \le C\beta^{-N}e^{-c_0/\beta},\qquad
+ c\le\varepsilon_0^\beta\le C,\qquad
+ \varepsilon_+^\chi\le Ce^{-c_0/(2q)} .
+\end{equation}
+To check uniformity, \(\beta\le Ca\), so every inverse power of
+\(a\) is bounded by a power of \(\beta^{-1}\). The logarithmic
+terms in the partial fractions are
+\(q\log a\), \(\beta\log a\), and \(\beta\log\beta\),
+all tending to zero. The action between \(u_0\) and \(u_-\)
+has a fixed positive limit, while the full action to \(u_-\)
+has the positive limit in \eqref{fx:gamma-endpoint}.
+These facts give all three estimates, with the last obtained by
+multiplying the logarithm of the first by \(\chi=\beta/q\).
+
+Before \(u_0\), the middle map satisfies
+\begin{equation}\label{eq:early-middle-identity}
+ M_0(0)=0,\quad M_0'(0)=1,\qquad
+ \|M_0-\mathrm{id}\|_{C^3([0,V_1+1])}
+       \le C\beta^{-N}e^{-c_0/(2\beta)}.
+\end{equation}
+Indeed \(\rho'/\rho=(L-h')/h\) has at most one zero, a minimum;
+the endpoint actions give
+\(\sup_{[u_0,u_+]}\rho\le C\beta^{-N}e^{-c_0/\beta}\).
+The ordinary equation is
+\[
+ V_u=\mathscr F=\frac{\lambda\rho(E-KL/h)V^2}{1+\lambda K\rho V}.
+\]
+On \([0,V_1+2]\) its denominator is at least one, and the integral
+of its \(C^3_V\) norm is at most
+\(C\beta^{-N}(1+|\log\beta|)e^{-c_0/\beta}\).
+The first-exit and triangular-variation argument of
+Lemma~\ref{lem:scalar-normalization} proves the estimate;
+\(\mathscr F=O(V^2)\) gives \(M_0'(0)=1\). No ordinary
+\(u\)-derivative at the shrinking positive cut is needed.
+
+On the positive middle cut write the coordinate restrictions as
+\(\Xi_{+,m}(y),Z_{+,m}(y)\), and let
+\(z_+=Z_{+,m}'(0)>0\). Define
+\[
+ \widehat V=
+ \frac{Z_{+,m}(\varepsilon_+ V)}{z_+\varepsilon_+}
+ \left(\frac{-\Xi_{+,m}(\varepsilon_+ V)}
+                  {-\Xi_{+,m}(0)}\right)^{1/\chi} .
+\]
+The weak coordinate is negative on this cut. Taylor's formula and
+\eqref{eq:early-saddle-smallness} give
+\(\widehat V=V+O_{C^3}(\varepsilon_+/\chi)\), with
+\(\widehat V'(0)=1\). Its inverse has the same bounds.
+Choose a fixed incoming local cut \(x=x_+>0\) in the positive
+box. The stopped orbit \(\Xi=0\) intersects it at a height
+\(y_+>c>0\), since \(\Xi_y<0\). On a fixed chord above that
+height the function
+\[
+ L_+(y)=-\Xi_{+,\rm out}(y)Z_{+,\rm out}(y)^\chi
+\]
+is increasing, vanishes at \(y_+\), and has a uniformly bounded
+\(C^3\) inverse. The exact invariant gives
+\[
+ L_+(y)=\Sigma_+\widehat V^\chi,\qquad
+ \Sigma_+=-\Xi_{+,m}(0)(z_+\varepsilon_+)^\chi
+                    \le Ce^{-c_0/(2q)}.
+\]
+
+Continue this chord to the actual positive section. In
+\((X,Y)=(u/a,w/a^2)\) the limiting stopped graph is
+\(Y=(X^2-1)/2\), \(X\ge1+x_+\). A smaller chord has positive
+height and denominator margins to a fixed large cut and then enters a
+common parabolic band. Apply the outgoing-tail normalization
+\eqref{ann:tail-first-derivative}--\eqref{eq:N-bound} and the
+fixed-port admission argument of Lemma~\ref{ann:p0-fixed-tail-ports}.
+Both use only this half-family and its common band. If \(d_+\) is the
+exact raw derivative at \(y_+\), then
+\(p=(x_{\rm in}-x_b)/d_+\) gives
+\(L_+(y)=\Phi_+(p)\), \(\Phi_+(0)=0\), with positive derivative
+units and uniform \(C^3\) inverse bounds. Retain the absolute gain
+\(d_+=\Omega a^{2-\lambda_\gamma}U_+\le C\), where \(U_+\) is
+a positive unit.
+Set
+\[
+ \sigma_+=\Phi_+^{-1}(\Sigma_+),\qquad
+ \Psi(t)=\frac{\Phi_+^{-1}(\Sigma_+t)}{\sigma_+},\qquad
+ P_*=d_+\sigma_+ .
+\]
+Then \(\sup|t\Psi''/\Psi'|\le C\Sigma_+\), giving the
+positive assertions without any bound on unscaled raw derivatives.
+
+At the negative cut \(u_0\), denote the coordinate restrictions by
+\(\Xi_{-,m}(w),Z_{-,m}(w)\), and put
+\(\xi_0=\Xi_{-,m}(0)>0\), \(z_0=Z_{-,m}'(0)>0\).
+For \(v\) in a fixed bounded interval set
+\[
+ \mathcal G(v)=\frac{Z_{-,m}(\varepsilon_0v)}{z_0\varepsilon_0}
+ \left(\frac{\Xi_{-,m}(\varepsilon_0v)}{\xi_0}\right)^{1/\beta},
+ \qquad C=\mathcal G\circ M_0\circ(V\mapsto\widehat V)^{-1}.
+\]
+This is the actual strong-coordinate correction on the early cut.
+Its \(C^3\) difference from the identity is
+\(O(\varepsilon_0/\beta)\); the cut \(\eta_0\) is fixed.
+Together with \eqref{eq:early-middle-identity} this yields
+\(C'(0)=1\) and the claimed estimate for \(C-\mathrm{id}\),
+with \(\epsilon_\theta=C\beta^{-N}e^{-c_0/(3\beta)}\).
+Hadamard division gives \(C(v)=v c(v)\),
+\(\|c-1\|_{C^2}\le C\epsilon_\theta\), so
+\(|v e_C'/e_C|\le C\epsilon_\theta=o(\chi)\).
+
+On the fixed outer negative cut \(u=-1-x_-\),
+\(\Xi_w>0\), so the stopped branch \(\Xi=0\)
+meets it at a height \(w_->c x_->0\). On a slightly larger
+positive-height chord its invariant
+\[
+ I_-(w)=\Xi_{-,\rm out}(w)Z_{-,\rm out}(w)^\beta
+\]
+has \(I_-'>c>0\) and uniformly bounded \(C^3\) norm.
+Writing \(r=\beta^{-\beta}C(\widehat V)^\beta\), equality
+of the two invariants is precisely
+\[
+ I_-(w)=\alpha_\theta r,\qquad
+ \alpha_\theta=\xi_0(z_0\varepsilon_0\beta)^\beta .
+\]
+The constant \(\alpha_\theta\) is bounded above and away from
+zero by \eqref{eq:early-saddle-smallness}. Also
+\(\alpha_\theta\le C\eta_0\), while \(r\le1+o(1)\)
+on the fixed amplified-height interval. The choices above can be
+made with \(\pi(-x_-,y_{\max})\ge c y_{\max}>0\), and
+then with
+\[
+ (1+\epsilon)\sup_\theta\alpha_\theta
+       <\tfrac12\inf_\theta I_-(y_{\max}).
+\]
+The whole invariant interval consequently lies strictly inside the
+output chord, with a uniform buffer. The inverse function theorem gives
+\(w=D_0(r)\) on \([0,1+\epsilon]\), with uniform \(C^3\)
+and inverse bounds. At \(r=0\) its output is \(w_->0\).
+The extension at the excluded endpoint \(\widehat V=0\) is thus
+obtained on a positive-height chord.
+
+From this cut the limiting stopped graph is \(w=(u^2-1)/2\).
+Its buffered chord has the same finite-cut margins and negative-tail
+band. The preceding normalization and admission argument, now on the
+negative half-tail, gives
+\(T(w)=t_b+\Omega U_-B_-(w)\), with \(B_-'>c\) and uniform
+\(C^3\) map and inverse bounds. In particular \(|T''/T'|\le C\),
+although its raw slope may vanish.
+For the divided finite closing map, the chain rule gives
+\[
+ \frac{(f_\theta(mT)/m)''}{(f_\theta(mT)/m)'}
+   =\frac{T''}{T'}+
+      m\frac{f_\theta''(mT)}{f_\theta'(mT)}T' .
+\]
+The last term is bounded on the fixed output window since
+\(0<\Omega\le C\). Normalizing its exact value and positive
+slope at a reference point, and composing with \(D_0\), gives
+\(D\) and the constants \(b_*,a_*\) in
+\eqref{eq:actual-dulac-pair}. This proves the negative assertions.
+
+Finally, in the remote-root chart the coefficients on both local
+boxes are regular functions of \(j\). The source-tail scales are
+exactly \(\Omega\) and \(\Omega a^{2-\lambda_\gamma}\);
+\(|\lambda_\gamma|<1\) keeps both bounded above. No reciprocal
+bound on these raw scales was used. The fixed-cut action has no
+\(\beta\log j\) term, so every estimate above is uniform as
+\(j\downarrow0\), as a one-sided family of physical passages.
+\end{proof}

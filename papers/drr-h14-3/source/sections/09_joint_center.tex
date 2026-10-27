@@ -1,0 +1,624 @@
+\section{The joint center on a single domain}\label{rw:joint-section}
+
+Fix the limiting coefficients
+\[
+ \bar B=-\bar m=\gamma^2,\qquad
+ \bar a=-\bar c=-2\gamma,\qquad \epsilon=\nu=0,
+ \qquad P=1/\gamma,\quad\gamma>0.
+\]
+We use throughout the actual coefficient coordinates of
+Proposition~\ref{rw:center-coordinates}:
+\[
+ \mathbf b=(\bar B,\delta,\tau,\zeta,\nu),\qquad
+ \mu_L=\delta-\zeta,\quad\mu_U=\delta+\zeta,\quad
+ \tau=\bar a+\bar c.
+\]
+The lower gap is \eqref{rw:coordinates:lower-gap}. Near $P$, either
+gap may be nonpositive, so contact inputs must satisfy both whole-path
+passing tests. Beyond $P$, the separated description requires two
+positive gaps and continues to $1/p=0$. The difficulty is to control
+one comparison through both descriptions as the gaps vanish at unrelated
+rates. We use the same original central outputs on their regular overlap
+and prove one critical-point direction on their union.
+
+All comparisons below return to the original central height $z$.
+Use one fixed outgoing weak reference and one fixed incoming
+reference, continued from their fixed inner sections. Write their
+complete central maps as $s_++D_+$ and $s_-+J$, and put
+\begin{equation}\label{rw:joint:closing}
+ F=D_+-J-\sqrt\epsilon\,\nu H_c,\qquad
+ K=\epsilon\log(J'/D_+'),\qquad s_--s_+=\sqrt\epsilon\,\nu H_c .
+\end{equation}
+The prime refers to the same input in the two derivatives. Both
+derivatives are nonzero with the same sign on each open passing
+interval. A common change of input composes $K$ with that change;
+it introduces no extra logarithm. Signed central continuations are
+used for coefficient comparison. Positive total central heights and
+the actual collar conditions are additionally imposed on counted
+orbits.
+
+\begin{proposition}[The joint block]\label{rw:joint-local}
+There are a contact neighborhood of $p=P$, a separated interval
+continuing to the radial endpoint, a common coefficient neighborhood
+and a positive scale cutoff with the following properties.
+
+The two descriptions use the same gaps, phases, central outputs
+and coefficient inverse box. Their passing domains here impose the
+actual slow passages and fixed regular arcs, while permitting the
+signed central comparisons just described. With two positive gaps
+these domains have an open overlap and form one interval. With
+a nonpositive gap only the retained contact passing interval is used.
+No restriction on the ratio of two positive gaps is imposed.
+
+Set $I=|\tau|+|\zeta|$. For one fixed sufficiently small
+$\vartheta>0$, every noncenter fibre satisfying
+$|\nu|\le\vartheta I$ has at most one zero of $K'$ on this
+joint interval, including multiplicity. Each such critical point is
+simple and the sign of the second derivative in any regular input
+coordinate is $\operatorname{sign}\tau$. Consequently $K$ has
+at most two zeros there, with multiplicity.
+
+At an actual closing zero,
+$|\nu|\le\eta(\epsilon)I$, where $\eta(\epsilon)\to0$.
+Thus this joint block contains at most three isolated counted
+cycles, including multiplicity. If $I=0$ and a closing zero exists,
+then $\nu=0$ and the comparison is a center identity, contributing
+no isolated cycle.
+\end{proposition}
+
+Two estimates give the critical-point bound. On the separated interval,
+we remove the input-independent action constant and cancel the exact
+common powers before forming Hadamard columns. At contact, where division
+by a slow factor may be singular, we instead multiply by both factors.
+The resulting numerator has bounded jets through signed gaps. Its
+limiting value and slope give the same critical-point direction as the
+separated columns. A closing zero then supplies the relative coefficient
+bound needed to apply these estimates. The estimates include the radial
+endpoint; counted finite orbits have strictly positive radial input.
+
+\subsection{Separated expressions before coefficient division}
+
+Choose a small contact radius $r>0$ and then $0<d<r/4$.
+The separated finite entries satisfy $p\ge P+d$, and their limiting
+radial interval is
+\[
+ J=[0,(P+d)^{-1}].
+\]
+Retain slightly larger neighborhoods at every fixed finite boundary.
+Place the fixed lower slow sections on opposite sides of the minimum,
+with the outer section between $P$ and $P+d$. Choose the upper
+sections in the same way. In the upper block first choose their
+width for the desired finite normal domination; only afterwards
+choose the primary scale for the lower block. These are the
+$q=1$ and $q=\epsilon$ choices of
+Proposition~\ref{rw:relative-core}.
+
+On a fixed positive annulus in $1/p$, apply
+Lemma~\ref{rw:transitions:common-input} before either slow block.
+It gives a single coordinate $s_\epsilon$, equal to the actual
+radial phase near infinity and to $1/p$ on the finite side. Its
+limit on $J$ is $s=1/p$, and its selected transition and inverse
+jets are bounded on the overlap. The actual inverse coefficient
+chart and these regular input charts are chosen on larger boxes
+before the coefficient neighborhood is reduced. Proposition
+\ref{rw:domains:separated} then supplies the whole contraction
+\[
+ (\bar B,\delta,\tau,\zeta,\nu)\longmapsto
+ (\bar B,\delta,t\tau,t\zeta,t\nu),\qquad0\le t\le1,
+\]
+with this common input fixed. Every represented input passes through
+both slow blocks along the entire coefficient path. Thus the columns
+below compare functions on one input interval, without shrinking that
+interval as the coefficients move toward the center.
+
+\begin{lemma}[The nonconstant separated logarithm]
+\label{rw:joint:relative-expression}
+On this common domain, write $K=C(\mathbf b,\epsilon)+R$ by
+subtracting its value at one fixed input. The function $R$ has
+uniformly bounded mixed derivatives of total order four, in the
+ordinary common input, ordinary coefficients and Euler scale.
+The complete deviations have, after possibly decreasing $c>0$,
+\begin{equation}\label{rw:joint:absolute}
+ \|D_+\|_{C_{s_\epsilon}^1C_{\mathbf b}^1}
+       +\|J\|_{C_{s_\epsilon}^1C_{\mathbf b}^1}
+       \le Ce^{-c/\epsilon}.
+\end{equation}
+No coefficient derivative of the subtracted constant is included.
+\end{lemma}
+
+\begin{proof}
+We treat the finite and radial inputs separately, removing only constants
+in the input. On a compact finite patch the first lower regular piece
+gives a small normal input
+$e^{-S(p)/\epsilon}$, where $S,S_p>c$ with bounded finite jets.
+Here the bounded logarithms of regular prefactors have been absorbed
+into $S$ with their factor $\epsilon$.
+The fixed lower slow map and central connection give
+\[
+ D_+(p)=C_+L_L e^{-S(p)/\epsilon+r_+(p)}.
+\]
+Here $C_+L_L$ is input independent. Relative differentiation in
+Proposition~\ref{rw:relative-core}, followed by the normalized central
+connection, bounds the required jets of $r_+$ by $Ce^{-c/\epsilon}$.
+The upper fixed-section map and its regular connectors give an
+incoming horizontal phase
+\[
+ \chi(p)=\alpha\phi(p),\qquad
+ \alpha>0,\quad r(p)=\log\phi(p),\quad-r_p>c,
+\]
+with bounded jets of $r$ and bounded absolute jets of $\alpha$.
+The coefficient derivatives of $\log\alpha$ need not be bounded.
+The incoming horizontal central map is
+$D_I(\chi)=K_I\chi^\mu e^{P_I(\chi)/\epsilon}$, where
+\[
+ \mu=\frac{1-\epsilon\bar B}{\epsilon\bar B},
+ \qquad h_I=\epsilon\mu>c.
+\]
+The reciprocal preparation in Section~\ref{rw:transitions} supplies
+bounded selected jets of the action $P_I$. This form includes the
+regular changes of weak coordinate; it does not require bounded
+ordinary jets of $P_I/\epsilon$. Normalize $P_I(0)=0$ by changing
+$K_I$.
+The margin for $-r_p$ follows from its regular normalized upper
+entry and the small relative derivative on the chosen normal tube.
+Equivalently its zero-scale value is the strictly positive return
+rate \eqref{rw:joint:linear-rate} with the opposite sign; the bounded
+gap jets extend that margin uniformly to the repeated limit.
+
+Differentiating the actual amplitudes, before taking logarithms,
+gives the exact finite-patch expression
+\begin{equation}\label{rw:joint:finite-log}
+\begin{split}
+ K&=C_0+S(p)+h_I r(p)+P_I(\chi)+\epsilon E(p),\\
+ E&=-r_+
+       +\log(-r_p/S_p)
+       +\log(1+\chi P_I'(\chi)/h_I)
+       -\log(1-\epsilon r_+'(p)/S_p).
+\end{split}
+\end{equation}
+All logarithm arguments have positive margins. The possibly divergent
+actions $\epsilon\log L_L$ and $h_I\log\alpha$ belong to $C_0$.
+The nonconstant composition $P_I(\alpha\phi)$ uses absolute jets of
+$\alpha\phi$, so its bounds require no derivative of $\log\alpha$.
+
+At the radial end the two horizontal exponents agree exactly for
+the same field, by \eqref{rw:transitions:equal-exponents}.
+Write the complete outgoing map and the incoming map before their
+upper connector as
+\[
+ D_\pm(t)=K_\pm t^{h_I/\epsilon}
+                         e^{P_\pm(t)/\epsilon}.
+\]
+All slow contractions independent of $t$ belong to $K_\pm$.
+The upper connector, including its fixed repeated passage, has
+$f(t)=\alpha t e^{\psi(t)}$, where the selected jets of $\psi$
+and the absolute jets of $f$ are bounded. Normalize
+$P_\pm(0)=\psi(0)=0$ by transferring constants to $K_\pm,\alpha$.
+Apply \eqref{rw:transitions:common-power} with $k=\alpha e^\psi$,
+grouping $h_I\log\alpha$ into
+$C_1=\epsilon\log(K_-/K_+)+h_I\log\alpha$.
+The remaining logarithm arguments have positive margins on a fixed
+small radius. Its primitive jets follow from the horizontal preparation,
+relative slow integrals and central connections. Each block is first
+estimated with independent normal input, then composed using absolute
+jets of $f$.
+
+Primitive total order five leaves total order four after the one
+derivative in \eqref{rw:transitions:common-power} or
+\eqref{rw:joint:finite-log}, including $s^3\mathbf b^1$ and
+$s^2\mathbf b^2$ after the common input change. The radial and finite
+patches form a finite cover of $J$ and describe the same central maps.
+Subtracting at a fixed input removes their constants.
+
+Finally each finite lower path contains a fixed positive action
+before its slow strip, and the radial input has the common large
+power on a fixed interval smaller than one. The fixed inner central
+connection contributes a further positive action. The absolute
+variational estimates of Section~\ref{rw:transitions} therefore
+bound the selected derivatives of both complete deviations by a
+finite inverse power of $\epsilon$ times $e^{-c_0/\epsilon}$.
+Decrease $c<c_0$ to absorb that power. This proves
+\eqref{rw:joint:absolute}, including its continuous radial endpoint.
+\end{proof}
+
+\subsection{Actual columns on the whole separated interval}
+
+\begin{proposition}\label{rw:joint:separated}
+For $\delta>|\zeta|$, on the common interval $J$,
+\begin{equation}\label{rw:joint:Hadamard}
+ H:=\partial_{s_\epsilon}K
+       =\tau H_\tau+\zeta H_\zeta+\nu H_\nu .
+\end{equation}
+The three columns are uniformly bounded in $C^2(J)$.
+As the scale and coefficient neighborhood tend to the joint limit,
+\[
+ \|H_\tau-U_0\|_{C^1(J)}
+       +\|H_\zeta-V_0\|_{C^1(J)}\longrightarrow0,
+\]
+where $U_0,V_0$ are \eqref{rw:joint:limit-columns}.
+This convergence permits every ratio of the two positive gaps.
+\end{proposition}
+
+\begin{proof}
+At the center endpoint, Proposition~\ref{rw:domains:separated}
+gives $K=H=0$. Thus the Hadamard columns on this same domain are
+\[
+ H_i(s_\epsilon;\mathbf b)
+   =\int_0^1\partial_iH
+       (s_\epsilon;\bar B,\delta,t\tau,t\zeta,t\nu)\,\dd t,
+ \qquad i=\tau,\zeta,\nu.
+\]
+Overlapping descriptions give the same integrals. After removing the
+constant in $K$, Lemma~\ref{rw:joint:relative-expression} supplies
+their $C^2$ bounds from $s^3\mathbf b^1$ and their $C^1$ coefficient
+Lipschitz bounds from $s^2\mathbf b^2$, within total order four.
+
+At a fixed positive center gap $g$, the scale limit on every compact
+positive subinterval of $J$ is the derivative of
+$A_+(p)-A_-(q(p))$. To verify this directly, the lower logarithm
+integrates its reduced normal rate to $A_+$ or $A_-$; its relative
+logarithms and regular endpoint corrections are multiplied by
+$\epsilon$ and tend to zero after input differentiation.
+The upper limit is the finite-time return of
+\eqref{rw:joint:linear-upper}. At fixed positive gap and finite
+$p$, its time and crossings are transverse, so the original upper
+equations and their coefficient variational equations converge
+there. This proves the limit also after the one coefficient and
+one input derivatives used for the columns.
+
+Lemma~\ref{rw:joint:principal-columns} gives that limiting
+function in a single expression on the closed interval, with the
+exponentially small reciprocal return retained. The finite-scale
+columns have a uniform $C^2$ bound. Comparing their values and
+first derivatives on $[0,s_2]$ to those at a fixed $s_2>0$,
+and then decreasing $s_2$, extends the fixed-gap convergence to
+$C^1(J)$, including zero. The limiting formula supplies the same
+Lipschitz control there.
+
+The gap derivative bound makes the order of limits explicit. For a center
+column
+$\mathsf H_\epsilon(g)$ and $0<g\le g_0$, the actual gap
+derivative bound gives
+\[
+ \|\mathsf H_\epsilon(g)-\mathsf H_*\|_{C^1}
+ \le Cg_0+
+ \|\mathsf H_\epsilon(g_0)-\mathsf H_0(g_0)\|_{C^1}
+ +\|\mathsf H_0(g_0)-\mathsf H_*\|_{C^1}.
+\]
+Choose $g_0$ small first and then the scale. Formula
+\eqref{rw:joint:limit-columns} controls the last term, while the
+fixed-gap convergence controls the middle term. The same retained mixed
+derivatives compare an off-center Hadamard column to its center value
+with error
+$C(|\tau|+|\zeta|+|\nu|)$ in $C^1(J)$.
+All coefficient segments remain in the fixed-mean passing domain.
+Thus no estimate depends on
+$(\delta+\zeta)/(\delta-\zeta)$.
+\end{proof}
+
+\subsection{The contact numerator with two signed gaps}
+
+Use the center-calibrated moving entries of
+Proposition~\ref{rw:center-coordinates}, including their fixed
+regular initial legs. Denote the entries at the fixed fast sections
+by $u(p),v(p)$. They have bounded finite jets and
+$u_p,v_p<-c<0$. Their exact slow factors are
+\[
+ f_L(u)=u^2+\delta-\zeta,\qquad
+ f_U(v)=v^2+\delta+\zeta.
+\]
+Each scalar path ends at a fixed positive exit. A positive gap permits
+the whole path; for a nonpositive gap the calibrated entry must exceed
+the positive root. Including the finite initial leg gives exactly the
+passing test of Proposition~\ref{rw:domains:contact}. Since both entries
+decrease with $p$, the two tests select one common interval.
+
+The moving-entry estimates of
+Lemma~\ref{rw:transitions:moving-rate}, followed by the incoming
+horizontal and central maps, give
+\begin{equation}\label{rw:joint:contact-rates}
+ \frac{D_{uu}}{D_u}=\frac{A_L(u)}{\epsilon f_L(u)},\qquad
+ \frac{J_{vv}}{J_v}=\frac{A_U(v)}{\epsilon f_U(v)}.
+\end{equation}
+The two numerators have positive margins and bounded finite mixed
+jets on the larger auxiliary product domain. More explicitly,
+\[
+ N_L=\beta_L(u,0)+\epsilon f_L\widetilde j_L',\qquad
+ N_U=h_I\beta_U(v,0)+f_U\Psi',
+\]
+\begin{equation}\label{rw:joint:contact-A}
+ A_i=N_i-\epsilon f_i'
+                  +\epsilon f_iN_i'/N_i,\qquad i=L,U.
+\end{equation}
+Here $\widetilde j_L$ is the complete lower relative logarithm.
+Writing the upper normal output as
+$\chi=C L_Ue^{j_U}$, one may take
+$\Psi=h_Ij_U+P_I(\chi)$, with the fixed regular units
+included. The absolute derivatives of $\chi$ are bounded even
+when its slow exit is lost, so the displayed expression has the
+required mixed extension. Choose the contact radius and gaps small
+enough that $f_U\Psi'$ does not remove the positive margin of
+$h_I\beta_U$. Formula \eqref{rw:joint:contact-A} is the direct
+identity obtained from $\partial\log D=N/(\epsilon f)$.
+In particular the upper block retains its $q=1$ normal dynamics;
+the $\epsilon$ in this logarithmic rate comes from the incoming
+horizontal exponent.
+
+For the complete maps $D_+(p)=D(u(p))$, $J_+(p)=J(v(p))$,
+differentiate in the unchanged finite input:
+\begin{equation}\label{rw:joint:contact-numerator}
+\begin{split}
+ \mathcal M
+ &=f_L(u)f_U(v)K_p\\
+ &=f_L(u)A_U(v)v_p-f_U(v)A_L(u)u_p\\
+ &\quad+\epsilon f_L(u)f_U(v)
+             \left(\frac{v_{pp}}{v_p}-\frac{u_{pp}}{u_p}\right).
+\end{split}
+\end{equation}
+Both multiplying factors are positive on the actual passing interval,
+so $\mathcal M$ and $K_p$ have the same zeros there, with the same
+multiplicities. The right side extends smoothly to the larger auxiliary
+domain even when a passage is absent. Reserve primitive total order
+eight here. The two derivatives spent on the logarithmic rates and
+connection curvature leave $C_p^3C_{\mathbf b}^3$ bounds for
+$\mathcal M$; the ensuing Taylor argument uses only
+$C_p^2C_{\mathbf b}^2$. This is a separate budget from the
+order-five separated construction.
+
+\begin{proposition}[Contact comparison and transverse jets]
+\label{rw:joint:contact}
+Let $A=|\tau|+|\zeta|+|\nu|$ and compare with the one center
+\[
+ \mathbf b_c=(\bar B,\delta+3A,0,0,0).
+\]
+On the whole original contact passing interval,
+\begin{equation}\label{rw:joint:contact-Taylor}
+ \mathcal M=\tau C_\tau+\zeta C_\zeta+\nu C_\nu+\mathcal R,
+ \qquad \|\mathcal R\|_{C_p^2}\le CA^2,
+\end{equation}
+where $C_i=\partial_i\mathcal M|_{\mathbf b_c}$ have bounded
+$C^2$ norms. At the joint limit the value and first input jets of
+$(C_\tau,C_\zeta)$ at $p=P$ are those of
+\begin{equation}\label{rw:joint:contact-columns}
+ U_*(p)=p^2-p/\gamma,\qquad
+ V_*(p)=4p^2/\gamma-2p/\gamma^2
+\end{equation}
+multiplied by one smooth positive unit. Their Wronskian there is
+therefore a positive multiple of $-2/\gamma^4$.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{rw:domains:contact} supplies the entire lifted
+coefficient segment and the inclusion of every original passing
+input in its slow domain. It also supplies the real center identity
+$D_+=J_+$ at its endpoint, for either sign of $\delta+3A$.
+Thus $\mathcal M=0$ there. Varying $\delta$ along strictly passing
+centers preserves this identity, so its passive $\delta$ derivative
+also vanishes, as explained after that proposition. Taylor's formula
+on the same larger domain gives \eqref{rw:joint:contact-Taylor}: the
+displacement in $\delta$ has length $3A$ but contributes only to the
+quadratic remainder. Here $A$ is held fixed for the original fibre;
+the absolute values defining it are not differentiated.
+
+We verify the limiting transverse jets before dividing by either
+slow factor. In this calculation abbreviate the barred coefficients
+by $B,m,a,c$, put $M=-m$, and use
+\[
+ F_L=1+ap+Bp^2,\qquad F_U=1-cp+Mp^2.
+\]
+At zero scale and $\nu=0$, the initial lower Morse coordinate is
+$-a/2-Bp$, giving the factor $BF_L$. The upper linear field
+has the exact scalar coordinate
+\[
+ v_0=\frac{c/2-MX-cMY/2}{1+MY},\qquad
+ v_0'=v_0^2+M-c^2/4,\qquad v_0(p,0)=c/2-Mp.
+\]
+Its initial factor is $MF_U$. These are the zero-scale limits of
+the calibrated entries, up to their finite initial scalar flows.
+They use the same strong-fibre normalization fixed in Section
+\ref{rw:centers}; they are not independent choices of gap.
+
+The calibrated entries differ from these explicit entries by finite
+scalar flows whose times depend on $p$. Retaining this dependence, if
+$u_i=\phi^i_{T_i(p)}(e_i(p))$ and
+$\lambda_i=\partial_e\phi^i_{T_i}(e_i)>0$, then exactly
+\begin{equation}\label{rw:joint:variable-time}
+ f_i(u_i)=\lambda_i f_i(e_i),\qquad
+ (u_i)_p=\lambda_i(e_{i,p}+f_i(e_i)T_{i,p}).
+\end{equation}
+The first identity is the scalar variational equation. The times
+$T_i$ and their selected derivatives are bounded on these finite
+regular legs; the lower scalar time includes its factor $\epsilon$.
+After division of \eqref{rw:joint:contact-numerator} by
+$\lambda_L\lambda_U$, its first two terms are
+\[
+ f_L(e_L)A_U(v)e_{U,p}-f_U(e_U)A_L(u)e_{L,p}
+ +f_L(e_L)f_U(e_U)(A_U(v)T_{U,p}-A_L(u)T_{L,p}).
+\]
+The curvature term also retains the product of the two initial
+factors. At the joint center each such factor is a positive
+multiple of $(1-\gamma p)^2$. A transverse derivative of their
+product has zero value and zero first $p$ derivative at $P$.
+This explains why variable times and curvature are present in the
+full numerator but do not change the two limiting jets.
+
+For a positive upper gap, the exact return rate
+\eqref{rw:joint:linear-rate} gives the zero-scale expression
+\[
+ F_LF_U K_p^0
+ =pF_U-pF_L\,
+        \frac{M+c/q+1/q^2}{B-a/q+1/q^2}.
+\]
+The scalar identities \eqref{rw:joint:variable-time} show that
+the zero-scale multiplier in \eqref{rw:joint:contact-numerator}
+is this product times the positive smooth unit
+$BM\lambda_L\lambda_U$. Its long upper transit remains in $q$;
+it has not been included among the bounded initial times.
+
+At the joint contact point the reciprocal $1/q$ and the finitely
+many mixed derivatives needed for these jets tend to zero.
+One way to verify this is the normally dominated moving upper
+passage of Section~\ref{rw:transitions}: its normal output is a
+positive regular multiple of $1/q$, its transit tends to infinity,
+and its differentiated absolute estimates tend to zero. In the
+linear field the same conclusion follows from
+\[
+ e^{cz/\Omega}
+ \left(\cos z+\frac{2Mp-c}{\Omega}\sin z\right)=1:
+\]
+at $p=P$, $z\to\pi/2$ as the gap decreases to zero, and the
+reciprocal output decays exponentially in $1/\Omega$.
+The mixed extension, rather than a pointwise asymptotic alone,
+permits the required transverse differentiation.
+
+Consequently the limiting transverse value and first input jets
+are those of the master numerator
+\begin{equation}\label{rw:joint:master}
+ \mathscr N
+ =F_LF_U\left(\frac p{F_L}-\frac{Mp}{BF_U}\right)
+ =\frac pB\{\varsigma(1-cp)-M\tau p\},
+ \qquad\varsigma=B-M.
+\end{equation}
+The columns in $(\tau,\varsigma)$ are
+$-p^2$ and $p(1-cp)/B$, with Wronskian $p^2/B>0$.
+At fixed mean gap the change of transverse coordinates at the
+joint center is
+$d\varsigma=-\gamma\,d\tau-2d\zeta$.
+It gives precisely \eqref{rw:joint:contact-columns}, whose
+Wronskian at $P$ is $-2/\gamma^4$.
+Multiplication by a smooth positive unit multiplies the determinant
+by the square of its value; its derivative only adds a multiple of
+the value row to the derivative row.
+
+The positive multiplier can also be identified from the initial
+factors. Their difference has transverse part
+$Bp\,\tau+(1-cp+2Bp^2)\varsigma$ on the center. It equals
+$(-B/p)\mathscr N+2F_L\varsigma$ to first coefficient order.
+The last term has zero value and first input derivative at $P$.
+The common rate times the decreasing entry derivative is negative,
+so its product with $-B/p$ is the same positive unit. This also
+checks the sign without dividing by a vanishing factor.
+
+Finally the uniform mixed bounds for the multiplied numerator
+transfer these jets to the finite-scale columns and to either sign
+of the nearby comparison gap. More explicitly, compare first to a
+fixed positive center gap on the same larger domain, use finite
+scale convergence there, and then decrease that gap; the retained
+coefficient derivative bound controls the first comparison by the
+gap difference. This is the same fixed-gap order of choices used
+above and does not differentiate a divergent action constant.
+\end{proof}
+
+\subsection{One direction across the actual overlap}
+
+\begin{lemma}\label{rw:joint:one-critical}
+On the union of the retained contact and separated domains, a
+noncenter fibre with $|\nu|\le\vartheta I$, for a common sufficiently
+small $\vartheta$, has at most one zero of $K'$, with multiplicity.
+At each critical point $|\tau|\ge cI$ and the second derivative
+has sign $\tau$ in every regular input coordinate.
+\end{lemma}
+
+\begin{proof}
+On the separated interval write
+$H=\tau U+\zeta V+\nu W$ using
+Proposition~\ref{rw:joint:separated}. Its limiting columns satisfy
+\[
+ V_0<0,\qquad
+ (U_0/V_0)'=-\frac{\gamma^2}{2(2\gamma-s)^2}<0
+\]
+with fixed margins on $J$. The columns have bounded $C^1$ norms
+and retain these signs after the restrictions already made.
+Lemma~\ref{rw:atlas:two-columns}, with error $\nu W$, gives
+$|\tau|\ge cI$ and a simple crossing of sign $\tau$ at every zero.
+
+In contact divide the limiting columns by the positive factor
+$p^2$ and their common positive unit. They become
+\[
+ U=1-\frac1{\gamma p},\qquad
+ V=\frac4\gamma-\frac2{\gamma^2p}.
+\]
+At $P$, $V=2/\gamma>0$ and $(U/V)_p=\gamma^2/2>0$.
+The retained higher jets in
+Proposition~\ref{rw:joint:contact} preserve these margins on one
+fixed smaller contact neighborhood. For the exact Taylor expression
+\eqref{rw:joint:contact-Taylor}, its remainder divided by $I$
+has $C^1$ norm $O(I)$ when $|\nu|\le\vartheta I$.
+The same lemma applies with $C^1$ error $O(|\nu|+I^2)$, giving
+$|\tau|\ge cI$ and $\operatorname{sign}\mathcal M_p=\operatorname{sign}\tau$
+at each zero. Since $f_Lf_U>0$ on the passing interval,
+\eqref{rw:joint:contact-numerator} gives
+$\operatorname{sign}K_{pp}=\operatorname{sign}\tau$ there.
+
+These statements concern the same $K$. If $p=p(s_\epsilon)$,
+then at a critical point
+\[
+ K_{s_\epsilon s_\epsilon}=K_{pp}(p_{s_\epsilon})^2.
+\]
+The positive square, not the sign of the input orientation,
+transports its second-derivative sign. Near infinity use the
+increasing fibre coordinate $-s_\epsilon$; the same identity
+applies to this regular radial coordinate.
+
+There is a genuine open overlap before this direction is used.
+Keep the contact radius $r$ already fixed and $0<d<r/4$.
+For two positive gaps every entry in a fixed interval, for example
+$(P+d,P+2d)$, passes both complete slow paths. It belongs to
+the contact neighborhood and to the separated finite patch, with
+slightly enlarged intervals at both ends. Their finite initial and
+final regular legs are the same actual trajectories by uniqueness,
+and their phases and references were fixed together in Section
+\ref{rw:centers}. Hence their $D_+,J,K$ agree on this open
+interval after the common regular input change.
+If one gap is nonpositive, the complete separated strip does not
+pass and is not adjoined; the contact whole-path conditions still
+select one interval.
+
+The positive-gap union is therefore one interval on which all critical
+points are simple and have the same second-derivative sign. Between
+two such crossings, $K'$ would have to cross in the opposite direction
+or have a nonsimple zero. Both are excluded. Thus the common direction
+gives at most one critical point on the whole union.
+The argument applies on every compact subinterval, hence on the
+whole half-open or compactified interval and at retained finite
+endpoint germs.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{rw:joint-local}]
+The preparations, domains and critical-point conclusions were proved
+above. We supply the forcing and the closing count.
+The fixed lower inner exit is on the central side of the repeated
+minimum. Its input-independent weak reference therefore continues to
+the core independently of that slow passage. The Gaussian calculation
+of Lemma~\ref{rw:finite:regular-lower}, on these fixed cores, gives
+$s_\pm=\mp\sqrt\epsilon\,\nu H_\pm$ and
+$H_c=H_++H_-=\sqrt{2\pi}+o(1)>h_*$ uniformly on the joint box.
+
+On the separated contraction, \eqref{rw:joint:absolute} and its
+center identity give
+$|D_+-J|\le C(I+|\nu|)e^{-c/\epsilon}$.
+The contact absolute maps have the same bound after one coefficient
+derivative: their separated entry and fixed exit give a normal
+flight of length at least $c/\epsilon$ in the lower block, and
+the incoming path has the fixed positive central action.
+The absolute estimates and their lost-exit extensions in Section
+\ref{rw:transitions} apply. Integrating along the entire lifted
+contact path of Proposition~\ref{rw:domains:contact} therefore
+gives that same relative bound on every original contact input.
+These comparisons concern signed central extensions; they do not
+assert positive total heights at all intermediate coefficients.
+
+Lemma~\ref{rw:centers:relative-forcing} consequently gives
+$|\nu|\le C\epsilon^{-1/2}e^{-c/\epsilon}I=\eta(\epsilon)I$
+on every fixed fibre containing a closing zero.
+At a zero the opposite signed references and positive deviations give
+positive common height, as in Section~\ref{rw:finite:three-saddle}.
+
+For a noncenter fibre the forcing bound meets the fixed threshold of
+Lemma~\ref{rw:joint:one-critical}. Its one-critical-point bound and
+Lemma~\ref{rw:zero-calculus} give at most three closing zeros on the
+common interval, including multiplicity. Restriction to actual counted
+orbits cannot increase this number. For $I=0$ the comparison is the
+real center identity. Reflection uses its new outgoing label and inverse
+upper passage and preserves Poincare multiplicity by Section~\ref{rw:geometry}.
+\end{proof}

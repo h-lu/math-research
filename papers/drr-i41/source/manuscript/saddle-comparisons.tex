@@ -1,0 +1,113 @@
+\subsection{Two-saddle comparison and action matching}
+\label{sec:two-saddle-comparison}
+
+On this coefficient face the two incident saddles lie on different
+scales, and both characteristic ratios tend to zero. Their local maps
+must be compared after the intervening nonlinear flight. We first derive
+its scalar action equation and the actual local section coordinates.
+Section~\ref{subsec:deg-degree-drop} then constructs their physical
+receiver and follows the passage over the full action range.
+
+\subsection{The two saddle scales}
+
+Let \(0<\kappa,\tau\ll1\), \(\delta=\kappa\tau\). In coordinates
+which put the negative saddle at \(u=-1\), the other two equatorial
+roots are \(u=a\) and \(u=c\). Write
+\begin{equation}\label{fx:pd}
+ p_{\rm d}=-\mathcal R(u+1)(u-a)(u-c),
+\end{equation}
+where
+\begin{equation}\label{fx:coefficient-graph}
+ a=\kappa A_{\rm d},\qquad a+c=1-3\nu .
+\end{equation}
+The quantities \(A_{\rm d},\mathcal R,c,c-a,1-3\nu\) and their
+reciprocals belong to fixed positive compact sets; \(A,C\) vary in
+fixed compact sets. Thus \(a\) tends to zero while \(-1\) and \(c\)
+remain separated. The vector field has the form
+\[
+ \dot u=\delta p_{\rm d}-Kw,\qquad
+ \dot w=-w(L+Ew),
+\]
+with
+\begin{equation}\label{fx:coefficients}
+\begin{aligned}
+ K&=1-\delta\mathcal R A(u+\nu)
+              +C\delta^2\mathcal R^2(u+\nu)^2,\\
+ L&=u\{1+\delta\mathcal R(u+2\nu)\},\qquad
+ E=C\delta^2\mathcal R^2(u+\nu).
+\end{aligned}
+\end{equation}
+On the intervening axis segment put \(h=-\delta p_{\rm d}>0\).
+Positive time runs from the cut \(u_+=a(1-\eta_+)\) to
+\(u_-=-1+\eta_-\), with fixed \(0<\eta_\pm<1\). The orbit equation is
+\begin{equation}\label{fx:graph}
+ w_u=\frac{w\{L(u)+E(u)w\}}{h(u)+K(u)w}.
+\end{equation}
+
+The tangential eigenvalues at \(a\) and \(-1\) are
+\(\delta\ell_+\) and \(-\delta\ell_-\), whereas their normal
+eigenvalues are \(-b_+\) and \(b_-\), where
+\[
+\begin{aligned}
+ \ell_+&=\mathcal R(1+a)(c-a),&
+ b_+&=a\{1+\delta\mathcal R(a+2\nu)\},\\
+ \ell_-&=\mathcal R(1+a)(1+c),&
+ b_-&=1-\delta\mathcal R(1-2\nu).
+\end{aligned}
+\]
+Define the small characteristic ratios used in the local maps by
+\begin{equation}\label{fx:exponents}
+ \chi=\delta\ell_+/b_+,\qquad
+ \beta=\delta\ell_-/b_-,\qquad q=\beta/\chi .
+\end{equation}
+Thus \(\chi\) is the exponent for the inverse positive Dulac map,
+whereas \(\beta\) is the exponent for the forward negative Dulac map.
+The normal rate at the positive saddle is of order \(\kappa\),
+while that at the negative saddle is bounded away from zero. Hence
+\(\chi\) is of order \(\tau\), \(\beta\) is of order
+\(\kappa\tau\), and \(q=\kappa Q_{\rm d}\) with
+\(Q_{\rm d}\) a positive unit. In particular,
+\begin{equation}\label{fx:log-smallness}
+ \beta|\log a|+q|\log a|\longrightarrow0.
+\end{equation}
+The inequality \(\beta\ll\chi\) will determine the sign in the
+comparison of the two Dulac maps. To transfer that sign to the return,
+we also need the nonlinear transition between their local sections.
+
+\subsection{A transition in accumulated action}
+
+Writing \(A_m=L/h\) separates the linear normal equation in
+\eqref{fx:graph} from its nonlinear part. The following calculation
+also applies to general coefficients for which \(h>0\):
+\begin{equation}\label{eq:comparison-middle}
+ w_u=A_m(u)w+\frac{E(u)-A_m(u)K(u)}{h(u)+K(u)w}\,w^2,\qquad h>0 .
+\end{equation}
+Let \(J'=A_mJ,\ J(u_+)=1\), and write \(h_-=h(u_-),J_-=J(u_-)\).
+For a fixed \(\lambda>0\), put
+\[
+ \rho=\frac{h_-J}{J_-h},\qquad
+ w=\lambda h\rho V .
+\]
+The factor \(J/J_-\) removes the linear amplification between the
+cuts, and \(\rho(u_-)=1\). This normalization isolates the remaining
+nonlinear change of height. In the saddle configuration above the
+amplification is exponentially large in \(1/\beta\); its exact value
+is given by the partial fractions in \eqref{fx:partial-fractions}.
+Direct substitution retains the denominator in the equation for \(V\):
+\begin{equation}\label{eq:comparison-action}
+ dV=-\frac{\lambda KV^2}{1+\lambda K\rho V}\,d\rho
+ +\frac{\lambda\rho(E-Kh'/h)V^2}{1+\lambda K\rho V}\,du .
+\end{equation}
+
+For bounded \(V=V(u_+)\), an early negative cut gives the actual
+section coordinates before the nonlinear amplification layer. Larger
+values of \(V\) require a different description of the same passage.
+Section~\ref{sec:fixed-exit-comparison}
+uses the coordinate \(\Theta=\beta\log V\) on a bounded nonnegative
+interval. For a positive limiting \(\Theta\) in that interval,
+\(V\) is exponentially large in \(1/\beta\), and the orbit leaves
+the small-height region before the negative saddle. Its height on a
+fixed exit section then supplies a regular coordinate. These are two
+overlapping parts of the orbit interval for the same coefficients.
+
+\input{dulac-section-matching}

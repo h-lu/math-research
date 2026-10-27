@@ -1,0 +1,261 @@
+\section{Local cyclicity of \texorpdfstring{\(I_2^1\)}{I21}}
+\label{sec:introduction}
+
+The Dumortier--Roussarie--Rousseau program reduces the finiteness
+problem for quadratic limit cycles to local cyclicity questions for
+specified limit-periodic sets~\cite{DRR1994}. We study the loop
+\(I_2^1\) through a nilpotent saddle--node at infinity. Our aim is
+to count the cycles approaching the entire loop, including parameter
+directions in which boundary roots merge or coefficient scales vanish
+independently, and to attain the resulting bound in the original family.
+
+Fix \(C_0>1\). We consider the five-parameter quadratic family
+\begin{equation}
+\label{eq:quadratic-family}
+\begin{aligned}
+ \dot x&=Ax-y+x^2+(\mu_2+\mu_3)xy+\mu_1y^2,\\
+ \dot y&=Cx+x^2+xy+\mu_3y^2
+\end{aligned}
+\end{equation}
+near the parameter
+\begin{equation}
+\label{eq:organizing-parameter}
+ (A,C,\mu_1,\mu_2,\mu_3)=(1,C_0,0,0,0).
+\end{equation}
+At this parameter the invariant parabola
+\begin{equation}
+\label{eq:organizing-parabola}
+ y=(x^2-C_0)/2
+\end{equation}
+and its resolved nilpotent saddle--node passage at infinity form
+the directed graphic \(\GammaI\), denoted \(I_2^1\) in the DRR
+classification \cite[Proposition~4.2.2(6), Figure~8(6)]{DRR1994}
+(see \cref{sec:graphic-central-return,fig:organizing-graphic-new}).
+
+We measure proximity to this graphic on the Poincar\'e sphere
+\(\mathbb S^2\), where the Poincar\'e compactification of
+\eqref{eq:quadratic-family} is an analytic vector field. Let
+\(\distH\) denote Hausdorff distance for a fixed metric on
+\(\mathbb S^2\). When resolved or scaled coordinates are used below,
+the sets are projected back to \(\mathbb S^2\) before their Hausdorff
+distance is taken.
+
+For \(\varepsilon>0\) and a neighborhood \(V\subset\mathbb R^5\) of the
+organizing parameter \eqref{eq:organizing-parameter}, let
+\(N(V,\varepsilon)\) be the supremum over \(p\in V\) of the number of
+limit cycles \(\gamma\) of \eqref{eq:quadratic-family} with parameter
+\(p\) such that \(\distH(\overline\gamma,\GammaI)<\varepsilon\).
+Following the Hausdorff formulation of cyclicity in
+\cite[Definition~2.2(2)]{DRR1994} (see also
+\cite[\S2.2.1]{Roussarie1998}), the cyclicity of
+\(\GammaI\) in the family \eqref{eq:quadratic-family} is
+\begin{equation}
+\label{eq:cyclicity-definition}
+ \Cycl(\GammaI)=\inf_{V,\,\varepsilon}N(V,\varepsilon).
+\end{equation}
+The Hausdorff condition requires proximity to the whole graphic.
+
+\begin{theorem}[Local upper bound]
+\label{thm:direct-finite-cyclicity}
+For every fixed \(C_0>1\), there exist a neighborhood
+\(V\subset\mathbb R^5\) of \((1,C_0,0,0,0)\) and a number
+\(\varepsilon>0\) such that, for every \(p\in V\), the vector field
+\eqref{eq:quadratic-family} with parameter \(p\) has at most three
+periodic orbits \(\gamma\) with
+\[
+ \distH(\overline\gamma,\Gamma(C_0))<\varepsilon .
+\]
+Each of these periodic orbits is a limit cycle. In particular,
+\(\Cycl(\GammaI)\le3\).
+\end{theorem}
+
+\begin{proposition}[Three periodic orbits]
+\label{prop:three-cycle-lower-bound}
+For every fixed \(C_0>1\), there is a sequence of parameters
+\(p_n\to(1,C_0,0,0,0)\), with \(C=C_0\), for which
+\eqref{eq:quadratic-family} has three distinct isolated periodic
+orbits \(\gamma_{j,n}\), \(j=1,2,3\), satisfying
+\[
+ \distH(\overline{\gamma_{j,n}},\Gamma(C_0))\longrightarrow0.
+\]
+These orbits eventually lie in every fixed sufficiently small
+neighborhood of the whole graphic, and in particular satisfy the
+Hausdorff condition of \cref{thm:direct-finite-cyclicity}.
+\end{proposition}
+
+\begin{corollary}[Cyclicity three]
+\label{cor:exact-local-cyclicity-three}
+For every fixed \(C_0>1\), \(\Cycl(\GammaI)=3\).
+\end{corollary}
+
+The three orbits of \cref{prop:three-cycle-lower-bound} are also
+hyperbolic and persist on open sets in the original five-parameter space
+arbitrarily close to the organizing parameter
+(\cref{cor:hyperbolic-triple}).
+
+The neighborhood \(V\) and the radius \(\varepsilon\) depend on
+\(C_0\). Their construction uses, in particular, the positive
+speed \eqref{eq:parabola-speed-new} of the organizing orbit and the
+limiting contraction multiplier \(\Lambda_0<1\) of
+\cref{lem:exterior-multiplier-new}.
+The speed bound \((C_0-1)/2\) tends to zero as \(C_0\downarrow1\),
+and the margin \(1-\Lambda_0\) tends to zero as \(C_0\to\infty\).
+
+\subsection*{Relation to previous work}
+
+The DRR program develops normal forms near saddle--nodes and applies them to
+finite-cyclicity questions; see Dumortier, Ilyashenko, and Rousseau
+\cite{DIR2002}. Related parts of the program treat the degenerate graphics
+$DF_{1a}$ and $DF_{2a}$ \cite{DR2009}, with the latter study completed in the
+remaining chart by Huzak \cite{Huzak2018}. For graphics through
+triple nilpotent points, Roussarie and Rousseau study the center graphic
+$I_{14}^1$ and distinguish it from the blown-up boundary limit-periodic sets
+appearing in the same analysis \cite{RR2015}; Rousseau, Shan, and Zhu treat
+the saddle-type graphics $I_{12}^1$ and $I_{13}^1$ \cite{RSZ2016}.
+
+Huzak and Kristiansen develop entry--exit formulas for degenerate turning
+points and apply them to the present five-parameter family
+\cite[Theorem~2.4 and \S6]{HK2026}. Their theorem constructs a local Dulac
+map, with finite-order remainder estimates in a logarithmic parameterization,
+in a principal root-free region where the scaled boundary drift has a uniform
+sign margin. Their Section~6 derives the entry--exit relation for this
+family and leaves the cyclicity analysis to further work. The passage
+problem here also includes merging boundary
+roots, roots approaching the central section, and independently
+vanishing coefficient scales. We compare the two endpoint maps on the
+full interval of admissible central heights, compose them with the
+exterior transition, and use geometric capture to count the periodic
+orbits satisfying the whole-graphic Hausdorff condition.
+
+The root-free calculation enters our buffered compact-exit analysis
+through the leading relation between normalized exit radii,
+\[
+ f_\Lambda(\rho)=\frac{\Lambda\rho}{1+(1+\Lambda)\rho}.
+\]
+Here \(\rho\) is the normalized positive exit radius and \(\Lambda\)
+is the boundary-action multiplier. This relation is the inverse,
+after a sign change and positive rescaling, of the base-point relation
+in Huzak--Kristiansen \cite[(2.13) and (6.8)]{HK2026}.
+The change of variables is given after
+\eqref{eq:direct-buffered-fractional-relation}.
+
+Uniform \(C^3\) matching transfers this relation to the endpoint maps
+used for counting. Drift-weighted estimates treat the other passage
+regions, and a scattering comparison treats contact with the central
+section. The parameter cover combines these comparisons into the
+upper bound. A direct matching construction and variation of the
+connection splitting then attain it with \(C=C_0\).
+
+Finite-order passage analysis for canard cycles with singular slow dynamics,
+including divergence comparisons and exponential-flatness estimates, was
+developed by De Maesschalck and Dumortier \cite{DMD2008}. For limit-periodic
+sets associated with singular slow dynamics, their later work obtains
+cycle bounds by studying suitable derivatives of the slow-divergence integral,
+even when that integral is unbounded \cite{DMD2011}.
+Mar\'in and Villadelprat give parameter-dependent
+hyperbolic-saddle Dulac expansions, including the near-resonant case
+\cite{MV2024}. These works provide the background for the passage
+estimates and derivative comparisons developed here.
+
+\subsection*{Proof strategy}
+
+The proof has two counting steps. For fixed parameters, we control
+one return displacement \(\Delta_p\) on its full interval
+\(\mathcal H_p\) of central heights. A finite cover of parameter
+space then selects an applicable estimate throughout a neighborhood
+of the organizing value. Geometric capture connects these zeros to
+the periodic orbits in the theorem.
+
+\emph{A common height for the two halves.}
+In normal-rate coordinates \((\eta,z)\), the field is
+\[
+ \dot\eta=q(\eta,p)-zB(\eta,z,p),\qquad \dot z=-\eta z.
+\]
+Here \(q(\eta,p)=q_0+q_1\eta+q_2\eta^2+\eta^3R_q(\eta,p)\)
+is the boundary drift. At fixed nearby \(A,C\), its coefficients
+\((q_0,q_1,q_2)\) are local coordinates in
+\((\mu_1,\mu_2,\mu_3)\) (Appendix~\ref{app:coordinates}).
+The central height \(h\) is the coordinate \(z\) on \(\eta=0\).
+From \((0,h)\), follow the positive half-orbit backward and the negative
+half-orbit forward. Their endpoint functions \(I_\pm(h)\) are defined
+on the same interval \(\mathcal H_p\). The regular exterior map
+\(\Pi_p\) maps the negative endpoint window to the positive one.
+The return displacement is
+\[
+ \Delta_p(h)=\Pi_p(I_-(h))-I_+(h).
+\]
+A zero expresses the matching of the two endpoints through the exterior
+transition.
+
+\emph{From endpoint derivatives to a zero count.}
+Both endpoint derivatives with respect to \(h\) are positive. The
+logarithmic slope ratio
+\(\mathcal L=\log[\Pi_p'(I_-)I_{-,h}/I_{+,h}]\) satisfies
+\[
+ \Delta_{p,h}=I_{+,h}(\e^{\mathcal L}-1).
+\]
+The zeros of \(\mathcal L\) are therefore the critical points of
+\(\Delta_p\). To bound them on the full height interval, we combine
+crossing directions on the outer height ranges with negative
+curvature at critical points on the middle range. The order of these
+ranges allows at most two zeros of \(\mathcal L\); Rolle's theorem
+then gives at most three zeros of \(\Delta_p\).
+
+\emph{Uniformity near degenerate passages.}
+The comparison must remain uniform when roots degenerate and coefficient
+scales vanish independently. Each endpoint derivative retains the tail
+multiplier \((z_*/t)^{-2q_2}\), even though the common quadratic term
+cancels from their ratio; this allows unbounded \(q_2\log t\).
+Near a boundary root, the leading curvature vanishes with the drift.
+The boundary-flow coordinate of \cref{lem:direct-boundary-flow}
+absorbs the height-dependent radial term, and
+\cref{lem:direct-weighted-phase} makes the phase correction smaller
+than any prescribed finite drift power after a fixed positive
+boundary-time advance. The resulting drift-weighted curvature formula
+\eqref{eq:direct-rate-curvature} preserves every fixed sign margin.
+
+The exterior transition supplies the remaining contraction when the
+singular slopes nearly agree. Its organizing derivative tends to
+\[
+ \Lambda_0=\exp\!\left(-\frac{4\pi}{\sqrt{C_0-1}}\right)<1
+\]
+as the sections approach infinity. Fixed sections retain a contraction
+margin, while the nonconstant exterior term carries the same drift
+weights as the passage terms. At central contact, a decreasing scattering
+derivative ratio with a small \(C^2\) error gives at most one middle
+critical point. The outer derivative signs then give at most two
+contact zeros on the full height interval.
+
+\emph{Realizing three cycles.}
+For the lower bound, keep \(C=C_0\) and choose a coefficient path in
+the root-free region with negative quadratic drift. Comparing the two
+boundary actions gives a compact exit profile with a strict negative
+minimum. The parameter \(A\) leaves the boundary drift unchanged and
+splits the organizing connection transversely, so it can adjust the
+additive constant of this profile. Three test exits then give two
+displacement zeros.
+
+This compact exit comparison alone does not locate the third cycle.
+Returning to the common central height, the organizing contraction gives
+the opposite displacement sign at a larger height. This supplies a third
+zero beyond the heights tested by the compact profile. Graph order and
+regular continuation then show that all three orbits converge to the
+whole graphic. The coefficient path, action matching, and splitting
+calculation are developed in \cref{sec:sharpness}; hyperbolicity and the
+separation of the third height follow in
+\cref{cor:hyperbolic-triple,cor:third-height-separation}.
+
+The proof is organized around these comparisons. The geometry and the
+common-height return problem are established in
+\cref{sec:graphic-central-return}, and
+\cref{sec:standard-tools,sec:direct-passage-estimates} give the counting
+principles and uniform passage estimates. Contact and positive offsets
+are treated in \cref{sec:contact-positive-offsets}. For negative offsets,
+\cref{sec:recurring-ranges} develops the height-range comparisons used on
+both coefficient scales; the primary-scale analysis is in
+\cref{sec:primary-regimes}, and the secondary-scale cases begin in
+\cref{sec:quadratic-regimes}. These are estimates on overlapping height
+intervals for fixed parameters. Their coverage of a full parameter
+neighborhood is proved separately in \cref{sec:direct-parameter-cover},
+where \cref{tab:direct-cover-guide} identifies the applicable comparison
+and bound in each region.

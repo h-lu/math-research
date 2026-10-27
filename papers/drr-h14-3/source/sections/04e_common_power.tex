@@ -1,0 +1,173 @@
+\subsection{Exact common powers and the joint derivative budget}
+
+The finite and radial preparations label the same outgoing orbits in
+different ways: by $p$ on $Y=0$ and by the horizontal phase.  We
+identify these labels through a regular connector before applying an
+upper slow passage.  This gives a common input for the two reflected
+lower powers.  Their exact exponents agree for the same field, so
+their singular power factors cancel in the logarithmic derivative
+ratio.
+
+\begin{lemma}[A common actual input]\label{rw:transitions:common-input}
+Fix a compact coefficient box and a fixed annulus
+$s_1\le\sigma\le2s_1$, where $\sigma=1/p$ and $p$ labels the
+outgoing intersection with $Y=0$. Suppose this annulus and a slightly
+larger one lie in the common low-layer connector to the selected
+horizontal section, before every upper slow block under consideration.
+Let $t$ be the reflected lower phase on that horizontal section.
+For each fixed finite order $N$,
+\[
+ t=t_\epsilon(\sigma),\qquad
+ \|t_\epsilon-\sigma\|_{C^N_{\sigma,\mathbf b},E_\epsilon}
+ \le C_N\epsilon(1+|\log\epsilon|)^{M_N}=o(1).
+\]
+There is consequently a common coordinate on these outgoing orbits
+which agrees with $t$ near the radial end and with $1/p$ on the
+finite side. On the overlap its selected jets and inverse jets are
+bounded and its derivative is positive. The choice is uniform in
+subsequent slow gaps, provided the stated connector remains in the
+fixed common domain.
+\end{lemma}
+\begin{proof}
+Use the reflected version of the lower phase and reverse its time.
+On $Y=0$ its phase is $\sigma+O_{C^N}(\epsilon)$ and its normal
+input is $Z_e=\epsilon A$, where $A$ is a positive bounded unit on
+this fixed annulus. Its backward normal velocity is $Z\beta_I$.
+Follow it to the fixed positive horizontal section, retaining the
+slightly larger annulus. In the normal logarithm
+$r=\log(Z/Z_e)$, the phase equation is
+\[
+ \frac{\dd x}{\dd r}
+   =-\frac{\epsilon g_I(x)}{\beta_I(x,Z_e e^r)}.
+\]
+The terminal value of $r$ is $\log(1/\epsilon)+O(1)$, since the
+horizontal section has a positive normal height. Its transversality
+has a fixed margin. Throughout this connector $Z_e e^r$ stays in
+the fixed normal tube. The phase moves by
+$O(\epsilon(1+|\log\epsilon|))$, so the larger annulus indeed
+contains it when the scale is small.
+
+For the mixed rows, the highest phase variation has coefficient
+$O(\epsilon)$ and its forcing is $\epsilon$ times bounded lower
+variations. The selected derivatives of $\log Z_e$ are bounded and
+$Z_e e^r$ stays in the tube. The scalar variational induction and
+Gronwall on this $O(1+|\log\epsilon|)$ interval therefore give the
+claimed $C_N\epsilon(1+|\log\epsilon|)^{M_N}$ bound. The fixed
+terminal transversality controls its endpoint rows; no slow denominator
+is inverted.
+
+On the fixed overlap choose a smooth cutoff $\chi$, equal to one
+at its radial side and zero at its finite side, and use
+\[
+ \sigma+\chi(\sigma)(t_\epsilon(\sigma)-\sigma).
+\]
+Its derivative is $1+o(1)$, and finite-order inverse differentiation
+gives the inverse bounds. Continue it by $t$ toward the radial end
+and by $\sigma$ toward the finite side. These are coordinates on
+the same actual outgoing orbits, obtained entirely within the regular
+connector. Subsequent coefficient paths and passing conditions are
+chosen inside these common charts.
+\end{proof}
+
+We now check the exponent equality needed for this cancellation.
+In the horizontal chart used above, the weak and normal
+rates at its origin are $\epsilon\bar B$ and $-(1-\epsilon\bar B)$.
+Reflection fixes both $\epsilon$ and $\bar B$. Thus, on a compact set
+$\bar B\ge B_*>0$, the two horizontal passages have the same exact
+exponent
+\begin{equation}\label{rw:transitions:equal-exponents}
+ \mu=\frac{1-\epsilon\bar B}{\epsilon\bar B},\qquad
+ h=\epsilon\mu=\frac{1-\epsilon\bar B}{\bar B}>h_*>0.
+\end{equation}
+The weak boundary $\bar B=0$ is treated by the unnormalized slow
+factor of Proposition~\ref{rw:lower-preparation}.
+
+\begin{lemma}[Cancellation before differentiation]\label{rw:joint-jet-budget}
+Let $D_\pm(s)=K_\pm s^{h/\epsilon}e^{P_\pm(s)/\epsilon}$,
+$K_\pm>0$, on $s>0$, with the same $h$ in both maps. Let
+$f(s)=s k(s)$, $k>0$, and suppose the following three factors have
+positive lower bounds:
+\[
+ 1+\frac{s k'}k,\qquad h+sP_+'(s),\qquad
+ h+f(s)P_-'(f(s)).
+\]
+Assume bounded total order $N+1$ for $k,P_\pm$ and order $N$ for
+$h,1/k$, on a common input and coefficient neighborhood. Then
+\begin{equation}\label{rw:transitions:common-power}
+\begin{aligned}
+ \epsilon\log\frac{(D_-\circ f)'(s)}{D_+'(s)}
+ ={}&C(\mathbf b,\epsilon)+h\log k(s)
+       +P_-(f(s))-P_+(s)\\
+ &+\epsilon\log\left(1+\frac{s k'(s)}{k(s)}\right)
+  +\epsilon\log\frac{h+f(s)P_-'(f(s))}{h+sP_+'(s)},\\
+ C(\mathbf b,\epsilon)={}&\epsilon\log(K_-/K_+).
+\end{aligned}
+\end{equation}
+After subtracting $C$, the right side has bounded total order $N$.
+No boundedness assertion for $C$ follows from this cancellation.
+\end{lemma}
+\begin{proof}
+Differentiate both amplitudes before cancelling factors. The power part
+of the ratio is
+\[
+ (f/s)^{h/\epsilon-1}f'
+       =k^{h/\epsilon}\left(1+\frac{s k'}k\right).
+\]
+The remaining factors are $h+fP_-'(f)$ and $h+sP_+'(s)$; logarithms
+give the identity. Their positive margins bound the reciprocals and
+logarithms. Each differentiated primitive costs one order, so the
+total-order chain rule gives the stated budget, including coefficient
+dependence of $f$ and Euler scale derivatives.
+\end{proof}
+
+The identity makes the derivative requirement explicit.  Primitive
+total order five leaves total order four for the nonconstant
+$R=K-K(0)$.  For $H=\partial_sR$, the orders $s^3\mathbf b^0$ and
+$s^2\mathbf b^1$ give two input derivatives and coefficient Lipschitz
+control of its first derivative. A Hadamard column additionally uses
+$s^3\mathbf b^1$ and $s^2\mathbf b^2$, still total order four.
+To use that column, one must also establish its center identity and
+the common domain along the whole coefficient segment; these are
+proved separately.
+
+For example $k=\alpha e^\psi$, with an input-independent $\alpha>0$
+that may be small, gives
+\[
+ h\log k=h\log\alpha+h\psi,\qquad
+ 1+s k'/k=1+s\psi'.
+\]
+Group $h\log\alpha$ with $C$; the remaining compositions use
+bounded jets of $f,\psi$.  Derivatives of the coefficient-only
+constant require separate action bounds.  Exact exponent equality is
+essential: an error $\delta\mu$ leaves the unbounded term
+$\epsilon\delta\mu\log f(s)$ at $s=0$.
+
+The constructions must therefore reserve the derivative orders before
+their domains are reduced.  The following allocation records the
+orders used later.
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
+\toprule
+Use & Primitive order and operations & Result used later\\
+\midrule
+Three lower connections & total order at least ten, including
+six input, two coefficient and two Euler orders & bounded relative
+units and their compositions on the stated common domains\\
+Separated joint columns & total order five; one derivative in
+\eqref{rw:transitions:common-power} & total order four for the
+nonconstant comparison, including $s^3\mathbf b^1$ and $s^2\mathbf b^2$\\
+Contact comparison & total order eight if three input and three
+coefficient derivatives of its numerator are retained & at most two
+orders spent on logarithmic rates and connection curvature\\
+Weak or cubic rate & total order eight; two rate derivatives and
+one later Hadamard division & three input and two coefficient orders
+of the divided numerator, once that division is justified\\
+Upper saddle & primitive total order six for the relative logarithm;
+total order eight for its curvature & four Euler and two coefficient
+orders of the respective object; curvature consumes two extra Euler
+orders\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The exact long-scale maps and their ordinary terminal-height derivatives
+are constructed separately.

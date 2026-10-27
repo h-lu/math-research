@@ -1,0 +1,258 @@
+\section{Two actual orbits following the whole graphic}
+\label{sec:lower-main}
+Fix $b\in(0,2)$ throughout this section. We use the subfamily
+\begin{equation}\label{eq:lower-realizing-family}
+ F=y(1+bz-y)+\varepsilon^2(z^2-z+c),\qquad
+ G=zy-\nu,\qquad c,\varepsilon>0,\quad \nu\ge0 .
+\end{equation}
+The weak saddle passage has a power-law exponent below one. We
+combine it with a strongly contracting complement whose splitting
+changes sign. The complement must be defined even when its output
+lies below the stable branch: only its positive outputs enter the
+saddle passage, and the boundary between them supplies the first
+displacement sign. We therefore construct it on a full signed
+rectangle, including the unstable outlet, before choosing periodic
+roots.
+
+\subsection{The signed complement}
+Set
+\[
+ z=cX,\qquad y=c\varepsilon^2Y,\qquad
+ e=\varepsilon/\sqrt c,\qquad
+ \lambda_+=\nu/(c^2\varepsilon^2),\qquad
+ \tau=ct_{\rm phys}.
+\]
+Then the exact equations are
+\begin{equation}\label{eq:lower-realizing-scaled}
+ X'=e^2\mathcal F(X,Y),\quad Y'=XY-\lambda_+,\quad
+ \mathcal F=Y(1+bcX-c^2e^2Y)+1-X+cX^2 .
+\end{equation}
+Near the smaller positive equilibrium, we select the invariant graph
+containing its weak stable branch. The finite-order product construction
+of Section~\ref{sec:normal-product}, applied in the proof of
+Lemma~\ref{lem:realizing-complement}, gives coordinates $(\xi,\omega)$
+and a positive time variable $s$ such that
+\begin{equation}\label{eq:lower-exact-power-main}
+ \frac{d\xi}{ds}=-r_s\xi,\qquad
+ \frac{d\omega}{ds}=\omega,\qquad
+ r_s=e^2\beta_s,\qquad 0<\beta_0\le\beta_s\le\beta_1 .
+\end{equation}
+For each fixed field, $r_s$ is its constant characteristic ratio.
+The stable branch is $\omega=0$ and the unstable branch
+is $\xi=0$. Fix an incoming cut at $\theta=\theta_b$ and an outgoing
+cut
+\[
+ \Sigma_{\rm out}=\{\omega=\omega_0,\ \xi=a,\ 0\le a\le a_2\}.
+\]
+The value $a=0$ is the actual unstable outlet. The incoming weak
+coordinate $\xi_0=\xi(\theta_b)$ is a positive unit. The local
+positive-side passage is exactly
+\begin{equation}\label{eq:lower-power-main}
+ D_p(s)=\xi_0(p)(s/\omega_0)^{r_s(p)},\qquad 0<s<\omega_0 .
+\end{equation}
+Here the argument $s$ is the incoming $\omega$-coordinate; at $s=0$
+the saddle flight is infinite.
+
+\begin{lemma}\label{lem:realizing-complement}
+There are fixed cuts, $a_2,\omega_0>0$, $m_N,K_0>0$, and a
+sufficiently small $c_0>0$ with the following property.
+The negative cut is $z=-q_g$, with $q_g>0$ fixed.
+For each fixed $0<c<c_0$ and all sufficiently small
+$\varepsilon>0$, put
+\begin{equation}\label{eq:lower-forcing-window}
+ \nu_+=4q_gK_0\varepsilon^3e^{-m_N/\varepsilon^2}.
+\end{equation}
+The forward complement of \eqref{eq:lower-realizing-family}, from
+$\Sigma_{\rm out}$ to the incoming cut, exists in finite physical
+time on the entire closed rectangle
+$[0,a_2]\times[0,\nu_+]$. Its signed output $H_{c,\varepsilon,\nu}(a)$
+is continuous there, has a strictly positive source derivative, and
+satisfies
+\begin{equation}\label{eq:lower-complement-contract}
+ |H_p(a)|<\omega_0/4,\qquad
+ 0<H'_p(a)\le M_\varepsilon:=e^{-m_N/(2\varepsilon^2)} .
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:lower-splitting-signs}
+ H_{c,\varepsilon,0}(0)>0,\qquad
+ H_{c,\varepsilon,\nu_+}(0)<0 .
+\end{equation}
+The images of the whole rectangle lie in one fixed neighborhood of
+$\Gamma_b$. As $c,e,\lambda_+\to0$, the outgoing
+passage and regular fast arc converge to the corresponding fast
+pieces of $\Gamma_b$, uniformly in $a$ and $\nu$.
+\end{lemma}
+
+Appendix~\ref{sec:lower-complement} proves the lemma by following every
+outgoing source through the height-phase exit, parabolic passage,
+fast arc, and moving descent. A fixed negative slow interval contracts
+both height differences and source derivatives. Its contraction
+dominates the subsequent positive amplification and the finite powers
+of $\varepsilon^{-1}$ incurred upstream. A final positive-time
+adjustment gives the signed output on the incoming cut, including
+negative outputs, which are outside the domain of $D_p$. Constants
+with a subscript $c$ are fixed after $c$ is chosen and absorbed by
+decreasing $\varepsilon$ afterward.
+
+\subsection{A homoclinic boundary and two roots of one field}
+Fix $c$ in the lemma's range and a constant $r_0\in(0,1)$.
+Before selecting the splitting parameter, choose $\varepsilon$
+in that range so that $e^2\beta_1<r_0$. Then $0<r_s(p)<r_0$
+holds throughout $0\le\nu\le\nu_+$. Keep $c,\varepsilon$ fixed
+and set $\alpha(\nu)=H_{c,\varepsilon,\nu}(0)$. By continuity and
+\eqref{eq:lower-splitting-signs},
+\[
+ \nu_*=\inf\{\nu\in[0,\nu_+]:\alpha(\nu)<0\}
+\]
+belongs to $(0,\nu_+)$, satisfies $\alpha(\nu_*)=0$, and is
+approached by parameters in the negative set. At this parameter
+the unstable outlet follows the finite complement to the stable
+branch of the same saddle, giving a homoclinic orbit. The sign
+change and continuity suffice for this choice of $\nu_*$.
+
+At $\nu=\nu_*$, write $h_1=H'(0)>0$. As $a\downarrow0$,
+\begin{equation}\label{eq:homoclinic-positive-displacement}
+ \frac{D_p(H_p(a))}{a}
+ \sim \xi_0\omega_0^{-r_s}h_1^{r_s}a^{r_s-1}
+ \longrightarrow\infty .
+\end{equation}
+Choose $a_1\in(0,a_2)$ where the return displacement is positive.
+On the other hand, $H_p(a_2)\le M_\varepsilon a_2$, so
+\begin{equation}\label{eq:lower-right-sign}
+ D_p(H_p(a_2))
+ \le C_D e^{-\beta_0m_N/(2c)}<a_2/4 .
+\end{equation}
+The unit bound for $\xi_0$ and the fixed cuts determine $C_D$.
+The last inequality is imposed in the initial choice of $c$, before
+$\varepsilon$ and $a_1$ are chosen.
+
+Choose a single $\nu>0$ in the negative set sufficiently close
+to $\nu_*$ that $H_p(a_1)>0$ and the positive middle displacement
+persist. Since $H_p$ is strictly increasing and $H_p(0)<0$,
+there is a unique $a_{\min}\in(0,a_1)$ with $H_p(a_{\min})=0$.
+The actual returning interval is
+\begin{equation}\label{eq:actual-lower-return}
+ J_p=(a_{\min},a_2],\qquad
+ \Pi_p(a)=D_p(H_p(a)).
+\end{equation}
+Its left displacement limit is $-a_{\min}<0$. Its middle
+displacement at $a_1$ is positive, and its displacement at $a_2$
+is negative by \eqref{eq:lower-right-sign}. Thus there are distinct
+roots
+\begin{equation}\label{eq:two-return-roots}
+ a^-\in(a_{\min},a_1),\qquad a^+\in(a_1,a_2),\qquad
+ \Pi_p(a^-)=a^-,\quad\Pi_p(a^+)=a^+ .
+\end{equation}
+For $\alpha<0$ the estimate $H_p(a)\le M_\varepsilon a$
+still holds, hence every output of \eqref{eq:actual-lower-return}
+lies below $a_2/4$ in the same outgoing collar.
+Every root has $H_p(a)>0$ and finite canonical saddle time
+$T_s=\log(\omega_0/H_p(a))$.
+Since $ds=b_N(\theta)d\tau$ and $b_N\ge b_0>0$, its physical
+time is at most $T_s/(cb_0)$.
+
+\subsection{Minimal return and isolation}
+The complement and $D_p$ are passages of the same field on the
+same cuts. To show that their composition is the first return on
+$J_p$, we exclude an earlier intersection with the outgoing cut.
+Indeed $\omega$ increases after the outgoing hit until the
+horizontal positive cut is reached, then $Y$ increases to $e^{-2}$.
+Thereafter the physical height is at least $c^2$ before descent,
+well above the $O(c\varepsilon^2)$ outgoing collar.
+The regular outer tube is separated from that collar, and the
+descending and negative pieces have negative $z$. The signed
+connector has $z\le z_v<c\theta_b$. Its incoming adjustment
+has $\theta\le\theta_b$, while the outgoing cut has
+$\theta\ge\theta_b+\sigma$. Finally $D_p$ increases $\omega$
+to $\omega_0$ exactly once. These height and spatial clearances
+exclude every earlier hit.
+
+To prove isolation, transfer this return to the physical analytic
+section
+\[
+ S_h=\{y=c\varepsilon^2\delta_1\}
+\]
+inside the positive outgoing tube, with coordinate $q=-z/c$.
+Along the positive local passage $D_p$, put $u=Y-h(X)>0$,
+where $h$ is the selected stable graph.
+The incoming speed $\mathcal F$ is positive. At a first zero of
+$\mathcal F$, the equation for $u=Y-h(X)$ gives $Y'>0$, so
+$\mathcal F'=\mathcal F_Y Y'>0$, since $\mathcal F_Y>0$ in the tube.
+Thus $\mathcal F>0$ throughout this passage.
+At a zero of $Y'=XY-\lambda_+$ its derivative is
+$e^2\mathcal F Y>0$, so $Y$ has at most one critical point,
+a minimum. Both local endpoint heights are below $\delta_1$;
+this leg therefore cannot meet $S_h$ before the intended
+continuation beyond $\Sigma_{\rm out}$.
+The intended hit has positive vertical speed. The finite map
+$L_p(a)=-x_1(a,p)$ from the outgoing cut to $S_h$ is a
+$C^j$ orientation-preserving diffeomorphism. Its actual first return is
+$R_p=L_p\circ\Pi_p\circ L_p^{-1}$.
+At every interior returning point, the polynomial flow and its
+transverse hitting time are analytic. Thus $R_p$ is analytic on the
+connected physical returning interval. The displacement is not
+identically zero because it is positive at $L_p(a_1)$.
+Its interior zeros are therefore isolated. The two roots in
+\eqref{eq:two-return-roots} give distinct isolated orbits: a single
+orbit with two outgoing hits would contradict the established first
+return. They lie in $y>0$: on the axis $G=-\nu<0$, so an orbit through
+the positive outgoing cut could cross downward only and could not
+close after doing so. Simplicity will follow from the upper bound
+in Section~\ref{sec:combination}.
+
+\subsection{Each orbit converges to the entire graphic}
+Fix an open neighborhood $\mathcal U$ of $\Gamma_b$.
+All regular tubes, foot boxes, and axis strips are selected inside it
+before the realizing parameters are chosen. The whole complement
+rectangle has the following image bounds:
+\[
+ \begin{array}{ll}
+ \text{saddle and initial exit:}&|z|\le Cc,\quad |y|\le Cc\varepsilon^2,\\
+ \text{height-phase exit:}&|z|\le Cc,\quad 0<y\le c^2,\\
+ \text{positive parabolic passage:}&
+             \gamma(c^2+z^2)\le y\le M(c^2+z^2),\\
+ \text{negative slow passage:}&
+             |y|\le K_0\varepsilon^3+C_h\nu,\\
+ \text{signed connector:}&
+             |y|\le C_c\varepsilon
+                        e^{-(m_N-2I_\sigma c)/\varepsilon^2}.
+ \end{array}
+\]
+The parabolic and outer passages converge on every compact fast
+subarc avoiding the endpoints. Their moving descending foot
+$\Lambda_p(a)$ converges to $f_b$, uniformly on the source
+rectangle. The low slow passage has $F>0$ and covers all
+abscissae from $\Lambda_p(a)$ to $z_v=O(c)$.
+The final descending tail from $y=\rho$ to $K\varepsilon^3$
+has abscissa displacement
+$O(\rho)+O(\varepsilon^2(1+|\log\varepsilon|))$,
+so it stays in the foot's $O(\rho)+o(1)$ ball.
+
+Choose $c_n\downarrow0$ first, with $c_n<c_{n-1}/2$ and
+all fixed $c$ inequalities satisfied. For each $c_n$ choose
+$\varepsilon_n$ small enough to satisfy its finite-power smallness conditions,
+$e_n<1/n$, $\varepsilon_n<1/n$, the common local windows, and
+the uniform image error required at that stage.
+Also require $\nu_{+,n}/(c_n^2\varepsilon_n^2)<1/n$.
+The joint fast convergence fixes the required smallness of $c_n$
+before $\varepsilon_n$ is chosen.
+Then choose one $\nu_n$ and both roots as above.
+
+For either root separately, the local and initial parabolic pieces
+lie in the origin's $O(\rho)+O(c_n)$ ball until $z=\rho$.
+The remaining compact fast piece converges to $\gamma_b$, and the
+descending tail lies in the foot's $O(\rho)+o(1)$ ball.
+The slow graph has uniformly vanishing height and covers
+$[\Lambda_n,z_v]$. These facts give
+$\sup_{x\in L_n^\pm}\operatorname{dist}(x,\Gamma_b)\to0$.
+
+For the opposite inclusion, every compact fast subarc avoiding the
+endpoint balls is covered by each actual fast passage, with uniform
+parametrized convergence. Every point of $[f_b+\rho,-\rho]$
+is covered in abscissa by each monotone slow passage, with height
+tending to zero. The remaining graphic tails lie in the endpoint
+balls; each orbit has a cutoff point tending to the foot and a
+slow point at $z=-\rho$. Their distance from those tails is
+$O(\rho)+o(1)$. First take $\rho$ small and then $n$ large.
+This gives \eqref{eq:two-whole-limits} for each orbit individually
+and proves the existence and isolation part of assertion (ii).

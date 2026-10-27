@@ -1,0 +1,599 @@
+\section{Three simple cycles in every collar}\label{rw:lower-bound-section}
+
+We construct three cycles in one field on the regular block
+$\bar B=0$, $\bar m=1$. A variation at a reversible center gives a
+three-root closing profile. We first fix the scale and then choose a
+finite coefficient perturbation that preserves all three roots and
+their actual return paths. Finally, a sequence of scales makes each
+cycle converge to the entire hemicycle. This construction is independent
+of the upper bound.
+
+\subsection{The fixed-scale center and its actual saddle ratio}
+
+For $0<\epsilon\ll1$ take the original coefficients
+$B=0$, $m=\epsilon$ and $a=c=d=0$. The exact first integral is
+\begin{equation}\label{rw:lower:center-energy}
+ \mathscr H_\epsilon(x,y)=\frac{x^2}{2}+V_\epsilon(y),\qquad
+ V_\epsilon(y)=(1+\epsilon)y-\frac{\epsilon y^2}{2}
+                    -(1+\epsilon)\log(1+y),\quad y>-1.
+\end{equation}
+Indeed $V_\epsilon'=y(1-\epsilon y)/(1+y)$, so its Lie derivative
+cancels $x\dot x=-xy+\epsilon xy^2$.
+The potential decreases from infinity to zero on $(-1,0)$ and
+increases from zero to a nondegenerate maximum at $y=1/\epsilon$.
+Consequently the bounded well consists of periodic ovals with
+$0<\mathscr H_\epsilon<H_s$, where
+\begin{equation}\label{rw:lower:saddle-energy}
+ H_s=\frac1{2\epsilon}+1
+                  -(1+\epsilon)\log(1+1/\epsilon).
+\end{equation}
+Its boundary is the homoclinic loop through $(0,1/\epsilon)$,
+as in Proposition~\ref{rw:centers:reversible}.
+The two loop intersections with $y=0$ have normalized coordinates
+$P_s=Q_s=\sqrt{2\epsilon H_s}\to1$.
+
+We keep $\bar B=0$, $\bar m=1$ and use
+$(\bar a,\kappa,\nu)$ as local coefficient variables, where
+$\kappa=r-1$ and $r$ is the actual upper saddle ratio.
+For the finite-order constructions of Section~\ref{rw:transitions},
+reserve at least six total input, coefficient and Euler scale orders
+before choosing the common neighborhoods. The variation below uses
+ordinary coefficient derivatives at a fixed positive scale.
+The exact upper field before division by $Y+\epsilon$ is
+\[
+ X_\xi=Y(Y-1)+\epsilon\bar aX,\qquad
+ Y_\xi=(Y+\epsilon)(X+\bar cY)+\nu Y^2.
+\]
+At the center the saddle is $(0,1)$ and its Jacobian is
+$\left(\begin{smallmatrix}0&1\\1+\epsilon&0\end{smallmatrix}\right)$.
+Let $S$ be the moving saddle and $T$ the trace of its Jacobian.
+Differentiating both equilibrium equations gives
+\[
+ S_{\bar a}=(0,0),\qquad S_{\bar c}=(-1,0),\qquad
+ S_\nu=(-1/(1+\epsilon),0),
+\]
+and, including this motion in the trace,
+\[
+ T_{\bar a}=\epsilon,\qquad T_{\bar c}=1+\epsilon,\qquad
+ T_\nu=\frac{1+2\epsilon}{1+\epsilon}.
+\]
+Since $\kappa=-T/\lambda_u$ and $\lambda_u=\sqrt{1+\epsilon}$
+at the center, the parameter inverse
+$\bar c=\bar c_\epsilon(\bar a,\kappa,\nu)$ satisfies exactly
+\begin{equation}\label{rw:lower:actual-ratio}
+ \bar c_{\bar a}=-\frac{\epsilon}{1+\epsilon},\qquad
+ \bar c_\kappa=-\frac1{\sqrt{1+\epsilon}},\qquad
+ \bar c_\nu=-\frac{1+2\epsilon}{(1+\epsilon)^2}.
+\end{equation}
+The equilibrium and parameter Jacobians have uniform nonzero
+margins on a fixed positive-height box. The implicit function
+theorem therefore supplies this inverse with the finite coefficient
+jets used below on a common neighborhood.
+
+Choose the symmetric local saddle sections and coordinates of
+Section~\ref{rw:upper-resonance}. Its passage is
+\[
+ v=t^{1+\kappa}e^{w(t)},\qquad t>0,
+\]
+and at the reversible center it is exactly $v=t$.
+The two regular outer legs reach $Y=0$ with positive labels $p(t)$
+and $q(v)$ near one. Increasing $t$ or $v$ moves into the period
+annulus, giving $p_t,q_v<-c<0$ on smaller fixed intervals.
+
+\begin{lemma}[The regular lower block]\label{rw:lower:regular-block}
+With one fixed weak reference on each side, the two complete central
+maps have the form $s_++U(t)$ and $s_-+V(v)$, where
+\begin{equation}\label{rw:lower:regular-amplitudes}
+ U(t)=e^{-S_+(t)/\epsilon+\ell_+(t)},\qquad
+ V(v)=e^{-S_-(v)/\epsilon+\ell_-(v)}.
+\end{equation}
+On the indicated coefficient block the functions $S_\pm,\ell_\pm$
+have bounded prescribed finite ordinary input, coefficient and Euler
+scale jets. Moreover $S_\pm>s_*>0$ and
+$-S_+',-S_-'>c>0$. The reference values are independent of input,
+and
+\begin{equation}\label{rw:lower:reference-gap}
+ s_--s_+=\sqrt\epsilon\,\nu H,\qquad H>h_*>0,\qquad
+ H|_{\bar a=\kappa=\nu=0}\longrightarrow\sqrt{2\pi}.
+\end{equation}
+Thus $U',V'>0$, and the rates
+\[
+ \mathsf A_+=\epsilon U''/U',\qquad
+ \mathsf A_-=\epsilon V''/V'
+\]
+have positive margins and bounded finite mixed jets.
+For each of the finitely many coefficient derivatives used here,
+\begin{equation}\label{rw:lower:absolute-flat}
+ |\partial_{\mathbf b}^{\alpha}U(0)|
+ +|\partial_{\mathbf b}^{\alpha}V(0)|+u_\epsilon'(0)
+ \le C\epsilon^{-M}e^{-c/\epsilon},
+ \qquad u_\epsilon(t)=U(t;0)=V(t;0).
+\end{equation}
+At the center set
+$A_\epsilon=\epsilon u_\epsilon''(0)/u_\epsilon'(0)$;
+then $0<c\le A_\epsilon\le C$.
+\end{lemma}
+
+\begin{proof}
+Both axis labels lie in $(3/4,5/4)$, and $1\pm\bar aX$ have
+positive margins on a larger fixed interval. On the regular layer
+from $z=1$ to a fixed small $z=d_0>0$, the normal speed has a
+nonzero margin. The original graph equation with independent variable
+$z$ gives $P=p+\epsilon R(p,\mathbf b,\epsilon)$ with bounded
+finite jets, and likewise on the reflected side.
+
+Choose one weak graph and keep it fixed as $p$ varies.
+Proposition~\ref{rw:phase}
+and $w=\epsilon zT$ give its height as $\epsilon\nu$ times a
+function with bounded ordinary endpoint and coefficient jets on this
+compact positive $X$ interval. Its restriction at each $P$ has the
+same central reference. Apply Proposition~\ref{rw:transitions:central-core}
+with $P$ as an independent regular endpoint: $X=Py$ puts its weighted
+reference equation on a fixed interval, and $P$ has a positive lower
+margin. Its relative amplitude and the positive input deviation
+$d_0-z_b(P)$ therefore have bounded ordinary $P$ jets.
+With
+\[
+ A_\pm(p)=\int_0^p\frac{X}{1\pm\bar aX}\,\dd X,
+\]
+the outgoing deviation is $a_+(p)e^{-A_+(p)/\epsilon}$, with
+bounded mixed jets of $\log a_+$, since the layer correction
+\[
+ \frac{A_+(P)-A_+(p)}{\epsilon}
+   =R(p,\mathbf b,\epsilon)
+       \int_0^1 A_+'(p+s\epsilon R)\,\dd s
+\]
+has those bounds. Reflection gives the incoming statement. Composing
+with the two regular upper legs gives \eqref{rw:lower:regular-amplitudes};
+their jets and inverse margins are supplied by the low-layer estimate
+of Section~\ref{rw:upper-resonance}, whose scale carrier has integral
+$\epsilon\log(1+\delta/\epsilon)$. These connections exclude the
+saddle transit. The signs $A_\pm'>c$ and $p_t,q_v<-c$ give the
+action derivative margins.
+
+For the reference difference, both references vanish when $\nu=0$.
+Their Gaussian variational equations give a factor $\nu$ directly.
+At the center, the first $\nu$ variation $\eta$ on the outgoing
+core satisfies
+\[
+ \eta_X=\frac{X}{\epsilon(1+\epsilon)}\eta+\frac1{1+\epsilon}.
+\]
+A fixed positive endpoint contributes only an exponentially small
+terminal term at $X=0$. Thus
+\[
+ \eta(0)=-\frac1{1+\epsilon}
+       \int_0^{R_0}e^{-X^2/(2\epsilon(1+\epsilon))}\,\dd X
+       +O(\epsilon^{-M}e^{-c/\epsilon}).
+\]
+The reflected reference has the opposite derivative. The change
+$X=\sqrt\epsilon\,u$, with its Gaussian integrable majorant, proves
+the limit in \eqref{rw:lower:reference-gap}.
+On the larger small coefficient box the same kernel argument for
+the exact difference quotient in $\nu$ retains this leading positive
+term, with an error $O(\sqrt\epsilon)$ after division by
+$\sqrt\epsilon$. More explicitly, put $X=\sqrt\epsilon\,u$ and
+$z_b=\sqrt\epsilon\,\nu\zeta$ in
+\eqref{rw:relative:core-field}, using the continuous quotient at
+$\nu=0$. On each bounded $u$ interval its equation tends uniformly
+to $\zeta_u=u\zeta+1$; the weighted reference estimate and Gaussian
+kernel control the remaining tail. The outgoing value tends to
+$-\sqrt{\pi/2}$ and the reflected value to $\sqrt{\pi/2}$,
+uniformly in this coefficient box. This gives the uniform positive
+margin for $H$.
+These estimates use the weighted reference equation and its kernel,
+without requiring ordinary high-order $X$ derivatives at the Gaussian
+center.
+
+Finally put $Z_\pm=-S_\pm'+\epsilon\ell_\pm'>c$.
+Direct differentiation of \eqref{rw:lower:regular-amplitudes} gives
+\[
+ \epsilon U''/U'=Z_++\epsilon Z_+' /Z_+,
+\]
+and the corresponding identity for $V$. All required rate jets are
+therefore bounded and positive after reducing the scale.
+Each fixed coefficient derivative of the amplitudes costs only a
+finite inverse power of $\epsilon$, multiplying $e^{-s_*/\epsilon}$.
+This proves \eqref{rw:lower:absolute-flat} and the center rate bound.
+\end{proof}
+
+\subsection{A first variation with three simple closing zeros}
+
+The actual closing difference in these coordinates is
+\begin{equation}\label{rw:lower:closing}
+ F(t)=\mathscr D(t)-\sqrt\epsilon\,\nu H,\qquad
+ \mathscr D(t)=U(t)-V(v(t)).
+\end{equation}
+Define
+\[
+ K(t)=\epsilon\log\frac{V'(v(t))v'(t)}{U'(t)},\qquad D=t\partial_t.
+\]
+Integration of the lower logarithmic rates gives the exact formula
+\begin{equation}\label{rw:lower:exact-logarithm}
+\begin{aligned}
+ K(t)&=K_c+\epsilon\kappa\log t+\mathcal E(t),\\
+ K_c&=\epsilon\log\frac{(1+\kappa)V'(0)}{U'(0)},\\
+ \mathcal E(t)&=\int_0^{v(t)}\mathsf A_-(s)\,\dd s
+       -\int_0^t\mathsf A_+(s)\,\dd s
+       +\epsilon\left[w+\log\frac{1+\kappa+Dw}{1+\kappa}\right].
+\end{aligned}
+\end{equation}
+The constant term $K_c$ has the selected bounded coefficient jets.
+Write, at the center and in the actual parameters,
+\[
+ a_c(\epsilon)=\partial_{\bar a}K_c,\qquad
+ b_c(\epsilon)=\partial_\kappa K_c.
+\]
+Their limits are
+\begin{equation}\label{rw:lower:constant-columns}
+ a_c\longrightarrow-2/3,\qquad b_c\longrightarrow1.
+\end{equation}
+Indeed Lemma~\ref{rw:lower:regular-block} gives
+$K_c=A_+(p_c)-A_-(q_c)+O_{C_{\mathbf b}^2}
+(\epsilon(1+|\log\epsilon|))$ on $\nu=0$.
+At zero scale,
+\[
+ p_c=\frac{\sqrt{\bar c^2+4}-\bar c}{2},\qquad
+ q_c=\frac{\sqrt{\bar c^2+4}+\bar c}{2},
+\]
+and
+\[
+ A_+(p)=p^2/2-\bar ap^3/3+O(\bar a^2),\qquad
+ A_-(q)=q^2/2+\bar aq^3/3+O(\bar a^2).
+\]
+Use \eqref{rw:lower:actual-ratio} to differentiate these expressions
+at fixed $\kappa$ or fixed $\bar a$, respectively.
+The first derivative is $-2\int_0^1X^2\,\dd X=-2/3$.
+For the second,
+$p_{c,\bar c}=-1/2$, $q_{c,\bar c}=1/2$ and
+$\bar c_\kappa\to-1$, giving one.
+
+We also record directly the upper first variation needed here.
+In the prepared upper rectangle the orbital equation is
+\[
+ V_U=-rV/U-\sigma V^2-UV^3\mathcal R(U,V).
+\]
+At the center $V=t/U$, $r=1$ and $\sigma=\mathcal R=0$.
+For any bounded coefficient direction, the derivatives
+$\dot\sigma$ and $\dot{\mathcal R}$ are $O(\epsilon)$ with their
+needed finite state jets, by the original-field construction in
+Section~\ref{rw:upper-resonance}. Set $\dot V=(t/U)\eta(U)$.
+Linearization of this equation, with its fixed input, gives
+\[
+ \eta_U=-\dot r/U-\dot\sigma\,t/U
+                     -t^2\dot{\mathcal R}(U,t/U)/U,\qquad \eta(t)=0.
+\]
+At $U=1$, after removing $\dot r\log t$, this is
+\begin{equation}\label{rw:lower:upper-linearization}
+ \dot w(t)=\dot\sigma\,t\log t
+     -t^2\int_t^1\dot{\mathcal R}(u,t/u)\,\frac{\dd u}{u},
+ \qquad |D^j\dot w|\le C\epsilon t(1+|\log t|)\quad(0\le j\le3).
+\end{equation}
+Euler differentiation keeps $u,t/u$ bounded and adds bounded endpoint
+terms, proving the displayed estimates for the true saddle variation.
+
+The ratio variation supplies the logarithmic term in $K$. We choose
+the $\bar a$ direction to balance its constant term at a smaller input
+scale, and then use $\nu$ to shift the closing difference. These three
+choices produce the following profile.
+
+\begin{proposition}[The closing profile]\label{rw:lower-variation}
+For every sufficiently small $\epsilon>0$, there is a bounded
+direction $h_\epsilon\to3/2$, an exponentially small
+$\beta_\epsilon$, and positive numbers $\delta_\epsilon,S_\epsilon$
+such that along the original coefficient curve determined by
+\[
+ (\bar a,\kappa,\nu)=(h_\epsilon\theta,\theta,\beta_\epsilon\theta)
+\]
+the first variation $f_\epsilon=\partial_\theta F|_{\theta=0}$ obeys
+\begin{equation}\label{rw:lower:profile-limit}
+ \frac{f_\epsilon(\delta_\epsilon x)}{S_\epsilon}
+ \longrightarrow
+ P(x)=\frac{x^2}{2}-x\log x-x-\frac1{20}.
+\end{equation}
+The convergence is uniform on $[0,10]$ after continuous extension
+of the values at zero, and is $C^1$ on every compact subinterval
+of $(0,10]$. The curve uses the actual ratio inverse
+\eqref{rw:lower:actual-ratio}. This proposition requires no bound on
+the number of cycles of other fields.
+\end{proposition}
+
+\begin{proof}
+Put $L=\log(1/\epsilon)$ and choose
+\begin{equation}\label{rw:lower:direction-and-scale}
+ h_\epsilon=
+ \frac{\epsilon(L+\log L+\log A_\epsilon+2)-b_c}{a_c},\qquad
+ \delta_\epsilon=\frac{\epsilon}{A_\epsilon L},\qquad
+ S_\epsilon=u_\epsilon'(0)\delta_\epsilon>0.
+\end{equation}
+The limits \eqref{rw:lower:constant-columns} prove the assertion
+about $h_\epsilon$. First vary
+$(\bar a,\kappa,\nu)=(h_\epsilon\theta,\theta,0)$, and write
+$k_\epsilon=\dot K$ and $d_\epsilon=\dot{\mathscr D}$.
+At the center let $\mathsf A$ be the common lower rate;
+$\mathsf A(t)=A_\epsilon+O(t)$ with bounded finite derivatives.
+The variation of the endpoint is
+$\dot v=t(\log t+\dot w)$. Differentiating every term in
+\eqref{rw:lower:exact-logarithm} gives
+\[
+ \dot{\mathcal E}(t)
+ =\int_0^t(\dot{\mathsf A}_--\dot{\mathsf A}_+)(s)\,\dd s
+    +\mathsf A(t)t(\log t+\dot w)
+    +\epsilon(\dot w+D\dot w).
+\]
+The explicit $\kappa$ derivatives in the logarithm's numerator and
+denominator cancel, leaving the displayed moving-endpoint term.
+The mixed rate bounds and \eqref{rw:lower:upper-linearization} imply
+\begin{equation}\label{rw:lower:critical-error}
+\begin{aligned}
+ k_\epsilon(t)&=\epsilon(L+\log L+\log A_\epsilon+2)
+                 +\epsilon\log t+A_\epsilon t\log t+R_\epsilon(t),\\
+ |R_\epsilon(t)|&\le C\{t+t^2|\log t|
+                  +\epsilon^2t(1+|\log t|)\},\\
+ |R_\epsilon'(t)|&\le C\{1+t(1+|\log t|)
+                  +\epsilon^2(1+|\log t|)\}.
+\end{aligned}
+\end{equation}
+Here the rate-difference integral contributes $O(t)$, the error
+$\mathsf A(t)-A_\epsilon$ contributes $O(t^2|\log t|)$, and
+the upper relative terms give the last term in each bound.
+
+The identity $\log\delta_\epsilon=-L-\log L-\log A_\epsilon$
+now gives exactly
+\[
+ \frac{k_\epsilon(\delta_\epsilon x)}{\epsilon}
+ -(2+\log x-x)
+ =\frac{x}{L}(\log x-\log L-\log A_\epsilon)
+       +\frac{R_\epsilon(\delta_\epsilon x)}{\epsilon}.
+\]
+It proves $C^1$ convergence to $G(x)=2+\log x-x$ on compact positive
+intervals. The value error also tends to zero in $L^1(0,10)$:
+\eqref{rw:lower:critical-error} supplies an integrable majorant
+$C(1+|\log x|+x|\log x|)$ there, and quantitative integration gives
+an error $O((1+\log L)/L)$.
+
+The exact identity
+$\mathscr D'=U'(1-e^{K/\epsilon})$, differentiated at the center,
+is
+\begin{equation}\label{rw:lower:derivative-identity}
+ d_\epsilon'(t)=-u_\epsilon'(t)k_\epsilon(t)/\epsilon.
+\end{equation}
+Furthermore
+\[
+ \log\frac{u_\epsilon'(\delta_\epsilon x)}{u_\epsilon'(0)}
+ =\frac1\epsilon\int_0^{\delta_\epsilon x}\mathsf A(s)\,\dd s
+ =\frac{x}{L}+O(\epsilon/L^2),\qquad 0\le x\le10.
+\]
+The value $d_\epsilon(0)$ exists: the regular lower maps at the
+separatrix inputs are smooth in coefficients, and $t\log t\to0$.
+Integrating \eqref{rw:lower:derivative-identity} from zero gives
+\begin{equation}\label{rw:lower:integrated-profile}
+ \frac{d_\epsilon(\delta_\epsilon x)-d_\epsilon(0)}{S_\epsilon}
+ \longrightarrow J(x)=\frac{x^2}{2}-x\log x-x.
+\end{equation}
+The integrable majorant proves uniform convergence of values on
+$[0,10]$; the same identity proves $C^1$ convergence on compact
+positive intervals, with error $O((1+\log L)/L)$.
+
+It remains to realize the constant shift by an actual line-breaking
+parameter. At fixed $(\bar a,\kappa)$ put
+$e_\epsilon(t)=\partial_\nu\mathscr D(t)|_0$ and $H_\epsilon=H|_0$,
+and define
+\begin{equation}\label{rw:lower:line-breaking-direction}
+ \beta_\epsilon=
+  \frac{d_\epsilon(0)+S_\epsilon/20}
+       {\sqrt\epsilon\,H_\epsilon-e_\epsilon(0)}.
+\end{equation}
+Lemma~\ref{rw:lower:regular-block} implies
+\[
+ \sqrt\epsilon\,H_\epsilon-e_\epsilon(0)
+       \ge (h_*/2)\sqrt\epsilon,\qquad
+ |\beta_\epsilon|\le C\epsilon^{-M}e^{-c/\epsilon}.
+\]
+On the curve in the statement, the first variation satisfies exactly
+\[
+ \frac{f_\epsilon(t)}{S_\epsilon}
+ =\frac{d_\epsilon(t)-d_\epsilon(0)}{S_\epsilon}-\frac1{20}
+       +\beta_\epsilon
+          \frac{e_\epsilon(t)-e_\epsilon(0)}{S_\epsilon}.
+\]
+An absolute bound for the last difference would lose the exponentially
+small normalization $S_\epsilon$. Instead we use the differentiated
+closing identity. At fixed $\kappa$ the $\nu$ derivative of
+\eqref{rw:lower:exact-logarithm} has no $\epsilon\log t$ term.
+Its constant, rate-integral and upper terms are bounded, so
+$|K_\nu(t)|\le C$ for $0<t\le10\delta_\epsilon$.
+The differentiated exact identity gives
+\[
+ e_\epsilon'=-u_\epsilon'K_\nu/\epsilon,\qquad
+ \left\|\frac{e_\epsilon(\delta_\epsilon x)-e_\epsilon(0)}
+                    {S_\epsilon}\right\|_{C^1([a,b])}
+       \le C_{a,b}/\epsilon
+ \quad(0<a<b\le10).
+\]
+The value bound also holds on $[0,10]$. The derivative identity
+cancels the common factor $u_\epsilon'(0)$; the exponentially small
+$\beta_\epsilon$ then sends both normalized errors to zero.
+Since $\nu=0$ at the center, differentiation of $\nu H$ introduces
+only $\beta_\epsilon H_\epsilon$.
+Combining these facts with \eqref{rw:lower:integrated-profile}
+proves \eqref{rw:lower:profile-limit}; on each $[a,b]$ its error is
+at most
+\[
+ C_{a,b}\left(\frac{1+\log L}{L}
+                     +\frac{|\beta_\epsilon|}{\epsilon}\right).
+\]
+\end{proof}
+
+\subsection{Finite perturbations and localization}
+
+\begin{theorem}\label{rw:three-simple-cycles}
+For every open neighborhood $\mathscr U$ of the hemicycle $\Gamma$
+on the northern Poincare sphere, there is a sequence of quadratic
+fields tending to the base field, each with three distinct simple
+limit cycles whose northern images lie in $\mathscr U$.
+Each of the three sequences of cycles can be chosen to converge to
+the entire $\Gamma$ in Hausdorff distance.
+Consequently the quadratic cyclicity of $\Gamma$ is at least three.
+\end{theorem}
+
+\begin{proof}
+The profile has signs $-,+,-,+$ at $10^{-3},10^{-1},1,10$, and
+\[
+ P'(x)=x-\log x-2,\qquad P''(x)=1-1/x.
+\]
+Thus $P'$ has exactly two simple zeros, one on each side of one.
+Rolle's theorem and the four signs give exactly three simple positive
+zeros. Choose disjoint compact root intervals with $P'$ bounded
+away from zero and opposite endpoint signs.
+
+First choose $\epsilon$ so that Proposition~\ref{rw:lower-variation}
+preserves these margins. At this fixed scale, smooth coefficient
+dependence at positive section inputs gives
+\[
+ \frac{F(\delta_\epsilon x;\theta)}
+                 {\theta S_\epsilon}
+ \longrightarrow
+ \frac{f_\epsilon(\delta_\epsilon x)}{S_\epsilon}
+ \quad\hbox{in }C^1
+\]
+on the three intervals as $\theta\to0$, preserving one simple
+closing zero in each for every sufficiently small positive $\theta$.
+
+At the fixed scale, the center ovals with
+$10^{-3}\delta_\epsilon\le t\le10\delta_\epsilon$ form a compact
+family inside the bounded period annulus, with finite flights,
+transverse section crossings and a positive minimum central height.
+Continuous dependence preserves these properties for small $\theta$,
+so all three closing zeros compare actual positive outputs for the
+same field. The forward first return on the incoming saddle section is
+\[
+ \mathcal R(t)=U^{-1}\bigl(s_--s_++V(v(t))\bigr).
+\]
+Transversality preserves the center's single-turn itinerary.
+At a closing zero,
+\begin{equation}\label{rw:lower:actual-return-multiplier}
+ \mathcal R'(t)=\frac{V'(v(t))v'(t)}{U'(t)}=e^{K(t)/\epsilon},
+ \qquad F'(t)=U'(t)\bigl(1-\mathcal R'(t)\bigr).
+\end{equation}
+Since $U'>0$ and $F'\ne0$, the three zeros give three distinct
+hyperbolic cycles, each of multiplicity one. The admissible $\theta$
+may depend on $\epsilon$.
+
+We next locate the center ovals before making the final perturbation.
+At $\bar B=0$, $\bar m=1$, the saddle first integral used in the
+upper coordinates is
+\[
+ \mathcal H=X^2-\int_1^Y\frac{2s(s-1)}{s+\epsilon}\,\dd s
+       =2\epsilon(\mathscr H_\epsilon-H_s).
+\]
+The symmetric product coordinates satisfy $\mathcal H=-4UV$.
+On the normalized local sections,
+$UV=\chi_{\rm loc}^2t$, where the fixed section factor
+$\chi_{\rm loc}$ and its reciprocal are bounded.
+Thus, uniformly for the selected ovals,
+\begin{equation}\label{rw:lower:energy-localization}
+ H_s-\mathscr H_\epsilon
+          =\frac{2\chi_{\rm loc}^2t}{\epsilon},
+ \qquad \epsilon\mathscr H_\epsilon\longrightarrow\frac12.
+\end{equation}
+At the central section $x=0$, $z=s$, the identity
+\[
+ \mathscr H_\epsilon(0,s-1)
+     =(1+\epsilon)(s-1-\log s)
+                          -\epsilon(s-1)^2/2
+\]
+also shows $\epsilon(s-1-\log s)\to1/2$.
+
+Write $C_{\epsilon,t}$ for the center oval with section input $t$.
+We prove
+\begin{equation}\label{rw:lower:hausdorff}
+ \sup_{10^{-3}\delta_\epsilon\le t\le10\delta_\epsilon}
+ d_H\bigl(\iota(C_{\epsilon,t}),\Gamma\bigr)\longrightarrow0,
+\end{equation}
+where $d_H$ is spherical Hausdorff distance. We prove both distance
+estimates, so that the limit is the entire hemicycle.
+First take any sequence of points on selected ovals
+with $\epsilon\to0$. A bounded affine subsequence with a limit in
+$y>-1$ is impossible: \eqref{rw:lower:center-energy} stays bounded
+on compact subsets there, whereas the energies diverge uniformly.
+A bounded affine limit must therefore lie on $y=-1$.
+An unbounded sequence has $y>-1$, so every spherical accumulation
+point lies on the upper equatorial semicircle. Both types lie in
+$\Gamma$. Compactness proves that the maximum distance from the
+selected ovals to $\Gamma$ tends to zero.
+
+Conversely, let $E$ range over the selected energies, so that
+$\epsilon E\to1/2$ uniformly. For every fixed $M$, the lower branch
+of $V_\epsilon(y)=E-x^2/2$, $|x|\le M$, exists in $-1<y<0$.
+The potential is uniformly bounded on compact subintervals of
+$(-1,0]$, whereas $E-x^2/2\to\infty$. Hence this branch tends
+uniformly to $y=-1$, covering every finite point of the lower arc.
+At $y=0$ the two points $x=\pm\sqrt{2E}$ approach the horizontal
+equatorial endpoints.
+
+Fix an upper equatorial direction $(\cos\phi,\sin\phi)$ with
+$0<\phi<\pi$ and $\cos\phi\ne0$. On its ray take
+$(x,y)=c\epsilon^{-1/2}(\cos\phi,\sin\phi)$. Uniformly for $c$
+in a fixed compact positive interval,
+\[
+ \epsilon\mathscr H_\epsilon(x,y)
+     =\frac{c^2\cos^2\phi}{2}+o(1),
+ \qquad 0<y<1/\epsilon.
+\]
+Values of $c$ on opposite sides of $1/|\cos\phi|$ bracket every
+selected $E$. The intermediate value theorem supplies an intersection
+on the bounded-well component, tending to that equatorial direction.
+For the vertical direction, its upper turning point $y_+$ satisfies
+$V_\epsilon(y_+)=E$ and
+$y_+\ge E/(1+\epsilon)\to\infty$, since
+$V_\epsilon(y)\le(1+\epsilon)y$ for $y\ge0$.
+Every point of $\Gamma$ is therefore approached uniformly over the
+selected energy band. Applying these pointwise estimates to a finite
+net of the compact curve $\Gamma$ gives the reverse distance estimate
+and proves \eqref{rw:lower:hausdorff}.
+
+Choose $\epsilon_n\downarrow0$ so that the compact center families
+lie in smaller neighborhoods whose closures lie in $\mathscr U$.
+At each fixed $\epsilon_n$, choose one $\theta_n>0$ below the
+root-persistence and path-positivity cutoffs for all three intervals,
+small enough that the three perturbed cycles remain in $\mathscr U$,
+and also $\theta_n<1/n$. Finite-time dependence over the compact
+transverse center family lets us require, at the same time, that each
+perturbed cycle have spherical Hausdorff distance less than $1/n$
+from its corresponding center oval. Equation~\eqref{rw:lower:hausdorff}
+then gives convergence of each of the three cycles to the entire
+$\Gamma$.
+In original coefficients this sequence is
+\[
+ \begin{gathered}
+ B=0,\qquad m=\epsilon_n,\qquad
+ a=\sqrt{\epsilon_n}\,h_{\epsilon_n}\theta_n,\\
+ c=\sqrt{\epsilon_n}\,
+   \bar c_{\epsilon_n}(h_{\epsilon_n}\theta_n,\theta_n,
+                              \beta_{\epsilon_n}\theta_n),\qquad
+ d=c+\sqrt{\epsilon_n}\,\beta_{\epsilon_n}\theta_n .
+ \end{gathered}
+\]
+Reduce $\theta_n$ further so that $|\bar a|,|\bar c|<1$.
+The primary scale remains exactly $\rho=\sqrt{\epsilon_n}$,
+and all original coefficients tend to zero.
+These fields lie in the original five-parameter family and hence
+prove the lower bound in the full quadratic family, independently
+of the upper bound and its forcing theorem.
+\end{proof}
+
+\begin{corollary}[Stability of the three cycles]\label{rw:lower:stability}
+For the positive perturbation amplitudes in the construction of
+Theorem~\ref{rw:three-simple-cycles}, the three selected cycles are,
+in their nesting order, attracting, repelling and attracting.
+\end{corollary}
+\begin{proof}
+At the three increasing simple roots of $P$, its derivative has
+signs $+,-,+$. The two $C^1$ limits used above preserve these signs
+for $F'(t)$, since $\theta,S_\epsilon,\delta_\epsilon>0$.
+Equation~\eqref{rw:lower:actual-return-multiplier} and $U'>0$ then
+give forward return multipliers less than one, greater than one,
+and less than one. All are positive. Increasing $t$ moves inward
+in the period annulus; reversing the order leaves this alternating
+pattern unchanged.
+\end{proof}

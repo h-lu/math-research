@@ -1,0 +1,183 @@
+\section{Counting on one physical interval}
+\label{sec:counting-tools}
+
+The upper bound follows from two elementary counting criteria on a
+connected interval. One uses the orientation of displacement critical
+points; the other uses the orientation of curvature zeros. Each criterion
+counts the whole physical interval, including the regions between the
+captured roots.
+
+\subsection{A common coordinate and the counting criteria}
+
+Fix the incoming raw height coordinate in Lemma~\ref{lem:closing} before
+normalizing the tails. Absorb the regular maps between the fixed raw ports
+and the chosen sections into the actual adapters. All regional estimates
+will then concern the displacement
+\begin{equation}\label{sharp:upper-displacement}
+ F(x)=x-m\Pi(x),\qquad m>0.
+\end{equation}
+Every local estimate below includes the divided adapter
+\eqref{eq:divided-closing}. Its derivatives remain bounded, with positive
+first derivative, as \(m\downarrow0\). Apply the local tail estimates
+with these adapters and normalize each map by its exact center and first
+variation. The relation with the physical map is the identity
+\begin{equation}\label{sharp:upper-affine}
+ \Pi(a_++c_+w)=a_-+c_-\widehat\Pi(w),\qquad c_\pm>0.
+\end{equation}
+Thus the signs of second and third derivatives transfer by the positive
+factors \(c_-/c_+^2\) and \(c_-/c_+^3\). The affine relation is
+essential here: independently chosen nonlinear coordinates need not
+preserve curvature. Comparisons obtained in an inverse coordinate are
+therefore transferred to the direct displacement before counting its
+critical points.
+
+All carriers below are intervals of actual through trajectories in the
+nested section windows. Scalar first variation orders them by the central
+height. The preimage of an output interval under an increasing passage map
+is an interval. Consequently the interval between any finite set of
+captured roots stays in the same enlarged physical domain. The estimates
+used between roots therefore apply at nonroot points as well.
+
+\begin{lemma}\label{sharp:upper-critical-count}
+Let \(F\) be \(C^3\) on a connected carrier \(I\). If every critical
+point satisfies \(F''>0\), then \(F\) has at most one critical point,
+which is simple and upward, and at most two isolated zeros, counted with
+multiplicity. More generally, let \(J\subseteq I\) be a connected interval,
+possibly empty or all of \(I\). If \(F'\) has at most \(j\)
+zeros on \(J\), counted with multiplicity, where \(0\le j\le2\), and \(F'>0\) on
+\(I\setminus J\), then \(F'\) has at most \(j\) zeros on \(I\), and
+\(F\) has at most \(j+1\) isolated zeros there, counted with multiplicity.
+For \(J=\varnothing\), take \(j=0\): there is no critical point and
+at most one simple displacement zero.
+\end{lemma}
+\begin{proof}
+In the first case every zero of \(F'\) is a simple upward crossing.
+Two such crossings would require an intervening zero with another
+orientation, so there is at most one. In the second case no critical
+point lies outside \(J\), whether its complement is empty or lies on
+one or both sides. Rolle's theorem with
+multiplicities proves both assertions.
+\end{proof}
+
+\begin{lemma}\label{sharp:upper-curvature-count}
+Let \(F=x-m\Pi\), \(m>0\), be \(C^3\) on a connected carrier \(I\),
+and let \(J\subseteq I\) be a connected interval, possibly empty or
+all of \(I\). Suppose that every zero of \(\Pi''\) on \(J\) is simple
+and has the same crossing orientation, and that \(F'>0\) on
+\(I\setminus J\). Then \(\Pi''\) has at most one zero on \(J\),
+\(F'\) has at most two zeros on \(I\), counted with multiplicity,
+and \(F\) has at most three
+isolated displacement zeros on \(I\), counted with multiplicity.
+If \(J=\varnothing\), there is no critical point and at most one
+simple displacement zero.
+\end{lemma}
+\begin{proof}
+For nonempty \(J\), two simple curvature zeros of the same orientation
+would require an intervening zero with another orientation, so there is
+at most one. Since \(F''=-m\Pi''\), Rolle's theorem with multiplicities
+gives at most two zeros of \(F'\) on \(J\). Apply
+Lemma~\ref{sharp:upper-critical-count} on \(I\). For empty \(J\),
+\(F'>0\) throughout \(I\). Positive affine changes in
+\eqref{sharp:upper-affine} preserve the curvature orientation, even if
+their scale ratios degenerate.
+\end{proof}
+
+The regional constructions specify the actual intervals \(I,J\) and
+establish the hypotheses at every point of those intervals. For each
+coefficient fibre, apply Lemma~\ref{sharp:upper-critical-count} or
+Lemma~\ref{sharp:upper-curvature-count} to its whole carrier. The later
+coefficient cover takes the maximum of these bounds; its overlap choices
+are independent of the phase input.
+
+\subsection{Ordinary adapters and divided closing maps}
+
+The next two lemmas control the regular maps appended to a singular
+passage. They use ordinary third derivatives of those maps and allow the
+singular passage's first gain to tend to zero.
+
+\begin{lemma}\label{phys:lem-c3-adapters}
+Let the ordinary adapters below have uniform \(C^3\) norms and positive
+first derivatives bounded away from zero on their original buffered
+images. All parameters and gains are frozen under the phase derivation
+\(D\). The following identities and bounds are uniform in those
+parameters.
+
+For an actual raw output \(T\) in such an image, put
+\(\ell=\log\psi'\). Then
+\begin{equation}\label{phys:eq-observer-log}
+ \begin{aligned}
+ D\log\frac{(\psi\circ T)'}{T'}&=\ell'(T)DT,\\
+ D^2\log\frac{(\psi\circ T)'}{T'}
+ &=\ell''(T)(DT)^2+\ell'(T)D^2T .
+ \end{aligned}
+\end{equation}
+Here \(T'>0\) is the exact raw first gain; the formulas impose no lower
+bound on it. If the full translated output and its two absolute phase
+derivatives are bounded, and \(mT\) stays in the fixed closing buffer,
+then
+\begin{equation}\label{phys:eq-absolute-closing-two}
+ \sum_{j=0}^2\left(
+ |D^j(f(mT)-f(0))|
+ +|D^j(\log f'(mT)-\log f'(0))|\right)\le C m.
+\end{equation}
+The constant depends on these absolute output bounds, not on a
+normalized raw gain or a ratio of gains.
+
+For \(f(0)=0\), the divided closing map \(C_m(q)=f(md(q))/m\),
+extended at zero by \(C_0=f'(0)d\), has jets
+\begin{equation}\label{phys:eq-closing-jets}
+ \begin{aligned}
+ C_m'&=f'(md)d',\\
+ C_m''&=m f''(md)(d')^2+f'(md)d'',\\
+ C_m'''&=m^2f'''(md)(d')^3
+       +3m f''(md)d'd''+f'(md)d''' .
+ \end{aligned}
+\end{equation}
+They are uniformly bounded and the first is a positive unit on each
+prescribed compact \(q\)-interval with buffered \(md\)-image.
+Finally, for a coefficient-only center \(z_0\), \(0<d\le1\), and a
+fixed compact phase interval whose \(z_0+dy\)-image stays buffered,
+\begin{equation}\label{phys:eq-observer-normalization}
+ N_d(y)=\frac{\psi(z_0+dy)-\psi(z_0)}{d\psi'(z_0)},\qquad
+ N_0(y)=y,\qquad \|N_d-\mathrm{id}\|_{C^3}\le C d.
+\end{equation}
+This last bound concerns phase derivatives, not derivatives of the
+center or scale with respect to a parameter.
+\end{lemma}
+\begin{proof}
+The chain rule proves \eqref{phys:eq-observer-log} and
+\eqref{phys:eq-closing-jets}; the integral formula
+\(C_m=d\int_0^1f'(tmd)\,dt\) gives the extension at zero.
+The ordinary \(C^3\) bounds and positive slopes then give
+\eqref{phys:eq-absolute-closing-two} by the mean value theorem.
+Taylor's integral formula gives
+\eqref{phys:eq-observer-normalization}, whose second and third
+rows contain factors \(d\) and \(d^2\), respectively.
+\end{proof}
+
+\begin{lemma}\label{phys:lem-c3-core-transport}
+Let \(M\) be an intrinsic core map with uniformly bounded \(C^4\)
+norm on a fixed buffered phase interval. Let \(A,B\) be ordinary
+\(C^3\) adapters close to the identity, with uniformly positive
+slopes, on buffers containing all compositions below. On a common
+compact interval for \(A^{-1}\) and \(M\circ A^{-1}\),
+\begin{equation}\label{phys:eq-c3-core-transport}
+ \|B\circ M\circ A^{-1}-M\|_{C^3}
+ \le C\bigl(\|A-\mathrm{id}\|_{C^3}
+              +\|B-\mathrm{id}\|_{C^3}\bigr).
+\end{equation}
+The fourth derivative is required only of the intrinsic core.
+\end{lemma}
+\begin{proof}
+The inverse formulas through order three and the uniform slope bound
+give \(\|A^{-1}-\mathrm{id}\|_{C^3}\le C\|A-\mathrm{id}\|_{C^3}\).
+In the third chain-rule row for \(M\circ A^{-1}-M\), the translated
+factor \(M'''(A^{-1})-M'''\) is bounded by
+\(\|M''''\|_\infty\|A^{-1}-\mathrm{id}\|_\infty\); the other
+rows need fewer core derivatives. The ordinary composition of
+\(B-\mathrm{id}\) with \(M\circ A^{-1}\) is bounded in \(C^3\)
+without translating any fourth derivative of \(B\). These estimates
+prove \eqref{phys:eq-c3-core-transport}.
+\end{proof}
+
+\input{completed-curvature}

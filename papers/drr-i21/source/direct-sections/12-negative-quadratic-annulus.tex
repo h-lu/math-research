@@ -1,0 +1,890 @@
+\section{Negative quadratic drift: annulus and buffered region}
+\label{sec:direct-negative-annulus-buffer}
+
+For \(q_2<0\), a half-orbit can pass from the secondary scale to the
+primary scale through an annulus. The two endpoint rates have the same
+leading term there; their comparison therefore depends on the first
+radial corrections and on errors that vanish with the radial variables.
+We first express these rates in the common central height. We then extend
+the negative-branch estimate to its primary root and, for positive
+half-orbits that cross the annulus, extend the positive-branch estimate
+to larger radii. The buffered region below uses these estimates to count
+zeros on the whole height interval; the root regimes of
+\cref{sec:direct-negative-root-regimes} use them to compare the two
+branches near positive roots and their degeneracies.
+
+\subsection{The annulus for negative quadratic drift}
+\label{sec:direct-negative-annulus}
+
+For the rest of the secondary analysis put
+\begin{equation}
+\label{eq:direct-negative-secondary-scales}
+ q_0=-as^3r^2,\qquad q_1=bs^2r,\qquad q_2=-s,\qquad
+ 0<a\le1,\quad 0\le b\le1,\quad \max\{\sqrt a,b\}=1.
+\end{equation}
+The positive scales \(s,r\) tend to zero independently.
+For a signed radius \(\eta=\sigma s\rho\), define
+\[
+ u=r/\rho,\quad v=\rho,\quad
+ D_\sigma(\rho)=-q(\sigma s\rho)/s^3,\quad
+ K_\sigma(u,v)=1+au^2-\sigma bu-\sigma vR_q(\sigma sv).
+\]
+The variable \(u\) decreases as the radius moves away from the secondary
+scale, whereas \(v\) increases toward the primary scale. For the uniform
+estimates we regard \(u,v\) as independent base variables, including at zero.
+On the curve \(u=r/\rho,\ v=\rho>0\), we have
+\(K_\sigma(r/\rho,\rho)=D_\sigma(\rho)/\rho^2\).
+Choose a large fixed \(K_0\) and a small fixed \(v_1>0\).
+On a slightly enlarged box \(0\le u\le1/K_0\),
+\(0\le v\le2v_1\), the functions \(K_\sigma\) have uniform
+positive bounds and uniform derivative bounds. Each branch
+entering the thin annular box therefore has positive outward
+radial flux. The regional arguments below identify the central heights
+in \(\mathcal H_p\) whose half-orbits reach this box. The radial Euler
+derivative is
+\[
+ \mathcal E=\rho\partial_\rho
+       =-u\partial_u+v\partial_v=:\mathcal E_{uv}.
+\]
+Here \(\mathcal E\) acts on the exit radius, and \(\partial_T\), with
+\(T=-s\log h\), on the central height.
+With \(\kappa_3=-R_q(0)=1+O(s)\), Taylor's formula gives
+\begin{equation}
+\label{eq:direct-annulus-drift}
+ K_\sigma=1-\sigma bu+\sigma\kappa_3 v
+                       +O_{\mathcal E_{uv}^j}((u+v)^2).
+\end{equation}
+The notation \(O_{\mathcal E_{uv}^j}\) includes every fixed
+derivative order required below, with uniform constants.
+
+\subsubsection{Transport and central height}
+
+We begin by integrating the height growth through the annulus. The
+resulting first-exit equation will relate the exit radius to the central
+height and determine their order.
+Put \(y=z/(s^3\rho^2)\), and use the fast time
+\(d\tau=d\log\rho/s\). The extended equations are
+\[
+ u_\tau=-su,\qquad v_\tau=sv,\qquad
+ y_\tau=(K_\sigma^{-1}-2s)y+y^2\mathcal N_\sigma,
+\]
+\[
+ \mathcal N_\sigma=-\frac{\mathcal B_\sigma}
+                  {K_\sigma(K_\sigma+\mathcal B_\sigma y)},
+ \quad
+ \mathcal B_\sigma=B(\sigma sv,s^3v^2y).
+\]
+On \(0\le y\le2\delta_{\rm an}\), with \(\delta_{\rm an}>0\) fixed small,
+the linear coefficient \(K_\sigma^{-1}-2s\), the logarithmic rate
+\(y_\tau/y\), and the derivative \(\partial_y y_\tau\) are bounded
+below by positive constants.
+We take \(\delta_{\rm an}\) also so small that \(y_0=\delta_{\rm an}\) is an
+admissible thin threshold in \cref{lem:direct-adaptive-positive} for every
+drift factor \(\mathcal K\) with \(1/8\le\mathcal K\le2\); this smallness
+depends only on these bounds and on \(B\).
+Since \(y_\tau/y=1/(K_\sigma+\mathcal B_\sigma y)-2s\),
+\begin{equation}
+\label{eq:direct-annulus-level-crossing}
+ \frac{d\log y}{d\log\rho}
+   =\frac1{s(K_\sigma+\mathcal B_\sigma y)}-2 .
+\end{equation}
+At \(y=\delta_{\rm an}\) the right side is positive wherever
+\(0<s(K_\sigma+\mathcal B_\sigma\delta_{\rm an})<1/2\), and graphs cross
+this level only upward there. This holds for both signs on the annular
+box, for \(\sigma=-\) also on \(\rho\le0.9\), where \(K_-\) keeps a positive margin,
+and for \(\sigma=+\) wherever \(K_+\) has a positive margin and
+\(sK_+=O(s+|\eta|)\) is small.
+To integrate this growth exactly, we construct a height coordinate with
+uniform bounds on its required derivatives,
+\[
+ \Psi_\sigma=y\exp\Theta_\sigma,\qquad
+ \Theta_\sigma=y\widetilde\Theta_\sigma,\qquad
+ \Psi_{\sigma,\tau}=(K_\sigma^{-1}-2s)\Psi_\sigma,
+ \qquad c<\Psi_{\sigma,y}<C .
+\]
+As in \cref{lem:direct-adaptive-positive}, extend the coefficients
+by bounded smooth retractions into the enlarged positive box, preserving
+the height-rate margins. The backward base flow is
+\((u\e^{st},v\e^{-st})\), with order-\(j\) derivatives bounded by
+\(\e^{jst}\). Thus \cref{lem:direct-contracting-height-coordinate}
+applies with \(c_x=s\), after reducing \(s\), and supplies all the
+stated height and inverse bounds.
+
+Consequently, for \(\widehat z=s^3\rho^2\Psi_\sigma\),
+\begin{equation}
+\label{eq:direct-annulus-action}
+ \widehat z(\rho)=
+ \exp\left(\frac1s\int_{\rho_i}^{\rho}
+                   \frac{dt}{tK_\sigma(r/t,t)}\right)
+ \widehat z(\rho_i),\qquad \rho_i=K_0r.
+\end{equation}
+Suppose the central prefix reaches \(\rho_i\) with adapted height
+\begin{equation}
+\label{eq:direct-annulus-prefix}
+ \widehat z(\rho_i)
+       =h \e^{\mathcal A_{\sigma,i}/s}\Upsilon_\sigma(\xi_\sigma),
+ \qquad
+ \xi_\sigma=\e^{\mathcal A_{\sigma,i}/s}
+                    h/(s^3r^2),\qquad \Upsilon_\sigma(0)=1.
+\end{equation}
+The positive units \(\Upsilon_\sigma\), their reciprocals, and their required height
+derivatives are uniformly bounded for small \(\xi_\sigma\).
+After reducing this fixed interval, the maps
+\(\xi\mapsto\xi\Upsilon_\sigma(\xi)\) have uniformly positive
+derivatives and uniformly bounded inverse derivatives.
+On regular prefixes this preparation follows from
+\cref{lem:direct-source-height}. Across a bottleneck it follows from the
+composition \eqref{eq:direct-bottleneck-inverse-composition}; this case
+is carried out in \cref{sec:direct-no-root-fold}. To separate the possibly
+unbounded prefix action \(\mathcal A_{\sigma,i}\) from the annular
+increment, write
+\[
+ \mathcal A_\sigma(\rho)=\mathcal A_{\sigma,i}
+                +\int_{\rho_i}^{\rho}
+                      \frac{dt}{tK_\sigma(r/t,t)} .
+\]
+At the first thin exit after \(\rho_i\), \(y=\delta_{\rm an}\),
+\begin{equation}
+\label{eq:direct-annulus-source}
+ s\log(h/s^3)=-\mathcal A_\sigma(\rho)+2s\log\rho
+       +s\log\Psi_\sigma(u,v,\delta_{\rm an})
+       -s\log\Upsilon_\sigma(\xi_\sigma).
+\end{equation}
+
+Take \(u\le u_0<1/K_0\), with a sufficiently large fixed
+gap from the inner cut, and write
+\[
+ \mathcal J_\sigma(\rho)=\mathcal A_\sigma(\rho)-\mathcal A_{\sigma,i}
+       =\int_{K_0r}^{\rho}\frac{dt}{tK_\sigma(r/t,t)}.
+\]
+This action increment satisfies $\mathcal J_\sigma\ge c\log(\rho/(K_0r))$.
+The equation for the central height becomes
+\[
+ \xi_\sigma\Upsilon_\sigma(\xi_\sigma)=\mathfrak b_\sigma(\rho),\qquad
+ \mathfrak b_\sigma(\rho)
+       :=u^{-2}\e^{-\mathcal J_\sigma(\rho)/s}\Psi_\sigma(u,v,\delta_{\rm an})>0.
+\]
+Since $\mathcal A_{\sigma,i}$ is constant under $\mathcal E$,
+for every prescribed $j\ge1$,
+\[
+ \mathcal E^j\mathcal J_\sigma
+       =\mathcal E_{uv}^{j-1}(K_\sigma^{-1}),\qquad
+ |\mathcal E^j\mathcal J_\sigma|\le C_j.
+\]
+Thus $\mathcal E\log\mathfrak b_\sigma
+ =2-(sK_\sigma)^{-1}+\mathcal E_{uv}\log\Psi_\sigma$,
+and all higher fixed Euler derivatives of its logarithm are $O_j(s^{-1})$.
+Differentiating its exponential yields
+\begin{equation}
+\label{eq:direct-annulus-input-jets}
+ |\mathcal E^j\mathfrak b_\sigma|
+       \le C_js^{-j}\mathfrak b_\sigma,\qquad
+ \mathfrak b_\sigma\le Cu^{c/(2s)-2},\qquad j\ge0,
+\end{equation}
+after decreasing the fixed $u_0$.
+
+The uniformly regular map
+$\mathcal C_\sigma(\xi)=\xi\Upsilon_\sigma(\xi)$ fixes zero.
+For small $s$, $\mathfrak b_\sigma\le1$ lies in its inverse domain;
+the chain rule and \eqref{eq:direct-annulus-input-jets} give
+$|\mathcal E^j\mathcal C_\sigma^{-1}(\mathfrak b_\sigma)|
+\le C_js^{-j}\mathfrak b_\sigma$. Since
+$\log\Upsilon_\sigma(0)=0$, the same estimate holds for its composition.
+Thus, for every fixed $N,j$,
+after reducing $s$,
+\begin{equation}
+\label{eq:direct-annulus-prefix-weight}
+ |\mathcal E^j\xi_\sigma|
+       +|\mathcal E^j\log\Upsilon_\sigma(\xi_\sigma)|
+                         \le C_{N,j}u^N .
+\end{equation}
+Indeed the excess power of $u\le u_0<1$ in
+\eqref{eq:direct-annulus-input-jets} absorbs $s^{-j}$.
+The small expanded incoming height and the outward increase of
+unscaled height show that the reconstructed prefix is thin.
+
+The event equation gives
+\[
+ s\partial_{\log\rho}
+       \log\bigl[s^3\rho^2\Psi_\sigma(u,v,\delta_{\rm an})\bigr]
+       -1/K_\sigma
+ =-(y_\tau|_{y=\delta_{\rm an}})\,
+                      \partial_y\log\Psi_\sigma(u,v,\delta_{\rm an})<-c.
+\]
+Hence the central height decreases strictly with the exit radius, with inverse
+derivatives \(O(s^j)\) in logarithmic incoming height. Scalar order
+makes the first-exit domains and radius subintervals into intervals of
+central heights.
+
+Define the positive central-height rate
+\(G_\sigma=-s\mathcal E\log h_\sigma\), and put
+\(g_0=1-2s\). From \eqref{eq:direct-annulus-source},
+\begin{equation}
+\label{eq:direct-annulus-source-rate}
+ \begin{split}
+ G_\sigma&=K_\sigma^{-1}-2s
+       -s\mathcal E_{uv}\log\Psi_\sigma
+       +s\mathcal E\log\Upsilon_\sigma\\
+ &=g_0+\sigma bu-\sigma\kappa_3 v
+        +O_{\mathcal E^j}((u+v)^2+s(u+v)),\qquad c<G_\sigma<C .
+ \end{split}
+\end{equation}
+For \(j\ge1\), the bound
+\(\mathcal E_{uv}^j\log\Psi_\sigma=O(u+v)\) follows from
+uniform base derivatives and the vanishing coefficients of
+\(\mathcal E_{uv}\).
+
+\subsubsection{The endpoint slope and its vanishing error}
+
+The first-exit equation controls differentiation in central height.
+We now follow the graph from the thin exit to the fixed section,
+retaining the radial weight in the slope error. This weight is needed
+when the leading terms of the two rates cancel.
+
+\begin{lemma}[Annular endpoint and central-height rates]
+\label{lem:direct-annulus-rates}
+Under \eqref{eq:direct-annulus-prefix}, consider a thin exit
+in the smaller annular box just specified. Let \(I_\sigma\)
+be its endpoint and \(M_\sigma=-\mathcal E I_\sigma\).
+Then \(M_\sigma>0\), and
+\begin{equation}
+\label{eq:direct-annulus-endpoint-rate}
+ \mathcal E\log M_\sigma=2g_0+e_\sigma,\qquad
+ |\mathcal E^j e_\sigma|
+       \le C_js(1+|\log s|)(u+v),\quad 0\le j\le2,\qquad
+ M_\sigma\le C(s\rho)^{2g_0} .
+\end{equation}
+In the common logarithmic height coordinate \(T=-s\log h\), put
+\(m_\sigma=hI_{\sigma,h}=sM_\sigma/G_\sigma\) and
+\(\mathfrak H_\sigma=\partial_T\log m_\sigma\).
+Then
+\begin{equation}
+\label{eq:direct-annulus-clock-rate}
+ \begin{split}
+ \mathfrak H_\sigma
+   &=2+\sigma(-\gamma_sbu+\delta_s\kappa_3 v)+\varepsilon_\sigma,\\
+ \gamma_s&=(1-4s)/g_0^2,\qquad
+ \delta_s=(3-4s)/g_0^2,\\
+ |\varepsilon_\sigma|+|\partial_T\varepsilon_\sigma|
+   &\le C(u+v)\{u+v+s(1+|\log s|)\}.
+ \end{split}
+\end{equation}
+The two signs may have unrelated exit radii.
+\end{lemma}
+
+\begin{proof}
+After the thin exit use \(\mathcal Y=z/|\eta|^2\) as the independent variable,
+and write \(\mathfrak l=\log(|\eta|/(s\rho))\).
+Until a small fixed \(\mathcal Y=m_{\rm land}\), its equation is
+\begin{equation}
+\label{eq:direct-annulus-landing-clock}
+ \frac{d\mathfrak l}{d\mathcal Y}
+ =\frac{sK_\sigma(u\e^{-\mathfrak l},v\e^{\mathfrak l})+B_\sigma \mathcal Y}
+        {\mathcal Y[1-2sK_\sigma(u\e^{-\mathfrak l},v\e^{\mathfrak l})-2B_\sigma \mathcal Y]},
+ \quad \mathfrak l(s\delta_{\rm an})=0,\quad
+ B_\sigma=B(\sigma sv\e^{\mathfrak l},s^2v^2\e^{2\mathfrak l}\mathcal Y).
+\end{equation}
+The bracketed factor in the denominator has a fixed positive margin.
+Integration gives
+\[
+ 0\le\mathfrak l\le C_Bm_{\rm land}
+      +C_Ks\log\frac{m_{\rm land}}{s\delta_{\rm an}}.
+\]
+Here \(C_B,C_K\) use only the coefficient bounds on the enlarged
+drift box and the denominator margin. Choose the common landing level
+so that \(C_Bm_{\rm land}<\tfrac12\log(0.95/0.9)\), then reduce
+\(s\), with \(\delta_{\rm an}\) fixed, so that the second term is
+below the same bound. Thus \(\mathfrak l<\log(0.95/0.9)<\log2\).
+A stopped bootstrap keeps the graph in the enlarged positive annulus.
+For the negative-branch extension to exits \(\rho\le0.9\) below,
+use the fixed enlarged band \(v<0.95\):
+\(K_-=1+au^2+bu-v+O(s)\) has a positive margin there for small
+\(s\), and the stricter growth bound keeps the landing inside that
+band. It lands in the
+cone at
+\[
+ t=m_{\rm land}s^2\rho^2\e^{2\mathfrak l},\qquad U(t)=t/(2m_{\rm land}).
+\]
+Admissible graphs land before their endpoint: that endpoint has
+\(z/|\eta|^2\) bounded below, and \(m_{\rm land}\) is chosen smaller.
+
+At \(u=v=0\), \(K=1\) and \(B_\sigma=B_0(p)\), so both signs
+have the landing shift
+\[
+ \mathfrak l_0=\frac{s}{g_0}\log\frac{m_{\rm land}}{s\delta_{\rm an}}
+       -\frac{1}{2g_0}
+          \log\frac{g_0-2B_0m_{\rm land}}{g_0-2B_0s\delta_{\rm an}}.
+\]
+Write \(R(u,v,\mathfrak l,\mathcal Y)\) for the right side of
+\eqref{eq:direct-annulus-landing-clock}, and put
+\(\epsilon_s=s(1+|\log s|)\). Every positive-order mixed
+\((u,v,\mathfrak l)\) derivative of \(B_\sigma\) has a factor
+\(s\), while \(K_\sigma\) occurs multiplied by \(s\).
+The denominator margin therefore gives
+\[
+ |\partial_{u,v,\mathfrak l}^{\alpha}R|
+       \le C_\alpha(s/\mathcal Y+s),\qquad 1\le|\alpha|\le4.
+\]
+The difference from the equation at the base origin has this bound
+times \(u+v\). The finite-order variational argument used for
+\eqref{eq:direct-adaptive-landing} now has fixed initial height
+\(s\delta_{\rm an}\), zero initial base variations, and
+\[
+ \int_{s\delta_{\rm an}}^{m_{\rm land}}(s/\mathcal Y+s)\,d\mathcal Y
+       \le C\epsilon_s.
+\]
+It gives \(\|\partial_{u,v}^{\alpha}\mathfrak l\|\le
+C_\alpha\epsilon_s\) for \(1\le|\alpha|\le4\), and therefore
+\(|\mathfrak l-\mathfrak l_0|\le C\epsilon_s(u+v)\).
+At positive orders, \(\mathcal E_{uv}^j\) is a finite sum of
+operators \(c_{i_1i_2}u^{i_1}v^{i_2}\partial_u^{i_1}\partial_v^{i_2}\), with
+\(1\le i_1+i_2\le j\); each coefficient vanishes at the base
+origin. Thus
+\begin{equation}
+\label{eq:direct-annulus-landing-weight}
+ |\mathcal E_{uv}^j(\mathfrak l-\mathfrak l_0)|
+       \le C_js(1+|\log s|)(u+v),\qquad 0\le j\le4.
+\end{equation}
+In particular \(\mathcal E\log t=2+2\mathcal E_{uv}\mathfrak l>0\).
+
+Choose \(c_{\rm land}=1/(2m_{\rm land})>4\sup B\).
+The moving-cone tail in \cref{lem:direct-weighted-tail} gives
+\[
+ \frac{dU(z_*;c_{\rm land}t)}{dt}
+       =(z_*/t)^{2s}\tilde a_\sigma(t),\qquad c<\tilde a_\sigma<C,
+\]
+where, for \(1\le j\le3\),
+\[
+ |(t\partial_t)^j\log\tilde a_\sigma(t)|
+ \le C_j(\sqrt t+q_1/\sqrt t+|q_0|/t)
+ \le C_js(v+bu+u^2).
+\]
+At this landing the coefficients satisfy the cone smallness
+condition. Hence
+\begin{equation}
+\label{eq:direct-annulus-exact-slope}
+ M_\sigma=2(1+\mathcal E_{uv}\mathfrak l)\,
+             z_*^{2s}t^{\,1-2s}\tilde a_\sigma(t).
+\end{equation}
+Put \(\mathfrak d=\mathcal E_{uv}\mathfrak l\), \(b_t=2(1+\mathfrak d)\), and
+\(A_j=(t\partial_t)^j\log\tilde a_\sigma\). Logarithmic
+differentiation of \eqref{eq:direct-annulus-exact-slope}
+gives
+\[
+ e_\sigma=2g_0\mathfrak d+\frac{\mathcal E_{uv}\mathfrak d}{1+\mathfrak d}
+          +b_tA_1,
+ \qquad \mathcal E A_j=b_tA_{j+1}.
+\]
+Here \(\mathfrak d,\mathcal E_{uv}\mathfrak d,\mathcal E_{uv}^2\mathfrak d,
+ \mathcal E_{uv}^3\mathfrak d\) are \(O(\epsilon_s(u+v))\), whereas
+\(A_1,A_2,A_3=O(s(u+v))\). Two further Euler derivatives
+of the displayed error involve derivatives of \(\mathfrak l\)
+only through order four and of \(\log\tilde a_\sigma\) only
+through order three; every term still contains one of these
+vanishing factors. The denominators \(1+\mathfrak d\) stay bounded
+away from zero. This proves the error bounds in
+\eqref{eq:direct-annulus-endpoint-rate}; the bound on \(M_\sigma\)
+follows from \eqref{eq:direct-annulus-exact-slope} and
+\(t\asymp(s\rho)^2\).
+
+To express the endpoint estimate in the common central height, use
+\(\partial_T=\mathcal E/G_\sigma\). Thus
+\[
+ \mathfrak H_\sigma
+   =\frac{\mathcal E\log M_\sigma
+                      -\mathcal E\log G_\sigma}{G_\sigma}.
+\]
+Insert \eqref{eq:direct-annulus-source-rate} and
+\eqref{eq:direct-annulus-endpoint-rate}. The constant term
+is exactly \(2g_0/g_0=2\); the two linear coefficients
+are those in \eqref{eq:direct-annulus-clock-rate}.
+Differentiation using \(u_T=-u/G_\sigma\) and
+\(v_T=v/G_\sigma\) preserves the stated weighted error.
+\end{proof}
+
+For comparable exit radii \(\omega=\Omega\rho\), with
+fixed positive bounds on \(\Omega\),
+\begin{equation}
+\label{eq:direct-annulus-slope-calibration}
+ \log\frac{M_-(\omega)}{M_+(\rho)}
+ \le 2g_0\log\Omega+2C_{\rm cone}\sqrt{z_*}
+               +Cs(1+|\log s|)(u+v).
+\end{equation}
+Indeed the shifts in \eqref{eq:direct-annulus-exact-slope}
+have the same base value \(\mathfrak l_0\), and the moving-section
+factor is
+\[
+ c_{\rm land}-\mathcal G_\sigma(c_{\rm land}t,t)
+       =c_{\rm land}g_0-B_0+O(s(u+v)).
+\]
+The remaining factor of \(\tilde a_\sigma\) is the tail variation
+\eqref{eq:direct-tail-variation} divided by \(\varpi_t\), that is, the slope
+\(a_{t,p}\) of \eqref{eq:direct-centered-tail} at \(\mathcal U_\circ=c_{\rm land}\).
+This landing energy lies in the common cone, so on each branch
+\eqref{eq:direct-tail-first-slope} bounds the logarithm of that factor by
+\(C_{\rm cone}(\sqrt{z_*}+q_1/\sqrt t)\), and \(q_1/\sqrt t\le Csu\). This
+proves \eqref{eq:direct-annulus-slope-calibration}.
+
+\begin{corollary}[Two annular exits]
+\label{cor:direct-annular-pair}
+Under \eqref{eq:direct-annulus-prefix} on both branches, let the thin
+exits from an interval of \(\mathcal H_p\) lie in the smaller annular box
+\(u_\sigma\le u_0\), \(v_\sigma\le v_0\). In \(T=-s\log h\),
+\begin{equation}
+\label{eq:direct-annular-pair-curvature}
+ \begin{split}
+ (\mathfrak H_--\mathfrak H_+)'&=
+ -\frac{\gamma_sb(u_-+u_+)+\delta_s\kappa_3(v_-+v_+)}{g_0}\\
+ &\quad+O\left(\sum_\sigma(u_\sigma+v_\sigma)
+       \{u_\sigma+v_\sigma+s(1+|\log s|)\}\right).
+ \end{split}
+\end{equation}
+The negative annular branch alone gives
+\begin{equation}
+\label{eq:direct-annular-exterior-curvature}
+ |\partial_T^2[(\log\Pi_p')(I_-)]|\le C(sv_-)^{2-4s}
+                    \le Cs^{3/2}v_-,\qquad s<1/8,\quad v_-<1.
+\end{equation}
+For any fixed \(b_{\min}>0\), choosing the annular margins small relative to
+\(b_{\min}\), then reducing \(s\), gives \(\mathcal L''<0\) when \(b\ge b_{\min}\).
+\end{corollary}
+
+\begin{proof}
+Differentiate \eqref{eq:direct-annulus-clock-rate} using
+\(\partial_T=\mathcal E_\sigma/G_\sigma\),
+\(u_{\sigma,T}=-u_\sigma/G_\sigma\), \(v_{\sigma,T}=v_\sigma/G_\sigma\),
+and \(G_\sigma=g_0+O(u_\sigma+v_\sigma)\); this gives
+\eqref{eq:direct-annular-pair-curvature}.
+By \cref{lem:direct-annulus-rates}, \(I_{-,T}=-M_-/G_-\), and
+\(|I_{-,T}|+|I_{-,TT}|\le C(sv_-)^{2-4s}\).
+Equation \eqref{eq:direct-exterior-curvature} therefore gives the first
+bound in \eqref{eq:direct-annular-exterior-curvature}; the second follows
+from \((sv_-)^{2-4s}/v_-=s^{2-4s}v_-^{1-4s}\le s^{3/2}\).
+For \(b\ge b_{\min}\), the leading negative term dominates both the weighted
+error and the exterior contribution, proving \(\mathcal L''<0\).
+\end{proof}
+
+\subsubsection{The negative branch beyond the annulus}
+\label{sec:negative-branch-far-root}
+
+Beyond the annulus, negative outputs may lie in compact primary
+intervals or near the primary root close to \(X=1\). We continue the
+annular calculation on the compact intervals. Near the root, where the
+drift tends to zero, the boundary-flow coordinate gives a negative
+endpoint rate and estimates its derivative with the same drift weight
+as the endpoint derivatives. These weights allow the exterior
+contribution to be absorbed in the regional comparisons.
+
+For the negative branch fix the regular primary entry at
+\(\rho_{\rm pr}=0.8\), take \(0.85\) as the lower bound for the projected
+far-root state \(w_n\), and use \(\rho=0.9\) as the last primary
+thin-exit test. These thresholds give a fixed phase advance and overlapping
+ranges of central heights.
+In primary coordinates \(|\eta|=sX,\ z=s^2Y\), the negative boundary
+drift is
+\[
+ K_n(X)=ar^2+brX+X^2+X^3R_q(-sX),\qquad F_n=K_n/X .
+\]
+It has a simple first far root \(X_*=1+O(r+s)\),
+with \(K_n'(X_*)<0\), and is positive below it.
+Construct the boundary-flow coordinate on a band from
+below \(0.8\) to beyond \(X_*\), with small fixed output
+height \(Y_n>0\). Its far-root interval is
+\begin{equation}
+\label{eq:direct-negative-far-core}
+ w_n=\mathcal W_n(X(s^2Y_n;h),Y_n)\ge0.85,\qquad w_n<X_* .
+\end{equation}
+
+\begin{lemma}[Negative branch]
+\label{lem:negative-branch-far-root}
+Fix \(M\ge K_0\). Suppose that the negative graph of a central
+height in \(\cH_p\) is thin at \(\rho=Mr\), with the prefix preparation
+\eqref{eq:direct-annulus-prefix} at \(\rho_i=K_0r\).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item If its first thin exit occurs at \(\rho\le0.9\), then \(\rho>Mr\)
+and, in \(T=-s\log h\),
+\begin{equation}
+\label{eq:direct-negative-primary-rates}
+ \begin{split}
+ \mathfrak H_-&=2-3\rho+
+                O(r/\rho+s(1+|\log s|)),\\
+ \mathfrak H_-'&=-3\rho(1-\rho)
+                +O(r+s(1+|\log s|))
+ \quad\hbox{on fixed compact primary intervals},\\
+ |I_{-,T}|+|I_{-,TT}|&\le C(s\rho)^{2-4s}=o(1).
+ \end{split}
+\end{equation}
+\item If the graph is still thin at \(\rho=0.9\), it satisfies
+\eqref{eq:direct-negative-far-core} with \(w_n>0.89\). For every central
+height with \eqref{eq:direct-negative-far-core},
+\begin{equation}
+\label{eq:direct-negative-far-rate}
+ \begin{gathered}
+ \mathfrak H_-=2-3w_n+O(r+s+\varepsilon_{n,s})<-c_n<0,\qquad
+ \mathfrak H_-'=F_n(w_n)\{Q_n(w_n)+o(1)\},\\
+ Q_n\le-c_n,\qquad |I_{-,T}|+|I_{-,TT}|\le CE_nF_n(w_n),
+ \end{gathered}
+\end{equation}
+where \(Q_n=(XK_n''-K_n')/X^2\), \(E_n=s^2(z_*/(s^2Y_n))^{2s}=O(s^2)\),
+and \(\varepsilon_{n,s}\to0\), uniformly up to the far root.
+\end{enumerate}
+The exit radius in (i) and the state \(w_n\) in (ii) increase with \(T\).
+The constants are uniform on the chart
+\eqref{eq:direct-negative-secondary-scales}.
+\end{lemma}
+
+\begin{proof}
+\emph{Part (i).} Since the graph is thin at \(Mr\) and, by
+\eqref{eq:direct-annulus-level-crossing}, crosses \(y=\delta_{\rm an}\) only
+upward on the annulus, a first thin exit before \(\rho=0.9\) has \(\rho>Mr\).
+The negative annular coordinate extends to \(\rho\le0.9\):
+its drift factor has a uniform positive margin there.
+Its equation for the central height gives
+\[
+ G_-=\frac1{1-\rho}+O_{\mathcal E^j}(r/\rho+s).
+\]
+The endpoint argument of
+\cref{lem:direct-annulus-rates} on this enlarged compact
+base box gives
+\[
+ \mathcal E\log M_-=2-4s+
+        O_{\mathcal E^j}\bigl(s(1+|\log s|)(r/\rho+\rho)\bigr).
+\]
+The weighted error follows from the landing equation:
+the comparison at the base origin has \(K=1\), and
+the derivatives remain bounded on \(0\le\rho\le0.9\).
+Inserting these expressions into
+\((\mathcal E\log M_--\mathcal E\log G_-)/G_-\) gives
+\eqref{eq:direct-negative-primary-rates}; the last estimate there uses
+\(I_{-,T}=-M_-/G_-\) and its logarithmic rate.
+
+\emph{Part (ii).} Every branch still thin at \(0.9\) reaches the output
+\(Y=Y_n\) inside the band. Its initial projected state is
+\(0.9+O(s\delta_{\rm an})>0.89\) and lies below \(X_*\).
+The projected flow increases toward the root, and the inverse
+projection differs by \(O(Y_n)\), remaining in the band.
+The inverse-flux identity gives continuation to \(Y_n\).
+
+At \(\rho_{\rm pr}=0.8\), write
+\[
+ \begin{gathered}
+ \mathcal J_b=\int_{K_0r}^{\rho_{\rm pr}}\frac{dt}{tK_-(r/t,t)},
+ \qquad
+ \mathcal A_b=\mathcal A_{-,i}+\mathcal J_b,\\
+ \xi_n=\e^{\mathcal A_b/s}\frac{h}{s^3}.
+ \end{gathered}
+\]
+The secondary and primary expanded inputs are related by
+\[
+ \xi_-=\beta_b\xi_n,\qquad
+ \beta_b=r^{-2}\e^{-\mathcal J_b/s}.
+\]
+The factor \(r^{-2}\) comes from changing the scale
+\(s^3r^2\) of the central height to \(s^3\). The uniform upper bound
+for the annular drift gives
+\(\mathcal J_b\ge c\log(\rho_{\rm pr}/(K_0r))\). After fixing smaller
+upper bounds for \(r\) and then \(s\), this implies
+\[
+ 0<\beta_b\le r^{c/(2s)-2}\le1.
+\]
+
+For \(Y_i=z/s^2\), write
+\(y_i=Y_i/s=z/s^3=\rho_{\rm pr}^2y_a(\rho_{\rm pr})\), where
+\(y_a=z/(s^3\rho^2)\), and set
+\[
+ \mathcal C_b(y_i)
+   =\rho_{\rm pr}^2\Psi_-(r/\rho_{\rm pr},\rho_{\rm pr},
+                         y_i/\rho_{\rm pr}^2).
+\]
+This height coordinate and its inverse have uniform bounds
+on the required derivatives, with \(\mathcal C_b'(0)=1\).
+Annular transport gives
+\[
+ \mathcal C_b(y_i)
+     =\xi_n\Upsilon_-(\beta_b\xi_n).
+\]
+As in \eqref{eq:direct-bottleneck-inverse-composition}, inversion
+gives \(Y_i=s\xi_nV_n(\xi_n)\), with \(V_n(0)=1\). Since
+\(\beta_b\le1\), the unit, its reciprocal, and the map inverse have
+uniform derivative bounds on a fixed small \(\xi_n\)-interval.
+
+For central heights with \eqref{eq:direct-negative-far-core}, the projected
+state at \(X=\rho_{\rm pr}\) satisfies
+\(w_i=\mathcal W_n(\rho_{\rm pr},Y_i)\le\rho_{\rm pr}\). The boundary
+flow must advance from at most \(0.8\) to at least
+\(0.85\) before the output \(Y_n\). Its bounded
+speed and the projection identity give
+\[
+ s\log(Y_n/Y_i)\ge c_b>0,\qquad
+ y_i=Y_i/s\le(Y_n/s)\e^{-c_b/s}.
+\]
+Thus the graph is thin at \(\rho_{\rm pr}\).
+By \eqref{eq:direct-annulus-level-crossing}, it has no downward crossing
+of \(y_a=\delta_{\rm an}\) on the preceding annular segment, so the whole
+segment is thin. Annular transport gives
+\[
+ \frac{\widehat z(K_0r)}{s^3r^2}
+       =\beta_b\mathcal C_b(y_i).
+\]
+This lies in the uniform small output domain of the
+inner prefix. Its inverse recovers
+\(\xi_-=O(\beta_by_i)\); uniqueness of the
+flow identifies the recovered central height with \(h\). Thus
+\(\xi_n=\xi_-/\beta_b\le Cy_i\) lies in the required small
+domain. At the fixed output \(z=s^2Y_n\), the entry
+\(X=\rho_{\rm pr}=0.8\) has \(F_n(\rho_{\rm pr})\) bounded below,
+and the advance to \(w_n\ge0.85\) supplies a fixed positive phase
+gap. Thus \cref{lem:direct-weighted-phase} applies with \(\delta=s\)
+in the same coordinate \(T=-s\log h\). We use its drift-weighted
+bound \eqref{eq:direct-phase-weight} with \(N=1\) and \(j=2\)
+for the curvature estimate below; in particular,
+\[
+ (w_n)_T=\theta_nF_n(w_n),\qquad
+ |\theta_n-1|+|\theta_n'|+|\theta_n''|
+                         \le\varepsilon_{n,s}\longrightarrow0 .
+\]
+\Cref{lem:boundary-flow-endpoint}, with \(\ell=\delta=s\), gives
+\[
+ -I_{-,w_n}=E_nA_nw_nU_n(w_n),\qquad
+ E_n=s^2(z_*/(s^2Y_n))^{2s}=O(s^2),\qquad
+ U_n=1+O_{C^3}(s).
+\]
+The rate identity yields the first estimate in
+\eqref{eq:direct-negative-far-rate}, uniformly up to the root, since
+\(K_n'(w)/w=2-3w+O(r+s)\). By
+\eqref{eq:direct-curvature-coefficient-cubic}, with \(K_n'(0)=br\) and
+\(R_K(X)=R_q(-sX)\), one has
+\(Q_n(X)=-br/X^2+3R_q(-sX)+O(s)<-c_n\) on the band, since
+\(R_q=-1+O(s)\). The weighted phase estimate and
+\eqref{eq:direct-rate-curvature} give the remaining assertions of
+\eqref{eq:direct-negative-far-rate}. Finally \(\rho_T=\rho/G_->0\), and
+the projected far-root state increases along the boundary flow.
+\end{proof}
+
+\subsubsection{The positive branch beyond the annulus}
+
+A positive half-orbit may leave compact \(\rho\)-intervals and reach
+unscaled radii \(\varrho\gg s\), where the drift grows cubically.
+The adaptive coordinate of \cref{lem:direct-adaptive-positive} follows
+this transition from the inner cut and gives the endpoint rate in both
+the buffered and no-root regions, using their respective preparations
+at the inner cut.
+
+The annular action controls the expanded incoming height and its
+derivatives with respect to the exit radius. This control makes the
+endpoint-rate comparison uniform as the positive exit moves from the
+quadratic to the cubic regime.
+
+On the positive branch write \(\varrho=\eta=s\rho>0\), \(Q=s^3r^2\), and
+\begin{equation}
+\label{eq:positive-adaptive-variables}
+ \varrho^+=s+\varrho,\quad u=\frac{sr}\varrho,\quad
+ v=\frac\varrho{s+\varrho},\quad
+ K_a=1+(1-v)(au^2-bu)-v\{R_q(\varrho)+1\}.
+\end{equation}
+Here \(u=r/\rho\) retains its annular meaning. In \(K_a\) and the following
+lemma, \(v\) is the adaptive variable of
+\eqref{eq:direct-adaptive-drift}; the annular coordinate
+\(\Psi_+\) still has arguments \((r/\rho,\rho)\). With
+\(\varrho_i=K_0sr\), put
+\[
+ \mathcal J_a(\varrho)=\int_{\varrho_i}^{\varrho}\frac{x\,dx}{-q(x)},
+\]
+so that the action increment of the annulus is \(\mathcal J_+(\rho)=s\mathcal J_a(s\rho)\).
+At every radius the annular and adaptive normalized heights satisfy
+\begin{equation}
+\label{eq:positive-annular-adaptive-heights}
+ \frac{z}{s\varrho^2}
+   =\Bigl(1+\frac\varrho s\Bigr)\frac{z}{\varrho^2(s+\varrho)} ,
+\end{equation}
+so, for a half-orbit thin at \(\varrho_i\), the annular thin exit at the
+same threshold \(\delta_{\rm an}\) precedes the adaptive exit of part~(iii)
+below.
+At an exit radius \(\varrho_e\) we write \(u_e,v_e,\varrho_e^+\) for the
+values of \(u,v,\varrho^+\). The operator
+\(\mathcal E=\varrho_e\partial_{\varrho_e}\) varies the exit radius at fixed
+parameters, and \(T=-s\log h\).
+
+\begin{lemma}[Positive branch beyond the annulus]
+\label{lem:positive-branch-adaptive-exit}
+Let \(\mathcal J\subset\cH_p\) be an interval of central heights whose
+positive half-orbits are thin at \(\varrho_i\), that is,
+\(z(\varrho_i;h)<\delta_{\rm an}K_0^2Q\), and satisfy
+\begin{equation}
+\label{eq:positive-adaptive-prefix}
+ z(\varrho_i;h)=Q\,\xi\mathcal V(\xi),\qquad \xi=\e^{\mathcal A_i/s}h/Q .
+\end{equation}
+Here \(\mathcal A_i\) depends only on \(p\), \(\xi\) lies in a fixed
+interval \([0,\bar\xi]\), \(\mathcal V(0)=1\), \(\mathcal V\) and
+\(1/\mathcal V\) have uniformly bounded derivatives of the required orders
+there, and \(\xi\mapsto\xi\mathcal V(\xi)\) has a uniformly positive
+derivative and an inverse with uniformly bounded derivatives.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item One has \(-q(\varrho)=\varrho^2(s+\varrho)K_a\). On the box
+\(0\le u\le3/(2K_0)\), \(0\le v\le1\), with small unscaled radius and
+small \(s\), \(K_a\) lies between \(1/8\) and \(2\) and has uniform
+derivative bounds, and \(K_a-1\) and its fixed Euler derivatives are
+\(O(u+\varrho^+)\). Thus \cref{lem:direct-adaptive-positive} applies with
+\(\mathcal K=K_a\), \(\varrho_0=sr\) and thin threshold \(y_0=\delta_{\rm an}\);
+let \(\Psi_a\) be its coordinate and \(\widehat z_a\) its adapted height.
+\item Put \(u_i=1/K_0\), \(v_i=K_0r/(1+K_0r)\) and \(c_i=K_0^2(1+K_0r)\),
+and define \(\Upsilon_a\) by
+\begin{equation}
+\label{eq:positive-adaptive-unit}
+ \xi\Upsilon_a(\xi)
+   =c_i\Psi_a\bigl(u_i,v_i,\varrho_i,\xi\mathcal V(\xi)/c_i\bigr).
+\end{equation}
+Then \(\Upsilon_a(0)=1\), and \(\Upsilon_a\), its reciprocal and the
+inverse of \(\xi\mapsto\xi\Upsilon_a(\xi)\) have uniformly bounded
+derivatives on the interval of those \(\xi\le\bar\xi\) with
+\(\xi\mathcal V(\xi)\le\delta_{\rm an}K_0^2\). Moreover
+\(\widehat z_a(\varrho_i)=Q\xi\Upsilon_a(\xi)\), so that
+\(\lambda_{\rm in}=\log\widehat z_a(\varrho_i)\) satisfies
+\(d\lambda_{\rm in}/d\log h=1+O(\xi)\).
+\item The adaptive exit, the first radius \(\varrho_e>\varrho_i\) with
+\(z=\delta_{\rm an}\varrho^2(s+\varrho)\), satisfies
+\begin{equation}
+\label{eq:direct-no-root-adaptive-input}
+ \xi\Upsilon_a(\xi)=\frac{\varrho_e^2\varrho_e^+}{Q}
+      \Psi_a(u_e,v_e,\varrho_e,\delta_{\rm an})\e^{-\mathcal J_a(\varrho_e)} .
+\end{equation}
+Its landing height \(t=m_{\rm land}\varrho_l^2\) satisfies
+\(\sqrt t+q_1/\sqrt t+|q_0|/t\le C(\varrho_e+su_e)\), and
+\(|q_2|=s\); in particular \eqref{eq:direct-tail-smallness} holds there
+for small \(s\).
+\item Suppose in addition that \(\varrho_e\ge s\rho_{\rm g}\) on
+\(\mathcal J\) and \(\mathcal J_+(\rho_{\rm g})\ge c_{\rm g}\log(1/r)\), for fixed
+\(\rho_{\rm g},c_{\rm g}>0\), and that \(r\le1/2\). Then, for every
+fixed \(j\) and small \(s\),
+\begin{equation}
+\label{eq:positive-adaptive-input-weight}
+ |\mathcal E^j\xi|+|\mathcal E^j\log\Upsilon_a(\xi)|
+       \le C_js^{-3-j}r^{c_{\rm g}/s-2},
+\end{equation}
+which is \(O(s^N)\) for every fixed \(N\). The rate
+\(\mathfrak g=-\varrho_e^+\mathcal E\log h\) satisfies
+\begin{equation}
+\label{eq:direct-no-root-adaptive-source}
+ \mathfrak g=1+O(u_e+\varrho_e^+),\qquad
+ \mathcal E\log\mathfrak g=O(u_e+\varrho_e^+),\qquad
+ \mathcal ET=(s/\varrho_e^+)\mathfrak g>0 .
+\end{equation}
+For small fixed \(m_{\rm land}\) and radius box, and after reducing
+\(r\) and then \(s\), the endpoint rate
+\(\mathfrak H_+=\partial_T\log m_+\) satisfies
+\begin{equation}
+\label{eq:direct-no-root-adaptive-rate}
+ \mathfrak H_+
+ =\frac{\varrho_e^+}{s\mathfrak g}
+        [\,2-4s+v_e+O(\epsilon_e+u_e+\varrho_e^+)\,]>c\varrho_e^+/s>0,
+\end{equation}
+with \(\epsilon_e\) as in \eqref{eq:direct-adaptive-landing}.
+\end{enumerate}
+The constants depend on \(\mathcal V\) only through its assumed bounds.
+The constants in \eqref{eq:direct-no-root-adaptive-source} and
+\eqref{eq:direct-no-root-adaptive-rate}, apart from terms \(O(s^N)\), are
+independent of \(\mathcal V\), \(\mathcal A_i\), \(\rho_{\rm g}\) and
+\(c_{\rm g}\).
+\end{lemma}
+
+\begin{proof}
+\emph{(i)} Since \((s+\varrho)(1-v)=s\) and \((s+\varrho)v=\varrho\),
+\[
+ \varrho^2(s+\varrho)K_a
+   =s\varrho^2+as^3r^2-bs^2r\varrho-\varrho^3R_q(\varrho)=-q(\varrho).
+\]
+Because \(\kappa_3=-R_q(0)=1+O(s)\), one has \(R_q(\varrho)+1=O(s+\varrho)\)
+with its fixed Euler derivatives; here \(\mathcal Eu=-u\),
+\(\mathcal Ev=v(1-v)\) and \(\mathcal E\varrho=\varrho\). On the box,
+\(|(1-v)(au^2-bu)|\le u<3/4\), since \(0<a\le1\), \(0\le b\le1\) and
+\(K_0>2\). This gives the bounds on \(K_a\) and on \(K_a-1\). Along the
+passage from \(\varrho_i\), \(u\) decreases from \(1/K_0\) while \(v\) and
+\(\varrho\) increase, so the base point stays in the box, and
+\(y_0=\delta_{\rm an}\) is admissible by the choice of \(\delta_{\rm an}\)
+in \cref{sec:direct-negative-annulus}.
+
+\emph{(ii)} At the inner section,
+\(\varrho_i^2(s+\varrho_i)=Qc_i\), so the adapted height is exactly
+\(Q\xi\Upsilon_a(\xi)\) by \eqref{eq:positive-adaptive-unit}.
+Here \(K_0^2\le c_i\le2K_0^2\), and the stated thin interval gives
+\(\xi\mathcal V(\xi)/c_i\le\delta_{\rm an}\). The uniform regularity
+and positive height derivative of \(\Psi_a\), together with the assumed
+bounds for \(\xi\mathcal V(\xi)\), give all the unit and inverse bounds.
+The normalization \(\Psi_{a,y}(\cdot,0)=\mathcal V(0)=1\) gives
+\(\Upsilon_a(0)=1\), and logarithmic differentiation gives the last claim.
+
+\emph{(iii)} Thinness at \(\varrho_i\) allows
+\cref{lem:direct-adaptive-positive} to supply the exit and landing
+before the admissible endpoint. Its exact action identity, evaluated
+at the exit and combined with (ii), is
+\eqref{eq:direct-no-root-adaptive-input}. Since
+\(\varrho_e\le\varrho_l\le2\varrho_e\),
+\[
+ \sqrt t\le2\varrho_e,\qquad
+ q_1/\sqrt t\le Cbsu_e,\qquad |q_0|/t\le Casu_e^2.
+\]
+With \(u_e\le1/K_0\), these are the claimed tail bounds.
+
+\emph{(iv)} Denote the right side of
+\eqref{eq:direct-no-root-adaptive-input} by \(\mathfrak b_a\), a function
+of \(\varrho_e\); through this equation \(\xi\) and \(h\) are functions of
+the exit radius. By (i), \(-q>0\) on the passage, so \(\mathcal J_a\) increases;
+since \(s\mathcal J_a(s\rho_{\rm g})=\mathcal J_+(\rho_{\rm g})\), we get
+\(\e^{-\mathcal J_a(\varrho_e)}\le r^{c_{\rm g}/s}\). Since
+\(\mathcal E\mathcal J_a=1/(\varrho_e^+K_a)\), \(\varrho_e^+\ge s\), and the Euler
+derivatives of \(K_a\) are uniformly bounded, each fixed radial derivative
+of \(\mathfrak b_a\) costs at most another factor \(s^{-1}\):
+\(|\mathcal E^j\mathfrak b_a|\le C_js^{-j}\mathfrak b_a\), as in
+\eqref{eq:direct-annulus-input-jets}. In the fixed radius box
+\(\mathfrak b_a\le Cs^{-3}r^{c_{\rm g}/s-2}\); since \(r\le1/2\), this is
+\(O(s^N)\) for every fixed \(N\), and in particular \(\mathfrak b_a\le1\)
+for small \(s\). The chain-rule step before
+\eqref{eq:direct-annulus-prefix-weight}, applied to
+\(\xi=(\xi\Upsilon_a)^{-1}(\mathfrak b_a)\) with the inverse of (ii),
+bounds \(|\mathcal E^j\xi|+|\mathcal E^j\log\Upsilon_a(\xi)|\) by
+\(C_js^{-j}\mathfrak b_a\), which gives
+\eqref{eq:positive-adaptive-input-weight}.
+
+Logarithmic differentiation of \eqref{eq:direct-no-root-adaptive-input},
+with \(\log\xi=\mathcal A_i/s+\log(h/Q)\),
+\(\mathcal E\log(\varrho_e^2\varrho_e^+)=2+v_e\) and
+\(\varrho_e^+(2+v_e)=2s+3\varrho_e\), gives
+\[
+ \mathfrak g
+ =K_a^{-1}-(2s+3\varrho_e)
+       -\varrho_e^+\mathcal E\log\Psi_a
+       +\varrho_e^+\mathcal E\log\Upsilon_a(\xi),
+\]
+with \(K_a\) and \(\Psi_a(\cdot,\delta_{\rm an})\) evaluated at the exit.
+By (i), the uniform Euler derivatives of \(\Psi_a\), and
+\eqref{eq:positive-adaptive-input-weight}, this gives
+\eqref{eq:direct-no-root-adaptive-source}.
+
+At the cone landing, \eqref{eq:direct-adaptive-landing} gives
+\(\mathcal E\log t=2+O(\epsilon_e)\) and
+\(\mathcal E^2\log t=O(\epsilon_e)\). By (iii), the moving-cone
+part of \cref{lem:direct-weighted-tail} applies at the landing, as before
+\eqref{eq:direct-adaptive-source-slope}. With \(q_2=-s\), the endpoint
+energy has derivative \((z_*/t)^{2s}a(t)\), and
+\eqref{eq:direct-moving-tail} gives
+\[
+ |t\partial_t\log a(t)|
+   \le C(\sqrt t+q_1/\sqrt t+|q_0|/t)
+   \le C(\varrho_e+su_e+su_e^2).
+\]
+Therefore \(M_a=-\mathcal EI_+\) satisfies
+\[
+ M_a=t(z_*/t)^{2s}a(t)\,\mathcal E\log t,\qquad
+ \mathcal E\log M_a=2-4s+
+              O(\epsilon_e+\varrho_e+su_e+su_e^2).
+\]
+Since \(m_+=hI_{+,h}=\varrho_e^+M_a/\mathfrak g\),
+\(\mathcal E\log\varrho_e^+=v_e\) and \(\partial_T=\mathcal E/\mathcal ET\),
+\eqref{eq:direct-no-root-adaptive-source} gives the identity in
+\eqref{eq:direct-no-root-adaptive-rate}. The factor \(K_a\) and its
+derivatives have the common bounds of (i), while \(\Upsilon_a\) contributes
+only terms \(O(s^N)\); this gives the stated dependence of the constants.
+At the exits \(u_e\le r/\rho_{\rm g}\). Hence, for small \(m_{\rm land}\)
+and radius box, after reducing \(r\) and then \(s\), the bracket in
+\eqref{eq:direct-no-root-adaptive-rate} exceeds one and \(\mathfrak g<2\).
+\end{proof}

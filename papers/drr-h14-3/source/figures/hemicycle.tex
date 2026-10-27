@@ -1,0 +1,30 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,font=\small]
+ \draw[very thick] (-3.2,0)--(3.2,0);
+ \draw[very thick] (3.2,0) arc[start angle=0,end angle=180,radius=3.2];
+ \draw[->,very thick] (-2.15,0)--(-1.55,0);
+ \draw[->,very thick] (1.55,0)--(2.15,0);
+ \draw[->,very thick] (25:3.2) arc[start angle=25,end angle=40,radius=3.2];
+ \draw[->,very thick] (130:3.2) arc[start angle=130,end angle=145,radius=3.2];
+ \fill (-3.2,0) circle (2pt) node[below left] {$p_-$};
+ \fill (3.2,0) circle (2pt) node[below right] {$p_+$};
+ \fill (0,3.2) circle (2pt) node[above] {$q_+$};
+ \node at (0,2.55) {upper equator};
+ \node[below] at (0.95,-0.12) {$y=-1$};
+ \draw[densely dashed,thick] (0,-0.25)--(0,0.72)
+       node[above] {$\Sigma$};
+ \draw[->,thin] (0.25,0.1)--(0.25,0.48);
+ \node[right] at (0.3,0.42) {$z=1+y$};
+ \node at (0,1.5) {period annulus side};
+\end{tikzpicture}
+\caption{The base hemicycle, as a topological schematic of the northern
+compactification. Solid curves are the invariant finite line and the
+upper equatorial arcs; arrows on these curves give the base field's
+time direction. The thin arrow labels the central height, and the
+dashed segment is the central transverse section. The vertices
+$p_\pm$ are semi-hyperbolic and $q_+$ is nilpotent. Flattening the
+compactified finite line to a diameter is schematic; distances and
+curvature have no metric meaning.}
+\label{rw:fig:hemicycle}
+\end{figure}

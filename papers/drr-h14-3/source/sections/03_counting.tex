@@ -1,0 +1,348 @@
+\section{A conditional reduction to three closing zeros}
+\label{rw:counting}
+
+The sharp count uses one passing interval for the selected outer
+cycles.  Four statements about a fixed field provide this interval
+and its zero bounds: the initial energy classes have a joint count,
+an outer cycle supplies the complete comparison paths, the logarithmic
+derivative ratio has at most two zeros there, and a small cycle forces
+a stronger entrance sign.  We prove the resulting count here.
+Sections~6, 11 and 12 establish these hypotheses on the same interval.
+
+\subsection{Multiplicity and the three counting levels}
+
+On a regular section interval, all derivatives in this section are taken
+with the original field fixed.  If $f$ is real analytic on a neighborhood
+of an interval $J$, write $Z(f;J)$ for the sum of the orders of its isolated
+zeros in $J$.  The identically zero function contributes no isolated zeros.  At an
+included finite endpoint we count the full order of the analytic germ,
+not a one-sided order.  For an open or unbounded interval a bound for $Z$
+means the same bound for every finite selection of zeros with their full
+multiplicities.  No regular extension at an excluded singular endpoint is
+implicit in this convention.
+
+\begin{lemma}[Rolle's inequalities with multiplicity]
+\label{rw:counting:rolle}
+For a real analytic function on a neighborhood of an interval $J$,
+\begin{equation}\label{rw:counting:ordinary-rolle}
+ Z(f;J)\le Z(f';J)+1
+\end{equation}
+whenever the right-hand side is finite.  Suppose in addition that $a$ is
+the left endpoint of $J$, $f$ extends analytically across $a$, and
+$f(a)f'(a)>0$.  On the part of $J$ to the right of $a$,
+\begin{equation}\label{rw:counting:away-rolle}
+ Z(f;J)\le Z(f';J).
+\end{equation}
+For a right entrance the corresponding condition is $f(a)f'(a)<0$.
+Equivalently, in either case the derivative in the direction from the
+entrance into the interval must have the same sign as $f(a)$.
+\end{lemma}
+\begin{proof}
+For any finite selection of zeros, differentiation lowers each order
+by one and Rolle gives an additional zero between consecutive zeros;
+this proves \eqref{rw:counting:ordinary-rolle}. Under the left-entrance
+condition, after changing signs, \(f(a),f'(a)>0\). Before the first
+selected zero, the derivative must change from positive to negative,
+supplying one additional derivative zero. This proves
+\eqref{rw:counting:away-rolle}; reverse the coordinate at a right
+entrance. Constant functions have no isolated zeros.
+\end{proof}
+
+Now assume $\rho>0$ and put $\epsilon=\rho^2$.  Let two comparison
+paths be defined on one open passing interval $I$, with analytic central outputs
+$s_++U(t)$ and $s_-+V(t)$.  The central coordinate is the original
+height $z=1+y$.  The reference values $s_\pm$ are fixed while $t$ varies;
+in the applications their difference is
+\[
+ s_--s_+=\rho\nu H=\ell H,\qquad H>0,
+\]
+where $H$ may depend on the field but not on the input.  Assume that
+$U'$ and $V'$ are nonzero and have the same sign throughout $I$.
+Define
+\begin{equation}\label{rw:counting:levels}
+ F=U-V-\rho\nu H,\qquad
+ K=\epsilon\log\frac{V'}{U'},\qquad
+ M=wK',\qquad w>0.
+\end{equation}
+The multiplier $w$ is real analytic and positive on $I$.
+It may tend to zero or infinity at an excluded singular
+endpoint.  Only the positivity of $V'/U'$ is needed to define $K$;
+neither derivative is required to be positive individually.
+
+\begin{lemma}[Closing differences and logarithmic ratios]
+\label{rw:zero-calculus}
+Under these hypotheses, on every interval $J\subset I$,
+\begin{equation}\label{rw:counting:levels-count}
+ \begin{split}
+ Z(F';J)&=Z(K;J),\\
+ Z(K';J)&=Z(M;J),\\
+ Z(F;J)&\le 1+Z(K;J)\le 2+Z(M;J),
+ \end{split}
+\end{equation}
+provided the indicated bounds are finite.  The statements include
+multiplicities.  If an outward entrance for $K$ is available, the second
+Rolle step improves to $Z(K;J)\le Z(M;J)$ on the interval beyond that
+entrance.
+\end{lemma}
+\begin{proof}
+The input-independent reference difference disappears upon
+differentiation, giving the exact identity
+\[
+ F'=U'\bigl(1-e^{K/\epsilon}\bigr).
+\]
+The function $(1-e^{v/\epsilon})/v$ extends analytically and is
+nonzero at $v=0$, with value $-1/\epsilon$.  Consequently $F'$ and
+$K$ have precisely the same zero orders.  Multiplication by $w$ likewise
+preserves the zero orders of $K'$.  Apply
+Lemma~\ref{rw:counting:rolle} first to $F$, then to $K$.
+If $K$ is constant, $F$ is constant or strictly monotone; this also
+settles the constant cases.  The entrance improvement is
+\eqref{rw:counting:away-rolle} applied to $K$.
+\end{proof}
+
+The passage from $M$ to closing zeros therefore uses two Rolle steps,
+through $K$ and then $F$.  A signed entrance for $K$ improves the first
+step; the step from $K$ to $F$ still costs one zero.  The functions
+$U,V$ include every regular connection along their respective paths,
+so those connections also enter the derivative ratio.
+
+The following elementary observation will join local estimates without
+adding their bounds.
+
+\begin{lemma}[Joining crossings of one sign]
+\label{rw:counting:merge}
+Let $I_1,I_2$ be intervals with a nonempty open overlap, with the part
+of $I_1$ outside the overlap to its left and the part of $I_2$ outside
+the overlap to its right.  Let $g$ be $C^1$ on an open neighborhood of
+their union.  Suppose that each interval contains at most one zero,
+that every zero is simple, and that all zeros cross from the same sign
+$s_0\in\{-1,1\}$ to $-s_0$ as the common coordinate increases.
+Then their union contains at most one zero, with multiplicity.  The
+same conclusion holds for a finite ordered chain of such intervals.
+\end{lemma}
+\begin{proof}
+Two zeros would lie on opposite sides of the overlap, forcing signs
+\(-s_0\) and \(s_0\), respectively, throughout that overlap. This
+contradiction proves the assertion; induction gives the finite chain.
+\end{proof}
+
+The joining argument uses the sign of one function throughout an open
+overlap of actual passing inputs.  Endpoint asymptotics will therefore
+be used together with such an overlap.
+
+\subsection{Changes of representation and reflection}
+
+An analytic unit multiplying $F$ preserves its isolated zeros and their
+orders.  It does not preserve derivative zeros: for a nonconstant
+positive unit $a(t)$, $(aF)'=aF'+a'F$.  Thus a source closing function
+and $F$ may count the same fixed points with the same multiplicities,
+while their derivative zeros must be estimated in the chosen
+representation.
+
+A common change of input has a different effect.  If $t=\phi(v)$ is
+an analytic local diffeomorphism, then
+\begin{equation}\label{rw:counting:input-change}
+ \epsilon\log
+ \frac{(V\circ\phi)'(v)}{(U\circ\phi)'(v)}
+ =K(\phi(v)).
+\end{equation}
+It preserves the zero orders of $K$ and, since
+$(K\circ\phi)'=(K'\circ\phi)\phi'$, those of its derivative.
+When $\phi'<0$, the entrance endpoint and the direction of departure
+from it must both be reversed.  These identities retain the same
+central output coordinate.  A nonlinear change $z\mapsto\psi(z)$ of
+that output would multiply the derivative ratio by
+$\psi'(s_-+V)/\psi'(s_++U)$, which is not generally one away from a
+closing zero.
+
+The reflection \eqref{rw:geometry:reflection} reverses time and fixes
+the central height. It preserves $\rho,\epsilon$ and changes the signs
+of $\ell,\tau_0,\sigma_0,\tau_1,\sigma_1$.
+
+The transformation of $K$ follows from the actual comparison paths.
+Write the upper transition as $q=\mathcal U(p)$, with
+$\mathcal U'(p)>0$, and the two lower central outputs as $L_+(p)$
+and $L_-(q)$.  On their common passing domain,
+\[
+ K(p)=\epsilon\log
+ \frac{L_-'(\mathcal U(p))\mathcal U'(p)}{L_+'(p)}.
+\]
+Reflection exchanges the lower paths and replaces the upper transition
+by its inverse.  Its outgoing coordinate is the original $q$, not the
+original $p$.  The chain rule therefore gives
+\begin{equation}\label{rw:counting:reflection}
+ \begin{split}
+ K_{\mathrm{ref}}(q)&=-K(p),\\
+ K_{\mathrm{ref}}(q)\,\partial_qK_{\mathrm{ref}}(q)
+ &=\frac{K(p)K'(p)}{\mathcal U'(p)},
+ \qquad q=\mathcal U(p).
+ \end{split}
+\end{equation}
+The second line preserves $KK'>0$ at corresponding entrances.
+Since $\sigma_1$ changes sign, the condition
+$\operatorname{sgn}K=-\operatorname{sgn}\sigma_1$ is preserved at
+corresponding points, as is $\tau_1\sigma_1<0$.
+
+The fixed-field direction, exchanged $p,q$ labels and coefficient
+division follow the conventions of Section~\ref{rw:geometry};
+\eqref{rw:geometry:inverse-germ} preserves the return multiplicity.
+
+\subsection{The four hypotheses}
+
+Fix the collar and the return convention of \ref{rw:collar}.  A counted
+cycle means an isolated periodic orbit in that collar, with its
+Poincar\'e multiplicity.  For $\rho>0$, label it by
+$p=\rho x_{\mathrm{out}}$, where $(x_{\mathrm{out}},0)$ is its outgoing
+intersection with the positive horizontal half-axis in the chosen
+orientation.  Distinct nested cycles have distinct ordered labels.
+The normalization and generator ratios are
+\eqref{rw:geometry:generators}--\eqref{rw:geometry:generator-ratio},
+with the zero-scale convention of Definition~\ref{rw:normalization}.
+
+The initial block $\mathcal I_0$ combines the bounded-energy and
+small-coefficient classes of \eqref{rw:geometry:energy-classes};
+the remaining class is parameter-dominant. The source representative
+$F_{\mathrm{src}}$ counts these two initial classes together, even
+when it differs from \eqref{rw:counting:levels}.
+
+Fix $p_\sharp$ with $0<p_\sharp\le\eta/8$.  The constants, collar,
+and coefficient neighborhood in the following hypotheses are fixed
+before a field and a finite selection of its cycles are chosen.  Three
+distinct thresholds will be used: $p_\sharp$ for an outer witness,
+$p_\sharp/8$ for the small-cycle trigger, and $p_\sharp/4$ for
+uniqueness and the strengthened entrance.  The hypotheses concern
+actual cycles and actual passing intervals.
+Hypotheses (II)--(IV) concern $\rho>0$; the zero-scale case is included
+in (I).
+
+\begin{enumerate}
+\item[\textup{(I)}] \emph{The initial count and the outer threshold.}
+The total multiplicity in $\mathcal I_0$ is at most two.
+Every parameter-dominant cycle has $p>\eta/8\ge p_\sharp$.
+When $\rho=0$, all counted cycles belong to $\mathcal I_0$.
+
+\item[\textup{(II)}] \emph{An outer witness and a common physical interval.}
+In either alternative below, the closing zeros on a comparison interval
+represent all selected cycles contained in it, with their full
+Poincar\'e multiplicities.
+Suppose a finite selection contains a cycle with $p\ge p_\sharp$,
+and let $x$ be its first such member in increasing $p$.  One of the
+following alternatives holds.  Either a single physical comparison interval
+contains $x$ and every selected cycle at or beyond it, with $F'$ of
+strict constant sign on that interval; or the original coefficients
+satisfy
+\begin{equation}\label{rw:counting:forcing}
+ |\ell|\le
+ \exp\!\left(-\frac{p_\sharp^2}{20\epsilon}\right)
+ (|\tau_0|+|\sigma_0|).
+\end{equation}
+In the latter alternative, let $\gamma$ be any outermost member of a
+finite selection with $p_\gamma\ge p_\sharp$.  For either
+$p_0\in\{p_\sharp/8,p_\sharp/4\}$, the entire segment
+\[
+ J(p_0,\gamma)=[p_0,p_\gamma]
+\]
+is a physical passing interval for the two comparisons in
+\eqref{rw:counting:levels}.  It includes every intermediate nonperiodic
+comparison point and every selected cycle with label in this range,
+including cycles in $\mathcal I_0$.  At the two endpoints the comparison
+maps extend to open neighborhoods.
+
+\item[\textup{(III)}] \emph{The logarithmic-ratio count and its signed entrance.}
+Under \eqref{rw:counting:forcing}, on each segment supplied by (II),
+\[
+ Z(K;J(p_0,\gamma))\le2.
+\]
+If also $\tau_1\sigma_1<0$ and
+$\operatorname{sgn}K(p_0)=-\operatorname{sgn}\sigma_1$, then
+\[
+ Z(K;J(p_0,\gamma))\le1.
+\]
+This strengthened conclusion is an assumption about the same physical
+interval and the specified coefficient and entrance conditions.  It is
+not deduced from a sign condition for $FF'$.
+
+\item[\textup{(IV)}] \emph{The information supplied by a small cycle.}
+Under \eqref{rw:counting:forcing}, at most one actual counted cycle has
+$p<p_\sharp/4$, and any such cycle is simple.  If an actual cycle
+has $p<p_\sharp/8$, the regular comparison is defined at
+$p=p_\sharp/4$ and satisfies
+\begin{equation}\label{rw:counting:small-entrance}
+ \tau_1\sigma_1<0,\qquad
+ 0<-\frac{\tau_1}{\sigma_1}\le\frac{p_\sharp^2}{300},\qquad
+ \operatorname{sgn}K(p_\sharp/4)=-\operatorname{sgn}\sigma_1
+\end{equation}
+Thus a segment supplied by (II) with entrance $p_\sharp/4$ has the
+entrance required by the second clause of (III).
+\end{enumerate}
+
+Hypothesis (II) constructs the two paths at every intermediate input,
+so (III) can bound one logarithmic ratio on the entire segment.  The
+stronger bound in (III) will follow by joining the endpoint estimates
+with the stated coefficient signs and entrance.  The entrance form of
+Rolle's inequality then gives the required zero count.
+
+\begin{proposition}[Conditional bound of three]
+\label{rw:conditional-three}
+Assume \textup{(I)--(IV)}.  Then every finite selection of counted cycles
+of a fixed field has total Poincar\'e multiplicity at most three.
+Consequently the complete set of isolated counted cycles satisfies the
+same bound.  Moreover, if $\rho>0$, \eqref{rw:counting:forcing} holds, and there is
+an actual cycle with $p<p_\sharp/8$, the total multiplicity of cycles
+with $p\ge p_\sharp/8$ is at most two.
+\end{proposition}
+\begin{proof}
+The case $\rho=0$ follows from (I). For $\rho>0$, take a finite
+selection, retaining full multiplicities, and adjoin an actual outer
+witness $p\ge p_\sharp$ and an actual small cycle $p<p_\sharp/8$
+whenever such cycles exist but are absent from the selection. Bounds
+for this enlarged selection imply bounds for the original one.
+
+If no outer witness exists, (I) puts every selected cycle in
+$\mathcal I_0$, giving the bound two. Otherwise let $x$ be the first
+selected witness. The selected cycles preceding $x$ belong to
+$\mathcal I_0$ and contribute at most two. In the monotone alternative
+of (II), the remaining cycles contribute at most one simple zero,
+giving the bound three.
+
+In the other alternative, \eqref{rw:counting:forcing} holds.
+Let $\gamma$ have the largest label in the enlarged selection; no
+outermost cycle among all cycles of the field is required. If no
+small cycle exists, all selected cycles lie in
+$J=J(p_\sharp/8,\gamma)$. Hypotheses (II)--(III) and
+Lemma~\ref{rw:zero-calculus} give
+\[
+ Z(F;J)\le1+Z(K;J)\le3.
+\]
+This already counts any cycles of $\mathcal I_0$ in the selection.
+If a small cycle exists, (IV) makes it simple and unique below
+$p_\sharp/4$. All remaining selected cycles lie in
+$J=J(p_\sharp/4,\gamma)$, where
+\eqref{rw:counting:small-entrance} supplies the strengthened clause
+of (III). Hence
+\[
+ Z(F;J)\le1+Z(K;J)\le2.
+\]
+Restoring the small cycle gives three; the entrance improvement is
+used only at the $K$ level.
+
+For the additional assertion, adjoin an actual small cycle to any
+finite selection above $p_\sharp/8$, and adjoin an outer witness if
+one exists. The last case directly gives the bound two above the
+threshold. Without an outer witness, (I) allows at most one additional
+multiplicity; in the monotone case the small cycle uses one of the
+two initial multiplicities, leaving at most one there and one in the
+monotone remainder. This again gives two above the threshold.
+
+The bounds for arbitrary finite selections bound the complete set
+of isolated cycles. Equation~\eqref{rw:geometry:inverse-germ}
+transfers them to the opposite orientation; identity returns contribute
+no isolated cycles.
+\end{proof}
+
+Section~12 proves \textup{(III)} on the interval supplied by
+Propositions~\ref{rw:ordered-cover} and~\ref{rw:coefficient-transport}.
+The regular chain supplies the entrance signs.  The primary
+three-saddle and weak ends use the fixed seam, while the secondary
+ends carry the entrance through the wedge.  Each argument controls
+the same $K$ on the whole union, which is what the count above requires.

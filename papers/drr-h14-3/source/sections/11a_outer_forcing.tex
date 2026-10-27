@@ -1,0 +1,355 @@
+\subsection{Cycle candidates, retained scales, and outer forcing}
+
+Write
+\[
+ F_\pm(X)=1\pm\bar aX+\bar BX^2,\qquad
+ \mathcal P=\{\bar c=\bar m=0,\ \bar B>0,\
+           |\bar a|\le2\sqrt{\bar B}\}
+\]
+on the normalized max-norm face. At $\mathcal P$ one has
+$\bar B\ge1/4$. Indeed either $\bar B=1$ or $|\bar a|=1$,
+and the latter inequality gives $\bar B\ge1/4$.
+The compactified interval $[0,\infty]$ is always given its ordinary
+topology through $p\mapsto p/(1+p)$.
+We first cover closing orbits, so that an outer orbit can supply a
+coefficient inequality. We will extend the cover to the intervening
+comparison arcs after proving that all of those arcs return.
+
+\begin{lemma}[Refined candidate space]\label{rw:fibre:candidate-space}
+The limiting data of parameter-dominant counted cycles have a compact
+refinement with the following properties.
+Away from $\mathcal P$ its coordinates are the normalized
+coefficients and the two compactified actual endpoints.
+Near $\mathcal P$ it additionally retains the secondary direction
+$(C,M)$, the secondary scale and actual first-exit tags.
+Every point has one of the local descriptions of Sections~7--10,
+including their boundary faces. The same compactification can be
+applied simultaneously to an outer cycle and any returning upper
+arc between fixed positive initial endpoints and its endpoints.
+The assertion about such additional arcs is compactness only;
+their existence and local classification will be proved below.
+\end{lemma}
+\begin{proof}
+Let $\chi>0$ be the fixed strong-entry constant in
+Lemma~\ref{rw:finite:action-order}. For parameter-dominant
+cycles, $p\ge\chi/2$, $q\ge\chi$. Take the intersection, as
+$r\downarrow0$, of the closures of their data with $0<\rho<r$
+in
+\[
+ \mathcal S\times[\chi/2,\infty]\times[\chi,\infty],
+ \qquad
+ \mathcal S=\{(\bar B,\bar m,\bar a,\bar c):
+          \max(|\bar B|,|\bar m|,|\bar a|,|\bar c|)=1\}.
+\]
+This is a compact set. Its points satisfy the nonnegative lower
+conditions of Lemma~\ref{rw:finite:lower-cones}. The parameter
+$\nu$ tends to zero by Proposition~\ref{rw:geometry:flatness}.
+
+Only the corner at $\mathcal P$ needs further coordinates. Put
+\[
+ \bar d=\bar c+\nu,\qquad
+ \lambda=\max(|\bar d|,\sqrt{|\bar m|}),\qquad
+ C=\bar d/\lambda,\quad M=\bar m/\lambda^2
+ \quad(\lambda>0).
+\]
+The direction belongs to the compact face
+$\mathcal D=\{\max(|C|,\sqrt{|M|})=1\}$. Use the fixed
+sections of Lemma~\ref{rw:secondary:routing}. Retain a finite
+flag specifying a wedge exit, a secondary exit, or their overlap.
+For a wedge intersection retain $H\in[0,H_0]$ and, if
+$H+\lambda>0$, the ratio
+$\chi_{\rm exit}=H/(H+\lambda)$.
+For a secondary intersection retain its actual radial coordinates
+$R_{\rm in},R_{\rm out}\in[0,R_{\max}]$ on the sections
+$\phi=\pm\lambda L$, together with
+\[
+ t=1/P,\qquad \widetilde t=1/Q,\qquad
+ 0\le t,\widetilde t\le1/p_* .
+\]
+Here $P,Q$ are the auxiliary linear-flow labels of
+Lemma~\ref{rw:secondary:tags}, evaluated at those actual section
+points; in particular $t=R/\bar x(T)$ on the incoming section.
+They are not defined to be $\lambda p,\lambda q$.
+Use a fixed placeholder for an inactive coordinate. Allow all the
+indicated flags on an overlap, and take the closure of the resulting
+actual-data graph in the finite union of these compact products,
+also retaining $\lambda\in[0,\lambda_*]$.
+Taking the closure retains radial limits without inverting a map
+at zero radius. An orbit in an overlap may have two sets of tags;
+keeping both copies preserves compactness and suffices for a finite
+subcover.
+
+If $H/\lambda$ tends
+to infinity, routing is in the wedge and
+$|\bar d|/H+|\bar m|/H^2$ tends to zero. For a finite ratio
+the first-exit flag is retained: a first wedge exit has
+$H/\lambda\ge L$ and hence the fixed wedge inequalities,
+whereas a first secondary exit is in the secondary rectangle.
+The equality face has the open overlap proved below. Radial escape is
+$R=0$, equivalently $1/P=0$ or $1/Q=0$, and is retained in
+the secondary infinity charts. The cases of a finite upper
+threshold and its repeated limit are retained with their actual
+deficits. Proposition~\ref{rw:secondary:exhaustion} classifies the
+entire normalized face, including its repeated and weak boundaries,
+and excludes another zero corner. For $\lambda=0$ an actual field
+uses only the wedge; secondary directions there record limits with
+$\lambda>0$. This classification applies to returning upper arcs.
+
+For completeness the primary alternatives follow directly from
+the upper linear flow. A finite nonregular pair is $(p_c,q_c)$
+with $\bar m>0$. One finite and one infinite endpoint is a
+strict real threshold, a repeated threshold with its whole interval
+$p\ge P$, or the weak boundary $\bar m=0$; reflection gives
+the other orientation. At two infinite endpoints the strict barrier
+of Lemma~\ref{rw:finite:strict-barrier} gives
+$\bar c^2+4\bar m\le0$. Strict focus, repeated upper root and
+the cubic horizontal boundary are covered in Section~8; the joint
+repeated center is Section~9. If $\bar m=0$, then $\bar c=0$
+and the lower cones put the point in $\mathcal P$.
+At a finite lower loss the first root, its double limit, or the
+simultaneous pair gives the alternatives of Section~7.
+The two-root and one-infinite statements include roots that escape
+to infinity, so these faces are not omitted.
+
+For an intermediate arc, take the product with a second set of actual
+tags, sharing the coefficients but retaining its own section points
+and first-exit flag.
+Use independent initial bounds $p\ge p_0>0$, $q\ge q_0>0$ for
+this copy; $q_0$ is uniform on the compact regular entrance.
+Impose $p\le p^{\rm out}$, $q\le q^{\rm out}$ before
+closing the actual-data graph. This remains a closed subset of a
+compact product. The independent tags are needed because an
+intermediate arc may take a wedge exit although the outer cycle takes
+a secondary exit.
+\end{proof}
+
+\begin{lemma}[Uniform selection over compact fibres]
+\label{rw:fibre:compact-selection}
+In a compact metric product $X$ with continuous outer projection
+$\pi:X\to B$ to a compact metric space, let
+$X_r$ be the actual data with $0<\rho<r$ and put
+$X_0=\bigcap_{r>0}\overline{X_r}$. If a finite union
+$U$ of prepared open pieces contains the limiting fibre
+$X_0\cap\pi^{-1}(\{b\})$, then
+an outer neighborhood and a positive original scale cutoff can be
+chosen so that every actual datum over that neighborhood belongs to
+$U$. If this construction applies at every outer limit, finitely many
+such choices give common cutoffs and bounds.
+\end{lemma}
+\begin{proof}
+Choose $V$ with $\overline V$ disjoint from the compact set
+$\pi(X_0\setminus U)$. If no scale cutoff worked, excluded actual data
+over $V$ at scales tending to zero would have a subsequential limit in
+$(X_0\setminus U)\cap\pi^{-1}(\overline V)$, a contradiction.
+A finite outer subcover gives the common minimum scale cutoff and
+maximum bounds. The same argument applies to the one-copy graph.
+\end{proof}
+
+\begin{lemma}[An endpoint cutoff chosen after contraction]
+\label{rw:fibre:candidate-cover}
+There is $p_\sharp>0$, chosen before the primary scale cutoff,
+and finitely many local candidate neighborhoods that contain every
+counted cycle with $p\ge p_\sharp/16$ at sufficiently small
+original parameter. The regular member contains all sufficiently
+small endpoint data with
+$p_\sharp/16\le p\le p_\sharp/2$.
+Each other member is either separated from its local center set
+on its closure or has a common center-comparison domain and a
+positive contraction exponent $b_j>p_\sharp^2$.
+Secondary center estimates retain any prescribed finite power
+of $\lambda$, or of the wedge height, before division.
+\end{lemma}
+\begin{proof}
+Start with the nonregular part of the compact refined limit set
+in Lemma~\ref{rw:fibre:candidate-space}. At a noncenter point
+shrink the closed coefficient neighborhood away from the center
+set. At a center point the classification gives a divided regular,
+two-root, finite-saddle, weak, focus or joint chart.
+There are no additional unprepared center losses: the exact
+quasi-invariant \eqref{rw:finite:quasi-invariant} implies that an
+incoming finite root on a center also has an outgoing root; a
+one-infinite center has
+$\bar a=-\bar c,\bar m=-\bar B$, so its finite lower factor
+equals the upper entry factor; and a lower double root in the
+secondary corner has $|\bar a|=2\sqrt{\bar B}>0$ and is off
+the secondary center. The repeated coincidence is precisely the
+joint chart.
+
+On each center neighborhood, first retain a fixed lower subsegment
+with positive action. After reducing the coefficient neighborhood,
+normal contraction on this subsegment bounds the absolute coefficient
+derivatives of the complete central deviations by
+$C\epsilon^{-N}e^{-b_j/\epsilon}$, with $b_j>0$.
+These are estimates of the absolute deviations; the logarithm of an
+input-independent slow contraction may diverge. The large-power
+preparation extends the same estimate by zero up to a lost exit.
+Section~5 supplies the real center and the whole input domain on which
+to divide. Double division uses two ordinary coefficient derivatives
+of the absolute difference, and a single component uses one. The
+budgets retained in Sections~7--9 include these derivatives; this step
+takes no further input derivative.
+In the corner use the weighted absolute estimates of
+Lemma~\ref{rw:secondary:flat-budget}. For the present argument
+retain power two before the coefficient division; if a later local
+coordinate requires more, retain its specified finite power first.
+The exact exponent in Proposition~\ref{rw:exact-long} makes
+these choices uniform without bounding $\epsilon|\log\lambda|$.
+For the wedge choose its fixed widths $|\gamma|,|J|<\delta$
+inside the regular-lower center box whenever $|\bar a|$ is
+small. The remaining wedge data have $|\bar a|$ bounded
+below and are primary off-center data. Thus an off-center
+secondary direction attached to a first wedge exit is not
+used to estimate that exit by a power of $\lambda$; its
+actual radial power is a power of $H$.
+
+Take a finite cover of this refined nonregular set, and then choose
+$p_\sharp\le\chi/2$ so that $p_\sharp^2<\min_j b_j$,
+and decrease it to meet the small-endpoint error bounds in the
+source and regular-column preparations. These choices precede
+the smallness choice for $\epsilon$.
+The compact complement of the chosen open neighborhoods is
+strictly regular. Enlarge that compact regular set to contain
+$p_\sharp/16\le p\le p_\sharp/2$ and the limits of cycles
+in the two initial energy classes with $p\ge p_\sharp/16$.
+The latter enlargement is regular: the source endpoints satisfy
+$p=\sqrt{2\epsilon h e_+}\le2\sqrt\eta$ and
+$q/p=\sqrt{e_-/e_+}=1+O(\eta)$, while the lower and upper
+thresholds have a fixed positive lower bound. The compact-energy
+class has $p,q\to0$ and causes no further endpoint limit.
+The regular upper return and the positive lower polynomials
+therefore give a common compact tube for this enlargement.
+
+Apply Lemma~\ref{rw:fibre:compact-selection} to this one-copy
+refined graph. Positive endpoint limits from the initial classes lie
+in the regular enlargement, with $q$ bounded below when
+$p\ge p_\sharp/16$ by the same source estimates. Thus the selected
+finite family covers all the asserted cycle data.
+\end{proof}
+
+The candidate cover locates each outer closing orbit. To obtain one
+sharp count, we next extract its coefficient inequality; saturation
+then supplies all intervening comparison paths.
+
+\begin{proposition}[Forcing supplied by an outer closing zero]
+\label{rw:outer-forcing}
+Choose the field orientation with $\ell\ge0$.
+After a common original parameter shrink, a counted cycle with
+$p\ge p_\sharp$ either lies in a constant-sign local comparison
+whose full remaining physical passing interval is covered by that
+same comparison, or supplies the coefficient inequality
+\begin{equation}\label{rw:fibre:original-forcing}
+ |\ell|\le e^{-p_\sharp^2/(20\epsilon)}
+                    (|\tau_0|+|\sigma_0|).
+\end{equation}
+Equivalently,
+\begin{equation}\label{rw:fibre:normalized-forcing}
+ |\nu|\le e^{-p_\sharp^2/(20\epsilon)}
+                    (|\tau_1|+\epsilon|\sigma_1|).
+\end{equation}
+An interior constant-sign piece is not sufficient for the first
+alternative. On a center fibre with a closing zero there are no
+isolated closing zeros.
+\end{proposition}
+\begin{proof}
+Apply the candidate cover to the outer cycle. A constant-sign chart
+containing the entire remaining passing interval gives the first
+alternative. In every other chart we derive the coefficient inequality,
+including on constant-sign pieces separated from the center set.
+
+The nonnegative lower cone and
+\eqref{rw:finite:action-budget}, applied at $p_\sharp$, give
+\[
+ s\le \exp[-p_\sharp^2/(5\epsilon)].
+\]
+Indeed
+$A_+(p_\sharp)\ge
+p_\sharp^2/[2(1+p_\sharp+p_\sharp^2)]$ and the error in
+the budget is absorbed after $p_\sharp$ is fixed.
+Since $|\ell|<3s$,
+any closed primary neighborhood on which
+$|\tau_1|+|\sigma_1|\ge g_0>0$ satisfies
+\eqref{rw:fibre:original-forcing}: use
+$|\tau_0|+|\sigma_0|\ge\rho^3g_0$ and absorb this fixed
+power of $\rho$ in the strict gap between the two exponents.
+
+At an off-center secondary first exit, the primary action estimate
+alone does not retain the vanishing secondary weight. We use the exact
+long match to recover it.
+Suppose first $|C|\ge g_0/2$, where
+$|\bar a|+|C|\ge g_0$ on the chosen closed neighborhood.
+The exact long match gives an outgoing horizontal input
+$u_+\le C_1\lambda^{k/b}$, with
+$b=1-\epsilon\bar B$, $k=1-2\epsilon\bar B$.
+The lower common power has exponent $b/(\epsilon\bar B)$.
+The bounded scaled action and scaled prefactor, including a
+possible additional contracting lower double passage, imply
+\begin{equation}\label{rw:fibre:weighted-budget}
+ s\le I_{\rm out}
+       \le e^{C_0/\epsilon}\lambda^{k/(\epsilon\bar B)}.
+\end{equation}
+The first inequality uses the actual reference
+$s_+=-\ell H_+\le0$. Choose $\kappa_*>0$ with
+$k/\bar B\ge\kappa_*$, then $\lambda_0>0$ so that
+\[
+ (\kappa_*/2)\log(1/\lambda_0)
+                    \ge C_0+p_\sharp^2/5,
+ \qquad \epsilon\le\kappa_*/4.
+\]
+For $\lambda\le\lambda_0$,
+\eqref{rw:fibre:weighted-budget} yields
+$s\le\lambda^2e^{-p_\sharp^2/(5\epsilon)}$.
+For $\lambda\ge\lambda_0$ the primary budget gives the same
+bound with the fixed factor $\lambda_0^{-2}$. Consequently
+$|\nu|\le\lambda|C|/2$ at small scale and
+\[
+ |\bar c|=|\lambda C-\nu|\ge\lambda g_0/4,\qquad
+ |\sigma_0|\ge c\rho^3\lambda g_0 .
+\]
+The extra factor $\lambda^2$ proves
+\eqref{rw:fibre:original-forcing} uniformly, even if
+$\epsilon|\log\lambda|$ is arbitrarily large.
+If $|C|<g_0/2$, then $|\bar a|\ge g_0/2$; the corner
+has $|\bar c|<g_0/4$, so this reduces to the primary
+off-center estimate.
+
+On a retained center neighborhood, cancellation on the real center
+recovers the generator factor. Write the complete closing function as
+$Z-\rho\nu H$, with $H>h_*$ independent of the section input.
+The actual center division gives
+\[
+ |Z|\le C\epsilon^{-N}e^{-b_j/\epsilon}
+             (|\tau_1|+|\sigma_1|+|\nu|).
+\]
+The local inverse charts and the two ideal comparisons in
+Proposition~\ref{rw:generator-division} justify the indicated
+generators. In secondary variables retain the weighted version
+before returning to primary coefficients: a term
+$\lambda^2|C|$ is bounded by
+$|\bar d|=\lambda|C|$, and the wedge version is identical
+with $H^2|\gamma|\le|\bar d|$ and its retained height.
+The small-$|\bar a|$ wedge box was included in these center
+comparisons independently of its secondary direction. Since
+$|\bar d|\le|\bar c|+|\nu|$ and
+$\bar B+\bar m>1/8$ here, the resulting bound is again the
+displayed primary one. No inverse power of $\lambda$ is
+introduced.
+At a closing zero Lemma~\ref{rw:centers:relative-forcing}
+absorbs the $\nu$ term. Since $b_j>p_\sharp^2$, the fixed
+powers of $\epsilon$ needed to return to original generators
+are absorbed with room to spare.
+
+Finally consider the compact regular member at $p\ge p_\sharp$.
+Retain a slightly larger actual tube with $p\ge p_\sharp/2$.
+The regular upper map has $q\ge p(1-p)$ at small endpoints;
+hence both retained actions have a lower bound greater than
+$p_\sharp^2/10$ after $p_\sharp$ is reduced. The regular
+absolute maps and double center division yield
+\[
+ |\ell|\le C\epsilon^{-N}e^{-p_\sharp^2/(10\epsilon)}
+                      (|\tau_0|+|\sigma_0|),
+\]
+which implies the required exponent $p_\sharp^2/20$.
+The finite candidate cover makes these choices uniform. If the
+generators vanish, absorption first gives $\nu=0$, and the actual
+center identity excludes isolated zeros.
+\end{proof}

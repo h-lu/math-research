@@ -1,0 +1,144 @@
+\subsection{Secondary terminal intervals with their entrances}
+\label{rw:anchors:secondary}
+
+Let $R$ be the regular, wedge and regular-secondary prefix, $T$ its
+finite-saddle or weak terminal interval, and $O$ their actual open
+overlap. We use the common $\mathcal K$ of
+\eqref{rw:secondary:complete-log}, the fixed-fibre forcing of
+Section~11 and the seam convention of Section~\ref{rw:anchors:primary}.
+
+By Proposition~\ref{rw:regular-chain}, the chain has at most one
+simple zero, after which
+\begin{equation}\label{rw:secondary:anchor-entry}
+ \bar aC<0,\qquad
+ \operatorname{sign}\mathcal K=-\operatorname{sign}C,\qquad
+ \operatorname{sign}\partial_{\rm out}\mathcal K
+                                      =-\operatorname{sign}C .
+\end{equation}
+Here $C=\bar d/\lambda$ with $\lambda>0$ fixed on the fibre.
+Lemma~\ref{rw:secondary:chain-monotone} gives the same departure
+from a supplied signed entrance; the positive column quotient on a
+compact regular-secondary overlap gives $|\bar a|\le K_1|C|$.
+
+\begin{proposition}[The finite secondary saddle with an entrance]
+\label{rw:secondary:saddle-anchor}
+Let $T$ be the finite-saddle interval of
+Proposition~\ref{rw:secondary:saddle}, with its fixed-fibre relative
+forcing. Without a prescribed entrance it has
+$Z(\mathcal K;T)\le2$.
+If the preceding chain has a zero, then its remaining terminal part
+has at most one zero of $\mathcal K$. The same improvement holds
+without a preceding zero when $O$ satisfies
+\begin{equation}\label{rw:secondary:saddle-signed-entry}
+ \bar aC<0,\qquad
+ \operatorname{sign}\mathcal K|_O=-\operatorname{sign}C .
+\end{equation}
+Thus $Z(\mathcal K;R\cup T)\le2$ without a specified entrance,
+and the terminal union after an entrance satisfying
+\eqref{rw:secondary:saddle-signed-entry} has at most one zero
+if its preceding chain has no zero.
+All counts include multiplicities and use the actual passing and
+positive-central restrictions.
+\end{proposition}
+
+\begin{proof}
+First separate the lower-double overlay. On a compact regular overlap
+before the saddle, the upper logarithms and the relative lower term
+are bounded, whereas \eqref{rw:secondary:lower-constant} has arbitrarily
+large modulus and sign $-\operatorname{sign}\bar a$ near
+$\bar a=\pm2\sqrt{\bar B}$. Under
+\eqref{rw:secondary:saddle-signed-entry} this is
+$\operatorname{sign}C$, opposite to the entrance sign, so the anchored
+case is excluded. The value-domination argument of
+Proposition~\ref{rw:secondary:saddle} already gives at most one
+zero in the overlay, all crossings having the same nonzero actual-ratio
+sign. This count survives restriction by every lower whole-path test.
+
+On the remaining compact regular-lower block the signed comparison
+maps extend along the saddle quadrant to $t=0$, with
+\begin{equation}\label{rw:secondary:anchor-saddle-log}
+ \mathcal K=K_c+\epsilon\kappa\log t+\mathcal E(t),
+ \qquad \mathcal E(t)\longrightarrow0 .
+\end{equation}
+Here $\kappa=r-1$ is the actual ratio difference. The two central outputs
+need not both be positive on this whole continuation.
+
+To determine the endpoint sign of this continuation, we need the sign
+of the actual ratio difference $\kappa$.
+The overlap cone and the transported forcing give
+\[
+ |\bar a|\le K_1|C|,\qquad
+ |\nu|\le\eta_\epsilon(|\bar a|+|C|)
+                    \le (K_1+1)\eta_\epsilon|C|.
+\]
+Near $C=0$, identity \eqref{rw:secondary:saddle-ratio} now reads
+\[
+ \kappa=-\alpha_s C+\mathcal R_s,\qquad
+ |\mathcal R_s|\le
+ C_0\bigl(|C|+\epsilon\lambda K_1+
+           \epsilon\lambda(K_1+1)\eta_\epsilon\bigr)|C|,
+ \qquad \alpha_s>c_0>0 .
+\]
+Choose the $C$ neighborhood and then the scale restrictions so that
+the coefficient of $|C|$ in this error is less than $c_0/2$.
+Thus $\operatorname{sign}\kappa=-\operatorname{sign}C$ and
+$|\kappa|\ge c_0|C|/2$. Away from this neighborhood the same sign
+follows with a strict margin from
+\[
+ r_0-1=-\frac{2C}{\sqrt{C^2+4M}+C};
+\]
+the exact divided field is a uniformly small perturbation on the
+compact positive-$M$ block. The case $C=0$ is excluded by
+$\bar aC<0$. The retained coefficient error $\epsilon\lambda|\nu|$
+is therefore small relative to $|C|$, which gives the ratio sign
+uniformly even as $C$ tends to zero.
+
+For $|\bar a|>K_0|\kappa|$ the same value-domination argument
+already gives at most one zero. In the complementary cone the
+unanchored estimate $Z(\mathcal K)\le2$ holds on the entire
+saddle comparison continuation. Equation
+\eqref{rw:secondary:anchor-saddle-log} gives its endpoint sign
+$\operatorname{sign}C$, opposite to the sign at the fixed seam.
+The opposite endpoint signs and Lemma~\ref{rw:anchors:calculus}
+give one zero on the continuation and at most one on its physical
+subinterval. The departure
+\eqref{rw:secondary:anchor-entry} keeps the overlap zero-free after a
+chain zero; adding that possible zero gives the union count.
+\end{proof}
+
+\begin{proposition}[The weak secondary end with an entrance]
+\label{rw:secondary:weak-anchor}
+Consider the weak row of Proposition~\ref{rw:secondary:real},
+first with $C>0$. Without an entrance condition its terminal
+interval has $Z(\mathcal K;T)\le2$.
+If the preceding chain has a zero, its remaining terminal part
+has at most one zero. This improvement also holds when there is
+no chain zero but the open overlap satisfies
+\begin{equation}\label{rw:secondary:weak-signed-entry}
+ \mathcal K|_O<0,\qquad \partial_{\rm out}\mathcal K|_O<0 .
+\end{equation}
+Consequently the whole chain and terminal union has at most two
+zeros of $K$; with the supplied entrance and no chain zero,
+it has at most one. Reflection supplies the $C<0$ statement.
+These conclusions permit either lower double root to shorten the
+passing interval and permit positive-central truncation.
+\end{proposition}
+
+\begin{proof}
+On the physical fibre Section~11 supplies
+\[
+ |\nu|\le C\delta_\epsilon(|\bar a|+|\bar d|),\qquad
+ \bar d=\lambda C,
+\]
+from the outer closing zero. After a chain zero, or under the entrance,
+$\mathcal K<0$ and $\partial_{\rm out}\mathcal K<0$ there.
+The actual outgoing tag is
+$P=P_s-\psi(t(u))$ with $\psi'>c$ and $t'>0$,
+so outward motion decreases $u$ and
+$\operatorname{sign}\partial_{\rm out}\mathcal K
+=-\operatorname{sign}\mathcal M$.
+Lemma~\ref{rw:anchors:calculus}, with the increasing numerator of
+Proposition~\ref{rw:secondary:real}, leaves at most one simple tail
+zero on the lower-passing, positive-central interval. Adding the
+possible chain zero gives the assertions; reflection supplies $C<0$.
+\end{proof}

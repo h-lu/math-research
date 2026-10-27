@@ -1,0 +1,98 @@
+% Computed scalar profile used by the lower action construction.
+% Native TikZ; the preamble loads tikz (no PGFPlots or external data).
+% Curves sample Phi(r)=sqrt((1-r)/(8r))+r^2-101/100 directly.
+% Main axes: 0.05 <= r <= 1.02, -0.45 <= Phi <= 0.15;
+% the graph itself is sampled only for 0.05 <= r < 1.
+% Zoom window: 0.965 <= r < 1, -0.012 <= Phi <= 0.007.
+% Sampling uses a unit-interval parameter; straight segments avoid spline
+% overshoot. PGF floating-point evaluation resolves the shallow right peak.
+% Root markers are numerical locations (bisection residual < 5e-15):
+% 0.1115973705382644, 0.9786836116269868, 0.9987531118881820.
+\begin{figure}[htb]
+\centering
+\usepgflibrary{fpu}
+\pgfmathdeclarefunction{loweractionphi}{1}{%
+  \begingroup
+  \pgfkeys{/pgf/fpu=true,/pgf/fpu/output format=fixed}%
+  \pgfmathparse{sqrt((1-#1)/(8*#1))+#1*#1-1.01}%
+  \pgfmathsmuggle\pgfmathresult
+  \endgroup
+}
+\pgfmathdeclarefunction{loweractionphidelta}{1}{%
+  \begingroup
+  \pgfkeys{/pgf/fpu=true,/pgf/fpu/output format=fixed}%
+  \pgfmathparse{sqrt(#1/(8*(1-#1)))-2*#1+#1*#1-.01}%
+  \pgfmathsmuggle\pgfmathresult
+  \endgroup
+}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+  % Panel (a): the full profile, with the divergent left tail clipped.
+  \begin{scope}
+    \draw[line width=.3pt] (0,0) rectangle (7.5,3.5);
+    \draw[densely dashed,line width=.35pt] (0,2.625)--(7.5,2.625);
+    \foreach \r/\lab in {.1/{0.1},.3/{0.3},.5/{0.5},.7/{0.7},.9/{0.9},1/{1}} {
+      \pgfmathsetmacro{\xx}{(\r-.05)/.97*7.5}
+      \draw[line width=.3pt] (\xx,0)--(\xx,-.065);
+      \node[below,inner sep=2pt] at (\xx,-.065) {$\lab$};
+    }
+    \foreach \v/\lab in {-.4/{-0.4},-.2/{-0.2},0/{0},.1/{0.1}} {
+      \pgfmathsetmacro{\yy}{(\v+.45)/.60*3.5}
+      \draw[line width=.3pt] (0,\yy)--(-.065,\yy);
+      \node[left,inner sep=2pt] at (-.065,\yy) {$\lab$};
+    }
+    \begin{scope}
+      \clip (0,0) rectangle (7.5,3.5);
+      \draw[line width=.75pt]
+        plot[domain=0:1,samples=260,variable=\u]
+        ({.90*\u/.97*7.5},
+         {(loweractionphi(.05+.90*\u)+.45)/.60*3.5})
+        plot[domain=0:1,samples=320,variable=\u]
+        ({(.90+.04999*\u)/.97*7.5},
+         {(loweractionphidelta(.05-.04999*\u)+.45)/.60*3.5});
+      \foreach \r in {.1115973705382644,.9786836116269868,.9987531118881820} {
+        \fill ({(\r-.05)/.97*7.5},2.625) circle[radius=1.25pt];
+      }
+    \end{scope}
+    \node[above,inner sep=2pt] at (0,3.5) {$\Phi(r)$};
+    \node[below,inner sep=2pt] at (7.5,-.42) {$r$};
+    \node at (3.75,-.74) {(a) The action profile};
+  \end{scope}
+  % Panel (b): a separate linear scale resolves both right-hand zeros.
+  \begin{scope}[shift={(9.3,0)}]
+    \draw[line width=.3pt] (0,0) rectangle (5.2,3.5);
+    \draw[densely dashed,line width=.35pt]
+      (0,{.012/.019*3.5})--(5.2,{.012/.019*3.5});
+    \foreach \r/\lab in {.97/{0.97},.98/{0.98},.99/{0.99},1/{1}} {
+      \pgfmathsetmacro{\xx}{(\r-.965)/.035*5.2}
+      \draw[line width=.3pt] (\xx,0)--(\xx,-.065);
+      \node[below,inner sep=2pt] at (\xx,-.065) {$\lab$};
+    }
+    \foreach \v/\lab in {-.01/{-0.010},-.005/{-0.005},0/{0},.005/{0.005}} {
+      \pgfmathsetmacro{\yy}{(\v+.012)/.019*3.5}
+      \draw[line width=.3pt] (0,\yy)--(-.065,\yy);
+      \node[left,inner sep=2pt] at (-.065,\yy) {$\lab$};
+    }
+    \begin{scope}
+      \clip (0,0) rectangle (5.2,3.5);
+      \draw[line width=.75pt]
+        plot[domain=0:1,samples=360,variable=\u]
+        ({.03499*\u/.035*5.2},
+         {(loweractionphidelta(.035-.03499*\u)+.012)/.019*3.5});
+      \foreach \r in {.9786836116269868,.9987531118881820} {
+        \fill ({(\r-.965)/.035*5.2},{.012/.019*3.5})
+          circle[radius=1.25pt];
+      }
+    \end{scope}
+    \node[above,inner sep=2pt] at (0,3.5) {$\Phi(r)$};
+    \node[below,inner sep=2pt] at (5.2,-.42) {$r$};
+    \node at (2.6,-.74) {(b) Enlargement near $r=1$};
+  \end{scope}
+\end{tikzpicture}
+\caption{Computed graph of
+$\Phi(r)=\sqrt{(1-r)/(8r)}+r^2-101/100$ on $0<r<1$.
+Panel~(a) clips the divergent left-end portion as $r\downarrow0$.
+The dots mark numerically computed zeros; panel~(b) resolves the two near $r=1$.
+The three simple zeros are established analytically in
+Lemma~\ref{p4:model}.}
+\label{fig:lower-action-profile}
+\end{figure}

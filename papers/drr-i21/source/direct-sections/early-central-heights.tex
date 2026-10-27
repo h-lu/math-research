@@ -1,0 +1,141 @@
+\subsection{Early central heights}
+\label{sec:early-central-heights}
+
+The first part of the height interval is controlled by exterior
+contraction. Besides heights above a coefficient-dependent threshold,
+it includes smaller central heights whose positive half-orbits still
+have small normalized radius at that threshold. The estimates below
+keep the tail error independent of the threshold, so that the common
+fixed sections suffice for later applications. We use the scales
+\begin{equation}
+\label{eq:direct-quadratic-prefix-scales}
+ q_0=-a\delta\ell^2,\qquad q_1=b\delta\ell,\qquad
+ q_2=-\bar c\delta,\qquad \epsilon_3=\ell/\delta\le1,
+\end{equation}
+where \(a\ge a_{\min}>0,\ b\ge0,\ \bar c\) lie in a fixed compact
+coefficient set and \(\delta>0\) is sufficiently small. Put
+\(Q=\delta\ell^2\). In \(x=|\eta|/\ell\) the outward drifts are
+\[
+ K_\sigma(x)=-q(\sigma\ell x)/(\delta\ell^2)
+ =a-\sigma bx+\bar c x^2-\sigma\epsilon_3 x^3R_q(\sigma\ell x).
+\]
+
+\begin{lemma}[Early central heights]
+\label{lem:early-central-heights}
+Fix \(d_f>0\) and put \(z_e=d_fQ\). There is \(r_0>0\), depending only
+on \(d_f\) and the compact coefficient set, such that for all
+sufficiently small \(\delta\) the central heights in \(\cH_p\) with
+\begin{equation}
+\label{eq:direct-primary-early}
+ h\ge z_e,\qquad\hbox{or}\qquad
+ 0<h<z_e,\quad |\eta_+(z_e;h)|/\ell\le r_0,
+\end{equation}
+form an initial interval in every logarithmic height coordinate
+\(T=-c_T\log h\), and
+\(\Pi_p'(I_-)I_{-,h}/I_{+,h}<1\) on it. In particular
+\(\mathcal L<0\) there. The coefficient of \(\sqrt{z_*}\) in the
+estimates is \(2C_{\rm cone}\); the constants that depend on
+\(d_f\) and \(r_0\) enter only the final threshold for \(\delta\).
+\end{lemma}
+
+\begin{proof}
+By \cref{lem:central-height-order}, the set
+\eqref{eq:direct-primary-early} is an initial interval in \(T\).
+There are three ranges: large heights, the intermediate height band,
+and smaller heights with small radius at the prescribed cut.
+The large-height estimate handles the first. In the other two, we bound the paired
+logarithm \(\log(I_{-,h}/I_{+,h})\) of
+\cref{lem:paired-variation-identity-new}. The common-cone tail
+contributes \(2C_{\rm cone}\sqrt{z_*}\), already below a fixed
+fraction of the exterior contraction margin. The remaining errors are
+controlled by choosing the radius cut small where needed, and then
+reducing \(\delta\).
+
+\emph{Large heights.} Let \(\theta_0\) be the constant of
+\cref{lem:relative-height-paired-new}, and fix \(K\ge2a_{\max}/\theta_0\).
+For \(h\ge KQ\),
+\[
+ |q_0|/h\le a/K,\qquad q_1/\sqrt h\le b\sqrt{\delta/K},\qquad
+ |q_2|\le C\delta,
+\]
+so \cref{lem:relative-height-paired-new} gives
+\(0<L_p'<1\) for small \(\delta\).
+
+\emph{The band \(d_fQ\le h\le KQ\).} Set \(z=Q\zeta\), \(U=Q\mathcal U\).
+Since \(q_0<0\), the constant term of the graph equation is
+favorable, and the centered lower barrier \(U_\sigma\ge m(z-h)\) holds
+for a small fixed \(m\). On a fixed interval ending at
+\(\zeta=K_1>2K\), the graph equation converges uniformly, with its
+finite variations, to
+\[
+ \mathcal U_\zeta=B_0+a/\zeta,\qquad
+ \mathcal U(\zeta)=B_0(\zeta-h/Q)+a\log(\zeta Q/h).
+\]
+Choose \(K_1\) large after \(d_f,K\). Since
+\(\log(K_1/d_f)/K_1\to0\), the energy ratio at \(K_1Q\) lies in the
+interior of the common cone, uniformly for \(d_f\le h/Q\le K\).
+Before this height, the positive flux and the centered lower barrier
+bound the three paired integrals by
+\(C_{d_f,K_1}(\sqrt Q+q_1/\sqrt Q)=C_{d_f,K_1}(\sqrt Q+b\sqrt\delta)\).
+Their square-root singularities at \(\zeta=h/Q\) are integrable.
+Beyond this height, \cref{lem:direct-weighted-tail} applies on the
+common cone. Combining the two estimates gives
+\begin{equation}
+\label{eq:direct-primary-early-uniform-section}
+ \left|\log(I_{-,h}/I_{+,h})\right|
+ \le 2C_{\rm cone}\sqrt{z_*}+C_{d_f,K_1}\sqrt\delta .
+\end{equation}
+
+\emph{Small radius at \(z_e\).} Write
+\(x_\sigma=|\eta_\sigma(z_e;h)|/\ell\). Take a fixed large \(L_0\), and
+then \(r_0\) so small that both \(K_\sigma\) lie between \(a/2\) and
+\(2a\) on \(0\le x\le L_0r_0\). Up to a hypothetical first hit
+of \(L_0r_0\) by the negative branch, the graph equations give
+\(\mathcal G_{-,p}(U_-,z)\le C\mathcal G_{+,p}(U_+,z)\): compare
+\(\sup B+2a\delta\ell^2/z\) with \(b_0+a\delta\ell^2/(2z)\), the
+supremum being taken on the fixed box. Integration from the common zero
+energy gives \(U_-\le CU_+\), and \(L_0^2>C\) excludes that hit.
+Thus \(x_+\le r_0\) implies \(x_-\le L_0r_0\).
+
+On the prefix up to \(z_e\), use
+\(dz/d|\eta|=|\eta|z/(zB-q)\). The lower bounds
+\(zB-q\ge a_{\min}\delta\ell^2/2\) and \(zB-q\ge b_0z\) give
+\[
+ \int_h^{z_e}\frac{dz}{|\eta_\sigma|}\le C\ell r_0,\qquad
+ q_1\int_h^{z_e}\frac{dz}{|\eta_\sigma|z}\le Cbr_0,\qquad
+ \int_h^{z_e}\frac{|\eta_\sigma|}{z}\,dz\le C\epsilon_3 r_0^3 .
+\]
+From \(z_e\) onward there are barriers
+\begin{equation}
+\label{eq:direct-primary-shifted-cones}
+ m(z-z_e)\le U_\sigma(z)
+               \le U_\sigma(z_e)+M(z-z_e).
+\end{equation}
+The initial adverse ratios
+\(q_1\sqrt{U_\sigma(z_e)}/z_e\), \(|q_2|U_\sigma(z_e)/z_e\) and
+\(U_\sigma(z_e)^{3/2}/z_e\) are \(O(r_0/d_f)\), \(O(r_0^2/d_f)\) and
+\(O(\epsilon_3 r_0^3/d_f)\). Choose \(r_0\) small after \(d_f\).
+Use the strip between the barriers only up to \(t=\ell^2Z_1\),
+with fixed \(Z_1\). Its added linear, quadratic and cubic losses are
+\(O(\sqrt\delta)\), \(O(\delta M)\) and \(O(M^{3/2}\ell\sqrt{Z_1})\),
+so small \(\delta\) gives positive flux.
+
+These shifted barriers preserve positive flux, but the endpoint
+estimate also requires entry into the common cone. For this, apply
+the continuation part of
+\cref{lem:direct-small-height-continuation} with \(\zeta_0=d_f\) and
+\(0\le \mathcal U_0=U_\sigma(z_e)/\ell^2\le Cr_0^2\).
+The preceding radius bounds give
+\(K_\sigma(\sqrt{2\mathcal U_0})\ge a_{\min}/2\).
+Choose the height \(Z_1\) for entry into the cone large after
+\(r_0,d_f\). The shifted barriers
+bound the paired integrals up to this height by
+\(C_{d_f,r_0,Z_1}\{\sqrt\delta+\ell(1+|\log\delta|)\}\):
+the linear integral is \(O(\sqrt\delta)\), and splitting the square
+root in the upper barrier bounds the cubic integral. This tends to zero
+uniformly for \(0<\epsilon_3\le1\), since \(\ell=\epsilon_3\delta\).
+The remaining common-cone tail contributes
+\(2C_{\rm cone}\sqrt{z_*}+O(\delta)\). Together with the prefix
+bounds, this proves contraction for small \(r_0\) and then small
+\(\delta\).
+\end{proof}

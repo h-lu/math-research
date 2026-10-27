@@ -1,0 +1,242 @@
+\subsection{A boundary root approaching the central line}
+\label{sec:weak-root-passage}
+
+When the constant coefficient is small compared with the linear one,
+the first boundary root on the positive branch approaches the central
+line relative to the current coefficient scale. Rescaling by its radius
+keeps this root simple and near \(x=1\). In the resulting logarithmic
+height coordinate, the positive endpoint has a large negative
+logarithmic rate. A uniform lower bound for the negative endpoint's
+rate then makes \(\mathcal L\) increase throughout the root interval.
+
+Let \(a,\kappa>0\) be small and \(\hat r\in(0,1]\), and suppose
+\begin{equation}
+\label{eq:weak-root-scales}
+ q_0=-\kappa\ell^2,\qquad q_1=\kappa\ell,\qquad q_2=-\epsilon_2\kappa,
+ \qquad \ell=\hat r\kappa a^2,\qquad |\epsilon_2|\le C_2a,
+\end{equation}
+with a fixed \(C_2\). In \(|\eta|=\ell x\), \(z=\ell^2Y\) the outward
+drifts and height equations are
+\[
+ K_\sigma(x)=-\frac{q(\sigma\ell x)}{\kappa\ell^2}
+ =1-\sigma x+\epsilon_2x^2-\sigma\hat ra^2x^3R_q(\sigma\ell x),\qquad
+ x_{\log Y}=\kappa K_\sigma(x)/x+YB(\sigma\ell x,\ell^2Y)/x .
+\]
+For a fixed small preliminary upper bound on \(a\), the first positive
+root of \(K_+\) satisfies \(\alpha=1+O(a)\) and \(K_+'(\alpha)<-c<0\).
+Put \(x_L=\alpha/4\), \(w_a=\alpha/2\) and \(R_p=3\alpha/4\), and use
+the logarithmic height coordinates \(T=-\kappa a\log h\) and
+\(\widehat T=T/a=-\kappa\log h\).
+We compare the branches in \(T\), after estimating the positive branch
+in \(\widehat T\).
+For a fixed small height \(Y_f>0\), the root interval is
+\begin{equation}
+\label{eq:weak-root-interval}
+ w=\mathcal W_+(x(\ell^2Y_f;h),Y_f)\in[w_a,\alpha).
+\end{equation}
+
+The negative half-orbit need not be at the weak-root radius when the
+positive half-orbit approaches its root. To estimate it on the same
+central heights, introduce a variable radius scale: let \(d>0\)
+and put \(\ell_d=\ell d/a\), \(\delta_d=\kappa a/d\) and
+\(a_d=a/d\), so that \(a_d/\delta_d=1/\kappa\).
+In \(|\eta|=\ell_dx\), the outward drift on the negative branch is
+\[
+ K_d(x)=a_d+x+(\epsilon_2/a)dx^2+\hat rd^2x^3R_q(-\ell_dx),
+\]
+so that \(K_d(x)=K_1(dx)/d\).
+Fix \(d_{\max}>0\) such that, for \(0<d\le d_{\max}\),
+\begin{equation}
+\label{eq:weak-root-negative-drift}
+ K_d(x)\asymp a_d+x,\qquad K_d'(x)\ge\tfrac12\qquad(0\le x\le4),
+\end{equation}
+with constants depending on \(d_{\max}\). This holds for every small
+\(d_{\max}\), and for every fixed \(d_{\max}\) when \(\epsilon_2\ge0\) and
+\(\hat r\) is small.
+
+\begin{lemma}[Two branches at the weak root]
+\label{lem:weak-root-branches}
+There are \(c_1,c_d>0\) and a fixed small \(Y_b>0\) such that, for
+sufficiently small \(a\) and \(\kappa\), the following hold in the coordinate
+\(T\).
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item On the root interval \eqref{eq:weak-root-interval},
+\(\mathfrak H_+\le-c_1/a\).
+\item Let \(c_da\le d\le d_{\max}\), and let \(J\subset[1/2,x_{\max}]\) be
+a compact interval, with a fixed \(x_{\max}\), such that \(K_d>0\) on
+\((0,\max J)\). At the height \(\ell_d^2Y_b\), and for negative projected
+states in \(J\),
+\[
+ d\,\mathfrak H_-\ge\min_{x\in J}\frac{K_d'(x)}x-o(1),\qquad
+ |I_{-,T}|\le CE_d/d=o(1),\qquad
+ E_d=\ell_d^2\bigl(z_*/(\ell_d^2Y_b)\bigr)^{-2q_2},
+\]
+with \(o(1)\to0\) as \(\kappa\to0\) uniformly in \(d\) and \(J\), up to a
+root of \(K_d\) at \(\max J\); the constants and the smallness of
+\(a,\kappa\) depend on \(x_{\max}\). In particular,
+\(\mathfrak H_-\ge c/d>0\) for \(J=[0.9,4]\).
+\item On \eqref{eq:weak-root-interval}, the negative graph has
+\(z<(Y_b/2)|\eta|^2\) at \(|\eta|=\ell c_d\).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The boundary-flow coordinate applies with small parameter
+\(\kappa\), since the error from \(B\) is \(O(\ell)=O(\kappa)\). At
+\(t=\ell^2Y_f\) the coefficient ratios are \(|q_0|/t=\kappa/Y_f\),
+\(q_1/\sqrt t=\kappa/\sqrt{Y_f}\) and \(|q_2|\le C_2\kappa a\). Hence
+\cref{lem:boundary-flow-endpoint} gives
+\(-I_{+,w}=E_aA_+wV_+(w)\), with
+\(E_a=\ell^2(z_*/(\ell^2Y_f))^{-2q_2}\) and
+\(V_+=1+O_{C^3}(\kappa)\). The fixed positive phase advance from
+\(x_L\) to \(w_a\) allows us to apply
+\cref{lem:direct-weighted-phase} in the coordinate \(\widehat T\).
+Since \(K_+'(w)/w\) has a fixed negative margin on
+\([w_a,\alpha)\), \cref{cor:direct-weak-root-comparison} gives (i).
+
+(ii) By \eqref{eq:weak-root-negative-drift} and \(a_d/\delta_d=1/\kappa\ge1\),
+the case of a small central coefficient in \cref{lem:direct-source-height},
+with \(K_*=a_d\), gives a uniform height unit at the entry \(x_i=1/4\),
+also as \(a_d\to0\).
+The boundary-flow projection at \(Y_b\), on a fixed radius interval
+extending \([1/4,x_{\max}]\), has inverse energy error
+\(O_{C^k}(\delta_dY)\), since \(\ell_d/\delta_d=\hat rd^2\) is bounded.
+By \cref{lem:direct-boundary-flow}, the projection's height bound \(Y_0\) depends
+only on the lower end of that interval, so \(Y_b\) does not depend on
+\(x_{\max}\).
+
+For output states in \(J\), the advance from \(x_i\) to \(1/2\)
+takes a fixed positive boundary time, since \(K_d/x\) is bounded
+there. Thus \cref{lem:direct-weighted-phase} applies uniformly up to
+a root of \(K_d\). At \(\ell_d^2Y_b\), the coefficient ratios are
+\(\delta_da_d/Y_b\), \(\delta_d/\sqrt{Y_b}\) and
+\(|q_2|\le C_2\kappa a\), and \(\ell_d\to0\).
+These quantities are small because \(\delta_d\le\kappa/c_d\)
+and \(a_d\le1/c_d\). \Cref{lem:boundary-flow-endpoint} with
+\(\ell=\ell_d\), \(\delta=\delta_d\) and \(J_w=[1/2,x_{\max}]\)
+therefore gives \(-I_{-,w}=E_dA_dw(1+O_{C^3}(\delta_d))\).
+
+To express these estimates in the common coordinate, use
+\(\widehat T_d=-\delta_d\log h=T/d\), so
+\(\partial_T=d^{-1}\partial_{\widehat T_d}\). In \(\widehat T_d\),
+the first two lines of \eqref{eq:direct-rate-identities}, with
+\(\theta-1,\theta'=o(1)\), give \(|I_{-,\widehat T_d}|\le CE_d\) and
+\(\partial_{\widehat T_d}\log(hI_{-,h})\ge\min_JK_d'(x)/x-o(1)\).
+Division by \(d\) gives the two estimates. On \([0.9,4]\),
+\(K_d'(x)/x\ge1/8\) by \eqref{eq:weak-root-negative-drift}.
+
+Finally, \(|q_2|\le C_2\kappa a<1/8\), so
+\eqref{eq:direct-tail-amplitude} with \(t=\ell_d^2Y_b\) gives
+\(E_d\le C\ell_d^{3/2}\) and
+\(E_d/d\le C(\ell/a)^{3/2}d^{1/2}\to0\), uniformly for
+\(0<d\le d_{\max}\), since \(\ell/a=\hat r\kappa a\to0\).
+
+(iii) Choose \(c_d\) so small that the negative prefix action to
+\(x=c_d\) in the weak-root scale is less than one quarter of the fixed
+positive phase advance \(\tau_*\) from \(x_L\) to \(w_a\). On
+\eqref{eq:weak-root-interval} this advance gives
+\(h/(\kappa\ell^2)\le(Y_f/\kappa)\e^{-\tau_*/\kappa}\). The negative
+central-height coordinate then gives
+\[
+ \frac{z(-\ell c_d;h)}{(\ell c_d)^2}
+ \le\frac{CY_f}{c_d^2}\,\e^{-3\tau_*/(4\kappa)}
+ <\frac{Y_b}{2}
+\]
+for small \(\kappa\): the exponential decay in \(1/\kappa\) absorbs the
+bounded height units and the polynomial prefactors.
+\end{proof}
+
+\begin{corollary}[Negative branch up to its first root]
+\label{cor:weak-root-negative-first-root}
+Assume \eqref{eq:weak-root-scales} and \eqref{eq:weak-root-negative-drift},
+with \(Y_b\) as in \cref{lem:weak-root-branches}, and suppose that the
+negative drift \(K_1\) in \(|\eta|=\ell X/a\) has a first positive root
+\(\beta\le\beta^*\), with a fixed \(\beta^*\). For sufficiently small \(a\)
+and \(\kappa\), every central height whose negative graph has
+\(z<Y_b|\eta|^2\) at \(|\eta|=\ell_{d_{\max}}\) satisfies, in the
+coordinate \(T\),
+\[
+ \mathfrak H_-\ge\min_{d_{\max}/2\le X\le\beta}\frac{K_1'(X)}X-o(1),
+ \qquad |I_{-,T}|=o(1),
+\]
+where \(o(1)\to0\) as \(\kappa\to0\), uniformly as the negative projected
+state at the height \(\ell_{d_{\max}}^2Y_b\) approaches the root.
+\end{corollary}
+
+\begin{proof}
+By \eqref{eq:weak-root-negative-drift} at \(d=d_{\max}\) and
+\(K_d(x)=K_1(dx)/d\), \(K_1>0\) on \((0,4d_{\max}]\).
+The first positive root of \(K_{d_{\max}}\) is therefore
+\(\beta/d_{\max}>4\). In \(|\eta|=\ell_{d_{\max}}x\),
+\(z=\ell_{d_{\max}}^2Y\), the graph reaches \(x=1\) below
+\(Y=Y_b\). Equation~\eqref{eq:direct-projection-energy} puts its
+projected state there above \(1/2\), since \(Y_b\) and \(\kappa\)
+are small. The projected state then increases; by
+\cref{rem:direct-projected-continuation}, it does not cross
+\(\beta/d_{\max}\), and the graph continues to \(Y_b\).
+
+At that height the projected state lies in
+\(J=[1/2,\beta/d_{\max}]\). Apply part~(ii) of
+\cref{lem:weak-root-branches} with \(d=d_{\max}\), this \(J\), and
+\(x_{\max}=\beta^*/d_{\max}\). The assertion follows from
+\(K_d'(x)/x=d\,K_1'(dx)/(dx)\), with \(d_{\max}\) fixed.
+\end{proof}
+
+On the root interval, a negative graph is controlled by
+\cref{lem:weak-root-branches} if \(z/|\eta|^2\) reaches \(Y_b\) in the
+prescribed radius range. The following proposition isolates the
+additional estimate needed for graphs that remain below this level.
+Each application will verify that estimate on its own coefficient
+scale.
+
+\begin{proposition}[Weak root]
+\label{prop:weak-root-passage}
+Assume \eqref{eq:weak-root-scales} and \eqref{eq:weak-root-negative-drift},
+and let \(Y_b\) be as in \cref{lem:weak-root-branches}. Suppose there are
+\(C_n\) and \(\varepsilon_p\to0\) such that every central height in the
+root interval \eqref{eq:weak-root-interval} whose negative graph has
+\(z<Y_b|\eta|^2\) at \(|\eta|=\ell_{d_{\max}}\) satisfies
+\begin{equation}
+\label{eq:weak-root-outer}
+ \mathfrak H_-\ge-C_n,\qquad |I_{-,T}|\le\varepsilon_p .
+\end{equation}
+Then there are \(a_\circ,\kappa_\circ>0\) such that, for \(0<a\le a_\circ\),
+\(0<\kappa\le\kappa_\circ\) and all sufficiently small remaining parameters,
+every zero of \(\mathcal L\) on \(\cH_p\) satisfies
+\(\mathcal L_T>0\). Consequently \(\Delta_p\) has at most two distinct
+zeros there.
+\end{proposition}
+
+\begin{proof}
+\emph{The negative branch on the root interval.} By
+\cref{lem:weak-root-branches}(iii), the ratio \(z/|\eta|^2\) along the
+negative graph is below \(Y_b/2\) at \(|\eta|=\ell c_d\).
+If the ratio reaches \(Y_b\) at a
+radius \(\ell_d\) with \(c_da<d\le d_{\max}\), choose the first
+such \(d\) for the central height under consideration. At
+\(\ell_d^2Y_b\), the normalized radius is then one, and small
+\(Y_b\) puts the projected state in \([0.9,4]\). Hold this section
+fixed when varying the central height locally. The resulting
+representation of \(I_-\) agrees with \(I_-(h)\), so
+\cref{lem:weak-root-branches}(ii) applies as in
+\cref{lem:direct-frozen-section-sign}. Otherwise, the ratio is still
+below \(Y_b\) at \(|\eta|=\ell_{d_{\max}}\), and
+\eqref{eq:weak-root-outer} applies. In both cases,
+\(\mathfrak H_-\ge-C_n\) and \(|I_{-,T}|=o(1)\) throughout
+\eqref{eq:weak-root-interval}.
+
+\emph{The root interval.} Combine this bound for the negative branch
+with \cref{lem:weak-root-branches}(i) for the positive branch.
+\Cref{cor:direct-weak-root-comparison} gives \(\mathcal L_T>0\)
+throughout \eqref{eq:weak-root-interval}, after \(a_\circ\) is reduced.
+The constants are fixed on the preliminary small-\(a\) region.
+
+\emph{The height cover.} Apply \cref{lem:prefix-root-cover} with
+\(\delta=\kappa\), \(\epsilon_3=\ell/\kappa=\hat ra^2\), comparison drifts
+\(1-\sigma x+\epsilon_2x^2\), and the radii \(w_a,R_p,\alpha\) above.
+The comparison drifts have the required uniform positive margin, the
+gap \(R_p-w_a\) is uniform, and the boundary-flow inverse is defined
+up to \(\alpha\) at \(Y_f\). Together with \(\mathcal L_T>0\) on
+the root interval, the lemma gives at most two distinct zeros of
+\(\Delta_p\) on \(\cH_p\).
+\end{proof}

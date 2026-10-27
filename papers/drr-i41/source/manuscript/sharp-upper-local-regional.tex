@@ -1,0 +1,120 @@
+\subsection{The determinant passage}
+
+\begin{proposition}\label{sharp:upper-determinant}
+Fix \(P_D<\infty\), the passive compact coefficient block and original
+window reserves. For independent small \(r_D>0\), \(|\gamma|\), with
+\(\alpha_0=r_D^2\), \(|\alpha_1/r_D|\le P_D\), the displacement on
+\eqref{deg:det-actual-receiver} has at most one critical point and at most
+two isolated zeros, counted with total multiplicity, after a common
+coefficient and final multiplier shrink. The raw cap is fixed, positive
+and unscaled. The assertion holds for every original window, speed or
+height clip and includes saddle ratio one.
+\end{proposition}
+
+\begin{proof}
+Use the single affine \(F(x)=x-m\Pi(x)\) of Lemma~\ref{lem:closing}.
+Lemma~\ref{deg:lem-determinant-preparation} supplies the full stopped
+composition, both exact absolute gains and ordinary \(C^3\) divided
+closing. On the strict and high sets in \eqref{deg:det-height-cover},
+choose \(m\) last so that their complete derivative bounds give
+\(F'>1/2\). Thus every critical point lies in the actual stopped range.
+
+There \eqref{sharp:upper-det-absolute} retains every factor of the same
+physical derivative:
+\[
+ \Pi'(x_b+\sigma_+\delta)=\mathcal A_\theta\delta^q e^{R_\theta(\delta)},
+ \quad q=\wp-1,\quad
+ |R_\theta|+|\delta R_\theta'|\le C\delta^\alpha(1+|\log\delta|).
+\]
+The quotient of the two gains is a unit, so \(\mathcal A_\theta\)
+is bounded above and below; neither absolute gain needs a lower bound.
+Let \(C_0\) bound \(|\log\mathcal A_\theta+R_\theta|\).
+At a critical point \(m\Pi'=1\), set \(t=-\log\delta>0\). Then
+\[
+ -qt\ge L:=\log(1/m)-C_0.
+\]
+For \(L>0\), this requires \(q<0\) and \(|q|\ge L/t\);
+in particular \(\wp=1\) produces no critical point. Moreover
+\[
+ \frac{|\delta R_\theta'|}{|q|}
+ \le\frac C L t e^{-\alpha t}(1+t)\le C_1/L.
+\]
+Choose \(L>2C_1\). The Euler derivative of the logarithm of the full
+physical gain satisfies
+\(\delta\partial_\delta\log\Pi'<q/2<0\) at every critical point.
+Since \(dx/d\delta=\sigma_+>0\),
+\begin{equation}\label{sharp:upper-det-critical}
+ F'(x)=0\quad\Longrightarrow\quad F''(x)=-m\Pi''(x)>0.
+\end{equation}
+The actual stopped/strict and low/high cover
+\eqref{deg:det-height-cover} retains every clipped and intervening
+input. Lemma~\ref{sharp:upper-critical-count} now gives at most
+one critical point and two displacement zeros.
+\end{proof}
+
+\subsection{The signed trace passage}
+
+\begin{proposition}\label{sharp:upper-trace}
+Fix \(0<p_0<p_1<\infty\), the passive compact block and original
+window reserves. For \(\alpha_0=r^2a\), \(\alpha_1=rp\),
+\(|a|\le a_*\), \(p_0\le|p|\le p_1\), independent small
+\(r>0\), \(|\gamma|\), and a final common multiplier shrink,
+the displacement on the original receiver
+\eqref{deg:trace-actual-receiver} has at most two isolated zeros for
+\(p>0\), and at most one for \(p<0\), counted with total multiplicity.
+Its positive unscaled raw cap and all window, speed and height clips
+are retained. Both opening signs, zero opening and closed trace endpoints
+are included.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{deg:prop-stopped-trace} gives \(F'>1/2\) for
+\(p<0\) and \(F'=0\Rightarrow F''>0\) for \(p>0\) on the whole
+original clipped receiver. Lemma~\ref{sharp:upper-critical-count}
+gives the stated multiplicity bounds.
+\end{proof}
+
+\begin{corollary}\label{sharp:upper-local-coefficient-ranges}
+The nonnegative-opening sector \(\alpha_0\ge0\) has at most
+two captured displacement zeros. There is a fixed \(P_*<\infty\)
+such that the negative-opening sector
+\(\alpha_0=-s^2<0\), \(p_{\rm src}=\alpha_1/s\ge P_*\)
+also has at most two. Both assertions concern the whole physical
+interval and count multiplicities.
+\end{corollary}
+
+\begin{proof}
+First choose the signed trace collar of
+Proposition~\ref{sharp:upper-trace}, for example with
+\(1/2\le|p|\le2\). Choose \(P_D>2/\sqrt{a_*}\).
+If \(\alpha_0>0\) and
+\(|\alpha_1|\le P_D\sqrt{\alpha_0}\), use
+Proposition~\ref{sharp:upper-determinant} with
+\(r_D=\sqrt{\alpha_0}\). On the complement put
+\(r=|\alpha_1|\). Then
+\[
+ p=\sgn\alpha_1,\qquad
+ a=\alpha_0/\alpha_1^2<P_D^{-2}<a_*.
+\]
+This is the exact trace scaling of
+Lemma~\ref{deg:lem-positive-atlas}; the full physical domains are
+retained in Lemma~\ref{deg:lem-nonnegative-domain}. The same choice treats
+\(\alpha_0=0\), \(\alpha_1\ne0\), with \(a=0\).
+Each alternative bounds the displacement on its whole coefficient fibre.
+
+The double-zero coefficient face is a contraction by
+Corollary~\ref{rew:cor-high-derivative-signed} at every positive
+height, without introducing a determinant scale.
+
+Finally suppose \(\alpha_0=-s^2<0\) and
+\(p_{\rm src}=\alpha_1/s>0\). With \(r=\alpha_1\), the
+trace coefficients are exactly
+\[
+ p=1,\qquad a=-p_{\rm src}^{-2}.
+\]
+Choose \(P_*>2/\sqrt{a_*}\) before the subsequent compact
+positive-source interval is fixed. Then
+\(p_{\rm src}\ge P_*\) belongs to
+Proposition~\ref{sharp:upper-trace}. Take the maximum of the
+whole-fibre bounds across these coefficient alternatives.
+\end{proof}

@@ -1,0 +1,487 @@
+\subsection{A construction at a fixed limiting parameter}
+
+Use \eqref{eq:slice}, the organizing family \eqref{intro:eq-i21-family},
+and its positive speed \(f_c\) in \eqref{intro:eq-parabola-speed}.
+Both infinite ends have endpoint \(q=(0,1,0)\).
+
+\begin{theorem}\label{p4:fixed-c}
+There is $K_0>0$ such that, for each fixed $c\in(1,1+K_0)$, there is
+a continuous family $F_{c,\rho}$ of fields \eqref{eq:slice},
+defined for all sufficiently small $\rho>0$, with
+$F_{c,\rho}\to H_c$ in quadratic coefficients.
+Each $F_{c,\rho}$ has three geometrically distinct hyperbolic periodic
+orbits $\gamma_{j,c,\rho}$, $1\le j\le3$, and
+\[
+ \max_{1\le j\le3}d_{\rm H}(\iota_0(\gamma_{j,c,\rho}),\Gamma_c)
+ \longrightarrow0\qquad(\rho\downarrow0).
+\]
+The coefficient $C_{c,\rho}$ converges to $c$.
+\end{theorem}
+
+All estimates below are uniform on the indicated compact phase and
+coefficient sets. After $c$ is fixed, their constants may depend on $c$.
+Every phase derivative keeps the coefficients fixed.
+
+\subsubsection{A cubic action map with three transverse roots}
+
+Set $k=3/2$ and
+\[
+ P_\eps(\xi)=(\xi+1)(\xi-\eps)(\xi-k\eps).
+\]
+For $0<r<1$ let $u_\eps(r)\in(0,\eps)$ be determined by
+\begin{equation}\label{p4:action}
+ \int_0^{u_\eps(r)}\frac{\xi}{P_\eps(\xi)}\dd\xi
+ =\int_0^r\frac{s}{P_\eps(-s)}\dd s.
+\end{equation}
+Both integrals increase strictly and the left diverges at $u=\eps$,
+giving a unique smooth $u_\eps$ with
+\begin{equation}\label{p4:uprime}
+ u_\eps'(r)=
+ \frac{rP_\eps(u_\eps(r))}{u_\eps(r)P_\eps(-r)}>0.
+\end{equation}
+Define $S_\eps$ by
+\[
+ b_\eps(r)=-u_\eps(r)^2/2,\qquad
+ S_\eps(b_\eps(r))=-r^2/2.
+\]
+On compact subintervals of $0<r<1$ this defines a smooth increasing
+map in the phase $b$.
+
+\begin{lemma}\label{p4:model}
+There are a compact interval $J\Subset(0,1)$, three disjoint closed
+subintervals $U_j\subset\operatorname{int}J$, and $\eps_*>0$ with
+the following properties. Put
+\[
+ m_\eps=2\eps^{5/2},\qquad
+ c_\eps=\frac{\eps^2}{2}-\frac{101}{100}\eps^{5/2}.
+\]
+For $0<\eps<\eps_*$ the function
+\[
+ Q_\eps(r)=\eps^{-5/2}
+ \{c_\eps+b_\eps(r)-m_\eps S_\eps(b_\eps(r))\}
+\]
+has one simple zero in each $U_j$. Its endpoint signs and derivative
+lower bounds on these intervals can be chosen independently of $\eps$.
+Moreover,
+\begin{equation}\label{p4:model-error}
+ \left\lVert Q_\eps-\Phi\right\rVert_{C^1(J)}
+ \le C_J(\sqrt\eps+\eps|\log\eps|),\qquad
+ \Phi(r)=\sqrt{\frac{1-r}{8r}}+r^2-\frac{101}{100}.
+\end{equation}
+\end{lemma}
+
+\input{lower-model-proof}
+Figure~\ref{fig:lower-action-profile} shows the model profile and
+resolves its two roots near \(r=1\).
+\input{figures/lower-action-profile}
+
+The lower construction balances the vanishing outer gain
+$m_\eps=2\eps^{5/2}$ with the central slope
+$S_\eps'(b_\eps(r))\asymp\eps^{-5/2}$ on the chosen phase interval,
+as follows from \eqref{p4:d-error}. Their product remains finite and
+positive; the calibration below fixes this gain and the return center
+in one field.
+
+\subsubsection{The actual passage through infinity}
+
+Choose $K_0>0$ small enough that, for $1<c<1+K_0$,
+\begin{equation}\label{p4:epsilon-c}
+ \eps=\eps(c)=
+ \left(\frac12e^{-4\pi/\sqrt{c-1}}\right)^{2/5}<\eps_*.
+\end{equation}
+Fix such a $c$ and this $\eps$ for the remainder of the construction.
+Set
+\begin{equation}\label{p4:path}
+\begin{gathered}
+ \beta=1-(1+k)\eps,\qquad \gamma=\beta\rho/3,\\
+ \alpha_0=-k\eps^2\rho^3,\qquad
+ \alpha_1=((1+k)\eps-k\eps^2)\rho^2,\\
+ \mu_3=-\gamma-\gamma^2,\quad
+ \mu_2=\alpha_1+3\gamma^2,\quad
+ \mu_1=\alpha_0-\alpha_1\gamma-2\gamma^3.
+\end{gathered}
+\end{equation}
+The coefficients $\mu$ are fixed by $c,\rho$; $A,C$ will be chosen
+near $(1,c)$. In the physical field \eqref{eq:raw}, substitute
+$v=\gamma+\rho\xi$, $z=\rho^2\eta$ and the positive time
+$t_{\rm new}=\rho t_{\rm raw}$, giving exactly
+\begin{equation}\label{p4:central}
+\begin{split}
+ \xi'&=-\rho P_\eps(\xi)-\ell_\rho(\xi)\eta,\\
+ \eta'&=-\eta\{\xi B_\rho(\xi)+\zeta_\rho(\xi)\eta\},\\
+ \ell_\rho&=1-A(\gamma+\rho\xi)+C(\gamma+\rho\xi)^2,\\
+ B_\rho&=1+2\gamma+\rho\xi,\qquad
+ \zeta_\rho=C\rho(\gamma+\rho\xi).
+\end{split}
+\end{equation}
+
+Enlarge $J\Subset(0,1)$; its entry and exit feet remain separated from
+$0$ and the three zeros of $P_\eps$. Choose compact phase intervals $I_+,I_-$
+containing their images $-u^2/2,-r^2/2$, with
+$b_\eps(J)\Subset\operatorname{int}I_+$ and
+$S_\eps(I_+)\Subset\operatorname{int}I_-$.
+Choose $L$ large enough that
+\begin{equation}\label{p4:L-window}
+ 3/8<1/2+b/L^2<5/8
+\end{equation}
+on both phase intervals and on intervals connecting them to $b=0$.
+On $\xi=\pm L$ use the same literal coordinate $b=\eta-L^2/2$.
+The tail reference uses $b=0$.
+
+Use the same lip height $h_\rho=(k\eps^2\rho)^{12}$ on both sides.
+Between the lips use $Q=\rho\log(\eta/h_\rho)$.
+
+\begin{lemma}\label{p4:core}
+On the enlarged input interval $I_+$, the positive-time passage
+of \eqref{p4:central} from $\xi=L$ to $\xi=-L$ exists for small
+$\rho>0$. In the literal phase $b$ its map satisfies
+\begin{equation}\label{p4:core-limit}
+ \|S_{\eps,\rho;A,C}-S_\eps\|_{C^1_b}
+ \le C_\eps\rho(1+|\log\rho|)\longrightarrow0,
+\end{equation}
+uniformly for $A,C$ in a sufficiently small fixed rectangle about
+$(1,c)$, and the entire passage has $\xi'<0$.
+\end{lemma}
+
+\input{lower-core-proof}
+
+\subsubsection{The two parabolic tails}
+
+Choose a small raw half-width $d>0$. Write $q=|v-\gamma|$,
+$v=\gamma+\sigma q$ with $\sigma=\pm1$, and
+$\widetilde P_\rho(x)=\rho^3P_\eps(x/\rho)$.
+The exact radial graph equation is
+\begin{equation}\label{p4:tail}
+ z_q=F_{\sigma,\rho}(q,z)=
+ \frac{z\{q(1+2\gamma+\sigma q)
+                  +\sigma C(\gamma+\sigma q)z\}}
+ {\widetilde P_\rho(\sigma q)+
+       [1-A(\gamma+\sigma q)+C(\gamma+\sigma q)^2]z}.
+\end{equation}
+Its initial condition at $q=\rho L$ is
+$z=\rho^2(L^2/2+b)$.
+The negative tail is traversed outward in positive time; the positive
+tail is constructed outward in reverse time.
+
+\begin{lemma}\label{p4:tails}
+For the enlarged phase windows the tails reach the raw ports
+$v=\gamma\pm d$ uniquely. Their maps $T_{\sigma,\rho}(b)$ have the
+decomposition
+\begin{equation}\label{p4:tail-decomposition}
+ T_{\sigma,\rho}(b)=a_{\sigma,\rho}
+             +c_{\sigma,\rho}\phi_{\sigma,\rho}(b),\qquad
+ a_{\sigma,\rho}=T_{\sigma,\rho}(0),\quad
+ c_{\sigma,\rho}=\partial_bT_{\sigma,\rho}(0)>0.
+\end{equation}
+Uniformly on a fixed small $A,C$ rectangle,
+\begin{equation}\label{p4:tail-limits}
+\begin{gathered}
+ a_{\sigma,\rho}\to a_{\sigma,0},\qquad
+ c_{\sigma,\rho}/\rho^2\to\ell_\sigma>0
+                  \quad\text{in }C^1_{A,C},\\
+ \phi_{\sigma,\rho}\to\operatorname{id}
+                  \quad\text{in }C^1_b.
+\end{gathered}
+\end{equation}
+On every fixed $q$ interval bounded away from zero, the entire
+tail family converges to its limiting parabolic graph.
+\end{lemma}
+
+\input{lower-tail-proof}
+
+\subsubsection{The finite connection and two coefficient directions}
+
+At $\rho=0,A=1,C=c$ the two limiting tail graphs are the ends of
+the organizing parabola, whose raw height is
+\begin{equation}\label{p4:raw-organizing}
+ z_c(v)=\frac{v^2}{1+\sqrt{1+cv^2}}.
+\end{equation}
+The finite arc between $v=-d$ and $v=d$ is a compact affine arc.
+It includes the two crossings $Y=0,\ X=\pm\sqrt c$.
+At these points
+\[
+ \dot X=c\pm\sqrt c>0,\qquad
+ \dot Y=c\pm c^{3/2}\ne0.
+\]
+Along the entire arc $f_c\ge(c-1)/2$.
+Choose a fixed narrow affine tube and buffered raw section windows.
+After the coefficient rectangle and $\rho$ are reduced, the
+finite-time flow stays in this tube and hits the positive port
+transversely. It defines an increasing map $E_\rho$ from negative
+to positive raw height. Its mixed derivatives through order two
+converge uniformly to those of $E_0$.
+The same transverse finite-time estimates give a uniform $C^3$ norm
+and slope bounded away from zero.
+Lemma~\ref{p4:tails} admits the port heights and all phase images to
+these buffered domains before composition.
+
+Define
+\begin{equation}\label{p4:outer-data}
+ \Delta_\rho=a_{+,\rho}-E_\rho(a_{-,\rho}),\qquad
+ \Lambda_\rho=E_\rho'(a_{-,\rho})c_{-,\rho}/c_{+,\rho}.
+\end{equation}
+These functions converge in $C^1_{A,C}$ by the finite-time
+estimates and the normalized slope limits in \eqref{p4:tail-limits}.
+The limiting return center varies nontrivially with $A$, while $C$
+changes the complete gain along the connected family $A=1$.
+The triangular Jacobian below allows both conditions to be imposed
+on the same field.
+
+\begin{lemma}\label{p4:transverse-coefficients}
+At $(A,C)=(1,c)$,
+\begin{equation}\label{p4:Jacobian}
+ \Delta_0=0,\quad \partial_C\Delta_0=0,\quad
+ \partial_A\Delta_0>0,\qquad
+ \Lambda_0=e^{-4\pi/\sqrt{c-1}},\quad
+ \partial_C\Lambda_0=2\pi(c-1)^{-3/2}\Lambda_0>0.
+\end{equation}
+\end{lemma}
+
+\input{lower-coefficients-proof}
+
+\subsubsection{A single calibration and three simple actual roots}
+
+Equation \eqref{p4:epsilon-c} gives
+$\Lambda_0(1,c)=m_\eps$ exactly.
+Consider the two equations
+\begin{equation}\label{p4:calibration}
+ G_\rho(A,C)=
+ \bigl(\Delta_\rho-c_{+,\rho}c_\eps,\,
+                         \Lambda_\rho-m_\eps\bigr)=0.
+\end{equation}
+By \eqref{p4:tail-limits},
+$c_{+,\rho}\to0$ together with its parameter derivatives.
+Thus $G_\rho\to G_0$ in $C^1_{A,C}$ and $G_0(1,c)=0$.
+Lemma~\ref{p4:transverse-coefficients} gives
+\[
+ \det DG_0(1,c)
+ =(\partial_A\Delta_0)(\partial_C\Lambda_0)>0.
+\]
+On a small fixed ball in the previous buffered domains with $C>1$,
+$C^1$ convergence makes
+$(A,C)\mapsto(A,C)-DG_0(1,c)^{-1}G_\rho(A,C)$ a contraction into
+itself for small $\rho$. The resulting coefficient pair satisfies
+\begin{equation}\label{p4:AC}
+ (A_\rho,C_\rho)\longrightarrow(1,c).
+\end{equation}
+The calibrated pair is continuous in $\rho>0$, since all actual hits
+are transverse.
+No estimate uniform in $c\downarrow1$ is needed for this inverse.
+
+Evaluate all maps at this one coefficient pair. Normalize
+$E_\rho\circ T_{-,\rho}$ by its exact center and slope:
+\[
+ E_\rho(T_{-,\rho}(b))=
+ E_\rho(a_{-,\rho})+
+ E_\rho'(a_{-,\rho})c_{-,\rho}\widehat\phi_{-,\rho}(b).
+\]
+Here $\widehat\phi_{-,\rho}=N_{c_{-,\rho}}\circ\phi_{-,\rho}$, with
+$\psi=E_\rho$ and $z_0=a_{-,\rho}$ in
+\eqref{phys:eq-observer-normalization}. The buffered $C^3$ bounds,
+$c_{-,\rho}=O(\rho^2)$, and \eqref{p4:tail-limits} give
+$\widehat\phi_{-,\rho}(0)=0$ and $C^1_b$ convergence to the identity.
+
+The return equation is
+$T_{+,\rho}(b)=E_\rho(T_{-,\rho}(S_{\eps,\rho}(b)))$.
+Dividing its difference by the positive $c_{+,\rho}$ and using
+\eqref{p4:calibration} gives exactly
+\begin{equation}\label{p4:actual-displacement}
+ D_\rho(b)=c_\eps+\phi_{+,\rho}(b)
+         -m_\eps\widehat\phi_{-,\rho}(S_{\eps,\rho}(b)).
+\end{equation}
+For $D_\eps=c_\eps+b-m_\eps S_\eps(b)$, the core bound,
+\eqref{p4:J}, and the buffered finite connector give, on the common
+enlarged interval and uniformly in the coefficient ball,
+\begin{equation}\label{p4:normalized-error}
+ \left\lVert D_\rho-D_\eps\right\rVert_{C^1_b}
+       \le C_\eps\rho(1+|\log\rho|).
+\end{equation}
+This remains true at \eqref{p4:AC}. Keep $\eps=\eps(c)$ fixed and put
+$\mathcal Q_\rho(r)=\eps^{-5/2}D_\rho(b_\eps(r))$.
+The chain rule gives the explicit estimate
+\begin{equation}\label{p4:actual-error}
+ \left\lVert \mathcal Q_\rho-Q_\eps\right\rVert_{C^1(J)}
+ \le \eps^{-5/2}\max(1,\left\lVert b_\eps'\right\rVert_{C^0(J)})
+                         \left\lVert D_\rho-D_\eps\right\rVert_{C^1_b}
+ \longrightarrow0.
+\end{equation}
+All coefficients, including $A_\rho,C_\rho$, are fixed in this
+$r$ derivative. For the fixed $\eps$, choose the same $\rho$
+small enough to preserve the three endpoint sign pairs and the
+derivative lower bound of Lemma~\ref{p4:model}.
+There is exactly one root $r_{j,\rho}$ in each $U_j$, and
+$|\mathcal Q_\rho'(r_{j,\rho})|\ge\kappa/2$.
+
+Each root closes one actual circuit. The central passage and both
+tails have strictly decreasing $v$ in positive time.
+For each $\rho>0$ all flight times are finite: on the thin part
+$-\xi'\ge\rho p_\eps$, the fast parts are compact with nonzero
+speed, and the outward tail speed is at least a positive constant
+times $q^2$ with $q\ge\rho L>0$.
+The finite connection lies in a compact affine tube whose spherical
+distance from $q$ is positive. The inner section $\xi=L$ tends to
+$q$, so for small $\rho$ it has no further hit during the circuit.
+Thus the three roots give three different prime periodic orbits.
+
+They are hyperbolic in the actual raw input coordinate.
+Indeed $h(r)=T_{+,\rho}(b_\eps(r))$ is positive and
+\[
+ h_r=c_{+,\rho}\phi_{+,\rho}'b_\eps'(r)<0,\qquad h_r\ne0,
+\]
+by \eqref{p4:uprime}. If $R_\rho$ is the first return and
+$F_\rho(h)=h-R_\rho(h)$, then the exact identity
+\[
+ F_\rho(h(r))=c_{+,\rho}\eps^{5/2}\mathcal Q_\rho(r)
+\]
+gives, at each root,
+\begin{equation}\label{p4:physical-simple}
+ F_{\rho,h}=
+ \frac{\eps^{5/2}\mathcal Q_\rho'}
+      {\phi_{+,\rho}'b_\eps'}\ne0.
+\end{equation}
+The common gain $c_{+,\rho}$ cancels; positivity of the first-return
+derivative and $R_\rho'\ne1$ prove hyperbolicity.
+
+\subsubsection{Whole-orbit convergence}
+
+The three roots remain in the same compact phase intervals.
+On the central passage $|\xi|\le L$ and $0<\eta\le C_{\eps,L}$.
+At $\xi=0$ the thin orbit has $Q\le0$, hence all three satisfy
+\begin{equation}\label{p4:third-height}
+ 0<z(\gamma)=\rho^2\eta(0)
+ \le\rho^2h_\rho=(k\eps^2)^{12}\rho^{14}\longrightarrow0.
+\end{equation}
+
+Fix $0<d_0<d$. On $d_0\le|v-\gamma|\le d$, both tails converge
+uniformly to their organizing ends, by Lemma~\ref{p4:tails} and
+\eqref{p4:AC}. The finite connection converges uniformly, in affine
+coordinates and finite time, to the corresponding organizing arc.
+Each of these arcs is parameterized over a full common interval,
+with endpoints converging to the corresponding organizing endpoints.
+Consequently both directed Hausdorff distances tend to zero on
+these pieces.
+
+The remaining tail pieces have $z\le C|v-\gamma|^2$ and
+$|v|\le d_0+O(\rho)$.
+The central piece has $|v-\gamma|\le\rho L$ and $z\le C\rho^2$.
+For these pieces $Y>0$, and the true spherical embedding is
+\[
+ \iota_0(X,Y)=\frac{(v,1,z)}{\sqrt{1+v^2+z^2}}.
+\]
+Their distance to $q$ is at most $C(d_0+\rho)$.
+The omitted organizing ends have distance at most $Cd_0$ to $q$.
+Conversely, \eqref{p4:third-height} provides an actual point tending
+to $q$ on each of the three cycles, so every omitted organizing
+point is within $C d_0+o(1)$ of that cycle.
+First let $\rho\downarrow0$, then $d_0\downarrow0$.
+This proves simultaneous whole-orbit Hausdorff convergence and
+Theorem~\ref{p4:fixed-c}. The finite part containing $Y=0$
+uses the affine embedding throughout.
+
+\begin{corollary}[Stability order]\label{p4:stability-order}
+For each fixed $c\in(1,1+K_0)$ and all sufficiently small $\rho>0$,
+order the three constructed cycles of $F_{c,\rho}$ by their roots
+$r_{1,\rho}<r_{2,\rho}<r_{3,\rho}$. The first and third cycles
+are attracting, and the second is repelling.
+\end{corollary}
+\begin{proof}
+The roots of \(\Phi\), in increasing \(r\) order, cross downward,
+upward and downward. The two \(C^1\) estimates
+\eqref{p4:model-error} and \eqref{p4:actual-error} preserve these
+signs for \(\mathcal Q_\rho'\). Since \(b_\eps'<0\) and
+\(\phi_{+,\rho}'>0\), identity \eqref{p4:physical-simple} gives
+signs \(+,-,+\) for \(1-R_\rho'\). Positivity of the actual
+first-return derivative proves the stated stability order.
+\end{proof}
+
+\begin{corollary}[Limits of the three return multipliers]
+\label{p4:multiplier-limits}
+Let $r_1^0<r_2^0<r_3^0$ be the three zeros of $\Phi$ and let
+$M_j(c,\rho)>0$ be the derivative of the positive first return at
+the cycle $\gamma_{j,c,\rho}$, ordered by increasing $r$.
+For $\eps=\eps(c)$, let $r_{j,\eps}$ be the zero of $Q_\eps$ in
+$U_j$ and put $\mu_j(c)=m_\eps S_\eps'(b_\eps(r_{j,\eps}))>0$.
+Then
+\begin{equation}\label{p4:multiplier-successive-limits}
+ \begin{gathered}
+ \lim_{\rho\downarrow0}M_j(c,\rho)=\mu_j(c),\qquad
+ \lim_{c\downarrow1}\mu_j(c)=L(r_j^0),\\
+ L(r)=8\sqrt2\,r^{5/2}\sqrt{1-r}.
+ \end{gathered}
+\end{equation}
+The limiting multipliers satisfy
+\begin{equation}\label{p4:multiplier-intervals}
+ 0<L(r_1^0),L(r_3^0)<\tfrac12,
+ \qquad \tfrac32<L(r_2^0)<2.
+\end{equation}
+\end{corollary}
+\begin{proof}
+For fixed $c$ and $\eps=\eps(c)$, \eqref{p4:actual-error} gives
+$r_{j,\rho}\to r_{j,\eps}$. Evaluate all maps at the calibrated
+coefficients \eqref{p4:AC}. In the actual raw input coordinate
+$h=T_{+,\rho}(b)$, the first return is
+\[
+ R_\rho=E_\rho\circ T_{-,\rho}\circ
+ S_{\eps,\rho}\circ T_{+,\rho}^{-1}.
+\]
+At $b=b_\eps(r_{j,\rho})$, its derivative is exactly
+\begin{equation}\label{p4:multiplier-exact}
+ \begin{split}
+ M_j(c,\rho)
+ &=\frac{E_\rho'(T_{-,\rho}(S_{\eps,\rho}(b)))
+          T_{-,\rho}'(S_{\eps,\rho}(b))
+          S_{\eps,\rho}'(b)}{T_{+,\rho}'(b)}\\
+ &=m_\eps\,
+   \frac{\widehat\phi_{-,\rho}'(S_{\eps,\rho}(b))
+          S_{\eps,\rho}'(b)}{\phi_{+,\rho}'(b)}>0.
+ \end{split}
+\end{equation}
+The second equality uses the exact calibration
+$\Lambda_\rho=m_\eps$. The core and tail $C^1$ limits, including
+$\widehat\phi_{-,\rho}\to\operatorname{id}$, give the first limit
+in \eqref{p4:multiplier-successive-limits}.
+
+All derivatives keep the coefficients fixed. From
+$u_\eps=\eps-\eps^{3/2}d_\eps$ and
+$S_\eps(b_\eps(r))=-r^2/2$ we obtain
+\begin{equation}\label{p4:balanced-slope-limit}
+ \begin{gathered}
+ b_\eps'(r)=\eps^{5/2}(1-\sqrt\eps\,d_\eps(r))d_\eps'(r),\\
+ m_\eps S_\eps'(b_\eps(r))
+ =\frac{-2r}{(1-\sqrt\eps\,d_\eps(r))d_\eps'(r)}
+ \longrightarrow L(r)
+ \quad\text{uniformly on }J.
+ \end{gathered}
+\end{equation}
+Indeed \eqref{p4:d-error} gives $d_\eps\to d_0$ in $C^1(J)$ and
+$d_0'(r)=-1/(4\sqrt2\,r^{3/2}\sqrt{1-r})$ is bounded away from
+zero there. By \eqref{p4:model-error}, $r_{j,\eps}\to r_j^0$.
+Together with $\eps(c)\to0$, this proves
+\eqref{p4:multiplier-successive-limits}.
+
+The bounds needed for \eqref{p4:multiplier-intervals} follow from
+exact rational brackets. The sign of $\Phi(r)$ on $(0,1)$ is the
+sign of
+\[
+ \frac{1-r}{8r}-\left(\frac{101}{100}-r^2\right)^2
+ =-\frac{10000r^5-20200r^3+11451r-1250}{10000r}.
+\]
+Direct substitution gives the endpoint signs in the following table.
+Since $L(r)^2=128r^5(1-r)$ increases up to $r=5/6$ and decreases
+afterwards, rational endpoint evaluation also gives its indicated
+bounds throughout each bracket. The endpoints have common denominator
+$10^5$:
+\[
+\begin{array}{c|c|c|c}
+ j&(10^5a_j,10^5b_j)&(\operatorname{sgn}\Phi(a_j),
+                  \operatorname{sgn}\Phi(b_j))
+       &L(r)^2\ (a_j\le r\le b_j)\\ \hline
+ 1&(11159,11160)&(+,-)&(1/1000,1/400)\\
+ 2&(97868,97869)&(-,+)&(12/5,5/2)\\
+ 3&(99875,99876)&(+,-)&(3/20,1/5)
+\end{array}
+\]
+Each bracket contains $r_j^0$, since $\Phi$ has exactly three
+roots. Taking positive square roots gives
+\eqref{p4:multiplier-intervals}.
+\end{proof}

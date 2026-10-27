@@ -1,0 +1,47 @@
+\section{The sharp small positive ratio sector}
+\label{sec:sharp-small-sector}
+
+The estimate down to $p=0$ uses the coefficient cover and original
+physical passages directly. It is not obtained by sending the lower
+endpoint of a compact-positive-ratio estimate to zero. The preceding
+lower construction supplies its sharpness independently.
+
+\begin{proof}[Proof of Theorem~\ref{thm:small-sector}]
+Use Proposition~\ref{sharp:upper-coefficient-bounds} on the common
+receiver of Lemma~\ref{lem:common-raw-receiver}, with \(h_c=b/2\).
+Its fixed reserve \eqref{eq:pure-small-ratio-reserve} gives
+\(0<p_{\rm s}\le p_*\) for which every \(0<p\le p_{\rm s}\)
+is covered before the independent raw radii and final multiplier are
+restricted. The proposition counts the full connected interval with
+multiplicity, including both original ghost tails; no further regional
+count is needed.
+
+At $p=0$, $\alpha_1=0$.
+Lemma~\ref{deg:lem-raw-jacobian} bounds the actual transition
+Jacobian on the full original domain for
+$\alpha_0\le0,\alpha_1\le0$. With the divided closing and one
+further multiplier shrink, $F'>1/2$, so there is at most one
+isolated zero and it is simple. These are fixed multiplier bounds;
+\eqref{eq:finite-multiplier} makes the actual $m$ satisfy them by
+an ordinary coefficient shrink, independently of $s,\gamma$ and
+all root distances.
+
+Apply geometric capture with these fixed choices, as in
+Proposition~\ref{prop:central-bound}. This gives one slice
+neighborhood and one collar for both statements. Use
+Lemma~\ref{lem:slice-bound-transfer} with
+$\mathcal B=\{\alpha_0<0,\ 0\le p\le p_{\rm s}\}$, and
+intersect with its one-cycle version on $p=0$ if necessary. The
+resulting full-germ neighborhood and collar are common to the whole
+small-ratio sector. The stronger return-multiplicity assertion is the
+slice count above, preserved at the corresponding physical sections.
+
+Finally Proposition~\ref{prop:lower-coefficient-face} supplies
+same-field hyperbolic triples with coefficient and whole-orbit
+Hausdorff convergence and $p_n\to0^+$. Given
+$\mathcal W,\delta,\eta$, choose one sufficiently large $n$ so
+that its field lies in $\mathcal W$, all three distances are below
+$\delta$, and $0<p_n<\min\{p_{\rm s},\eta\}$.
+These are the three cycles calibrated by one coefficient pair in
+Theorem~\ref{p4:fixed-c}, proving the sharpness clause.
+\end{proof}

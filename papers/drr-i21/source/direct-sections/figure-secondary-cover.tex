@@ -1,0 +1,56 @@
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=4.6cm,y=3.2cm,>=Stealth,font=\small,
+    bar/.style={line width=2.6pt,gray!55},
+    lab/.style={font=\footnotesize,inner sep=1.5pt,text=black}]
+  % (a) negative quadratic coefficient
+  \begin{scope}
+    \draw[->] (0,0)--(1.2,0) node[right] {$a$};
+    \draw[->] (0,0)--(0,1.62) node[above] {$b$};
+    \draw[very thick] (0,1)--(1,1)--(1,0);
+    \draw (0,1)--(-.03,1) node[left] {$1$};
+    \draw (1,0)--(1,-.03) node[below] {$1$};
+    \draw (.25,1)--(.25,.96) node[below,lab] {$\tfrac14$};
+    \draw[bar] (.01,1.09)--(.14,1.09) node[lab,right] {weak root};
+    \draw[bar] (.07,1.2)--(.22,1.2) node[lab,right] {separated roots};
+    \draw[bar] (.19,1.31)--(.31,1.31) node[lab,right] {fold};
+    \draw[bar] (.28,1.42)--(1,1.42);
+    \node[lab,above] at (.64,1.44) {buffered};
+    \draw[bar] (1.08,0)--(1.08,1);
+    \node[lab,right] at (1.1,.5) {buffered};
+    \node at (.5,-.25) {(a) \(q_2<0\)};
+  \end{scope}
+  % (b) positive quadratic coefficient
+  \begin{scope}[xshift=7.4cm]
+    \draw[->] (0,0)--(1.2,0) node[right] {$a$};
+    \draw[->] (0,0)--(0,1.62) node[above] {$b$};
+    \draw[very thick] (0,1)--(1,1)--(1,0);
+    \draw (0,1)--(-.03,1) node[left] {$1$};
+    \draw (1,0)--(1,-.03) node[below] {$1$};
+    \draw[bar] (.01,1.09)--(.16,1.09) node[lab,right] {weak root};
+    \draw[bar] (.08,1.2)--(1,1.2);
+    \node[lab,above] at (.6,1.22) {curvature};
+    \draw[bar] (1.08,.2)--(1.08,1);
+    \draw[bar] (1.16,0)--(1.16,.4);
+    \node[lab,right] at (1.1,.72) {curvature};
+    \node[lab,right] at (1.18,.2) {small \(b\)};
+    \node at (.5,-.25) {(b) \(q_2>0\)};
+  \end{scope}
+\end{tikzpicture}
+\caption{Schematic of the compact coefficient covers on the secondary
+charts \eqref{eq:direct-negative-secondary-scales} and
+\eqref{eq:direct-positive-secondary-chart}; thresholds are not to scale.
+The normalized coefficients lie on the curve \(\max\{\sqrt a,b\}=1\), and
+the bars show the overlapping regions. (a) For \(q_2<0\): the buffered
+region \(b^2-4a\le-\nu\) (\cref{prop:direct-buffered-negative}), the fold
+\(|b^2-4a|\le2\nu\) (\cref{prop:direct-negative-fold}), separated roots
+\(b^2-4a\ge\nu\), \(a\ge a_0^-\) (\cref{prop:direct-negative-separated}), and
+the weak root \(a\le a_-\)
+(\cref{prop:direct-negative-weak-root}). (b) For \(q_2>0\): curvature for
+\(a\ge a_0^+\), \(b\ge b_{*,+}/2\), root-distance coordinates for small \(b\), and
+the weak root \(a\le a_+\) (\cref{prop:direct-positive-quadratic}).
+Near \(a=0\), the cover combines the weak-root regions, which require
+\(s/a\le\kappa_\pm\), with the contact strip of
+\cref{prop:direct-bounded-contact}.}
+\label{fig:secondary-cover}
+\end{figure}

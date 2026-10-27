@@ -1,0 +1,300 @@
+\section{Global exclusion and multiplier reduction}\label{sec:whole-period}
+With the coefficients of $P$ and $D$ in fixed compact sets, we exclude
+limiting directions with a negative polynomial value or strictly negative
+forcing. We then treat two open regions used in
+Section~\ref{sec:parameter-cover}: a positive contact value gives at most
+one attracting cycle by the common-cycle theorem, and positive forcing
+gives at most two by the complete-period multiplier and the annulus
+count. Neither attracting argument requires $P$ to be positive along
+the whole critical segment. The remaining contact-scale directions are
+treated in Sections~\ref{sec:positive-constant}
+and~\ref{sec:two-endpoints}, and Appendix~\ref{sec:simple-contact}.
+
+\begin{lemma}\label{lem:negative-gates}
+A sufficiently small neighborhood of a normalized direction is free
+of cycles close to $\Gamma_0^{b_*}$ if either
+\begin{enumerate}
+\item $P(z_g)<0$ for some $z_g\in[f_{b_*},0]$, or
+\item $D<0$.
+\end{enumerate}
+In each assertion the inequality is imposed on the limiting direction.
+\end{lemma}
+\begin{proof}
+In the first case continuity permits an interior point
+$f_{b_*}<z_g<0$ and a neighborhood on which $P(z_g)\le-p_0<0$.
+The descending entry in Lemma~\ref{lem:sections} has
+$y=K\varepsilon^3$ and $z=\Lambda<z_g$, with a fixed gap.
+Choose $H>K$ so that $z_gH+\sup|D|<0$. On the whole half-strip
+$z\le z_g$, the boundary $y=H\varepsilon^3$ points downward.
+Thus the orbit remains below that height until its first crossing
+of $z=z_g$ from the left. Such a crossing is required to complete
+the cycle. There, however,
+\[
+ F(z_g,y)\le CH\varepsilon^3-p_0\varepsilon^2<0,
+\]
+a contradiction. Leftward excursions do not affect this argument.
+
+In the second case take $D\le-d_0<0$ on a neighborhood. Starting
+at the same descending entry, positivity can last at most $K/d_0$
+units of time, because $G\le-d_0\varepsilon^3$ while $z<0$.
+On a fixed negative interval about the entry, $0<y\le K\varepsilon^3$
+and $|F|\le C\varepsilon^2$. A stopping-time argument shows
+that neither vertical boundary can be reached within that time for
+small $\varepsilon$. The orbit must therefore reach $y=0$, contrary
+to Lemma~\ref{lem:sections}.
+\end{proof}
+
+The gate argument excludes a strictly negative limiting forcing.
+When the forcing instead tends to zero, an exact Li\'enard transformation
+gives the following necessary restriction.
+\begin{lemma}\label{lem:damping}
+Assume $\varepsilon$ is sufficiently small that
+$1+2\varepsilon^2E_2>0$ on the fixed coefficient set.
+If $D\le0$, a positive periodic orbit of~\eqref{eq:normalized}
+requires $E_1<0$. If $D<0$, it also requires
+\begin{equation}\label{eq:damping-restriction}
+ |D|<\frac{\varepsilon E_1^2}
+                 {4b(1+2\varepsilon^2E_2)}.
+\end{equation}
+In particular there is no positive periodic orbit at $\mu=0$, or
+when $E_0=E_1=D=0$.
+\end{lemma}
+\begin{proof}
+Put $a=\mu_3$, $\ell=\mu_2$, $k=\mu_1$, $\delta=\mu_4$,
+$v=\log y$, and $w=z+\delta e^{-v}=\dot v$. Direct substitution gives
+\[
+ \dot w=aw^2+\bigl(be^v+\ell-(1+2a)\delta e^{-v}\bigr)w
+       +e^v-e^{2v}-b\delta+k-\ell\delta e^{-v}+a\delta^2e^{-2v}.
+\]
+Define $q=(1-e^{-av})/a$ when $a\ne0$, and $q=v$ when $a=0$;
+set $p=e^{-av}w$. Since $dq/dv=e^{-av}>0$, this is a
+diffeomorphism of $y>0$ onto an open strip. The transformed equation is
+$\dot q=p$, $\dot p=g(q)+f(q)p$, where
+\[
+ f(q)=by+\ell-(1+2a)\delta/y.
+\]
+The energy $p^2/2-\int g(q)\,dq$ has derivative $f(q)p^2$.
+The energy returns to its initial value on a nonconstant periodic orbit.
+Thus $f$ must take both signs, since
+$yf=by^2+\ell y-(1+2a)\delta$ is not the zero polynomial.
+For $\delta\le0$ this requires $\ell<0$; for $\delta<0$
+its discriminant must be strictly positive. Substitution of the
+normalized coefficients gives~\eqref{eq:damping-restriction}.
+\end{proof}
+
+\begin{proposition}\label{prop:positive-value}
+Every limiting direction with $P(0)>0$ has an open parameter
+neighborhood on which at most one cycle is close to the whole graphic.
+If present, it is hyperbolic attracting and has actual minimal-return
+multiplicity one.
+\end{proposition}
+\begin{proof}
+Fix a limiting polynomial $P_*$ with $P_*(0)>0$ and a modulus $b_*$.
+If $P_*<0$ somewhere on $[f_{b_*},0]$, use
+Lemma~\ref{lem:negative-gates}. Otherwise $P_*\ge0$ on this segment.
+Embed the actual field in the smooth family
+$X_{h,\lambda}=(yQ+hP,zy+h\kappa)$, where $Q=1+bz-y$,
+$h\ge0$ and $\lambda=(b,E_0,E_1,E_2,\kappa)$ are independent
+parameters in a compact ambient block. Equation~\eqref{eq:normalized}
+is exactly its restriction $h=\varepsilon^2$, $\kappa=\varepsilon D$;
+the base value is $\kappa=0$.
+
+Here the contact is nilpotent of order two. Indeed, set
+$Y=E_b(z,y)$ and $\phi_b(z)=E_b(z,0)$ in
+Lemma~\ref{lem:fast-energy}; then $\phi_b''(0)=-1$.
+The analytic unit $d=(E_b(z,y)-\phi_b(z))/y$ is positive.
+Multiplication by $d/Q>0$ gives
+$\dot z=Y-\phi_b(z)+hA$, $\dot Y=hB$, where
+\[
+ A=\frac dQ P,\qquad
+ B=\frac dQ\bigl((E_b)_zP+(E_b)_y\kappa\bigr).
+\]
+The shear $Y\mapsto Y+hA$ removes the first perturbation;
+its leading added term $A_z(Y-\phi_b)$ vanishes on the critical curve.
+Using $(E_b)_z=-z(E_b)_y/Q$ and $(E_b)_y(0,0)=1$, the slow term
+on that curve at $h=\kappa=0$ is
+\[
+ g_0(z)=-\left(\frac{(E_b)_y(z,0)}{1+bz}\right)^2 zP_*(z),
+ \qquad g_0'(0)=-P_*(0)<0.
+\]
+Thus the contact singularity is simple and has intrinsic index $+1$
+in the convention of~\cite[pp.~175--178]{DMR2011Common}.
+In the original family's slow time $s=ht$, the slow flow is
+$dz/ds=P_*(z)$, directed from $f_{b_*}$ toward
+zero between its zeros, and the normal eigenvalue is $z<0$.
+Since $P_*\not\equiv0$, it has finitely many zeros on
+$[f_{b_*},0)$; each lies on a normally attracting hyperbolic arc.
+If none are present, the slow divergence integral is the finite,
+strictly negative integral $\int_{f_{b_*}}^0 z/P_*(z)\,dz$.
+
+Apply~\cite[Theorem~1, p.~173]{DMR2011Common}, prescribing a small
+neighborhood $W$ of the contact disjoint from a fixed regular fast
+marker. It supplies a phase neighborhood $T$, a threshold $h_0>0$,
+and a neighborhood of the independent parameters. Continuity of
+$\Gamma_0^b$ in $b$ and a common two-sided Hausdorff clearance ensure
+that every counted cycle lies in $T$ and visits the marker neighborhood,
+so is not contained in $W$. Choose the coefficient window with
+$P(0)\ge p_*>0$ and $|D|\le M_D$; then sufficiently small
+$\varepsilon$ puts $h=\varepsilon^2$ and $\kappa=\varepsilon D$
+in the supplied product window. There is therefore at most one counted
+cycle, and, if present, it is hyperbolic attracting. Its actual
+minimal-return multiplier lies in $(0,1)$, so its return zero is simple.
+All thresholds are chosen after the positive margin $p_*>0$ has been fixed.
+\end{proof}
+
+\begin{proposition}\label{prop:positive-forcing}
+Every limiting direction with $P(0)=0$ and $D>0$ has an open
+parameter neighborhood on which there are at most two cycles close to
+the whole graphic, and every such cycle is hyperbolic attracting. This
+includes the direction $P\equiv0$ with $D>0$.
+\end{proposition}
+\begin{proof}
+Work with $d_0\le D\le D_0$, $|E_1|+|E_2|\le M$, and
+$|E_0|\le\eta$, where $\eta$ will be fixed small. Write
+$Q=1+bz-y$ and $\delta=\varepsilon^3D$. Take a low contact
+rectangle on which $3/4\le Q\le5/4$, and fix a small $a>0$
+with $2aQ\le1/2$. On the curve $y=az^2$, for $z=-x<0$,
+\begin{equation}\label{eq:forcing-negative-parabola}
+ G-2azF=az^3(1-2aQ)+\delta-2az\varepsilon^2P(z)
+       \le-\tfrac12 ax^3+D_0\varepsilon^3+Ca\varepsilon^2x<0
+\end{equation}
+whenever $x\ge L\varepsilon$, for a sufficiently large fixed $L$.
+Choose $q>0$ so small that the descending entry of
+Lemma~\ref{lem:sections} lies at $\Lambda<-2q$, $y=K\varepsilon^3$.
+For $z\le-q$ use instead $y=H\varepsilon^2$; this upper boundary
+points downward since $G\le-qH\varepsilon^2+C\varepsilon^3<0$.
+At their connecting
+vertical boundary $z=-q$, $H\varepsilon^2\le y\le aq^2$,
+choose $H$ so that $F\ge y/2>0$. These two strips form a
+forward invariant upper bound up to the first hit of $z=-L\varepsilon$.
+The lower boundary points inward because $G|_{y=0}=\delta>0$.
+On the remote strip, bounded coefficients give
+\begin{equation}\label{eq:remote-attraction}
+ \operatorname{div}(F,G)=z+by+\varepsilon^2P'(z)\le-q/2,
+ \qquad |F|\le C\varepsilon^2.
+\end{equation}
+Every such passage traverses $[-2q,-q]$; even with reversals in $z$,
+its time there is at least $q/(C\varepsilon^2)$. Its divergence
+contribution is therefore at most $-c_0\varepsilon^{-2}$, where
+$c_0=q^2/(2C)>0$. The remaining remote contribution is nonpositive.
+In the parabolic strip, after reducing $q$ and then $\varepsilon$,
+\[
+ z+by+\varepsilon^2P'(z)\le-x+bax^2+C\varepsilon^2\le-x/2.
+\]
+The cycle reaches the inner scale with $y\le aL^2\varepsilon^2$ and
+accumulated divergence at most $-c_0\varepsilon^{-2}$.
+Reversals on the negative side only increase the time with negative
+divergence.
+
+Set $z=\varepsilon U$, $y=\varepsilon^2V$, and
+$d\tau=\varepsilon\,dt$. The exact equation is
+\begin{equation}\label{eq:forcing-core}
+ U'=V(1+b\varepsilon U-\varepsilon^2V)+P(\varepsilon U),
+ \qquad V'=UV+D.
+\end{equation}
+Choose $v>0$ with $(L+1)v<d_0/4$, then $\eta$ sufficiently
+small, and finally $\varepsilon$ so that $|P(\varepsilon U)|\le2\eta$
+for $|U|\le L+1$. On $0\le V\le v$, $V'\ge d_0/2$.
+This portion lasts at most $2v/d_0$; by reducing $v$ and $\eta$,
+its displacement in $U$ is less than $1/2$. Once $V\ge v$,
+the boundary $V=v$ points upward and $U'\ge V/2\ge v/2$.
+Thus $U=L$ is reached in a bounded $\tau$-time, and Gronwall's
+inequality gives $v\le V(L)\le B_1$ for a fixed $B_1$.
+Continuation proves these estimates on a fixed box, after choosing
+$\varepsilon^2B_1$ below the physical height bound. The bounded
+$\tau$-time and scaled divergence
+$U+b\varepsilon V+\varepsilon P'(\varepsilon U)$ give a bounded core
+divergence integral.
+
+For $U\ge L$, take $\nu=v/4$ and fix
+\[
+ 0<\gamma\le\min\{1/8,\,v/(4L^2)\}.
+\]
+Then $\nu+\gamma L^2\le v/2<v$. Shrink the fixed physical
+rectangle so that $Q=1+b\varepsilon U-\varepsilon^2V\le5/4$.
+Thus $1-2\gamma Q\ge11/16$. The curve $V=\nu+\gamma U^2$
+is a lower barrier. Indeed, after the ratio below is made less than
+$1/8$,
+\[
+ V'-2\gamma UU'
+ =UV(1-2\gamma Q)+D-2\gamma UP(\varepsilon U)
+ \ge(11/16-\gamma/4)UV+D>0.
+\]
+The required ratio is controlled because
+\[
+ \frac{|P(\varepsilon U)|}{\nu+\gamma U^2}
+ \le\frac\eta\nu+\frac{M\varepsilon}{2\sqrt{\nu\gamma}}
+                              +\frac{M\varepsilon^2}\gamma
+\]
+can be made less than $1/8$, choosing $\gamma$, $\eta$, and
+$\varepsilon$ in that order. It follows that
+\begin{equation}\label{eq:forcing-positive-parabola}
+ y\ge\nu\varepsilon^2+\gamma z^2,\qquad F\ge cy.
+\end{equation}
+Choose the fixed positive section only after these constants have been
+fixed. Take $\xi>0$ and a height $y_*>0$ so small that, after shrinking
+$\varepsilon$, the estimate below gives $y\le y_*$ for
+$0\le z\le\xi$, while $1+bz-y\ge3/4$ on that same rectangle. The
+choice of $\gamma$ already makes $|P(\varepsilon U)|/V<1/8$ there, so
+$F=\varepsilon^2(VQ+P(\varepsilon U))\ge c y$ is valid on one common
+rectangle. The inequality
+$dy/dz\le Cz+C\delta/(\nu\varepsilon^2+\gamma z^2)$ then gives
+$y\le C(\varepsilon^2+z^2)$ and a finite hit of this fixed positive
+section. Hausdorff closeness places that hit inside its outgoing core.
+
+On this positive arc, $z=(\log y)^{\displaystyle\cdot}-\delta/y$
+and $\delta>0$. Consequently
+\[
+ \int z\,dt\le C+2|\log\varepsilon|,\qquad
+ \int by\,dt\le C,\qquad
+ \int\varepsilon^2P'(z)\,dt
+ \le C\varepsilon^2\int\frac{dz}{\nu\varepsilon^2+\gamma z^2}\le C\varepsilon.
+\]
+The fixed regular fast arc contributes a bounded divergence integral.
+Choose the fixed entry height in Lemma~\ref{lem:sections} small enough
+that the remaining descending relaxation lies in a fixed negative-$z$
+strip with nonpositive divergence. Adding these contributions gives
+\[
+ \log\mathfrak m\le-c_0\varepsilon^{-2}
+                              +C(1+|\log\varepsilon|)<0.
+\]
+Choose the larger geometric annulus inside the common multiplier
+neighborhood, with a smaller annulus containing the counted cycles and
+their intervening annuli.  The attracting estimate holds on that larger
+annulus throughout the coefficient neighborhood with $D>0$.
+Choose the generic perturbations of
+Lemma~\ref{lem:generic-attracting-index} inside this neighborhood.
+Together with the four-equilibrium bound in the whole positive half-plane,
+this gives at most two cycles.
+Every choice used only $d_0,D_0,M$ and a fixed compact $b$ interval,
+so the assertion is an open-neighborhood estimate at the stated
+limiting direction.
+\end{proof}
+
+\subsection{The ambient genericity window}
+\label{sec:ambient-genericity-window}
+The raw-parameter genericity argument following
+Lemma~\ref{lem:generic-attracting-index} makes nondegenerate fields dense
+in every open raw window. To apply it in the two-endpoint chart of
+Section~\ref{sec:two-endpoints}, retain an ambient coefficient
+window before radial normalization.
+For fixed $\varepsilon>0$ the two-endpoint chart has raw map
+\[
+ (A,C,c,D)\mapsto
+ (\varepsilon^2A^2c,-\varepsilon^2A,
+                  \varepsilon^2C,\varepsilon^3D),
+ \qquad \det D\Psi=-A^2\varepsilon^9\ne0 .
+\]
+The nonzero Jacobian gives an open four-dimensional ambient window.
+Reserve a strict forcing bound larger than the inner bound, so that the
+multiplier estimate holds on the larger annulus throughout this window.
+Generic fields can then be chosen on the $D>0$ side, also when the
+original field has $D=0$. These perturbations are made in the ambient
+coefficient chart before sphere normalization.
+
+The multiplier estimate on the larger annulus and this open ambient
+window supply all hypotheses of Lemma~\ref{lem:generic-attracting-index},
+with Lemma~\ref{lem:equilibria} giving the four-equilibrium bound.
+Thus there are at most two cycles.
+Each attracting hyperbolic cycle has actual multiplicity one.
+

@@ -1,0 +1,192 @@
+\subsection{The exact linear return and the radial joint columns}
+\label{rw:app:joint}
+
+In this subsection $B,m,a,c$ denote the barred coefficients and
+$M=-m>0$. At zero primary scale and zero line breaking the upper
+orbital field is
+\begin{equation}\label{rw:joint:linear-upper}
+ X'=-1-MY,\qquad Y'=X+cY,\qquad c>0.
+\end{equation}
+Put $g=M-c^2/4>0$, $\Omega=2\sqrt g$ and
+\[
+ F_U(p)=1-cp+Mp^2,\qquad F_L(p)=1+ap+Bp^2.
+\]
+For the first upper return $(p,0)\mapsto(-q,0)$, the reciprocal
+ratio $\eta=p/q$ becomes exponentially small as the repeated limit
+is approached. We factor out that exponential to retain mixed gap
+derivatives on the closed radial interval. An exact determinant
+identity then gives the principal rate without differentiating the
+divergent transit time.
+
+\begin{lemma}\label{rw:joint:exact-linear-rate}
+Fix $\gamma>0$ and $0<d<\gamma$. On
+$0\le s\le\gamma-d$, with coefficients close to
+$(c,M)=(2\gamma,\gamma^2)$ and $g>0$, the reciprocal return ratio
+$\eta=p/q$, $p=1/s$, has the form
+\begin{equation}\label{rw:joint:eta-unit}
+ \eta(s,c,g)=\Lambda\,\mathcal B(s,c,g,\Lambda),\qquad
+ \Lambda=e^{-\pi c/\Omega}.
+\end{equation}
+The function $\mathcal B$ is a positive analytic unit on a common
+neighborhood including $s=g=\Lambda=0$, and $\eta(0)=\Lambda$.
+For each fixed $N$ there are $a_N,C_N>0$ such that
+\[
+ |\partial_s^i\partial_c^j\partial_g^k\eta|
+ \le C_Ne^{-a_N/\sqrt g},\qquad i+j+k\le N.
+\]
+Zero extension for $g\le0$ has these finite jets; it is an auxiliary
+extension, not a return through a missing upper passage. At every
+actual finite return,
+\begin{equation}\label{rw:joint:linear-rate}
+ \frac{q_p}{q}
+   =\frac p{F_U(p)}\left(M+\frac cq+\frac1{q^2}\right).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Set $Z=Y+1/M$ and $V=Y'=X+cY$. The quadratic expression
+$E=V^2-cZV+MZ^2$ satisfies $E'=cE$. Thus at the return time $T$,
+\[
+ 1+cq+Mq^2=e^{cT}F_U(p).
+\]
+The transverse determinant formula gives $q_p=pe^{cT}/q$.
+Eliminate $e^{cT}$ between these two identities to obtain
+\eqref{rw:joint:linear-rate}.
+
+For the uniform formula put
+\[
+ a_0=2M-cs,\quad F_s=s^2-cs+M,\quad
+ d_0=(a_0^2+\Omega^2s^2)^{1/2}=2\sqrt{MF_s},
+\]
+\[
+ R=\exp\left[\frac c\Omega
+                    \arctan\frac{\Omega s}{a_0}\right],
+ \qquad k=\Lambda R.
+\]
+The first three quantities have positive margins on the chosen
+interval. The even power series of $\arctan z/z$ shows that $R$
+and $d_0$ are analytic in $(s,c,g)$ on a common neighborhood of
+$g=0$. In the explicit solution, with $z=\Omega T/2$, the return
+equation is
+\[
+ e^{cz/\Omega}
+       \left(\cos z+\frac{2Mp-c}{\Omega}\sin z\right)=1.
+\]
+Its homogeneous zero is
+$z_0=\pi-\arctan(\Omega s/a_0)$. Write
+$z=z_0-\Omega h$ and $h=skW$. The equation becomes
+\begin{equation}\label{rw:joint:implicit-radial}
+ d_0W\,\operatorname{sinc}(\Omega skW)=e^{cskW}.
+\end{equation}
+Here $\operatorname{sinc}(0)=1$. At $k=0$, $W=1/d_0$, and
+the $W$ derivative has the positive margin $d_0$. The analytic
+implicit function theorem therefore gives a common $W$.
+Only even powers of $\Omega$ occur in this equation.
+
+It remains to verify that this implicit solution is the first
+positive upper return. On the preceding interval $0<z<z_0$, the
+bracket in the return equation is positive.
+The derivative of its product with the exponential has the sign of
+\[
+ 2Mp\cos z+\frac{2M(cp-2)}{\Omega}\sin z.
+\]
+Both coefficients are positive in the present separated block:
+$cp>2$ after a fixed shrink. It changes sign exactly once before
+$z_0$. The product first increases from one and then decreases to
+zero, so it meets one once more, at the solution just constructed.
+Along the preceding segment $Y>0$.
+
+Differentiating the explicit solution in time and using
+\eqref{rw:joint:implicit-radial} gives
+\[
+ \eta=\frac{2Mk e^{ch}}
+                  {d_0\cos(\Omega h)-csk e^{ch}}.
+\]
+The denominator has a positive margin. This proves
+\eqref{rw:joint:eta-unit}; at $s=0$, $R=1$, $h=0$ and
+$d_0=2M$, giving its exact endpoint value. Every fixed number of
+$c,g$ derivatives of $\Lambda$ costs only finite inverse powers of
+$g$, absorbed by its exponential. The chain rule proves the stated
+mixed bounds and the finite-order zero extension.
+\end{proof}
+
+The lower principal actions satisfy
+\[
+ A_+'(p)=p/F_L(p),\qquad
+ A_-'(q)=q/(1-aq+Bq^2).
+\]
+The joint-center comparison uses the derivative of
+$K^0=A_+(p)-A_-(q(p))$. Differentiation removes the input-independent
+divergent actions. To express the remaining rate in the radial input,
+define
+\[
+ L_s=s^2+as+B,\qquad U_s=s^2-cs+M,\qquad
+ D_s=B-as\eta+s^2\eta^2,\qquad
+ \tau=a+c,\quad\varsigma=B-M.
+\]
+They have fixed positive margins on the separated interval and its
+slightly larger coefficient box.
+
+\begin{lemma}[Exact principal columns on the closed radial interval]
+\label{rw:joint:principal-columns}
+On the entire interval of Lemma~\ref{rw:joint:exact-linear-rate},
+\begin{equation}\label{rw:joint:principal-H}
+ \partial_sK^0
+ =\frac{M\tau+\varsigma(c-s)}{B L_s U_s}
+  +\frac{(M\tau+c\varsigma)\eta+\varsigma s\eta^2}
+           {B U_s D_s}.
+\end{equation}
+The right side, with the auxiliary extension of $\eta$, has bounded
+mixed jets of each prescribed finite order on the common coefficient
+box. At the center $a=-c$, $M=B$, put
+$F=s^2-cs+B$ and $D=B+cs\eta+s^2\eta^2$. Its transverse columns
+in $(\tau,\varsigma)$ are exactly
+\begin{equation}\label{rw:joint:principal-original-columns}
+ \mathsf A=\frac1{F^2}+\frac{\eta}{FD},\qquad
+ \mathsf V=\frac{c-s}{BF^2}
+                      +\frac{c\eta+s\eta^2}{BFD}.
+\end{equation}
+In the actual gap coordinates at zero scale, with $B,\delta$ fixed,
+the center columns are
+\[
+ U_g=\mathsf A-\frac c2\mathsf V,\qquad V_g=-2\mathsf V.
+\]
+As $B\to\gamma^2$ and the common gap $g=\delta\downarrow0$,
+they converge in every prescribed finite $C^k$ norm on the entire
+closed interval to
+\begin{equation}\label{rw:joint:limit-columns}
+ U_0(s)=-\frac1{\gamma(\gamma-s)^3},\qquad
+ V_0(s)=-\frac{2(2\gamma-s)}{\gamma^2(\gamma-s)^4}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Insert \eqref{rw:joint:linear-rate} in
+$(K^0)_p=p/F_L-q q_p/(1-aq+Bq^2)$, substitute
+$p=1/s$, $q=1/(s\eta)$, and use
+$\partial_s=-p^2\partial_p$. Clearing the three displayed
+positive denominators gives \eqref{rw:joint:principal-H}.
+It has no pole at $s=0$; indeed its value there is
+\[
+ (1+\Lambda)\frac{M\tau+c\varsigma}{B^2M}.
+\]
+Thus the reciprocal-return term in
+\eqref{rw:joint:principal-H} contributes at the radial endpoint even
+when the center gap is fixed and positive.
+
+Both numerators vanish at the center through their exact factors
+$\tau,\varsigma$. Derivatives of $\eta$ therefore contribute no
+additional center column. Differentiating the remaining factors gives
+\eqref{rw:joint:principal-original-columns}.
+The zero-scale form of
+\eqref{rw:coordinates:zeta-identity} gives
+$d\varsigma=-(c/2)d\tau-2d\zeta$ at fixed $B,\delta$.
+A passive $c$ variation makes no contribution because the whole
+center function is zero. Finally
+$c=2\sqrt{B-g}$ on that center, and Lemma
+\ref{rw:joint:exact-linear-rate} absorbs the reciprocal-return
+terms with their required derivatives. Direct substitution gives
+\eqref{rw:joint:limit-columns}. For fixed $B=\gamma^2$ the error
+is $O(g)+O(e^{-a/\sqrt g})$; varying $B$ adds
+$O(|B-\gamma^2|)$. All these estimates include $s=0$.
+\end{proof}

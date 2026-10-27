@@ -1,0 +1,74 @@
+\phantomsection\label{app:lower-tails-proof}
+
+\begin{proof}[Proof of Lemma~\ref{p4:tails}]
+Since $\gamma=O_\eps(\rho)$ and $q\ge\rho L$,
+\[
+ \widetilde P_\rho(\sigma q)=O_\eps(q^3+\rho q^2+\rho^2q+\rho^3),
+ \qquad |\widetilde P_\rho|/q^2\le C_\eps q.
+\]
+For $w=z/q^2$ in $[1/4,3/4]$ the denominator in
+\eqref{p4:tail} is at least a positive constant times $q^2$
+after $d$ is reduced. Its logarithmic-radius equation is
+$w_{\log q}=1-2w+O_\eps(q)$, with the same bound for its
+first $w$ derivative. The boundary vectors point inward.
+Equation \eqref{p4:L-window} starts all phases strictly inside
+this band. The band is invariant, the radial speed does not vanish,
+and the raw port is reached once.
+
+Writing the right side as
+$z(\beta+\zeta z)/(\widetilde P+\ell z)$, where
+$\widetilde P=\widetilde P_\rho(\sigma q)$, direct differentiation gives
+\[
+ F_{zz}=\frac{2\widetilde P(\zeta\widetilde P-\beta\ell)}
+                 {(\widetilde P+\ell z)^3}.
+ \]
+Together with the band bounds this yields
+\begin{equation}\label{p4:tail-majorants}
+\begin{split}
+ |F_z|&\le C_\eps(1+\rho/q+\rho^2/q^2+\rho^3/q^3),\\
+ |F_{zz}|&\le C_\eps q^{-2},\\
+ |F_A|+|F_C|&\le C_\eps q^2,\qquad
+ |F_{zA}|+|F_{zC}|\le C_\eps .
+\end{split}
+\end{equation}
+The first majorant is uniformly bounded since $\rho/q\le1/L$.
+For $J=\partial_bz$, $J(\rho L)=\rho^2$ and $J_q=F_zJ$.
+Consequently
+\begin{equation}\label{p4:J}
+ c_\eps'\rho^2\le J\le C_\eps'\rho^2,\qquad
+ |\partial_b\log J|
+ \le\int_{\rho L}^d|F_{zz}|J\dd q\le C_\eps'\rho.
+\end{equation}
+This proves the last assertion of \eqref{p4:tail-limits}, since
+$\phi(0)=0$ and $\phi'=J(q,b)/J(q,0)$.
+
+At $\rho=0$ equation
+\eqref{p4:tail} has a unique graph in the band with
+$z_0(q)=q^2/2+O(q^3)$.
+It is obtained by starting $z(a)=a^2/2$ and letting $a\downarrow0$.
+The inward-band comparison gives $|z/q^2-1/2|\le Cq$
+for these initial data. Any two bounded-band limiting graphs have
+distance at most $Ca^2$ at $q=a$; the bound for $F_z$
+propagates this distance to $q=d$, proving uniqueness.
+For the actual reference $b=0$, coefficient convergence on compact
+$q>0$ intervals, $z\le Cq^2$, and propagation from a small fixed $a$
+give convergence to this graph.
+
+The parameter-independent initial height gives
+$z_{A,q}=(\partial_zF)z_A+F_A$ and the analogous equation for $C$.
+The majorants \eqref{p4:tail-majorants} give $|z_A|+|z_C|\le Cq^3$;
+their integral equations converge to the unique zero-initial-value
+equations at $q=0$, proving $C^1_{A,C}$ convergence of $a_{\sigma,\rho}$.
+Finally,
+\[
+ \log(c_{\sigma,\rho}/\rho^2)=
+ \int_{\rho L}^dF_z(q,z(q,0))\dd q.
+\]
+Its $A,C$ derivatives have integrands
+$F_{zA}+F_{zz}z_A$ and $F_{zC}+F_{zz}z_C$, bounded by
+$C(1+q)$.
+Pointwise convergence for $q>0$ and these integrable majorants give
+the first-slope limits in \eqref{p4:tail-limits}.
+The same bounds show $\ell_\sigma$ and their reciprocals are bounded
+on the coefficient rectangle.
+\end{proof}

@@ -1,0 +1,142 @@
+\section{Geometric capture and saddle preparation}
+\label{app:geometric-saddle-details}
+
+\subsection{The isolating block and whole-graphic capture}
+\label{app:graphic-capture-details}
+
+We prove \cref{prop:isolation-capture-new} in two steps. An outward
+transverse boundary around the finite equilibrium gives the isolating
+block. Near the graphic, flow boxes force crossings of local section
+segments, and intersection numbers in a tubular annulus show that
+each section is crossed exactly once.
+
+At the finite equilibrium, the linear part of the organizing field \(\mathcal X_0\) is
+\[
+ \mathsf L_0=\begin{pmatrix}1&-1\\ C_0&0\end{pmatrix}.
+\]
+The symmetric matrix
+\[
+ \mathsf Q_0=\begin{pmatrix}
+ (C_0+1)/2&-1/2\\[1mm]
+ -1/2&(C_0+2)/(2C_0)
+ \end{pmatrix}
+\]
+is positive definite and satisfies
+$\mathsf L_0^T\mathsf Q_0+\mathsf Q_0\mathsf L_0=\mathsf I$.  Hence, for
+$\mathsf Q(u)=u^T\mathsf Q_0u$,
+\[
+ \dot{\mathsf Q}(u)=|u|^2+O(|u|^3),
+\]
+where the dot denotes the derivative along $\mathcal X_0$.
+Choose a sufficiently small disk $B_{\rm eq}=\{\mathsf Q\le\rho_{\rm eq}^2\}$,
+disjoint from $\GammaI$, for which the vector field points strictly out of
+$B_{\rm eq}$.  Then $B_{\mathrm{iso}}=\mathbb S^2\setminus\operatorname{int}B_{\rm eq}$
+has a boundary along which the field points strictly inward. This
+property persists in a full parameter neighborhood and proves (i).
+
+The periodic orbits of \eqref{eq:quadratic-family} lie in the open upper
+hemisphere of $\mathbb S^2$. The graphic
+$\GammaI$ is a smooth simple closed curve in $\mathbb S^2$. Away from the nilpotent
+point it is the parabola \eqref{eq:organizing-parabola}. In the chart
+\eqref{eq:projective-coordinates-new}, whose coordinate $z$ takes both signs
+on the sphere, the part of the parabola with $y>0$ is the graph
+\[
+ z=\frac{\sqrt{1+C_0v^2}-1}{C_0}=\frac{v^2}{2}+O(v^4),\qquad v\ne0,
+\]
+and its closure passes smoothly through the nilpotent point $(v,z)=(0,0)$.
+Hence $\GammaI$ has closed tubular neighborhoods in
+$\operatorname{int}B_{\mathrm{iso}}$; each of them is a compact annulus,
+since $\mathbb S^2$ is orientable.
+
+Take \(\Sigma_0\) on the affine orbit and the two projective faces
+\(\Sigma_{\rm in},\Sigma_{\rm out}\) on its regular branches.
+Choose a closed tubular annulus
+\(B_{\rm cap}\Subset\operatorname{int}B_{\rm iso}\) so thin that
+\[
+ S_j=\Sigma_j\cap B_{\rm cap},\qquad
+ j\in\{0,\mathrm{in},\mathrm{out}\},
+\]
+are disjoint proper spanning arcs in the cyclic order of \(\GammaI\).
+Choose a smaller tube
+\(\overline{\mathcal N'}\Subset B_{\rm cap}\) for which
+\(T_j=S_j\cap\overline{\mathcal N'}\) are compact transverse cores.
+Around the marked points \(\xi_j=\GammaI\cap S_j\), choose nested,
+pairwise disjoint flow boxes \(F'_j\Subset F_j\Subset B_{\rm cap}\),
+with \(T_j\subset F_j\), such that every trajectory through \(F'_j\)
+meets \(T_j\) before leaving \(F_j\), in positive or negative time.
+All crossings of each \(T_j\) have the organizing orientation.
+These properties persist for nearby parameters by transversality
+and smooth dependence of the flow boxes.
+
+For sufficiently small \(\delta>0\),
+\[
+ N_\delta(\GammaI)\subset\mathcal N',\qquad
+ N_\delta(\xi_j)\subset F'_j,
+\]
+where \(N_\delta\) denotes the metric neighborhood. If
+\(\distH(\overline\gamma,\GammaI)<\delta\), one Hausdorff inclusion
+puts \(\gamma\) in \(\mathcal N'\), and the other supplies a point in
+each \(F'_j\). Hence \(\gamma\) crosses every \(T_j\) at least once,
+and all its intersections with \(S_j\) lie in that core and have the
+same sign.
+
+Let \(\pi:B_{\rm cap}\to\GammaI\) be the tubular projection.
+The algebraic intersection with a spanning arc is
+\(I(\gamma,S_j)=\deg(\pi|_\gamma)\), up to orientation, and is nonzero.
+Thus \(\gamma\), an embedded circle when taken with minimal period,
+is essential in the annulus. Such a circle represents a primitive
+generator of \(H_1(B_{\rm cap};\mathbb Z)\); its intersection number
+with each spanning arc has absolute value one. Since all crossings
+have the same sign, there is exactly one per arc. Disjoint spanning
+arcs are met in their cyclic order, and the flow fixes that order to
+be the direction of \(\GammaI\). This proves (ii).
+
+\subsection{Uniform preparation of the interior saddle}
+\label{app:positive-saddle-preparation}
+
+For \eqref{eq:direct-positive-scaled-field}, we first straighten the
+stable and unstable graphs with uniform finite-order bounds, then
+normalize the equations on the two axes. The parameter-dependent
+stable manifold theorem \cite[Theorem~9.6]{Teschl2012} supplies the
+graphs through the following amplitude comparison.
+
+Fix a finite order \(k\), with extra derivatives for the coordinate
+changes below. In the scaled parameters
+\(\widehat p=(A,C,\kappa,q_2,\ell)\), where
+\(q_0=\ell^2\) and \(q_1=\kappa\ell\), the field extends smoothly
+to a neighborhood of a compact parameter box including \(\ell=0\).
+Factoring \(B(\ell X,\ell^2S,p)-B(0,0,p)\) by \(\ell\) writes it as
+\[
+ \mathcal X_{\widehat p}=\mathcal X^0_{B_0(p)}
+   +\kappa\mathcal X_1+q_2\mathcal X_2+\ell\mathcal X_{3,\widehat p},
+ \qquad \mathcal X_1=(X,0),\quad \mathcal X_2=(X^2,0),
+\]
+where \(\mathcal X^0_{B_0}\) is \eqref{eq:direct-positive-comparison} and
+\(\mathcal X_{3,\widehat p}\) is smooth with uniformly bounded state derivatives on
+the fixed state box. Replace the displayed coefficients
+\(\kappa,q_2,\ell\) by independent small amplitudes
+\(\alpha=(\alpha_1,\alpha_2,\alpha_3)\), keeping \(\widehat p\) fixed.
+At \(\alpha=0\), the comparison
+saddle has eigenvalues \(1,-1\); reducing the amplitude box gives
+a common positive spectral margin. The cited theorem on a finite
+cover of the compact \((\widehat p,\alpha)\) set gives stable and unstable
+graphs on a common smaller state box, with bounded state derivatives
+and one additional amplitude derivative. The mean value theorem from
+\(\alpha=0\) to \(\alpha=(\kappa,q_2,\ell)\) gives graph differences
+\(O_{C^k}(\kappa+|q_2|+\ell)\). Smooth eigen-coordinates centered
+at each saddle have the same bounds; straightening the graphs gives
+\[
+ x'=xg_{\rm u}(x,y),\qquad y'=-yg_{\rm s}(x,y),\qquad g_{\rm u},g_{\rm s}>c>0.
+\]
+An orbital time change makes \(x'=x,\ y'=-yg(x,y)\),
+where \(g(0,0)=\nu_p\).
+
+Normalize the \(x=0\) equation by the regular coordinate
+\[
+ \psi(y)=y\exp\int_0^y
+           \left(\frac{\nu_p}{g(0,t)}-1\right)\frac{dt}{t}.
+\]
+The new equation is \(y'=-y[\nu_p+xc_1(x,y)]\).
+Multiplication of \(y\) by
+\(\exp\int_0^xc_1(t,0)\,dt\) then gives exactly
+the prepared equation \eqref{eq:direct-positive-saddle-preparation}.

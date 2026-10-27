@@ -1,0 +1,163 @@
+\section{Uniform Dulac estimates}\label{sec:third-derivatives}
+The return comparisons require Dulac derivative estimates that remain
+uniform as the characteristic ratio passes through one. We construct
+common section coordinates on compact hyperbolic saddle families and
+bound the logarithmic curvature and its Euler derivative.
+All source derivatives keep the field parameters fixed.
+
+\begin{lemma}\label{lem:dulac-jets}
+Fix an integer $J\ge4$. Let $p$ range over a compact subset of a
+finite-dimensional parameter manifold covered by finitely many charts.
+Assume that the vector field, its saddle branch, and the embeddings of two
+oriented transverse sections are jointly $C^{J+12}$ in phase, section, and
+chart parameters, with common bounds. Suppose that the saddle eigenvalues
+are $\lambda_u(p)>0$ and $-\lambda_s(p)<0$, with
+$\lambda_u,\lambda_s\ge\lambda_*>0$, and that
+$r(p)=\lambda_s(p)/\lambda_u(p)$ lies in
+$[r_-,r_+]\Subset(0,\infty)$. After shortening the sections uniformly, the
+local coordinates and section changes may be chosen jointly $C^J$, and the
+Dulac map $D_p$ satisfies, for $0<s\le s_0$,
+\begin{equation}\label{eq:dulac-third}
+ D_p'>0,\qquad D_p'\le Ks^{r(p)-1},\qquad
+ \frac{sD_p''}{D_p'}=r(p)-1+E_D(s,p),\qquad
+ |E_D|+|sE_D'|\le Ks^\nu
+\end{equation}
+with common $K,s_0,\nu>0$. Primes and $E_D'$ denote source derivatives at
+fixed $p$. The estimates include $r=1$; when $r$ varies, no joint $C^J$
+extension of $D_p$ to $s=0$ is asserted.
+\end{lemma}
+\begin{proof}
+Put $N=J+12$. The hypotheses supply common $C^N$ phase--parameter bounds
+after one common phase shrinking. Cover the compact
+parameter set by finitely many charts on which the two eigenline bundles
+have $C^{N-1}$ frames with common bounds. Translate the saddle to the
+origin and use these frames on each chart to obtain
+\begin{equation}\label{eq:dulac-hyperbolic-chart}
+ \dot\xi=\lambda_u(p)\xi+F_u(\xi,\eta,p),\qquad
+ \dot\eta=-\lambda_s(p)\eta+F_s(\xi,\eta,p),
+\end{equation}
+where $F(0,p)=D_{(\xi,\eta)}F(0,p)=0$.  Compact hyperbolicity and the
+finite cover give a common $\lambda_*>0$ such that
+$\lambda_u,\lambda_s\ge\lambda_*$, common $C^{N-1}$ bounds for the
+coefficients, and a common bound for the frames and their inverses.  The
+loss of one derivative here accounts for differentiating the field when
+forming its spectral projections.
+
+To obtain common separatrix jets in phase and parameters, use the
+Lyapunov--Perron equation for stable trajectories of
+\eqref{eq:dulac-hyperbolic-chart}. For an initial stable coordinate $a$,
+it is
+\begin{equation}\label{eq:dulac-lyapunov-perron}
+ \begin{aligned}
+  \xi(t)&=-\int_t^\infty e^{\lambda_u(p)(t-q)}
+                  F_u(\xi(q),\eta(q),p)\,dq,\\
+  \eta(t)&=e^{-\lambda_s(p)t}a
+       +\int_0^t e^{-\lambda_s(p)(t-q)}
+                  F_s(\xi(q),\eta(q),p)\,dq .
+ \end{aligned}
+\end{equation}
+In a fixed exponential trajectory norm with weight below $\lambda_*$,
+a common cutoff makes this operator a contraction with constant
+$q_0<1$, uniformly on each parameter chart. Differentiating its
+fixed-point equation gives
+\[
+ (I-D_w\mathcal T_p)D^m w=\mathcal R_m,\qquad
+ \|(I-D_w\mathcal T_p)^{-1}\|\le(1-q_0)^{-1},
+\]
+where $\mathcal R_m$ uses only lower trajectory jets and coefficients
+through order $m$. Kernel parameter derivatives add polynomial factors
+in time, absorbed by the spectral gap. Induction through $N-1$ gives
+common joint stable-graph jets; time reversal gives the unstable graph.
+Take finite minima of the chart radii. Local frames suffice, without
+a global orientation of either eigenline bundle.
+
+Straighten the two invariant graphs successively.  Invariance and
+Hadamard division then give
+\[
+ \dot x=xA(x,y,p),\qquad \dot y=-yC(x,y,p),
+ \qquad A(0,0,p)=\lambda_u(p),\quad C(0,0,p)=\lambda_s(p).
+\]
+After one common shrinking, $A>0$; division by this positive time factor
+puts the equations in the orbital form
+\[
+ \dot x=x,\qquad \dot y=-yR(x,y,p),\qquad
+ R(0,0,p)=r(p)=\lambda_s(p)/\lambda_u(p).
+\]
+Absorb the pure-axis terms by one-dimensional coordinate changes.
+First put $y_1=q(x)y$, where
+\[
+ q(x)=\exp\int_0^x\frac{R(t,0)-r}{t}\,dt.
+\]
+Then $\dot y_1=-y_1R_1(x,y_1)$ with $R_1(x,0)=r$.
+The further change
+\[
+ y_2=\phi(y_1),\qquad
+ \phi(v)=v\exp\int_0^v\frac{r/R_1(0,t)-1}{t}\,dt
+\]
+makes the coefficient equal to $r$ on both axes. Each quotient has
+a removable singularity and common finite derivatives.  The remaining
+coefficient difference vanishes on both axes, so two successive Hadamard
+factorizations make it divisible by $xy$.  Dropping subscripts, the
+resulting local orbital form is
+\[
+ \dot x=x,\qquad \dot y=-y[r+xyB(x,y,p)],
+\]
+with common finite derivatives of $B$; the mixed term is retained,
+including at resonance. The derivative orders at each step are
+\[
+\begin{array}{@{}lcc@{}}
+\text{operation} & \text{input order} & \text{output order}\\
+\hline
+\text{spectral projections and eigenframes} & J+12 & J+11\\
+\text{two graph straightenings and push-forwards} & J+11 & J+9\\
+\text{two initial Hadamard divisions by the axes} & J+9 & J+7\\
+\text{two one-variable quotient changes and push-forwards} & J+7 & J+3\\
+\text{two final Hadamard divisions producing }xyB & J+3 & J+1\\
+\text{regular section hit and coordinate transfer} & J+1 & J
+\end{array}
+\]
+Every division is applied only after the required vanishing identity has
+been established. The coordinate Jacobians and the transverse event
+derivatives are bounded away from zero on the finite cover, so inversion
+costs no additional derivative. Thus $N=J+12$ leaves the coordinates,
+their inverses, $B$, and the section maps jointly $C^J$, with common bounds.
+
+We now estimate the Dulac map in these coordinates; see also
+\cite{MarinVilladelprat2020}. Fix $p$ and suppress it from the notation.
+For incoming $(s,y_0)$ and outgoing $x=x_0$, factor out the saddle power by
+writing $y=(s/x)^rw$, $w(s;s)=y_0$, and
+$\mathcal E=s\partial_s$. Then
+\[
+ w_x=-(s/x)^rw^2B(x,(s/x)^rw,p).
+\]
+Choose the section sizes so that $y_0/2\le w\le2y_0$.
+For $0<\nu<\min(1,r_-)$, reduced once if necessary,
+\[
+ \int_s^{x_0}(s/x)^r(1+|\log(x/s)|^j)\,dx\le K_js^\nu
+ \quad(0\le j\le3).
+\]
+The first three Euler differentiations give triangular variational
+equations whose coefficients and inhomogeneous terms are bounded by
+multiples of $(s/x)^r$. The initial point also moves with $s$, so its
+differentiated values satisfy
+\[
+ (\mathcal E^jw)(s;s)
+ =s\frac d{ds}(\mathcal E^{j-1}w)(s;s)
+                  -s(\partial_x\mathcal E^{j-1}w)(s;s).
+\]
+They are $O(s)$, successively for $j=1,2,3$. Gronwall's inequality
+therefore gives $|w-y_0|+\sum_{j=1}^3|\mathcal E^jw|\le Ks^\nu$.
+At $x=x_0$ let $W=w(x_0;s)$ and $M=rW+\mathcal EW\asymp1$.
+Since $D'=x_0^{-r}s^{r-1}M$,
+\[
+ E_D=\frac{\mathcal EM}{M},\qquad
+ \mathcal E^2M=r\mathcal E^2W+\mathcal E^3W,
+\]
+which proves~\eqref{eq:dulac-third} in each chart.  On chart overlaps,
+the source and target coordinates differ by positive regular germs with
+common $C^J$ bounds.  The chain rule changes the displayed logarithmic
+jet, and its Euler derivative, by $O(s)+O(D(s))$.  Decreasing
+$\nu<\min(1,r_-)$ once, these terms are absorbed in $Ks^\nu$.  Taking
+the maximum of the finitely many constants proves the uniform assertion.
+No exact analytic linearization or nonresonance hypothesis was used.
+\end{proof}

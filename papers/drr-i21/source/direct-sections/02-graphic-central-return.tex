@@ -1,0 +1,591 @@
+\section{The graphic and its central displacement}
+\label{sec:graphic-central-return}
+
+To count periodic orbits near the whole graphic, we first show that each
+of them makes one passage through a fixed system of sections. Its central
+height then parameterizes both halves of the singular passage. We use
+this common parameter to construct the displacement and its interval of
+admissible heights.
+
+\subsection{The organizing orbit and the projective field}
+
+At the parameter \eqref{eq:organizing-parameter}, set
+\[
+ H_0(x,y)=y-\frac{x^2}{2}+\frac{C_0}{2}.
+\]
+A direct calculation gives
+\begin{equation}
+\label{eq:parabola-invariance-new}
+ \dot H_0=2xH_0.
+\end{equation}
+Thus \eqref{eq:organizing-parabola} is invariant.  On this parabola,
+\begin{equation}
+\label{eq:parabola-speed-new}
+ \dot x=\frac{(x+1)^2+C_0-1}{2}>0.
+\end{equation}
+It follows that the parabola contains one regular orbit, directed from
+$x=-\infty$ to $x=+\infty$.
+
+Near the positive $y$-direction at infinity, put
+\begin{equation}
+\label{eq:projective-coordinates-new}
+ x=\frac vz,\qquad y=\frac1z,\qquad z>0,
+\end{equation}
+and multiply the transformed vector field by the positive factor $z$.  We
+obtain
+\begin{equation}
+\label{eq:projective-family-new}
+\begin{aligned}
+ v'&=P(v)-(1-Av+Cv^2)z,\\
+ z'&=-z\eta(v,z),
+\end{aligned}
+\end{equation}
+where
+\begin{equation}
+\label{eq:projective-factors-new}
+\begin{aligned}
+ P(v)&=\mu _1+\mu _2v-v^3,\\
+ \eta(v,z)&=\mu _3+v+v^2+Cvz.
+\end{aligned}
+\end{equation}
+The boundary drift \(q\) below therefore depends on the three
+\(\mu\)-parameters, whereas the positive factor \(B\) retains the
+dependence on \((A,C)\). This separation is used later when \(A\) is
+varied to change the connection without changing the boundary action.
+After shrinking the $(A,C)$-neighborhood of $(1,C_0)$,
+$A^2<4C$ and hence
+\begin{equation}
+\label{eq:K-positive-new}
+ 1-Av+Cv^2>0\qquad(v\in\R).
+\end{equation}
+At the organizing parameter, $(v,z)=(0,0)$ is the nilpotent saddle--node
+where the two ends of the affine orbit meet. Together with the affine
+orbit, it forms the compact directed graphic $\GammaI$.
+
+\begin{figure}[t]
+\centering
+\input{direct-sections/figure-organizing-graphic-data}
+\begin{tikzpicture}[>=Stealth,font=\small,
+    mid/.style={postaction={decorate},decoration={markings,
+      mark=at position #1 with {\arrow{Stealth}}}},
+    midrev/.style={postaction={decorate},decoration={markings,
+      mark=at position #1 with {\arrowreversed{Stealth}}}}]
+  % (a) the Poincare disk
+  \draw[gray!60] (0,0) circle (2.4);
+  \figOneSpiral{gray,thin,mid=.12}
+  \figOneGraphic{very thick,
+    postaction={decorate},decoration={markings,
+      mark=at position .3 with {\arrow{Stealth}},
+      mark=at position .7 with {\arrow{Stealth}}}}
+  \figOneSectionZero
+  \figOneCentralSection
+  \fill (0,0) circle (1.5pt) (0,2.4) circle (1.8pt);
+  \node[above] at (0,2.4) {saddle--node};
+  \node[right,xshift=4pt,yshift=-14pt] at \figOneVertex {$\ \Sigma_0$};
+  \node[right] at (0,2.02) {$\Sigma_c$};
+  \node[right] at (2.55,-.8) {$\Gamma(C_0)$};
+  \node at (0,-2.85) {(a)};
+  % (b) the projective chart near the saddle--node
+  \draw[->,gray] (3.4,0)--(9.25,0) node[right] {$v$};
+  \draw[->,gray] (6.3,0)--(6.3,2.75) node[above] {$z$};
+  \figOneChartOrbits{gray,thin,mid=.55}
+  \draw[very thick,mid=.55] (3.66,0)--(6.3,0);
+  \draw[very thick,mid=.55] (8.94,0)--(6.3,0);
+  \figOneChartLeft{very thick,midrev=.5}
+  \figOneChartRight{very thick,midrev=.5}
+  \draw[dashed] (6.3,0)--(6.3,2.4) node[above right] {$\eta=0$};
+  \fill (6.3,0) circle (1.8pt);
+  \node[below] at (6.3,-.05) {$z=0$, \ $v'=-v^3$};
+  \node[above] at (3.95,1.9) {leaving};
+  \node[above] at (8.65,1.9) {entering};
+  \node at (6.3,-.85) {(b)};
+\end{tikzpicture}
+\caption{The organizing field of \eqref{eq:quadratic-family} for
+\(C_0=10\), computed. (a) The Poincar\'e disk, through
+\((x,y)\mapsto(x,y)/\sqrt{9+x^2+y^2}\): the graphic \(\Gamma(C_0)\), the
+unstable focus at the origin with an orbit spiralling to
+\(\Gamma(C_0)\), the section \(\Sigma_0\), and the central section
+\(\Sigma_c\) below the nilpotent saddle--node at infinity. (b) The chart
+\eqref{eq:projective-coordinates-new}--\eqref{eq:projective-family-new}
+near the saddle--node, with the vertical scale enlarged: the line at
+infinity \(z=0\), the branches of \(\Gamma(C_0)\) entering the
+saddle--node from \(v>0\) and leaving it into \(v<0\), the central
+section \(\eta=0\), and orbits in the three sectors of \(z\ge0\).}
+\label{fig:organizing-graphic-new}
+\end{figure}
+
+\subsection{A fixed neighborhood of the whole graphic}
+
+The Hausdorff condition must force passage through the sections as well
+as proximity to the graphic. Removing a neighborhood of the finite
+repelling equilibrium gives an isolating block and sections valid for
+every nearby parameter.
+
+\begin{proposition}[Isolation and whole-graphic capture]
+\label{prop:isolation-capture-new}
+There exist a compact set $B_{\mathrm{iso}}\subset\mathbb S^2$, a compact annular
+neighborhood $B_{\mathrm{cap}}\Subset\operatorname{int}B_{\mathrm{iso}}$ of $\GammaI$,
+a parameter neighborhood $V_{\mathrm{cap}}$, a transverse affine section $\Sigma_0$,
+and $\rho_{\mathrm{cap}}>0$ with the following properties.
+
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item The maximal invariant subset of $B_{\mathrm{iso}}$ for each field with parameter in
+  $V_{\mathrm{cap}}$ is contained in $\operatorname{int}B_{\mathrm{iso}}$.
+\item If a periodic orbit $\gamma$ satisfies
+  $\distH(\overline\gamma,\GammaI)<\rho_{\mathrm{cap}}$, then
+  $\overline\gamma\subset B_{\mathrm{cap}}$ and $\gamma$ crosses
+  $\Sigma_0$ and the entrance and exit faces of a fixed projective box
+  exactly once per minimal period, in the order of $\GammaI$.
+\end{enumerate}
+\end{proposition}
+
+A periodic orbit as in (ii) is called \emph{captured}. The reverse
+Hausdorff inclusion forces section crossings; in a thin tubular annulus,
+their common orientation and the intersection number of an embedded
+circle make each crossing unique. Appendix~\ref{app:graphic-capture-details}
+gives the neighborhood construction and proof.
+
+\begin{remark}
+\label{rem:cyclicity-formulation}
+The bound in \cref{thm:direct-finite-cyclicity} also applies after
+restricting the orbits to a compact set: for each \(p\in V\) and each
+compact \(B\subset\mathbb S^2\), there are at most three limit cycles
+\(\gamma\) with \(\overline\gamma\subset B\) and
+\(\distH(\overline\gamma,\GammaI)<\varepsilon\).
+One such set is \(B_{\mathrm{iso}}\) of
+\cref{prop:isolation-capture-new}, whose maximal invariant subset lies
+in its interior.
+\end{remark}
+
+\subsection{The normal-rate coordinate}
+
+The negative logarithmic rate of \(z\) identifies the central section
+and the two directions of passage. Following \cite[Lemma~2.1]{HK2026},
+we take this rate, \(\eta=-\dot z/z\), as a coordinate. In the projective time of
+\eqref{eq:projective-family-new}, it is
+\begin{equation}
+\label{eq:normal-rate-coordinate-new}
+ \eta=\mu _3+v+v^2+Cvz.
+\end{equation}
+Since $\partial_v\eta=1+2v+Cz$, this is an analytic coordinate together with
+$z$ on a fixed projective box and a sufficiently small parameter
+neighborhood.
+
+\begin{lemma}[Normal form]
+\label{lem:physical-normal-form-new}
+In the coordinates $(\eta,z)$, the projective field has the exact form
+\begin{equation}
+\label{eq:physical-normal-form-new}
+ \dot\eta=q(\eta,p)-zB(\eta,z,p),
+ \qquad \dot z=-\eta z,
+\end{equation}
+where $p=(A,C,\mu _1,\mu _2,\mu _3)$, $B$ and $q$ are analytic, and
+\begin{equation}
+\label{eq:physical-normal-form-signs-new}
+ B>0,\qquad \partial_z\{zB(0,z,p)\}>0
+\end{equation}
+on a fixed smaller box.  On $z=0$,
+\begin{equation}
+\label{eq:boundary-drift-conjugacy-new}
+ q(\mu _3+v+v^2,p)=(1+2v)P(v).
+\end{equation}
+At the organizing parameter,
+\begin{equation}
+\label{eq:organizing-normal-coefficients-new}
+ B(0,0)=1,\qquad B_\eta(0,0)=1,\qquad
+ q(\eta)=-\eta^3+O(\eta^4).
+\end{equation}
+Consequently, after one more reduction of the box and parameter
+neighborhood, there are positive constants $b_0,b_1,b_2$ such that
+\begin{equation}
+\label{eq:normal-sign-margins-new}
+ B\ge b_0,\qquad B_\eta\ge b_1,\qquad
+ 3R_q+\eta\partial_\eta R_q\le-b_2,
+\end{equation}
+where
+\begin{equation}
+\label{eq:q-expansion-new}
+ q(\eta,p)=q_0+q_1\eta+q_2\eta^2+\eta^3R_q(\eta,p).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The equation for \(z\) in \eqref{eq:physical-normal-form-new} follows directly
+from \eqref{eq:projective-family-new} and
+\eqref{eq:normal-rate-coordinate-new}. Differentiating $\eta$ along the
+projective vector field \eqref{eq:projective-family-new} gives an analytic first
+component.  Its restriction to $z=0$ is
+$(1+2v)P(v)$, which proves \eqref{eq:boundary-drift-conjugacy-new}.  The
+remainder vanishes on $z=0$ and therefore factors as $-zB$.  Direct
+evaluation at the organizing parameter gives
+\eqref{eq:organizing-normal-coefficients-new}.  The inequalities follow by
+continuity on a compact smaller box.
+\end{proof}
+
+For fixed $(A,C)$, the coefficients in \eqref{eq:q-expansion-new} are local
+coordinates on $(\mu _1,\mu _2,\mu _3)$, as shown in
+Appendix~\ref{app:coordinates}.
+
+\input{direct-sections/standard-flow-tools}
+
+\subsection{The exterior transition}
+
+Fix a small level $z=z_*$.  At the organizing parameter the two branches of
+the graphic meet this level in two points with opposite signs of $\eta$.
+Let $W_+$ and $W_-$ be compact transverse windows around the positive and
+negative endpoints.  The finite part of the graphic defines, for nearby
+parameters, a regular first-hit map
+\begin{equation}
+\label{eq:exterior-map-new}
+ \Pi_p:W_-\longrightarrow W_+.
+\end{equation}
+On both windows we use the auxiliary energy coordinate
+\begin{equation}
+\label{eq:physical-energy-new}
+ I=z_*-\frac{\eta^2}{2}.
+\end{equation}
+Choose a bounded normal-rate graph box which is downward closed in
+the energy variable \(U=\eta^2/2\), for example
+\(0\le U\le U_{\max}\), \(0<z\le z_*\), with the organizing
+branches away from its upper radius face. It contains the two strips
+of \(B_{\mathrm{cap}}\) along the organizing branches with
+\(0<z\le z_*\). Choose the organizing endpoints in the interiors
+of \(W_\pm\). After reducing the capture data of
+\cref{prop:isolation-capture-new} and the parameter neighborhood of
+\eqref{eq:exterior-map-new}, every captured periodic orbit stays inside
+the graph box, away from its upper radius face, during its central passage
+and meets the interiors of both windows. This follows by narrowing
+the tubular neighborhood at the two regular section crossings.
+
+\begin{lemma}[Exterior multiplier]
+\label{lem:exterior-multiplier-new}
+Put
+\[
+ r_*=\sqrt{2z_*+C_0z_*^2},\qquad a_*=1+C_0z_*,
+ \qquad R_*=\frac{r_*}{z_*},
+\]
+and take $z_*$ small enough that $a_*>2r_*$.  Define the finite-section
+transverse multiplier
+\[
+ m_{\mathrm{aff}}(R_*)=
+ \exp\!\left(\int_{-R_*}^{R_*}
+       \frac{4x}{x^2+2x+C_0}\,\dd x\right).
+\]
+Let $I_-^0$ and $I_+^0$ be the two endpoint states of the organizing orbit
+in the coordinate \eqref{eq:physical-energy-new}.  The derivative of the
+organizing exterior transition at that orbit is
+\begin{equation}
+\label{eq:exterior-multiplier-new}
+ (\Pi_0)'(I_-^0)=
+ m_{\mathrm{aff}}(R_*)\frac{(a_*+r_*)(a_*+2r_*)}
+                    {(a_*-r_*)(a_*-2r_*)},
+ \qquad
+ \Lambda_0=\exp\!\left(-\frac{4\pi}{\sqrt{C_0-1}}\right).
+\end{equation}
+In particular, $(\Pi_0)'(I_-^0)=\Lambda_0\{1+O(\sqrt{z_*})\}$ as
+$z_*\downarrow0$.
+Let $\Lambda_0<\Lambda_+<1$ and fix $z_*$ sufficiently small. There are
+enlarged compact transverse windows \(\widetilde W_\pm\) at \(z=z_*\)
+around the organizing endpoints, in whose interiors the windows \(W_\pm\)
+are chosen, and \(\Lambda_->0\) such that, for nearby parameters,
+\(\Pi_p\) extends to a neighborhood of \(\widetilde W_-\) with values in
+the positive section, has uniformly bounded derivatives of every fixed
+finite order there, and satisfies
+\begin{equation}
+\label{eq:exterior-uniform-contraction-new}
+ 0<\Lambda_-\le\Pi_p'(I)\le\Lambda_+<1\qquad(I\in\widetilde W_-).
+\end{equation}
+In particular, endpoints uniformly \(o(1)\)-close to \(W_\pm\) lie in
+\(\widetilde W_\pm\) for sufficiently small parameters.
+\end{lemma}
+
+\begin{proof}
+Along the invariant parabola, use $x$ as time and let $\mathfrak k$ be a transverse
+variation measured by $H_0$.  Equations
+\eqref{eq:parabola-invariance-new}--\eqref{eq:parabola-speed-new} give
+\[
+ \frac{d}{dx}\log\mathfrak k
+ =\frac{4x}{x^2+2x+C_0}.
+\]
+The finite-section multiplier in this affine transverse coordinate is
+$m_{\mathrm{aff}}(R_*)$.  Since
+\[
+ \PV\int_{-\infty}^{\infty}
+ \frac{4x}{x^2+2x+C_0}\,\dd x
+ =-\frac{4\pi}{\sqrt{C_0-1}},
+\]
+and direct integration on the symmetric finite interval gives
+\[
+ m_{\mathrm{aff}}(R_*)
+ =\Lambda_0\{1+O(R_*^{-1})\},
+\]
+we have $m_{\mathrm{aff}}(R_*)=\Lambda_0\{1+O(\sqrt{z_*})\}$.
+We now convert the affine multiplier to the endpoint coordinate \(I\).
+At fixed $z=z_*$ the organizing parabola meets the section at $v=\pm r_*$.
+Direct differentiation of the
+energy coordinate with respect to the affine transverse coordinate $H_0$
+gives the two section factors
+\[
+ z_*^2(a_*+r_*)(a_*+2r_*),\qquad
+ z_*^2(a_*-r_*)(a_*-2r_*),
+\]
+respectively.  Their ratio, multiplied by $m_{\mathrm{aff}}(R_*)$, yields
+\eqref{eq:exterior-multiplier-new}; the ratio tends to one as
+$z_*\downarrow0$.
+Since $\Lambda_0<\Lambda_+$, fix $z_*$ with this derivative below
+\(\Lambda_+\). Smooth dependence then gives the asserted extension and
+\eqref{eq:exterior-uniform-contraction-new} on sufficiently small
+windows \(\widetilde W_\pm\) around the organizing endpoints, for nearby
+parameters. The nearby
+exterior arcs have uniformly bounded flight times through regular flow
+boxes and uniformly transverse endpoints, so
+\cref{lem:regular-transitions} gives the finite-order derivative bounds
+on \(\widetilde W_-\). The last assertion holds because \(W_\pm\) lie in
+the interiors of \(\widetilde W_\pm\).
+\end{proof}
+
+\subsection{One central height}
+
+The central section separates the incoming and outgoing halves of the
+projective passage. Put
+\begin{equation}
+\label{eq:central-section-new}
+ \Sigma_c(p)=\{\eta=0:0<z<z_*\}.
+\end{equation}
+The height $h=z|_{\Sigma_c(p)}$ gives a common analytic coordinate on
+this parameter-dependent section in the original $(v,z)$ chart.
+We call the point
+$(\eta,z)=(0,h)$ of $\Sigma_c(p)$ a \emph{central point} and $h$ its
+\emph{central height}.
+
+\begin{lemma}[Unique central crossing]
+\label{lem:unique-central-crossing-new}
+Every periodic orbit captured by \cref{prop:isolation-capture-new} meets
+$\Sigma_c(p)$ exactly once during its projective passage, and this
+intersection is transverse.
+\end{lemma}
+
+\begin{proof}
+At $\eta=0$, set
+\[
+ f_p(z)=q(0,p)-zB(0,z,p).
+\]
+By \eqref{eq:physical-normal-form-signs-new}, $f_p$ is strictly decreasing.
+If $f_p(z)=0$, both components of
+\eqref{eq:physical-normal-form-new} vanish, so the point is an equilibrium
+and cannot lie on a periodic orbit.  Hence every central crossing of a
+captured periodic orbit is transverse.
+
+Suppose a crossing at $z_1$ goes from $\eta<0$ to $\eta>0$.  Until a
+hypothetical second crossing, $z$ decreases.  The second crossing would
+therefore occur at $z_2<z_1$ and would require $f_p(z_2)<0$, whereas strict
+decrease gives $f_p(z_2)>f_p(z_1)>0$.  The opposite orientation is treated
+by reversing all inequalities.  There is at most one crossing.  Existence
+follows because the entrance and exit faces have opposite signs of $\eta$.
+\end{proof}
+
+For the directed passage considered here the crossing is from $\eta>0$ to
+$\eta<0$; hence a passing height satisfies
+\begin{equation}
+\label{eq:central-passing-condition-new}
+ f_p(h)<0.
+\end{equation}
+
+\subsection{The interval of central returns}
+
+For a passing height $h$, parameterize both half-orbits by increasing
+$z$: follow the positive half-orbit backwards and the negative half-orbit
+forwards. Put
+\begin{equation}
+\label{eq:squared-graph-new}
+ U_\sigma(z;h)=\frac{\eta_\sigma(z;h)^2}{2},\qquad
+ \eta_\sigma=\sigma\sqrt{2U_\sigma},\qquad
+ \sigma\in\{+,-\}.
+\end{equation}
+With $z$ increasing, both functions satisfy
+\begin{equation}
+\label{eq:physical-graph-equation-new}
+ \frac{dU_\sigma}{dz}
+ =\mathcal G_{\sigma,p}(U_\sigma,z)
+ :=B(\sigma\sqrt{2U_\sigma},z,p)
+   -\frac{q(\sigma\sqrt{2U_\sigma},p)}{z},
+ \qquad U_\sigma(h;h)=0.
+\end{equation}
+The smooth field selects a unique branch through the initial
+square-root singularity of this coordinate.
+
+\begin{proposition}[Central displacement on one interval]
+\label{prop:central-displacement-interval-new}
+After reducing the capture data, there is, for every parameter
+$p$, an interval $\cH_p\subset(0,z_*)$, possibly empty, such that both graphs
+\eqref{eq:physical-graph-equation-new} reach $W_+$ and $W_-$.  The endpoint
+functions
+\begin{equation}
+\label{eq:endpoint-functions-new}
+ I_\sigma(h)=z_*-U_\sigma(z_*;h)
+\end{equation}
+are continuous and strictly increasing on $\cH_p$.  The central first-return
+domain is an interval $\cD_p\subset\cH_p$, and its fixed points are exactly
+the zeros on $\cH_p$ of
+\begin{equation}
+\label{eq:central-displacement-new}
+ \Delta_p(h)=\Pi_p(I_-(h))-I_+(h).
+\end{equation}
+For each fixed \(p\), the maps \(I_\pm\) and \(\Delta_p\) are real
+analytic on \(\operatorname{int}\cH_p\).
+Every captured periodic orbit gives one zero of
+\eqref{eq:central-displacement-new}, and every zero gives one periodic
+orbit in the selected return neighborhood.  This correspondence preserves
+isolation.
+\end{proposition}
+
+We call a central height \(h\in\cH_p\) \emph{admissible}, and use the
+same adjective for its half-orbits and their endpoints in \(W_\pm\).
+
+\begin{proof}
+We first compare the graphs to determine which heights reach the
+endpoint windows. We then determine the domain and fixed points of the
+first return. Let
+\[
+ \mathcal Z_p=\{0<h<z_*:f_p(h)<0\}.
+\]
+This is an interval because $f_p$ is strictly decreasing.  For $h\in
+\mathcal Z_p$ and $z>h$, condition
+\eqref{eq:central-passing-condition-new} and the strict
+decrease of $f_p$ give
+\begin{equation}
+\label{eq:graph-positive-at-axis-new}
+ \mathcal G_{\sigma,p}(0,z)
+ =\frac{zB(0,z,p)-q(0,p)}{z}>0.
+\end{equation}
+Thus a graph which has become positive cannot return to $U=0$ at a larger
+height.
+
+Let $h_1<h_2$ be passing heights and suppose first that the graph starting at
+$h_1$ exists up to $h_2$.  Then
+$U_\sigma(h_2;h_1)>0=U_\sigma(h_2;h_2)$.  Scalar uniqueness away from
+$U=0$ gives
+\begin{equation}
+\label{eq:central-graph-order-new}
+ U_\sigma(z;h_1)>U_\sigma(z;h_2)
+\end{equation}
+for every common later height. If the first graph stays in the fixed
+downward-closed graph box until $z_*$, the second stays between it and
+zero and also reaches $z_*$ by standard continuation. Consequently, for
+each sign, the set $\mathcal Z_{\sigma,p}\subset\mathcal Z_p$ of heights
+whose graph reaches $z_*$ inside that box is an interval which
+contains, with each of its heights, every larger height of
+$\mathcal Z_p$.
+
+To show that \(zB-q>0\) along these graphs, note that initially
+\(\mathcal G_{\sigma,p}>0\). At the first zero of
+\(\mathcal G_{\sigma,p}(U(z),z)\), if one exists,
+one has \(U>0\) and \(q=zB\), so
+\begin{equation}
+\label{eq:graph-slope-first-zero}
+ \frac{d}{dz}\mathcal G_{\sigma,p}(U(z),z)
+   =B_z+q/z^2=\frac{B+zB_z}{z}>0.
+\end{equation}
+This contradicts a first crossing from positive values. The strict
+inequality \(B+zB_z>0\) holds on the fixed normal-rate box after
+it is reduced.
+
+To determine how the endpoints vary with the central height, differentiate
+the moving initial condition at an interior height. This gives
+\begin{equation}
+\label{eq:moving-height-variation-new}
+ \partial_hU_\sigma(z_*;h)
+ =\frac{f_p(h)}h\exp\!\left(
+  \int_h^{z_*}\partial_U\mathcal G_{\sigma,p}
+       (U_\sigma(z;h),z)\,\dd z\right)<0,
+\end{equation}
+where $f_p(h)/h=q(0,p)/h-B(0,h,p)<0$.
+The possible initial $O((z-h)^{-1/2})$ singularity is integrable; equivalently
+one may differentiate the smooth flow before passing to $U$.
+Hence $U_\sigma(z_*;h)$ is continuous and
+strictly decreasing, and $I_\sigma(h)$ is continuous and strictly increasing,
+on $\mathcal Z_{\sigma,p}$.
+
+We can now impose the endpoint windows. Each $W_\sigma$ is a compact
+interval in the energy coordinate, so
+\[
+ \mathcal H_{\sigma,p}
+ =\{h\in\mathcal Z_{\sigma,p}:I_\sigma(h)\in W_\sigma\}
+\]
+is an interval, because it is the inverse image of an interval under a
+strictly monotone map.  Define
+\[
+ \mathcal H_p=\mathcal H_{+,p}\cap\mathcal H_{-,p}.
+\]
+Every captured periodic orbit has its unique central height in
+$\mathcal H_p$, by the choice of these strips and of the windows above.
+In fact its height belongs to \(\operatorname{int}\mathcal H_p\).
+Its central crossing is regular, its endpoint crossings are transverse
+and lie in \(\operatorname{int}W_\pm\), and its two compact half-orbits
+avoid the radius face. Smooth flow dependence therefore continues
+both half-orbits for all central heights in an open neighborhood
+of that height, with endpoints still in the two windows.
+
+For fixed \(p\) and \(h_0\in\operatorname{int}\cH_p\), the
+analytic field has a regular central point, since \(f_p(h_0)<0\).
+The selected half-orbits reach \(z=z_*\) in finite time:
+\(\ddot z(0)=-h_0f_p(h_0)>0\) near the central point, and
+\(U_\sigma>0\) on the remaining compact graph. At the endpoint,
+\(\dot z=-\eta z_*\ne0\). Analytic flow dependence and the analytic
+implicit function theorem for these hitting equations therefore give
+analytic \(I_\sigma\). The same argument applies to the exterior
+transition, whose section coordinate has derivative \(-\eta\ne0\).
+Thus \(\Delta_p\) is analytic on \(\operatorname{int}\cH_p\).
+
+It remains to identify the return domain within the admissible interval.
+We restrict the central return to heights whose return height lies in
+$\cH_p$. The images $I_\sigma(\cH_p)$ are intervals, and this return is defined
+precisely when $\Pi_p(I_-(h))$ belongs to $I_+(\cH_p)$. Since $\Pi_p\circ I_-$
+is strictly increasing, its inverse image of this interval is an interval
+$\cD_p$.  On $\cD_p$ the return is
+\[
+ \cP_p(h)=I_+^{-1}\bigl(\Pi_p(I_-(h))\bigr).
+\]
+The equality $\cP_p(h)=h$ is equivalent to
+\eqref{eq:central-displacement-new}. Every zero on $\cH_p$ belongs to
+$\cD_p$, since its common endpoint lies
+in $I_+(\cH_p)$.  Joining the negative half-orbit, the exterior arc, and the
+positive half-orbit proves the correspondence with periodic orbits.  The
+unique central crossing proves injectivity, and a transverse flow box
+preserves isolation in both directions.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[>=Stealth,x=1.05cm,y=.9cm]
+  \draw[->,gray!70] (-4.4,0)--(4.4,0) node[right] {$\eta$};
+  \draw[->,gray!70] (0,-.2)--(0,4.5) node[above] {$z$};
+  \draw[dashed,gray!70] (-3.6,3.8)--(3.6,3.8) node[right] {$z=z_*$};
+  \draw[very thick,blue!55!black,
+    postaction={decorate},decoration={markings,
+      mark=at position .58 with {\arrowreversed{Stealth}}}]
+    (0,1) .. controls (1.0,1.25) and (1.8,2.45) .. (2.8,3.8);
+  \draw[very thick,blue!55!black,
+    postaction={decorate},decoration={markings,
+      mark=at position .58 with {\arrow{Stealth}}}]
+    (0,1) .. controls (-1.0,1.25) and (-1.8,2.45) .. (-2.8,3.8);
+  \draw[very thick,red!65!black,->]
+    (-2.8,4.02) to[bend left=28] node[above] {$\Pi_p$} (2.8,4.02);
+  \fill (0,1) circle (2pt) node[below right] {$h$};
+  \fill (-2.8,3.8) circle (2pt) node[below left] {$I_-(h)$};
+  \fill (2.8,3.8) circle (2pt) node[below right] {$I_+(h)$};
+  \node[above left] at (-2.8,3.8) {$W_-$};
+  \node[above right] at (2.8,3.8) {$W_+$};
+  \node[right] at (.08,2.55) {$\Sigma_c(p)$};
+\end{tikzpicture}
+\caption{The central return in normal-rate coordinates. The
+blue curves are the two halves of the orbit through $(0,h)$; the
+red arrow is the regular exterior transition.  Positions and curvature are
+schematic.  The closing condition is
+$\Pi_p(I_-(h))=I_+(h)$.}
+\label{fig:central-return-new}
+\end{figure}
+
+Returns based at other transverse sections are conjugate to
+\(\cP_p\); they have the same number of fixed points, and the
+conjugacy preserves isolation.

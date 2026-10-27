@@ -1,0 +1,462 @@
+\section{Normalized transitions on the parabolic tails}
+\label{sec:source-normalization}
+
+Above the coefficient height scale, the infinity transition consists
+of two parabolic tails joined by a bounded connector. Normalization by
+each tail's exact value and first variation gives convergent nonlinear
+maps, while the common singular power cancels in the ratio of the two
+absolute variations. This gives the signed high-height estimate of
+Corollary~\ref{rew:cor-high-derivative-signed} for the actual return
+\eqref{eq:intro-displacement}.
+
+All constants are uniform on the stated compact parameter sets.
+A positive unit is bounded above and away from zero;
+\(O_{C^k}\) denotes ordinary phase derivatives through order \(k\)
+unless weights are displayed. Choose the finite intrinsic normal-form
+regularity before constructing the maps. Exterior observers use
+ordinary \(C^3\) bounds on their actual buffered images.
+
+Put \(\alpha _0=s^2a,\ \alpha _1=sp,\ v=\gamma+sX,\ z=s^2Y\).
+For \(s>0\), a positive change of time gives
+\begin{equation}\label{ann:source-field}
+\begin{split}
+ X'&=a+pX-Y+A(\gamma+sX)Y-3\gamma X^2-sX^3
+                 -C(\gamma+sX)^2Y,\\
+ Y'&=-Y\{(1+2\gamma)X+sX^2+Cs(\gamma+sX)Y\}.
+\end{split}
+\end{equation}
+Here \(s\) is a general positive scale. For negative opening one may
+take \(s=\sqrt{-\alpha _0}\), whereas normalizing the height of a
+reference orbit allows \(a\) to have either sign.
+
+\subsection{The limiting transition}
+\label{ann:subsec-source-scattering}
+
+At \(s=\gamma=0\), the equation is
+\begin{equation}\label{ann:limiting-source}
+ X'=a+pX-Y,\qquad Y'=-XY.
+\end{equation}
+We call a complete orbit \emph{strict} if it is a graph on \(\R\)
+with \(Y>0\) and \(D=Y-a-pX>0\). Positive time then corresponds to
+decreasing \(X\). A compact strict family means a compact family of
+such graphs, with uniform positive margins for these two inequalities
+on each fixed compact \(X\)-interval.
+
+Removing the common quadratic, linear and logarithmic terms at each end
+gives finite labels for these complete graphs.
+
+\begin{lemma}\label{ann:lem-renormalized-ends}
+On a compact strict family the limits
+\begin{equation}\label{eq:renormalized-ends}
+ B_\pm=\lim_{X\to\pm\infty}
+ \{Y-X^2/2-2pX-(2a-4p^2)\log|X|\}
+\end{equation}
+exist. They give increasing coordinates on the family and depend
+real-analytically on the parameters and the orbit. The corresponding
+maps and their inverses have bounded derivatives of every prescribed
+finite order on smaller compact strict families.
+\end{lemma}
+\begin{proof}
+Bound \(|a|,|p|\) by \(M\ge1\). On either outward branch the graph
+equation \(Y_X=XY/(Y-a-pX)\), with \(r=|X|\), gives
+\(Y_r\ge rY/(Y+M(1+r))\). Below \(Y=M(1+r)\),
+\((\log Y)_r\ge1/(4M)\) for \(r\ge1\); above \(r=2M\)
+this line is a lower barrier. Compactness supplies a common entrance;
+after enlarging the cut, \(Y\ge r^2/8\) and \(Y_r=r+O(1)\), uniformly.
+Writing \(c=2a-4p^2\) and
+\(Y=X^2/2+2pX+c\log|X|+\mathcal B\), direct expansion in a
+parabolic corridor gives
+\[
+ |\mathcal B_X|\le
+ C\frac{1+\log|X|+|\mathcal B|}{X^2},
+ \qquad |\partial_{\mathcal B}\mathcal B_X|\le C X^{-2}.
+\]
+Gronwall's inequality gives boundedness and convergence. Beyond a fixed
+large cut, the prescribed-limit integral equation is a contraction on a
+common complex neighborhood, since its denominator is comparable to
+\(X^2\). Holomorphic Picard iteration and finite-interval dependence
+give analyticity. The positive scalar first variation and its reciprocal
+are bounded, proving the coordinate and inverse assertions.
+\end{proof}
+
+Denote the scattering map by
+\begin{equation}\label{ann:limiting-scattering-map}
+ S_{a,p}(b)=B_-,\qquad b=B_+.
+\end{equation}
+Its curvature has a particularly simple sign.
+
+\begin{proposition}\label{ann:prop-source-curvature}
+On every strict component,
+\begin{equation}\label{ann:source-scattering-division}
+ S_{a,p}(b)=b-p\mathcal I(a,p,b),\qquad
+ \mathcal I_{bb}>0.
+\end{equation}
+In particular, the curvature of \(S_{a,p}\) has sign
+\(-\sgn p\) when \(p\ne0\).
+\end{proposition}
+\begin{proof}
+When \(p=0\), reflection \(X\mapsto-X\) reverses the flow and gives
+\(S_{a,0}=\mathrm{id}\). Analytic division in \(p\) defines \(\mathcal I\).
+For \(\sigma=\partial_bY>0\) and \(\tau=\partial_b^2Y\), the graph
+equation gives
+\[
+ \sigma_X=-\frac{X(a+pX)}{D^2}\sigma,\qquad
+ \tau_X=-\frac{X(a+pX)}{D^2}\tau
+              +\frac{2X(a+pX)}{D^3}\sigma^2.
+\]
+Integrating the equation for \(\tau/\sigma\) from the incoming to the
+outgoing end yields
+\[
+ \frac{S''}{S'}=-2\int_\R\frac{X(a+pX)\sigma}{D^3}\,dX.
+\]
+To evaluate this integral, use
+\[
+ D_X=X-p+\frac{X(a+pX)}D,\qquad
+ (\sigma/Y)_X=-X\sigma/D^2.
+\]
+The integral of \((\sigma/D)_X\), followed by that of
+\((\sigma/Y)_X\), therefore gives
+\begin{equation}\label{ann:source-log-curvature}
+ \frac{S''(b)}{S'(b)}
+       =-p\int_\R\frac{\sigma(X,b)}{D(X,b)^2}\,dX.
+\end{equation}
+All boundary terms vanish by \eqref{eq:renormalized-ends}.
+Thus
+\(\mathcal I_{bb}=S'\int_\R\sigma D^{-2}\,dX>0\), also at \(p=0\)
+by continuity.
+\end{proof}
+
+\subsection{Normalization at a reference orbit}
+
+Fix a strict reference orbit and label nearby orbits by \(b\), with
+reference value \(b_0\). For positive \(s\), let \(h(b)\) be their
+height on \(\Sigma_+\), and put
+\[
+ k(b)=\mathcal C_{\theta,m}\bigl(T_\theta(h(b))\bigr).
+\]
+Thus \(h-a_\theta-mk=0\) is exactly the periodic-orbit equation.
+The maps \(h,k\) include all transitions to the fixed sections. Their
+slopes may vanish at different rates, so normalize their values and first
+derivatives separately:
+\begin{equation}\label{eq:reference-normalization}
+ H(b)=b_0+\frac{h(b)-h(b_0)}{h'(b_0)},\quad
+ K(b)=b_0+\frac{k(b)-k(b_0)}{k'(b_0)},\quad
+ \Phi=K\circ H^{-1}.
+\end{equation}
+The input \(\beta=H(b)\) is affine in the actual incoming height.
+Reversing the sign of the return equation and dividing by \(mk'(b_0)>0\)
+gives exactly
+\begin{equation}\label{eq:affine-normalized-displacement}
+ D(\beta)=c_0+c_1\beta+\Phi(\beta)=0 .
+\end{equation}
+The constants retain both centers and both slopes. No bound on their
+ratio is assumed.
+
+\begin{proposition}[Convergence on the actual sections]
+\label{prop:source-normalization}
+\label{ann:prop-source-curvature-persistence}
+On each compact strict family, \(\Phi\) extends continuously in
+phase \(C^3\) to \(s=\gamma=0\), with limit the positive affine
+normalization of \(S_{a,p}\) in \eqref{eq:reference-normalization}.
+Let \(\Phi^{\rm int}\) denote the normalized transition before the
+exterior observers. Its maps and inverses have every prescribed finite
+phase order; near \(p=0\), when the division intervals remain strict,
+its \(s\)-derivative for \(s\ge0\) and \(p\)-derivative at \(s=0\)
+extend in each prescribed \(C^k\), using one extra intrinsic phase
+order. Moreover, on common enlarged domains,
+\[
+ \|\Phi-\Phi^{\rm int}\|_{C^3}=O(s^{2-\nu}),\qquad 0<\nu<1.
+\]
+Consequently the actual \(s\)-secant extends continuously in
+\(C^3\) at zero. At \(p=s=0\), for small \(\gamma\),
+\(\Phi=\mathrm{id}\). All assertions are uniform in passive
+coefficients and \(0\le m\le m_0\).
+\end{proposition}
+
+\begin{proof}
+Ordinary ODE dependence controls the compact core. On each outward tail,
+set \(X=\sigma r\), \(\sigma=\pm1\); then
+\begin{equation}\label{eq:parabolic-tail}
+ Y_r=F_\sigma(r,Y)=
+ \frac{(1+2\gamma+\sigma sr)rY+
+       \sigma Cs(\gamma+\sigma sr)Y^2}
+ {\ell_\sigma Y+3\gamma r^2+\sigma sr^3-\sigma pr-a},
+ \quad
+ \ell_\sigma=1-A(\gamma+\sigma sr)+C(\gamma+\sigma sr)^2 .
+\end{equation}
+Choose a small raw radius \(\delta\), then a large core radius \(L\),
+then the bounds on \(s,\gamma\). The tail ends at \(R_s=\delta/s\),
+where uniformly regular maps join \(v=\gamma\pm\delta\) to \(\Sigma_\pm\).
+
+Write
+\[
+ L_\gamma=1-A\gamma+C\gamma^2,\quad
+ W_\gamma=\frac{1-4\gamma}{2L_\gamma},\quad
+ \lambda_\gamma=\frac{12\gamma}{1+2\gamma}.
+\]
+At \(s=p=a=0\), \(W=Y/r^2\) has equilibrium \(W_\gamma\)
+and radial exponent \(-2+\lambda_\gamma\).
+Fix \(0<\nu<1\), with \(|\lambda_\gamma|<\nu\). A small band about
+\(W_\gamma\) is invariant; its logarithmic equation has perturbation
+\(O(sr+|p|/r+|a|/r^2)\). Variation of constants gives
+\begin{equation}\label{eq:parabolic-corridor}
+ W-W_\gamma=O(sr+|p|/r+r^{-2+\nu}),\qquad L\le r\le R_s .
+\end{equation}
+This includes the logarithmic term for bounded \(a\) and makes the
+denominator comparable to \(r^2\), uniformly on the compact strict family
+after choosing \(L\).
+
+Let \(Y_*(r)=Y(r,b_0)\) and \(j(r)=Y_b(r,b_0)>0\).
+For the rational expression \(F=(\alpha Y^2+\beta Y)/(\ell Y+m)\),
+polynomial division gives the exact identity
+\begin{equation}\label{tail:rational-division}
+ F_{Y^h}=(-1)^h h!\,
+ \frac{m(\alpha m-\beta\ell)\ell^{h-2}}
+      {(\ell Y+m)^{h+1}},\qquad h\ge2.
+\end{equation}
+Using the coefficients in \eqref{eq:parabolic-tail} and the corridor gives
+\begin{align}
+ F_Y-\lambda_\gamma/r
+   &=O(s+|p|r^{-2}+r^{-3+\nu}),\label{ann:tail-first-derivative}\\
+ |F_{Y^j}|&\le C_j\{sr^{-2j+2}+|\gamma|r^{-2j+1}
+                    +|p|r^{-2j}+|a|r^{-2j-1}\},\quad j\ge2.
+ \label{ann:tail-higher-derivatives}
+\end{align}
+At fixed \(r,Y\), their explicit coefficient derivatives satisfy
+\begin{equation}\label{tail:rational-parameter-bounds}
+ |\partial_s^{\rm exp}F_{Y^h}|\le C_hr^{-2h+2},\qquad
+ |\partial_p^{\rm exp}F_{Y^h}|_{s=0}\le C_hr^{-2h+1},\quad h\ge2.
+\end{equation}
+Integrating \eqref{ann:tail-first-derivative}, using \(sR_s=\delta\), gives
+\begin{equation}\label{ann:tail-first-variation}
+ c r^{\lambda_\gamma}\le j(r)\le C r^{\lambda_\gamma}.
+\end{equation}
+The parameter variations, at fixed \(r\), satisfy
+\begin{equation}\label{eq:tail-parameter-variations}
+ |Y_{*,s}|\le Cr^3,\quad |(\log j)_s|\le Cr,\qquad
+ |Y_{*,p}|_{s=0}\le Cr,\quad |(\log j)_p|_{s=0}\le C .
+\end{equation}
+For the height rows, apply variation of constants to
+\(F_s=O(r^2)\), \(F_p|_{s=0}=O(1)\), with propagator
+\eqref{ann:tail-first-variation}. For the slope rows,
+\((\log j)_{\ell r}=F_{Y\ell}+F_{YY}Y_{*,\ell}\) is respectively
+\(O(1)\) and \(O(r^{-2})\).
+
+Subtracting the exact affine part gives
+\begin{equation}\label{eq:normalized-difference}
+ \eta=(Y-Y_*)/j,\qquad \eta_r=\mathcal N(r,\eta),
+\end{equation}
+with kernel \eqref{tail:normalized-kernel}. On a bounded
+\(\eta\)-interval this remainder can also be written exactly as
+\begin{equation}\label{tail:exact-affine-remainder}
+ \mathcal N=
+ \frac{j\eta^2 m(\alpha m-\beta\ell)}
+ {D_*^2(D_*+\ell j\eta)},\qquad D_*=\ell Y_*+m.
+\end{equation}
+Both denominators are comparable to \(r^2\). The phase and parameter
+formula \eqref{deg:det-parameter-phase-derivative}, together with
+\eqref{ann:tail-higher-derivatives},
+\eqref{tail:rational-parameter-bounds} and
+\eqref{eq:tail-parameter-variations}, gives
+\begin{align}
+ \|\mathcal N\|_{C^k}
+ &\le C\{sr^{-2+\nu}+|\gamma|r^{-3+\nu}
+                       +|p|r^{-4+\nu}+|a|r^{-5+\nu}\},\label{eq:N-bound}\\
+ \|\mathcal N_s\|_{C^k}&\le Cr^{-2+\nu},\qquad
+ \|\mathcal N_p\|_{C^k,s=0}\le Cr^{-3+\nu}.
+ \label{eq:N-parameter-bound}
+\end{align}
+The reference and slope are chosen by finite ODE dependence at the fixed
+core cut. Thus \(Y_{*,\ell}\), \(j_\ell\) include their motion while
+the normalized initial phase stays fixed. Every further phase row adds
+\(j/r^2=O(r^{-2+\nu})\), so the bounds include the extra order needed
+for the \(C^k\)-valued parameter variation.
+
+These are the integrable majorants of Lemma~\ref{lem:scalar-normalization}.
+The moving endpoint contributes
+\[
+ \|\mathcal N(R_s,\cdot)R_s'\|_{C^k}=O(s^{1-\nu})\longrightarrow0 .
+\]
+Finite-interval ODE dependence supplies local kernel convergence.
+The lemma gives joint convergence, common domains and inverse bounds.
+
+For each exterior map \(R\), its actual interval is
+\(z=z_*+d_s\eta\), where \(d_s=s^2j(R_s)=O(s^{2-\nu})\).
+Lemma~\ref{phys:lem-c3-adapters} gives on the admitted buffered image
+\begin{equation}\label{eq:exterior-normalization}
+ \frac{R(z_*+d_s\eta)-R(z_*)}{R'(z_*)d_s}
+                  =\eta+O_{C^3}(d_s),
+\end{equation}
+including inverse and divided closing. With these observers denoted by
+\(E_\pm\), the exact composition is
+\(\Phi=E_-\circ\Phi^{\rm int}\circ E_+^{-1}\). The intrinsic
+\(C^4\) bound and Lemma~\ref{phys:lem-c3-core-transport} give the
+claimed \(O_{C^3}(s^{2-\nu})\) error. Its quotient by \(s\) tends to
+zero, requiring only phase derivatives of the exterior maps.
+
+At \(p=s=0\) a first integral is
+\begin{equation}\label{ann:gamma-first-integral}
+\begin{split}
+ B_{a,\gamma}(X,Y)
+ &=-Y^{-\nu_\gamma}
+       \left(\frac{X^2}{2}-\frac{L_\gamma}{1-4\gamma}Y\right)
+       -\frac{a}{1+2\gamma}\log Y\,
+          \frac{1-e^{-\nu_\gamma\log Y}}{\nu_\gamma\log Y}
+       -a\log2,\\
+ &\hspace{35mm}\nu_\gamma=\frac{6\gamma}{1+2\gamma},
+\end{split}
+\end{equation}
+with the quotient continued at zero. Its \(Y\)-derivative is positive
+on the strict core. Use it as the initial orbit label, shifted to \(b_0\)
+at the reference orbit. The same label occurs on the two tails.
+Implicit differentiation gives \(Y_{bb}/Y_b=O(r^{-2+\nu})\),
+and the analogous higher-order estimates. Therefore both normalized
+tail limits are the identity. Together with
+\eqref{eq:exterior-normalization} this proves \(\Phi=\mathrm{id}\).
+At \(\gamma=0\), the limiting tail labels for general \(p\) are
+\eqref{eq:renormalized-ends}, which proves the stated scattering limit.
+\end{proof}
+
+During intrinsic parameter integration, hold \(m\) independently
+fixed in \([0,m_0]\). Its divided exterior map extends to both signs
+of the finite opening; only the actual \(m(\theta)>0\) enters the
+cycle equation.
+
+\subsection{Exact division in the perturbation parameters}
+
+On common enlarged strict domains, put
+\begin{equation}\label{ann:exact-source-division}
+ \begin{gathered}
+ \Phi(\beta)=\beta+pU(\beta)+sV(\beta),\qquad
+ U=\int_0^1\Phi_p^{\rm int}(a,tp,0,\gamma;\beta)\,dt,\\
+ V=\int_0^1\Phi_s^{\rm int}(a,p,ts,\gamma;\beta)\,dt
+          +\frac{\Phi-\Phi^{\rm int}}s .
+ \end{gathered}
+\end{equation}
+The two integrals divide successively in \(p\) and \(s\), retaining
+the actual exterior remainder. Both secants have continuous bounded
+\(C^3\) limits: the first uses only the intrinsic
+\(p\)-derivative at \(s=0\); the last quotient is
+\(O_{C^3}(s^{1-\nu})\). The strict margins hold throughout both
+intrinsic integration intervals, with fixed references and common
+inverse images.
+
+\subsection{Cancellation of the absolute tail derivatives}
+\label{ann:subsec-high-source}
+
+Use the actual affine incoming coordinate of Lemma~\ref{lem:closing}
+and write
+\[
+ \Pi(x)=\mathcal C_{\theta,m}\bigl(T_\theta(a_\theta+x)\bigr),
+ \qquad \Delta(x)=x-m\Pi(x).
+\]
+The fixed raw ports, their regular bridges, and the divided closing map
+are all included in this same transition.
+
+\begin{proposition}\label{sharp:upper-high}
+On any fixed compact strict source family with its two outward tails,
+the complete transition satisfies \(0<\Pi'(x)\le C\), uniformly for
+small positive \(s\), small \(\gamma\), and \(0\le m\le m_0\).
+The constant may depend
+on the compact family. This includes a small signed \(a\)-block about
+\(a=p=0\), with central height near one.
+
+On the negative-opening source family \(a=-1\), there are constants
+\(K_H,z_*,C_H>0\) such that, for either sign of small \(\gamma\),
+\[
+ Y_0>K_H(1+p^2),\qquad 0<s^2Y_0<z_*
+ \quad\Longrightarrow\quad 0<\Pi'(x)\le C_H.
+\]
+Here \(C_H\) is independent of \(p\) and of the tested phase point.
+After one common multiplier shrink, \(\Delta'>1/2\) on this whole
+high-height interval.
+\end{proposition}
+\begin{proof}
+Fix a compact strict family and a core cut \(L_t\). With
+\(y_c=Y(0)\), ordinary first variation on \([-L_t,L_t]\) gives
+\[
+ A_\sigma=\frac{\partial Y(\sigma L_t;y_c)}{\partial y_c}
+ \in[c_A,C_A],\qquad \sigma=\pm.
+\]
+The coefficient scale \(s\) is held fixed in this differentiation.
+Equations \eqref{ann:tail-first-derivative} and
+\eqref{ann:tail-first-variation}, before affine normalization, give on
+each outward tail
+\[
+ J_\sigma(R)=(R/L_t)^{\lambda_\gamma}U_\sigma(R),\qquad
+ \lambda_\gamma=\frac{12\gamma}{1+2\gamma},\qquad
+ 0<c\le U_\sigma,U_\sigma^{-1}\le C.
+\]
+At ports \(v=\gamma\pm d_H\), \(R=d_H/s\), the raw variations are
+\begin{equation}\label{sharp:upper-tail-ratio}
+ \frac{dz_\sigma}{dy_c}
+ =s^{2-\lambda_\gamma}(d_H/L_t)^{\lambda_\gamma}
+                                      A_\sigma U_\sigma(R),\qquad
+ T'(z_+)=\frac{A_-U_-(R)}{A_+U_+(R)}.
+\end{equation}
+Here \(T\) is the passage between the raw ports. The common power
+cancels; distinct fixed radii add only the bounded factor
+\((d_-/d_+)^{\lambda_\gamma}\). Regular bridges are derivative units, and
+\(\mathcal C_{\theta,m}'=f_\theta'(md_\theta)d_\theta'\) is a
+uniform positive unit by Lemma~\ref{lem:closing}. Thus the derivative
+of the complete transition in the actual incoming coordinate is
+bounded on the fixed compact strict family.
+
+For the signed block \(|a|,|p|\le1/8\),
+\(3/4\le y_c\le5/4\), the half-graphs satisfy
+\[
+ 3/4+r^2/4\le Y(r)\le5/4+r^2,\qquad
+ Y-a-\sigma pr\ge39/64.
+\]
+These follow by scalar comparison; below \(Y/r^2=1/4\) the
+logarithmic vector points upward, and above \(3/4\) it points
+downward beyond a common fixed cut. Thus this is a compact strict
+family with uniform parabolic entrances.
+
+For the negative-opening high-height range, freeze
+\(q=Y_0^{-1/2}\) at a selected point and rescale the source field to
+\[
+ (\bar a,\bar p,\bar\gamma,\bar s)
+   =(-Y_0^{-1},pY_0^{-1/2},\gamma,sY_0^{1/2}),\qquad y(0)=1.
+\]
+Large \(K_H\), followed by small \(z_*\) and a coefficient shrink,
+places these parameters in one compact strict source block about
+\(y=1+x^2/2\). Apply the preceding bound with scale \(\bar s\).
+The same constant \(C_H\) then works at every tested point, and
+\(mC_H<1/2\) gives \(\Delta'>1/2\).
+The scale is frozen during the phase derivative, with no bound on
+\(\gamma\log\bar s\).
+\end{proof}
+
+\subsection{Extension through the height cap}
+
+The derivative bound joins the low-height count to the fixed raw cap.
+The overlap condition in the next lemma ensures that this continuation
+introduces no additional critical point.
+
+\begin{lemma}[Extension through the height cap]
+\label{sharp:upper-height-splice}
+On one ordered physical carrier, suppose a connected lower interval
+has a prescribed critical-point bound and overlaps a bounded-height
+interval where the complete transition derivative is uniformly bounded.
+Write its scaled height as \(\eta=\tau Y_0\), \(\tau>0\), and
+suppose these two intervals cover \(0<\eta\le\eta_{\max}\).
+If Proposition~\ref{sharp:upper-high} applies above
+\(Y_0=K_H(1+p^2)\) and
+\begin{equation}
+ \tau K_H(1+p^2)<\eta_{\max},
+ \label{sharp:upper-height-splice-condition}
+\end{equation}
+then a common multiplier shrink adds no critical point on the
+complement of the lower interval, up to the captured raw-height cap.
+\end{lemma}
+\begin{proof}
+The bounded derivative gives \(F'>0\) on the bounded-height part
+after shrinking \(m\). Put \(Z=z_*/s^2\). If
+\(Z\le K_H(1+p^2)\), the displayed inequality puts every captured
+height below \(\eta_{\max}/\tau\). Otherwise the intervals
+\((0,\eta_{\max}/\tau]\) and \((K_H(1+p^2),Z)\) overlap
+below the cap and cover it. The high-height estimate gives \(F'>0\)
+on the added interval. These are restrictions of the same completed
+map; scalar order retains all inputs between captured roots.
+\end{proof}

@@ -1,0 +1,2005 @@
+\section{Quadratic inward and outward section estimates}
+\label{app:moving-section-bookkeeping}
+
+We estimate the actual quadratic passages on their original sections,
+keeping the coefficient-dependent first multipliers. The inward maps
+provide heights on one common centre section; their equality defines the
+match. The outward maps carry the two lips to the original raw ports.
+Together these estimates control the section terms in physical curvature.
+The final paired estimate bounds the complete derivative above a
+comparison orbit, where the separate first variations may be large.
+We use the scalar variation and continuation formulas of the physical
+section toolkit throughout.
+
+\subsection{Quadratic radial embeddings on common raw sections}
+
+For the quadratic passage estimates below, fix the original raw-section and
+ordinary \(C^3\) observer reserves and the passive compact set.
+Phase derivatives freeze \(g,k,\pi,A,C,m\), with \(g,k>0\) independently
+small. In the positive or reflected negative radial coordinate, use
+\begin{equation}\label{deg:quadratic-inward-family}
+ \begin{aligned}
+ P_s(v)&=1-s\pi v+3v^2+skv^3,& B_s(v)&=1+g(2+skv),\\
+ Q_s(v)&=1-Ag(1+skv)+Cg^2(1+skv)^2,&
+ \zeta_s(v)&=sCkg^3(1+skv),\qquad s=\pm1.
+ \end{aligned}
+\end{equation}
+The exact scalar graph is
+\begin{equation}\label{deg:quadratic-inward-scalar-common}
+ Y_v=\frac{Y(vB_s+\zeta_sY)}{g(P_s+Q_sY)},
+ \qquad x=sgkv,\quad z=g^3k^2Y.
+\end{equation}
+Decreasing \(v\) follows positive time for \(s=+1\) and its inverse
+for \(s=-1\). On each domain where the actual lip continuation
+exists, denote its original-centre height by \(Z_s(x_s)\) and define
+\begin{equation}\label{deg:quadratic-inward-memory-common}
+ \begin{gathered}
+ A_s(x_s)=\int_0^{x_s}\frac{vB_s}{P_s}\,dv,\quad
+ \mathcal D_s=\frac{P_s(x_s)}{x_sB_s(x_s)}\partial_{x_s},\\
+ \log Z_s=\log\{\ell_0P_s(x_s)\}-A_s(x_s)/g+\mathcal R_s,
+ \quad H_s=P_s'/(vB_s),\quad N_s=-g\mathcal D_s\log Z_s .
+ \end{gathered}
+\end{equation}
+The polynomial factor and action in this formula retain the entrance
+height and the full linear contraction to the centre.
+Coefficient-only memory remains in \(\mathcal R_s\); the estimates
+below concern its positive-order rows. Write \(J=A_+\) and omit
+\(s=+1\) subscripts when only the positive graph is used.
+
+On a fixed compact segment \([0,b]\) with \(P_s\ge p_b>0\),
+the scalar graph has the common preparation
+\begin{equation}\label{deg:positive-large-S-inward-compact-graph}
+ \begin{gathered}
+ Y_v=\frac{vB_s}{gP_s}Y+K_s(v,Y)Y^2,\qquad
+ K_s=\frac{\zeta_sP_s-vB_sQ_s}{gP_s(P_s+Q_sY)},\\
+ m_s(v)=\exp\left[-\frac1g\int_v^b\frac{wB_s(w)}{P_s(w)}\,dw\right]
+ \le1,\qquad m_s(b)=1 .
+ \end{gathered}
+\end{equation}
+Fix a prescribed height buffer \(0\le Y\le h_b\) before shrinking
+\(g,k\). The positive units \(B_s,Q_s\), the margin \(p_b\), and
+rational differentiation give
+\( |\partial_Y^jK_s|\le C_b/g\), \(0\le j\le3\), on that buffer.
+Lemma~\ref{deg:lem-compact-height-continuation} therefore applies with
+\(\kappa_c=g\) whenever the incoming height satisfies
+\(0<y\le h_b/2\) and \(y/g\) is small. Each regional proof supplies
+these input bounds and the logarithmic phase rows of \(y\); the
+continuation keeps the same original centre and uses no reciprocal
+bound on \(m_s(0)\).
+
+\begin{lemma}\label{deg:lem-quadratic-outer-jets}
+Fix the raw section buffers, then a compact neighborhood of the passive
+coefficients \(A,C\), and \(\pi\in[\pi_\flat,\Pi]\).
+There are fixed \(M,L,d_q,\delta_q,g_0,k_0>0\) such that the following
+holds for independently small \(0<g<g_0\), \(0<k<k_0\).
+For either \(s=\pm1\), let
+\[
+ x_0\ge2M,\quad q=x_0^{-1},\quad S=kx_0\le\delta_q,
+ \quad a=gkx_0,\quad b_0=-x_0^2/2 .
+\]
+The orbit from the lip at \(v=g+sa\) reaches \(v=g+sd_q\)
+with positive height. Its raw embedding \(H_s(b_0)\), and any increasing
+observer \(\Phi(H_s(b_0))\) on the prescribed buffered raw image for which
+\(\|\partial_z\log\Phi'\|_{C^1}\le C\), have positive first derivative. Put
+\[
+ E=x_0\partial_{x_0}=a\partial_a,\qquad
+ h_s=\frac{3-s\pi q+q^2+sS}{1+2g+sgS},\quad D_s=h_sE,
+ \quad\lambda=\frac{12g}{1+2g},\quad L_g=1+|\log g|.
+\]
+After separate affine normalizations of the embeddings, their slopes obey
+\begin{equation}\label{deg:quadratic-outer-weighted-jets}
+ D_s\log\phi_s'=-\lambda h_s+G_s,
+ \qquad |G_s|+|D_sG_s|\le CgL_g(q+S).
+\end{equation}
+Primes use the lip label \(b_0\); \(g,k,\pi,A,C\) are held fixed.
+The two raw passages exist separately. The conclusion does not require
+their inward central images to intersect.
+\end{lemma}
+
+\begin{proof}
+The common spectral estimate separates the exact homogeneous power
+from its logarithmic residual. We first check outward existence and
+admission to the raw buffers, then apply its derivative bounds with
+the original moving initial data and terminal observer.
+
+Write \(x=|v-g|\), \(W=z/x^2\), \(\tau=\log(x/a)\), and set
+\begin{align*}
+ m_s(x)&=3g+sx-s\pi kg^2/x+k^2g^3/x^2,\\
+ Q_s(x)&=1-A(g+sx)+C(g+sx)^2,\\
+ N_s(x,W)&=1+2g+sx+sCx(g+sx)W,
+ \qquad D=m_s+Q_sW .
+\end{align*}
+Division of the exact raw field gives
+\begin{equation}\label{deg:quadratic-outer-ratio}
+ W_\tau=F_s(x,W):=W(N_s/D-2),\qquad
+ W(0)=\ell_0gp,\quad p=3-s\pi q+q^2+sS.
+\end{equation}
+Use the exact signed dictionary for Lemma~\ref{deg:lem-spectral-exterior},
+\[
+ t=s,\quad b=2g,\quad v=g,\quad
+ (\mu_2,\mu_1,\mu_0)=(3g,-s\pi kg^2,k^2g^3),\quad
+ a=gS=gkx_0,\quad\sigma=gk.
+\]
+Choose \(M\) large and \(\delta_q\) small. For \(S\le\delta_q\),
+\(m_s(x)\asymp g\) on \([a,2a]\), for both signs, and
+\[
+ |b|+|v|+|\mu_2|+a+|\mu_1|/a+|\mu_0|/a^2\le Cg,
+ \qquad \Theta=g(S+\pi q+q^2)\le Cg(S+q).
+\]
+Thus the common lemma's intrinsic construction applies with
+\(\rho\asymp g\). For the negative sign it gives the original
+root-free outward passage and invariant strip even when \(m_-\)
+changes sign beyond \(2a\).
+
+\smallskip
+\noindent\emph{Common positive admission.}
+For \(s=+1\), the same construction applies on the larger domain
+\begin{equation}\label{deg:quadratic-positive-admission}
+ x_0\ge2M,\qquad a=gkx_0\le a_0,\qquad 0<g<g_0,\quad0<k<k_0,
+\end{equation}
+without a bound on \(S\). Indeed \(kg/x\le q\) for \(x\ge a\),
+so the choice of \(M\) gives
+\[
+ x+2g\le m_+(x)\le x+4g,\qquad
+ 6g+a+\pi gq+gq^2\le C(g+a).
+\]
+These are the two exterior hypotheses with \(\rho=g+a\).
+Choose \(d_q\) within that lemma's fixed cut allowance and
+\(a_0<d_q/L\), \(L\ge2\), with \(g_0+a_0<\min(\rho_0,1)\).
+Shrink \(g_0\) so that \(g_0\delta_q<a_0\).
+Its construction gives, for both signs on their respective domains,
+\begin{equation}\label{deg:quadratic-outer-domain}
+ D\ge c(g+W),\quad 0<W\le w_1,\qquad
+ W\ge w_0\quad(x\ge La).
+\end{equation}
+For the positive sign, in fact \(D\ge c(g+x+W)\).
+The limiting graph in \eqref{deg:spectral-exterior-window} keeps
+\(t=s\), hence \(m_s^*(x)=sx\). Its positive window is
+\[
+ |W(d_q)-W_+^*(d_q)|\le C(g+a)+C(a/d_q)^c.
+\]
+The original regular-section reserves give common neighbourhoods of the
+two limiting terminal families whose continuations lie strictly inside
+the prescribed raw buffers. Choose \(a_0\), then \(g_0\), inside the
+positive reserve. For the negative sign the same window with \(\rho\asymp g\)
+and \(a\le g\delta_q\) gives its original buffered image after shrinking
+\(g_0\). Thus both regular continuations are evaluated on admitted
+images. The positive graph is the inverse of the actual incoming
+passage; the negative graph follows positive time, and \(z_x>0\).
+
+For the logarithmic rows on \(S\le\delta_q\), use \(\rho\asymp g\)
+for both signs. The coefficient bounds hold on a slightly enlarged open
+phase interval, with all coefficients fixed under \(E\) and \(\beta=b_0\).
+The admitted regular continuation followed by the observer is the
+\(\chi\) of the common lemma; its prescribed ordinary \(C^3\)
+logarithmic-slope reserve gives \(\mathcal T\le C\).
+
+Write \(W_l=\ell_0gp\), \(\eta=\log z\), and
+\(\nu=6g/(1+2g)=\lambda/2\).
+The exact moving factor specializes to
+\begin{equation}\label{deg:quadratic-outer-moving-factor}
+ \mathscr B_s=EW_l-F_s(a,W_l)
+ =\ell_0\left[g(6-s\pi q+3sS)
+ -\frac{1+2g+sa+sCa(g+sa)W_l}{1+\ell_0Q_s(a)}\right].
+\end{equation}
+It is a negative unit. With
+\(\mathscr L_s=[2m_s+x m_s'+(xQ_s'+sCx(g+sx))W]/D\),
+the exact spectral density is
+\begin{equation}\label{deg:quadratic-outer-density}
+ \mathscr L_s\,d\tau=\nu\,d\eta+J_s\,d\eta,\qquad
+ J_s=\frac{s\{(3-\nu)x-\pi kg^2/x
+       +x[-A+(3-\nu)C(g+sx)]W\}}{N_s} .
+\end{equation}
+Put \(I(a)=\int_{\eta_l(a)}^{\eta_T(a)}J_s\,d\eta\).
+For an observer choose a fixed reference \(z_*\) in its buffered image,
+put \(c_\theta=\Phi'(z_*)>0\), and \(\widehat\Phi'=\Phi'/c_\theta\).
+The logarithmic derivative assumption makes \(\widehat\Phi'\) a positive
+unit there. For the raw embedding take \(c_\theta=1\).
+The common exact slope, using \(b_0=-a^2/(2g^2k^2)\), is
+\begin{equation}\label{deg:quadratic-outer-exact-slope}
+ \begin{gathered}
+ (\Phi\circ H_s)'(b_0)=d_\theta a^{-\lambda}U_s,
+ \quad d_\theta=c_\theta g^2k^2\ell_0^{-1-\nu}g^{-\nu},\\
+ U_s=(-\mathscr B_s)(1+\ell_0Q_s(a))p^{-\nu}
+       \frac{W_T}{D_T}z_T^\nu\widehat\Phi'(z_T)e^I .
+ \end{gathered}
+\end{equation}
+By \eqref{deg:spectral-exterior-rows}, its first two logarithmic residual
+rows satisfy
+\[
+ |E\log U_s|+|E^2\log U_s|
+ \le C\{gL_g(q+S)+a^{2-\lambda}\}\le CgL_g(q+S),
+\]
+since \(2-\lambda>1\) and \(a=gS\). The spectral factor retains
+\(\lambda=12g/(1+2g)\). With \(R_s=E\log U_s\) and \(G_s=h_sR_s\),
+\[
+ D_s\log\phi_s'=-\lambda h_s+G_s,\qquad
+ D_sG_s=h_s(Eh_s)R_s+h_s^2ER_s.
+\]
+The bounded \(h_s,Eh_s\) give
+\eqref{deg:quadratic-outer-weighted-jets}. Separate affine value/slope
+calibrations are constant under \(E\) and do not change these rows.
+\end{proof}
+
+\begin{corollary}\label{deg:cor-positive-large-S-outer}
+Keep the original positive raw section and observer buffers of
+Lemma~\ref{deg:lem-quadratic-outer-jets}, and fix \(\delta>0\).
+There are \(a_0,g_0,k_0>0\) such that its positive outward passage and
+observer are defined on the whole range
+\[
+ x_0\ge2M,\qquad S=kx_0\ge\delta,\qquad
+ a=gS\le a_0,\qquad 0<g<g_0,\quad0<k<k_0.
+\]
+With the same fixed-coefficient \(E=x_0\partial_{x_0}\), quadratic
+label and coefficient-only slope normalization, one has
+\begin{equation}\label{deg:positive-large-S-direct-jets}
+ |E\log\phi_+'|+|E^2\log\phi_+'|
+ \le C_\delta a(1+|\log a|).
+\end{equation}
+There is no upper bound on \(S\) independent of \(g\), and no comparison
+of \(g\) with \(k\). The observer has exactly the same stated
+ordinary \(C^3\) logarithmic-slope input as in the lemma.
+\end{corollary}
+
+\begin{proof}
+Use the common positive admission \eqref{deg:quadratic-positive-admission}
+and its original buffered continuation. Apply
+Lemma~\ref{deg:lem-spectral-exterior} with the same positive dictionary,
+\(\rho=g+a\), \(\sigma=gk\) and terminal cut \(d_q\).
+Its coefficient and mass hypotheses were checked before imposing
+\(S\ge\delta\); the admitted ordinary \(C^3\) observer again gives
+\(\mathcal T\le C\). Now
+\[
+ g\le a/\delta,\quad
+ \Theta=a+\pi gq+gq^2\le C_\delta a,\quad
+ L_\rho\le1+|\log a|,\quad
+ \lambda=\frac{12g}{1+2g}\le12a/\delta.
+\]
+With \(e=2-\lambda>3/2\), the spectral rows give
+\[
+ |E\log\phi_+'+\lambda|+|E^2\log\phi_+'|
+ \le C_\delta\{a(1+|\log a|)+(a/d_q)^e\}
+ \le C_\delta a(1+|\log a|).
+\]
+Absorbing \(\lambda=O_\delta(a)\) proves
+\eqref{deg:positive-large-S-direct-jets}. The exact quadratic label,
+coefficient-only \((gk)^2\) gain and \(a^{-\lambda}\) are retained.
+\end{proof}
+
+
+\begin{corollary}\label{deg:cor-negative-absolute-outer}
+Keep the original negative raw section and buffered observers, and fix
+\(r_c>0\). For independently small \(g,k>0\), the actual positive-time
+negative outward passage is defined for every
+\[
+ r\ge r_c,\qquad 0<R=kr<\mathfrak c,
+ \qquad p=3+\pi/r+r^{-2}-R>0.
+\]
+Here \(\mathfrak c\) is the negative simple-root endpoint already defined
+in the quadratic chart. Put
+\[
+ E=r\partial_r=R\partial_R,\qquad B=1+g(2-R),\qquad
+ h=p/B,\qquad \mathcal A=hE=\mathcal D_-.
+\]
+With primes in either quadratic label \(-r^2/2\) or \(-R^2/2\),
+\begin{equation}\label{deg:negative-absolute-direct-jets}
+ |\mathcal A\log\phi_-'|+|\mathcal A^2\log\phi_-'|
+ \le Cg(1+|\log g|).
+\end{equation}
+The ordinary \(C^3\) buffered observer input is the same as in the lemma;
+it includes the actual divided finite closing on its original windows.
+\end{corollary}
+
+\begin{proof}
+Use the exact negative equations of the lemma, with
+\(a=gR\), \(q=1/r\), \(W_l=\ell_0gp\).
+Here \(p\) may tend to zero at the simple root, so the weak height
+interval can be arbitrarily long. The moving initial variation has
+a factor \(p\), which will absorb this dwell in the differentiated
+integrals. We first construct the graph in logarithmic height.
+On the stated range \(p\) is bounded above, \(R\) is bounded,
+\(a\le Cg\), and \(m_-(a)=gp\). Also \(m_-'(x)<0\).
+To establish the actual graph without presupposing a positive raw
+radial denominator, use \(\eta=\log z\), \(\chi=\log x\), and
+\[
+ \chi_\eta=V=(m_-+Q_-W)/N_-,\qquad W=e^{\eta-2\chi}.
+\]
+This equation is regular while \(N_-\) is a positive unit.
+Initially \(D_l=gp(1+\ell_0Q_-(a))>0\).
+At a first zero of \(D=m_-+Q_-W\), its derivative along this graph
+would be \(D_\eta=Q_-W>0\). Hence \(D>0\) throughout the graph.
+Below a smaller auxiliary positive strip threshold,
+\(D\le gp+Q_-W\) and \(V<1/4\); thus \(W_\eta>0\) and
+\(W\ge\ell_0gp\). Consequently
+\[
+ W_\tau=WN_-/D-2W
+ \ge\frac{\inf N_-}{\ell_0^{-1}+\sup Q_-}-2W\ge c_0>0.
+\]
+A fixed logarithmic length therefore reaches that threshold; the fixed
+positive margin supplies the remaining climb to the original \(w_0\).
+Thus \(x_1\le La\), uniformly even when \(p\) tends to zero.
+Choose \(g_0\) so that \(La<d_q\). Thereafter the original strip is
+invariant and \(D\ge cW\). The limiting strong graph and contraction
+estimate of the lemma give
+\[
+ |W(d_q)-W_-^*(d_q)|\le Cg+C(La/d_q)^c\longrightarrow0.
+\]
+This proves first passage and admission to the original observer buffer
+before derivative estimates. Its initial height length satisfies
+\[
+ \eta_1-\eta_l
+ =\log\frac{W_1}{\ell_0gp}+2\log\frac{x_1}{a}
+ \le C(1+|\log g|+|\log p|).
+\]
+
+Write \(Q_-=q_0+q_1x+Cx^2\), where
+\(q_0=1-Ag+Cg^2\), \(q_1=A-2Cg\).
+At fixed \(\eta\) the exact partial derivatives are
+\[
+ D_\chi=-x-\pi kg^2/x-2k^2g^3/x^2-(2q_0+q_1x)W,
+ \qquad N_{-,\chi}=-x+CgxW.
+\]
+On a sufficiently small fixed inner raw interval they imply
+\begin{equation}\label{deg:negative-inverse-dissipation}
+ V_\chi\le-c\Xi,\qquad |V_{\chi\chi}|\le C\Xi,
+ \qquad \Xi=x+kg^2/x+k^2g^3/x^2+W.
+\end{equation}
+Indeed \(D\le gp+Q_-W\le Cg+CW\); the correction
+\(-DN_{-,\chi}/N_-^2\) is absorbed by the negative terms in
+\(D_\chi/N_-\). The next derivative has the same density.
+
+Let \(X_j=\mathcal A^j\chi|_\eta\),
+\(l_j=\mathcal A^j\eta_l\), and \(t_j=\mathcal A^j\eta_T\).
+The full moving initial rows are
+\begin{align*}
+ l_1&=(2p+Ep)/B,\qquad l_2=O(p),\\
+ X_{1,l}&=h-V_ll_1=pK_l>0,\\
+ X_{2,l}&=\mathcal A X_{1,l}-V_{\chi,l}X_{1,l}l_1=O(p).
+\end{align*}
+with \(K_l\) a positive unit. Here \(l_1\), \(Eh\) and \(El_1\)
+are bounded. The two inverse equations are \eqref{deg:scalar-inverse-endpoints}.
+Up to that inner cut, \eqref{deg:negative-inverse-dissipation} gives
+\(0<X_1\le Cp\), \(\int\Xi X_1\,d\eta\le Cp\), and
+\(|X_2|\le CX_1\), by division by the positive first variation.
+On the strong part choose an auxiliary fixed inner cut \(d_*\le d_q\)
+so that \(V_\chi/V\le-3/2\), then shrink \(g_0\) to ensure
+\(La<d_*\). The decay follows from
+\(D\ge cW\), \(W\ge w_0\), and
+\(V_\chi/V\le-2+Cg/w_0+Cx\).
+Thus \(X_1\le Cp(a/x)^{3/2}\) up to that cut.
+The remaining compact strong-graph segment to the original \(d_q\)
+has bounded coefficients and finite logarithmic length, and preserves
+this bound up to a fixed factor. At the original terminal cut, \eqref{deg:scalar-inverse-endpoints}
+gives \(|t_1|+|t_2|\le Cp a^{3/2}\).
+Use the exact density \(J_-=J\) from
+\eqref{deg:quadratic-outer-density}, with
+\(I=\int_{\eta_l}^{\eta_T}J\,d\eta\).
+Its two complete rows are \eqref{deg:scalar-density-endpoints},
+with \(D=\mathcal A\), \(r=\chi\), and \(Dr_l=h\).
+On the initial part \(|\partial_\chi^jJ|\le Cg\), \(j=0,1,2\),
+since \(x\le La\le Cg\) and \(kg^2/x\le g/r\).
+Its differentiated integrals are at most
+\(Cgp(1+|\log g|+|\log p|)\le Cg(1+|\log g|)\).
+On the strong part \(d\eta\le C\,d\log x\), and the integrals are
+bounded by
+\[
+ Cp\int_{La}^{d_*}(x+kg^2/x)(a/x)^{3/2}\,d\log x
+ \le Cp(a+kg^2/a)\le Cg.
+\]
+If the actual entry is below \(La\), the fixed logarithmic segment
+from \(x_1\) to \(La\) has the same \(Cg\) bound.
+The compact final segment contributes \(Cp a^{3/2}\).
+The displayed initial terms are \(O(g)\), and all terminal partials
+are bounded. Therefore \(|\mathcal AI|+|\mathcal A^2I|\le CgL_g\).
+
+Finally use the exact complete slope factor of the lemma.
+Its moving-initial and \(1+\ell_0Q_-(a)\) logarithmic rows are
+\(O(g)\). Although \(p^{-\nu}\) is unbounded as \(p\) tends to zero,
+its two action logarithmic rows are \(O(g)\), since
+\(\mathcal A\log p=Ep/B\) and \(\mathcal A^2\log p=O(p)\).
+The terminal \(W_T/D_T\), \(z_T^\nu\) and ordinary \(C^3\) observer
+rows are \(O(p a^{3/2})\), by the full terminal formulas.
+The extracted \(a^{-\lambda}\) contributes \(-\lambda h=O(g)\)
+and \(-\lambda\mathcal Ah=O(g)\).
+All coefficient-only slope factors are frozen, including the change
+between the two quadratic labels. These estimates prove
+\eqref{deg:negative-absolute-direct-jets} on the whole original domain,
+including arbitrarily close approach to its negative root endpoint.
+\end{proof}
+
+\subsection{The complete negative inward action remainder}
+
+We next continue the negative lip back to the original centre and
+estimate its action remainder. This supplies one side of the later
+matching equation. The positive and negative heights are constructed
+separately; matching is imposed only on the intersection of their images.
+
+\begin{corollary}\label{deg:cor-negative-inward-common-centre}
+Use \eqref{deg:quadratic-inward-family} with \(s=-1,x_s=r\),
+\(\pi\in[\pi_\flat,\Pi]\), and fixed small \(\ell_0\).
+Fix \(r_c>0\). On the entire strict negative interval
+\(r\ge r_c\), \(0<R=kr<\mathfrak c\), continue the lip
+\(Y=\ell_0P_-(r)\) to \(\xi=0\) along the inverse of the actual
+positive-time negative branch. Its height \(Z_-(r)>0\) is defined on
+this entire interval and enters the original central height window
+after one coefficient shrink. In \eqref{deg:quadratic-inward-memory-common}, its remainder obeys
+\begin{equation}\label{deg:negative-inward-central-remainder}
+ \sum_{j=1}^3|\mathcal D_-^j\mathcal R_-|\le Cg.
+\end{equation}
+Changing the central height by a coefficient-only multiplicative scale changes
+only a constant in this logarithmic formula. The estimate does not
+differentiate coefficients or bound the value of \(\mathcal R_-\) by
+\(Cg\). All constants are independent of the distance to the negative
+simple root and of any comparison between \(g\) and \(k\).
+\end{corollary}
+\begin{proof}
+Choose an auxiliary fixed \(0<b<r_c/2\). On \([0,r_c]\), the
+polynomial is uniformly positive after decreasing \(k\), and
+\[
+ A_-(r_c)-A_-(b)\ge a_*>0 .
+\]
+For \(v\ge b\), \(kv<\mathfrak c\), write
+\[
+ Q=1-Ag(1-kv)+Cg^2(1-kv)^2,\quad
+ H=\frac{P_-'(v)}{vB_-(v)},\quad
+ \omega=-\frac{Ckg^3(1-kv)P_-(v)}{vB_-(v)} .
+\]
+Here \(Q\) is a positive unit. With
+\(\mathcal D_v=P_-(v)\partial_v/(vB_-(v))\), direct rational
+differentiation in \((v^{-1},kv)\) gives
+\begin{equation}\label{deg:negative-inward-coefficient-rows}
+ \sum_{j=0}^3|\mathcal D_v^jH|\le C,\qquad
+ \sum_{j=1}^3|\mathcal D_v^jQ|\le Cg,\qquad
+ \sum_{j=0}^3|\mathcal D_v^j\omega|\le Cg^3 .
+\end{equation}
+The field \(\mathcal D_v\) contains the factor \(P_-(v)\);
+none of these bounds divides by its vanishing root factor.
+
+Set \(t=A_-(r)\), \(q=(t-A_-(v))/g\), and
+\(W=Y/P_-(v)\). The original negative scalar equation gives exactly
+\[
+ v_q=-g\frac{P_-(v)}{vB_-(v)},\qquad
+ (\log W)_q=-\frac{1+\omega W}{1+QW}+gH,
+ \qquad W(0)=\ell_0 .
+\]
+At fixed \(q\), \(\partial_t v=P_-(v)/(vB_-(v))\), so every
+\(\partial_t\) coefficient derivative is precisely \(\mathcal D_v\).
+The logarithmic rate and the normal diagonal are at most \(-c<0\)
+for the fixed small lip. Lemma~\ref{deg:lem-stable-ratio-ledger}
+applies with \(D=\partial_t\), \(\kappa=g\), \(\rho=g\),
+\(\alpha=0\), by \eqref{deg:negative-inward-coefficient-rows};
+clock differentiation acts as \(-g\mathcal D_v\). It constructs the
+actual positive-height inverse passage to \(b\), with radial speed
+\(P_-+QY>0\), and gives
+\[
+ |\partial_t^jW|+|\partial_t^jL|
+ \le Cg(1+q)^Ne^{-cq},\quad1\le j\le3,\qquad
+ L=(Q-\omega)W/(1+QW).
+\]
+Retain the exact source polynomial:
+\[
+ T=(t-A_-(b))/g,\qquad V_b=\int_0^{T(t)}L\,dq,\qquad
+ Y_b=\ell_0P_-(r)e^{-T+V_b}=P_-(b)W(T)\le Ce^{-cT}.
+\]
+Here \(T'=1/g,T''=T'''=0\), and \(T\ge a_*/g\).
+The three complete rows \eqref{deg:stable-ratio-terminal-rows}
+therefore give \(|\partial_t^jV_b|\le Cg\): each boundary term
+is bounded by \(Cg^{-N}(1+T)^Ne^{-cT}\). The retained polynomial
+gives
+\[
+ \mathcal D_-\log Y_b=H(r)-g^{-1}+\partial_tV_b,
+ \qquad |\mathcal D_-^jY_b|\le Cg^{-j}Y_b,\quad j\le3.
+\]
+
+Reflect the segment from \(-b\) to the original centre by \(v=-\xi\).
+Preparation~\eqref{deg:positive-large-S-inward-compact-graph}, with \(s=-1\),
+then applies on the fixed margin above. Exponential flatness gives
+\(Y_b\le h_b/2\) and small \(Y_b/g\), so
+Lemma~\ref{deg:lem-compact-height-continuation} establishes the actual
+continuation, \(0<Y\le2Y_b\), and its logarithmic nonlinear unit
+\(\mathcal N\). The three composition rows of that lemma are
+bounded by \(CY_b/g^{j+1}\le Cg\).
+The exact linear multiplier is \(e^{-A_-(b)/g}\), so the artificial
+cut cancels and
+\(\mathcal R_-=V_b+\mathcal N(Y_b)\) gives
+\eqref{deg:negative-inward-central-remainder} at the original centre.
+\end{proof}
+
+\subsection{Positive inward passage on the growing range}
+
+When \(S=ku\) grows, the positive action speed is of order
+\(1+S\). We therefore estimate the inward remainder in the radial
+derivative \(u\partial_u\), keeping the conversion to action
+derivatives explicit. This is the estimate used in
+\eqref{deg:quadratic-large-S-curvature}.
+
+For \(s=+1\), the factorization is
+\[
+ P(v)=(\mathfrak c+kv)\{(v-d)^2-\Delta\},\quad
+ \mathfrak c=3+2kd,\quad \mathfrak c(d^2-\Delta)=1,\quad
+ \pi=2\mathfrak cd-k/\mathfrak c,
+\]
+with \(d=\pi/6+O(k)\), \(\mathfrak c=3+O(k)\).
+
+\begin{corollary}[Positive large-\(S\) inward action rows]
+\label{deg:cor-positive-large-S-inward}
+Fix \(0<\pi_\flat\le\Pi<\infty\), a compact set of the passive
+coefficients \(A,C\), and \(\delta>0\). Choose the original lip
+height \(\ell_0\) and physical collar width \(d_0\) sufficiently small
+within their original buffered windows. There are fixed
+\[
+ v_i,M,g_0,k_0>0,\qquad
+ k_0\le\delta/(2M),
+\]
+such that the following holds for independently small
+\(0<g<g_0\), \(0<k<k_0\), \(\pi\in[\pi_\flat,\Pi]\).
+On every strict root-free fibre \(\Delta<0\), every lip point
+\begin{equation}\label{deg:positive-large-S-inward-domain}
+ \xi=u,\qquad Y=\ell_0P(u),\qquad
+ S=ku\ge\delta,\qquad a=gS<d_0
+\end{equation}
+has an actual positive-height, positive-time first passage to \(\xi=0\).
+Its original centre height is \(Y_{0,+}=Z_+>0\), with
+\(\mathcal R_+\) defined by \eqref{deg:quadratic-inward-memory-common}.
+With all coefficients fixed under \({\mathcal E}=u\partial_u\),
+\begin{equation}\label{deg:positive-large-S-inward-action3}
+ |{\mathcal E}^j\mathcal R_+(u)|\le C_\delta a,\qquad j=1,2,3 .
+\end{equation}
+The constants are independent of \(g,k\) and of \(-\Delta>0\).
+The statement can be restricted to the original strict raw-window
+preimages without extending any image or inverse.
+
+On a real or double-root fibre the prescribed positive through lip ends
+at the first root \(a_{\rm root}=d-\sqrt{\Delta}\). That endpoint is
+bounded uniformly in this coefficient block, and after the same
+\(k\)-shrink its through interval has \(ku<\delta\). Thus
+\eqref{deg:positive-large-S-inward-domain} is empty on that branch. No passage beyond the first
+root, or at the stopped \(\Delta=0\) limit, is included.
+\end{corollary}
+
+\begin{proof}
+Fix the finite differentiability budget used below first.
+Choose \(v_i>0\) so small that
+\[
+ P(v)\ge p_i>0\qquad(0\le v\le2v_i)
+\]
+uniformly for the fixed \(\pi\)-interval and small \(k\).
+Then fix \(M>2v_i\) beyond all positive roots and turning points of
+the retained compact positive factors, and large enough that
+\begin{equation}\label{deg:positive-large-S-inward-growing-polynomial}
+ P(v)\asymp v^2(3+kv),\qquad v\ge M .
+\end{equation}
+The constants may depend on the fixed passive compact,
+\(\pi_\flat,\Pi,\delta,\ell_0,v_i,M\).
+All calculations are also valid on a slightly enlarged phase range
+\(S>\delta/2\), \(a<2d_0\); the choices of \(d_0,g_0,k_0\) are made
+for that range before restriction to \eqref{deg:positive-large-S-inward-domain}.
+This supplies actual phase buffers for the displayed derivatives.
+
+\smallskip
+\noindent\emph{Actual passage and value admission.}
+For \(\Delta<0\), \(P>0\) on the positive half-axis.
+On \(v_i\le v\le u\) put
+\begin{equation}\label{deg:positive-large-S-inward-action-variable}
+ q=\frac{J(u)-J(v)}g,\qquad
+ v_q=-g\frac{P(v)}{vB(v)},\qquad
+ W=\frac{Y}{P(v)},\qquad
+ H=\frac{P'(v)}{vB(v)},\quad
+ \varpi=\frac{\zeta(v)P(v)}{vB(v)} .
+\end{equation}
+Division of \eqref{deg:quadratic-inward-scalar-common}, retaining the polynomial factor, gives
+exactly
+\begin{equation}\label{deg:positive-large-S-inward-ratio}
+ W_q=W\left\{-\frac{1+\varpi W}{1+QW}+gH\right\},
+ \qquad W(0)=\ell_0 .
+\end{equation}
+Here \(B,Q\) are positive units, \(gH\le C_\delta a\), and
+\(|\varpi|\le C_\delta a^3\), as also checked below.
+Choose \(\ell_0,d_0,g_0\) so that the logarithmic rate in
+\eqref{deg:positive-large-S-inward-ratio} is at most \(-c_0<0\) while \(0<W\le\ell_0\).
+A first-exit argument proves
+\begin{equation}\label{deg:positive-large-S-inward-value-decay}
+ 0<W(q)\le\ell_0e^{-c_0q},\qquad
+ 0\le q\le T(u):=\frac{J(u)-J(v_i)}g .
+\end{equation}
+Consequently \(P+QY=P(1+QW)>0\). For each strict ghost coefficient
+the finite interval \([v_i,u]\) has a positive minimum of \(P\);
+the time integral to \(v_i\) is finite. Height is positive by
+uniqueness. The same construction continues to \(v_i/2\), on its
+fixed positive-\(P\) buffer, before imposing the cut \(v_i\).
+Thus the fixed-\(q\) partials at that moving terminal are genuine
+nearby actual-flow derivatives.
+
+Since \(Y\le\ell_0P(v)\), the physical height on the entire arc is
+at most
+\[
+ C\ell_0\{g^3k^2+g^3k^2v+g^3k^2v^2+g^3k^3v^3\}
+ \le C\ell_0\{g^3k^2+g^2ka+ga^2+a^3\}.
+\]
+Together with \(0<gkv\le a<d_0\), this admits the arc to a
+fixed small original chart. Neither a limiting axis orbit nor a
+normalization is used to infer this admission.
+
+On \(M\le v\le\delta/k\), \(P(v)\le C_\delta v^2\) and \(B\ge1\).
+Since \(u\ge\delta/k\), it follows that
+\begin{equation}\label{deg:positive-large-S-inward-action-gap}
+ T(u)\ge\frac{c_\delta\log(1/k)-C_\delta}{g}.
+\end{equation}
+Choose \(k_0\) so that the numerator has a fixed positive margin.
+Then \(T\) is uniformly large for small \(g\), with no comparison
+between \(g\) and \(k\). In particular the actual terminal height
+\begin{equation}\label{deg:positive-large-S-inward-inner-value}
+ y_i(u):=Y(v_i;u)=P(v_i)W(T(u),u)
+              \le C e^{-c_0T(u)}
+\end{equation}
+lies in any fixed sufficiently small compact-entry interval
+\(0<y_i<y_*\) after the permitted coefficient shrink.
+This places the input in the prescribed compact-continuation buffer
+before its derivatives are estimated.
+
+On \([0,v_i]\), preparation~\eqref{deg:positive-large-S-inward-compact-graph}
+and exponential flatness give the prescribed height buffer and small
+\(y_i/g\). Lemma~\ref{deg:lem-compact-height-continuation} therefore
+continues the actual graph to the original centre with \(0<Y\le2y_i\),
+for either sign of \(C\).
+Retain the exact memory~\eqref{deg:stable-ratio-polynomial-memory},
+with \(V(q,u)=\int_0^qL\,ds\), \(L=(Q-\varpi)W/(1+QW)\);
+its initial factor is \(P(u)/P(v)\) and \(|V|\le C\ell_0\).
+
+\smallskip
+\noindent\emph{Three transported coefficient rows.}
+Write
+\[
+ h(v)=\frac{P(v)}{v^2B(v)},\qquad
+ {\mathcal D}_v=\frac{P(v)}{vB(v)}\partial_v=h(v)v\partial_v,\qquad
+ b(u)=\frac1{h(u)} .
+\]
+At fixed elapsed action \(q\), differentiating
+\(J(v)=J(u)-gq\) yields
+\begin{equation}\label{deg:positive-large-S-inward-transport}
+ {\mathcal E}\log v=\frac{h(v)}{h(u)},\qquad
+ {\mathcal E}[F(v(q,u))]=b{\mathcal D}_vF .
+\end{equation}
+The full second and third transported rows are
+\begin{equation}\label{deg:positive-large-S-inward-transport3}
+\begin{split}
+ {\mathcal E}^2F&=b^2{\mathcal D}_v^2F+({\mathcal E} b){\mathcal D}_vF,\\
+ {\mathcal E}^3F&=b^3{\mathcal D}_v^3F+3b({\mathcal E} b){\mathcal D}_v^2F+({\mathcal E}^2b){\mathcal D}_vF .
+\end{split}
+\end{equation}
+The variable coefficients of \({\mathcal D}_v\) are differentiated in its
+powers. On the initial domain,
+\begin{equation}\label{deg:positive-large-S-inward-initial-speed}
+ h(u)=\frac{3-\pi/u+u^{-2}+S}{1+2g+gS}
+       \asymp_\delta1+S,\qquad
+ |{\mathcal E}^jh(u)|\le C_\delta h(u)\quad(j=1,2).
+\end{equation}
+Hence
+\[
+ |{\mathcal E} b|+|{\mathcal E}^2b|\le C_\delta b,\qquad
+ b\le C_\delta/(1+S),\qquad
+ gh(u)\asymp_\delta g+a .
+\]
+
+For \(v\ge M\), let \(t=1/v\), \(s=kv\), and
+\({\mathcal E}_v=-t\partial_t+s\partial_s\). Then
+\begin{equation}\label{deg:positive-large-S-inward-rational-symbols}
+ h(v)=\frac{3-\pi t+t^2+s}{1+2g+gs},\qquad
+ H(v)=\frac{6-\pi t+3s}{1+2g+gs},\qquad
+ \varpi(v)=Cg^3s(1+s)h(v).
+\end{equation}
+For \(0\le s\le S\), \(t\le1/M\), and \(gS=a<2d_0\),
+these rational symbols give
+\[
+ h(v)\le C_\delta h(u),\qquad
+ |{\mathcal E}_v^jh(v)|\le C_\delta h(v)\quad(j\le2).
+\]
+The first three \({\mathcal E}_v\) rows of \(gH,Q-1,\varpi\) have
+size \(C_\delta a\); the \(\varpi\) rows have the sharper
+size \(C_\delta a^3\). Expanding \((h(v){\mathcal E}_v)^j\) and
+using \(b h(v)\le C_\delta\) proves the same bounds for
+the rows in \eqref{deg:positive-large-S-inward-transport3}.
+
+On \(v_i/2\le v\le M\), \(H\) has uniform ordinary finite
+derivatives. The coefficients and finite ordinary derivatives of
+\({\mathcal D}_v=P/(vB)\partial_v\) are uniformly bounded, also as
+\(-\Delta\downarrow0\); they contain \(P\) rather than \(P^{-1}\)
+at the bottleneck. The corresponding ordinary rows of \(gH,Q-1\)
+are \(O(g)\), and those of \(\varpi\) are \(O(kg^3)\).
+Since \(g\le a/\delta\) on the retained domain, this proves
+\begin{equation}\label{deg:positive-large-S-inward-coefficient-Euler}
+ |{\mathcal E}^j(gH)|+|{\mathcal E}^j(Q-1)|+|{\mathcal E}^j\varpi|
+      \le C_\delta a,\qquad 0\le j\le3,
+\end{equation}
+uniformly through the arbitrary strict ghost gap.
+In particular the quotient in \eqref{deg:positive-large-S-inward-transport} and its first
+two Euler rows are bounded on both the growing and compact portions.
+
+For the time rows, \(\partial_q=-g{\mathcal D}_v\) on coefficient
+functions and \(gh(v)\le C_\delta a\) on the growing portion.
+On the compact portion \(g{\mathcal D}_v\) has bounded finite coefficients.
+The same rational calculations give bounded first and second
+\(q\)-rows and the mixed \(q,{\mathcal E}\) rows required below.
+Their rows containing an \({\mathcal E}\) retain the \(C_\delta a\) factor.
+No inverse of the bottleneck polynomial is introduced.
+
+\smallskip
+\noindent\emph{Normal variations and the moving terminal.}
+The exact diagonal is
+\begin{equation}\label{deg:positive-large-S-inward-negative-diagonal}
+ \mathscr F_W=-\frac{1+2\varpi W+\varpi QW^2}{(1+QW)^2}+gH
+ \le-c_1<0.
+\end{equation}
+Thus Lemma~\ref{deg:lem-stable-ratio-ledger} applies with
+\(D=\mathcal E,\kappa=g,\rho=C_\delta a,\alpha=0\), by
+\eqref{deg:positive-large-S-inward-coefficient-Euler} and the mixed
+clock bounds above. Its fixed-clock estimate is
+\begin{equation}\label{deg:positive-large-S-inward-W-Euler}
+ |\mathcal E^jW|+|\mathcal E^jL|
+ \le C_\delta a(1+q)^Ne^{-cq},\qquad1\le j\le3,
+\end{equation}
+with the mixed and pure clock rows specified there. The terminal rows are
+\begin{equation}\label{deg:positive-large-S-inward-terminal-clock}
+ T_1=b/g,\qquad T_2=(\mathcal E b)/g,\qquad
+ T_3=(\mathcal E^2b)/g,\qquad
+ |T_j|\le C_\delta/(gh(u))\le C_\delta/a\le C_\delta/g .
+\end{equation}
+By \eqref{deg:positive-large-S-inward-action-gap}, for each fixed \(N\),
+\begin{equation}\label{deg:positive-large-S-inward-terminal-absorption}
+ g^{-N}(1+T)^Ne^{-cT}\le C_{\delta,N}g\le C_{\delta,N}a.
+\end{equation}
+Choose \(k_0\) with \(cc_\delta\log(1/k_0)-cC_\delta>0\);
+then \(g^{-N}e^{-\beta/g}\) absorbs every terminal loss, using
+independent upper bounds on \(g,k\).
+The terminal formulas~\eqref{deg:stable-ratio-terminal-rows}, for
+\(V_i=V(T(u),u)\), give
+\begin{equation}\label{deg:positive-large-S-inward-V-action3}
+ |\mathcal E^jV_i|\le C_\delta a,\qquad1\le j\le3.
+\end{equation}
+The exact memory, including all moving terminal rows, is
+\begin{equation}\label{deg:positive-large-S-inward-height-memory}
+ y_i=\ell_0P(u)e^{-T+V_i}=P(v_i)W(T),\qquad
+ \mathcal E^j\log y_i=\mathcal E^j\log P(u)-T_j+\mathcal E^jV_i.
+\end{equation}
+The rational symbols bound \(|\mathcal E^j\log P(u)|\le C_\delta\),
+hence \(|\mathcal E^j\log y_i|\le C_\delta/g\) for \(1\le j\le3\).
+The value estimate uses \(P(v_i)W(T)\), independently of \(P(u)\).
+The compact continuation already constructed has exact multiplier
+\(m(0)=e^{-J(v_i)/g}\). Its three composition rows from
+Lemma~\ref{deg:lem-compact-height-continuation} are at most
+\(Cy_i/g^4\le C_\delta a\), by
+\eqref{deg:positive-large-S-inward-terminal-absorption}. Consequently
+\[
+ \log Y_{0,+}=\log\{\ell_0P(u)\}-J(u)/g+V_i+\mathcal N(y_i),
+ \qquad \mathcal R_+=V_i+\mathcal N(y_i).
+\]
+This proves the three Euler bounds at the original centre. The fixed-cut
+action cancels exactly; an additive action normalization changes only a
+coefficient constant in \(\mathcal R_+\).
+
+Finally, \(d,\mathfrak c\), and every nonnegative
+\(\sqrt{\Delta}\) in the fixed \(\pi\)-block are bounded for
+small \(k\). The root \(a_{\rm root}\) is therefore bounded by
+the fixed \(M\). Its prescribed through lip has
+\(ku\le ka_{\rm root}<\delta\) after the \(k\)-shrink, as stated.
+The strict ghost proof permits arbitrarily small \(-\Delta>0\)
+but does not add a through interval at \(\Delta=0\).
+\end{proof}
+
+\subsection{Bounded positive quadratic passages}
+
+On a bounded positive lip interval, both the root gap and the lip's
+distance to its first root can vanish. The inward calculation remains
+uniform in action coordinates. For the outward calculation we use
+logarithmic height through the weak stage; its moving initial factor
+absorbs the long dwell before the graph enters the parabolic strip.
+
+\begin{corollary}[Bounded positive quadratic suppliers]
+\label{deg:cor-positive-compact-suppliers}
+Fix the original positive raw section and its buffered regular observer,
+with its original ordinary \(C^3\) logarithmic-slope reserve
+\(\|\partial_z\log\Phi'\|_{C^1}\le C\) on the buffered raw image,
+a compact neighborhood of the passive coefficients \(A,C\), and
+\(\pi\in[\pi_\flat,\Pi]\). Fix \(U<\infty\) and use
+\eqref{deg:quadratic-inward-family}--\eqref{deg:quadratic-inward-scalar-common},
+with physical coordinates \(x=gkv,z=g^3k^2Y\).
+Retain the original actual moving-lip interval \(Y=\ell_0P(u)\),
+intersected with \(u\le U\). Its lower threshold satisfies
+\(u_{\rm th}\ge u_0>0\). On real or fold fibres this interval has
+\(u_{\rm th}\le u<a\), where \(a\) is the first positive root.
+On root-free fibres it is the component of the original section-image
+preimage specified in the positive quadratic domain construction.
+In each case \(P>0\) on the actual inward axis path \([0,u]\).
+No right-hand axis continuation is added at the fold.
+
+There are \(g_0,k_0,C_0>0\), uniform on these domains, such that
+the following statements hold for independently small
+\(0<g<g_0\), \(0<k<k_0\). Put \(L_g=1+|\log g|\), with \(J,\mathcal D_+\) as in
+\eqref{deg:quadratic-inward-memory-common}.
+The inward lip orbit reaches the original centre \(v=0\), and its
+height \(Z_+(u)=Y(0;u)>0\) has
+\begin{equation}\label{deg:positive-compact-central-jets}
+ |\mathcal D_+^j\mathcal R_+|\le C_0g,\qquad1\le j\le3.
+\end{equation}
+The outward lip graph, which is the inverse of the physical positive
+incoming passage, reaches the original positive raw port at positive
+height and inside its original buffer. For the complete embedding
+followed by the original increasing ordinary \(C^3\) observer, use
+the lip label \(\beta=-u^2/2\) and any coefficient-only positive
+affine value and slope calibration \(\phi_+\). Then
+\begin{equation}
+ \phi_+'>0,\qquad
+ |\mathcal D_+^j\log\phi_+'|\le C_0gL_g,\quad j=1,2.
+ \label{deg:positive-compact-outer-jets}
+\end{equation}
+The prime denotes differentiation in \(\beta\).
+Both estimates freeze \(g,k,\pi,A,C\). They are uniform as the
+positive root gap and the distance of the lip to its first root tend
+to zero independently of \(g,k\). They do not require an intersection
+of positive and negative inward images.
+\end{corollary}
+
+\begin{proof}
+The exact positive quadratic factorization is
+\[
+ P(v)=(\mathfrak c+kv)\{(v-d)^2-\Delta\},\qquad
+ \mathfrak c=3+2kd,\quad
+ \mathfrak c(d^2-\Delta)=1,\quad
+ \pi=2\mathfrak cd-k/\mathfrak c.
+\]
+It gives uniform bounds for
+\(d,d^{-1},\mathfrak c,\mathfrak c^{-1}\) on the retained fold band.
+On a real fibre, \(P(a)=0\) implies
+\[
+ 1=\pi a-3a^2-ka^3\le\Pi a,\qquad a\ge\Pi^{-1}.
+\]
+On a root-free fibre,
+\(\pi=2\mathfrak cd-k/\mathfrak c\) bounds \(d\) away from zero.
+Thus the original fixed \(X_{\rm up}\) can be chosen small enough
+that \(u_{\rm th}=a-X_{\rm up}\), respectively \(d-X_{\rm up}\),
+has the asserted uniform positive lower bound. All constants below
+are fixed before \(g,k\).
+
+\smallskip
+\noindent\emph{The inward action integral and compact continuation.}
+Choose fixed \(b<u_0/2\) with \(P\ge p_b>0\) on \([0,b]\), and put
+\[
+ \begin{gathered}
+ q=(J(u)-J(v))/g,\quad W=Y/P(v),\quad H=P'/(vB),\\
+ \omega=\zeta P/(vB),\qquad
+ \mathcal D_v=P(v)\partial_v/(vB(v)).
+ \end{gathered}
+\]
+Use the ratio equation and exact memory
+\eqref{deg:stable-ratio-polynomial-memory}, with \(\kappa=g\)
+and \(V(q)=\int_0^q(Q-\omega)W/(1+QW)\,ds\).
+At fixed \(q\), \(\mathcal D_+v=P(v)/(vB(v))\), so its repeated
+coefficient rows are powers of \(\mathcal D_v\). On \([b,U]\),
+this field has bounded finite derivatives, uniformly at the root/fold:
+\begin{equation}\label{deg:positive-compact-inward-coefficients}
+ |\mathcal D_v^j(gH)|+|\mathcal D_v^j(Q-1)|+|\mathcal D_v^j\omega|
+ \le Cg,\qquad0\le j\le3.
+\end{equation}
+Clock rows use \(-g\mathcal D_v\), and the fixed small lip gives
+both negative margins. These are the inputs of the negative inward proof,
+now with \(s=+1\), \(D=\mathcal D_+\), \(\kappa=g,\rho=g,\alpha=0\).
+The terminal check is
+\[
+ q_b=(J(u)-J(b))/g\ge\eta/g,\qquad
+ \mathcal D_+q_b=1/g,\quad \mathcal D_+^2q_b=\mathcal D_+^3q_b=0;
+\]
+the lower bound follows on a fixed subinterval of \([b,u_0]\).
+Lemma~\ref{deg:lem-stable-ratio-ledger} and its terminal formulas give
+\(|\mathcal D_+^jV(q_b)|\le Cg\), \(1\le j\le3\), and
+\begin{equation}\label{deg:positive-compact-central-incoming-height}
+ \begin{gathered}
+ y_b=\ell_0P(u)e^{-q_b+V(q_b)}=P(b)W(q_b)\le Ce^{-c\eta/g},\\
+ \mathcal D_+\log y_b=-g^{-1}+H(u)+\mathcal D_+V(q_b),\qquad
+ |\mathcal D_+^jy_b|\le C_jg^{-j}y_b\quad(1\le j\le3).
+ \end{gathered}
+\end{equation}
+Preparation~\eqref{deg:positive-large-S-inward-compact-graph} verifies
+the compact-continuation inputs: \(P\ge p_b\),
+\(|\partial_Y^jK|\le C/g\), \(y_b\le h_b/2\), and small \(y_b/g\).
+Lemma~\ref{deg:lem-compact-height-continuation} then gives
+\[
+ Z_+(u)=e^{-J(b)/g}y_be^{\mathcal N(y_b)},\qquad
+ \mathcal R_+=V(q_b)+\mathcal N(y_b).
+\]
+Its three composition rows are \(O(y_b/g^{j+1})=O(g)\).
+The cut action cancels, proving~\eqref{deg:positive-compact-central-jets}.
+
+\smallskip
+\noindent\emph{Construction of the outward graph and buffer admission.}
+Put
+\[
+ a=gku,\qquad p=\frac{P(u)}{u^2}>0,\qquad
+ E=u\partial_u,\qquad h=\frac p{B(u)},\qquad \mathcal D_+=hE.
+\]
+In the raw graph set \(W=z/x^2\), \(r=\log x\), and \(\eta=\log z\).
+Its exact coefficients are
+\[
+ \begin{split}
+ m(x)&=3g+x-\pi kg^2/x+k^2g^3/x^2,\\
+ Q_0(x)&=1-A(g+x)+C(g+x)^2,\\
+ N(x,W)&=1+2g+x+Cx(g+x)W,\qquad D_0=m+Q_0W.
+ \end{split}
+\]
+The initial data are the original lip data
+\begin{equation}
+ x_l=a,\qquad W_l=\ell_0gp,\qquad
+ z_l=a^2\ell_0gp=g^3k^2\ell_0P(u).
+ \label{deg:positive-compact-raw-initial}
+\end{equation}
+Use the inverse logarithmic-height equation first:
+\begin{equation}
+ r_\eta=V=\frac{D_0}N,\qquad W_\eta=W(1-2V).
+ \label{deg:positive-compact-inverse-height}
+\end{equation}
+Here \(N,Q_0\) are positive units on the original small corridor.
+At a possible first zero of \(D_0\), one has \(V=0\) and
+\[
+ \frac{dD_0}{d\eta}=Q_0W>0.
+\]
+Thus a graph starting with \(D_0>0\) cannot cross to \(D_0\le0\).
+Both \(x\) and \(z\) increase on this graph, including at an axis
+root crossed at positive height.
+
+Fix \(L=2\), then a sufficiently small auxiliary height \(w_0>0\).
+In the box \(a\le x\le La\), \(0<W\le w_0\), the variable
+\(x/(gk)\) lies in the fixed interval \([u_0,LU]\). Hence
+\[
+ |m|+|m_r|+|m_{rr}|\le Cg,\qquad
+ 0<V\le C(g+w_0),\qquad \tfrac12W\le W_\eta\le W.
+\]
+Write \(s=\eta-\eta_l\). The length of this weak stage, up to either
+possible first exit, is bounded by
+\begin{equation}
+ T\le C\{L_g+\log^+(1/p)\}.
+ \label{deg:positive-compact-weak-length}
+\end{equation}
+Since \(m(0)=gp\) and
+\[
+ |m_s|\le Cg(|m|+W),
+\]
+Gronwall's inequality, together with the lower growth rate for \(W\),
+gives
+\[
+ |m(s)|\le Cgp e^{Cgs}+CgW(s),\qquad
+ r(s)-r_l\le Cgp(1+s)e^{Cgs}+Cw_0.
+\]
+For every fixed \(j\), the elementary bound
+\begin{equation}
+ p(1+T)^j e^{CgT}\le C_jL_g^j,\qquad 0<p\le p_{\max},
+ \label{deg:positive-compact-polynomial-absorption}
+\end{equation}
+holds after shrinking \(g\).
+Indeed \eqref{deg:positive-compact-weak-length} reduces it to
+\(g^{-Cg}\le C\) and the boundedness of
+\(p^{1-Cg}\{1+\log^+(1/p)\}^j\).
+Choose \(w_0\) so \(Cw_0<\frac12\log L\), then \(g\) so that
+\(CgL_g<\frac12\log L\).
+The preceding displacement estimate excludes an exit at \(x=La\).
+Thus the graph reaches \(W=w_0\) at a finite height time and an
+abscissa \(a_*\in[a,La]\), for every \(p>0\).
+
+Keep the original raw cut \(d_q\) fixed. Choose an auxiliary cut
+\(0<d_*<d_q\) sufficiently small compared with \(w_0\), before
+shrinking \(g,k\). After this shrink \(a_*<d_*/2\).
+On \(a_*\le x\le d_*\) use
+\[
+ W_{\log x}=F=W(N/D_0-2).
+\]
+The strip \(w_0\le W\le w_1\), for a fixed \(w_1>1/2\), is
+invariant, with \(D_0\ge cW\).
+Moreover \(F_W\le-c\) and \(V_r/V\le-\alpha\), where
+\(\alpha=3/2\), because
+\(|m|+|m_r|\le C(g+x)\) on this segment and \(g,d_*\) are
+sufficiently small compared with \(w_0\).
+The limiting strong graph at \(g=k=0\) has
+\(W^*(x)=1/2+O(x)\): with \(U_*=W^*-1/2\) its equation is
+\(xU_*'=-2U_*+O(x)\), whose bounded solution follows from the
+integral equation at zero.
+Since \(x\ge a\ge gku_0\), the strip equation differs by \(O(g)\);
+variation of constants gives
+\[
+ |W(d_*)-W^*(d_*)|\le Cg+C(a_*/d_*)^c.
+\]
+On the remaining fixed segment \([d_*,d_q]\),
+\(F=1-2W+O(g+x)\) retains barriers \(W=1/4,3/4\), with
+\(D_0,N,V\) positive units and bounded derivatives.
+Continuous dependence gives
+\begin{equation}
+ |W(d_q)-W^*(d_q)|\le Cg+C(a_*/d_*)^c\longrightarrow0
+ \label{deg:positive-compact-original-buffer}
+\end{equation}
+uniformly in the independent scales, because \(a_*\le LgkU\).
+The original passive-coefficient and raw-buffer margins admit
+these terminal values and the regular continuation to the positive port.
+
+\smallskip
+\noindent\emph{The initial action factor and the full terminal variations.}
+Let \(P_j=\mathcal D_+^jr|_\eta\), \(j=1,2\), and
+\(l_j=\mathcal D_+^j\eta_l\). From the original initial height,
+\[
+ l_1=H(u),\qquad l_2=\mathcal D_+H(u),\qquad
+ |l_1|\le C,\quad |l_2|\le Cp,\qquad
+ \mathcal D_+r_l=h,\quad |\mathcal D_+h|\le Cp.
+\]
+Both moving initial rows are
+\begin{equation}
+ P_{1,l}=h-V_ll_1\asymp p>0,\qquad
+ P_{2,l}=\mathcal D_+(P_{1,l})-V_{r,l}P_{1,l}l_1=O(p),
+ \qquad
+ V_l=\frac{gp(1+\ell_0Q_0(a))}{N_l}.
+ \label{deg:positive-compact-inverse-initial-rows}
+\end{equation}
+The derivative of \(P_{1,l}\) here includes both moving initial
+coordinates. The inverse equations \eqref{deg:scalar-inverse-endpoints} give
+\((P_2/P_1)_\eta=V_{rr}P_1\).
+On the weak box, direct differentiation with \(W_r=-2W\) gives
+\[
+ V_r\le Cg,\qquad |V_{rr}|\le C(g+W),\qquad
+ 0<P_1(s)\le Cp e^{Cgs}.
+\]
+The integral controlling \(P_2/P_1\) is at most
+\[
+ CgpT e^{CgT}+Cp e^{CgT}\int W\,d\eta\le C
+\]
+by \eqref{deg:positive-compact-polynomial-absorption} and
+\(\int W\,d\eta\le Cw_0\). Thus \(|P_2|\le CP_1\) there.
+On \(a_*\le x\le d_*\), the negative ratio \(V_r/V\) gives
+\begin{equation}
+ 0<P_1(x)\le Cp e^{CgT}(a_*/x)^\alpha,\qquad
+ |P_2(x)|\le CP_1(x).
+ \label{deg:positive-compact-inverse-decay}
+\end{equation}
+The second bound follows by integrating \(|V_{rr}|P_1\,d\eta\)
+with \(V\) a unit. At \(d_*\) both rows are \(O(a^\alpha)\).
+The remaining fixed segment has bounded \(\eta\)-length, since
+\[
+ \eta_T-\eta_*=2\log(d_q/d_*)+\log(W_T/W_*).
+\]
+The barriers bound the last logarithm, so the inverse equations
+transfer both \(O(a^\alpha)\) rows to the original cut.
+
+At the original fixed terminal \(x=d_q\), both full implicit rows
+\eqref{deg:scalar-inverse-endpoints}, with \(D=\mathcal D_+\),
+give \(|t_1|+|t_2|\le Ca^\alpha\le Cg\), since \(V_T\) is a unit.
+The initial factor \(p\) absorbs the arbitrary \(|\log p|\)
+weak dwell. The weak-stage bound \(V_r\le Cg\) suffices, so this
+argument also applies in the compact ghost box.
+
+\smallskip
+\noindent\emph{The exact moving factor and differentiated density.}
+Use \eqref{deg:quadratic-outer-moving-factor}--\eqref{deg:quadratic-outer-density}
+with \(s=+1,x_0=u,p=P(u)/u^2\). These are exact identities of
+this same field; only their present bounded-domain estimates are used.
+Write \(\mathscr B=\mathscr B_+\), \(\mathscr J=J_+\),
+\(\nu=6g/(1+2g)\), \(\lambda=2\nu\). Direct rational differentiation gives
+\(|\mathcal D_+^j\log(-\mathscr B)|\le Cgp\), \(j=1,2\).
+At fixed \(\eta\), \(W_r=-2W\), and direct differentiation gives
+\[
+ |\partial_r^j\mathscr J|\le C(x+kg^2/x),\quad 0\le j\le2,
+ \qquad |\mathscr J_\eta|\le CxW.
+\]
+Let
+\[
+ I(u)=\int_{\eta_l(u)}^{\eta_T(u)}
+            \mathscr J(r(u,\eta),\eta)\,d\eta.
+\]
+Its two complete action rows are \eqref{deg:scalar-density-endpoints},
+with \(D=\mathcal D_+\), \(Dr_l=h\), and the fixed terminal \(r_T\).
+On the weak box, \(x+kg^2/x\le Cg\).
+The integral bounds just established give
+\[
+ CgpT e^{CgT}\le CgL_g
+\]
+for every integral in \eqref{deg:scalar-density-endpoints};
+here \(P_1^2\le CP_1\) and \(|P_2|\le CP_1\).
+On \(a_*\le x\le d_*\), the common bound is
+\[
+ Cp e^{CgT}\int_{a_*}^{d_*}
+ (x+kg^2/x)(a_*/x)^\alpha\,d\log x
+ \le Cp e^{CgT}(a_*+kg^2/a_*)\le Cg .
+\]
+This uses \(\alpha>1\), \(a_*\asymp a\), and
+\(kg^2/a=g/u\le Cg\).
+On the remaining fixed strong segment the integrals are bounded
+by \(Ca^\alpha\).
+The initial boundary terms are \(O(g)\); the full terminal terms
+are \(O(a^\alpha)\) by
+\eqref{deg:scalar-inverse-endpoints}.
+Hence
+\begin{equation}
+ |\mathcal D_+I|+|\mathcal D_+^2I|\le CgL_g.
+ \label{deg:positive-compact-density-bound}
+\end{equation}
+At artificial splits the full Leibniz terms cancel in this single integral.
+
+\smallskip
+\noindent\emph{The complete slope on the original observer image.}
+Use~\eqref{deg:quadratic-outer-exact-slope} with \(s=+1,x_0=u\),
+including the regular continuation in \(\Phi\) on the admitted
+image~\eqref{deg:positive-compact-original-buffer}. Normalize its
+coefficient-only reference slope as in that formula; the original
+ordinary \(C^3\) logarithmic-slope bound still holds. The initial rows are
+\[
+ \mathcal D_+\log p=Ep/B=O(1),\qquad
+ \mathcal D_+^2\log p=O(p),\qquad
+ \mathcal D_+\log a=h,\quad \mathcal D_+^2\log a=\mathcal D_+h=O(1).
+\]
+Thus the powers \(p^{-\nu}\) and \(a^{-\lambda}\) contribute
+\(O(g)\); the rows of \(\log(1+\ell_0Q_0(a))\) and
+\(\log(-\mathscr B)\) are \(O(gp)\).
+The full terminal formulas~\eqref{deg:scalar-inverse-endpoints} and
+the ordinary \(C^3\) observer bound give \(O(a^\alpha)\) for both
+logarithmic rows of the terminal factors. Combining these estimates
+with~\eqref{deg:positive-compact-density-bound} proves
+\eqref{deg:positive-compact-outer-jets}, uniformly as \(p\to0\).
+The exact slope retains \(d_\theta=c_\theta(gk)^2\ell_0^{-1-\nu}g^{-\nu}\);
+frozen affine calibration preserves its logarithmic rows.
+\end{proof}
+
+\subsection{Separate inward jets in the joint quadratic corner}
+
+The derivative of the curvature error involves second derivatives of
+the relative matching slope. To control these when both lips grow,
+we construct three action derivatives of each inward remainder on its
+own domain. Their quotient then has the required mixed derivatives on
+the product, before equality of the two actual central heights is imposed.
+
+\begin{lemma}\label{deg:lem-joint-inward-product-direct}
+Use the original field \eqref{deg:quadratic-field}, its moving lips
+\(Y=\ell_0P\), the original central section \(\xi=0\), and a fixed
+compact passive \(A,C\) neighborhood. Fix the original sufficiently
+small \(\delta_q>0\), \(\pi\in[\pi_\flat,\Pi]\), and a sufficiently
+large fixed \(M\). For independently small \(g,k>0\), restrict the
+positive side to strict root-free fibres \(\Delta<0\). On each separate
+original admissible lip domain with
+\[
+ u,r\ge2M,\qquad ku,kr\le\delta_q,
+\]
+the positive inward passage and the inverse negative passage reach
+the same original central section at actual positive heights
+\(Z_+(u)\), \(Z_-(r)\). Use \eqref{deg:quadratic-inward-family}--\eqref{deg:quadratic-inward-memory-common}
+with \(x_+=u,x_-=r\), \(\theta_s=x_s^{-1}+kx_s\).
+The separate central remainders satisfy
+\[
+ \sum_{j=1}^3|\mathcal D_s^j\mathcal R_s|\le Cg\theta_s.
+\]
+Their values retain any original coefficient-only logarithmic constants;
+no small zeroth remainder row is asserted.
+
+On the product of these separate actual domains define
+\[
+ N_\pm=-g\mathcal D_\pm\log Z_\pm
+       =1-gH_\pm-g\mathcal D_\pm\mathcal R_\pm,\qquad
+ H_\pm=P_\pm'/(xB_\pm),\qquad n=N_+/N_-,\quad\varrho=n-1 .
+\]
+Then \(N_\pm\ge1/2\) and
+\begin{equation}\label{deg:joint-inward-product-direct-jets}
+ \sum_{i+j\le2}|\mathcal D_+^i\mathcal D_-^j\varrho|
+                 \le Cg(\theta_++\theta_-).
+\end{equation}
+On the original actual subset \(Z_+(u)=Z_-(r)\), this \(n\) is exactly
+the relative variation in
+\[
+ R_u=\frac{uB_+(u)\widehat P(R)}{RB_-(r)P_+(u)}\,n,
+ \qquad R=kr,\quad \widehat P(R)=k^2P_-(R/k).
+\]
+The admissible central-image intersection may be empty. All coefficients
+are frozen under the phase operators; constants are independent of the
+ghost gap and of any comparison between \(g\) and \(k\).
+\end{lemma}
+
+\begin{proof}
+Choose a fixed small \(0<b<M\), with \(\Pi b<1/4\), so
+\(P_s\ge p_b>0\) on \([0,b]\) after the independent \(k\)-shrink.
+On the positive strict ghost path and the negative joint interval,
+\(P_s>0\); \(B_s,Q_s\) are positive units. Decreasing \(v\)
+follows the positive passage or the inverse negative passage,
+respectively, in~\eqref{deg:quadratic-inward-scalar-common}.
+For \(v\ge b\), put \(t=v^{-1}\), \(V=kv\), \(\vartheta=t+V\), and
+\[
+ \begin{gathered}
+ D_s=\frac{3-s\pi t+t^2+sV}{1+2g+sgV}
+                  (-t\partial_t+V\partial_V),\\
+ h_s=P_s/(v^2B_s),\quad H_0=\frac6{1+2g},\quad\ell_g=1-Ag+Cg^2.
+ \end{gathered}
+\]
+These variables lie in a fixed compact rectangle and \(h_s\le C_b\),
+including at the ghost bottleneck. The exact formulas
+\[
+ H_s-H_0=\frac{s[-\pi t+(3-gH_0)V]}{B_s},\qquad
+ \omega_s=\frac{\zeta_sP_s}{vB_s}
+                 =sCg^3V(1+sV)h_s
+\]
+give, without dividing by \(P_s\),
+\begin{equation}\label{deg:joint-inward-weighted-coefficients}
+ \begin{aligned}
+ |D_s^j(H_s-H_0)|&\le C\vartheta &&(0\le j\le3),\\
+ |D_s^j(Q_s-\ell_g)|&\le CgV,\quad
+ |D_s^j\omega_s|\le Cg^3V &&(0\le j\le3),\\
+ |D_s^j\vartheta|&\le C\vartheta &&(1\le j\le3).
+ \end{aligned}
+\end{equation}
+Use the ratio equation and exact memory of
+Lemma~\ref{deg:lem-stable-ratio-ledger}, with
+\[
+ \tau=(A_s(x_s)-A_s(v))/g,\quad
+ T=(A_s(x_s)-A_s(b))/g,\quad W=Y/P_s(v),\quad W(0)=\ell_0,
+\]
+\[
+ f=(Q_s-\omega_s)W/(1+Q_sW),\qquad
+ I_b=\int_0^{T(x_s)}f\,d\tau .
+\]
+At fixed \(\tau\), \(\mathcal D_{x_s}v=P_s(v)/(vB_s(v))\), so
+phase rows transport to powers of \(D_s\); clock rows use \(-gD_s\).
+They commute, and \(|\vartheta_\tau|\le Cg\vartheta\) gives
+\(\vartheta(v(\tau))\le\theta_s e^{Cg\tau}\).
+Thus~\eqref{deg:joint-inward-weighted-coefficients} verifies all
+phase and mixed coefficient inputs with
+\(D=\mathcal D_{x_s}\), \(\kappa=g\), \(\rho=g\theta_s\),
+\(\alpha=Cg<c_0/12\). The fixed small lip gives the two negative
+margins. The lemma constructs the actual graph to \(b\) and bounds
+its fixed-clock rows by \(Cg\theta_s(1+\tau)^Ne^{-c\tau}\).
+Each strict fibre has finite action and flight time; their lengths
+need no uniform upper bound.
+
+The moving clock has \(\mathcal DT=1/g\), higher rows zero, and
+\[
+ T\ge c_b\log(x_s/b)/g\ge a_b/g,\qquad
+ g^{-N}(1+T)^Ne^{-cT}\le Cg/x_s
+\]
+for every fixed \(N\), after shrinking \(g\). The first lower bound
+absorbs \(x_s\); the second absorbs every fixed power of \(g^{-1}\).
+Hence the full terminal formulas~\eqref{deg:stable-ratio-terminal-rows}
+give \(\sum_{j=1}^3|\mathcal D^jI_b|\le Cg\theta_s\).
+Their exact entrance memory is
+\[
+ \begin{gathered}
+ y_b=\ell_0P_s(x_s)e^{-T+I_b}=P_s(b)W(T)\le Ce^{-cT},\\
+ \Lambda_1=\mathcal D\log y_b=H_s(x_s)-1/g+\mathcal DI_b,\\
+ \Lambda_j=\mathcal D^j\log y_b=D_s^{j-1}H_s+\mathcal D^jI_b
+ \quad(j=2,3).
+ \end{gathered}
+\]
+Thus \(|\Lambda_1|\le C/g\) and
+\(|\Lambda_2|+|\Lambda_3|\le C\theta_s\).
+On \([0,b]\), preparation~\eqref{deg:positive-large-S-inward-compact-graph}
+checks the fixed positive margin, the \(C/g\) height bounds,
+\(y_b\le h_b/2\), and small \(y_b/g\).
+Lemma~\ref{deg:lem-compact-height-continuation} therefore gives the
+actual centre height, with multiplier \(e^{-A_s(b)/g}\), and
+\[
+ \log Z_s=\log\{\ell_0P_s(x_s)\}-A_s(x_s)/g+I_b+\mathcal N_s(y_b).
+\]
+Its three composition rows are bounded by \(Cy_b/g^4\le Cg/x_s\).
+This proves the weighted remainder estimate on the original centre
+and admits its height to the original low-height window. Concatenation
+at the same lips retains the original raw images.
+
+\smallskip
+\noindent\emph{Separated product and actual matching.}
+For the product estimate let \(N_0=1-gH_0\) and \(d_s=N_s-N_0\).
+The weighted coefficient and remainder rows give
+\[
+ \sum_{j=0}^2|\mathcal D_s^jd_s|\le Cg\theta_s,\qquad
+ N_s\ge1/2,\qquad
+ \varrho=\frac{d_+-d_-}{N_-}.
+\]
+The common homogeneous term \(N_0\) cancels in this quotient.
+The quotient rule through order
+two bounds all separated product rows; in particular the genuinely
+mixed row is
+\[
+ \mathcal D_+\mathcal D_-n
+ =-\frac{(\mathcal D_+N_+)(\mathcal D_-N_-)}{N_-^2}.
+\]
+This proves \eqref{deg:joint-inward-product-direct-jets} on the
+product before imposing a central-image intersection.
+Equality of the actual central heights
+then gives
+\[
+ r_u=\frac{uB_+P_-(r)}{rB_-P_+(u)}\,\frac{N_+}{N_-},
+\]
+which is precisely the asserted relative variation after \(R=kr\).
+Only the original central-image intersection is used; no actual image
+or physical carrier is enlarged.
+\end{proof}
+
+\subsection{Physical resection at two simple quadratic roots}
+
+Near \(b/a=2\), the endpoint value of the curvature principal part
+can vanish at the same time as both action speeds. Fixed normal sections
+replace the lip's endpoint powers by pure action residues. This yields
+errors that vanish with each independent footpoint distance. The actual
+resection below then transfers the resulting curvature orientation back
+to the moving-lip description of the same physical map.
+
+\begin{lemma}[Joint simple-root resection on the physical sections]
+\label{deg:lem-joint-root-physical-resection}
+Use the positive quadratic field and its original raw section buffers.
+Restrict the real-root coefficients to a fixed neighborhood of
+\(b/a=2\), so that \(b-a\) is a positive unit. All phase derivatives
+freeze \(g,k,\pi,A,C\). Write
+\[
+ P(u)=(\mathfrak c+ku)(u-a)(u-b),\qquad
+ \widehat P(R)=(\mathfrak c-R)(R+ka)(R+kb),
+\]
+\[
+ B_+(u)=1+g(2+ku),\qquad B_-(R)=1+g(2-R),
+\]
+\[
+ \mathfrak a_+=\frac{aB_+(a)}{(\mathfrak c+ka)(b-a)},\qquad
+ \mathfrak a_-=
+ \frac{\mathfrak cB_-(\mathfrak c)}
+      {(\mathfrak c+ka)(\mathfrak c+kb)}.
+\]
+The residues and their reciprocals are bounded. Keep all
+coefficient-only constants in the original actions
+\(A_+=J_+\), \(A_-=A_-(R)\). Their exact pole subtractions are
+\[
+ A_+(a-h)=-\mathfrak a_+\log h+j_+(h),\qquad
+ A_-(\mathfrak c-t)=-\mathfrak a_-\log t+j_-(t),
+\]
+where \(j_s-j_s(0)\) have uniform \(C^3\) bounds.
+
+There are fixed normal-height sections in \(y_+=gY\) and
+\(y_-=gk^2Y\), and fixed \(h_0,t_0,g_0,k_0>0\), with the
+following properties for independently small \(g,k>0\).
+The normal-section axis footpoints are \(u=a-h\) and
+\(R=\mathfrak c-t\). Each normal section has its own actual outward
+map to the original raw port and observer image.
+On the actual intersection of the matched graph with
+\(0<h<h_0\), \(0<t<t_0\),
+\begin{equation}
+ \begin{gathered}
+ A_+(a-h)-A_-(\mathfrak c-t)=C_{g,k}+E_+(h)+E_-(t),\\
+ |(h\partial_h)^jE_+|\le C\varepsilon_g h,\qquad
+ |(t\partial_t)^jE_-|\le C\varepsilon_g t,\quad 0\le j\le3.
+ \end{gathered}
+ \label{deg:joint-root-normal-weighted-matching}
+\end{equation}
+where \(E_+(0)=E_-(0)=0\) and
+\(\varepsilon_g=Cg(1+|\log g|)^4\).
+No bound on \(C_{g,k}\) is required.
+The quotient \(n\) of the two separated central action derivatives
+has
+\begin{equation}
+ \begin{gathered}
+ \sum_{i+j\le2}
+ |\mathcal D_+^i\mathcal D_-^j(n-1)|
+ \le C\varepsilon_g(h+t),\\
+ \sum_{Z\in\{n,\mathcal D_+n,\mathcal D_-n\}}
+ (|\partial_hZ|+|\partial_tZ|)\le C\varepsilon_g .
+ \end{gathered}
+ \label{deg:joint-root-normal-matching-rows}
+\end{equation}
+where
+\[
+ \mathcal D_+=\frac{P(u)}{uB_+(u)}\partial_u,\qquad
+ \mathcal D_-=\frac{\widehat P(R)}{RB_-(R)}\partial_R.
+\]
+The normal-section embeddings use labels
+\(\beta_+=-u^2/2\), \(\beta_-=-R^2/2\). After separate
+coefficient-only positive affine value and slope calibrations,
+their complete maps satisfy
+\begin{equation}
+ \begin{gathered}
+ \phi_s=\mathrm{id}+O_{C^3}(\varepsilon_g),\\
+ |\mathcal D_+^j\log\phi_+'|\le C\varepsilon_g h,\qquad
+ |\mathcal D_-^j\log\phi_-'|\le C\varepsilon_g t,\quad j=1,2.
+ \end{gathered}
+ \label{deg:joint-root-normal-outer-rows}
+\end{equation}
+These statements use only the original ordinary \(C^3\)
+logarithmic-slope reserve on the terminal observers, including the
+divided finite closing on the negative side.
+
+Let \(x=a-u_{\rm lip}\), \(y=\mathfrak c-R_{\rm lip}\) on the
+original lips. The actual resection to the normal sections is
+increasing and satisfies
+\begin{equation}
+ \begin{gathered}
+ \mathfrak a_+\log h-(\mathfrak a_++g)\log x=C_++O(x+h),\\
+ \mathfrak a_-\log t-(\mathfrak a_-+g)\log y=C_-+O(y+t),
+ \qquad |C_s|\le C .
+ \end{gathered}
+ \label{deg:joint-root-exact-lip-resection}
+\end{equation}
+The remainders have the corresponding finite logarithmic derivative
+bounds. The negative constant contains no unbounded pure \(\log k\).
+If \(F_s\) denotes this resection in the internal labels, then
+\begin{equation}
+ S_{\rm fp}=F_-\circ S_{\rm lip}\circ F_+^{-1},\qquad
+ \phi_{{\rm lip},s}=\phi_{{\rm fp},s}\circ F_s
+ \label{deg:joint-root-physical-composition}
+\end{equation}
+on the actual common image, up to the retained positive affine
+calibrations of the physical coordinates. Thus both constructions
+describe the same completed physical map. No affine identification
+of the two internal root-distance coordinates is asserted.
+\end{lemma}
+
+\begin{proof}
+\emph{The normal sections and their exact invariant.}
+On the positive side reverse time and use \(y=gY\); on the
+negative side multiply time by \(k\) and use \(y=gk^2Y\).
+Division by the positive axis normal rate gives, on both root boxes,
+\begin{equation}
+ v'=gF_s(v)+c_s(v)y,\qquad y'=y\{1+\kappa_s(v)y\},
+ \label{deg:joint-root-local-normal-field}
+\end{equation}
+where
+\[
+ \begin{array}{lll}
+ F_+=P/(vB_+),&
+ c_+=Q_+/(vB_+),&
+ \kappa_+=Ckg^2(1+kv)/(vB_+),\\
+ F_-=\widehat P/(vB_-),&
+ c_-=Q_-/(vB_-),&
+ \kappa_-=-Cg^2(1-v)/(vB_-),
+ \end{array}
+\]
+and \(Q_-=1-Ag(1-v)+Cg^2(1-v)^2\).
+At \(r_+=a\), \(r_-=\mathfrak c\), the axis rates are exactly
+\(gF_s'(r_s)=-g/\mathfrak a_s\).
+On fixed boxes bounded away from zero, \(gF_s\) has \(C^4\) norm
+\(O(g)\), \(c_s=1/v+O_{C^4}(g)\), and
+\(\kappa_s=O_{C^4}(g^2)\), uniformly in \(k\).
+
+Apply the backward-integral construction
+\eqref{eq:saddle-normal-time}--\eqref{eq:exact-saddle-invariant}
+to \(h=gF_s\). The coefficient bounds just established and
+\(Y(-T)\le Cy e^{-T/2}\) give differentiated kernels
+\(C(1+T)^Ne^{-(1/2-Cg)T}\) through order three.
+This supplies \(\pi_s\) and \(Z_s=ye^{-\mathcal B_s}\), with
+\(\pi_s'=gF_s(\pi_s)\), \((\log Z_s)'=1\).
+The same estimates for the difference from
+\(v'=y/v,\ y'=y\) give
+\begin{equation}
+ \begin{gathered}
+ \pi_s(v,y)=\sqrt{v^2-2y}+O_{C^3}(g),\qquad
+ \|\mathcal B_s\|_{C^3}\le Cg^2,\\
+ \mathcal B_s=O(g^2y),\qquad \partial_v\pi_s\ge\tfrac12.
+ \end{gathered}
+ \label{deg:joint-root-local-projection}
+\end{equation}
+Consequently \(\log Z_s-A_s(\pi_s)/g\) is constant along each orbit.
+
+Choose fixed small heights \(y_{0,s}>0\). On \(y=y_{0,s}\) write
+\(\pi_s(N_s(U),y_{0,s})=U\). Then
+\[
+ N_s(U)=\sqrt{U^2+2y_{0,s}}+O_{C^3}(g),\qquad
+ Z_{N,s}(h)=y_{0,s}e^{-\mathcal B_s(N_s(r_s-h),y_{0,s})},
+\]
+\[
+ |\partial_h^j\log Z_{N,s}(h)|\le Cg^2,\qquad 1\le j\le3.
+\]
+These are the fixed normal sections and their actual axis footpoints.
+The physical orbit from a sufficiently small lip point reaches its
+normal section inside the unchanged box: the normal height grows
+at a fixed rate, the projected axis footpoint remains on the inner
+side of the root, and its physical displacement is \(O(y_{0,s})\).
+
+\emph{The local amplitudes and the middle first multipliers.}
+Fix inner cuts \(\bar v_s=r_s-\delta_s\) in the two boxes.
+The invariant gives the exact implicit relation
+\[
+ \log y_{\rm in}+e_s(y_{\rm in})
+ =\log Z_{N,s}(h)-\{A_s(r_s-h)-A_s(\bar v_s)\}/g,
+\]
+\[
+ e_s(y)=-\mathcal B_s(\bar v_s,y)
+ -\{A_s(\pi_s(\bar v_s,y))-A_s(\bar v_s)\}/g .
+\]
+Here \(e_s(0)=0\), and its required height derivatives have
+polynomial \(g^{-1}\) bounds, since the inner cut is a fixed
+distance from its root. Solving this scalar identity gives
+\begin{equation}
+ \begin{gathered}
+ y_{{\rm in},s}(h)=\alpha_{y,s}h^{\mathfrak a_s/g}
+ e^{-[j_s(h)-j_s(0)]/g}u_s(h),\\
+ u_s(h)=\frac{Z_{N,s}(h)}{Z_{N,s}(0)}
+ e^{-e_s(y_{{\rm in},s}(h))}.
+ \end{gathered}
+ \label{deg:joint-root-local-pure-residue}
+\end{equation}
+with
+\[
+ \alpha_{y,s}=Z_{N,s}(0)
+ e^{[A_s(\bar v_s)-j_s(0)]/g},\qquad
+ \alpha_{y,s}^{\pm1}\le e^{K/g}.
+\]
+The coefficient-only constants cancel in
+\(A_s(\bar v_s)-j_s(0)\); thus this local bound permits a
+global \(\log k\) term in the negative action. Passing to \(Y\)
+on the positive cut and \(\widehat Y=k^2Y\) on the negative cut
+adds only the coefficient-only factor \(g^{-1}\).
+
+Choose preliminary \(h_0,t_0\) so the positive residue powers dominate these
+fixed exponential constants. Three ordinary endpoint derivatives
+introduce only polynomial \(g^{-1}\) factors and inverse endpoint
+powers. Their nonlinear terms are then bounded by arbitrarily high
+fixed endpoint powers after shrinking \(g\). The remaining phase
+part of \(\log u_s\) is \(O_{C^3}(g^2)\).
+Consequently the first three logarithmic endpoint rows of
+\(g\{\log u_s(h)-\log u_s(0)\}\) are bounded by
+\(C\varepsilon_gh\).
+
+For the negative growing bridge, take \(R_0=\bar v_-\), the
+already fixed inner cut with a margin below the root and away from
+zero, and decrease \(k_0\)
+so that \(kr_c<R_0\). Retain its exact first multiplier
+\[
+ \widehat m=\exp\left\{-\frac1g\int_{kr_c}^{R_0}
+       \frac{RB_-}{\widehat P}\,dR\right\},\qquad
+ \widehat m/k^2\le e^{K/g}k^{c_0/g-2}\le e^{K/g}.
+\]
+Indeed \(\widehat P\asymp R^2\) on \(Kk\le R\le R_0\), giving
+the action lower bound \(c_0\log(1/k)-K\). Choose \(g_0<c_0/4\).
+No reciprocal bound for this collapsing multiplier is used.
+Put \(W=\widehat Y/\widehat P\) and
+\(q=(A_-(R_0)-A_-(R))/g\). Coefficients and both radial cuts are
+fixed under the incoming height variation; the flight
+\(T=(A_-(R_0)-A_-(kr_c))/g\) may be arbitrarily long.
+On \(kr_c\le R\le R_0\), the fixed root margin gives
+\(\widehat P\asymp(R+k)^2\) and \(k/R\le1/r_c\). Hence
+\[
+ Q_--1=O(g),\qquad
+ H=\widehat P_R/(RB_-)=O(1),\qquad
+ \omega=-Cg^3(1-R)\widehat P/(RB_-)=O(g^3).
+\]
+The exact ratio equation has \(\kappa=g\). On the unchanged fixed
+small buffer \(0\le W\le\ell_0\), these bounds keep
+\(1+Q_-W\) a positive unit and both
+\(\mathcal F/W,\mathcal F_W\le-c_1<0\), after decreasing \(g_0\).
+At the fixed initial cut \(\widehat P(R_0)\) is a positive unit.
+The residue formula \eqref{deg:joint-root-local-pure-residue},
+with its factor \(g^{-1}\), places
+\(w(t)=\widehat Y_0(t)/\widehat P(R_0)\le\ell_0/2\)
+after the same independent coefficient shrink. Thus
+Lemma~\ref{deg:lem-fixed-route-height-rows} applies on this full buffer.
+Retaining the terminal polynomial in its exact cocycle gives
+\[
+ \widehat Y_T=\widehat Y_0\widehat m
+             e^{\mathcal N_T(w)},\qquad
+ |\partial_w^j\mathcal N_T|\le C\quad(1\le j\le3),\qquad
+ |(w\partial_w)^j\mathcal N_T|\le Cw\quad(0\le j\le3).
+\]
+The normalized nonlinear unit therefore has bounded ordinary \(C^3\)
+rows in the incoming height at the fixed cut, uniformly in \(g,k,T\).
+Its three endpoint rows follow by the Euler composition formula of
+Lemma~\ref{deg:lem-compact-height-continuation}, with
+\(\Lambda_j=(t\partial_t)^j\log w\): the flat \(w\) absorbs the
+polynomial \(g^{-1}\) and endpoint powers from the local residue.
+These are fixed-route height rows; phase and moving-terminal rows on
+other routes remain those of Lemma~\ref{deg:lem-stable-ratio-ledger}.
+Conversion to \(Y\) contributes \(k^{-2}\) only to
+\(\widehat m/k^2\), with no reciprocal gain estimate.
+
+Fix the prescribed height buffers of the final compact inward
+continuations and their coefficient bounds before the final choice
+of \(h_0,t_0\). Enlarge \(K_{\rm tot}\) to include the regular
+local action parts and the preceding bound for \(\widehat m/k^2\).
+For any fixed endpoint power \(n\) and finite polynomial loss
+\(g^{-M}\), choose \(t_0<1\) so that
+\(\mathfrak a_{\min}\log(1/t_0)>K_{\rm tot}+2c_*\), with
+\(c_*>0\). Then decrease \(g_0\); the residue and its three
+ordinary endpoint derivatives give
+\[
+ g^{-M}e^{K_{\rm tot}/g}t^{\mathfrak a_{\min}/g-j}
+ \le Ce^{-c_*/g}t^n,\qquad 0<t\le t_0,\quad 0\le j\le3.
+\]
+In particular the converted input satisfies \(Y_T\le h_b/2\)
+and small \(Y_T/g\) in its already prescribed buffer \(h_b\),
+uniformly in independently small \(k\). The positive input has
+the same bound after the analogous final choice of \(h_0\).
+Lemma~\ref{deg:lem-compact-height-continuation} now applies to the
+actual final inward segments: their linear propagators contract,
+and their nonlinear height bounds are polynomial in \(g^{-1}\).
+Its three Euler composition rows and the displayed superpower
+bound control the endpoint rows on those original centre windows.
+No reciprocal linear multiplier is introduced in this admission.
+Equality of the two exact original central heights therefore gives
+\eqref{deg:joint-root-normal-weighted-matching}; all coefficient-only
+first multipliers remain in \(C_{g,k}\).
+Put \(d_+=h\), \(d_-=t\). On the fixed root boxes,
+\(\mathcal D_s=-d_s\gamma_s(d_s)\partial_{d_s}\), where
+\(\gamma_s\) are positive units with bounded \(C^2\) norms.
+The corrected actions \(A_+-E_+\) and \(A_-+E_-\) in
+\eqref{deg:joint-root-normal-weighted-matching} have action derivatives
+\[
+ \mathcal N_+=1-\mathcal D_+E_+,
+ \qquad \mathcal N_-=1+\mathcal D_-E_-,
+ \qquad n=\mathcal N_+/\mathcal N_- .
+\]
+The three weighted rows of \(E_s\) give
+\[
+ |\mathcal D_s^j(\mathcal N_s-1)|
+     \le C\varepsilon_gd_s\quad(0\le j\le2),\qquad
+ |\partial_{d_s}\mathcal N_s|
+  +|\partial_{d_s}(\mathcal D_s\mathcal N_s)|
+     \le C\varepsilon_g .
+\]
+For the ordinary derivatives, divide the second and third action
+rows of \(E_s\) by the single factor \(d_s\gamma_s\).
+After shrinking the fixed boxes, \(\mathcal N_s\ge1/2\).
+The separated quotient calculation in the proof of
+Lemma~\ref{deg:lem-joint-inward-product-direct} now applies with
+errors \(\varepsilon_gh\) and \(\varepsilon_gt\); its mixed row is
+\(O(\varepsilon_g^2ht)\). Differentiating the quotient and its first
+action rows with the displayed ordinary bounds proves
+\eqref{deg:joint-root-normal-matching-rows} on the product, before
+restriction to the actual match and without comparing \(h\) and \(t\).
+
+\emph{The actual fixed-normal exterior embeddings.}
+Put \(\sigma_+=gk\), \(\sigma_-=g\). At a normal section,
+\[
+ x_l=\sigma_sN_s(U),\qquad z_l=\sigma_s^2y_{0,s}.
+\]
+The ratio \(W_l=y_{0,s}/N_s(U)^2\) is a positive unit, even
+when the normal chord lies beyond its axis root.
+Use the signed coefficients of~\eqref{deg:quadratic-outer-ratio},
+writing \(N_s^{\rm raw}\) for its numerator and \(D_s=m_s+Q_sW\).
+As in the bounded positive outward construction,
+\((D_s)_\eta=Q_sW>0\) at \(D_s=0\), so the inverse-height
+graph retains its positive denominator.
+Choose a fixed auxiliary \(d_*<d_q\) small compared with the lower
+bound for \(W_l\). On \([x_l,d_*]\), the singular terms in
+\(m_s-sx\) are \(O(g)\). The same invariant-strip argument, starting
+now at \(x_l\) with no weak stage, gives
+\[
+ w_*/2\le W\le w^*,\qquad D_s\ge cW,\qquad
+ V_r/V=-2+O((g+x)/w_*)\le-3/2,
+\]
+\[
+ |W(d_*)-W_s^*(d_*)|\le Cg+C(x_l/d_*)^c .
+\]
+The fixed parabolic continuation therefore admits the graph to its
+original raw buffer and observer.
+
+Here \(\partial_U\eta_l=\partial_U^2\eta_l=0\), and the inverse
+initial rows are bounded with positive first row. Applying
+\eqref{deg:scalar-inverse-endpoints} as above gives
+\[
+ 0<P_1\le C(x_l/x)^{3/2},\quad |P_2|\le CP_1,\qquad
+ |\partial_U\eta_T|+|\partial_U^2\eta_T|\le C\sigma_s^{3/2}.
+\]
+The exact first-variation cocycle and density split, with
+\(\nu=6g/(1+2g)\), \(\lambda=2\nu\), give
+\[
+ J_z=\frac{W_T/D_T}{W_l/D_l}(z_T/z_l)^\nu e^{I_s}.
+\]
+The density's first two fixed-height radial derivatives are bounded
+by \(C(x+kg^2/x)\). Thus~\eqref{deg:scalar-density-endpoints},
+with \(D=\partial_U\) and both lower clock rows zero, bounds its two
+complete rows by
+\[
+ C(\sigma_s+kg^2/\sigma_s)+C\sigma_s^{3/2}\le Cg.
+\]
+
+Since \(z_l\) is phase-constant and \(\beta=-U^2/2\), the full
+moving first variation is
+\[
+ \Gamma_s'(\beta)=
+ \sigma_s^2\frac{N_s(U)N_s'(U)}U
+ \frac{W_lN_l^{\rm raw}}{D_l}J_z\Phi'(z_T).
+\]
+Removing only the coefficient-only observer gain gives the exact
+form
+\begin{equation}
+ \Gamma_s'(\beta)=
+ c_s^\ast\sigma_s^{2-\lambda}y_{0,s}^{-\nu}
+ \frac{N_s(U)N_s'(U)}U N_l^{\rm raw}
+ \frac{W_T}{D_T}z_T^\nu\widehat\Phi'(z_T)e^{I_s}.
+ \label{deg:joint-root-normal-exact-physical-slope}
+\end{equation}
+The initial factor equals \(1+O_{C^2}(g)\), because
+\eqref{deg:joint-root-local-projection} gives
+\(N_s(U)N_s'(U)/U=1+O_{C^2}(g)\).
+The terminal factors have two logarithmic rows
+\(O(\sigma_s^{3/2})\), using just the original ordinary \(C^3\)
+logarithmic-slope observer bound. Thus both ordinary logarithmic
+rows of the slope are \(O(g)\).
+Subtracting its exact value and calibrating its exact positive
+slope at a fixed reference point gives
+\(\phi_s=\mathrm{id}+O_{C^3}(g)\).
+The action fields contain the factors \(h,t\), proving
+\eqref{deg:joint-root-normal-outer-rows}.
+The two physical gains
+\(\sigma_+^{2-\lambda}\), \(\sigma_-^{2-\lambda}\) are retained
+coefficient-only factors in
+\eqref{deg:joint-root-normal-exact-physical-slope}; their ratio
+and their reciprocals are not estimated.
+
+\emph{Resection of the lip and the same physical curvature.}
+On either lip the local normal coordinate is
+\[
+ y_{{\rm lip},+}=g\ell_0P(a-x),\qquad
+ y_{{\rm lip},-}=g\ell_0\widehat P(\mathfrak c-y).
+\]
+It is \(g\) times a positive unit times the root distance.
+The projected lip distance is
+\(\widehat x=x(1+O(g))\), respectively
+\(\widehat y=y(1+O(g))\).
+Applying the exact invariant between the lip and its normal-section
+intersection, and subtracting the two pole expansions, gives
+\eqref{deg:joint-root-exact-lip-resection}.
+The coefficient terms are \(g\log g\), logarithms of local
+positive units, and the bounded projection correction
+\(\mathfrak a_s\log(\widehat x/x)\).
+The negative comparison is in \(gk^2Y\), so it has no pure
+\(\log k\). The common growing-bridge multiplier cancels from
+this local comparison.
+The finite logarithmic derivative estimates follow by differentiating
+this invariant on the positive interior of the lip.
+In particular
+\[
+ h=A_+x^{1+g/\mathfrak a_+}e^{O(x+h)},\qquad
+ t=A_-y^{1+g/\mathfrak a_-}e^{O(y+t)},\qquad A_s^{\pm1}\le C .
+\]
+The increasing maps give uniform inclusions between the nested
+endpoint neighborhoods;
+the lip exponents are \(\mathfrak a_s/g+1\), whereas the normal
+residue quotient has no added \(g\).
+
+Both resection coordinates belong to the same orbit, so
+\eqref{deg:joint-root-physical-composition} identifies their completed
+maps after the retained positive affine physical calibrations.
+The normal physical input is increasing in \(h\), since
+\(d\{-(a-h)^2/2\}/dh=a-h>0\); the lip physical input is
+increasing in \(x\), and the resection is increasing.
+Consequently the same completed physical map has the same curvature
+zeros and crossing directions in the two descriptions.
+\end{proof}
+
+\subsection{Paired first variation on positive quadratic fibres}
+
+Above a comparison orbit the complete derivative is bounded through
+the ratio of two variations. Their separate core factors need not be
+units, and both exterior gains contain a small common power of \(gk\).
+The next lemma retains these factors until their cancellation in the
+physical derivative.
+
+\begin{lemma}[Paired first variation above a quadratic comparison]
+\label{deg:lem-positive-quadratic-paired-variation}
+Fix the original raw sections, nested buffers, ordinary \(C^3\)
+regular observers and the divided finite closing of
+Lemma~\ref{lem:closing}.
+Use the polynomial and physical coordinates of
+\eqref{deg:quadratic-field}, and write \(a=d-\sqrt\Delta\) when
+\(\Delta\ge0\). The passive compact
+\((A,C)\)-set lies inside their prescribed common coefficient
+neighbourhood, with the original buffer and observer margins.
+Fix a finite coefficient bound \(\Pi\). In the original domain
+construction choose \(X\) and the retained ghost width jointly for
+the prescribed finite comparison action threshold, and then fix
+\(\pi_\flat\). For \(\pi\in[\pi_\flat,\Pi]\), there are fixed
+\(\eta_{\max},C_*>0\) and independent upper bounds for \(g,k\)
+with the following property on the retained real, fold and ghost fibres.
+Use coefficient fibres with the actual \(K_{\rm fin}>0\) and the
+original \(0<m\le m_0\) finite-closing admission.
+Choose the comparison lip at
+\[
+ u_* = a-X/2\quad(\Delta\ge0),\qquad
+ u_* = d-X/2\quad(\Delta<0),
+ \qquad \eta_{\rm comp}=gZ_+(u_*).
+\]
+The comparison lies strictly inside the enlarged low lip interval
+beginning at \(a-X\), respectively \(d-X\). The actual completed
+transition in the original affine input satisfies
+\[
+ 0<\Pi'\le C_*
+ \qquad\text{throughout}\qquad
+ \eta_{\rm comp}\le\eta_0=gY(0)\le\eta_{\max}.
+\]
+This entire interval is admitted to the original section buffers.
+The constants are independent of the root gap and of any relation
+between \(g\) and \(k\). After the common choice \(mC_*<1/2\),
+\(F'=1-m\Pi'>1/2\) on it.
+\end{lemma}
+
+\begin{proof}
+Write
+\[
+ \begin{gathered}
+ \eta=gY,\qquad \epsilon_0=gk,\qquad D=gP+Q\eta,\\
+ Q=1-Ag(1+k\xi)+Cg^2(1+k\xi)^2,
+ \qquad B=1+g(2+k\xi).
+ \end{gathered}
+\]
+The exact field is
+\[
+ \dot\xi=-D,\qquad
+ \dot\eta=-\eta\{\xi B+H_1\eta\},
+ \qquad H_1=Ckg^2(1+k\xi),
+ \qquad z=\epsilon_0^2\eta.
+\]
+By \eqref{ann:source-field}, this is the source field with coefficient quartet
+\((-g,g\pi,g,\epsilon_0)\); \(\epsilon_0\) is held fixed under
+every phase derivative.
+
+\smallskip
+\noindent\emph{The actual comparison and the common cuts.}
+Use the jointly chosen fixed \(X>0\). The abscissa \(u_*\) ranges over a
+fixed positive compact interval, and there is a fixed \(\epsilon>0\)
+such that
+\[
+ P\ge p_*>0\qquad\text{on }[0,u_*+\epsilon].
+\]
+The factorization gives this margin. The comparison action choice
+of Proposition~\ref{deg:prop-positive-quadratic} first fixes \(X\)
+by \(J_+(a-X)\ge c\log(\delta_c/X)\), then the ghost width;
+the fold has the stronger inverse-distance divergence.
+
+Corollaries~\ref{deg:cor-positive-compact-suppliers} and
+\ref{deg:cor-negative-inward-common-centre} give the original inward
+cocycles, without changing the centre,
+\[
+ \log Z_+=\log(\ell_0P)-J_+/g+\mathcal R_+,
+ \qquad
+ \log Z_-=\log(\ell_0P_-)-A_-/g+\mathcal R_-.
+\]
+Their zeroth rows on the bounded comparison and the entire strict
+negative side are bounded. Indeed their ratio equations give
+\(W\le\ell_0e^{-c\tau}\), hence
+\(\left|\int (Q-\omega)W/(1+QW)\,d\tau\right|\le C\ell_0\),
+and the original compact continuation adds \(O(Y_b/g)\).
+The original action constants remain, \(N_-\ge1/2\), and
+\(Z_-\downarrow0\) at its simple root. Choose fixed \(r_{\max}>r_c\)
+with \(A_-(r_{\max})\) above the bounded comparison action, then shrink
+\(k\). Monotonicity and the zeroth cocycles give the unique actual match
+\[
+ r_*\in[r_c,r_{\max}],\qquad Z_+(u_*)=Z_-(r_*),
+ \qquad \eta_{\rm comp}=gZ_+(u_*).
+\]
+
+On either comparison lip, \(z/x^2=\ell_0gp\), with \(p\) a
+positive unit: on the negative lip \(r_*\) is bounded. Use the
+original inverse logarithmic-height graph until it reaches a fixed
+small strip height \(w_0\). Its bounded-comparison weak length is
+\(O(1+|\log g|)\). The positive weak displacement estimate is
+\(O(g(1+|\log g|))+O(w_0)\) in \(\log x\).
+Choose \(w_0\) first so small that this strip is entered before
+\(\xi=u_*+\epsilon/2\), and then decrease \(g\).
+This uses a fixed positive margin of \(P\), and is uniform through
+the fold. The negative weak stage reaches its fixed strip by
+\(|\xi|\le L_1r_*\), with \(L_1\) fixed.
+
+The outward constructions of
+Corollaries~\ref{deg:cor-positive-compact-suppliers} and
+\ref{deg:cor-negative-absolute-outer} continue both comparison
+traces. Choose one fixed \(L\) larger than those entrance bounds
+and the bounded positive factors. On the two coefficient-dependent
+but phase-fixed cuts \(\xi=\pm L\), the comparison has
+\[
+ c_L\le\eta(\pm L)\le C_L,
+ \qquad D(\pm L)\asymp\eta(\pm L).
+\]
+Increasing \(L\), the strip contraction places both values of
+\(\eta/L^2\) inside the same small parabolic band. The original
+outward continuation, including its weak-stage initial factors,
+lands strictly inside the original raw buffers. No raw section or
+observer window has been replaced.
+
+\smallskip
+\noindent\emph{One upper reference and all intervening inputs.}
+Fix \(\eta_{\max}>0\). At \(g=k=0\) the core graph with centre
+height \(\eta_{\max}\) is
+\(\eta=\eta_{\max}+\xi^2/2\), with strictly positive height and
+speed on every fixed core. Ordinary dependence on \([-L,L]\)
+constructs its actual upper reference for small independent \(g,k\).
+Choose \(L\) large enough that its two values of \(\eta/L^2\)
+belong to the same parabolic band as the comparison.
+
+The inverse-height first-exit calculation continues this reference
+to an auxiliary raw cut \(d_*<d_q\), where strip contraction gives
+\[
+ |W(d_*)-W^*(d_*)|\le Cg+C(\epsilon_0L/d_*)^c\longrightarrow0.
+\]
+The regular segment to the original port has the comparison's limit
+\(W^*(d_q)\); the prescribed passive and raw-buffer margins admit it.
+
+Scalar uniqueness orders the graphs between the comparison and
+this upper reference. They stay between the two finite positive
+core graphs and between their admitted outward tails. Thus every
+\(\eta_0\in[\eta_{\rm comp},\eta_{\max}]\) has an actual through
+graph on the entire word and remains in the original convex raw
+and observer windows. Its central raw height is
+\(z(\gamma)=\epsilon_0^2\eta_0\); after the common coefficient
+shrink the original low-height and speed restrictions are satisfied.
+The whole interval, including nonroot inputs, is consequently used.
+
+\smallskip
+\noindent\emph{The paired core variation.}
+For
+\[
+ f=\frac{d\eta}{d\xi}
+   =\frac{\eta(\xi B+H_1\eta)}D
+\]
+use \eqref{deg:scalar-raw-cocycle}, with residual
+\([gP'+(Q'+H_1)\eta]/D\).
+On \([-L,u_*+\epsilon]\), \(P\) has a fixed positive lower
+bound after decreasing \(k\); on the remaining positive core,
+the comparison has already entered its invariant strip. Hence
+\[
+ D_{\rm comp}\ge c g\quad\text{on }[-L,L],\qquad
+ \eta/D\le C
+\]
+on every graph above it. In the part where \(P\) could be negative,
+\(\eta\ge c>0\), so \(D\ge c\eta\) after decreasing \(g\).
+Since \(P'\) is bounded and
+\(Q'=O(gk)\), \(H_1=O(kg^2)\), the remaining integral in the
+identity is bounded in absolute value on the full core. The endpoint
+quotients \((\eta/D)(\pm L)\) are positive units.
+
+Set
+\[
+ A_\pm=\frac{\partial\eta(\pm L;\eta_0)}{\partial\eta_0}>0.
+\]
+Integration gives
+\begin{equation}
+ \frac{A_-}{A_+}
+ =\frac{(\eta/D)(-L)}{(\eta/D)(L)}
+   \exp\left\{\int_L^{-L}
+          \frac{gP'+(Q'+H_1)\eta}D\,d\xi\right\}
+ \in[c,C].
+ \label{deg:quadratic-paired-core-ratio}
+\end{equation}
+This estimate controls the ratio of the two core variations;
+separate unit bounds for \(A_\pm\) are not required.
+For comparison with a moving lip phase \(u\), the exact incoming
+factor is
+\[
+ \frac{d\eta_0}{du}
+  =\eta_0\left\{\frac{P'}P-\frac{uB_+}{gP}
+                     +\mathcal R_+'\right\}
+  =-\frac{uB_+\eta_0}{gP}N_+.
+\]
+The core-end derivatives are \(A_\pm\,d\eta_0/du\), so this
+complete moving-source factor cancels. The common cuts are phase-fixed.
+
+\smallskip
+\noindent\emph{Both original tails and the physical derivative.}
+In the source coordinates \((\xi,\eta)\), with quartet
+\((-g,g\pi,g,\epsilon_0)\), the displayed parabolic rational
+calculation \eqref{ann:tail-first-derivative} gives, on either
+admitted tail,
+\[
+ F_{\sigma,\eta}-\lambda_g/r
+   =O(\epsilon_0+g\pi r^{-2}+r^{-3+\nu}),
+ \qquad \lambda_g=\frac{12g}{1+2g},\qquad 0<\nu<1.
+\]
+Its remainder has bounded integral from \(L\) to
+\(d_\sigma/\epsilon_0\). The parabolic bands just constructed
+justify this application even though the centre height may be
+exponentially small. Consequently the
+two actual tail first variations are
+\[
+ J_\sigma=(d_\sigma/(\epsilon_0L))^{\lambda_g}U_\sigma,
+ \qquad U_\sigma,U_\sigma^{-1}\le C.
+\]
+At the original raw ports the complete core-plus-tail variations are
+exactly
+\begin{equation}
+ \frac{dz_\sigma}{d\eta_0}
+   =\epsilon_0^{2-\lambda_g}(d_\sigma/L)^{\lambda_g}
+       A_\sigma U_\sigma.
+ \label{deg:quadratic-paired-raw-slopes}
+\end{equation}
+All terminal factors lie on the admitted original images.
+The original bridges and divided closing, with \(K_{\rm fin}>0\),
+\(m\le m_0\), have positive derivative units by Lemma~\ref{lem:closing}.
+
+The common \(\epsilon_0^{2-\lambda_g}=(gk)^{2-\lambda_g}\)
+factor cancels in the ratio of the two raw variations. The ratio
+\((d_-/d_+)^{\lambda_g}\), the two \(U\)-factors, and the
+paired core ratio are bounded units. Composing the original regular
+bridges and divided closing therefore proves \(0<\Pi'\le C_*\)
+in the same original affine input on the entire stated interval.
+Choose \(mC_*<1/2\) only after these constants and buffers have
+been fixed. This gives the stated strict sign of \(F'\).
+\end{proof}

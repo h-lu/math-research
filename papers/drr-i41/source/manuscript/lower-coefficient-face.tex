@@ -1,0 +1,98 @@
+\subsection{The coefficient face of the same-field triples}
+
+The construction also identifies how the three cycles enter the small
+positive ratio sector. Its calibration varies $A,C$ and preserves the
+three coefficients prescribed in \eqref{p4:path}. We compute the ratio
+directly from those coefficients, independently of the upper estimates.
+
+\begin{proposition}\label{prop:lower-coefficient-face}
+The fields in Lemma~\ref{rew:lem-endpoint-attainment} can be chosen with
+\[
+ \alpha_0<0<\alpha_1,\qquad p\longrightarrow0^+,
+ \qquad \gamma/s\longrightarrow+\infty.
+\]
+In their positive-gamma coordinates
+$g=\gamma$, $k=s/g^{3/2}$, $\pi=p/\sqrt g$ and
+$\mathfrak q=k\pi$, they satisfy
+\[
+ k\longrightarrow0,\qquad \pi\longrightarrow5/\sqrt2,
+ \qquad \mathfrak q\longrightarrow0.
+\]
+Their two positive axis roots in the coordinate
+$(v-\gamma)/(gk)$ have squared half-gap tending to $1/72$.
+In particular they remain on the bounded positive-gamma real-root
+side, separated from the fold. The same field and its three complete
+hyperbolic cycles meet every prescribed positive upper cutoff on $p$.
+\end{proposition}
+
+\begin{proof}
+For each fixed $c>1$, write
+\[
+ \epsilon=\left(\tfrac12e^{-4\pi/\sqrt{c-1}}\right)^{2/5},
+ \qquad \beta=1-\tfrac52\epsilon.
+\]
+Restrict the fixed $c$-range so that $0<\epsilon<1/10$.
+Equation~\eqref{p4:path}, with its fixed root ratio $3/2$, gives
+\begin{equation}\label{eq:lower-sector-exact-coefficients}
+ \gamma=\frac{\beta\rho}{3},\qquad
+ \alpha_0=-\frac32\epsilon^2\rho^3,\qquad
+ \alpha_1=\left(\frac52\epsilon-\frac32\epsilon^2\right)\rho^2.
+\end{equation}
+These are the actual coefficients after calibration: the equations
+\eqref{p4:calibration} change only $A,C$. Moreover a field $H_\theta$
+already in the slice has, by local uniqueness in Lemma~\ref{lem:slice},
+slice parameter $\theta(H_\theta)=\theta$ and affine/time parameters
+$(I,0,1)$. Consequently after the fixed inverse transport
+$\mathscr C_0^{-1}$ these same coefficients define
+\eqref{eq:sharp-sector-coordinates} for the original field.
+
+Taking the square root and dividing in
+\eqref{eq:lower-sector-exact-coefficients} gives
+\begin{equation}\label{eq:lower-sector-ratios}
+ s=\sqrt{3/2}\,\epsilon\rho^{3/2},\qquad
+ p=\frac{5-3\epsilon}{\sqrt6}\sqrt\rho,\qquad
+ \frac\gamma s=\frac{\beta}
+ {3\sqrt{3/2}\,\epsilon\sqrt\rho}.
+\end{equation}
+For $c_n\downarrow1$, the endpoint construction first fixes $c_n$,
+then chooses one $\rho_n\le1/n$ for the actual coefficient difference
+and all three whole-cycle distances. Thus
+$0<p_n\le5/\sqrt{6n}\to0$, while $\gamma_n/s_n\to+\infty$.
+The actual coefficient $C_{c_n,\rho_n}$ tends to $c_n$ with the
+chosen accuracy; it need not equal $c_n$. No estimate for the inverse
+calibration uniform as $c\downarrow1$ is used.
+
+The gamma coordinates computed from the same path are
+\begin{equation}\label{eq:lower-sector-gamma-coordinates}
+ k=\frac{9\epsilon}{\sqrt2\,\beta^{3/2}},\qquad
+ \pi=\frac{5-3\epsilon}{\sqrt{2\beta}},\qquad
+ \mathfrak q=\frac{9\epsilon(5-3\epsilon)}{2\beta^2}.
+\end{equation}
+The translated roots in \eqref{p4:path} are
+$-\rho,\epsilon\rho,3\epsilon\rho/2$. Dividing by
+$gk=3\epsilon\rho/\sqrt{2\beta}$ gives
+\[
+ -r=-\frac{\sqrt{2\beta}}{3\epsilon},\qquad
+ a=\frac{\sqrt{2\beta}}3,\qquad b=\sqrt{\beta/2}.
+\]
+Hence
+\begin{equation}\label{eq:lower-sector-root-gap}
+ \frac{(b-a)^2}{4}=\frac{\beta}{72}\longrightarrow\frac1{72},
+ \qquad kr=\frac3\beta\longrightarrow3.
+\end{equation}
+In particular $\pi\to5/\sqrt2>\sqrt{12}$, on the separated real-root
+side, with an escaping negative root at finite further radius.
+These formulas describe this constructed family; they impose no
+gamma-chart limit on other three-cycle sequences.
+
+For any neighborhood, collar and positive ratio cutoff, take a
+sufficiently large $n$ in this same sequence. Coefficient convergence,
+the simultaneous Hausdorff limits and $p_n\to0^+$ meet all three
+requirements at once. The fixed inverse coordinate change and positive
+time preserve the three hyperbolic cycles of that single field.
+\end{proof}
+
+The one-cycle estimate at $p=0$ and these strictly positive-ratio
+triples concern different coefficient limits. The realization passes
+through the unbounded $\gamma/s$ branch. A bounded-$\gamma/s$
+restriction would remove this sharpness family.

@@ -1,0 +1,80 @@
+% Figure contract: the stopped trace and its actual return composition.
+% Native LaTeX picture; schematic, not a numerical phase portrait.
+\begin{figure}[htb]
+\centering
+\setlength{\unitlength}{1pt}
+\begin{picture}(430,238)
+  % Panel (a): the outgoing extra saddle for positive central trace.
+  \put(108,228){\makebox(0,0){\small (a) Positive-time geometry in $(q,Y)$}}
+  \put(18,108){\line(1,0){198}}
+  \put(216,108){\makebox(0,0)[l]{\small $q=-X$}}
+  \put(38,108){\line(0,1){91}}
+  \put(38,202){\makebox(0,0)[r]{\small $\Sigma_Q$}}
+  \put(198,108){\line(0,1){91}}
+  \put(198,202){\makebox(0,0)[l]{\small $\Sigma_-$}}
+  \put(38,96){\makebox(0,0){\small $Q$}}
+  \put(198,96){\makebox(0,0){\small $q_H$}}
+  % Equator and its broken limiting connection.
+  \linethickness{.35pt}
+  \put(55,108){\line(1,0){95}}
+  \put(150,108){\line(1,0){48}}
+  \put(101,115){\makebox(0,0){\scriptsize equator $Y=0$}}
+  \put(150,108){\circle*{5}}
+  \put(150,95){\makebox(0,0){\scriptsize $e_R$}}
+  \put(150,83){\makebox(0,0){\scriptsize extra saddle}}
+  % Boundary connection to the saddle and its unstable branch.
+  \linethickness{.8pt}
+  \put(55,108){\vector(1,0){78}}
+  \qbezier(150,108)(162,119)(174,132)
+  \qbezier(174,132)(186,146)(198,163)
+  \put(168,125){\vector(1,1){10}}
+  \put(163,143){\makebox(0,0)[r]{\scriptsize unstable branch}}
+  % Both curves increase with q. The strict orbit stays above the
+  % unstable separatrix throughout their shared q interval.
+  \linethickness{.55pt}
+  \qbezier(38,154)(73,155)(108,158)
+  \qbezier(108,158)(138,161)(162,171)
+  \qbezier(162,171)(182,180)(198,193)
+  \put(86,156){\vector(1,0){12}}
+  \put(165,172){\vector(2,1){12}}
+  \put(104,172){\makebox(0,0){\scriptsize typical strict orbit}}
+  \put(38,183){\makebox(0,0)[l]{\scriptsize trace on $\Sigma_Q$}}
+  \put(198,214){\makebox(0,0)[r]{\scriptsize fixed raw cut}}
+  \put(108,66){\makebox(0,0){\scriptsize the axis segment ends at $e_R$;}}
+  \put(108,54){\makebox(0,0){\scriptsize the positive-height orbit passes above it}}
+  % Panel (b): actual composition used for the displacement.
+  \put(325,228){\makebox(0,0){\small (b) The actual return composition}}
+  \put(246,195){\makebox(0,0){\small weak input $t$}}
+  \put(246,129){\makebox(0,0){\small weak input $t$}}
+  \put(406,195){\makebox(0,0){\small affine input $x$}}
+  \put(406,129){\makebox(0,0){\small raw output}}
+  \put(278,195){\vector(1,0){30}}
+  \put(340,195){\vector(1,0){30}}
+  \put(278,129){\vector(1,0){30}}
+  \put(340,129){\vector(1,0){30}}
+  \put(307,207){\makebox(0,0){\scriptsize $M_d$ (DIR)}}
+  \put(371,207){\makebox(0,0){\scriptsize $A_\theta$}}
+  \put(307,141){\makebox(0,0){\scriptsize $\mathfrak H_\theta(t)=b_\theta+B_\theta(t)$}}
+  \put(371,141){\makebox(0,0){\scriptsize $O_\theta$}}
+  \put(311,180){\makebox(0,0){\scriptsize central passage}}
+  \put(311,113){\makebox(0,0){\scriptsize actual outer Dulac}}
+  \put(325,94){\makebox(0,0){\scriptsize includes $e_R$ and the fixed-section maps}}
+  \put(325,78){\makebox(0,0){\scriptsize $\Pi\bigl(A_\theta(M_d(t))\bigr)=O_\theta(\mathfrak H_\theta(t))$}}
+\end{picture}
+\caption{The stopped trace and the map used in its zero estimate.  In
+panel~(a), $q=-X$ increases in positive time.  The broken limiting
+connection consists of the equatorial segment from the trace section
+$\Sigma_Q$ to the additional equatorial saddle $e_R$, followed by its
+unstable upper-half-plane branch toward the fixed raw section $\Sigma_-$.
+The thinner curve is a representative strict positive-height orbit;
+it remains above the unstable branch on their common $q$-interval.
+The label \emph{trace on \(\Sigma_Q\)} marks the incoming height supplied by
+the central saddle--node passage.  All distances and slopes are schematic.
+Panel~(b) records the two sides of the physical composition: the central
+saddle--node passage is the inverse Dumortier--Ilyashenko--Rousseau (DIR)
+normal-form map $M_d$, while the outgoing height has the retained offset
+$b_\theta$ and is then sent through the actual outer Dulac map $O_\theta$,
+which includes the additional saddle and the fixed-section connectors.
+Arrows in panel~(b) denote maps, not flow trajectories.}
+\label{fig:trace-extra-saddle}
+\end{figure}

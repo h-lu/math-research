@@ -1,0 +1,475 @@
+\section{The graphic, sections, and complete displacement}\label{sec:geometry}
+All estimates below are uniform on a sufficiently small compact interval
+$I_b\Subset(0,2)$ about a prescribed $b_*$.
+
+We use the physical displacement \eqref{eq:common-displacement} from
+Section~\ref{sec:return-framework}. The table records the regional
+coordinates and domains before they are transferred to those sections.
+
+\begin{table}[H]
+\centering
+\caption{Sections, coordinates, maps, and actual domains.}
+\label{tab:return-objects}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.14\linewidth}
+                >{\raggedright\arraybackslash}p{0.27\linewidth}
+                >{\raggedright\arraybackslash}p{0.18\linewidth}
+                >{\raggedright\arraybackslash}p{0.32\linewidth}@{}}
+\toprule
+Object & Source and target & Map & Actual domain and orientation\\
+\midrule
+Regular branch & $\Sigma_u(u_{\rm up})$ to $\Sigma_\xi(E_b)$
+ & $T_-$ & fixed regular core; $(T_-)_{u_{\rm up}}=-j<0$\\
+Contact branch & $\Sigma_u(u_{\rm up})$ to $\Sigma_\xi(E_b)$
+ & $T_+$ & open finite-passage components common with $T_-$\\
+Displacement & same source and target
+ & $\Delta=T_+-T_-$ & zeros are periodic orbits; isolated zeros are limit cycles\\
+Negative passage & prescribed physical source to $z=-Ln$
+ & $J_-$ & positive right-going finite passage; local source coordinate $u$ is not $u_{\rm up}$\\
+Positive complement & positive-saddle outgoing cut to $z=z_c$
+ & $C_+$ & relative neighborhood of a same-field positive reference; oriented so $C_+'>0$\\
+Saddle collars & fixed incoming to fixed outgoing cuts
+ & $\mathcal D$ & open finite-time side; a zero-amplitude separatrix is a boundary\\
+Root collision & left base to through-passage or fiber-exit target
+ & branch maps & localized actual interval $0<A<\eta_0$; at most one finite event value\\
+Lower connector & lower power output to the positive-saddle incoming cut
+ & $\Psi$ & increasing physical passage interval;
+ $\Psi(0)=-B_{\rm conn}<0$ is retained\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Fast orbits and transverse sections}
+We first identify the limiting fast arc and then choose sections that
+persist for the perturbed fields. This supplies the geometric input for
+all subsequent transition maps.
+Set $\omega_b=\sqrt{4-b^2}/2$. The solution of~\eqref{eq:fast}
+through the origin is
+\begin{equation}\label{eq:fast-orbit}
+ z(t)=\frac{e^{bt/2}}{\omega_b}\sin(\omega_bt),\qquad
+ y(t)=1+e^{bt/2}\left(-\cos(\omega_bt)
+                  +\frac{b}{2\omega_b}\sin(\omega_bt)\right).
+\end{equation}
+The ordinate increases until $t=\pi/\omega_b$ and then decreases
+until $2\pi/\omega_b$, where it is negative. Its first positive
+zero $t_b$ is therefore unique and belongs to
+$(\pi/\omega_b,2\pi/\omega_b)$. At that zero $z(t_b)<0$.
+The implicit function theorem shows that $f_b=z(t_b)$ and the whole
+arc depend smoothly on $b$. In particular $-f_b$ has a positive
+lower bound on $I_b$. The arc is simple: it is part of the trajectory
+of the linear focus~\eqref{eq:fast}, before its first return to the
+horizontal axis. Thus~\eqref{eq:graphic} is a Jordan curve.
+Continuous dependence, together with the transverse return at $f_b$,
+also proves $\Gamma_x^b\to\Gamma_0^b$ in Hausdorff distance as
+$x\downarrow0$, uniformly on $I_b$.
+
+The upper intersection of the arc with $z=0$ has height
+\[
+ y_b=1+\exp\left(\frac{\pi b}{\sqrt{4-b^2}}\right).
+\]
+We use the section
+$\Sigma_u=\{(0,y_b+u_{\rm up}):|u_{\rm up}|<u_0\}$ and a
+small outgoing section $\Sigma_\xi$ on $z=\xi>0$, near the lower
+intersection with the fast arc. The coordinate $u_{\rm up}$ ranges over a
+fixed interval containing zero, independently of every later rescaling.
+The endpoint parameter $x$ indexes the unperturbed family of graphics.
+At the contact endpoint $x=0$, every regional construction is pulled back
+to the regular physical coordinate $u_{\rm up}$; $x$ is not a return
+coordinate.
+
+\begin{lemma}\label{lem:fast-energy}
+On a fixed rectangle about the contact point where $1+bz-y>0$,
+there is an analytic first integral $E_b$ of~\eqref{eq:fast} such that
+\begin{equation}\label{eq:energy-fast}
+ (E_b)_y>0,\qquad
+ (E_b)_z+\frac{z}{1+bz-y}(E_b)_y=0,\qquad
+ E_b(0,y)=y.
+\end{equation}
+Its $y$ derivative is a positive unit on a smaller rectangle. The
+transition along any fixed compact part of the fast arc, written in
+this first-integral coordinate at its two ends, converges to the
+identity in $C^k$ on the prescribed compact source interval, uniformly
+for $b\in I_b$, for every fixed finite $k$, as $\mu\to0$.
+\end{lemma}
+\begin{proof}
+Since the $z$ component of~\eqref{eq:fast} is nonzero there, each
+orbit meets $z=0$ once locally. Define $E_b$ to be the ordinate of
+that intersection. The analytic dependence theorem gives
+\eqref{eq:energy-fast} and $(E_b)_y(0,0)=1$. Continue this first
+integral along the required regular fast arc. The perturbed transition
+between fixed transverse sections depends smoothly on the parameters;
+at $\mu=0$ its energy coordinate is constant. This proves the last
+assertion. Sections must be fixed before taking this limit.
+\end{proof}
+
+For $\mu\ne0$ we shall write the family exactly as
+\begin{equation}\label{eq:normalized}
+ F:=\dot z=y(1+bz-y)+\varepsilon^2P(z),\qquad
+ G:=\dot y=zy+\varepsilon^3D,
+ \qquad P(z)=E_0+E_1z+E_2z^2,
+\end{equation}
+with bounded coefficients. The normalization covering every raw
+parameter is defined in Section~\ref{sec:return-framework};
+Section~\ref{sec:parameter-cover} completes its finite directional cover.
+
+\begin{lemma}\label{lem:sections}
+After shrinking the parameter and Hausdorff neighborhoods, every
+cycle counted in Theorem~\ref{thm:main} lies in $y>0$ and meets
+$\Sigma_u$ and every member of any prescribed finite collection of
+regular fast sections exactly once, inside prescribed smaller section
+intervals. The backward transition $T_-$ from $\Sigma_u$ to
+$\Sigma_\xi$, measured by $E_b$, satisfies
+\begin{equation}\label{eq:short-map}
+ (T_-)_{u_{\rm up}}=-j(u_{\rm up},p),\qquad c\le j\le C,
+ \qquad |\partial_{u_{\rm up}}\log j|\le C.
+\end{equation}
+Here and below $p$ denotes the fixed parameters of a transition.
+
+Moreover, if $P_p$ is the transition between two fixed vertical sections
+contained in a compact regular flow tube on the fast arc, then, after one
+common shrinking of the parameter neighborhood,
+\begin{equation}\label{eq:regular-holonomy-jets}
+ 0<c\le |P_p'|\le C,\qquad
+ \left|\frac{P_p''}{P_p'}\right|
+ +\left|\left(\frac{P_p''}{P_p'}\right)'\right|\le C .
+\end{equation}
+If the transverse speeds on the two sections have the same fixed sign,
+as for the holonomies on the outgoing regular arc, then $P_p'>0$.
+The same assertion holds when either section is measured in the energy
+coordinate $E_b$.
+
+For bounded coefficients in~\eqref{eq:normalized}, the forward orbit
+from the same signed section reaches $y=K\varepsilon^3$ at
+$z=\Lambda(u_{\rm up},p)$ in a fixed negative interval about $f_b$, where
+\begin{equation}\label{eq:relaxation-map}
+ -C\le\Lambda_{u_{\rm up}}\le-c<0,\qquad
+ |\Lambda_{u_{\rm up}u_{\rm up}}|\le C.
+\end{equation}
+Suppose in addition that $P\ge p_0>0$ on a fixed interval
+$[z_{\rm ent},-q_g]$, where $z_{\rm ent}<-q_g$, from these entries to
+$-q_g<0$. Then every counted cycle reaches
+$z=-q_g$ at $0<y\le K_1\varepsilon^3$, and its subsequent arc
+to $\Sigma_\xi$ has $F>0$. The union of admissible passages is
+represented on one open interval of $u_{\rm up}$ by a forward transition $T_+$
+to the same target. Its intersections with $T_-$ are precisely the
+periodic orbits obtained by finite passages there; isolated intersections
+represent limit cycles.
+\end{lemma}
+\begin{proof}
+At each regular marker the organizing field is nonzero and transverse
+to its section. A uniformly small flow box implies that any orbit
+meeting a smaller ball also meets the section inside its prescribed
+core. One Hausdorff inclusion provides such a point on every counted
+cycle. Choose the sections so that their portions outside the prescribed
+cores have positive distance from the graphic. The other inclusion then
+confines every intersection to those cores.
+A periodic orbit is a Jordan curve. As a transverse arc is traversed,
+its intersections with that curve alternate between entering and
+leaving the bounded component. Their oriented intersection signs
+alternate, whereas the field has a fixed transverse sign on the
+section. Hence there can be only one intersection.
+
+One marker has a fixed positive ordinate. If $\mu_4\ne0$, every
+crossing of $y=0$ has the same sign, which is impossible for a
+periodic ordinate. If $\mu_4=0$, that line is invariant; a cycle close
+to the graphic cannot cross it, and Hausdorff closeness to the positive
+fast arc excludes a cycle in $y<0$. Thus the entire cycle lies in
+$y>0$. The compact regular arc from
+$\Sigma_\xi$ to $\Sigma_u$ persists. Fix a closed flow tube around this
+arc, with slightly larger section cores. On the limiting field the tube
+contains no zero and the transverse speeds on its vertical sections are
+bounded away from zero. Compactness in $b$ and continuity give the same
+bounds, a common flight-time bound, and common $C^4$ bounds for the
+normalized field after shrinking the parameter neighborhood. The target
+event equation has time derivative bounded below, so the implicit-function
+theorem and the first three variational equations give a common $C^3$ bound
+for every such holonomy map.
+
+Writing $X_p=(F_p,G_p)$ for the normalized vector field, a transition
+$P_p(y_0)=y_1$ between vertical sections satisfies the planar determinant
+identity
+\begin{equation}\label{eq:holonomy-determinant}
+ F_p(z_1,y_1)P_p'(y_0)=F_p(z_0,y_0)
+ \exp\!\left(\int_0^{T(y_0,p)}\operatorname{div}X_p(\phi_t)\,dt\right).
+\end{equation}
+The event-time correction is parallel to the target vector field and does
+not alter this identity. The uniform speed and flight-time bounds give a
+positive lower bound for $|P_p'|$ as well as an upper bound. On the outgoing
+regular arc the two transverse speeds have the same fixed sign, hence
+$P_p'>0$. Combining these facts with the $C^3$ estimate yields
+~\eqref{eq:regular-holonomy-jets}.
+In the energy coordinate, the section change has derivative $(E_b)_y$, a
+positive $C^3$ unit on the fixed tube, so the composition rules preserve
+the same bounds. Taking the two sections to be $\Sigma_u$ and $\Sigma_\xi$,
+the signs $F<0$ on $\Sigma_u$ and $F>0$ on $\Sigma_\xi$ give the negative
+orientation $(T_-)_{u_{\rm up}}=-j(u_{\rm up},p)$ with $j$ a positive
+unit, as in
+~\eqref{eq:short-map}. Its limiting energy derivative does not depend on
+the final position of $\Sigma_\xi$ on that arc.
+
+Follow the descending regular arc to a fixed small height $y_h$.
+For $K\varepsilon^3\le y\le y_h$ and $z$ in the negative entry
+interval, choose $K$ so that $zy+\varepsilon^3D\le-cy$.
+With $y$ as independent variable, the difference between the perturbed
+and divided fast equations is exactly
+\begin{equation}\label{eq:relaxation-error}
+ \frac{\varepsilon^2zP(z)
+       -\varepsilon^3D(1+bz-y)}{z(zy+\varepsilon^3D)}.
+\end{equation}
+This function and its first two $z$ derivatives are bounded by
+$C\varepsilon^2/y$. Integration and the first two variational
+equations give a $C^2$ error of size
+$O(\varepsilon^2(1+|\log\varepsilon|))$ in the entry abscissa.
+The unperturbed map from the upper section to the lower fast foot
+has negative derivative bounded away from zero, by the determinant
+formula on the divided regular field. This proves
+\eqref{eq:relaxation-map} without a sign assumption on $P$.
+
+Under the additional positive-polynomial hypothesis, put
+$h_s=-\varepsilon^3D/z$ and $w=y-h_s$. Then
+\begin{align*}
+ F&=\varepsilon^2P+h_s(1+bz-h_s)
+                  +(1+bz-2h_s)w-w^2,\\
+ \dot w&=zw-h_s'F.
+\end{align*}
+On $|w|\le K_1\varepsilon^3$, the horizontal speed is
+$\frac12p_0\varepsilon^2\le F\le C\varepsilon^2$.
+The two $w$ boundaries point inward, because $z\le-q_g$ and
+$h_s'=O(\varepsilon^3)$. The tube contains the entry and reaches
+$z=-q_g$ in finite time. Its transition is strictly monotone for
+each positive $\varepsilon$; no uniform lower derivative is required.
+
+Choose a small rectangle $[-q_g,\xi]\times(0,\eta)$ with
+$F_y=1+bz-2y>0$. Its top and the part of its right side outside
+the outgoing section core have positive distance from the graphic.
+At the left side $F>0$. A counted cycle cannot leave through the
+bottom, left, or top, and must leave in finite time to return to
+$\Sigma_u$. It therefore exits at the prescribed right section.
+To exclude a zero of $F$ before that exit, use the exact identities
+\[
+ \dot F=F_zF+F_yG,\qquad \dot G=yF+zG.
+\]
+The quadrant $F\le0,G\le0$ is positively invariant in the
+rectangle. At a first zero of $F$ reached from $F>0$, one has
+$G\le0$; equality would give an equilibrium. Entering that quadrant
+prevents the required right exit. Thus $F>0$ on the whole arc.
+
+Finally, use $z$ as independent variable there. Between two passing
+solutions of $y'=G/F$, scalar uniqueness orders every intermediate
+solution. It stays between their graphs and has positive speed,
+since $F_y>0$. Its target remains in the interval between their
+targets. The domain of such passages is therefore an open interval.
+Taking its inverse image under the monotone preceding transition
+gives the asserted interval of $u_{\rm up}$. Equality
+$T_+(u_{\rm up})=T_-(u_{\rm up})$ joins
+two finite pieces of the same orbit; conversely every counted cycle
+gives that equality. Uniqueness identifies distinct zeros with
+distinct periodic orbits.
+\end{proof}
+
+For uniform regional estimates, fix the finite output order, the
+physical sections and enlarged cores first. Then choose the selected
+reference orbits, fibers and saddle collars, followed by compact
+coefficient blocks, root gaps, barriers and tube widths. The final
+parameter and Hausdorff shrinkings respect these choices; the actual
+finite-passage interval is established before any return comparison.
+
+\subsection{An explicit graphic-anchored annulus}
+\label{sec:graphic-anchored-annulus}
+Fix a compact interval $J\Subset(0,2)$ for this geometric construction.
+Put $o=(0,1)$, $v=y-1$, and use the divided fast field
+$z'=bz-v$, $v'=z$ only for this geometric construction.
+Along its nonzero solutions the continuous polar angle about $o$
+satisfies
+\[
+ \theta'=\frac{z^2-bzv+v^2}{z^2+v^2}
+                         \ge1-\frac{\max J}{2}>0 .
+\]
+The explicit fast orbit starts with angle $-\pi/2$, passes
+through the upper $z=0$ point, and reaches the foot with angle
+$\theta_f(b)\in(\pi,3\pi/2)$. Its first and second parts have
+$z>0$ and $z<0$, respectively, so it has not made an additional
+turn. Along the axis segment from the foot to the origin the
+angle continues strictly upward to $3\pi/2$, since
+$\det((z,-1),(1,0))=1$.
+Thus the whole graphic is a single positive radial graph
+\[
+ g_b(\theta)=o+R_b(\theta)e_\theta,\qquad
+ e_\theta=(\cos\theta,\sin\theta).
+\]
+On the fast part its radius is obtained by the strictly monotone
+angle-to-time inverse. On the axis part it is $-1/\sin\theta$.
+The two expressions agree at the foot and at the circular
+endpoint. The function $R_b(\theta)$ is jointly continuous,
+piecewise smooth, and has common positive lower and upper
+bounds on $J$. No derivative matching is claimed at the foot.
+
+Choose $0<d<\min R_b/2$, also smaller than the upper-source core.
+The explicit map
+\[
+ \Phi_b(\theta,t)=o+(R_b(\theta)+t)e_\theta,\qquad |t|\le d
+\]
+is globally injective. Different angles give different nonzero
+radial rays and each radius is strictly increasing in $t$.
+Its continuous inverse is
+$\theta=\arg(x-o)$, $t=|x-o|-R_b(\arg(x-o))$.
+It therefore embeds the entire cylinder, including both graphic
+endpoints. Its fibers are anchored exactly on $\Gamma_b$ and
+$|\Phi_b(\theta,t)-g_b(\theta)|=|t|$.
+At $\theta=\pi/2$ the fiber is precisely $(0,y_b+t)$,
+the original vertical source, whose transverse speed has a
+fixed sign. Only joint continuity of $R_b$ is needed, so the radial
+construction also applies at the singular endpoints.
+
+Let $\mathcal A_b(r)=\Phi_b(S^1\times(-r,r))$.
+An essential curve in this annulus meets every fiber: otherwise
+cutting at a missed fiber puts it in a rectangle and makes it
+contractible. Hence it is within two-sided Hausdorff distance
+$r$ of the graphic. Conversely, for any fixed smaller annulus, joint
+continuity of the inverse gives a common Hausdorff radius placing every
+cycle within that distance of the graphic in the annulus.
+Lemma~\ref{lem:sections} makes it
+cross the upper fiber exactly once. A contractible Jordan curve
+would leave both ends of this crosscut in its exterior and have
+an even number of transverse intersections. Thus the cycle is
+essential.
+
+For two nested essential counted cycles in the smaller annulus, their
+intervening closed annulus remains there. The inner boundary
+connects to $o$ without meeting either cycle and lies inside both;
+the outer boundary connects to infinity and lies outside both.
+Choose $\mathcal A_-\Subset\mathcal A_+$ with the larger annulus
+within the phase and Hausdorff bounds of the regional multiplier
+estimate, and place the final counted cycles in the smaller one.
+Their disks and intervening annuli are in $y>0$, since a Jordan
+disk's lowest ordinate is attained on its boundary.
+
+\subsection{An annulus argument}
+When attraction can be proved over a whole period, we can count cycles
+without constructing a return map across every intervening separatrix.
+The annulus argument below turns that multiplier estimate into a bound in
+terms of the number of equilibria.
+
+\begin{lemma}\label{lem:attracting-annulus}
+Suppose a planar $C^1$ field has at most $M$ equilibria in an annular
+neighborhood, and every periodic orbit essential in that annulus is
+hyperbolic attracting. Then any collection of such cycles whose
+intervening closed annuli remain in the neighborhood has at most
+$M+1$ members.
+\end{lemma}
+\begin{proof}
+Take any finite collection of nested cycles and let $E$ be the closed
+annulus between two consecutive cycles. Suppose $E$ has no equilibrium.
+Both boundary cycles are invariant; uniqueness prevents crossing them,
+and compact continuation gives a complete two-sided flow on $E$.
+The basin of the inner cycle relative to $E$ is nonempty and open,
+while an attracting neighborhood of the outer cycle is disjoint from it.
+Its nonempty relative boundary is compact, invariant, and separated
+from both cycles. The omega-limit set of a point on this boundary is
+nonempty and contains no equilibrium. The Poincar\'e--Bendixson theorem
+\cite[Section~7.3, Lemma~7.13]{Teschl2012} makes it a periodic orbit.
+If that orbit were contractible in the original annular neighborhood,
+its Jordan disk would lie inside $E$. Its index is one, whereas a
+zero-free disk has index zero
+\cite[Section~3.12, Theorems~1--3]{Perko2001}. Thus it is essential
+and, by hypothesis, attracting. The chosen boundary point belongs
+to its open basin, which is disjoint from the inner cycle's basin.
+This contradicts the definition of that boundary. Each intervening
+annulus therefore contains an equilibrium.
+There are at most $M$ such disjoint annuli. Applying the argument to
+any finite subcollection proves the result also against a proposed
+infinite collection.
+\end{proof}
+
+\begin{lemma}\label{lem:generic-attracting-index}
+Let $X_p$ be a planar family continuous in the $C^1$ topology at $p_0$.
+Suppose the counted cycles of $X_{p_0}$ are hyperbolic attracting, lie
+in $y>0$, and are essential in an annular neighborhood
+$\mathcal A_-\Subset\mathcal A_+$, with their intervening closed annuli
+contained in $\mathcal A_-$.  Suppose there are admissible parameters
+$p_k\to p_0$ such that every periodic orbit of $X_{p_k}$ contained in
+$\mathcal A_+\cap\{y>0\}$ and essential in $\mathcal A_+$ is hyperbolic
+attracting, and $X_{p_k}$ has
+at most four equilibria in $y>0$, all nondegenerate.
+Then there are at most two counted cycles of $X_{p_0}$.
+The admissible sequence may lie in a one-sided parameter set.
+\end{lemma}
+\begin{proof}
+Fix a finite collection of $n$ counted cycles and disjoint compact tubes
+in $\mathcal A_-\cap\{y>0\}$. Their finite minimal returns have
+$P'-1\ne0$, so hyperbolic persistence gives one nearby cycle in each
+tube \cite[Section~12.2, Lemmas~12.6--12.7]{Teschl2012}.
+Transverse end hits and separated middle arcs preserve minimality.
+The persisted cycles remain positive, distinct, attracting, and nested;
+their intervening annuli remain in $\mathcal A_+$ and their bounded
+interiors in $y>0$. The required perturbation neighborhood may depend
+on the finite collection. For all sufficiently large $k$, apply the
+following argument to $X_{p_k}$.
+The vector-field index along a periodic orbit in the positive geometric
+orientation is $+1$, whether the flow traverses it clockwise or
+counterclockwise.  The innermost disk therefore contains an equilibrium.
+Lemma~\ref{lem:attracting-annulus}, applied to each intervening annulus
+using the attracting hypothesis for $X_{p_k}$, shows that it too contains
+an equilibrium.  Its index sum is $1-1=0$.  A nonempty collection of
+nondegenerate equilibria with zero index sum has at least two members,
+because the index of each member is $+1$ or $-1$.  All these disjoint
+regions lie in $y>0$, where the total equilibrium bound is four.  Hence
+\[
+ 1+2(n-1)\le4,
+\]
+and $n\le2$.  The argument for arbitrary finite collections excludes an
+infinite collection as well.
+\end{proof}
+
+For the present polynomial family the nondegenerate parameters required
+in this lemma form a dense set.  When
+$\delta=\mu_4\ne0$, equilibria correspond to roots of
+\[
+ Q(z)=z^2(\mu_1+\mu_2z+\mu_3z^2)-\delta z-b\delta z^2-\delta^2,
+\]
+and $Q'(z)=z\det D(F,G)$ at an equilibrium. The multiple-root condition
+is a proper algebraic condition in the four raw parameters. One exact
+witness, valid for each fixed $b$, is
+\[
+ \kappa=6/625,\quad\delta=12/25,\quad
+ \mu_3=-6/625,\quad\mu_2=-12/125,\quad
+ \mu_1=(12/25)b-42/125 .
+\]
+It gives $Q=-\kappa(z+1)(z+2)(z+3)(z+4)$ and discriminant
+$144\kappa^6>0$. A nonzero real polynomial cannot vanish on an open
+box, by the one-variable polynomial identity theorem applied
+successively to its coefficients. Its nonzero set is therefore dense
+in every open raw window. The witness proves properness and need not
+belong to the small parameter window. If a multiplier estimate holds
+only for $\delta\ge0$, at a field with $\delta=0$ choose perturbations
+with $\delta>0$: every coefficient neighborhood has a nonempty open
+part on that side, which the algebraic exceptional set cannot contain.
+For each fixed positive $\varepsilon$, the map from
+$(E_0,E_1,E_2,D)$ to the four raw coefficients is an invertible diagonal
+linear map.  Thus the generic perturbations can be chosen within the same
+coefficient chart before radial normalization.  The attracting hypothesis
+on $\mathcal A_+$ must be supplied by the regional multiplier estimate;
+it does not follow from persistence of the original finite collection.
+
+\begin{lemma}\label{lem:equilibria}
+For sufficiently small raw parameters, system~\eqref{eq:family}
+has at most four equilibria in $y>0$.
+\end{lemma}
+\begin{proof}
+Write $\delta=\mu_4$. If $\delta\ne0$, then $y=-\delta/z$
+and $z\ne0$, so the abscissa satisfies
+\[
+ z^2(\mu_1+\mu_2z+\mu_3z^2)
+                    -\delta z-b\delta z^2-\delta^2=0.
+\]
+This is a nonzero polynomial of degree at most four. Each root
+determines at most one positive ordinate. If $\delta=0$, a positive
+equilibrium has $z=0$ and $y-y^2+\mu_1=0$, giving at most two.
+\end{proof}
+
+By Lemma~\ref{lem:sections}, every counted cycle lies in $y>0$.
+Its Jordan disk also lies there, since the lowest ordinate of a bounded
+Jordan disk is attained on its boundary. Thus the intervening annuli lie
+in $y>0$, and Lemma~\ref{lem:equilibria} supplies the equilibrium bound
+used with Lemma~\ref{lem:attracting-annulus}.

@@ -1,0 +1,406 @@
+\section{Scalar transitions and physical section calculus}
+
+The regional passages require estimates on normalized scalar maps, on
+derivatives with moving initial sections, and on local Dulac maps. We
+develop those tools here. Regular adapters and divided closing maps are
+handled by the identities of Section~\ref{sec:counting-tools}.
+
+\subsection{Normalized scalar transitions}
+\input{scalar-normalization}
+
+\subsection{Moving-section variations and inward continuation}
+
+Moving a section changes both the initial height and the time of
+departure. The following identities retain both effects, including the
+endpoint terms that appear after using height as the independent variable.
+
+\begin{lemma}[Scalar differentiation on moving sections]
+\label{deg:lem-scalar-moving-identities}
+Fix the coefficients of a scalar graph \(z_x=f(x,z)\), with initial
+curve \((x_l(a),z_l(a))\), and let \(D\) be a phase vector field,
+commuting with differentiation at fixed \(x\). Write \(V_j=D^jz\).
+Through order three its equations and moving initial rows are
+\begin{equation}\label{deg:scalar-moving-bell}
+ \begin{gathered}
+ (V_1)_x=f_zV_1,\qquad (V_2)_x=f_zV_2+f_{zz}V_1^2,\\
+ (V_3)_x=f_zV_3+3f_{zz}V_1V_2+f_{zzz}V_1^3,\\
+ B_1=Dz_l-f_lDx_l,\quad B_2=DB_1-f_{z,l}B_1Dx_l,\\
+ B_3=DB_2-(f_{z,l}B_2+f_{zz,l}B_1^2)Dx_l,
+ \qquad V_j(x_l;a)=B_j .
+ \end{gathered}
+\end{equation}
+For \(f=z(n+\zeta z)/(M+Qz)\) on a positive graph with positive
+denominator, put \(\mathscr D=M+Qz\).
+The complete fixed-port first derivative, including an observer \(\chi\), is
+\begin{equation}\label{deg:scalar-raw-cocycle}
+ \begin{gathered}
+ f_z=\frac d{dx}\log\frac z{\mathscr D}
+          +\frac{M'+(Q'+\zeta)z}{\mathscr D},\\
+ D\chi(z_T)=\chi'(z_T)B_1
+    \frac{(z/\mathscr D)_T}{(z/\mathscr D)_l}
+    \exp\int_{x_l}^{x_T}\frac{M'+(Q'+\zeta)z}{\mathscr D}\,dx .
+ \end{gathered}
+\end{equation}
+For \(z_l=\ell_0M(a)\), \(n=xB\), and
+\(b=-a^2/(2\sigma^2)\), this becomes
+\begin{equation}\label{deg:scalar-polynomial-lip-slope}
+ \begin{gathered}
+ \Gamma_b'=\sigma^2\chi'(z_T)\frac{z_T}{\mathscr D_T}B(a)K(a)e^{I(a)},
+ \quad I=\int_a^{x_T}\frac{M'+(Q'+\zeta)z}{\mathscr D}\,dx,\\
+ K=1-\frac{M'(a)}{aB(a)}(1+\ell_0Q(a))
+       +\frac{\ell_0\zeta(a)M(a)}{aB(a)}.
+ \end{gathered}
+\end{equation}
+If instead \(r_\eta=V(r,\eta)\), with moving data
+\((\eta_l,r_l)\), write \(P_j=D^jr|_\eta\), \(l_j=D^j\eta_l\),
+\(t_j=D^j\eta_T\), where \(r_T\) is fixed. Then
+\begin{equation}\label{deg:scalar-inverse-endpoints}
+ \begin{gathered}
+ P_{1,l}=Dr_l-V_ll_1,\quad
+ P_{2,l}=DP_{1,l}-V_{r,l}P_{1,l}l_1,\\
+ (P_1)_\eta=V_rP_1,\quad
+ (P_2)_\eta=V_rP_2+V_{rr}P_1^2,\\
+ t_1=-P_{1,T}/V_T,\quad
+ t_2=-\{P_{2,T}+2V_{r,T}P_{1,T}t_1
+              +(V_{r,T}V_T+V_{\eta,T})t_1^2\}/V_T .
+ \end{gathered}
+\end{equation}
+For \(I=\int_{\eta_l}^{\eta_T}J(r(a,\eta),\eta)\,d\eta\),
+its full rows are
+\begin{equation}\label{deg:scalar-density-endpoints}
+ \begin{aligned}
+ DI={}&J_Tt_1-J_ll_1+\int J_rP_1\,d\eta,\\
+ D^2I={}&\int(J_{rr}P_1^2+J_rP_2)\,d\eta
+       +(J_rP_1)_Tt_1-(J_rP_1)_ll_1\\
+ &+J_Tt_2+J_{\eta,T}t_1^2-J_ll_2
+       -(J_{r,l}Dr_l+J_{\eta,l}l_1)l_1 .
+ \end{aligned}
+\end{equation}
+The observer and divided-closing rows use
+Lemma~\ref{phys:lem-c3-adapters}, specifically
+\eqref{phys:eq-observer-log} and \eqref{phys:eq-closing-jets}.
+Coefficient-only gains and affine calibrations are frozen under \(D\).
+\end{lemma}
+\begin{proof}
+Differentiate the graph equation at fixed \(x\); differentiating
+\(V_j(x_l(a),a)=B_j(a)\) gives the initial recursion.
+Rational differentiation proves \eqref{deg:scalar-raw-cocycle}.
+For the inverse graph differentiate twice at fixed \(\eta\), and
+then twice the identity \(r(a,\eta_T(a))=r_T\).
+Leibniz differentiation gives \eqref{deg:scalar-density-endpoints};
+at the lower endpoint the total radial derivative is \(Dr_l\),
+whereas at the upper endpoint it is zero. The observer and closing
+claims follow from the cited ordinary \(C^3\) identities.
+\end{proof}
+
+In the inward passages, the ratio of height to the axis polynomial
+decays on the action clock. The next lemma estimates the resulting
+integral without discarding the dependence on its terminal clock time.
+
+\begin{lemma}[Stable ratio integrals with moving endpoints]
+\label{deg:lem-stable-ratio-ledger}
+At fixed action clock \(q\), let a phase field \(D\) commute with
+\(\partial_q\). For \(\kappa>0\), consider
+\[
+ W_q=\mathcal F=W\{- (1+\omega W)/(1+QW)+\kappa H\},
+ \qquad W(0)=\ell_0,
+ \qquad L=(Q-\omega)W/(1+QW).
+\]
+Suppose \(Q,\kappa H,\omega\) and their required two clock rows are
+uniformly bounded, \(1+QW\) is a positive unit, and both
+\(\mathcal F/W\) and \(\mathcal F_W\) are at most \(-c_0<0\)
+on \(0\le W\le\ell_0\). For some \(0\le\rho\le\rho_0\),
+assume the first three phase rows of \(\kappa H,Q,\omega\),
+and mixed rows containing a phase derivative of total order at most three,
+are bounded by
+\(C\rho e^{\alpha q}\), with \(\alpha<c_0/12\).
+There are an integer \(N\) and \(0<c<c_0/2\), depending only on the
+stated bounds, such that
+\begin{equation}\label{deg:stable-ratio-fixed-clock}
+ 0<W\le\ell_0e^{-c_0q},\qquad
+ |D^jW|+|D^jL|\le C\rho(1+q)^Ne^{-cq},\quad1\le j\le3.
+\end{equation}
+The needed mixed rows obey these bounds; pure clock rows have the
+same exponential bound without \(\rho\).
+For a moving \(T\), put \(T_j=D^jT\) and \(I_T=\int_0^T L\,dq\).
+All endpoint contributions are
+\begin{equation}\label{deg:stable-ratio-terminal-rows}
+ \begin{aligned}
+ DI_T={}&\int_0^T DL\,dq+L_TT_1,\\
+ D^2I_T={}&\int_0^T D^2L\,dq+2(DL)_TT_1+(L_q)_TT_1^2+L_TT_2,\\
+ D^3I_T={}&\int_0^T D^3L\,dq+3(D^2L)_TT_1
+       +3(DL_q)_TT_1^2+(L_{qq})_TT_1^3\\
+ &+3(DL)_TT_2+3(L_q)_TT_1T_2+L_TT_3 .
+ \end{aligned}
+\end{equation}
+If \(v_q=-\kappa P(v)/(vB(v))\), \(H=P'/(vB)\), and
+\(W=Y/P(v)\), its exact polynomial memory is
+\begin{equation}\label{deg:stable-ratio-polynomial-memory}
+ W(q)=\ell_0\frac{P(a)}{P(v(q))}e^{-q+I(q)},\qquad
+ Y_T=\ell_0P(a)e^{-T+I_T}=P(v_T)W(T).
+\end{equation}
+The corresponding rows of \(W(T)\) are the ordinary chain rule
+\(DW=W_D+W_qT_1\),
+\(D^2W=W_{DD}+2W_{Dq}T_1+W_{qq}T_1^2+W_qT_2\), and its
+third row with coefficients \(1,3,3,1,3,3,1\).
+Thus the interior integral contributions are \(O(\rho)\); the full
+moving-limit rows also retain their terminal contributions, which are at most
+\(C(1+T)^Ne^{-cT}(1+\sum_{j=1}^3|T_j|)^3\).
+The constants depend only on the stated coefficient bounds,
+\(c_0,\ell_0,\rho_0\), independently of the flight length.
+\end{lemma}
+\begin{proof}
+The negative logarithmic rate gives the first-exit bound for \(W\).
+Differentiate its equation three times. Each row has diagonal
+\(\mathcal F_W\); the explicit coefficient forcing is
+\(O(\rho e^{\alpha q}W)\), and other terms are products of lower
+rows. Successive variation of constants absorbs at most three
+coefficient growth factors into the fixed exponential decay and
+proves \eqref{deg:stable-ratio-fixed-clock}. Differentiating these
+equations in \(q\) gives the mixed rows. Leibniz differentiation and
+the ordinary chain rule give the terminal formulas.
+Since \(\partial_q\log P(v)=-\kappa H\), integrating the ratio
+equation gives \eqref{deg:stable-ratio-polynomial-memory}.
+\end{proof}
+
+When the radial route is fixed, the same decay controls ordinary
+derivatives with respect to the initial height, even for arbitrarily
+long flights.
+
+\begin{lemma}[Initial-height rows on a frozen ratio route]
+\label{deg:lem-fixed-route-height-rows}
+Consider the ratio equation and density \(\mathcal F,L\) of
+Lemma~\ref{deg:lem-stable-ratio-ledger}, with coefficients and radial
+endpoints fixed. On its full prescribed buffer \(0\le W\le\ell_0\),
+assume the stated positive-unit denominator, the two negative margins
+\(\mathcal F/W,\mathcal F_W\le-c_0<0\), and bounded
+\(Q,\omega,\kappa H\). Let \(W(0;w)=w\), and, for a fixed finite
+flight \(T\ge0\), put
+\[
+ \mathcal N_T(w)=\int_0^T L(q,W(q;w))\,dq,\qquad e_w=w\partial_w.
+\]
+Uniformly in \(T\) and \(0\le w\le\ell_0\), the ordinary extension
+at \(w=0\) satisfies
+\[
+ \mathcal N_T(0)=0,\qquad
+ |e_w^j\mathcal N_T(w)|\le Cw\quad(0\le j\le3),\qquad
+ \sum_{j=1}^3|\partial_w^j\mathcal N_T(w)|\le C.
+\]
+The normalized nonlinear unit \(e^{\mathcal N_T}\) and its reciprocal
+have bounded ordinary \(C^3\) norms. In the polynomial-memory setting,
+\(Y_T=Y_0e^{-T+\mathcal N_T(w)}\), with \(Y_0=P(v_0)w\).
+\end{lemma}
+\begin{proof}
+The buffer and negative logarithmic margin give
+\(0\le W(q;w)\le we^{-c_0q}\). Rational height differentiation
+bounds \(\mathcal F_{WW},\mathcal F_{WWW}\) and the first three
+height derivatives of \(L\). Apply the triangular equations
+\eqref{deg:scalar-moving-bell} to \(V_j=\partial_w^jW\), with
+\(V_1(0)=1\), \(V_2(0)=V_3(0)=0\). Successive variation of
+constants gives \(|V_j(q)|\le Ce^{-c_0q}\), \(1\le j\le3\).
+Every term in \(\partial_w^jL(q,W(q;w))\) contains a decaying
+variation, so its integral is uniformly bounded. Also \(|L|\le CW\)
+gives \(|\mathcal N_T|\le Cw\). The ordinary extension at zero and
+the expansion of \((w\partial_w)^j\) give the weighted rows.
+Exponentiation and
+\eqref{deg:stable-ratio-polynomial-memory} prove the final claims.
+\end{proof}
+
+After the long inward flight, a short central segment remains. Factoring
+out its linear propagator gives a nonlinear error controlled by the
+incoming height, uniformly as that propagator tends to zero.
+
+\begin{lemma}[Compact inward height continuation]
+\label{deg:lem-compact-height-continuation}
+For a frozen coefficient field, suppose the actual equation on a
+fixed segment, oriented from \(b>0\) to zero, is
+\(Y_v=A(v)Y+K(v,Y)Y^2\), with
+linear propagator \(m(b)=1\), \(0<m(v)\le1\). On its prescribed
+height buffer \(0\le Y\le h_0\), assume the ordinary height
+derivatives of \(K\) through order three are bounded by
+\(C/\kappa_c\), for a local parameter \(\kappa_c>0\).
+For \(0<y\le h_0/2\) and \(y/\kappa_c\) sufficiently small,
+its actual continuation satisfies
+\begin{equation}\label{deg:scalar-compact-propagator}
+ Y(0;y)=m(0)y e^{\mathcal N(y)},\qquad
+ |(y\partial_y)^j\mathcal N(y)|\le Cy/\kappa_c,\quad0\le j\le3.
+\end{equation}
+In composition with \(y=y(a)\), with the field, segment and
+\(\kappa_c\) fixed, put \(\Lambda_j=D^j\log y\) and
+\(e=y\partial_y\). The three rows of \(\mathcal N(y(a))\) are
+\(e\mathcal N\,\Lambda_1\),
+\(e^2\mathcal N\,\Lambda_1^2+e\mathcal N\,\Lambda_2\), and
+\(e^3\mathcal N\,\Lambda_1^3+3e^2\mathcal N\,\Lambda_1\Lambda_2
++e\mathcal N\,\Lambda_3\). No reciprocal bound on \(m(0)\) is used.
+Constants depend only on the stated height bounds and fixed segment,
+independently of the extracted multiplier.
+\end{lemma}
+\begin{proof}
+Write \(Y=m(v)yu(v;y)\). The integral
+equation for \(u\), with \(u(b)=1\), has coefficients and its first
+three Euler forcings bounded by \(Cy/\kappa_c\) on
+\(1/2\le u\le2\). First exit and three triangular integral
+estimates give \(u^{\pm1}\le C\) and
+\(|e^j\log u(0;y)|\le Cy/\kappa_c\). The displayed composition
+rows follow by the chain rule.
+\end{proof}
+
+\input{spectral-exterior}
+
+\subsection{Exact identities on moving polynomial sections}
+\label{subsec:deg-moving-sections}
+
+For the cubic, quadratic and degree-drop scalings consider
+\begin{equation}
+ \dot\xi=-\epsilon\{P(\xi)+Q(\xi)Y\},
+ \qquad
+ \dot Y=-Y\{\xi B(\xi)+\zeta(\xi)Y\},
+ \label{deg:tail-field}
+\end{equation}
+where \(\epsilon>0\) and \(B,Q\) are positive units, with transverse sections
+\begin{equation}
+ Y=\ell_0P(\xi),\qquad 0<\ell_0\ll1,
+ \label{deg:moving-section}
+\end{equation}
+Put
+\[
+ A(\xi)=\int^\xi {xB(x)\over P(x)}\,dx,
+ \qquad \mathcal D={P(\xi)\over \xi B(\xi)}\partial_\xi .
+\]
+
+\begin{lemma}[Exact moving-section identities]\label{deg:lem-moving-lip}
+On a positive graph of \eqref{deg:tail-field} with
+\(P>0\) and \(P+QY>0\), put \(W=Y/P\). Then
+\begin{equation}
+ {d\over d\xi}\left\{
+  \epsilon\log Y-A(\xi)\right\}
+ ={W\over1+QW}\left\{\zeta-Q{\xi B\over P}\right\}.
+ \label{deg:exact-action-cocycle}
+\end{equation}
+If this graph joins the two lips at \(u\) and \(-r\), normalize
+\(A(0)=0\) and write \(A_+(u)=A(u)\), \(A_-(r)=A(-r)\).
+With \(P_+(u)=P(u)\), \(P_-(r)=P(-r)\), one has
+\begin{equation}
+ A_+(u)-A_-(r)
+ =\epsilon\{\log P_+(u)-\log P_-(r)+R(u,r)\}.
+ \label{deg:action-matching}
+\end{equation}
+where \(\epsilon R\) is the integral of the right-hand side of
+\eqref{deg:exact-action-cocycle} from \(u\) to \(-r\) along this
+graph. The two endpoint polynomials and the whole integral are retained.
+
+For \(f=dY/d\xi\), its nonlinear derivatives and the inward
+action density \(dq=|dA|/\epsilon\), away from \(\xi=0\), are
+\begin{equation}
+ \partial_Y^nf=(-1)^{n-2}n!
+ \frac{PQ^{n-2}(\zeta P-\xi BQ)}{\epsilon(P+QY)^{n+1}},
+ \quad n\ge2,\qquad
+ |d\xi|=\frac{\epsilon P}{|\xi|B}\,dq.
+ \label{deg:bell-density}
+\end{equation}
+For a moving initial curve \((\xi_l(x),Y_l(x))\), let
+\(Y_T(x)\) be its graph value at a fixed terminal abscissa and let
+\(\varphi_T\) be a fixed regular terminal adapter. Write
+\(J\) for the scalar first variation. Then
+\begin{equation}
+ \frac d{dx}\varphi_T(Y_T(x))
+ =\varphi_T'(Y_T)J(\xi_T,\xi_l)
+                 \{Y_l'(x)-f(\xi_l,Y_l)\xi_l'(x)\}.
+ \label{deg:moving-first-variation}
+\end{equation}
+In the label \(b=-x^2/2\), this derivative is multiplied by
+\(-1/x\). Coefficient-only affine calibrations leave logarithmic
+slope derivatives unchanged. The quantitative bounds for the actual
+polynomial passages are established separately below and in
+Appendix~\ref{app:moving-section-bookkeeping}.
+\end{lemma}
+
+\begin{proof}
+Division of the graph equation and integration give the first two
+identities; rational differentiation gives \eqref{deg:bell-density}.
+The initial variation at fixed abscissa is
+\(Y_l'-f_l\xi_l'\); its scalar variational equation gives
+\eqref{deg:moving-first-variation}. The remaining statements are
+the ordinary chain rule.
+\end{proof}
+
+\subsection{A compact-spectrum local Dulac estimate}
+
+The following local Dulac estimate is used in the compact positive-ratio
+passage and in the stopped determinant chart. Its logarithmic remainder
+bounds remain uniform when the characteristic ratio crosses one.
+
+\begin{lemma}[Uniform local positive Dulac estimate]
+\label{lem:uniform-positive-dulac}
+Consider a compact analytic family of hyperbolic saddles with fixed compatible
+entrance and exit sections.  Suppose the positive tangential and normal rates
+\(L,\nu\) are bounded above and away from zero and
+\mbox{\(\rho=\nu/L\in[\rho_0,\rho_1]\Subset(0,\infty)\)}. Writing \(\theta\) for
+the family parameter, in a positive local coordinate \(H\) which vanishes at
+the incoming separatrix, the local Dulac map has the form
+\[
+ \mathcal D(H)=c_\theta H^\rho e^{\mathcal R_\theta(H)},
+ \qquad c_\theta>0.
+\]
+For every \(0<\epsilon<\min(1,\rho_0)\), there is a uniform constant
+\(C<\infty\) such that
+\[
+ \left|(H\partial_H)^j\mathcal R_\theta(H)\right|
+ \le C H^\epsilon(1+|\log H|),
+ \qquad 0\le j\le2.
+\]
+The estimate includes \(\rho=1\), and all local coordinate changes preserve
+the positive-time orientation.
+\end{lemma}
+\begin{proof}
+Straighten the invariant axes. A positive time factor gives
+\(u'=Lu\). Linearize the one-dimensional stable-axis equation and
+then replace \(v\) by \(ve^{h(u)}\), where
+\(h'(u)=(b(u,0)-\nu)/(Lu)\). The quotient is removable at zero.
+The remaining normal-coefficient defect vanishes on both axes, so
+on one common small rectangle the equation is
+\[
+ u'=Lu,\qquad v'=-\nu v(1+uvG_\theta(u,v)),
+ \qquad \rho=\nu/L\in[\rho_0,\rho_1].
+\]
+These changes use no division by \(\rho-1\), preserve positive
+time, and have common finite derivative bounds on the compact family.
+Take the entrance \((H,v_0)\) and the exit \(u=u_0\).
+All phase derivatives below hold the coefficients and these cuts fixed.
+Put \(\mathsf B=-\rho vG_\theta\). The graph equation is
+\[
+ \partial_u\log v=-\rho/u+\mathsf B(u,v).
+\]
+After shrinking the rectangle, \(v\) decreases. Its integral
+equation first gives \(v(u;H)\le C(H/u)^\rho\), and then
+\[
+ I_\rho(H):=H^\rho\int_H^{u_0}u^{-\rho}\,du
+ \le CH^{\min(1,\rho)}(1+|\log H|).
+\]
+The bound is uniform through \(\rho=1\); no separate bound for
+\((1-\rho)^{-1}\) is taken.
+
+Let \(\mathcal E=H\partial_H\), \(P=\mathcal E\log v\), and
+\(Z=\mathcal E^2\log v\), at fixed \(u\). Differentiating the
+moving initial condition \(v(H;H)=v_0\), as in
+\eqref{deg:scalar-moving-bell}, gives
+\[
+ \begin{aligned}
+ P(H)&=\rho-H\mathsf B(H,v_0),& Z(H)&=O(H),\\
+ P_u&=\mathsf B_{\log v}P,
+ &Z_u&=\mathsf B_{\log v}Z+\mathsf B_{\log v\log v}P^2.
+ \end{aligned}
+\]
+The two logarithmic height derivatives of \(\mathsf B=-\rho vG\)
+are \(O(v)\). Variation of constants therefore bounds \(P>0\) and gives
+\( |P(u_0)-\rho|+|Z(u_0)|\le C(H+I_\rho(H))\).
+For
+\[
+ \mathcal R(H)=\log\frac{v(u_0;H)}{v_0(H/u_0)^\rho},
+\]
+one has \(\mathcal E\mathcal R=P(u_0)-\rho\) and
+\(\mathcal E^2\mathcal R=Z(u_0)\); its value is bounded by
+the integral of \(\mathsf B\). These prove the stated estimate
+for every fixed \(0<\epsilon<\min(1,\rho_0)\).
+The endpoint \(H=0\) is a separatrix endpoint, not a through orbit.
+\end{proof}

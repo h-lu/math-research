@@ -1,0 +1,274 @@
+\subsection{The fixed-exit continuation}
+\label{sec:fixed-exit-comparison}
+
+For nonzero limiting action $\Theta=\beta\log V$, orbits of
+\eqref{fx:pd}--\eqref{fx:graph} leave the small-height region before
+the negative saddle. At the fixed exit $u_c\in(-1,u_-)$ the height
+$W=w(u_c)$ provides a regular coordinate. Shooting backwards from this
+section constructs the scalar inverse phase and its $C^2$ limit without
+using the positive return-section map.
+
+\subsection{The action interval and the exit height}
+
+For \(J(u)=\exp\int_{u_+}^u L/h\), put
+\begin{equation}\label{fx:rho-gamma}
+ \rho=\frac{h(u_-)J(u)}{J(u_-)h(u)},\qquad
+ \Gamma_\beta=-\beta\log\rho,\qquad H_\beta=h/\beta .
+\end{equation}
+The exact partial fractions are
+\begin{equation}\label{fx:partial-fractions}
+ \frac Lh=-\frac1{\beta(u+1)}
+       +\frac1{\chi(a-u)}
+       -\frac{1+1/\beta+1/\chi}{c-u}.
+\end{equation}
+Thus
+\begin{equation}\label{fx:gamma-derivative}
+ \Gamma_\beta'=-L/H_\beta+\beta H_\beta'/H_\beta,\qquad
+ H_\beta=\frac{b_-(u+1)(a-u)(c-u)}{(1+a)(1+c)} .
+\end{equation}
+On negative compact intervals this tends in \(C^3\) to
+\begin{equation}\label{fx:limit-functions}
+ H_{0,c}=\frac{(-u)(1+u)(c-u)}{1+c},\qquad
+ \Gamma_c(u)=\log\frac{(1+u)(c-u_-)}{(1+u_-)(c-u)} .
+\end{equation}
+Indeed, \(\Gamma_c'=-u/H_{0,c}\), and both actions vanish at \(u_-\).
+The limit action labels the point at which an orbit leaves the
+small-height region. From that point to the fixed exit, the limiting
+graph equation is \(w_u=u\). These two limits will parametrize the
+inverse transition.
+
+At the shrinking positive cut, integration of
+\eqref{fx:partial-fractions} gives
+\[
+ \beta\log J(u_-)=
+ \log\frac{(1+u_+)(c-u_-)}{(1+u_-)(c-u_+)}
+ +q\log\frac{(a-u_+)(c-u_-)}{(a-u_-)(c-u_+)}
+ +\beta\log\frac{c-u_-}{c-u_+}.
+\]
+By \eqref{fx:log-smallness},
+\begin{equation}\label{fx:gamma-endpoint}
+ \Gamma_\beta(u_+)\longrightarrow
+ \Gamma_{-,c}:=\Gamma_c(0)=
+             \log\frac{c-u_-}{c(1+u_-)}>0 .
+\end{equation}
+Also \((L-h')'=1+o(1)>0\); hence
+\(\Gamma_\beta'=-\beta(L-h')/h\) has at most one zero, a maximum.
+
+Choose \(0<\Delta<\frac14\inf_c\Gamma_{-,c}\), and set
+\[
+ r_1=\Gamma_c^{-1}(\Gamma_{-,c}-\Delta),\qquad
+ r_1^\sharp=\Gamma_c^{-1}(\Gamma_{-,c}-3\Delta/4).
+\]
+Choose fixed cuts \(u_c,u_R\) and \(\epsilon>0\) with
+\[
+ -1<u_c<u_--2\epsilon,\qquad
+ r_1^\sharp(c)<u_R<0,\qquad
+ \Gamma_c(u_R)>\Gamma_{-,c}-\Delta/2 .
+\]
+These choices are uniform in the compact \(c\)-family. Define
+\begin{equation}\label{fx:W-limit}
+ \mathcal W(r)=\frac{u_c^2-r^2}{2},\quad
+ \mathcal J_c=\mathcal W([u_-,r_1]),\quad
+ \mathcal J_c^\sharp=\mathcal W([u_--\epsilon,r_1^\sharp]).
+\end{equation}
+They are positive compact intervals with a uniform strict inclusion.
+
+\subsection{Convergence of the inverse transition}
+
+We first work only with the scalar equation \eqref{fx:graph}, without
+assuming any positive return-section map. Let \(\mathcal K_c\) be a
+compact interval strictly inside \((0,u_c^2/2)\), with uniform endpoint
+margins, and prescribe \(w(u_c;W)=W\) for \(W\in\mathcal K_c\).
+Write
+\[
+ r(W)=-\sqrt{u_c^2-2W},\qquad
+ d_{\mathcal K}=\inf_{c,W\in\mathcal K_c}
+       \{\Gamma_{-,c}-\Gamma_c(r(W))\}>0.
+\]
+Increase \(u_R<0\) towards zero if necessary, so that it lies beyond
+all \(r(W)\) and
+\(\Gamma_c(u_R)>\Gamma_{-,c}-d_{\mathcal K}/4\).
+We follow the backward shot through its positive-height part, the thin
+transition layer, and the remaining small-height part. The next three
+first-exit arguments continue it to \(u_+\) and estimate its phase.
+They apply, in particular, to
+\(\mathcal J_c^\sharp\) and to any fixed larger chord still inside
+\((0,u_c^2/2)\). Define
+\begin{equation}\label{fx:extracted-phase}
+ \phi_\beta(u;W)=\beta\log\frac{w(u;W)}{h(u)}+\Gamma_\beta(u).
+\end{equation}
+Its value at \(u_+\) gives the exact inverse phase
+\begin{equation}\label{fx:inverse-phase}
+ \Psi_\theta(W)=\phi_\beta(u_+;W)-\beta\log\lambda
+                 =\beta\log V=:\Theta .
+\end{equation}
+The differential equation for this phase is
+\begin{equation}\label{fx:phase-equation}
+ \phi_\beta'=\frac{r(Eh-KL)}{H_\beta(1+Kr)},\qquad r=w/h .
+\end{equation}
+The phase changes by only a small amount after the orbit has entered
+the small-height part. This will allow the leaving point of the limiting
+graph to determine the inverse phase.
+
+\begin{lemma}\label{fx:lem-fast-inverse}
+For fixed \(\omega_0>0\), the graph meets \(w=\beta\omega_0\)
+at a unique point \(\sigma_\beta(W)<u_R\), and, uniformly on
+\(\mathcal K_c\),
+\[
+ \|\sigma_\beta-\mathcal W^{-1}\|_{C^2}
+     \le C(\omega_{\rm d}+\beta|\log\beta|)\longrightarrow0 .
+\]
+Here \(\omega_{\rm d}\) bounds in \(C^3\) the differences
+\(H_\beta-H_{0,c},K-1,L-u,E\) on the fixed negative rectangle.
+\end{lemma}
+\begin{proof}
+On that rectangle \(L+Ew\le-\ell<0\).
+The inverse graph, \(U_\beta(W;W)=u_c\), satisfies
+\[
+ \partial_w U_\beta
+       =\frac K{L+Ew}+\frac{\beta H_\beta}{w(L+Ew)} .
+\]
+Between \(\beta\omega_0\) and the fixed upper height, its
+right side differs from \(1/u\) in \(L^1_w\) by at most
+\(C\omega_{\rm d}+C\int_{\beta\omega_0}^{W_{\max}}\beta\,dw/w\).
+Gronwall's inequality and the first two triangular variational
+equations give the asserted \(C^2\) bound.
+To justify existence, apply this estimate only up to a first exit
+from a fixed rectangle about the limiting graphs. Their endpoints
+\(r(W)<u_R\) stay strictly inside,
+so an exit is impossible. Negative nonzero speed at the selected
+height gives uniqueness and transversality.
+\end{proof}
+
+\begin{lemma}\label{fx:lem-corner}
+Uniformly on \(\mathcal K_c\),
+\[
+ \|\phi_\beta(u_R;W)-\Gamma_\beta(\sigma_\beta(W))\|_{C^2}
+       \le C\beta .
+\]
+\end{lemma}
+\begin{proof}
+On this fixed negative rectangle,
+\(g_\beta=-(L-h')/H_\beta\ge g_0>0\), and the exact normal equation is
+\[
+ \beta r'=\frac{r\{-g_\beta+\beta r(E-KH_\beta'/H_\beta)\}}{1+Kr}.
+\]
+Set \(\zeta=(u-\sigma)/\beta\), so \(r_\zeta=f_\beta\),
+\(r(0;\sigma)=\omega_0/H_\beta(\sigma)\). On the fixed bounded
+\(r\)-interval, \(f_r\le-a_0<0\),
+\(|f_u|+|f_{uu}|\le Cr\), and \(|f_{ur}|+|f_{rr}|\le C\).
+The triangular variation argument of
+Lemma~\ref{lem:scalar-normalization}, with these decaying parameter
+forcings, gives
+\[
+ |\partial_\sigma^j r|\le C_j(1+\zeta^j)e^{-c\zeta},\qquad j=0,1,2.
+\]
+A first-exit argument retains the rectangle up to \(u_R\).
+For \(G(\sigma,\zeta)=F_\beta(\sigma+\beta\zeta,r)\), where
+\(F_\beta\) is the right side of \eqref{fx:phase-equation}, put
+\(T=(u_R-\sigma)/\beta\), \(J=\beta\int_0^T G\,d\zeta\).
+The moving endpoint must be retained:
+\[
+ J_\sigma=\beta\int_0^T G_\sigma\,d\zeta-G(\sigma,T),\qquad
+ J_{\sigma\sigma}=\beta\int_0^T G_{\sigma\sigma}\,d\zeta
+ -2G_\sigma(\sigma,T)+\beta^{-1}G_\zeta(\sigma,T).
+\]
+The integral terms are \(O(\beta)\); all boundary terms are
+exponentially small because \(u_R-\sigma\ge d_0>0\).
+Thus \(J=O_{C^2_\sigma}(\beta)\). At the crossing,
+\(\phi_\beta-\Gamma_\beta
+=\beta\log(\omega_0/H_\beta(\sigma_\beta))=O_{C^2_W}(\beta)\).
+Compose with the preceding \(C^2\) crossing map.
+\end{proof}
+
+\begin{lemma}\label{fx:lem-flat-part}
+For some fixed \(d>0\) and finite integer \(n\),
+\[
+ \|\phi_\beta(u_+;W)-\phi_\beta(u_R;W)\|_{C^2}
+          \le C\beta^{-n}e^{-d/\beta}.
+\]
+\end{lemma}
+\begin{proof}
+The strict cuts and preceding estimates give the fixed phase gap
+\[
+ \phi_\beta(u_R;W)\le\Gamma_{-,c}-3d_{\mathcal K}/4,\qquad
+ \inf_{[u_R,u_+]}\Gamma_\beta\ge\Gamma_{-,c}-d_{\mathcal K}/2.
+\]
+The second bound follows from endpoint convergence and the fact that
+\(\Gamma_\beta\) has at most one critical point, a maximum.
+Equation~\eqref{fx:partial-fractions} gives bounded \(L/H_\beta\):
+at the shrinking cut its only potentially large term satisfies
+\(q/(a-u)\le q/(a\eta_+)\le C\). Thus \(F_\beta\) and its first
+two \(r\)-derivatives are bounded; ordinary \(u\)-derivatives at
+that cut are not needed.
+
+Since \(h,K>0\), the shot continues while it stays in the rectangle.
+The identity \(r=e^{(\phi_\beta-\Gamma_\beta)/\beta}\) and the phase
+gap give \(r\le Ce^{-d/\beta}\): up to a first loss, the phase change
+is at most \(C\int r\,du\), too small to close half the gap.
+For its first two phase variations,
+\(r_\phi=r/\beta\), \(r_{\phi\phi}=r/\beta^2\).
+The scalar triangular variation argument therefore has exponentially
+small integrated coefficients times finite powers of \(\beta^{-1}\).
+It preserves the bounded \(W\)-variations at \(u_R\) and gives the
+claimed \(C^2\) error.
+\end{proof}
+
+\begin{proposition}\label{fx:prop-inverse-phase}
+The scalar backward-shooting solutions are defined up to \(u_+\),
+and, jointly in the compact \(c\)-family, on every chord
+\(\mathcal K_c\) above,
+\begin{equation}\label{fx:phase-limit}
+ \Psi_\theta\longrightarrow
+       \Psi_{0,c}=\Gamma_c\circ\mathcal W^{-1}\quad\hbox{in }C^2 .
+\end{equation}
+More precisely, for the coefficient error \(\omega_{\rm d}\) in
+Lemma~\ref{fx:lem-fast-inverse},
+\begin{equation}\label{fx:phase-error-budget}
+ \|\Psi_\theta-\Psi_{0,c}\|_{C^2(\mathcal K_c)}
+ \le C\{\omega_{\rm d}+\beta(1+|\log\beta|)\}.
+\end{equation}
+Using \(\mathcal K_c=\mathcal J_c^\sharp\), its inverse
+\(\mathcal H_\theta\) is defined on
+\begin{equation}\label{fx:action-band}
+ 0\le\Theta\le\Gamma_{-,c}-\Delta
+\end{equation}
+and satisfies \(0<c_H\le\mathcal H_\theta'\le C_H\) and
+\(|\mathcal H_\theta''/\mathcal H_\theta'|\le C_H\).
+\end{proposition}
+\begin{proof}
+The exact derivative \eqref{fx:gamma-derivative}, together with
+\(\Gamma_\beta(u_-)=\Gamma_c(u_-)=0\), gives
+\(\Gamma_\beta-\Gamma_c=O_{C^3}(\omega_{\rm d}+\beta)\)
+on the fixed negative interval.
+Combining the three estimates in \eqref{fx:inverse-phase} and composing
+with the uniformly \(C^2\) crossing \(\sigma_\beta(W)\) gives
+\eqref{fx:phase-error-budget}; the exponentially small remainder
+is absorbed into \(O(\beta)\). All derivatives here are in \(W\)
+with the coefficients fixed.
+For \(r=\mathcal W^{-1}(W)\),
+\(\Psi_{0,c}'(W)=1/H_{0,c}(r)>0\) with uniform upper and lower
+bounds. The larger intervals in \eqref{fx:W-limit} give a
+fixed image margin around \eqref{fx:action-band}.
+The uniform inverse function theorem applies. Explicitly,
+\[
+ u_{*,c}(\Theta)=
+ \frac{c(1+u_-)e^\Theta-(c-u_-)}
+      {(1+u_-)e^\Theta+(c-u_-)},\qquad
+ \mathcal H_{0,c}(\Theta)=\frac{u_c^2-u_{*,c}(\Theta)^2}{2}.
+\]
+In particular, \(\Theta=0\) has a positive interior height on
+the fixed exit section.
+\end{proof}
+
+The strict gap between the fixed-exit action endpoint and a negative
+axis cut is
+\begin{equation}\label{fx:overlap-gap}
+ \Gamma_{-,c}-\Gamma_c(-\sigma)
+    =\log\frac{c+\sigma}{c(1-\sigma)}>0,\qquad 0<\sigma<1 .
+\end{equation}
+Proposition~\ref{p2:prop-finite-v-fe-actual-budget} uses this gap to
+place the fixed-exit construction and the bounded-height construction
+on overlapping actual receivers. It then proves the completed-return
+curvature estimate on their union, which is the physical interval used
+by the coefficient cover.

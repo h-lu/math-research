@@ -1,0 +1,282 @@
+\subsection{Counting zeros of the return displacement}
+\label{sec:direct-zero-counting}
+
+We count distinct zeros of \(\Delta_p\) on an interval of central
+heights \(h\). Multiplication by a nonvanishing factor or a regular
+monotone change of height coordinate preserves their number. To relate
+the critical points of the displacement to the endpoint slopes, put
+\(m_\sigma=hI_{\sigma,h}>0\) and define
+\begin{equation}
+\label{eq:direct-completed-log-ratio}
+ \mathcal L=\log\left[\Pi_p'(I_-)\frac{m_-}{m_+}\right],
+ \qquad
+ \Delta_p'(h)=I_+'(h)(\e^{\mathcal L}-1).
+\end{equation}
+We express the crossing directions in a logarithmic coordinate that
+increases as the central height decreases:
+\begin{equation}
+\label{eq:direct-source-clock-convention}
+ T=-c_T\log(h/h_{\rm ref}),\qquad
+ \partial_T=-\frac{h}{c_T}\partial_h,\qquad
+ m_\sigma=-c_T I_{\sigma,T},
+\end{equation}
+where \(c_T>0\) and \(h_{\rm ref}>0\) depend only on the
+parameters and are held fixed when differentiating in \(h\). The
+height-range covers are ordered by increasing \(T\), hence decreasing \(h\).
+Changing these scales replaces \(T\) by \(c_1T+c_2\), with
+\(c_1>0\) constant for fixed parameters. This preserves zero-crossing
+directions and the sign of curvature at a critical point. We write
+\(\mathcal L(T)\) for the same slope ratio in this coordinate.
+
+By \eqref{eq:direct-completed-log-ratio}, a bound of \(n\) for the
+zeros of \(\mathcal L\) on one interval of central heights gives at
+most \(n+1\) zeros of \(\Delta_p\), by Rolle's theorem. This bound
+is uniform in the additive constant of \(\Delta_p\). It remains to
+combine estimates from adjacent height ranges without losing their
+crossing directions. The next lemma also allows a zero at a strict
+maximum.
+
+\begin{lemma}[Ordered zero crossings]
+\label{lem:direct-oriented-zero-count}
+Let \(f\in C^2(J)\), where \(J\) is an interval. If every
+critical point of \(f\) satisfies \(f''<0\), then \(f\) has
+at most one critical point and at most two distinct zeros.
+More generally, suppose \(J\) has an ordered cover by an initial,
+middle, and final interval, with overlaps allowed and any of these
+intervals possibly empty. Assume that
+\begin{enumerate}[label=(\roman*)]
+\item every zero in the initial interval has \(f'>0\);
+\item every critical point in the middle interval has \(f''<0\);
+\item every zero in the final interval has \(f'<0\).
+\end{enumerate}
+Then \(f\) has at most two distinct zeros on \(J\).
+If every zero on \(J\) has the same strict derivative sign,
+there is at most one. An interval on which \(f\) never vanishes
+may be included in either end interval.
+\end{lemma}
+
+\begin{proof}
+At a zero of \(f'\) with \(f''<0\), the derivative crosses
+strictly from positive to negative. Two such crossings would require
+an intervening zero of \(f'\) that is not a downward crossing.
+Thus \(f\) is monotone or increases and then decreases. It has at
+most two zeros; when there are two, an upward crossing is followed by
+a downward crossing. A zero at the critical point is a strict maximum
+and is the only zero. The same argument gives at most one zero when
+\(f'\) has the same strict sign at every zero of \(f\).
+
+For the ordered cover, choose cuts in the overlaps and assign each
+shared endpoint to only one adjacent interval. In the initial interval
+zeros cross upward; in the middle interval they occur in the order
+just proved; in the final interval they cross downward. Two upward
+crossings require an intervening downward crossing, and two downward
+crossings require an intervening upward crossing. Either configuration
+contradicts the permitted crossing directions and their order. A zero
+at a middle maximum likewise excludes zeros in both end intervals.
+Hence the only possible pair consists of an upward crossing followed
+by a downward crossing.
+\end{proof}
+
+\begin{samepage}
+\begin{corollary}[Ordered cover count]
+\label{cor:ordered-cover-zero-count}
+Let \(J\) be an interval of central heights on which \(\mathcal L\) is
+\(C^2\), and let \(T\) be a logarithmic height coordinate as in
+\eqref{eq:direct-source-clock-convention}. If \(J\) has an ordered cover,
+in increasing \(T\), satisfying the hypotheses of
+\cref{lem:direct-oriented-zero-count} for \(f=\mathcal L\), then
+\(\Delta_p\) has at most three distinct zeros on \(J\). If every zero of
+\(\mathcal L\) on \(J\) has the same strict crossing direction, then
+\(\Delta_p\) has at most two.
+\end{corollary}
+\end{samepage}
+
+\begin{proof}
+By \cref{lem:direct-oriented-zero-count}, \(\mathcal L\) has at most two
+zeros on \(J\), and at most one in the second case. Since
+\(\Delta_T=-(m_+/c_T)(\e^{\mathcal L}-1)\) with \(m_+>0\), the critical
+points of \(\Delta_p\) are the zeros of \(\mathcal L\). Rolle's theorem
+gives the assertion.
+\end{proof}
+
+\input{direct-sections/figure-ordered-cover}
+
+\Cref{fig:ordered-cover} shows the configuration allowed by
+\cref{cor:ordered-cover-zero-count}. In the applications, thresholds
+on the half-orbits define the pieces of the cover. The following
+lemma uses the graph order \eqref{eq:central-graph-order-new} to
+place these pieces in their order in \(T\).
+
+\begin{lemma}[Order of central heights]
+\label{lem:central-height-order}
+Let \(h_1<h_2\) be central heights whose half-orbits of the same sign
+\(\sigma\) are defined up to a common height \(z\). Then
+\(|\eta_\sigma(z;h_1)|>|\eta_\sigma(z;h_2)|\), and at every common radius
+the half-orbit through \(h_2\) has the larger height. Consequently, for
+fixed \(z_e,R>0\), the central heights with \(h\ge z_e\) or
+\(|\eta_+(z_e;h)|\le R\) form an interval that contains all larger
+heights, that is, an initial interval in \(T\). For a fixed height
+\(z_o\) and an increasing function \(g\), the central heights with
+\(g(|\eta_+(z_o;h)|)\ge c_{\rm th}\) form a final interval in \(T\). The
+intersection of such intervals with \(\cH_p\) is an interval.
+\end{lemma}
+
+\begin{proof}
+The first assertion is \eqref{eq:central-graph-order-new}, since
+\(|\eta_\sigma|=\sqrt{2U_\sigma}\). Each graph is strictly increasing in
+\(z\): the first-zero argument \eqref{eq:graph-slope-first-zero}
+gives \(zB-q>0\), using \(B+zB_z>0\) on the reduced normal-rate box.
+Hence, at a common radius, the graph through the larger central
+height has the larger height. The remaining assertions follow because
+\(T=-c_T\log(h/h_{\rm ref})\) decreases with \(h\) and
+\(\cH_p\) is an interval.
+\end{proof}
+
+\Cref{tab:ordered-covers} lists the ordered covers used in
+\cref{sec:contact-positive-offsets,sec:recurring-ranges,sec:primary-regimes,sec:quadratic-regimes,sec:direct-negative-annulus-buffer,sec:direct-negative-root-regimes}.
+The remaining regional statements reduce to
+\cref{prop:weak-root-passage}.
+\begin{table}[ht]
+\centering
+\small
+\caption{Ordered covers of \(\cH_p\), in increasing \(T\). ``Up'' and ``down'' mean that every zero of \(\mathcal L\) in the
+range crosses upward, respectively downward; ``max'' means that every
+critical point of \(\mathcal L\) in the range is a strict maximum. The
+bounds follow from \cref{cor:ordered-cover-zero-count} unless another
+lemma is named.}
+\label{tab:ordered-covers}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr.22\textwidth-8pt}
+                >{\raggedright\arraybackslash}p{\dimexpr.66\textwidth-8pt}
+                >{\raggedright\arraybackslash}p{\dimexpr.12\textwidth-8pt}@{}}
+\hline
+Proposition & Ranges and the property of \(\mathcal L\) & Zero bound for
+  \(\Delta_p\)\\
+\hline
+\ref{prop:direct-bounded-contact}
+  & large heights, \(\mathcal L<0\); compact heights, up, by
+    \cref{lem:direct-contact-scattering-ratio,lem:direct-derivative-ratio-count};
+    small heights, \(\mathcal L>0\)
+  & 2\\
+\ref{prop:direct-positive-offset}
+  & heights above the saddle collar, \(\mathcal L<0\); the collar, up, by
+    \cref{lem:one-logarithm-zero-count}
+  & 2\\
+\ref{prop:weak-root-passage}
+  & early heights and the root interval, up
+  & 2\\
+\ref{prop:direct-primary-negative}
+  & early heights, \(\mathcal L<0\); bounded radii, max, by
+    \cref{lem:curvature-criterion}; large exits, \(\mathcal L<0\)
+  & 3\\
+\ref{prop:direct-positive-quadratic}, compact drift
+  & early heights, up; the root interval, max, by
+    \cref{lem:curvature-criterion}
+  & 3\\
+\ref{prop:direct-positive-quadratic}, small \(b\)
+  & early heights and the root collar, up, by
+    \cref{lem:one-logarithm-zero-count} on the collar
+  & 2\\
+\ref{prop:direct-buffered-negative}
+  & early heights, up; annular exits, max, or \(\mathcal L<0\) for
+    small \(b\); later exits, down
+  & 3\\
+\ref{prop:direct-fold-bounded}, \ref{prop:direct-negative-fold}
+  & early heights, up; bounded outputs and escaped heights, max
+  & 3\\
+\ref{prop:direct-negative-separated}
+  & early heights, up; the root interval, max
+  & 3\\
+\hline
+\end{tabular}
+\end{table}
+
+Near a boundary root, taking the logarithm of a power-law derivative
+reduces the slope comparison to a constant, one logarithm, and a
+remainder. The next lemma uses the strict negative constant to control
+the zeros even as the coefficient of the logarithm tends to zero.
+
+\begin{samepage}
+\begin{lemma}[One logarithm]
+\label{lem:one-logarithm-zero-count}
+For \(c_0,C_e,\vartheta>0\) there is \(x_c\in(0,1)\) with the following
+property. Let \(G\in C^1((0,x_c))\) have the form
+\[
+ G(x)=c+\alpha\log x+e(x),\qquad c\le-c_0,\quad \alpha\in\R,\quad
+ |e(x)|+|xe'(x)|\le C_e x^\vartheta .
+\]
+If \(\alpha\ge0\), then \(G<0\). In general \(xG'(x)<0\) at every zero of
+\(G\), so \(G\) has at most one zero. If \(f\in C^1((0,x_c))\)
+and \(f'\) has the sign of \(G\), then \(f\) has at most
+two zeros.
+\end{lemma}
+\end{samepage}
+
+\begin{proof}
+Choose \(x_c\) so that \(C_e x^\vartheta<c_0/2\) and
+\(C_e x^\vartheta|\log x|<c_0/4\) for \(0<x<x_c\). If \(\alpha\ge0\), then
+\(G\le c+e<-c_0/2\). If \(\alpha<0\), every zero satisfies
+\(|\alpha||\log x|=|c+e(x)|\ge c_0/2\), and hence
+\(xG'(x)=\alpha+xe'(x)<-|\alpha|+|\alpha|/2<0\). All zeros are crossings
+in the same direction, so there is at most one. Rolle's theorem gives the
+bound for \(f\).
+\end{proof}
+
+\begin{remark}
+\label{lem:direct-frozen-section-sign}
+The auxiliary sections used in a local representation are held fixed
+during differentiation. If each point of an interval \(J\) has a
+neighborhood on which \(f\in C^1(J)\) is represented with auxiliary
+sections fixed for that neighborhood, then a sign of \(f'\) proved in
+these representations holds on all of \(J\).
+Endpoint preparations formed from the same \(I_\pm\) and \(\Pi_p\) on
+\(\widetilde W_\pm\) of \cref{lem:exterior-multiplier-new} represent the
+same \(\mathcal L\) in \eqref{eq:direct-completed-log-ratio}, including
+shared cuts.
+\end{remark}
+
+\subsection{Derivative-ratio comparisons on compact intervals}
+
+For analytic functions, the classical Wronskian criterion
+\cite[Lemma~2.3(b)]{GMV2011} identifies the extended complete
+Chebyshev property by nonvanishing successive Wronskians.
+For the three functions \(1,\phi,\psi\), the relevant identities are
+\[
+ W(1,\phi)=\phi',\qquad
+ W(1,\phi,\psi)=(\phi')^2(\psi'/\phi')'.
+\]
+For the compact-interval comparisons below, we need this argument to
+remain valid after adding a small \(C^2\) remainder. The next lemma
+records the strict margins on the denominator and the derivative
+of the ratio that make this possible.
+
+\begin{lemma}[Stable derivative-ratio count]
+\label{lem:direct-derivative-ratio-count}
+On a fixed compact interval \(J\), let \(\phi,\psi\in C^2(J)\),
+with \(\phi'\ge c_*>0\) and a uniform \(C^2\) bound on \(\phi\).
+Let \(0<\lambda_0\le\lambda\le\lambda_1\). If
+\[
+ |(\psi'/\phi')'|\ge c_*
+ \quad\hbox{on }J,
+\]
+then, for every constant \(D\) and every sufficiently small
+\(C^2\) remainder \(R\), the function
+\(g=D+\phi-\lambda\psi+R\) has at most two zeros on \(J\), and
+\((g'/\phi')'\) has the sign of \(-(\psi'/\phi')'\) on \(J\).
+If instead \(1-\lambda\psi'/\phi'\ge c_*\), then \(g'/\phi'>0\), and
+\(g\) has at most one zero.
+The remainder threshold depends only on the displayed uniform bounds.
+\end{lemma}
+
+\begin{proof}
+Dividing the derivative by \(\phi'>0\) gives
+\(g'/\phi'=1-\lambda\psi'/\phi'+R'/\phi'\).
+The derivative of the remainder term is bounded by
+\(C\|R\|_{C^2}\). In the first case, the continuous function
+\((\psi'/\phi')'\) has one sign and
+\(|\lambda(\psi'/\phi')'|\ge\lambda_0c_*\). Consequently,
+\((g'/\phi')'=-\lambda(\psi'/\phi')'+O(\|R\|_{C^2})\) has the sign of
+\(-(\psi'/\phi')'\) when the remainder is sufficiently small.
+The quotient is strictly monotone, so Rolle's theorem gives at most
+two zeros of \(g\). In the second case, the quotient remains positive,
+which gives at most one zero.
+\end{proof}

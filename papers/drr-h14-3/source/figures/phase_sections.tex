@@ -1,0 +1,32 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,font=\small]
+ \draw[->] (0,0)--(6.2,0) node[right] {$x$};
+ \draw[->] (0,0)--(0,3.15) node[above] {$Z$};
+ \draw[densely dashed] (0,2.5)--(5.7,2.5);
+ \node[above] at (2.3,2.5) {fixed horizontal section};
+ \node[left] at (0,2.5) {$Z_0$};
+ \draw[densely dashed] (0.4,0.12)--(3.3,0.7);
+ \node[above,align=center] at (3.9,0.85)
+       {$Y=0$ entry:\\$Z_e=\epsilon xA$};
+ \draw[densely dashed] (5.2,-0.18)--(5.2,2.8);
+ \node[below] at (5.2,-0.18) {$x_R$};
+ \draw[thick] (1,2.5)..controls(1.25,1.05)and(2.9,0.18)..(5.2,0.12);
+ \draw[->,thick] (1.4,1.45)--(1.6,1.17);
+ \fill (1,2.5) circle(1.5pt);
+ \fill (5.2,0.12) circle(1.5pt);
+ \draw[->,thin] (5.9,0.7) node[above] {$Z_{\rm out}$} --(5.25,0.13);
+ \node[below] at (2.3,-0.08) {selected weak graph: $Z=0$};
+ \node[align=left] at (8.5,1.8)
+       {$\dot x=\epsilon g(x)$\\$\dot Z=-Z\beta(x,Z)$\\[3pt]
+        passage requires\\$g>0$ on $[x_e,x_R]$};
+\end{tikzpicture}
+\caption{Section conventions in the straightened lower phase chart
+(schematic). The solid curve illustrates a forward normally contracting
+passage on its positive slow component; dashed lines are transverse
+sections, not invariant manifolds. A fixed horizontal entry and the
+finite $Y=0$ entry have different normal sizes. Their labels are retained
+in the estimates. The drawing assumes separated entry and exit; it does
+not represent a passage through a scalar root or a collision of sections.}
+\label{rw:fig:phase-sections}
+\end{figure}

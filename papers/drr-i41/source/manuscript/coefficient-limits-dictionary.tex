@@ -1,0 +1,70 @@
+\subsection{Coefficient-face decomposition and passage domains}
+\label{sec:coefficient-limits}
+\label{sec:parameter-degenerations}
+
+We use the variables of Section~\ref{sec:coefficient-regimes} to cover the
+coefficient space independently of the phase input. The exact coordinate
+dictionaries place each whole fibre in a regional physical receiver,
+where the criteria of Section~\ref{sec:counting-tools} apply. All compact
+blocks and auxiliary reserves are fixed before the common raw cap and
+final restrictions in Lemma~\ref{lem:common-raw-receiver}.
+
+\label{subsec:deg-exhaustion}
+
+\begin{lemma}[Small-source coefficient decomposition]
+\label{deg:lem-small-source-routing}
+There are \(p_*,s_*,\gamma_*>0\) such that, for
+\[
+ \alpha _0=-s^2<0,\qquad
+ 0<s\le s_*,\qquad |\gamma|\le\gamma_*,\qquad |p|\le p_*,
+\]
+the actual passage domains have the coefficient cover in
+Table~\ref{tab:coefficient-phase-cover} and
+Appendix~\ref{app:proof-small-source-routing}.
+The gamma, cubic, degree-loss, and remote-root coordinates are related
+by the exact dictionaries \eqref{deg:gamma-degree-dictionary},
+\eqref{deg:negative-far-dictionary}, and
+\eqref{deg:cubic-degree-dictionary}. Their coefficient ranges overlap
+strictly and all thresholds are fixed before the final raw-neighborhood
+and multiplier shrink. The face \(p\le0\) is covered directly by
+Lemma~\ref{deg:lem-raw-jacobian}.
+\end{lemma}
+
+The proof is in Appendix~\ref{app:proof-small-source-routing}.
+
+\begin{lemma}[Central height versus signed-trace gap]
+\label{lem:large-ratio-height}
+Fix \(K_0,L_c>0\).  Suppose
+\(\alpha _0=-s^2<0\), \(\alpha _1>0\), and put
+\[
+ p=\frac{\alpha _1}{s},\qquad r_L=\alpha _1,\qquad
+ v-\gamma=r_LX,\qquad z=r_L^2Y_L.
+\]
+For \(p\ge1\), every through graph satisfying
+\(Y_0=z(\gamma)/s^2\le K_0(1+p^2)\) obeys
+\(Y_L(L_c)\le B_c\), with \(B_c\) independent of
+\(p,s,\gamma\).  If the lower boundary of the through family has
+nonnegative one-sided height \(d_L\) on \(X=L_c\), then
+\begin{equation}
+ 0<\frac{\mathfrak g_L}{r_L^2}
+ =Y_L(L_c)-d_L\le B_c.
+ \label{deg:large-ratio-gap}
+\end{equation}
+\end{lemma}
+
+The proof is in Appendix~\ref{app:proof-large-ratio-height}.
+
+\begin{lemma}[Large-source trace domains]
+\label{deg:lem-large-source-routing}
+There exists \(P_*<\infty\) such that, for
+\[
+ \alpha _0=-s^2<0,\qquad p=\frac{\alpha _1}{s}\ge P_*,
+\]
+the part below the high-height threshold belongs to a fixed signed
+trace block with bounded actual gap. Its terminal and compact strict
+intervals have the overlap \eqref{deg:trace-overlap}; the remaining
+regular pieces have bounded complete derivative. The construction is
+uniform as \(p\to\infty\), without a bound on \(\gamma/s\).
+\end{lemma}
+
+The proof is in Appendix~\ref{app:proof-large-source-routing}.

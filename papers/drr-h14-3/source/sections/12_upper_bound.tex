@@ -1,0 +1,93 @@
+\section{Entrance counts and the uniform upper bound}
+\label{rw:upper-section}
+
+The physical interval of Section~11 carries one original-height
+derivative logarithm $K$. Its regular pieces have at most one crossing.
+The three-saddle and weak endpoint estimates alone allow four closing
+zeros, so they cannot give the sharp bound. The terminal arguments
+below use the sign left by the regular part to bound $K$ by two zeros
+on the whole interval. If a small cycle supplies the stronger entrance
+sign, the regular part is zero-free and the bound improves to one.
+These are the two counts required by Section~\ref{rw:counting}, in the
+fixed-field orientation of Section~2.
+
+We first derive the entrance from a small cycle and carry it along
+the regular chain. The primary and secondary terminal arguments then
+give the whole-interval count and the uniform upper bound.
+
+\input{sections/12a_small_entrance}
+\input{sections/12e_regular_chain}
+\input{sections/12b_primary_anchors}
+\input{sections/12d_secondary_anchors}
+\input{sections/12c_global_merge}
+
+\subsection{Verification of the four hypotheses}
+
+\begin{theorem}[Uniform upper bound]\label{rw:upper-bound}
+There are a fixed open spherical neighborhood $\mathscr U$ of
+$\Gamma$ and an open coefficient neighborhood $\mathscr V$ of
+$X_0$ in the twelve-dimensional space of quadratic vector fields
+such that every field in $\mathscr V$ has total Poincar\'e
+multiplicity at most three among its isolated affine periodic
+orbits contained in $\mathscr U$.
+\end{theorem}
+\begin{proof}
+First work in the five-parameter family \eqref{rw:family}.
+We check the four hypotheses with one common choice of constants.
+Choose the independent base-energy threshold and collar of Section~2.
+Fix the primitive finite derivative orders before choosing the slow
+sections and the larger comparison coefficient boxes of Sections~4--5.
+The endpoint preparations of Sections~7--10 and the refined compact
+cover of Section~11 then supply finitely many positive margins and
+section widths. Choose $p_\sharp\le\eta/8$ smaller than the finitely
+many bounds required there and in Proposition~\ref{rw:small-entrance}.
+Finally reduce the original coefficient neighborhood so that all
+scale cutoffs, relative errors, strict margins and absorptions hold.
+These choices precede both the field and any selection of its cycles.
+They are made on a reflection-symmetric neighborhood.
+
+Hypothesis \textup{(I)} is Proposition~\ref{rw:initial-joint-bound}
+together with the endpoint action bound of Section~7: the two initial
+classes have one joint bound two, and every parameter-dominant cycle
+has $p>\eta/8$. The branch $\rho=0$ belongs entirely to the initial
+classes. No scale quotient is used on that branch.
+
+For $\rho>0$ choose the fixed-field orientation $\ell\ge0$.
+Proposition~\ref{rw:outer-forcing} gives the original coefficient
+inequality \eqref{rw:counting:forcing} whenever its single monotone
+alternative does not already settle the remaining interval.
+Proposition~\ref{rw:saturation} then supplies the entire physical
+segment from either prescribed entrance to any selected outer cycle.
+It includes every intermediate nonperiodic comparison point and
+extends to neighborhoods of its regular endpoints. The central
+section construction of Section~2 identifies closing-zero orders
+with Poincar\'e multiplicities. This verifies \textup{(II)}.
+
+Propositions~\ref{rw:ordered-cover} and
+\ref{rw:coefficient-transport} put those same segments in the local
+comparison domains with the same fixed coefficient inequality.
+Proposition~\ref{rw:anchored-unions} bounds $K$ by two zeros on the
+whole union, and by one when the specified coefficient signs and
+entrance sign hold. This verifies \textup{(III)}. The count on this
+segment already includes the initial-class cycles lying there.
+Proposition~\ref{rw:small-entrance} proves the uniqueness, simplicity,
+coefficient ratio and regular-section sign required by \textup{(IV)}.
+
+Proposition~\ref{rw:conditional-three} now applies to every finite
+selection of counted cycles. Its proof adds actual outer and small
+witnesses when needed and does not assume that an outermost cycle
+among all cycles exists. Thus every finite selection has total
+multiplicity at most three. A larger or infinite isolated collection
+would contain a finite selection violating that bound.
+Identity returns contribute no isolated cycles.
+
+The exact reflection identities in Section~3 transfer the result
+back to the original orientation, using $p_{\rm ref}=q$ and the
+inverse return germ. They preserve multiplicity and the actual
+entrance condition; an unchanged original $p$ threshold is not
+required. Finally Proposition~\ref{rw:slice} supplies one smaller
+fixed spherical collar and one open neighborhood in the full
+coefficient space. Its near-identity affine conjugacies and positive
+time changes preserve isolated-cycle multiplicity. The resulting
+$\mathscr U,\mathscr V$ prove the theorem.
+\end{proof}

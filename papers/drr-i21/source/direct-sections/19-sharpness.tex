@@ -1,0 +1,823 @@
+\section{Sharpness and three hyperbolic limit cycles}
+\label{sec:sharpness}
+
+To attain the upper bound, we need three displacement zeros whose
+orbits approach the whole graphic. Two arise on a fixed compact
+interval of normalized exit radii: along a buffered coefficient path,
+the difference of the boundary actions gives a profile with a strict
+negative minimum, and varying \(A\) sets its additive constant to a
+small positive value. This produces two zeros. The third comes from
+the organizing contraction at a larger central height, beyond the
+compact exit interval. We must then show that this third height also
+tends to zero and that all three orbits converge to the whole graphic.
+These are the final steps of the proof below.
+
+\subsection{A buffered path and its action difference}
+
+Choose the coefficient path
+\begin{equation}
+\label{eq:sharpness-coefficient-path}
+ \nu=\min\{1,(C_0-1)/64\},\qquad a=(1+\nu)/4,\qquad
+ q_0=-as^5,\quad q_1=s^3,\quad q_2=-s,\qquad s>0.
+\end{equation}
+It lies in the buffered region \eqref{eq:direct-buffered-region}
+with \(b=1\), \(r=s\), and \(b^2-4a=-\nu<0\).
+The coefficient change \eqref{eq:direct-coefficient-bridge}
+determines \(\mu(s)=(\mu_1(s),\mu_2(s),\mu_3(s))\to0\).
+We keep \(C=C_0\) and write
+\[
+ p_s(A)=(A,C_0,\mu(s)).
+\]
+This path fixes the boundary drift through \(\mu\), while \(A\)
+remains free to adjust the connection splitting. In particular, the
+boundary actions are independent of this adjustment.
+
+Besides the limiting exterior multiplier \(\Lambda_0\) in
+\eqref{eq:exterior-multiplier-new}, put
+\[
+ \Lambda_{\rm b}=\exp(\pi/\sqrt\nu).
+\]
+The choice of \(\nu\) gives the multiplier margin
+\begin{equation}
+\label{eq:sharpness-multiplier-margin}
+ \Lambda_0\Lambda_{\rm b}^2\ge \e^{3\pi/2}>100.
+\end{equation}
+Indeed, the logarithm of the left-hand side is
+\(12\pi/\sqrt{C_0-1}\) when \(C_0-1\le64\), and
+\(2\pi-4\pi/\sqrt{C_0-1}\) otherwise.
+
+The following lemma identifies \(\Lambda_{\rm b}\) as the limit of the
+boundary-action multiplier. In the comparison with
+\cite[(2.13) and (6.8)]{HK2026} in
+\cref{sec:direct-buffered-compact-primary}, their
+\((\lambda_0^{\rm HK},\lambda_1^{\rm HK})=(-a,-1)\) give
+\(\Lambda_{\rm b}=\e^{-K_{\rm HK}}\).
+
+\begin{samepage}
+\begin{lemma}[Buffered action limit]
+\label{lem:buffered-action-limit}
+Along \eqref{eq:sharpness-coefficient-path}, the constants
+\(\mathfrak c_\sigma\) in \eqref{eq:direct-buffered-primary-action} satisfy
+\[
+ \mathfrak c_+(s)-\mathfrak c_-(s)\longrightarrow\frac{\pi}{\sqrt\nu},
+ \qquad
+ \Lambda_s:=\e^{\mathfrak c_+(s)-\mathfrak c_-(s)}\longrightarrow\Lambda_{\rm b}.
+\]
+They are independent of \(A\).
+\end{lemma}
+\end{samepage}
+
+\begin{proof}
+Here \(D_\sigma\), \(\mathcal A_\sigma\), \(L_\sigma\), \(\mathfrak c_\sigma\) and the
+reference radius \(v_b\) are those of \cref{sec:direct-buffered-negative}
+with \(r=s\) and \(b=1\); thus
+\(D_\sigma(t)=as^2-\sigma st+t^2-\sigma t^3R_q(\sigma st)\).
+The fixed positive margin \(\nu\) gives
+\(D_\sigma(t)\ge c_\nu(s^2+t^2)\) for \(0\le t\le v_b\).
+The same bound holds after replacing \(R_q\) by \(-1\).
+Since \(R_q(\sigma st)=-1+O(s)\), this replacement changes
+each action by at most
+\[
+ Cs\int_0^{v_b}\frac{t^4}{(s^2+t^2)^2}\dd t=O(s).
+\]
+
+We separate the remaining integral at a fixed
+\(0<\varepsilon<v_b\) to distinguish the action accumulated near
+the central section from the outer reference terms. On
+\([0,\varepsilon]\), deleting the
+remaining cubic term changes each action by at most \(C\varepsilon\).
+With \(t=sx\), the difference of the resulting inner actions tends to
+\begin{align}
+\label{eq:sharpness-action-integral}
+ c_\infty
+ &=\int_0^\infty x
+   \left(\frac1{x^2-x+a}-\frac1{x^2+x+a}\right)\dd x \notag\\
+ &=\int_0^\infty
+       \frac{2x^2}{x^4+(2a-1)x^2+a^2}\dd x
+   =\frac{\pi}{\sqrt{4a-1}}.
+\end{align}
+For the last equality, substitute \(x=\sqrt a\,u\), use
+\(u\mapsto1/u\) to equate the integrals with numerators \(u^2\)
+and \(1\), and apply \(y=u-1/u\) to their sum.
+Both ends of the integral converge.
+
+On \([\varepsilon,v_b]\), the action difference converges to
+\[
+ (L_+-L_-)(v_b)-(L_+-L_-)(\varepsilon).
+\]
+Subtract the reference terms in \(\mathfrak c_+-\mathfrak c_-\),
+first let \(s\to0\), and then let \(\varepsilon\to0\).
+The remaining outer term vanishes because
+\((L_+-L_-)(\varepsilon)=\log((1-\varepsilon)/(1+\varepsilon))\to0\).
+This proves the result.
+\end{proof}
+
+\subsection{Half-orbits with a prescribed exit}
+
+The action comparison must be realized by half-orbits with a common
+central height. We first construct each half-orbit backward from its
+exit; monotonicity of the resulting height then gives the matching.
+Fix \(J_+=[\rho_{\rm lo},\rho_{\rm hi}]\Subset(0,\infty)\) and
+\(J_-\Subset(0,1)\) whose interior contains
+\(f_{\Lambda_{\rm b}}(J_+)\). For a terminal radius
+\(x_e\in J_\sigma\), prescribe
+\(\eta=\sigma sx_e\), \(z=s^3\delta_{\rm an}x_e^2\) and integrate
+toward the central section. In the local variables \(t=|\eta|/s\)
+and \(y=z/s^3\), the exact radial equation is
+\[
+ y_t=\frac{ty}{s\{D_\sigma(t)+B(\sigma st,s^3y,p_s(A))y\}},
+ \qquad y(x_e)=\delta_{\rm an}x_e^2.
+\]
+The quadratic margin and the upper end of \(J_-\) give
+\(c(s^2+t^2)\le D_\sigma(t)\le C(s^2+t^2)\) on these fixed
+intervals. The backward solution remains positive and bounded,
+and reaches \(t=0\) with \(h_\sigma(x_e)=s^3y(0)>0\).
+Its radius and height remain in the normal-rate box for small \(s\),
+and \(q-zB<0\) identifies it with the corresponding half-orbit
+of the original field.
+
+The correction to its boundary action is exactly
+\[
+ \mathscr E_\sigma(x_e)
+ =\int_0^{x_e}\frac{tBy}{sD_\sigma(D_\sigma+By)}\,dt
+ =\int_{y(0)}^{y(x_e)}\frac{B}{D_\sigma}\,dy\ge0,
+\]
+with the coefficients evaluated along the half-orbit.
+Choose a fixed \(\kappa>0\) with \(2\kappa<\inf(J_+\cup J_-)\).
+The logarithmic growth rate on \([\kappa,2\kappa]\) is at least
+\(c/s\), so \(y(\kappa)\le C\e^{-c/s}\).
+The action correction up to \(\kappa\) is at most
+\(Cs^{-2}y(\kappa)\); thereafter it is at most \(Cy(x_e)\),
+since \(D_\sigma\ge c\kappa^2\). Thus
+\(\mathscr E_\sigma\) is uniformly bounded and
+\begin{equation}
+\label{eq:sharpness-common-source}
+ s\log(h_\sigma(x_e)/s^3)=-\mathcal A_\sigma(x_e)
+                   +sM_\sigma^0(x_e),\qquad
+ M_\sigma^0=\log(\delta_{\rm an}x_e^2)+\mathscr E_\sigma,
+ \qquad \|M_\sigma^0\|_{C^0}\le C.
+\end{equation}
+All constants may depend on \(J_\pm,C_0\) and the fixed \(A\)-interval;
+\(\delta_{\rm an}\) is held fixed before reducing \(s\).
+
+At \(t=K_0s\) the normalized height
+\(y/t^2\) is exponentially small. At any later crossing of
+\(y/t^2=\delta_{\rm an}\),
+\[
+ \frac{d\log(y/t^2)}{d\log t}
+ =\frac{t^2}{s(D_\sigma+B\delta_{\rm an}t^2)}-2>0
+\]
+for small \(s\), so the prescribed point is the first upward crossing
+after \(t=K_0s\).
+The central height decreases strictly with its exit radius:
+the radial solution has positive derivative in its initial height,
+whereas its terminal radial derivative exceeds the derivative of
+\(\delta_{\rm an}x_e^2\) by the same inequality.
+
+On \(J_\pm\), subtraction of the action integrands from their limits
+gives \(\mathcal A_\sigma=\mathfrak c_\sigma+L_\sigma+O(s)\).
+The strict endpoint margins of \(J_-\),
+\cref{lem:buffered-action-limit}, and
+\eqref{eq:sharpness-common-source} therefore bracket
+\(h_+(\rho)\) between the two negative endpoint heights.
+Continuity and strict decrease give a unique negative exit \(\omega\)
+with the same central height. Equating their actions and using the
+positive lower bound on \(L_-'\) gives
+\begin{equation}
+\label{eq:sharpness-negative-exit}
+ \omega=f_{\Lambda_s}(\rho)+O_{C^0}(s),\qquad
+ f_\Lambda(\rho)=\frac{\Lambda\rho}{1+(1+\Lambda)\rho}.
+\end{equation}
+Uniqueness at the regular central point makes these two half-orbits
+parts of one orbit. The continuation below places their endpoints
+in the fixed windows.
+
+\subsection{A transverse organizing splitting}
+
+Write \(p_0(A)=(A,C_0,0,0,0)\). The tuning argument requires a
+strict sign for the derivative of the organizing splitting. We first
+construct the two boundary graphs and their dependence on \(A\).
+The variational equation along the parabola gives the sign of their
+splitting in an affine coordinate; the section change has positive
+derivative and preserves this sign in the endpoint coordinates.
+
+\begin{lemma}[Transversality of the organizing splitting]
+\label{lem:organizing-splitting-transversality}
+For \(A\) close to \(1\), the graph equation
+\eqref{eq:physical-graph-equation-new} at \(p_0(A)\) has unique
+solutions
+\[
+ U_\sigma^0(z;A)=z+O(z^{3/2}),\qquad \sigma=\pm,
+\]
+which depend \(C^1\) on \(A\). Set
+\[
+ b_\sigma^0(A)=z_*-U_\sigma^0(z_*;A),\qquad
+ \mathcal S_0(A)=\Pi_{p_0(A)}(b_-^0(A))-b_+^0(A).
+\]
+Then \(\mathcal S_0(1)=0\) and \(\mathcal S_0'(1)<0\).
+\end{lemma}
+
+\begin{proof}
+\emph{Boundary graphs and their variations.}
+At \(\mu=0\), both \(q\) and \(\eta=v+v^2+C_0vz\) are independent of \(A\).
+Differentiating the exact projective field gives
+\begin{equation}
+\label{eq:sharpness-B-variation}
+ B_A=-v(1+2v+C_0z),\qquad B(0,z,p_0(A))=1+C_0z.
+\end{equation}
+On \(U\asymp z\), uniformly for \(A\) near \(1\), the graph
+right side \(\mathcal G_{\sigma,p_0(A)}\) therefore satisfies
+\[
+ \mathcal G_{\sigma,p_0(A)}=1+O(\sqrt z),\qquad
+ |\mathcal G_{\sigma,U}|\le Cz^{-1/2},\qquad
+ |\mathcal G_{\sigma,A}|\le C\sqrt z,
+\]
+where the middle bound is \eqref{eq:direct-tail-coefficients} at
+\(\mu=0\).
+The Volterra operator
+\[
+ \mathcal T_AU(z)=\int_0^z\mathcal G_{\sigma,p_0(A)}(U(t),t)\dd t
+\]
+maps \(|U(z)/z-1|\le1/2\) into itself. In the norm
+\(\|U\|_*=\sup_{0<z\le z_*}|U(z)|/z\), its Lipschitz
+constant is at most \(C\sqrt{z_*}<1\).
+The operator is \(C^1\) in \(U,A\) on a slightly wider positive
+cone, so differentiation of the convergent iteration gives
+the asserted \(C^1\) fixed point. Its parameter derivative satisfies
+\begin{equation}
+\label{eq:sharpness-origin-variation}
+ \begin{gathered}
+ (\partial_AU_\sigma^0)'=\mathcal G_U\partial_AU_\sigma^0+B_A,\qquad
+ \partial_AU_\sigma^0(0)=0,\\
+ \partial_AU_\sigma^0(z)=O(z^{3/2}).
+ \end{gathered}
+\end{equation}
+
+\emph{Comparison along the organizing parabola.}
+For the entire \(p_0(A)\)-family, the function \(H_0\) of
+\eqref{eq:parabola-invariance-new} satisfies the exact identity
+\begin{equation}
+\label{eq:sharpness-affine-variation}
+ \dot H_0=2xH_0-(A-1)x^2.
+\end{equation}
+Continue the left boundary graph forward from the negative section,
+and the right boundary graph backward from the positive section,
+to the same point \(x\) on the organizing parabola. Denote their
+\(A\)-derivatives at \(A=1\), measured in the \(H_0\)-coordinate
+at fixed \(x\), by \(\mathfrak k_{\rm L}\) and
+\(\mathfrak k_{\rm R}\), respectively. Their difference is the
+signed variation of the splitting at that point. Changing from
+fixed-\(x\) to fixed-\(z\) sections adds a tangential variation
+along the organizing parabola, whose contribution to the variation
+of \(H_0\) at \(A=1\) is zero.
+
+Use \(x\) as time, as in the proof of
+\cref{lem:exterior-multiplier-new}. The last term of
+\eqref{eq:sharpness-affine-variation} gives the forcing in the
+variational equation. With \(P_{\rm aff}(x)=x^2+2x+C_0>0\), both
+variations satisfy
+\[
+ \mathfrak k'=\frac{4x}{P_{\rm aff}(x)}\mathfrak k-\frac{2x^2}{P_{\rm aff}(x)}.
+\]
+The boundary conditions follow from
+\eqref{eq:sharpness-origin-variation}: at fixed \(z\),
+\[
+ \partial_Av
+   =\frac{\sigma\partial_AU_\sigma^0}
+       {\sqrt{2U_\sigma^0}(1+2v+C_0z)}=O(z),\qquad
+ \partial_AH_0=-\frac{v\,\partial_Av}{z^2}
+       =O(z^{-1/2})=O(|x|).
+\]
+With
+\[
+ W(x)=\exp\left(-\int_0^x\frac{4t}{P_{\rm aff}(t)}\dd t\right)>0,
+\]
+direct integration gives \(W(x)\asymp|x|^{-4}\) at both ends.
+Hence \(W\mathfrak k_{\rm L}\to0\) as \(x\to-\infty\) and
+\(W\mathfrak k_{\rm R}\to0\) as \(x\to+\infty\). Variation of constants
+with these two endpoint conditions yields
+\begin{equation}
+\label{eq:sharpness-positive-integral}
+ \mathfrak k_{\rm L}(x)-\mathfrak k_{\rm R}(x)
+ =-W(x)^{-1}\int_{-\infty}^{\infty}
+                  \frac{2W(t)t^2}{P_{\rm aff}(t)}\dd t<0.
+\end{equation}
+The integral is absolutely convergent and strictly positive.
+
+\emph{The splitting in endpoint coordinates.}
+To relate this variation to the displacement, let \(\chi_\pm\)
+be the \(H_0\)-coordinates on the two fixed-\(z\) sections.
+The section changes are regular, so \(\chi_\pm'(I_\pm^0)>0\), and
+the chain rule at the positive section gives
+\begin{equation}
+\label{eq:sharpness-splitting-bridge}
+ \mathcal S_0'(1)
+ =\frac{1}{\chi_+'(I_+^0)}
+   \bigl(\mathfrak k_{\rm L}(x_+)-\mathfrak k_{\rm R}(x_+)\bigr),
+ \qquad \chi_+'(I_+^0)>0 .
+\end{equation}
+Here \(x_+\) is the organizing point on the positive section, where
+both variations are evaluated. The finite exterior propagation is
+included in \(\mathfrak k_{\rm L}(x_+)\), and
+\(1/\chi_+'(I_+^0)\) is the positive \(H_0\)-to-\(I\) endpoint
+conversion factor computed in \cref{lem:exterior-multiplier-new}.
+Thus \eqref{eq:sharpness-positive-integral} and
+\eqref{eq:sharpness-splitting-bridge} give \(\mathcal S_0'(1)<0\).
+\end{proof}
+
+\subsection{Tuning the splitting and obtaining three cycles}
+
+\begin{proof}[Proof of \cref{prop:three-cycle-lower-bound}]
+\emph{Endpoint preparation.}
+We first continue the half-orbits from the compact exit intervals to
+the fixed sections, where their endpoint maps can be composed with
+the exterior transition. Use
+\cref{lem:direct-small-height-continuation} with
+\(\ell=\delta=s\) and \(\zeta_0(\rho_\sigma)=\delta_{\rm an}\rho_\sigma^2\),
+as in \eqref{eq:direct-buffered-primary-endpoints}. On the path
+\eqref{eq:sharpness-coefficient-path}, the coefficient ratios are
+bounded, and the fixed compact exit intervals have positive drift
+margins, uniformly for \(A\) near \(1\).
+Choose the large height \(Z_1=Z_0\) of that lemma uniformly in \(A\),
+and put \(t_s=s^2Z_0\). The continued and reference energies lie in
+the common cone. Let \(U_\sigma^{\rm ref}\) be the tail with initial
+energy \(U_\sigma^{\rm ref}(t_s)=B_0(p)t_s\), and define
+\begin{equation}
+\label{eq:sharpness-continuous-tail}
+ \begin{aligned}
+ b_\sigma^e(p)&=z_*-U_\sigma^{\rm ref}(z_*),\\
+ a_\sigma^e(p)&=
+ \left.\partial_uU_\sigma(z_*;t_s,u,p)\right|_{u=B_0(p)t_s}>0.
+ \end{aligned}
+\end{equation}
+The reference endpoint and the tail-energy derivative are smooth in \(A\)
+for fixed \(s>0\). They are the lemma's \(b_\sigma\) and
+\(\varpi_{t_s}A_\sigma\), respectively.
+Since \(\varpi_{t_s}=1+O(s(1+|\log s|))\), the coefficients
+\(a_\sigma^e\) have uniform positive bounds, and
+\eqref{eq:direct-small-height-endpoint} gives
+\begin{equation}
+\label{eq:sharpness-prepared-endpoints}
+ I_\sigma(\rho_\sigma;p)
+ =b_\sigma^e-\tfrac12s^2a_\sigma^e\rho_\sigma^2
+                +s^2O_{C^3}(s(1+|\log s|)).
+\end{equation}
+
+\emph{Domains of the exterior transition.}
+To place the reference and continued endpoints in the exterior windows
+for small \(s\), uniformly on a fixed small \(A\)-interval, compare
+their tails to \(U_\sigma^0(z;A)\). On the common cone, the difference
+of the graph right sides at \(p_s(A)\) and \(p_0(A)\) is bounded by
+\[
+ C(s+s^5/z+s^3/\sqrt z),
+\]
+whereas, by \eqref{eq:direct-tail-coefficients}, a Lipschitz
+coefficient for the difference is
+\begin{equation}
+\label{eq:sharpness-tail-comparison}
+ 2s/z+C(z^{-1/2}+s^3z^{-3/2}).
+\end{equation}
+Its integral over \([t_s,z_*]\) is uniformly bounded.
+The initial energy difference is \(O(s^2)\), and the integrated
+forcing is \(O(s)\). Gronwall's inequality gives, uniformly in
+\(A\) and the fixed exit ranges,
+\begin{equation}
+\label{eq:sharpness-endpoint-limit}
+ b_\sigma^e(A,s)\longrightarrow b_\sigma^0(A),\qquad
+ I_\sigma(\rho_\sigma;A,s)\longrightarrow b_\sigma^0(A).
+\end{equation}
+First restrict \(A\) so that \(b_\sigma^0(A)\in\operatorname{int}W_\sigma\).
+Uniform convergence then puts, for small \(s\), all the endpoints in
+\eqref{eq:sharpness-endpoint-limit}, including those at the wider
+comparison exits, in \(\operatorname{int}W_\sigma\). The continued
+half-orbits thus give admissible central heights in
+\(\mathcal H_p\). All these endpoints also lie in the enlarged
+windows, where the exterior map and its derivatives are defined for
+the displacement expansion and splitting comparison below.
+
+\emph{The normalized displacement.}
+We separate the constant term, which will be adjusted by \(A\), from
+the coefficient of the compact exit profile. Define the continuous
+splitting and slope coefficient
+\begin{equation}
+\label{eq:sharpness-actual-splitting}
+ \mathcal S_s(A)=\Pi_{p_s(A)}(b_-^e)-b_+^e,\qquad
+ \lambda_s(A)=\Pi_{p_s(A)}'(b_-^e)\frac{a_-^e}{a_+^e}.
+\end{equation}
+By \eqref{eq:sharpness-negative-exit} and
+\eqref{eq:sharpness-prepared-endpoints}, the prepared displacement
+\eqref{eq:direct-buffered-prepared-displacement} holds with \(r=s\),
+\(\Lambda=\Lambda_s\), \(\lambda(p)=\lambda_s(A)\) and
+\(D(p)=2\mathcal S_s(A)/(s^2a_+^e)\):
+\begin{equation}
+\label{eq:sharpness-prepared-displacement}
+ \frac{2\Delta_{p_s(A)}(h(\rho;p_s(A)))}{s^2a_+^e}
+ =\frac{2\mathcal S_s(A)}{s^2a_+^e}
+      +g_{\lambda_s(A),\Lambda_s}(\rho)
+      +O_{C^0}(s(1+|\log s|)),
+\end{equation}
+where
+\[
+ g_{\lambda,\Lambda}(\rho)
+   =\rho^2-\lambda f_\Lambda(\rho)^2
+   =\rho^2-\frac{\lambda\Lambda^2\rho^2}
+                         {[1+(1+\Lambda)\rho]^2}.
+\]
+
+The three test radii must work throughout the tuning interval in
+\(A\). We therefore bound the slope coefficient uniformly first.
+The common factor
+\(\varpi_{t_s}\) cancels from the quotient, so
+\eqref{eq:direct-tail-first-slope} gives
+\(\log(a_-^e/a_+^e)=O(\sqrt{z_*})+o_s(1)\). Also,
+\(\Pi_0'(I_-^0)=\Lambda_0\{1+O(\sqrt{z_*})\}\) by
+\cref{lem:exterior-multiplier-new}. As in
+\cref{sec:direct-passage-estimates}, the coefficient of \(\sqrt{z_*}\)
+depends only on the common cone; constants depending on the fixed
+exit ranges enter only the \(o_s(1)\) term. Thus we may first choose
+the fixed section, then restrict \(A\) and \(s\), so that
+\begin{equation}
+\label{eq:sharpness-lambda-range}
+ \lambda_{\rm lo}:=\Lambda_0/2
+ \le\lambda_s(A)\le
+ \lambda_{\rm hi}:=(1+\Lambda_0)/2<1.
+\end{equation}
+
+\emph{Three test radii.}
+The multiplier margin makes the model negative at an interior
+minimum; a small positive additive constant will give the two outer
+positive signs. To choose radii with fixed sign margins, put
+\[
+ M_{\rm b}=\sqrt{\lambda_{\rm lo}}\Lambda_{\rm b}>1,\qquad
+ K_{\rm b}=1+\Lambda_{\rm b}.
+\]
+The strict negative minimum of
+\(g_{\lambda_{\rm lo},\Lambda_{\rm b}}\) occurs at
+\begin{equation}
+\label{eq:sharpness-negative-minimum}
+ \rho_{\rm b}=\frac{M_{\rm b}^{2/3}-1}{K_{\rm b}},\qquad
+ g_{\lambda_{\rm lo},\Lambda_{\rm b}}(\rho_{\rm b})
+       =-\frac{(M_{\rm b}^{2/3}-1)^3}{K_{\rm b}^2}<0.
+\end{equation}
+This follows directly from
+\[
+ g_{\lambda,\Lambda}'(\rho)
+   =2\rho\left(1-\frac{\lambda\Lambda^2}
+                            {[1+(1+\Lambda)\rho]^3}\right).
+\]
+Choose \(0<D_*<-g_{\lambda_{\rm lo},\Lambda_{\rm b}}(\rho_{\rm b})/4\).
+Since \(g\) decreases in \(\lambda\),
+\(D_*+g_{\lambda,\Lambda_{\rm b}}(\rho_{\rm b})<-3D_*\)
+throughout \eqref{eq:sharpness-lambda-range}.
+Take \(0<\rho_{\rm a}<\rho_{\rm b}\) so small that
+\[
+ \sup_{\lambda_{\rm lo}\le\lambda\le\lambda_{\rm hi}}
+       |g_{\lambda,\Lambda_{\rm b}}(\rho_{\rm a})|<D_*/4,
+\]
+and then take \(\rho_{\rm c}>\rho_{\rm b}\) with
+\(\rho_{\rm c}^2>\lambda_{\rm hi}+1\).
+Since \(0<f_\Lambda<1\), the last choice gives
+\(g_{\lambda,\Lambda}(\rho_{\rm c})>1\).
+By \cref{lem:buffered-action-limit}, these choices imply,
+uniformly in \(A\), for small \(s\),
+\begin{equation}
+\label{eq:sharpness-three-model-signs}
+ \begin{aligned}
+ D_*+g_{\lambda_s(A),\Lambda_s}(\rho_{\rm a})&>D_*/2,\\
+ D_*+g_{\lambda_s(A),\Lambda_s}(\rho_{\rm b})&<-2D_*,\\
+ D_*+g_{\lambda_s(A),\Lambda_s}(\rho_{\rm c})&>1+D_*.
+ \end{aligned}
+\end{equation}
+All three radii and their negative comparison intervals are
+fixed before the final reduction of \(s\). Apply the compact construction
+above with \(J_+\) containing \([\rho_{\rm a},\rho_{\rm c}]\) and
+\(f_{\Lambda_{\rm b}}(J_+)\subset\operatorname{int}J_-\).
+\Cref{fig:sharpness-model}
+shows the model profile and the three radii for \(C_0=65\).
+
+\input{direct-sections/figure-sharpness-model}
+
+\emph{Realizing the additive constant.}
+The choices above fix the desired normalized constant \(D_*\).
+To realize it, we apply the intermediate value theorem to the
+unscaled splitting. By
+\eqref{eq:sharpness-endpoint-limit},
+\[
+ \mathcal S_s(A)\longrightarrow \mathcal S_0(A)
+\]
+uniformly on a fixed small \(A\)-interval. By
+\cref{lem:organizing-splitting-transversality}, choose its endpoints
+\(A_{\rm lo}<1<A_{\rm hi}\) so that \(\mathcal S_0\) has opposite
+signs there and its only zero in the interval is \(1\).
+The continuous function
+\[
+ \Phi_s(A)=\mathcal S_s(A)-\tfrac12s^2a_+^e(A,s)D_*
+\]
+converges uniformly to \(\mathcal S_0\). The intermediate value theorem
+therefore gives \(A_s\in(A_{\rm lo},A_{\rm hi})\) with
+\begin{equation}
+\label{eq:sharpness-tuned-splitting}
+ \mathcal S_s(A_s)=\tfrac12s^2a_+^e(A_s,s)D_*.
+\end{equation}
+Every accumulation point of any such choices is a zero of
+\(\mathcal S_0\), so \(A_s\to1\). Put \(p_s=p_s(A_s)\).
+
+\emph{Three isolated zeros.}
+Let \(h_s(\rho)\) be the common central height of
+\eqref{eq:sharpness-common-source} at \(p_s\).
+By \eqref{eq:sharpness-prepared-displacement},
+\eqref{eq:sharpness-three-model-signs}, and
+\eqref{eq:sharpness-tuned-splitting}, with the remainder made
+smaller than the fixed margins, \(\Delta_{p_s}\) is positive at
+\(h_s(\rho_{\rm a})\) and \(h_s(\rho_{\rm c})\), and negative at
+\(h_s(\rho_{\rm b})\). On the fixed radius interval, \(h_s\) is
+strictly decreasing by the radial construction above.
+Moreover \(\mathcal A_+(\rho)\ge c\log(1/s)-C\), so these three
+central heights tend to zero.
+
+The three test radii give two zeros. For a third zero, we need a
+negative displacement at a larger central height. We obtain it from
+the organizing contraction at a fixed height.
+At the organizing parameter, \cref{prop:signed-contraction-new}
+gives \(\Delta_0'(h)<0\), while
+\(\Delta_0(h)\to0\) as \(h\downarrow0\). Choose a fixed small
+\(\bar h>0\) whose endpoints lie in \(\operatorname{int}W_\pm\). Then
+\(\Delta_0<0\) on \((0,\bar h]\). For each fixed
+\(0<\widetilde h<\bar h\), regular dependence on the parameters at
+positive central heights (\cref{lem:regular-transitions}, applied to the
+field extended by \(\dot p=0\)) gives
+\(\Delta_{p_s}\to\Delta_0\) uniformly on \([\widetilde h,\bar h]\).
+Hence \(\Delta_{p_s}<0\) on \([\widetilde h,\bar h]\) for small \(s\);
+in particular \(\Delta_{p_s}(\bar h)<0\).
+
+All four central heights belong to \(\cH_{p_s}\), by
+\cref{prop:central-displacement-interval-new}, and satisfy
+\begin{equation}
+\label{eq:sharpness-four-source-signs}
+ h_s(\rho_{\rm c})<h_s(\rho_{\rm b})<h_s(\rho_{\rm a})<\bar h,
+ \qquad
+ \operatorname{sgn}\Delta_{p_s}=(+,-,+,-).
+\end{equation}
+Since the admissible heights form an interval, there is a zero in
+each of the three intervening open intervals.
+
+By \cref{prop:central-displacement-interval-new},
+\(\Delta_{p_s}\) is real analytic on
+\(\operatorname{int}\cH_{p_s}\), and the four signs in
+\eqref{eq:sharpness-four-source-signs} exclude an identically zero
+displacement. The three selected zeros are therefore isolated and,
+by the correspondence in that proposition, give three distinct
+isolated periodic orbits.
+
+Let their central heights be \(h_{j,s}\), \(j=1,2,3\).
+The first two are trapped between test heights tending to zero.
+For the third, negativity of \(\Delta_{p_s}\) on every fixed
+\([\widetilde h,\bar h]\) for small \(s\) excludes a positive
+limiting height. Thus all three heights tend to zero, including the
+zero between \(h_s(\rho_{\rm a})\) and the fixed height \(\bar h\).
+
+\emph{Convergence of the orbit segments.}
+To pass from vanishing central heights to convergence of the orbits,
+we compare their graphs near infinity and along the two organizing
+branches. Regular flow dependence then treats the finite connecting
+arc.
+The half-orbits of the smallest test central height
+\(h_{{\rm low},s}=h_s(\rho_{\rm c})\) have radius \(O(s)\) in the
+thin passage, energy \(O(s^2)\) at \(t_s\), and thereafter lie in
+the common cone. Hence, for each fixed small \(\zeta>0\), their
+graphs satisfy
+\[
+ 0\le U_\sigma(z;h_{{\rm low},s})\le C\zeta
+       \quad(h_{{\rm low},s}\le z\le\zeta),
+\]
+and converge uniformly to \(U_\sigma^0(z;1)\) on
+\([\zeta,z_*]\), by \eqref{eq:sharpness-tail-comparison}.
+Every selected zero lies above \(h_{{\rm low},s}\). The exact graph
+order \eqref{eq:central-graph-order-new} therefore bounds its energy
+above by the graph for \(h_{{\rm low},s}\). Its portion with
+\(z\le\zeta\) lies in a neighborhood shrinking to the point at
+infinity as \(\zeta\to0\).
+
+To obtain convergence along both organizing branches away from
+infinity, fix \(0<\varepsilon<\zeta\). Once
+\(h_{j,s}<\varepsilon\), the same order gives, for
+\(\zeta\le z\le z_*\),
+\[
+ U_\sigma(z;\varepsilon,p_s)
+ \le U_\sigma(z;h_{j,s},p_s)
+ \le U_\sigma(z;h_{{\rm low},s},p_s).
+\]
+By regular dependence, the left graph converges to the
+organizing-parameter graph with central height \(\varepsilon\).
+As \(\varepsilon\to0\), that graph converges uniformly on
+\([\zeta,z_*]\) to \(U_\sigma^0(z;1)\): at
+\(z=K\varepsilon\), for fixed large \(K\), both graphs lie in the
+common cone with energy difference \(O(\varepsilon)\), and the
+integrable variation coefficient \(O(z^{-1/2})\) propagates this
+difference to every fixed height. The two bounds give uniform
+convergence of both branches of each periodic orbit away from the
+point at infinity.
+
+In particular, the endpoints converge to the organizing endpoints.
+The exterior passage lies in finitely many regular flow boxes, so
+endpoint convergence and regular dependence of the flow give uniform
+convergence of the entire finite connecting arc in the compactified
+phase space.
+
+\emph{Hausdorff convergence to the whole graphic.}
+We now express these segment estimates in the fixed metric on
+\(\mathbb S^2\). Let \(\mathscr P_p\) denote the compactification
+map from the parameter-dependent \((\eta,z)\)-chart to \(\mathbb S^2\),
+and let \(q_\infty=\mathscr P_{p_0}(0,0)\) be the nilpotent point of the
+graphic. Uniform smoothness of these charts gives, on a smaller chart, a
+constant \(C_{\mathbb S}\) such that
+\begin{equation}
+\label{eq:sharpness-sphere-tubular-estimate}
+ d_{\mathbb S}\bigl(\mathscr P_p(\eta,z),q_\infty\bigr)
+ \le C_{\mathbb S}\bigl(|\eta|+|z|+|p-p_0|\bigr).
+\end{equation}
+Because \(\eta_\sigma=\sigma\sqrt{2U_\sigma}\), the portions of the
+three orbits with \(0\le z\le\zeta\) are at distance at most
+\(C_{\mathbb S}'\sqrt{\zeta}+o_s(1)\) from \(q_\infty\), uniformly in
+\(s\) after the fixed \(\zeta\) is chosen. The same estimate applies to
+the corresponding part of \(\GammaI\) (with \(p=p_0\)).
+
+For the reverse approximation near infinity, the central section point
+\(\mathscr P_{p_s}(0,h_{j,s})\) belongs to each periodic orbit and tends to
+\(q_\infty\). Thus every point of \(\GammaI\) with
+\(0\le z\le\zeta\) is within
+\(C_{\mathbb S}'\sqrt{\zeta}+o_s(1)\) of that orbit.
+On the remaining portions, the graph convergence on \([\zeta,z_*]\)
+and the regular-flow-box convergence of the finite connecting arcs
+give both inclusions in the Hausdorff estimate. Therefore, for every
+fixed \(\zeta>0\),
+\[
+ \limsup_{s\downarrow0}
+ \distH(\overline{\gamma_{j,s}},\GammaI)
+ \le C_{\mathbb S}'\sqrt{\zeta},\qquad j=1,2,3.
+\]
+Letting \(\zeta\downarrow0\) proves
+\[
+ \distH(\overline{\gamma_{j,s}},\GammaI)\longrightarrow0,
+ \qquad j=1,2,3.
+\]
+Taking any sequence \(s_n\downarrow0\) completes the proof.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:exact-local-cyclicity-three}]
+By \cref{thm:direct-finite-cyclicity}, \(\Cycl(\GammaI)\le3\).
+Let \(V\) be a neighborhood of \((1,C_0,0,0,0)\) and let
+\(\varepsilon>0\). For large \(n\), the parameter \(p_n\) of
+\cref{prop:three-cycle-lower-bound} lies in \(V\), and its three
+limit cycles \(\gamma_{j,n}\) satisfy
+\(\distH(\overline{\gamma_{j,n}},\GammaI)<\varepsilon\). Hence
+\(N(V,\varepsilon)\ge3\) in \eqref{eq:cyclicity-definition}, and
+\(\Cycl(\GammaI)\ge3\).
+\end{proof}
+
+\subsection{Hyperbolicity and separation of central heights}
+
+\begin{corollary}[Three hyperbolic limit cycles]
+\label{cor:hyperbolic-triple}
+For sufficiently small positive \(s\), the three periodic
+orbits constructed above are hyperbolic. In increasing order
+of their central heights, they are attracting, repelling, and
+attracting. For each such \(s\), all three persist, with these
+stabilities, on an open neighborhood of \(p_s\) in the original
+five-parameter space. Such open sets occur arbitrarily close
+to the organizing parameter, with all three orbits arbitrarily
+close to the whole graphic.
+\end{corollary}
+
+\begin{proof}
+We obtain simplicity from the zero bound for the logarithmic slope
+ratio: the two gaps between the three displacement zeros already
+require two slope zeros. By \cref{prop:direct-buffered-negative},
+which applies to \(p_s\) by \eqref{eq:sharpness-coefficient-path},
+\(\mathcal L\) has at most two distinct zeros on all of \(\cH_{p_s}\).
+By \eqref{eq:direct-completed-log-ratio}, where \(I_{+,h}>0\),
+\(\Delta_{p_s,h}\) has the sign of \(\e^{\mathcal L}-1\).
+Write the three displacement zeros as \(h_1<h_2<h_3\).
+Rolle's theorem gives a zero of \(\mathcal L\) in each of
+\((h_1,h_2)\) and \((h_2,h_3)\). If
+\(\Delta_{p_s,h}(h_i)=0\) for any \(i\), then \(h_i\) would be a
+third distinct zero of \(\mathcal L\). Thus all three zeros are
+simple. The same argument excludes a fourth displacement zero.
+
+The signs in \eqref{eq:sharpness-four-source-signs} now imply
+\[
+ \Delta_{p_s,h}(h_1)<0,\qquad
+ \Delta_{p_s,h}(h_2)>0,\qquad
+ \Delta_{p_s,h}(h_3)<0.
+\]
+At each fixed point, differentiation of
+\(\cP_{p_s}=I_+^{-1}\circ\Pi_{p_s}\circ I_-\) gives
+\begin{equation}
+\label{eq:sharpness-return-multipliers}
+ \cP_{p_s}'(h_i)=\e^{\mathcal L(h_i)}.
+\end{equation}
+The two negative signs give multipliers in \((0,1)\), and the
+positive sign gives a multiplier greater than one. This proves
+hyperbolicity and the stated stabilities.
+
+For fixed \(s>0\), regular dependence
+(\cref{lem:regular-transitions}, applied to the field extended by
+\(\dot p=0\)) makes these finite transverse returns smooth in all
+five parameters, with central height as the section coordinate.
+Apply the implicit function theorem near the three simple fixed
+points and intersect the resulting parameter neighborhoods.
+This gives an open set \(V_s\ni p_s\) on which the three distinct
+hyperbolic orbits persist. Their stability is unchanged after
+reducing \(V_s\).
+
+Given fixed small parameter and whole-graphic neighborhoods,
+first take \(s\) small by the lower-bound construction, then
+reduce \(V_s\) to retain the geometric margins.
+Within the neighborhood and the Hausdorff condition
+of \cref{thm:direct-finite-cyclicity}, these are all the
+periodic orbits counted there.
+\end{proof}
+
+\begin{corollary}[Separation of the third central height]
+\label{cor:third-height-separation}
+For the parameters \(p_s\) constructed in the proof of
+\cref{prop:three-cycle-lower-bound}, write the three central
+heights as \(h_{1,s}<h_{2,s}<h_{3,s}\). Then
+\begin{equation}
+\label{eq:third-height-separation}
+ \lim_{s\downarrow0}s\log\frac{h_{3,s}}{h_s(\rho_{\rm a})}=+\infty.
+\end{equation}
+The same limit holds with \(h_s(\rho_{\rm a})\) replaced by
+\(h_{1,s}\) or \(h_{2,s}\).
+\end{corollary}
+
+\begin{proof}
+We first place the third zero outside each fixed compact exit interval.
+Fix \(0<\rho_{\rm lo}<\rho_{\rm a}\). The central-height construction
+\eqref{eq:sharpness-common-source} extends to
+\([\rho_{\rm lo},\rho_{\rm c}]\); it is strictly decreasing there and
+\(h_s(\rho_{\rm lo})\to0\). Hence, for sufficiently small \(s\),
+\[
+ h_s(\rho_{\rm c})<h_s(\rho_{\rm lo})<\bar h.
+\]
+Both outer central heights belong to \(\cH_{p_s}\), as shown in the
+proof of \cref{prop:three-cycle-lower-bound}. Since this is an interval,
+it contains the image of \([\rho_{\rm lo},\rho_{\rm c}]\) under \(h_s\).
+
+By \eqref{eq:sharpness-coefficient-path}, the compact-primary estimate
+in \cref{sec:direct-buffered-compact-primary} applies to the chosen
+\(p_s\) on \([\rho_{\rm lo},\rho_{\rm c}]\), after reducing \(s\)
+with \(\rho_{\rm lo}\) fixed. It gives at most two zeros on the
+corresponding height interval. That interval contains \(h_{1,s}\)
+and \(h_{2,s}\), so
+\[
+ h_{3,s}>h_s(\rho_{\rm lo}).
+\]
+The count includes endpoints; equivalently, one can first apply it
+on a slightly larger fixed compact interval.
+
+We now quantify this separation. Subtracting the equations for the
+two central heights and using
+\eqref{eq:direct-buffered-primary-action} gives
+\[
+ s\log\frac{h_s(\rho_{\rm lo})}{h_s(\rho_{\rm a})}
+  =L_+(\rho_{\rm a})-L_+(\rho_{\rm lo})+O_{\rho_{\rm lo}}(s).
+\]
+The common action constant cancels, and the terms \(sM_+^0\)
+contribute \(O_{\rho_{\rm lo}}(s)\). Given \(K>0\), first fix
+\(\rho_{\rm lo}\) so that
+\(L_+(\rho_{\rm a})-L_+(\rho_{\rm lo})>K+1\), and then take \(s\)
+small. The preceding inequalities give
+\(s\log(h_{3,s}/h_s(\rho_{\rm a}))>K\), proving
+\eqref{eq:third-height-separation}. Finally,
+\(h_{1,s},h_{2,s}<h_s(\rho_{\rm a})\), which proves the last assertion.
+\end{proof}
+
+\begin{remark}[A numerical example]
+\label{rem:numerical-three-cycles}
+Take \(C_0=65\), so that \(\nu=1\) and \(a=1/2\) in
+\eqref{eq:sharpness-coefficient-path}, and take \(s=0.05\) and \(A=1\),
+with \(\mu\) given by \eqref{eq:direct-coefficient-bridge}. We computed the
+return map to the central section numerically, by an adaptive Runge--Kutta
+integration of the field in the chart \eqref{eq:projective-coordinates-new},
+with \(\log z\) as height variable, and of \eqref{eq:quadratic-family}
+between two crossings of a fixed section, with relative tolerance
+\(10^{-11}\).
+
+The accompanying
+\href{https://github.com/h-lu/I21-reproof/raw/ccbc54f203ef41d891f4e2c890b595955c58b244/supplementary/three-cycles.zip}{numerical supplement}
+contains a standalone Python script, its fixed parameters and tolerances,
+execution instructions, and the reference table. It uses a Dormand--Prince
+5(4) integrator, logarithmic-height bisection, and the same affine field
+between section crossings. For central heights with
+\(-120\le\log h\le-3.5\), the computation finds three fixed points:
+\begin{center}
+\input{direct-sections/numerical-example-table}
+\end{center}
+Here the multiplier is the derivative of the return map at the fixed point.
+In increasing central height the orbits are attracting, repelling and
+attracting, as in \cref{cor:hyperbolic-triple}, and the largest central
+height is much larger than the other two; compare
+\cref{cor:third-height-separation}. The computation illustrates the
+construction at these moderate parameter values.
+\end{remark}

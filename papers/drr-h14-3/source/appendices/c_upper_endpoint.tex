@@ -1,0 +1,77 @@
+\subsection{The resonant sign from the original upper field}
+\label{rw:app:upper-resonant-sign}
+
+The incoming lower-loss chart uses the sign of the first orbital
+resonant coefficient of the original upper field. We compute it from
+\eqref{rw:upper:divided-field}, beginning on $\nu=0$.
+Its equilibrium satisfies
+\[
+ X_s=-\bar cY_s,\qquad
+ Y_s=\frac{1+\epsilon\bar a\bar c}
+           {\bar m+\epsilon\bar B\bar c^2}.
+\]
+The trace is zero precisely when
+\begin{equation}\label{rw:finite:zero-trace}
+ 0=\bar c[1+\epsilon(\bar m-2\bar B)]
+ +\epsilon\bar a\bar m
+ +\epsilon\bar a\bar c^2(1-\epsilon\bar B)
+ +\epsilon^2\bar B\bar c^3.
+\end{equation}
+Indeed the trace, multiplied by $Y_s+\epsilon$, is
+$\bar cY_s(1-2\epsilon\bar B)+\epsilon(\bar a+\bar c)$;
+substitution of $Y_s$ gives the displayed polynomial. The implicit
+function theorem yields
+$\bar c=-\epsilon\bar a\bar m+O(\epsilon^2)$.
+Thus $X_s=\epsilon\bar a+O(\epsilon^2)$ and
+$Y_s=1/\bar m+O(\epsilon^2)$.
+
+Put $x=X-X_s$, $y=Y-Y_s$. To first order in $\epsilon$,
+expansion of $1/(Y+\epsilon)$ in the first component gives the
+quadratic and cubic terms
+\begin{align*}
+ \epsilon P_2&=\epsilon(\bar B\bar mx^2
+               -\bar a\bar m^2xy+\bar m^3y^2),\\
+ \epsilon P_3&=\epsilon(-\bar B\bar m^2x^2y
+               +\bar a\bar m^3xy^2-\bar m^4y^3).
+\end{align*}
+The second component is affine, and the omitted coefficients are
+$O(\epsilon^2)$ in the reserved finite coefficient jets.
+At zero scale use $x=\sqrt{\bar m}(u-v)$, $y=u+v$.
+The linear part is $(\sqrt{\bar m}u,-\sqrt{\bar m}v)$.
+The coefficients of $u^2v$ and $uv^2$ in $P_3$ are respectively
+\[
+ \bar B\bar m^3+\bar a\bar m^{7/2}-3\bar m^4,
+ \qquad
+ \bar B\bar m^3-\bar a\bar m^{7/2}-3\bar m^4.
+\]
+Since $\dot u=(\dot y+\dot x/\sqrt{\bar m})/2$ and
+$\dot v=(\dot y-\dot x/\sqrt{\bar m})/2$, the sum of the two
+resonant vector-field coefficients is
+$\epsilon\bar a\bar m^3+O(\epsilon^2)$.
+The quadratic terms affect this coefficient only at
+$O(\epsilon^2)$: their coefficients and normalizing changes are
+$O(\epsilon)$, since the nonresonant denominators have fixed margins.
+The $O(\epsilon)$ change of linear eigenvectors applied to $P_3$
+has the same order of effect.
+
+Dividing the two components to form the orbital equation changes
+this sum by the factor $-1/\lambda_u$. Thus its $V^2$ coefficient
+in the notation of \eqref{rw:upper:axis-equation} is
+$-\epsilon\bar a\bar m^{5/2}+O(\epsilon^2)$.
+The analytic construction of Section~\ref{rw:upper-resonance}
+vanishes exactly both at $\epsilon=0$ and on the reversible face.
+Restricting to $\kappa=\nu=0$ and applying these two divisions
+therefore strengthens the remainder to
+\begin{equation}\label{rw:finite:resonant-sign-formula}
+ \sigma=-\chi_{\rm loc}^2\epsilon\bar a
+                 [\bar m^{5/2}+O(\epsilon)].
+\end{equation}
+Here $\chi_{\rm loc}>0$ is the common local section scale.
+The two axis shears have no quadratic terms affecting this constant
+coefficient; the common section rescaling multiplies it by
+$\chi_{\rm loc}^2$. The sign is unchanged by the common reversal
+$U=-u,V=-v$ that selects the returning quadrant.
+On a compact block $\bar a>a_*>0$, analyticity of $\sigma/\epsilon$
+then gives $\sigma<-c\epsilon$ for small
+$|\kappa|+|\nu|+\epsilon$. This supplies the sign for the prepared
+original field on that compact block.

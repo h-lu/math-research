@@ -1,0 +1,218 @@
+\subsection{The ordered cover of all intermediate arcs}
+
+Saturation supplies the intermediate paths. We must now order their
+local descriptions so that separate endpoint bounds become a bound
+on one interval. The whole-passage tests will give a regular prefix
+followed by at most one terminal union. At the parabolic corner this
+requires two connections: from the finite family to the wedge, and
+from the wedge to the secondary family.
+
+\begin{lemma}[The two parabolic connections]
+\label{rw:fibre:parabolic-connections}
+Near $\mathcal P$ the finite regular family connects by an actual
+open overlap to the wedge, possibly through a constant-sign lower
+loss interval. The wedge in turn has an actual open overlap with
+the regular secondary family. The construction applies to the
+nonperiodic returning arcs in Proposition~\ref{rw:saturation}.
+\end{lemma}
+\begin{proof}
+Consider first the incoming lower double boundary
+$\bar a_*=2\sqrt{\bar B_*}$ and put
+$r=1/\sqrt{\bar B_*}$. The limiting upper return has $q=p$.
+For $0<p<r$,
+\[
+ A_-(p)-A_+(p)
+ =2\bar a_*\int_0^p
+               \frac{X^2}{F_+(X)F_-(X)}\,\dd X>0.
+\]
+Thus $K<0$ on every fixed compact regular initial interval,
+uniformly in a smaller off-center neighborhood.
+Let $C_w=\sqrt{1+2w_0}/w_0$. The limiting upper parabola
+$Y=(p^2-X^2)/2$ meets $w=w_0$ at $H=C_w/p$.
+Choose $L_1>2r$ so large that $C_w/L_1<H_0/2$.
+The upper arcs for $L_1\le p\le2L_1$ form a compact regular
+family; their transverse intersections persist and belong to
+the wedge after the coefficients are reduced.
+
+The incoming action tends to infinity as its first double root
+is approached from below. Choose $R<r$ with
+\[
+ A_-(R)>\max_{p\le2L_1}A_+(p)+3,
+\]
+where the maximum is on the retained regular outgoing interval.
+Then choose a fixed $p_1<r$ with $p_1>R+2\zeta$ for some
+$\zeta>0$. Uniform convergence of the regular upper map to
+$q=p$ on $[p_1,2L_1]$ gives $q(p)>R+\zeta$ there.
+Lemma~\ref{rw:finite:incoming-contraction} now gives $K<0$
+on its entire physical passing part, even beyond the lower
+root where the ordinary regular action formula no longer applies.
+This interval overlaps both the regular initial family and the
+wedge. The corresponding lower slow action in the wedge has
+the same strict sign and dominates its bounded remainder.
+Reflection gives the other lower double boundary and reverses
+the sign. Away from these boundary neighborhoods the lower
+factors have a common positive margin on every retained finite
+interval, so the regular family connects directly to the wedge.
+
+For the wedge--secondary overlap, choose the fixed $L$ in secondary
+routing large enough before decreasing any scale. Require
+$2/L<\delta$ and $4/L^2<\delta$. At
+$w=w_0$, $H=k_0\lambda L$, with $1/2<k_0<1$, the exact
+secondary coordinates are
+\[
+ \widehat x=\frac1{k_0Lw_0},\qquad
+ \widehat z=\frac1{k_0^2L^2w_0}.
+\]
+The auxiliary linear flow defining the actual tags gives
+$P,Q=O(C_w/L)$ uniformly for bounded $(C,M)$.
+At $C=M=0$ the values are $C_w/(k_0L)$; the perturbation
+on these short arcs is of higher order in $1/L$.
+Increase $L$ so all these tags lie in one compact regular
+interval below the finite secondary thresholds.
+The wedge inequalities are strict, and the same actual arcs
+meet the secondary sections before reaching $w=w_0$.
+Transversality persists as $k_0$ varies on a smaller open subinterval
+of $(1/2,1)$. Thus an open family of the same returning arcs has both
+descriptions, including the nonclosing comparisons.
+\end{proof}
+
+\begin{proposition}[An ordered cover on each physical fibre]
+\label{rw:ordered-cover}
+After a common original parameter shrink, every physical interval
+of Proposition~\ref{rw:saturation} is covered by a connected
+regular initial part and an ordered union of the local passing
+charts of Sections~7--10. Their adjacent members overlap on
+actual orbits. At a joint repeated center one contact member and
+the full separated member form a single union. Near $\mathcal P$
+the initial part includes the finite connection, the wedge and
+the regular secondary part.
+After grouping overlapping descriptions of the same end, there
+is at most one terminal union after this initial part.
+It may contain a constant-sign lower-loss connection followed
+by a singular upper end; that connection is retained as its
+own piece.
+
+The coefficient neighborhoods and all cutoffs can be selected
+from a finite family, independently of the chosen outer cycle.
+The order includes signed split-root faces and the repeated
+one-infinite interval. Each local derivative estimate is applied
+on its stated whole-passage domain. This proposition makes no
+sum of local zero bounds.
+\end{proposition}
+\begin{proof}
+Fix the finite derivative orders of Sections~7--10 and retain their
+larger construction domains before reducing sections or coefficient
+neighborhoods. Saturation supplies actual upper and lower returns
+with positive central heights on $[p_0,p_\gamma]$.
+Since $q'>0$, their endpoints satisfy $p\le p_\gamma$,
+$q\le q_\gamma$ and inherit the outer lower cones.
+
+The key ordering fact is that a lost passing component cannot reappear.
+The exact lower factor on the fixed phase interval is
+\[
+ F_I(x)=\bar B-\bar ax+(1+\epsilon\bar m)x^2
+ -\epsilon\nu(1+2\epsilon\bar m)x^3H(x)
+ +\epsilon^3\nu^2\bar m x^4H(x)^2.
+\]
+By Proposition~\ref{rw:phase}, it is strictly convex and positive
+near the fixed exit $x_R$. Lemma~\ref{rw:transitions:lower-sections}
+requires $F_I(s)>0$ at every point between the actual entry and
+$x_R$. Thus only the component adjoining $x_R$ passes: if a root
+is present, the entry must lie to the right of its last root.
+The entry decreases as its actual endpoint increases, since
+$T=1/p$ or $1/q$ and $t_T>0$. Its allowed endpoints consequently
+form one outward initial interval. Entry positivity in the other
+component would not suffice. Also $F_I'(0)=-\bar a$ and its
+reflected derivative is $\bar a$; strict convexity permits an
+interior positive double minimum on at most one of the two sides.
+
+The primary upper slow tests have the same one-sided form. For a repeated
+factor $v^2+\mu_U$, passage to the positive fixed exit requires
+$\mu_U>0$ or $v>\sqrt{-\mu_U}$; its actual finite entry decreases
+with $p$. This retains the negative entries beyond the repeated
+threshold whenever they pass. For the weak factor $u(\gamma+u)$,
+the whole domain is $\max(0,-\gamma)<u<u_0$, and
+$p=\hat p-t(u)$ with $t'>0$. At joint contact both calibrated
+entries decrease, so the two whole-path tests are intersections
+of one-sided restrictions. General horizontal factors use the
+whole lower test above; a smaller monotone block alone permits
+an endpoint test. Signed auxiliary coefficient comparisons do not
+remove physical inputs, whose complete central heights are positive
+by saturation.
+
+The increasing upper graph and its reflected inverse are those of
+Lemma~\ref{rw:finite:upper-return}. Its nonregular ends are classified
+in Lemma~\ref{rw:fibre:candidate-space}, with the full repeated
+interval $p\ge P$, $q=\infty$ retained. Following the graph outward
+gives these terminal templates:
+\begin{itemize}
+\item At a regular finite upper end, the first lower loss is a
+single root or the simultaneous simple-root pair. A simple root
+terminates passage; a double retains its signed slow alternatives.
+\item At a finite upper saddle, the lower paths are regular, in
+one or both contact neighborhoods, or have one incoming double-loss
+connection before the saddle. An outgoing double with regular
+incoming outer data is excluded by
+Lemma~\ref{rw:finite:action-order}, applied to the outer cycle.
+The incoming connection is the whole constant-sign interval of
+Lemma~\ref{rw:finite:incoming-contraction}.
+\item At a one-infinite end, a lower root can precede, coincide
+with, or follow the upper threshold. These give respectively the
+lower connection, the contact neighborhood, or the upper-tail piece
+followed by the lower loss. A root escaping to infinity retains
+its finite-root and cubic descriptions in the same family.
+\item At two infinite endpoints the lower cones exclude a prior
+simple root. Section~8 supplies the strict-focus, one lower-double,
+repeated, opposing-slow and cubic alternatives; Section~9 supplies
+the joint contact interval and its full separated tail.
+\end{itemize}
+A finite saddle has one returning quadrant, while the strict,
+repeated and weak preparations have the through components just
+described. Together with the monotone entry tests, this excludes a
+second independent upper end or a return after a split-root
+obstruction. The pieces of each listed end therefore form one
+terminal union, retaining a preceding constant-sign lower connection
+as a separate piece within it.
+
+Near $\mathcal P$, use the actual first exits and tags of
+Proposition~\ref{rw:secondary:exhaustion}. Routing confines a
+returning arc to the fixed secondary rectangle and uniqueness
+excludes another middle excursion. The normalized face
+$\max(|C|,\sqrt{|M|})=1$ has the finite-saddle, strict real,
+repeated, weak and focus alternatives, including $1/P=0$ and
+$1/Q=0$. The repeated row retains its full label interval.
+At its weak end the actual tag is $P=P_s-\psi(t(u))$ with
+$\psi'>c$; again outward motion decreases $u$.
+The preceding lemma inserts the finite connection, wedge and
+regular secondary prefix. The same first-threshold reasoning then
+gives one secondary terminal family; a lower-double overlay can
+add its retained connection but cannot add an opposing double or
+another returning quadrant.
+
+Retain actual open seams before reducing the scale: a fixed positive
+deficit crosscut between finite regular and singular pieces; the
+joint contact/separated overlap $P+d<p<P+2d$ with both gaps
+positive; and a fixed reciprocal annulus before either slow block,
+using Lemma~\ref{rw:transitions:common-input}. These connectors
+are transverse with bounded inverses. The finite lower-double
+bridge has the strict action margin of the preceding lemma.
+That lemma also supplies the finite--wedge and wedge--secondary
+transverse overlaps. Within the secondary family retain its fixed
+deficit crosscuts and reciprocal annuli. Adjacent strict, repeated
+and weak faces use their own uniform preparations; no estimate at
+a fixed positive eigenvalue ratio is extended across zero or infinity.
+All seams compare the same original central function.
+
+Apply Lemma~\ref{rw:fibre:compact-selection} to the joint compactification
+of Lemma~\ref{rw:fibre:candidate-space}: the intermediate copy has
+independent bounds $p\ge p_0$, $q\ge q_0>0$, its own first-exit tags,
+and $p\le p^{\rm out}$, $q\le q^{\rm out}$. Each compact limiting
+fibre is covered by the ordered pieces and their whole regular prefix.
+The retained crosscuts, action margins and transverse seams make this
+an open cover, including reciprocal radial ends; the one-sided entry
+tests preserve order. Positive endpoint limits from the initial energy
+classes use the regular enlargement in
+Lemma~\ref{rw:fibre:candidate-cover}. Thus the lemma gives common
+cutoffs after all sections, derivative budgets and overlap margins
+have been fixed.
+\end{proof}

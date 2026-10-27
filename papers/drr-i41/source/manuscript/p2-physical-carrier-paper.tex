@@ -1,0 +1,1044 @@
+\section{One physical interval and four passage regions}
+
+The preceding constructions use different phase coordinates. We now show
+that their domains cover one connected interval of actual through
+trajectories, with open overlaps. Their derivative estimates can then
+be combined for the same affine displacement.
+
+\begin{lemma}[A common entrance and gate choice]
+\label{p2:lem-joint-entrance}
+One auxiliary choice for the four passage regions, followed by
+independent small coefficient bounds, has the following properties.
+The incoming raw height $h$ is $x_{\rm raw}$ in
+\eqref{deg:fixed-exit-natural-input} and $x_{\rm in}$ in
+Lemma~\ref{lem:actual-dulac-matching}; its stopped value is $x_b$.
+Thus the canonical weak input is exactly
+\begin{equation}\label{p2:joint-raw-input}
+ P=q(h)=\frac{h-x_b}{s_{\rm in}},\qquad
+ s_{\rm in}=\Omega a^{2-\lambda_\gamma}U_{\rm in}>0,
+ \qquad \Omega=r_s^{2-\lambda_\gamma},\quad U_{\rm in}^{\pm1}\le C.
+\end{equation}
+This is the affine coordinate on the original raw section, distinct
+from the displacement coordinate $x=h-a_\theta$; no new input
+observer is inserted.
+
+Let $\widehat p_0=p_0$ be a fixed buffered raw cutoff in
+\eqref{deg:fixed-exit-middle-invariant}, and choose
+$0<\widehat p_*<\widehat p_0$ so that
+$\mathfrak j'=(\Phi_\theta/\Phi_\theta')'>3/4$ on
+$[0,\widehat p_*]$. Set $q_{\rm ref}=\widehat p_*/4$ and use
+$P_\dagger=q_{\rm ref}$ in
+\eqref{deg:source-growing-positive-log-phase}. The final negative
+thresholds are denoted by
+$\widehat r_{\rm ge}^{\rm out}=r_{\rm ge}^{\rm out}$ and
+$\widehat r_{\rm ge}=r_{\rm ge}$, with a fixed positive gap. Every
+actual first-lip input with $r_\ell\ge r_{\rm ge}$ satisfies
+\begin{equation}\label{p2:joint-entrance-buffer}
+ 0<P<q_{\rm ref}/2<q_{\rm ref}<\widehat p_*<\widehat p_0,
+\end{equation}
+including first hits outside the growing product range.
+
+The source constant $\delta_\sharp(L)$ is selected once for the full
+bounded-source domain and relative negative-curvature estimate. Its gates
+are those below in Lemma~\ref{p2:lem-bounded-source-budget}.
+The final $r_{\rm ge}$ precedes $R_{\rm BD}$ and its annular
+overlap; all fixed gates and phase buffers precede the final coefficient
+bounds. No comparison of the independent scales is imposed.
+\end{lemma}
+\begin{proof}
+Fix the original raw windows and a finite $V_1>1$, say $V_1=2$.
+Choose the local cuts and ordinary $C^3$ section maps for this value in
+Lemma~\ref{lem:actual-dulac-matching}, retaining its enlarged
+interval $0\le V\le V_1+1$. Keep these choices throughout.
+Use the strict source block and the two comparison orbits of
+Proposition~\ref{bd:prop-bounded-action}: fix its derivative constants,
+then $B_-$, then $\delta_\sharp(L)$ for both the domain and relative
+estimate, and finally $\delta_1,\delta_2$ and the gates below.
+Fix $r_c>2$ and choose $\ell_0$ below the ratio of a fixed real
+comparison orbit at $-r_c$, as in
+\eqref{deg:degree-ratio-monotonicity}.
+
+Fix a source envelope $\bar\sigma_{\rm src}=1/3$ for the separate
+centre-map estimates on $r_c\le r\le\bar\sigma_{\rm src}/s_0$ in
+Lemma~\ref{deg:lem-growing-matching-direct}; its derivative constants
+are fixed before the positive cutoff and negative thresholds below.
+The growing and output intervals will be chosen inside this envelope.
+The independent stopped outer chord and local invariant give the
+positive input map on $[0,p_0]$ in
+\eqref{deg:fixed-exit-natural-input}--\eqref{deg:fixed-exit-exact-weak-coordinate}.
+Choose the smaller fixed $\widehat p_*$ above so that the positive
+action at $P_0=q_{\rm ref}/2$ also exceeds the fixed middle
+variational exponent by two. This is possible since
+$\Phi_\theta(P)=PU_\theta(P)$ with uniform positive units and
+$\tau/\chi$ a positive unit. These choices precede the final negative
+threshold.
+
+The full first-hit cutoff following \eqref{deg:degree-phase-order}
+provides a fixed $R(P_0)$. Choose $R=r_{\rm ge}^{\rm out}$ larger
+than this and every earlier growing threshold, and so that
+$c(R-r_c)>C_*(P_0)+2d_*$ for a fixed $d_*>0$ in
+\eqref{deg:source-growing-positive-endpoint-action-budget}.
+Choose $r_{\rm ge}>R$ with a fixed positive buffer.
+The separate centre maps give
+\eqref{deg:source-growing-positive-image-inclusion} with endpoint
+$P_0$ instead of $p_*$ after independent coefficient shrink.
+Their monotonicity and scalar uniqueness therefore construct the
+actual product reference $r_\ell=r_{\rm ge}$ with raw input
+$0<P_{\rm ge}<P_0$, in the original buffered chord. The local
+invariant supplies its positive-time continuation to the raw section,
+as in \eqref{deg:source-growing-positive-raw-input-scale}.
+
+On the full first-hit domain of the original through interval,
+\eqref{deg:degree-phase-order} gives $r_{\ell,h}<0$.
+Thus $r_\ell(h)\ge r_{\rm ge}$ implies
+$h\le h_{\rm ge}=x_b+s_{\rm in}P_{\rm ge}$, and the same positive
+affine input gives $0<P(h)\le P_{\rm ge}<P_0$.
+This proves \eqref{p2:joint-entrance-buffer} throughout the first-hit
+domain, including inputs beyond the product range. The extension follows
+from order on the full domain; the product derivative estimates remain
+restricted to their original range.
+
+Only now choose $R_{\rm BD}$ so the compact strong projection of
+$r_\ell=r_{\rm ge}$ lies strictly below $2R_{\rm BD}$.
+The transverse inverse and first-hit order give a fixed
+$r_{\rm ge}^{\sharp}>r_{\rm ge}$ in the enlarged annular overlap.
+The annular proof now fixes its own outer cuts \(L_{\rm a}\), after
+this output bound and its limiting-action envelope. The earlier source
+cut \(L\), \(h_L\), \(\delta_\sharp(L)\), and literal gates stay fixed;
+both passages continue to the same raw ports. The original weak cuts
+satisfy \(c_+=p_{\rm a}/8<p_-=p_{\rm a}/2\) and
+\(c_-=p_{\rm a}/8<r_{\rm a}/2\), so the annular root-gap construction
+uses this same auxiliary tuple. Only final independent coefficient bounds
+are reduced to admit the new positive-height tail cuts.
+Choose $0<\sigma_1<\sigma_2<\sigma_0<1/4$, the common
+negative section $u_c$, its larger
+$\sigma_0<\bar\sigma\le\bar\sigma_{\rm src}$ buffer, with
+$\bar\sigma<|u_c|/2$, and strict
+action gap $\Delta$ as in the construction after
+\eqref{deg:degree-phase-order}. After these fixed choices, shrink
+the independent coefficients so the fixed annular overlap lies in
+the counted product range and $s_0r_{\rm ge}^{\sharp}<\sigma_1$.
+All source, raw and shooting buffers retain strict margins.
+All these restrictions are independent upper bounds on the coefficients.
+After they have been imposed, the finite multiplier will be chosen.
+\end{proof}
+
+\begin{proposition}[One actual carrier for the four passage regions]
+\label{p2:prop-unified-carrier-cover}
+Use the common choice of Lemma~\ref{p2:lem-joint-entrance}, the original field,
+through word, sections, raw windows, $L,h_L$ and closing maps.
+The source constant $\delta_\sharp(L)$ is the once-selected constant
+for the full original bounded-source domain and its relative sign;
+$\delta_1,\delta_2$ keep their literal values from that tuple.
+Let $I_\theta$ be the connected interval of actual through inputs in
+this word, within the original buffered windows and positive graph
+denominator domain, with
+\[
+             0<H_\theta(h):=z(\gamma_s;h)<z_{\rm cap}.
+\]
+Here $z_{\rm cap}$ is the original common fixed raw-height cap,
+chosen within the standing high-height bound. The stopped trace $x_b$
+is excluded. Write $h^0$ for the actual trace of $h_L=0$ and
+$I_\theta^- = I_\theta\cap\{h\le h^0\}$.
+
+\begin{enumerate}
+\item The original through interval $(x_b,h^0)$ has the strictly increasing
+shooting coordinate $W_\theta(h)=w(u_c;h)$ with image
+$(0,W_\theta(h^0))$, where $W_\theta(h^0)\to u_c^2/2$ uniformly.
+Thus every point of the full original enlarged chord
+$\overline{\mathcal J_c^{\sharp\sharp}}$ corresponds to an actual through orbit,
+with a strict height buffer. Its backward shot and both raw continuations
+are that same orbit.
+\item Let $h_S$ be the trace of $h_L=-\delta_2$ and let $h_A,h_B$
+be the gate traces of $r_b=r_a/2,2R_{\rm BD}$, respectively. Put
+\[
+ B_\theta=I_\theta^-\cap([h_S,h^0]\cup[h_B,h_A]),\qquad
+ h_T=\min\{h_S,h_B\}.
+ \tag{PCov1}
+\]
+Let $I_{\ell,\theta}$ be the original first-ratio-hit domain. On it put
+$\sigma(h)=s_0r_\ell(h)$. Wherever $r_\ell\ge r_{\rm ge}$ use
+the original raw middle input
+\[
+ V(h)=\frac{w(u_+;h)}{\ell_0h_{\rm ax}(u_+)\rho(u_+)}
+     =\frac{y(u_+;h)}{\varepsilon_+}>0,
+ \quad h_{\rm ax}=-\delta p_d,\quad
+ \varepsilon_+=\frac{\ell_0h_{\rm ax}(u_-)}{a^2J_-}.
+ \tag{PCov2}
+\]
+All factors in this definition are actual and positive for a physical
+coefficient fibre. Define the following subsets of that same carrier:
+\[
+\begin{aligned}
+ G_\theta&=I_\theta^-\cap I_{\ell,\theta}
+          \cap\{r_\ell\ge r_{\rm ge},\ \sigma\le\sigma_0\},\\
+ D_\theta&=I_\theta^-\cap I_{\ell,\theta}
+          \cap\{\sigma\ge\sigma_1,\ 0<V\le V_1\},\\
+ E_\theta&=I_\theta^-\cap I_{\ell,\theta}
+          \cap\{\sigma\ge\sigma_1,\ V\ge1\}.
+\end{aligned}                                                    \tag{PCov3}
+\]
+The $V$ coordinate in the last two lines is well defined because
+$\sigma_1/s_0>r_{\rm ge}$. These are connected, relatively closed
+intervals, possibly empty, and
+\[
+ I_\theta^-=B_\theta\cup G_\theta\cup D_\theta\cup E_\theta.
+ \tag{PCov4}
+\]
+Each of $G_\theta,D_\theta,E_\theta$ has the exact raw input buffer
+\[
+ 0<q(h):=\frac{h-x_b}{s_{\rm in}}<q_{\rm ref}
+       <\widehat p_*<\widehat p_0,
+ \qquad s_{\rm in}=\Omega a^{2-\lambda_\gamma}U_{\rm in}>0.
+ \tag{PCov5}
+\]
+The compact annular/growing overlap and the original product and
+$V$ overlaps are on these actual inputs, with their equality dividers
+included. Intersecting with any original closed raw-window or height
+truncation preserves the cover; no divider is required to occur.
+\item $G_\theta$ lies in the growing product domain, and
+$D_\theta,E_\theta$ lie in the enlarged domains of the finite-$V$ and
+fixed-exit maps constructed in
+Proposition~\ref{p2:prop-finite-v-fe-actual-budget}.
+The high-height interval is $I_\theta^+=I_\theta\cap\{h\ge h^0\}$.
+Together with (PCov4) it covers the whole $I_\theta$, including every
+non-root through input. On all these intervals the physical equation is
+\[
+ F(h-a_\theta)=h-a_\theta-f_\theta(m\mathfrak T_\theta(h)),
+ \qquad \mathfrak T_\theta=d_\theta\circ T_\theta^\infty.
+ \tag{PCov6}
+\]
+\end{enumerate}
+The statements about actual raw maps concern $j>0$; the reciprocal
+face $j=0$ has only the uniform one-sided normalized interpretation.
+\end{proposition}
+\begin{proof}
+The independently constructed stopped and $h_L=0$ graphs bound the
+through interval. Every intermediate graph reaches $u_c\in(-1,u_-)$ with
+positive denominator. Scalar first variation makes $W_\theta$ strictly
+increasing, with stopped limit zero.
+For the upper comparison graph set $r_0=s_0L$, $r=-u$ and $\mathscr W=w/r^2$.
+At its initial cut
+\[
+ \mathscr W(r_0)=\tfrac12+O_L(\tau b_\tau),\qquad
+ b_\tau=-\log(2\tau).
+\]
+On $r_0\le r\le |u_c|$, direct substitution of the original polynomial
+in the graph equation gives, on $1/4\le\mathscr W\le3/4$,
+\[
+ r\mathscr W_r=1-2\mathscr W+\mathscr E,\qquad
+ |\mathscr E|\le C\{\kappa\tau+\kappa\tau/r\}
+                 \le C\{\kappa\tau+\tau/L\}.             \tag{PCov7}
+\]
+Indeed $|\delta p_d(-r)|\le C\kappa\tau(r+a)$ and
+$a/r\le x_{\max}/L$, while $K_d=1+O(\kappa\tau)$ and
+$-L_d(-r)/r=1+O(\kappa\tau)$; the $E_dw$ term is smaller on this
+corridor. The regular reciprocal factorization gives the same bounds
+uniformly as $j\downarrow0$. Both boundary vectors point inward.
+The logarithmic-radius equation contracts, so variation of constants
+gives $\mathscr W(|u_c|)\to1/2$. Hence
+$W_\theta(h^0)\to u_c^2/2$. The uniform endpoint margins put
+$\overline{\mathcal J_c^{\sharp\sharp}}$ strictly inside this shooting
+image after shrink. Strict first variation gives a unique through input
+for each $W$; backward uniqueness identifies its shot and the two
+already constructed raw continuations. This proves (i) independently
+of the fixed-exit phase.
+
+The same incoming first variation preserves the ordering of the
+actual $h_L$ labels. Thus the central source interval is $[h_S,h^0]$.
+The exact gate inverse and centre matching give the annular interval
+$[h_B,h_A]$. The fixed orbit $h_L=-\delta_1$ has trace $h_C$ strictly
+inside both intervals, because $-\delta_2<-\delta_1<0$ and its actual
+gate labels lie strictly inside the annular bands. Consequently
+\[
+ [h_S,h^0]\cup[h_B,h_A]=[h_T,h^0].                       \tag{PCov8}
+\]
+The first fixed comparison alone supplies this overlap. The compact overlap also supplies an actual reference with $r_\ell=r_{\rm ge}$ and $r_b<2R_{\rm BD}$;
+its trace $h_{\rm ge}$ satisfies $h_B<h_{\rm ge}$.
+Every input failing (PCov8) is below $h_T\le h_B$, so the supplied full
+original first-hit order gives $r_\ell>r_{\rm ge}$. The unified entrance
+then gives (PCov5) on all inputs with $r_\ell\ge r_{\rm ge}$, including
+first hits beyond the product range. Their derivative estimates are applied only within the growing product
+domain.
+
+For this actual local input $q$, the original positive cut is reached
+on the stopped outer chord's local invariant. Its height is positive,
+finite and strictly increasing in $h$. Formula (PCov2) is exactly the
+original normalization $w=\ell_0h_{\rm ax}\rho V$, so
+$V_h>0$, while the full first-hit order gives $\sigma_h<0$.
+All sets in (PCov3) are therefore intervals and include their finite
+level boundaries. If an input outside $B_\theta$ has
+$\sigma\le\sigma_0$, it is in $G_\theta$. Otherwise
+$\sigma>\sigma_0>\sigma_1$ and, because $V_1>1$, its positive $V$
+satisfies $V\le V_1$ or $V\ge1$. It is in $D_\theta$ or
+$E_\theta$. This proves (PCov4) for every through input, whether or not $F$ vanishes.
+
+The compact band $r_\ell\in[r_{\rm ge},r_{\rm ge}^{\sharp}]$
+is strictly inside the annular interval and, after the prescribed
+$s_0$ bound, the growing product domain. The inequalities
+$\sigma_1<\sigma_2<\sigma_0\le\bar\sigma<|u_c|/2$ retain the actual
+product overlap. At $\sigma=\sigma_0$ the other passage region has a strict
+$\sigma_1$ buffer, and at $V=1,V_1$ the last two regions overlap
+because $1<V_1$. If a level is absent, the corresponding truncated interval is empty. The bounded endpoints and annular/growing overlap are included in these
+intervals.
+
+On $G_\theta$, $r_\ell\ge r_{\rm ge}>r_{\rm ge}^{\rm out}$ and
+$\sigma\le\sigma_0\le\bar\sigma$, so the independently constructed
+negative lip and positive chord identify the actual growing graph.
+On $D_\theta\cup E_\theta$ the same raw buffer (PCov5) supplies the
+original positive local cuts. The construction in Proposition~\ref{p2:prop-finite-v-fe-actual-budget}, using (i) as its
+independent shooting geometry, identifies the bounded-$V$ early-cut
+passage and the fixed-exit shooting map with precisely these orbits. In particular its action bound places the whole $E_\theta$
+inside the enlarged inverse image, with $\Theta=0$ buffered. This last step is the only use of that proposition; the shooting
+geometry in part (i) was constructed independently.
+
+Finally the $h^0$ comparison graph has original source height
+$Y_0\asymp b_\tau\to\infty$ and physical height
+$H_\theta(h^0)=s_s^2Y_0\to0$. The original source dictionary gives
+$|\alpha_0|+\alpha_1^2=s_s^2(1+p_s^2)$, with $p_s^2=O(\tau)$.
+It follows that
+\[
+ K(|\alpha_0|+\alpha_1^2)<H_\theta(h^0)<z_{\rm cap}.
+\]
+Scalar height order puts every retained input at or above $h^0$ in
+that same original high-height interval. The real enlarged $h_L=0$
+source chord supplies its open overlap with the low carrier. Thus
+$I_\theta^+$ includes the equality $h^0$ and all its non-root inputs;
+the upper cap is common and fixed, rather than selected at a zero.
+Original-time uniqueness gives (PCov6), with no raw gain inverted in
+the domain construction.
+\end{proof}
+
+\section{Bounded source}
+
+\begin{lemma}[Physical derivative estimates on the bounded-source intervals]
+\label{p2:lem-bounded-source-budget}
+Keep the original field, $L,h_L$, raw ports and enlarged windows, regular
+maps and ordinary $C^3$ divided closing. Keep the unified tuple's literal
+\[
+ \begin{gathered}
+ \delta_1=\min\{\delta_\sharp(L)/8,x_{\min}^2/8192,1/8192\},\\
+ \delta_2=2\delta_1,\quad p_{\rm cmp}=\sqrt{2\delta_1},\quad r_a=p_{\rm cmp}/8,\quad p_a=r_a/16,\\
+ p_-=p_a/2,\quad c_\pm=p_a/8.
+ \end{gathered}
+\]
+The constant $\delta_\sharp(L)$ was fixed once, sufficiently small for
+the bounded-source domain and relative estimate, before these gate
+constants were defined. On the actual source word put
+\[
+ \beta=h_L/\tau-\log(2\tau),\quad b_\tau=-\log(2\tau),\quad
+ \beta_{\min}=-\delta_2/\tau-\log(2\tau).
+\]
+There are fixed thresholds $B_-,B_+$ and constants $C_B,C_H$, uniform in
+the original compact and reciprocal coefficient families, such that:
+\begin{enumerate}
+\item On every actual input with $\beta_{\min}\le\beta\le-B_-$,
+the complete divided transition $\Pi$ has $\Pi''<0$ in the original
+affine raw input, hence $F''=-m\Pi''>0$ for $m>0$.
+\item On $-B_-\le\beta\le B_+$, one has $0<\Pi'\le C_B$.
+\item On $B_+\le\beta\le b_\tau$, including $h_L=0$, and on a real
+enlarged source chord through that orbit, one has $0<\Pi'\le C_H$.
+The same bound holds on its admitted height-dominant continuation.
+\end{enumerate}
+All assertions hold on enlarged overlap intervals and at every nonclosed
+through input. One final choice $m\max\{C_B,C_H\}<1/2$ gives $F'>1/2$
+on the last two pieces. The input is always
+$x=h-a_\theta$, and
+\[
+ \Pi(x)=\mathcal C_{\theta,m}(T_\theta(a_\theta+x)),\qquad
+ F(x)=x-m\Pi(x)=x-f_\theta(m d_\theta(T_\theta(a_\theta+x))).
+ \tag{BS1}
+\]
+\end{lemma}
+
+\begin{proof}
+Apply Proposition~\ref{bd:prop-bounded-action} to the same sections
+and divided closing. Its estimates
+\eqref{bd:relative-negative-curvature}--\eqref{bd:relative-raw-curvature}
+give the first assertion, and \eqref{bd:compact-raw-variation}
+gives the second.
+The independent frozen windows, $L_f=8$, $R_f=5$ and polynomial
+margin $3/4$ are supplied by Lemma~\ref{bd:lem-source-ranges};
+both exact raw gains and their common-power cancellation are retained
+in (BS1). It remains to check the literal gates and the upper chord.
+
+The final $\delta_\sharp(L)$ is chosen there for both the domain and
+relative curvature estimate, after $B_-$ and before the displayed literal
+$\delta_1,\delta_2$. Since $\delta_2\le\delta_\sharp/4$,
+the central block has enlarged lower chords down to
+$h_L=-3\delta_1>-\delta_\sharp$. Compact labels
+$[-B_--1,B_++1]$ and positive labels beginning below $B_+$ give actual
+overlaps by monotone incoming first variation. A final $\tau$ shrink
+makes $\beta_{\min}<-B_-$ and $b_\tau>B_++2$.
+
+For positive labels choose the signed high-height constants
+$K,z_*,C_H$ first, then $B_+$ large. Equation~\eqref{bd:positive-height}
+gives, through $\beta=b_\tau$ and the enlarged chord below,
+\[
+ Y_0>K(1+p_s^2),\qquad
+ H=s_s^2Y_0\le C_L\tau^3\sigma^4j^2(1+b_\tau)<z_*.
+ \tag{BS10}
+\]
+To realize the upper chord, freeze $B=b_\tau$ in the original
+positive-energy construction. For $\beta/B\in[3/4,3/2]$, its incoming
+energy $\beta/B+B^{-1}\log(2/B)$ stays strictly inside $[1/4,3]$.
+The energy defect is $O_L(B^{-1})$ and its variation integral tends
+uniformly to zero; the same first-contact proof and positive inverse
+therefore construct this entire chord. It has
+$Y_0=\beta-\log\beta+O_L(1)$ and
+$\eta(\pm L)=L^2/2+O_L(\tau b_\tau)$ at the unchanged cuts.
+The original quadratic corridor and raw-window margins continue both
+sides. In particular $0\le h_L\le\tau b_\tau/2$ is a real enlargement
+above the $h_L=0$ orbit.
+
+By (BS10), the signed high-height bound used in
+Proposition~\ref{bd:prop-bounded-action}, namely
+Corollary~\ref{rew:cor-high-derivative-signed}, applies throughout
+this chord and its continuation
+$K(|\alpha_0|+\alpha_1^2)\le H<z_*$, including the equality face.
+It gives the third assertion, with the height scale frozen at each base point.
+
+The full transported output, including reference values, has a common
+bound $M_{\rm out}$ on the original section windows. Choose $m$ last
+with $m\le m_0$, $mM_{\rm out}<a_{\rm cl}/2$ and
+$m\max(C_B,C_H)<1/2$. Then (BS1) gives $F'>1/2$ on the compact,
+positive and high pieces, while the negative curvature gives $F''>0$
+for $m>0$. The enlarged estimates include threshold equalities and
+every nonclosed input. At $m=0$, $F(x)=x$; collapsed sections denote
+only normalized one-sided limits.
+\end{proof}
+
+\section{Growing exit}
+
+\paragraph{The growing displacement and its curvature.}
+The action derivative of the matched map is known, but the finite
+closing is evaluated at its full translated output. We first bound that
+output and its first two action derivatives, then use the logarithmic
+slope to prove convexity in the original affine input.
+All phase derivatives fix every coefficient. Use the already constructed
+joint auxiliary tuple, the actual first lip $r=r_\ell$, and its original
+enlarged domain
+\[
+ \widehat r_{\rm ge}^{\rm out}\le r\le\bar\sigma/s_0,\qquad
+ s_0=\kappa\sqrt B,\qquad 0<\sigma_0<\bar\sigma<1/2 .
+ \tag{GC1}
+\]
+The counted interval has $r\ge\widehat r_{\rm ge}$ and $s_0r\le\sigma_0$.
+Write the actual affine raw input as
+\[
+ h=x_b+s_{\rm in}P,\qquad
+ s_{\rm in}=\Omega a^{2-\lambda_\gamma}U_{\rm in}>0,\qquad
+ \Omega=r_s^{2-\lambda_\gamma},\qquad U_{\rm in}^{\pm1}\le C .
+ \tag{GC2}
+\]
+The joint entrance construction supplies $0<P<\widehat p_*/2$.
+Set
+\[
+ X=\Phi_\theta(P)/\Phi_\theta(q_{\rm ref}),\qquad
+ \mathcal E=X\partial_X=\mathfrak j(P)\partial_P,\qquad
+ \mathfrak j=\Phi_\theta/\Phi_\theta'>0,\qquad
+ e_s=\tau/\chi ,
+ \tag{GC3}
+\]
+with the denominator held fixed. Let
+\[
+ \mathcal P(r)=P_s(-r)/B_\tau(-r),\qquad
+ \mathfrak d=\mathcal P/r,\qquad \mathcal D=\mathfrak d\partial_r .
+\]
+The polynomial estimates and the matched action derivative give
+\[
+ \begin{gathered}
+ \mathcal P\asymp1+r,\quad \mathcal P'>0,\quad
+ \mathfrak d^{\pm1}\le C,\quad |\mathcal D\log\mathfrak d|\le C,
+ \quad e_s^{\pm1}\le C,\quad \mathfrak j'>3/4,\\
+ -\mathcal Er=e_s\mathfrak d\,n,\qquad n=1+\zeta,\qquad
+ n\ge1/2,\qquad |\zeta|+|\mathcal E\zeta|\le C\tau .
+ \end{gathered}
+ \tag{GC4}
+\]
+Here $\mathcal E$ acts on the actual graph, including the negative
+variable in the complete quotient row.
+
+Retain the full actual output
+\[
+ \begin{gathered}
+ T(r)=\Xi(W_\theta(r))
+      =t_\dagger-a_{\rm grow}\mathcal B(r),\qquad
+ a_{\rm grow}=\Omega s_0^2U_{\rm out}>0,\qquad
+ \mathcal B'=rG,\quad G>0,\\
+ W_\theta'=-s_0^2r\Gamma_\theta,\qquad
+ G=\Gamma_\theta\,\Xi'(W_\theta)/(\Omega U_{\rm out}) .
+ \end{gathered}
+ \tag{GC5}
+\]
+Thus $T$ includes its coefficient-dependent translation, original
+moving endpoint, tails and regular output section map.
+The actual output lies in a fixed compact physical section window $J_T$.
+The first action derivative of the landing, composed with this same
+$\Xi$, satisfies
+\[
+ \begin{split}
+ |\mathcal D\log G|
+ &\le C\left\{
+ \frac{\tau}{\sqrt B\,r^2}
+       \left(1+\left|\log\frac{\tau}{\sqrt B\,r}\right|\right)
+       +s_0\kappa\tau+s_0^2\mathcal P(r)\right\}\\
+ &\le C\{\tau(1+|\log\tau|)+s_0\}.
+ \end{split}
+ \tag{GC6}
+\]
+The ordinary finite closing has $f_\theta(0)=0$, $f_\theta'>c_f>0$,
+and uniform ordinary $C^3$ bounds on a buffered interval containing
+$mJ_T$ for $0\le m\le\bar m$. It is the original closing after the
+output map $d_\theta$ already retained in $T$.
+The physical affine displacement is exactly
+\[
+ F_\theta(h)=h-a_\theta-f_\theta(mT_\theta(h)),\qquad
+ T_\theta(h)=T(r(P(h))).
+ \tag{GC7}
+\]
+
+\begin{proposition}[Convexity and zero count in the growing range]
+\label{p2:prop-growing-physical-count}
+On the whole counted growing interval, there are common constants
+$C_T,C_{\rm cl}$ and a multiplier bound $m_0>0$, selected after the
+independent coefficient bounds, such that
+\[
+ |T|\le C_T,\qquad 0<\mathcal ET\le C_T,\qquad
+ |\mathcal E^2T|\le C_T .
+ \tag{GC8}
+\]
+For every actual through input in that interval, whether or not
+$F_\theta=0$,
+\[
+ \begin{gathered}
+ \left|\mathcal E^j\{f_\theta(mT)-f_\theta(0)\}\right|
+       \le C_{\rm cl}m,\\
+ \left|\mathcal E^j\{\log f_\theta'(mT)-\log f_\theta'(0)\}\right|
+       \le C_{\rm cl}m,\qquad j=0,1,2,\quad 0\le m\le m_0 .
+ \end{gathered}
+ \tag{GC9}
+\]
+For $0<m\le m_0$, the complete physical displacement is strictly convex:
+\[
+ F_\theta''(h)>0\qquad\hbox{at every point of the growing interval}.
+ \tag{GC10}
+\]
+Consequently it has at most one critical point, that point is simple
+and upward, and it has at most two isolated zeros counted with
+multiplicity. At $m=0$, $F_\theta'(h)=1$.
+The constants are uniform on the full prescribed passive coefficient
+family and both coefficient graphs, with the reciprocal estimates
+uniform for physical $j>0$ approaching its one-sided boundary.
+\end{proposition}
+
+\begin{proof}
+\emph{Bounds on the full output and its action derivatives.}
+Put $L(r)=-T_r=a_{\rm grow}rG(r)>0$ and
+\[
+ d_r=\min\{1,(\widehat r_{\rm ge}
+              -\widehat r_{\rm ge}^{\rm out})/2\}>0 .
+\]
+The original lower buffer places every $[r-d_r,r]$ in (GC1).
+Since $\mathfrak d^{-1}$ is bounded, (GC6) gives
+\[
+ |\partial_r\log L|
+ \le r^{-1}+\mathfrak d^{-1}|\mathcal D\log G|\le C_L .
+\]
+Let $D_T$ be the diameter of $J_T$. Using the actual output values,
+\[
+ D_T\ge T(r-d_r)-T(r)
+      =\int_{r-d_r}^rL(v)\,dv
+      \ge d_re^{-C_Ld_r}L(r).
+ \tag{GC11}
+\]
+Thus $L\le C$ without dividing by $a_{\rm grow}$, $\Omega$ or a raw gain.
+Equation (GC4) now gives
+\[
+ \mathcal ET=e_s\mathfrak d\,Ln>0,\qquad
+ \mathcal E\log(\mathcal ET)
+ =-e_sn\{\mathcal D\log\mathfrak d+\mathcal D\log L\}
+       +\frac{\mathcal E\zeta}{n},\qquad
+ \mathcal D\log L=\mathfrak d/r+\mathcal D\log G .
+ \tag{GC12}
+\]
+Every term on the right is bounded. Hence $\mathcal ET\le C$ and
+$|\mathcal E^2T|\le C$; $|T|$ is bounded by the fixed compact $J_T$.
+The reference value of the output is included in this bound, so (GC8)
+applies at the actual argument of the closing map.
+
+\emph{Composition with the finite closing.}
+The full translated $T$ and its first two action rows satisfy (GC8)
+on the buffered actual image. The ordinary $C^3$ closing has positive
+derivative units there. Lemma~\ref{phys:lem-c3-adapters}, specifically
+\eqref{phys:eq-absolute-closing-two}, therefore gives (GC9) for all
+through inputs, with constants fixed before $m$.
+
+\emph{Strict convexity in the actual affine input.}
+Before finite closing, the exact logarithmic slope is
+\[
+ \begin{split}
+ H_0
+ &:=\mathcal E\log
+       \frac{\mathfrak j(P)}{e_sG(r)\mathcal P(r)n(P,r)}\\
+ &=\mathfrak j'(P)+e_sn
+       \left\{\frac{\mathcal P'(r)}r+\mathcal D\log G(r)\right\}
+       -\frac{\mathcal E\zeta}{n}.
+ \end{split}
+ \tag{GC14}
+\]
+This identity follows from $\mathcal Er=-e_s\mathfrak d n$;
+the derivative of the matched quotient is included.
+By (GC4), (GC6) and $\mathcal P'>0$,
+\[
+ H_0\ge 3/4-C\{\tau(1+|\log\tau|)+s_0\}>1/2
+ \tag{GC15}
+\]
+after common independent $\tau,\kappa$ bounds.
+Here $s_0=\kappa\sqrt B$, with $B$ a positive unit.
+The original passive coefficient set and joint auxiliary tuple are
+unchanged.
+
+Since $\mathcal ET=\mathfrak j T_P$ and (GC5) gives
+$T_P=a_{\rm grow}e_sG\mathcal P n/\mathfrak j>0$, define
+\[
+ \mathscr R=\frac{s_{\rm in}}{mf_\theta'(mT)T_P}>0 .
+\]
+Every factor in its numerator, $a_{\rm grow}$ and $e_s$ is
+coefficient-only. Its complete logarithmic row is therefore
+\[
+ H_m:=\mathcal E\log\mathscr R
+    =H_0-m\frac{f_\theta''(mT)}{f_\theta'(mT)}\mathcal ET .
+ \tag{GC16}
+\]
+The absolute output estimate (GC8) makes the closing term at most
+$C_m m$, with a common $C_m$ fixed before the multiplier.
+Choose last
+$m_0\le\min\{\bar m,1,1/[4(1+C_m)]\}$. Then $H_m>1/4$.
+
+Restore the physical input using (GC2). Direct differentiation of the
+same displacement (GC7) gives at every through point
+\[
+ F_\theta'(h)=1-\frac1{\mathscr R},\qquad
+ F_\theta''(h)=\frac{\mathscr R_h}{\mathscr R^2}
+       =\frac{H_m}{s_{\rm in}\mathfrak j(P)\mathscr R}>0 .
+ \tag{GC17}
+\]
+The two raw gains remain in this expression, so its sign holds even
+when either gain is arbitrarily small.
+Translation to $h-a_\theta$ leaves these derivatives unchanged.
+
+Lemma~\ref{sharp:upper-critical-count} now gives the critical and
+zero counts, with multiplicity; (GC17) excludes an identity interval.
+
+The bound (GC6) uses $r\ge R_0$ and
+$s_0^2\mathcal P(r)\le Cs_0$; its logarithm contains no $j$.
+The bounds on $\kappa,\tau$ are independent, uniformly on the
+prescribed compact $j$ ranges.
+\end{proof}
+
+\section{Finite height and fixed exit}
+\subsection{The last two passage regions and their physical curvature}
+
+Bounded amplified height is described by two small-power section maps.
+For larger height we instead use the action coordinate on a fixed
+negative section. We construct both maps on overlapping domains before
+comparing their derivatives in the physical input.
+
+Retain the single joint auxiliary choice, its original physical sections
+and nested windows, the weak cuts, and the original coefficient family.
+Let \(I_\ell\) be the positive-height first-lip domain in the original
+through interval. Write
+\[
+ P={\frac{h-x_b}{s_{\rm in}}},\qquad
+ s_{\rm in}=\Omega a^{2-\lambda_\gamma}U_{\rm in}>0,\qquad
+ \Omega=r_s^{\,2-\lambda_\gamma},
+ \qquad q_s={\frac{\beta}{\chi}}=\kappa Q_d ,
+ \tag{FVFE1}
+\]
+where \(h\) is actual incoming height, \(Q_d,U_{\rm in}\) are positive
+units, and no positive lower bound for either raw first gain is imposed.
+The variable \(P\) is the canonical raw input of the joint entrance
+construction; it is distinct from the saddle ratio \(q_s\).
+Use the unchanged raw middle coordinate
+\[
+ V={\frac{y_+(h)}{\varepsilon_+}},\qquad
+ \varepsilon_+={\frac{\ell_0h_-}{a^2J_m(u_-)}},\qquad
+ \sigma=s_0r_\ell .
+ \tag{FVFE2}
+\]
+Here \(y_+\) is the actual height \(w/a^2\) at \(u=u_+\).
+Every phase derivative fixes all coefficients and all gains.
+
+\begin{proposition}[Physical passage and convexity in the last two ranges]
+\label{p2:prop-finite-v-fe-actual-budget}
+For the joint auxiliary choice, followed by independent active
+coefficient bounds, put
+\[
+ J_{34}=I_\ell\cap\{\sigma\ge\sigma_1\},\qquad
+ D=J_{34}\cap\{0<V\le V_1\},\qquad
+ E=J_{34}\cap\{V\ge1\},\qquad V_1>1 .
+ \tag{FVFE3}
+\]
+These are intervals in the same actual incoming height, with every
+displayed divider equality included. Each lies in the prescribed
+enlarged domain of its corresponding actual transition, and
+\(D\cup E=J_{34}\). Every input in these sets, whether
+closed or nonclosed, has its original raw trace in
+\(0<P<q_{\rm ref}<\widehat p_*<\widehat p_0\).
+The finite-\(V\) map uses the original early negative cut on
+the fixed enlarged interval \(0<V\le V_1+1\). For larger amplified
+heights, the independently constructed fixed-exit map uses the buffered
+shooting chord on \(u=u_c\). The two
+constructions agree on \(1\le V\le V_1\) by original-time
+uniqueness, so their union is the same physical transition on \(J_{34}\).
+
+For the original return write
+\[
+ \mathcal F(h):=F(h-a_\theta)
+       =h-a_\theta-f_\theta(mT(h)).
+ \tag{FVFE4}
+\]
+The map \(T\) includes the actual negative output adapter. For every
+\(0<m\le m_0\),
+\[
+ \mathcal F''(h)>0\qquad(h\in J_{34}).
+ \tag{FVFE5}
+\]
+Thus the whole combined interval has at most one simple upward
+critical point and at most two isolated zeros with multiplicity.
+At $m=0$, $\mathcal F'=1$. The whole carrier is counted separately
+in Proposition~\ref{p2:prop-physical-degree-count}.
+\end{proposition}
+
+\begin{proof}
+\emph{The shooting chord and its phase coordinate.}
+Part (i) of Proposition~\ref{p2:prop-unified-carrier-cover} realizes
+$\overline{\mathcal J_c^{\sharp\sharp}}\Subset(0,u_c^2/2)$ as
+unique through orbits, identified with the backward shots by uniqueness.
+Proposition~\ref{fx:prop-inverse-phase} applies to this entire buffered
+chord: its scalar first-exit construction is independent of the
+positive raw-section dictionary. Its extracted phase
+$\Psi_\theta(W)$ converges in $C^2$ to
+$\Gamma_c\circ\mathcal W^{-1}$, whose derivative is
+$1/H_{0,c}(r)>0$. Hence its increasing inverse
+$W=\mathcal H_\theta(\Theta)$ has bounded first two derivatives
+and a positive derivative unit on
+\[
+ \Theta_-\le\Theta\le\Gamma_- -\Delta,\qquad \Theta_-<0,
+ \tag{FVFE8}
+\]
+strictly inside its inverse image. The negative buffer comes from the
+original enlarged chord around $u_-$; the reciprocal functions give
+the same uniform gaps.
+
+\emph{Continuation of the shooting chord to the raw input.}
+The exact positive invariant, including its local unit functions,
+is
+\[
+ \Phi_\theta(P)=\{z_+y_+(P)\}^{\chi},\qquad
+ \Phi_\theta(P)=P U_\theta(P),\qquad
+ \Phi_\theta'>c,\qquad U_\theta^{\pm1}\le C.
+ \tag{FVFE9}
+\]
+Use the reference $P_{\rm ref}=a_{\rm in}$ of
+\eqref{deg:degree-fixed-exit-gap}:
+\[
+ \Phi_\theta(P_{\rm ref})=(z_+\beta\varepsilon_+)^\chi,\qquad
+ q_s\log\Phi_\theta(P_{\rm ref})=-\Gamma_-+o(1).
+ \tag{FVFE10}
+\]
+The exact identity \eqref{p2:reference-telescope} proves this limit
+on both graphs: on the reciprocal graph use its prescribed $d,j$
+in place of $\mathcal Rc,1/c$. All factors remain regular at $j=0$,
+so its error bound is unchanged and no $\beta\log j$ occurs.
+This reference corresponds to $V=\beta$. On the compact shooting chord the limiting
+gap from \(\Gamma_-\) has a fixed positive minimum \(d_{\rm fx}\).
+The scalar shooting estimate and (FVFE10) give, after shrink,
+\[
+ \beta\log V\le\Gamma_- -d_{\rm fx}/2,\qquad
+ \beta\log y_+\le-d_{\rm fx}/3 .
+ \tag{FVFE11}
+\]
+Since \(\beta\le C\chi\), this implies \(y_+<\chi^2\).
+Thus (FVFE9) can be inverted on the original invariant chord, and
+\[
+ \Phi_\theta(P)\le C e^{-d_{\rm fx}/(3q_s)},\qquad
+ 0<P\le e^{-d_{\rm fx}/(4q_s)}<\widehat p_0
+ \tag{FVFE12}
+\]
+after a further independent \(\kappa\) bound.
+In particular the physical distance from the stopped trace satisfies
+\(\sup(h-x_b)\le C e^{-d_{\rm fx}/(4q_s)}\to0\) on the
+entire shooting chord, since \(s_{\rm in}\le C\).
+The two local points have the same invariant in the same larger
+coordinate box. Positivity and monotonicity along that invariant level
+give the intervening orbit segment; the independently actual raw
+continuation identifies its raw trace with the shot through orbit.
+This places the full chord within the independently selected fixed cutoff
+$\widehat p_0$, before any zero selection.
+
+\emph{The bounded-\(V\) passage.}
+Lemma~\ref{lem:actual-dulac-matching} independently continues the
+entire larger interval $0\le V\le V_1+1$ to the early cut
+$u_0=-1+\eta_0>u_-$. Equations~\eqref{eq:early-saddle-smallness}
+and~\eqref{eq:early-middle-identity} give its positive invariant
+at most $Ce^{-c_0/(2q_s)}$. The inversion used in (FVFE12) places the whole interval strictly
+inside the raw cutoff.
+The assigned set \(D\) is its restriction to \(0<V\le V_1\).
+On the negative early cut, the lemma's exact invariant is
+\[
+ I_-(w)=\alpha_\theta R,\qquad
+ R=\beta^{-\beta}C(v)^\beta,\qquad
+ v=\widehat V=V+o_{C^3}(\chi).                 \tag{FVFE14}
+\]
+Its fixed cut choice puts the full $R\le1+o(1)$ interval strictly
+inside the outer positive-height chord. At $R=0$ the output is the
+stopped height $w_->0$. Thus both actual tails, ordinary $C^3$
+observers and finite closing are on their original buffered domains,
+with their exact values and positive first gains retained.
+
+\emph{The domains of the two passage maps.}
+The joint entrance supplies the actual product reference
+\(r_\ell=\sigma_1/s_0\) after the active shrink.
+Direct landing followed by the independent inverse shooting phase
+gives
+\[
+ \Theta(h_{\sigma_1})\longrightarrow\Gamma_c(-\sigma_1),
+ \qquad
+ \Gamma_- -\Gamma_c(-\sigma)
+      =\log{\frac{c+\sigma}{c(1-\sigma)}} .
+ \tag{FVFE15}
+\]
+On the reciprocal chart the gap is
+\(\log((1+j\sigma)/(1-\sigma))\), uniformly positive on the fixed
+product buffer. The retained choice of \(\Delta\) and its strict
+buffer imply
+\[
+ 0<g_0\le\Theta(h_{\sigma_1})\le\Gamma_- -2\Delta .
+ \tag{FVFE16}
+\]
+The actual orders \(r_{\ell,h}<0\) and \(V_h>0\) imply that every
+member of \(E\) has \(0\le\Theta=\beta\log V\le\Theta(h_{\sigma_1})\).
+Thus the entire fourth range lies in the domain (FVFE8) of the inverse
+phase map, including inputs whose orbits are not closed. The equality \(V=1\) has the
+negative-action buffer there. Since
+\(\mathcal H_\theta([0,\Gamma_- -2\Delta])
+\Subset\mathcal J_c^\sharp\Subset\mathcal J_c^{\sharp\sharp}\)
+uniformly after shrink, its whole closed output-height subset has
+a strict actual shooting buffer.
+Decrease the independent coefficient bounds further so that
+\(\beta\log(V_1+1)<g_0/2\). Then
+\(V(h_{\sigma_1})=\exp(\Theta(h_{\sigma_1})/\beta)>V_1+1\),
+so the third range retains the full buffered finite-\(V\) passage.
+The two constructions identify the same raw inputs and outputs on \(1\le V\le V_1\) by original-time uniqueness.
+No physical input is relabelled at \(V=1\).
+Their actual \(\sigma\ge\sigma_1\) domain has
+\(r_\ell\ge\sigma_1/s_0>r_{\rm ge}\), so the joint entrance's full
+first-hit order supplies the sharper raw bound
+\(P<q_{\rm ref}<\widehat p_*<\widehat p_0\).
+
+\emph{Physical convexity for bounded \(V\).}
+For \(m>0\), the actual-section construction gives exactly
+\[
+ \begin{gathered}
+ h=x_b+P_*K(v),\qquad
+ f_\theta(mT(h))=b_*+a_*H(v),\\
+ K(v)=\Psi(v^\chi),\quad
+ H(v)=D(\beta^{-\beta}C(v)^\beta),\qquad P_*,a_*>0 .
+ \end{gathered}\tag{FVFE17}
+\]
+Here all regular tails and finite closing are already included.
+Put \(e_C=vC'/C>0\). Lemma~\ref{lem:actual-dulac-matching}
+supplies the stronger normalized estimates below, with \(\Sigma_+\)
+the coefficient-only positive invariant scale in its construction:
+\[
+ \begin{gathered}
+ e_C=1+O(\epsilon_\theta),\qquad
+ \left|{\frac{ve_C'}{e_C}}\right|\le C\epsilon_\theta,\qquad
+ |D''/D'|\le C,\\
+ \sup_t|t\Psi''(t)/\Psi'(t)|\le C\Sigma_+,\qquad
+ \epsilon_\theta\le C\beta^{-N}e^{-c_0/(3\beta)},\qquad
+ \Sigma_+\le Ce^{-c_0/(2q_s)} .
+ \end{gathered}
+\]
+The exact Wronskian row, with \(R=\beta^{-\beta}C(v)^\beta\), is
+\[
+ \begin{split}
+ \mathcal Q(v)
+ &=v\left({\frac{K''}{K'}}-{\frac{H''}{H'}}\right)\\
+ &=\chi-\beta e_C-{\frac{ve_C'}{e_C}}
+       +\chi v^\chi{\frac{\Psi''}{\Psi'}}
+       -\beta e_C R{\frac{D''}{D'}}
+ \ge\chi/2>0 .
+ \end{split}
+ \tag{FVFE18}
+\]
+On this interval \(R\le1+o(1)\). With
+\(q_s=\beta/\chi=\kappa Q_d\longrightarrow0\),
+the displayed estimates give the relative bound
+\[
+ \frac{\mathcal Q(v)}{\chi}
+ \ge1-Cq_s-C\frac{\epsilon_\theta}{\chi}-C\Sigma_+
+ \ge\frac12 .
+\]
+Indeed, \(\beta=q_s\chi\) implies
+\[
+ \frac{\epsilon_\theta}{\chi}
+ \le Cq_s\beta^{-N-1}e^{-c_0/(3\beta)}\longrightarrow0.
+\]
+The input-section error has weight \(\chi\Sigma_+\), whereas
+the bounded output and closing error has weight \(\beta\).
+Thus independent bounds on \(\kappa,\tau\) give this sign for
+every \(v>0\), without extending the small-power compositions
+in ordinary \(C^3\) to the excluded stopped endpoint.
+Since \(dh/dv=P_*K'>0\), differentiation of the exact physical
+displacement, without multiplying it by a nonconstant factor, yields
+\[
+ \mathcal F''(h)=
+ {\frac{a_*}{P_*^2}}{\frac{H'}{(K')^2}}{\frac{\mathcal Q(v)}{v}}>0 .
+ \tag{FVFE19}
+\]
+
+\emph{Physical convexity on the fixed-exit interval.}
+The assigned set \(E\) has
+\(0\le\Theta\le\Theta(h_{\sigma_1})\), strictly inside the
+larger buffered action interval (FVFE8).
+Use the common actual map \eqref{deg:fixed-exit-actual-output},
+$\Xi(W)=t_b+a_{\rm out}D^n(W)$, $a_{\rm out}=\Omega U_{\rm out}>0$,
+on its whole buffered height chord. Its ordinary $C^3$ normalized
+bounds and $0<\Omega\le C$ retain the full output in the original
+raw and closing windows. For the fixed closing buffer $a_{\rm cl}>0$,
+impose on the whole chord
+\[
+ m_0\left\{|t_b|+
+ a_{\rm out}\sup_{\mathcal J_c^{\sharp\sharp}}|D^n|\right\}
+ <a_{\rm cl}/2 .
+ \tag{FVFE20a}
+\]
+The braces are uniformly bounded on the original output window,
+so this selects $m$ independently of the first gain.
+
+Put \(\widehat H=D^n\circ\mathcal H_\theta\). The exact raw formulas are
+\[
+ T(h)=t_b+a_{\rm out}\widehat H(\Theta(P)),\qquad
+ \Theta(P)=\beta\log\beta+
+       q_s\log{\frac{\Phi_\theta(P)}{\Phi_\theta(P_{\rm ref})}}.
+ \tag{FVFE21}
+\]
+Writing \(p=h-x_b=s_{\rm in}P\), retain the raw gain in the two rows
+\[
+ 0<pT_h=
+ a_{\rm out}\widehat H' q_s{\frac{P\Phi_\theta'}{\Phi_\theta}}
+       \le C a_{\rm out}q_s ,
+ \tag{FVFE22}
+\]
+\[
+ p{\frac{T_{hh}}{T_h}}
+ =P{\frac{\Phi_\theta''}{\Phi_\theta'}}
+       -P{\frac{\Phi_\theta'}{\Phi_\theta}}
+       +q_sP{\frac{\Phi_\theta'}{\Phi_\theta}}
+                    {\frac{\widehat H''}{\widehat H'}}
+ =-1+O(P+q_s)\le-\tfrac12 .
+ \tag{FVFE23}
+\]
+The ordinary $C^3$ closing has derivative units and bounded
+pre-Schwarzian on the whole sampled interval. (FVFE22)--(FVFE23) give
+\[
+ p\left\{{\frac{T_{hh}}{T_h}}
+       +m{\frac{f_\theta''(mT)}{f_\theta'(mT)}}T_h\right\}
+ \le-\tfrac12+Cma_{\rm out}q_s<-\tfrac14 .
+ \tag{FVFE24}
+\]
+Therefore
+\[
+ \mathcal F''(h)=
+ -mf_\theta'(mT)T_h
+ \left\{{\frac{T_{hh}}{T_h}}
+       +m{\frac{f_\theta''(mT)}{f_\theta'(mT)}}T_h\right\}>0 .
+ \tag{FVFE25}
+\]
+No lower bound for \(s_{\rm in}\), \(\Omega\), or \(T_h\) was used.
+
+The positive input order makes \(J_{34}\) one interval.
+The two convexity estimates concern the identical physical \(F\)
+on an overlapping cover, so (FVFE5) holds on their union.
+Lemma~\ref{sharp:upper-critical-count} gives the critical and zero
+counts with multiplicity, also for every finite collection approaching
+the excluded stopped boundary.
+The endpoints at the phase boundaries lie inside the enlarged domains
+of their respective passage maps.
+At \(m=0\) the original completed displacement has derivative one.
+The combined reference logarithms, normalized section maps and
+first-cocycle powers above are regular at the reciprocal face; none introduces a
+\(\beta\log j\) or \(\tau\log j\) restriction. Actual physical maps
+are asserted for \(j>0\), with \(j=0\) a one-sided normalized limit.
+\end{proof}
+
+\section{Counting zeros on the complete degree-loss interval}
+
+Each local calculation either gives strict convexity of the physical
+displacement or excludes critical points by a positive derivative.
+Because the local maps agree on overlapping intervals, the same
+alternative holds at every point of the connected through interval.
+
+\begin{proposition}[Physical counting on the degree-loss carrier]
+\label{p2:prop-physical-degree-count}
+Fix the compact positive-unit ranges of the degree-loss graph, or
+the reciprocal graph with $0<j\le j_0$. Use the joint auxiliary
+choice of the growing entrance and its actual gates. There are
+independent active coefficient bounds, a common raw-height cap and
+a last finite-closing multiplier bound with the following property.
+On the resulting connected interval $I_\theta$ of actual through
+inputs on the original section, the complete affine displacement
+\[
+ F_\theta(x)=x-f_\theta\bigl(m\mathfrak T_\theta(a_\theta+x)\bigr),
+ \qquad x=h-a_\theta,
+ \tag{PC1}
+\]
+has at most one critical point. Every critical point is a simple
+upward crossing of $F_\theta'$. Consequently it has at most two
+isolated zeros, counted with multiplicity, and no identity interval.
+The interval $I_\theta$ consists of the same through word in the
+original nested windows, with positive passage denominator and
+$0<z(\gamma_s)<z_{\rm cap}$ for one fixed physical height cap.
+The assertion holds at every actual input of $I_\theta$, without
+assuming its orbit is closed. The original field, marked sections,
+nested raw windows, $L,h_L$ and closing map define this same return.
+Here $\mathfrak T_\theta=d_\theta\circ T_\theta^\infty$ is the
+original transported output and $f_\theta=C_\theta-C_\theta(0)$.
+Thus $f_\theta(0)=0$ and at $m=0$ the displacement is $F_\theta(x)=x$.
+No physical passage at $j=0$ or at a stopped boundary is asserted.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{p2:prop-unified-carrier-cover} supplies the closed
+low cover $B_\theta\cup G_\theta\cup D_\theta\cup E_\theta$ and
+its overlapping high continuation on the connected actual interval
+$I_\theta$. It includes every divider equality and every nonroot input;
+only the stopped endpoint is excluded.
+All restrictions have the same affine displacement (PC1).
+
+On the annular part of $B_\theta$,
+Lemma~\ref{bd:lem-annulus} gives $\Pi''<0$ after the ordinary
+$C^3$ divided closing is included. Its principal margin is
+$\lambda_1/(2x_{\max}R_{\rm BD})$; the independent active bounds
+make the errors smaller than half this margin.
+Lemma~\ref{p2:lem-bounded-source-budget} gives the same sign on
+negative source inputs and $F'>1/2$ on the compact, positive and
+high source pieces. Propositions~\ref{p2:prop-growing-physical-count}
+and~\ref{p2:prop-finite-v-fe-actual-budget} give $F''>0$ on
+$G_\theta$ and on the whole combined $D_\theta\cup E_\theta$.
+These signs are in the original affine input and include both exact
+raw gains and the translated output inside the closing map.
+
+Take the finite intersection of the independent active bounds, then
+one multiplier bound for all derivative estimates and the full absolute
+output envelope in the original closing buffer. Every critical point
+of (PC1) consequently has $F''>0$, including those on the dividers.
+Lemma~\ref{sharp:upper-critical-count} gives at most one simple
+upward critical point and the two-zero bound with multiplicity.
+An identity interval would contain a critical point with $F''=0$.
+Section~\ref{sec:common-cover-conclusion} assembles the coefficient
+cover and Hausdorff capture.
+\end{proof}

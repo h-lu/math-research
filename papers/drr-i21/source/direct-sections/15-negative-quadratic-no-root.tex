@@ -1,0 +1,301 @@
+\subsection{Passage on the no-root side of the fold}
+\label{sec:direct-no-root-fold}
+
+Suppose now that the exact minimum of \(K_+\) in
+\eqref{eq:direct-fold-region} is positive. The normalized drift
+\(K_+\) is then positive on the whole positive unscaled radius
+interval: outside the fixed fold collar its quadratic
+part has a positive margin, and its cubic term is positive.
+As this minimum tends to zero, we need estimates uniform in the
+possibly divergent bottleneck action. The bounded-output result
+compares half-orbits whose projected states at a fixed secondary
+height stay bounded. For larger projected outputs, we isolate the
+bottleneck action in the exact exponential transport, prepare the
+outgoing height uniformly, and compare exits on the primary and
+cubic scales.
+
+\begin{proposition}[Zero bound across the fold]
+\label{prop:direct-negative-fold}
+For fixed sufficiently small \(\epsilon_{\rm f}>0\), \(\Delta_p\) has at most
+three distinct zeros throughout \eqref{eq:direct-fold-region}, including
+the fold and both its sides, for all sufficiently small independent
+\(s,r>0\).
+\end{proposition}
+
+\subsubsection{Bottleneck transport and escaped central heights}
+
+Fix the postfold cut \(K_0>2\) from the annular construction,
+and later a larger fixed \(M>K_0\). A central height is called
+escaped if its positive half-orbit is still thin at \(x=M\):
+\begin{equation}
+\label{eq:direct-fold-escaped}
+ z(Msr;h)/(s^3M^2r^2)\le\delta_{\rm an} .
+\end{equation}
+This is one interval of central heights.
+Use a single boundary-flow coordinate on a fixed positive
+box from \(x_L=x_{\rm f}-2\epsilon_{\rm f}\) to beyond \(K_0\).
+The bottleneck formula \eqref{eq:direct-bottleneck-action}
+gives
+\[
+ \Psi_{K_0}(y_{K_0})
+    =\e^{\mathcal A_f/s}\Psi_L(y_L),\qquad
+ \mathcal A_f=\int_{x_L}^{K_0}\frac{x\,dx}{K_+(x)} .
+\]
+Here \(Q=s^3r^2\) and \(y_j=z(jsr;h)/Q\) for
+\(j=x_L,K_0\).
+The endpoint coordinates have uniform bounds because their integrals
+of \(1/F_+\) lie on regular collars. The full bottleneck action remains
+in the explicit exponential factor; the composition below is
+differentiated in the expanded height, where the inverse bounds stay
+uniform.
+The construction following \eqref{eq:direct-bottleneck-action} applies
+with \(x_R=K_0\), \(\delta=s\), \(\beta=\beta_f\), and the regular
+central prefix of \cref{lem:direct-source-height}, of action
+\(\mathcal A_L=\int_0^{x_L}x/K_+(x)\,dx\), where
+\[
+ \mathcal A_{K_0}=\mathcal A_L+\mathcal A_f,\qquad
+ \beta_f=\e^{-\mathcal A_f/s},\qquad
+ \xi=\e^{\mathcal A_{K_0}/s}h/Q .
+\]
+By \eqref{eq:direct-bottleneck-inverse-composition},
+\begin{equation}
+\label{eq:direct-fold-inverse-composition}
+ y_{K_0}=\xi V_p(\xi),\qquad V_p(0)=1,
+\end{equation}
+on a fixed small \(\xi\)-interval whose image contains a fixed small
+output interval; the unit, its reciprocal, and the map inverse have
+uniformly bounded \(\xi\)-derivatives.
+Composing with the annular coordinate gives
+\eqref{eq:direct-annulus-prefix} with action \(\mathcal A_{K_0}\).
+
+We next check that every escaped central height lies in the fixed
+domain of this inverse construction. For such a height, put
+\(y_a(\rho)=z(s\rho;h)/(s^3\rho^2)\).
+For fixed \(M>K_0\) and sufficiently small \(r\),
+the segment \(K_0r\le\rho\le Mr\) lies in the
+positive annular box, where \eqref{eq:direct-annulus-level-crossing}
+excludes a downward crossing of \(y_a=\delta_{\rm an}\).
+The escaped condition at \(Mr\) implies
+\(y_a\le\delta_{\rm an}\) on the whole preceding segment.
+The annular transport \eqref{eq:direct-annulus-action} yields
+\[
+ \begin{gathered}
+ \frac{\widehat z(K_0r)}{Q}
+   =\e^{-\mathcal J_{i,M}/s}\frac{\widehat z(Mr)}{Q}
+   \le CM^2\delta_{\rm an}\e^{-\mathcal J_{i,M}/s},\\
+ \mathcal J_{i,M}=\int_{K_0r}^{Mr}
+       \frac{dt}{tK_+(r/t,t)}
+       \ge c\log(M/K_0)>0.
+ \end{gathered}
+\]
+At the inner cut, \(y_{K_0}=K_0^2y_a(K_0r)\) is
+uniformly comparable to \(\widehat z(K_0r)/Q\).
+Thus \(y_{K_0}\) lies in the small output domain of the bottleneck
+and central-prefix inverse coordinates. Their composition gives a
+small \(\xi\), and flow uniqueness identifies the recovered central
+height with \(h\). Hence
+\eqref{eq:direct-annulus-prefix} applies throughout the interval of
+escaped central heights.
+
+For every escaped central height, the positive half-orbit crosses
+the fold collar below a bounded secondary height. The action gap gives
+\begin{equation}
+\label{eq:direct-escaped-source-gap}
+ h/(s^3r^2)\le C_{M,\delta_{\rm an}}\e^{-\mathcal A_{\rm gap}/s},\qquad
+ \mathcal A_{\rm gap}\ge c/\epsilon_{\rm f}.
+\end{equation}
+Fix the negative secondary cuts needed below, then choose
+\(\epsilon_{\rm f}\) small so that \(\mathcal A_{\rm gap}\) exceeds their
+regular actions by a fixed gap.
+At each such cut the expanded negative input is exponentially small
+by \eqref{eq:direct-escaped-source-gap}. The regular inverse
+central-height coordinate therefore constructs a thin negative prefix;
+flow uniqueness identifies it with the branch from the original \(h\).
+Both signs now satisfy the hypotheses of
+\cref{lem:direct-annulus-rates} whenever their exits
+have small primary radius, and the negative branch satisfies those of
+\cref{lem:negative-branch-far-root}.
+
+\subsubsection{Both exits on the small primary annulus}
+
+Take small fixed annular margins \(u_0,v_0>0\),
+with \(u_0\) eventually much smaller than \(v_0\).
+Choose \(M\) and the action gap so that both inner ratios
+\(u_\sigma=r/\rho_\sigma\) are at most \(u_0\).
+If both thin exits satisfy \(v_\sigma=\rho_\sigma\le v_0\), the prefixes
+constructed above meet \cref{cor:direct-annular-pair}. Since \(b\ge1/2\),
+small annular margins followed by small \(s\) give \(\mathcal L''<0\)
+in \(T=-s\log h\).
+
+\subsubsection{The negative primary and far-root outputs}
+
+When the positive exit is at most \(v_0\), its annular
+rate satisfies
+\[
+ \mathfrak H_+\ge
+       2-Cu_0-Cv_0^2-Cs(1+|\log s|).
+\]
+For a negative exit in \(v_0/2\le\rho_-\le0.9\),
+\eqref{eq:direct-negative-primary-rates} gives
+\(\mathfrak H_-=2-3\rho_-+o(1)\).
+First choose \(v_0\) small, then \(u_0\) much smaller
+than \(v_0\), and finally reduce \(r,s\).
+The rate difference \(\mathfrak H_--\mathfrak H_+\) is strictly negative.
+The same sign
+holds if the negative graph is in its far-root interval,
+by \eqref{eq:direct-negative-far-rate}.
+The exterior contribution to \(\mathcal L'\) tends to
+zero with the negative endpoint derivative.
+Hence \(\mathcal L'<0\) on both ranges.
+
+It remains to locate the negative branch when the positive exit has
+left the small annulus. For an escaped central height, a positive
+annular thin exit with \(\rho_+\ge v_0\) places the negative graph in
+the far-root interval, as the following comparison of central heights
+shows.
+Choose first the compact negative comparison cut \(0.9\) and the
+annular cut \(v_0\), and let \(C_{\rm th}\) bound all fixed endpoint and
+prefix terms in the two central-height equations.  Then reduce the fold
+width \(\epsilon_{\rm f}\), after the preceding choices, so that
+\(\mathcal A_{\rm gap}>2C_{\rm th}\).  Compare the central height for
+which the positive exit is at \(v_0\) with the central height for which
+the negative height at \(0.9\) equals the thin threshold.  Their actions satisfy
+\begin{equation}
+\label{eq:direct-fold-far-threshold}
+ \begin{split}
+ \mathcal A_+(v_0)
+    &=\mathcal A_{K_0}+\log\frac{v_0}{K_0r}
+                                   +O(K_0^{-1}+v_0),\\
+ \mathcal A_-(0.9)&=\log(1/r)+O(1).
+ \end{split}
+\end{equation}
+The first estimate follows by integrating the annular factor
+\(K_+(r/\rho,\rho)^{-1}-1=O(r/\rho+\rho)\) after \(K_0r\).
+For the second, the negative secondary prefix has no
+bottleneck, and the remaining primary action has fixed
+endpoint margins.
+Since \(\mathcal A_{K_0}\ge\mathcal A_{\rm gap}\), the displayed estimates
+and the order of choices give, uniformly for small \(r\),
+\begin{equation}
+\label{eq:direct-fold-far-action-gap}
+ \mathcal A_+(v_0)-\mathcal A_-(0.9)
+ \ge \mathcal A_{\rm gap}-C_{\rm th}\ge C_{\rm th}>0.
+\end{equation}
+Writing \(h_+^{v_0}\) and \(h_-^{0.9}\) for the two central heights
+(with \(h_-^{0.9}\) defined by the thin threshold at the fixed radius
+\(0.9\)),
+\eqref{eq:direct-annulus-source} and the uniform boundedness of its
+height factors give
+\begin{equation}
+\label{eq:direct-fold-far-height-order}
+ s\log\frac{h_+^{v_0}}{h_-^{0.9}}
+ =-\bigl[\mathcal A_+(v_0)-\mathcal A_-(0.9)\bigr]+O(s)<0
+\end{equation}
+after reducing \(s\).  Thus \(h_+^{v_0}<h_-^{0.9}\).  The exit-height
+maps are strictly decreasing in their radii by the event equation, so
+for any \(\rho_+\ge v_0\) its central height satisfies
+\(h\le h_+^{v_0}<h_-^{0.9}\). The negative graph at that same \(h\)
+is consequently still thin at \(0.9\): by
+\cref{lem:central-height-order}, its height at this fixed radius is
+smaller than the thin threshold attained by \(h_-^{0.9}\).
+Part (ii) of \cref{lem:negative-branch-far-root} now gives
+\(w_n>0.89\), hence \eqref{eq:direct-negative-far-core}.
+
+\subsubsection{Positive continuation through the cubic regime}
+
+For escaped central heights whose positive annular exit is at least
+\(v_0\), which form an interval, we apply
+\cref{lem:positive-branch-adaptive-exit}. Its prefix hypothesis
+\eqref{eq:positive-adaptive-prefix} is
+\eqref{eq:direct-fold-inverse-composition}, with \(\mathcal V=V_p\) and
+\(\mathcal A_i=\mathcal A_{K_0}\). Escaped central heights are thin
+at \(K_0r\), and their inverse estimate makes \(\xi\) uniformly small,
+so it lies in the domain of \(V_p\) after reducing \(s\). By
+\eqref{eq:positive-annular-adaptive-heights}, the adaptive exit follows
+the annular thin exit; hence \(\varrho_e\ge sv_0\). By the first estimate in
+\eqref{eq:direct-fold-far-threshold},
+\(\mathcal J_+(v_0)=\mathcal A_+(v_0)-\mathcal A_{K_0}\ge\log(1/r)-C\), which is at
+least \(\frac12\log(1/r)\) after fixing a sufficiently small upper bound
+for \(r\). Thus part (iv) of the lemma applies with \(\rho_{\rm g}=v_0\)
+and \(c_{\rm g}=1/2\). It gives \eqref{eq:direct-no-root-adaptive-rate},
+\(\mathfrak H_+>c\varrho_e^+/s\), at these exits. The bounds on \(V_p\)
+in \eqref{eq:direct-bottleneck-inverse-composition} make this estimate
+uniform in the bottleneck action.
+The negative graph is in the far-root interval by
+\eqref{eq:direct-fold-far-threshold}. Its strictly
+negative rate and the small exterior term imply
+\(\mathcal L'<0\) here as well.
+
+We now combine the exit comparisons on the interval of escaped heights.
+On the interval where both exits are at most \(v_0\), we have
+\(\mathcal L''<0\).
+Within the escaped central heights, the condition
+\(y_-(v_0/2;h)\le\delta_{\rm an}\) defines a second interval,
+because the height at a fixed radius increases with \(h\).
+The negative primary, negative far-root, and positive adaptive
+estimates cover this interval, including their fixed overlaps.
+Thus \(\mathcal L'<0\) throughout the second interval.
+These two intervals cover
+\eqref{eq:direct-fold-escaped}: a positive exit at least
+\(v_0\) forces the negative far-root interval; otherwise
+either both exits are small or the negative graph is
+already in the second interval.
+The estimates for \(\mathcal L(T)\) include both cuts
+\(v_0/2\) and \(v_0\).
+Consequently, on the entire escaped interval,
+\begin{equation}
+\label{eq:direct-escaped-critical-maximum}
+ \mathcal L'=0\quad\Longrightarrow\quad\mathcal L''<0.
+\end{equation}
+
+\subsubsection{Covering the height interval}
+
+Set \(B_*=4M\) in \cref{prop:direct-fold-bounded}.
+Its bounded-output estimates give
+\eqref{eq:direct-fold-critical-maximum}.
+The quadratic-prefix lemma applies on the early interval
+\[
+ h\ge z_e=s^3r^2\delta_e,\qquad\hbox{or}\qquad
+ h<z_e,\quad x_+(z_e;h)\le x_{\rm f}-\epsilon_{\rm f}/2 .
+\]
+Its regular-prefix hypotheses hold on the no-root side. In \(T\),
+the early heights form an initial interval, and each zero of \(\mathcal L\) on it
+satisfies \(\mathcal L'>0\).
+
+For every other central height, the projected state of the positive
+half-orbit at its hit of \(x=x_{\rm f}-\epsilon_{\rm f}/2\) is greater than
+\(x_{\rm f}-3\epsilon_{\rm f}/4\).
+Follow the half-orbit to the first event \(Z=Z_f\) or \(x=3M\).
+If the height is reached first, the projected output
+lies between \(x_{\rm f}-\epsilon_{\rm f}\) and \(B_*\), and is counted by
+the bounded-output proposition.
+If \(x=3M\) is reached first, the central height satisfies
+\eqref{eq:direct-fold-escaped}. Indeed, between \(x=M\) and that event
+the half-orbit lies in the coordinate box of
+\cref{sec:direct-negative-fold}, which extends beyond \(B_*=4M\), and
+\(B_0Z_f\le M^2\) since \(Z_f\) is small. For small \(s\),
+\cref{lem:direct-radial-advance} with \(\delta=s\), \(X_1=M\), \(X_2=3M\)
+and \(C_F=\sup|F_+|\) on that box bounds the height at \(x=M\) by
+\(Z_f\e^{-M/(C_Fs)}<sM^2\delta_{\rm an}\).
+Every admissible half-orbit under consideration reaches one of these
+events before its fixed endpoint.
+
+The complement of the early set is the single interval
+\[
+ J=\{T:h\in\cH_p,\ h<z_e,\quad
+                      x_+(z_e;h)>x_{\rm f}-\epsilon_{\rm f}/2\}.
+\]
+Every point of \(J\) satisfies a bounded-output or escaped estimate.
+Their common conclusion is the critical-point inequality
+\(\mathcal L'=0\Rightarrow\mathcal L''<0\), by
+\eqref{eq:direct-fold-critical-maximum} and
+\eqref{eq:direct-escaped-critical-maximum}, for the same smooth function
+on \(J\). The early cut
+belongs to the initial interval, where
+\eqref{eq:direct-quadratic-prefix-zero-orientation} includes the
+terminal radius. Thus the initial interval and \(J\) cover the
+whole height interval \(\cH_p\).
+Apply \cref{cor:ordered-cover-zero-count}, with \(J\) as the
+middle piece and an empty final piece. It gives the bound of three on
+the no-root side. The same bound on the
+root-present side follows from \cref{prop:direct-fold-bounded}.

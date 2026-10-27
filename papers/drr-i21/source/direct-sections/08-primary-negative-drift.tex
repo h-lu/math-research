@@ -1,0 +1,253 @@
+\subsection{Negative drift on the primary scale}
+\label{sec:direct-primary-negative}
+
+Assume the magnitude of the constant coefficient has a positive
+normalized lower bound on the primary scale. Positive boundary roots
+may still merge. At bounded radii the drift-weighted curvature estimate
+continues through this fold; at early heights and large exits we use
+contraction instead. We prove that these ranges overlap and cover
+\(\mathcal H_p\), so that \cref{cor:ordered-cover-zero-count} applies
+to a single logarithmic slope ratio on the full interval.
+
+\begin{proposition}[Primary negative drift]
+\label{prop:direct-primary-negative}
+For every fixed \(a_0^{\rm pr}>0\), the return displacement has at
+most three distinct zeros when
+\begin{equation}
+\label{eq:direct-primary-region}
+ q_0=-aH^3,\quad q_1=bH^2,\quad q_2=\bar c H,\qquad
+ a_0^{\rm pr}\le a\le1,\quad 0\le b\le1,\quad |\bar c|\le1,
+\end{equation}
+for all sufficiently small \(H>0\) and original parameters.
+\end{proposition}
+
+Write \(|\eta_\sigma|=HX,\ z=H^2Y\). The outward
+boundary drifts are
+\begin{equation}
+\label{eq:direct-primary-drifts}
+ K_\sigma(X)=-H^{-3}q(\sigma HX)
+ =a-\sigma bX-\bar c X^2-\sigma X^3R_q(\sigma HX).
+\end{equation}
+With the central-height scale \(Q=H^3\) of \cref{tab:direct-scale-guide},
+the common logarithmic height coordinate below is \(T=-H\log(h/Q)\).
+The coefficient calculation in the appendix shows that the two
+drifts converge, on fixed boxes and in every required state order, to
+\[
+ K_+^0=a-bX-\bar c X^2+X^3,\qquad
+ K_-^0=a+bX-\bar c X^2-X^3.
+\]
+For \(X>0\), their curvature coefficients are \(b/X^2+3\) and \(-b/X^2-3\),
+respectively, so the endpoint estimates below must preserve these
+opposite signs uniformly as positive boundary roots merge.
+The drift \(K_-^0\) has a unique, uniformly simple positive root \(\beta\)
+separated from zero. Its derivative has at most one positive
+zero, and
+\[
+ -\frac{(K_-^0)'(\beta)}{\beta}
+        =2a/\beta^2+b/\beta+\beta>0 .
+\]
+Compactness gives the uniform bounds, which persist under the
+\(O(H)\) perturbation. All positive roots of \(K_+^0\), if
+present, also lie in a fixed compact interval away from zero.
+
+On every fixed positive radius interval, the height equation is
+\[
+ X_{\log Y}=HF_\sigma(X)+YB(\sigma HX,H^2Y)/X,\qquad
+ F_\sigma=K_\sigma/X.
+\]
+Thus \cref{lem:direct-boundary-flow} applies with \(\delta=H\), and
+\eqref{eq:direct-projection-energy} holds for its inverse projection.
+Below the first root of \(F_\sigma\), where \(F_\sigma>0\),
+\cref{rem:direct-projected-continuation} applies.
+
+\subsubsection{Early central heights}
+
+Choose a small fixed \(d_f>0\) and put \(z_e=H^3d_f\). The present
+scales are \eqref{eq:direct-quadratic-prefix-scales} with
+\(\delta=\ell=H\) and \(\bar c\) replaced by \(-\bar c\). By
+\cref{lem:early-central-heights}, there is a small fixed \(R>0\) such
+that the set \eqref{eq:direct-primary-early}, with \(r_0=R\), is an
+initial interval in \(T\) on which the return contracts.
+
+\subsubsection{Bounded radii, including the fold}
+
+For every remaining central height, the positive half-orbit reaches
+the radius \(R\) before \(z_e\). Fix a small \(Y_f>0\) for the central
+entry and the negative-root box below, and let \(M\) be large; \(M\) is
+fixed after \(M_1\) in the covering step. The same \(Y_f\) serves every
+such \(M\): at \(H=0\) the positive projection on \([R/2,M]\) is
+\(w^2=X^2-2B_0Y\), and only its lower-radius margin matters, while a
+larger \(M\) requires only a smaller final \(H\) for the derivative
+bounds.
+Consider those central heights with \(X_+(H^2Y_f;h)\le M\).
+Their projected state \(w_+\) at this height lies in \([R/2,M]\):
+its value at \(z_e\), when used, differs from \(X_+(z_e)\)
+by \(O(Hd_f)\), and \(w_+\) increases.
+The phase comparison below also places their negative-branch state
+\(w_-\) in \([d_0,\beta)\) for a fixed \(d_0>0\).
+
+Choose a small fixed \(x_L>0\) inside the central positive-drift margins
+of both \(K_\sigma\). With
+\[
+ \mathcal A_\sigma(x)=\int_0^x\frac{u\,du}{K_\sigma(u)},
+\]
+\eqref{eq:direct-common-phase} gives
+\begin{equation}
+\label{eq:direct-primary-phases}
+ w_\sigma=\Phi_{F_\sigma}^{\,T+C_\sigma+
+                              H\Xi_\sigma(\xi_\sigma)}(x_L),
+ \quad
+ C_\sigma=H\log(Y_f/H)-\mathcal A_\sigma(x_L),\quad
+ \xi_\sigma=\e^{\mathcal A_\sigma(x_L)/H}h/H^3 .
+\end{equation}
+The phase corrections \(\Xi_\sigma\) vanish at zero and have
+uniformly bounded derivatives of the required orders.
+Positive advance to \(R/2\) takes a fixed positive boundary
+time. Take both entry actions smaller than one quarter of
+this minimum time. The two phases in
+\eqref{eq:direct-primary-phases} then have a common positive
+lower bound. The negative scalar flow advances into a fixed
+interval away from zero and remains below its first root.
+Thus \(d_0\le w_-<\beta\), and the inverse projection
+continues the negative graph to \(Y_f\).
+
+At \(t=H^2Y_f\), all three coefficient ratios in
+\eqref{eq:direct-tail-smallness} are \(O(H)\), and
+\cref{lem:boundary-flow-endpoint} with \(\ell=\delta=H\) gives
+\begin{equation}
+\label{eq:direct-primary-endpoints}
+ -I_{\sigma,w}=E A_\sigma^*wV_\sigma(w),\qquad
+ E=H^2(z_*/(H^2Y_f))^{-2q_2}\asymp H^2,\qquad
+ A_\sigma^*\asymp1,\quad V_\sigma=1+O_{C^3}(H).
+\end{equation}
+The negative endpoint estimate must also hold in the large-exit range,
+before the positive radius cut is chosen.
+The positive states range over \([R/2,M]\), so the constants of the
+positive endpoint depend on \(M\). The negative states lie in
+\([d_0,\beta)\), and the constants of the negative endpoint are
+independent of \(M\).
+
+The drifts \eqref{eq:direct-primary-drifts} have
+\(K_\sigma'(0)=-\sigma b\) and, in the notation of
+\eqref{eq:direct-curvature-coefficient-cubic},
+\(R_{K_\sigma}(w)=-\sigma R_q(\sigma Hw)\), which is
+\(\sigma+O_{C^2}(H)\) on the state intervals by the coefficient
+calculation in the appendix. Hence
+\eqref{eq:direct-curvature-coefficient-cubic} gives
+\begin{equation}
+\label{eq:direct-primary-opposite-curvatures}
+ \frac{wK_+''-K_+'}{w^2}=\frac b{w^2}+3+O_M(H)>2,\qquad
+ \frac{wK_-''-K_-'}{w^2}=-\frac b{w^2}-3+O_M(H)<-2 .
+\end{equation}
+The margins hold also when \(b=0\). Since the negative state stays in
+\([d_0,\beta)\), \cref{lem:curvature-criterion} gives \(\mathcal L''<0\)
+in \(T\), uniformly up to either root. The bounded-radius central
+heights form an interval, by \cref{lem:central-height-order}.
+
+\subsubsection{Escaping radii and their endpoint slope}
+
+Fix \(M_0\) beyond all positive roots and critical points of
+the limiting primary polynomial. For the positive radius
+\(\varrho=\eta\ge M_0H\), write
+\[
+ \varrho^+=H+\varrho,\qquad u=H/\varrho,\qquad
+ v=\varrho/(H+\varrho).
+\]
+Then
+\[
+ -q(\varrho)=\varrho^2\varrho^+\mathcal K,\qquad
+ \mathcal K=v\{au^3-bu^2-\bar c u-R_q(\varrho)\}.
+\]
+For large \(M_0\) this \(\mathcal K\) is positive and has
+uniform derivative bounds on an enlarged base box.
+It equals \(1+O(u+H+\varrho)\). Thus
+\cref{lem:direct-adaptive-positive} applies with \(s=\varrho_0=H\).
+Its exit and landing satisfy
+\(\varrho_e\le\varrho_l\le2\varrho_e\), with uniform derivatives,
+before the admissible endpoint.
+
+If the thin exit is at \(\varrho_e\ge2M_0H\), there is no positive
+boundary root before \(M_0H\). Indeed at a thin hit of
+\(M_0H\) the primary height is \(Y=O_{M_0}(H)\). The
+projection, constructed on the fixed interval up to \(M_0\),
+differs from the radius by \(O_{M_0}(H)\) there.
+Since any first root is separated from \(M_0\), a projected state below
+that root cannot give such a hit.
+
+On these no-root parameters, transport the regular central
+height coordinate from \(x_L\) to \(M_0\), using
+\eqref{eq:direct-bottleneck-action}. The endpoint collars
+have fixed positive drift margins, although the action between
+them may diverge. In the height \(y=z/H^3\), this gives
+\begin{equation}
+\label{eq:direct-primary-bottleneck-prefix}
+ \Psi_o(y_o)=\e^{\mathcal A_+(M_0)/H}\frac h{H^3}
+ \Upsilon\!\left(\e^{\mathcal A_+(x_L)/H}\frac h{H^3}\right),
+ \qquad \Psi_o(y)=y+O(y^2),\quad \Upsilon(0)=1 .
+\end{equation}
+By \eqref{eq:direct-bottleneck-inverse-composition}, the units and
+height coordinates, together with their inverses, have uniform
+derivative bounds in the expanded input height.
+
+There is a fixed positive boundary-action gap from \(M_0\)
+to \(2M_0\). Hence an exit beyond \(2M_0H\) makes the
+height at \(M_0H\), normalized by \(H^3\), at most
+\(C H^{-N}\e^{-\mathcal A_{\rm gap}/H}\). The unscaled exit radius is
+bounded, so its prefactor costs only a fixed power of \(1/H\).
+Differentiating the regular units in
+\eqref{eq:direct-primary-bottleneck-prefix} gives
+\[
+ \frac{d\log\widehat z(M_0H)}{d\log h}
+             =1+O(\e^{-\mathcal A_{\rm gap}/(2H)}).
+\]
+This is the bound on \(d\lambda_{\rm in}/d\log h\) required in
+\eqref{eq:direct-adaptive-source-slope}, with \(\varrho_i=M_0H\). The tail
+condition there holds at the landing: \(\varrho_l\ge M_0H\) gives
+\(|q_0|/(m_{\rm land}\varrho_l^2)+q_1/\sqrt{m_{\rm land}\varrho_l^2}=O(H)\), and
+\(|q_2|\le H\).
+
+To compare with the positive endpoint slope, return to the negative
+branch. It retains a fixed positive entry-time gap; its projected state lies
+in \([d_0,\beta)\), regardless of the large positive exit.
+The independently chosen negative endpoint bounds in
+\eqref{eq:direct-primary-endpoints} therefore give
+\[
+ 0<m_-=hI_{-,h}\le CHE\le CH^3 .
+\]
+Thus \cref{cor:large-exit-contraction} applies, with \(s=H\), \(C_2=1\)
+and \(C_1\) the constant just obtained, to the central heights in
+\(\cH_p\) with \(\varrho_e\ge2M_0H\), an interval since the exit radius
+decreases with \(h\). Fix \(M_1\ge2M_0\) as required by the corollary; this gives the
+large-exit interval \(\varrho_e\ge M_1H\).
+
+\subsubsection{Covering the central heights}
+
+The bounded-radius estimate allows any fixed \(M\), whereas the
+large-exit threshold \(M_1\) uses only the independently fixed negative
+endpoint bound. We may therefore choose \(M\) sufficiently large after
+\(M_1\). We show that every height outside the bounded-radius range
+satisfies the large-exit estimate. If the
+positive half-orbit of a central height enters the adaptive range
+thin and has not exited when its radius reaches \(MH\), its
+eventual exit is larger.
+If it has exited, its radius before cone landing is at most
+\(2\varrho_e\). After landing the cone estimates give, whenever the
+fixed output height is reached,
+\[
+ U_+(H^2Y_f)\le C\varrho_e^2+C H^2Y_f .
+\]
+If the half-orbit was already above the thin threshold at \(M_0H\) but
+below the cone, \cref{lem:direct-adaptive-positive} bounds its landing
+radius by \(2M_0H\), and the same inequality holds with
+\(\varrho_e=M_0H\). If already in the cone, its continuation gives this
+bound directly.
+Thus, for a sufficiently large fixed \(M\), every central height
+outside the bounded-radius range must have \(\varrho_e\ge M_1H\).
+
+The early interval \eqref{eq:direct-primary-early}, the bounded-radius
+interval, and the large-exit interval cover \(\cH_p\), with fixed
+overlaps. On these intervals the same function \(\mathcal L\) of \(T\)
+satisfies \(\mathcal L<0\) in the early and large-exit ranges, and
+\(\mathcal L''<0\) on the bounded-radius interval, including the
+shared cuts. \Cref{cor:ordered-cover-zero-count} gives at most three
+zeros of \(\Delta_p\). This proves \cref{prop:direct-primary-negative}.

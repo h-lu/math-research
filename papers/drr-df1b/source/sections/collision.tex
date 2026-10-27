@@ -1,0 +1,2196 @@
+\section{Positive contact constant and slow-root collision}
+\label{sec:positive-constant}
+
+The remaining contact scaling has two independent small parameters:
+\begin{equation}
+\label{eq:pc-family}
+ F=y(1+bz-y)+\varepsilon^2P(z),\qquad
+ G=zy+\kappa^3d,\qquad
+ P(z)=z^2+arz+r^2,\qquad \kappa=r\varepsilon.
+\end{equation}
+Throughout this section, $a,d$ range in fixed compact intervals and
+$r,\varepsilon>0$ tend to zero independently. In particular, estimates
+must allow $r$ to be smaller than every power of $\varepsilon$.
+
+\begin{proposition}
+\label{prop:positive-constant}
+On every compact $(a,d,b)$-set with $0<b<2$, all sufficiently small
+fields \eqref{eq:pc-family} have total actual minimal-return multiplicity
+at most two for isolated cycles in one Hausdorff neighborhood of the
+whole limiting graphic. The parameter
+and Hausdorff neighborhoods are uniform on that compact set.
+For $d\ge0$ the bound is one and every counted zero is simple.
+\end{proposition}
+
+Near a positive double root, the slow passage can amplify the incoming
+height by an arbitrarily large factor. We retain this multiplier in
+product coordinates. Weighting the complete outgoing derivative by the
+incoming distance from the separating trajectory cancels the multiplier
+and gives size and logarithmic-curvature bounds. Combined with the
+incoming distortion estimate, these bounds force the derivative ratio
+with the short map to cross one only upwards
+(Lemma~\ref{lem:pc-ratio}).
+
+Lemma~\ref{lem:pc-entry} controls the incoming trace, and
+Lemma~\ref{lem:pc-normal-derivative} estimates the logarithmic derivative
+from departure to the target. Before applying the comparison at a
+collision, Lemma~\ref{lem:pc-collision-localization} places every counted
+cycle in one small source interval. Lemma~\ref{lem:pc-source-partition}
+divides it into through passages and fiber exits; on the root side only
+the fiber exit occurs (Figure~\ref{fig:collision-passages}). At their
+possible finite junction, the two formulas represent the same physical
+return. Lemma~\ref{lem:pc-event-gluing} therefore gives the bound two on
+the whole interval.
+
+\subsection{The incoming map in a regular coordinate}
+
+We first transport the upper-section source to the inner cut $z=0$.
+The signed variation of its height will control the derivative of the
+complete contact map.
+
+Use the signed coordinate $u_{\rm up}$ on the upper section from
+Lemma~\ref{lem:sections}. Every counted cycle meets this section exactly
+once.
+The same lemma supplies the contact passage in $y>0$, $F>0$,
+from the decreasing-height section $y=K\varepsilon^3$ to a fixed
+positive section, on the interval of sources for which that passage is
+defined. No sign or scaled-size condition is imposed on $u_{\rm up}$.
+Set
+\begin{equation}
+\label{eq:pc-inner}
+ z=\kappa\zeta,\quad y=\kappa^2q,\quad
+ q_0(u_{\rm up})=q(0;u_{\rm up}),\qquad
+ q_\zeta=\frac{\zeta q+d}{V(\zeta,q)},\quad
+ V=\mathsf A+\mathsf Bq-\mathsf Cq^2,
+\end{equation}
+where
+\[
+ \mathsf A=1+a\varepsilon\zeta+\varepsilon^2\zeta^2,
+ \qquad \mathsf B=1+b\kappa\zeta,\qquad \mathsf C=\kappa^2.
+\]
+All derivatives below keep the vector field fixed.
+
+\begin{lemma}
+\label{lem:pc-entry}
+The actual incoming values satisfy $0<q_0\le Q_0$, with $Q_0$
+uniform. There is a particular solution $q_c$, independent of
+$u_{\rm up}$, such
+that $q_0=q_c(0)+w_0$, $w_0>0$. For $d\ge0$,
+\begin{equation}
+\label{eq:pc-entry-positive}
+ q_c(0)\ge0,\qquad
+ \frac{|(q_0)_{u_{\rm up}}|}{q_0+d}\le C\varepsilon^{-2}.
+\end{equation}
+For $d=-m<0$, a cycle is possible only if
+\begin{equation}
+\label{eq:pc-exponential-wedge}
+ a<0,\qquad 0<m\le C\exp(-c/\varepsilon^2).
+\end{equation}
+On this set $-4m\le q_c(0)<0$ and
+\begin{equation}
+\label{eq:pc-entry-negative}
+ (\log w_0)_{u_{\rm up}}=-\varepsilon^{-2}\lambda,
+ \qquad c\le\lambda\le C,\qquad
+ |(\log\lambda)_{u_{\rm up}}|\le C\varepsilon^{-2}.
+\end{equation}
+The passing and target restrictions have interval preimages in
+$u_{\rm up}$.
+\end{lemma}
+
+\begin{proof}
+We first justify the full incoming passage. On a fixed negative interval,
+$P(z)\ge z^2/2$ for small $r$. Put $x=-z$ and subtract the forcing
+graph $\kappa^3d/x$. For $x\ge Mr$, with $M$ fixed and large, the
+two sides of
+\[
+ \left|y-\frac{\kappa^3d}{x}\right|
+       \le k\varepsilon^2x^2
+\]
+point inward; this follows by substituting the two equalities in
+$dy/dz=G/F$, using $P\asymp x^2$ and then choosing $M$ large.
+It carries the fixed negative entrance to $Z=z/r=-M$, with bounded
+small normal coordinate in
+\[
+ Y=\frac{y}{r^2\varepsilon^2},\qquad
+ w=Y+\frac{\varepsilon d}{Z}.
+\]
+On a fixed negative $Z$-interval the normal eigenvalue is bounded away
+from zero. The invariant graph and strong foliation give an exact
+scalar base equation $\dot\theta=\varepsilon^2UQ_\varepsilon(\theta)$,
+where $U>0$ and, before the near-identity base change,
+\[
+ Q_\varepsilon(Z)=Z^2+aZ+1-\frac{\varepsilon d(1+brZ)}Z
+                         -\frac{r^2\varepsilon^4d^2}{Z^2}.
+\]
+Its second derivative is positive on this fixed strip for sufficiently
+small parameters, so it has at most two roots. The normal coordinate
+contracts at a fixed rate.
+The base at entry lies in $(-M-1/2,-M+1/2)$; choosing $M$ larger puts
+this entire interval to the left of every possible negative root.
+A first root cannot be crossed by the scalar base. Its approach takes
+infinite time and normal contraction makes this alternative terminal.
+If there is no root, the exit at a fixed $Z=-\zeta_0<0$ satisfies
+\[
+ |w|\le C\varepsilon^3+C e^{-c/\varepsilon^2}.
+\]
+The two sides of $|q+d/\zeta|\le K/\zeta^2$ point inward on
+$-\zeta_0/\varepsilon\le\zeta\le-L$, and $V$ lies between two
+positive constants there. This gives a bounded entrance at $\zeta=-L$.
+These assertions use the strong spectral gap, not a lower bound for a
+weak root derivative. The fixed-gap graph transform, as in the proof
+of Lemma~\ref{lem:small-ratio-saddle}, first supplies the invariant
+graph and its finite phase bounds on this negative strip.
+Lemma~\ref{lem:uniform-normal-product} then applies with
+$\tau=\rho=\varepsilon^2$ and negative normal sign. No scalar base
+linearization is made, so its conclusion includes a negative double
+root as well.
+
+Here is a direct bound on the last inner ordinate. In $X=z/r$ and
+$Y=y/(r^2\varepsilon^2)$ the equations are
+\[
+ X'=\varepsilon^2(YQ+p_a(X)),\quad
+ Y'=XY+\varepsilon d,\quad
+ Q=1+brX-r^2\varepsilon^2Y,\quad p_a=X^2+aX+1.
+\]
+The preceding upper barrier gives $Y(-L_1)\le K_1$ for a fixed large
+$L_1$. Choose $T>K_1+4\max_{[-L_1,0]}|p_a|+1$. Above $Y=T$,
+$YQ+p_a\ge Y/4$. If $d\le0$, $Y$ decreases for $X<0$. If $d>0$,
+an upcrossing of $Y=T$ requires $X\ge-\varepsilon d/T$; thereafter
+\[
+ \frac{d(Y^2)}{dX}\le\frac{8d}{\varepsilon}.
+\]
+The remaining interval has length at most $\varepsilon d/T$.
+Thus $Y(0)^2\le T^2+8d^2/T$. This proves the uniform bound on $q_0$.
+
+Select the particular solution $y_c$ by zero strong amplitude on the
+incoming invariant graph and continue the same solution through the
+taper and the inner funnel. The strong-graph equation gives, on every
+fixed negative interval,
+\[
+ y_c=-\kappa^3d/z+O(\varepsilon^2\kappa^3|d|),
+ \qquad \partial_z^jy_c=O(\kappa^3|d|),\quad j\le2.
+\]
+The construction is made on the nested negative intervals with the
+same graph, so these are restrictions of one solution. For $d=0$ it
+is exactly zero. For $d\ne0$ its sign on the incoming half is the
+sign of $d$: at $y=0$ the scalar velocity has that sign, and the
+selected forced trace cannot cross to the other side. Its continuation
+to $z=0$ has the same sign. At the decreasing-height entrance
+$z=\Lambda(u_{\rm up})$,
+\[
+ W_i:=K\varepsilon^3-y_c(\Lambda)\asymp\varepsilon^3>0.
+\]
+Scalar uniqueness preserves $W=y-y_c>0$ along every passing interval.
+
+For the needed variational estimates write, exactly,
+\begin{equation}
+\label{eq:pc-tail-feedback}
+ \begin{aligned}
+ W_z&=A(z,W)W,&
+ A(z,W)&=\int_0^1H_y(z,y_c+tW)\,dt,\\
+ L_z&=WA_WL,& L&=(\log W)_{u_{\rm up}},\qquad H=G/F.
+ \end{aligned}
+\end{equation}
+Because the entrance moves, its fixed-phase initial value is
+\begin{equation}
+\label{eq:pc-moving-entry}
+ L_i=\frac{(W_i)_{u_{\rm up}}}{W_i}
+       -A(\Lambda,W_i)\Lambda_{u_{\rm up}}.
+\end{equation}
+The moving entry satisfies the common $C^2$ estimate
+\eqref{eq:relaxation-map}, proved by integrating
+\eqref{eq:relaxation-error}; its error from the fast-foot map is
+$O(\varepsilon^2(1+|\log\varepsilon|))$.
+At this section
+\[
+ A(\Lambda,W_i)
+ =\frac{\Lambda}{\varepsilon^2P(\Lambda)}(1+O(\varepsilon)).
+\]
+It follows that $|L_i|\le C\varepsilon^{-2}$ and, for negative $d$,
+$L_i=-\varepsilon^{-2}\lambda_i$, where $\lambda_i$ is a positive
+unit with bounded logarithmic $u_{\rm up}$-derivative.
+
+To propagate the initial variation through the shrinking scales, we
+bound the feedback integrals. On the fixed negative interval,
+\[
+ |H_{yy}|\le C\varepsilon^{-4},\quad
+ |H_{yyy}|\le C\varepsilon^{-6},\quad
+ W\le C\varepsilon^3e^{-c(z-\Lambda)/\varepsilon^2}.
+\]
+On the taper from $x_g$ to $Mr$,
+\[
+ \begin{gathered}
+ |H_{yy}|\le C\varepsilon^{-4}x^{-3},\qquad
+ |H_{yyy}|\le C\varepsilon^{-6}x^{-5},\\
+ W(-x)\le W_g(x/x_g)^N,\qquad N=c/\varepsilon^2,\qquad
+ W_g\le C\varepsilon^3e^{-c/\varepsilon^2}.
+ \end{gathered}
+\]
+Integrating these powers down to zero bounds the first feedback by
+$CW_g/(\varepsilon^2x_g^2)$ and the second by
+$CW_g^2/(\varepsilon^4x_g^4)$. On a passing negative root interval,
+the exact strong equation $\dot\eta=-b_n(\theta)\eta$,
+$b_n\ge c>0$, bounds the first feedback by
+$C\int|\eta(0)|e^{-ct}\,dt$. The endpoint changes
+$Z=\theta+O(\varepsilon^2\eta)$ have the same bound. To control a
+fixed physical section without dividing by a small base speed, write
+$\dot\theta=\varepsilon^2v(\theta)$ on a passing branch, where $v>0$.
+The entrance speed is a positive unit, $v'$ is bounded, and
+\[
+ \frac d{dt}\log\frac{|\eta|}{v}
+       =-b_n-\varepsilon^2v'\le-c/2.
+\]
+Consequently $|\eta|/v\le C|\eta(0)|e^{-ct/2}$, which controls
+the ratio occurring in the physical-section correction. Indeed, the
+product inverse has $Z=\theta+\varepsilon^2\eta L_1$ and
+$u=\eta+\eta^2L_2$, with bounded finite jets. Thus $v(Z)$ is
+comparable with $v(\theta)$ and the physical speed
+$v(Z)+c(Z,u)u$ is a positive unit times $v(Z)$, provided the entrance
+amplitude is fixed sufficiently small. For the divided physical
+coefficient $a=B/[\varepsilon^2(v+cu)]$, direct differentiation gives
+\[
+ |u a_u|\,dZ\le C\left(|u|+\frac{|u|}{v(Z)}\right)dt,
+ \quad
+ |u^2a_{uu}|\,dZ\le C\left(u^2+\frac{u^2}{v(Z)}
+                                      +\frac{u^2}{v(Z)^2}\right)dt.
+\]
+The preceding decay bounds make both integrals finite with a common
+bound. The physical feedback equations are differentiated at fixed
+$Z$; the product coordinates are only used to estimate their
+coefficients. Weak flight time need not be bounded; a base root
+reached only at infinite time is terminal and is excluded from this
+passing branch.
+For negative $d$, the restriction $a<0$ proved below gives
+$p_a(Z)\ge1+Z^2$ for $Z<0$. On the fixed negative scaled interval the
+scalar equation then has $A\le-c/\varepsilon^2$ and its first two normal
+derivatives are $O(\varepsilon^{-2})$, which also bounds the second
+feedback.
+
+For $d=-m<0$, a bound proportional to $m$ will localize the later ratio
+estimate. At a fixed small negative contact point $z=-x_*$, the selected
+incoming graph has
+$q_c(-x_*/\kappa)=-\kappa m/x_*+O(\varepsilon^2\kappa m)$.
+On the interval from that point to zero, $a<0$ gives $\mathsf A\ge1$.
+The graphs $-4m/(1-\zeta)$ and zero are lower and upper barriers.
+Indeed, writing $t=-\zeta$, at the lower graph the numerator
+$\zeta q-m$ is nonnegative for $t\ge1/3$. For $0\le t\le1/3$,
+$V\ge1/2$ bounds the scalar right-hand side below by $-2m$, while the
+lower graph has derivative at most $-9m/4$. The initial value is between
+the two barriers;
+at the upper graph that right-hand side is $-m/\mathsf A<0$. Thus
+$-4m\le q_c(0)<0$, with no reciprocal small scale or root gap.
+
+In the funnel set $q=q_c+w$. Its exact divided coefficient is
+\[
+ a_f=\frac{\mathsf N}{V(\zeta,q_c)V(\zeta,q_c+w)},\quad
+ \mathsf N=\zeta\mathsf A-d\mathsf B+
+ \mathsf C\{\zeta q_c^2+2dq_c+w(\zeta q_c+d)\}.
+\]
+On the funnel ending at $\zeta=-L$, with $L$ fixed and large,
+$\mathsf N\le-c(|\zeta|+d)$ for $d\ge0$; in the negative
+exponential range it is at most $-c|\zeta|$. The speeds are positive
+units, and $B_f=(a_f)_w/a_f$ and $(B_f)_w$ are bounded. Since
+$w_\zeta=a_fw<0$ and $(a_f)_{ww}=a_f(B_f^2+(B_f)_w)$, the feedback
+integrals are bounded by $C\int(-w_\zeta)d\zeta$. The remaining
+bounded inner interval $[-L,0]$ has bounded third height derivatives;
+the sign of $a_f$ need not stay negative there.
+Consequently
+\begin{equation}
+\label{eq:pc-feedback-mass}
+ \int|WA_W|\,dz\le C,\qquad
+ \int(|WA_W|+|W^2A_{WW}|)\,dz\le C\quad(d<0).
+\end{equation}
+Linear changes of phase leave these integrals unchanged. The strong
+coordinate calculation above includes the endpoint terms when that
+coordinate is used in the negative root interval.
+
+Equations \eqref{eq:pc-tail-feedback}--\eqref{eq:pc-feedback-mass}
+preserve $|L|\le C\varepsilon^{-2}$. For $d\ge0$,
+$q_0+d\ge w_0$ proves \eqref{eq:pc-entry-positive}. For $d<0$ write
+$L(0)=L_i e^{J(u_{\rm up})}$,
+$J=\int_{\Lambda(u_{\rm up})}^0WA_W\,dz$. Then
+\[
+ J_{u_{\rm up}}=-[WA_W]_{\Lambda}\Lambda_{u_{\rm up}}+
+              \int L(WA_W+W^2A_{WW})\,dz=O(\varepsilon^{-2}).
+\]
+The first term is $O(\varepsilon^{-1})$; the second is controlled by
+\eqref{eq:pc-feedback-mass}. This proves
+\eqref{eq:pc-entry-negative}.
+
+It remains to justify the restriction used on negative $d$.
+Lemma~\ref{lem:damping} excludes $a\ge0$. For $d=-m<0$ and $x\ge L_1r$,
+the upper barrier and $F\le C\varepsilon^2x^2$ give
+\[
+ y(-L_1r)\le K\varepsilon^3
+       (L_1r/x_g)^{c/\varepsilon^2}.
+\]
+The height decreases to $z=-\kappa$. Division by $\kappa^2$ loses
+only $r^{-2}$: for $N>2$, $r^{-2}(L_1r/x_g)^N$ is increasing in
+$r$. Choosing $r_0<x_g/(2L_1)$ gives $q(-1)\le Ce^{-c/\varepsilon^2}$,
+uniformly even for arbitrarily small $r$. On $-1\le\zeta\le0$,
+$q_\zeta\le-m/2$ as long as $q>0$. Positivity at zero proves
+\eqref{eq:pc-exponential-wedge}. Finally, scalar order, $F_y>0$,
+and the fixed target interval show that every intervening solution
+between two retained ones is retained. Thus the restrictions are
+intervals.
+\end{proof}
+
+Let $T_-(u_{\rm up})$ be the short map in the energy coordinate $E_b$,
+and $T_+(u_{\rm up})$ the map obtained by the contact passage and outgoing arc.
+Lemma~\ref{lem:sections} gives
+\begin{equation}
+\label{eq:pc-short}
+ (T_-)_{u_{\rm up}}=-j(u_{\rm up}),\qquad c\le j\le C,\qquad
+ |(\log j)_{u_{\rm up}}|\le C.
+\end{equation}
+Their intersections correspond to captured periodic orbits; their isolated
+intersections are precisely the limit cycles being counted.
+
+\paragraph{Actual-domain scope on the nonnegative side.}
+For $a>0$ the negative scaled strip may have a base root. The incoming
+product in Lemma~\ref{lem:pc-entry} then cannot pass its first root:
+its base approaches only in infinite time while the normal deviation
+contracts. Such a field has no retained passage to $z=0$, also at
+$d=0$. On a no-root branch that lemma controls feedback on the whole
+returning interval.
+The outgoing and short-map constants can be fixed on fixed
+enlarged physical cores before shrinking $\xi$; regular energy
+holonomy has a uniform unit bound there. After these constants
+are fixed choose $\xi$, then $r$, and finally $\varepsilon$.
+
+\subsection{Nonnegative forcing and a comparison criterion}
+
+For nonnegative forcing, a weighted variational identity makes the
+complete contact derivative smaller than the short-map derivative.
+
+For $d\ge0$, the required outgoing estimate holds even when $P$ has
+positive roots. Let $J=\partial_{q_0}q$ in \eqref{eq:pc-inner} and
+$h=q_0+d>0$. On $0\le\zeta\le1$, direct integration gives
+$q(1)\ge ch$ and $0<J(1)\le C$. For $\zeta\ge1$ put
+\[
+ \mathcal R=hJ\frac{V(\zeta,q)}q.
+\]
+The exact cancellation
+\begin{equation}
+\label{eq:pc-positive-cancellation}
+ (\log\mathcal R)'=\frac{(V_\zeta)|_q-d/q}{V}
+\end{equation}
+is obtained by differentiating the scalar and variational equations.
+The function $\Phi=\mathsf Bq-\mathsf Cq^2$ increases, since
+$q'\ge0$ and $\mathsf B-2\mathsf Cq=F_y>0$. The integral of
+$\mathsf B'q/V$ is bounded: outside a negative well of $\mathsf A$,
+or when $q$ is large, $q/V\le C$; on the remaining bounded-height
+part use
+\[
+ \frac{\mathsf B'q}{V}\,d\zeta
+ =\frac{\mathsf B'q}{\zeta q+d}\,dq
+ \le\frac{\mathsf B'}\zeta\,dq.
+\]
+There $\zeta\ge c/\varepsilon$. To integrate
+$\mathsf A'/(\mathsf A+\Phi)$, pair the decreasing and increasing
+branches of the convex quadratic at equal values of $\mathsf A$.
+The later denominator is larger, so each paired contribution is
+nonpositive, including when $\mathsf A\le0$. Only a final increase
+above $\mathsf A(1)>c$ remains. At a fixed section $z=\xi$ this gives
+\[
+ \mathcal R_{\rm out}\le C(1+\xi^2/r^2),\qquad
+ (q_0+d)\partial_{q_0}T_+
+          \le C(\kappa^2+\varepsilon^2\xi^2).
+\]
+The factor $\kappa^2$ converts $q$ to the physical ordinate. The
+regular continuation in the $E_b$ coordinate has derivative tending
+to one after $\xi$ is fixed. With \eqref{eq:pc-entry-positive},
+\[
+ |(T_+)_{u_{\rm up}}|\le C(r^2+\xi^2).
+\]
+Choose $\xi$ small and then $r$ small so that the last bound is less
+than $j/2$. The displacement is strictly increasing and has at most one
+zero, necessarily simple, on its returning interval.
+
+For negative $d$, we use Lemma~\ref{lem:pc-ratio} after identifying
+the physical separator and estimating the departure map.
+
+\subsection{Changing the incoming reference preserves the physical separator}
+Write $d=-m<0$ and $u=u_{\rm up}$. Lemma~\ref{lem:pc-entry}
+has already placed every counted cycle in the wedge $a<0$ with $m$
+exponentially small. To estimate incoming distortion, we may replace
+the selected incoming reference $y_c^o$ by the solution $y_c^n$ whose
+value at a fixed negative point is zero. The outgoing separator is
+still the trace $\beta=y_\sigma(0)/\kappa^2$, with source distance
+$s=q_0-\beta>0$. We verify that this change of reference preserves
+the complete derivative comparison.
+
+Both incoming solutions obey the barriers
+$-4m/(1-\zeta)\le q_c^i(\zeta)<0$, $i=o,n$, on their
+common terminal negative interval. For $\zeta\in[-1/8,0]$,
+$1\le\mathsf A\le2$, $\mathsf B>0$, and
+$1/2\le V(\zeta,q_c^i)\le2$ after shrinking.
+Moreover $\zeta q_c^i\le m/2$. Their exact scalar equations
+therefore give $(q_c^i)_\zeta\le-m/4$, hence
+\[
+ -4m\le c_i:=q_c^i(0)\le-m/32 .
+\]
+The old incoming graph's initial value lies between these same
+barriers by its fixed-negative-point estimate in
+Lemma~\ref{lem:pc-entry}. No equality of the graphs is assumed.
+
+For the same fixed field and physical incoming value put
+$w_i=q_0-c_i=s+w_{\beta,i}$,
+$w_{\beta,i}=\beta-c_i$, and
+$\lambda_i=-\varepsilon^2\partial_u\log w_i$.
+The endpoint bounds and $q_0=\beta+s\ge0$ give
+\[
+ \frac1{128}\le\frac{w_o}{w_n}\le128,\qquad
+ \lambda_n=\lambda_o\,\frac{w_o}{w_n},\qquad
+ \lambda_iw_i=-\varepsilon^2s_u .
+\]
+Differentiating the exact identities, with $c_i$ independent of $u$,
+gives
+\begin{equation}\label{eq:incoming-reference-cancellation}
+ (\log\lambda_n)_u
+ =(\log\lambda_o)_u+
+                    \varepsilon^{-2}(\lambda_n-\lambda_o).
+\end{equation}
+The feedback calculation
+\eqref{eq:pc-tail-feedback}--\eqref{eq:pc-feedback-mass} applies to the
+zero-initial reference as well: it has the same $O(m)$ barriers and
+fixed-foot, taper and funnel bounds. Its moving-entry value is
+$L_i=-H(\Lambda,K\varepsilon^3)\Lambda_u/
+(K\varepsilon^3-y_c^n(\Lambda))$, including the entry motion.
+The taper integrals have denominators $N_0-2$ and $2N_0-4$,
+$N_0\asymp\varepsilon^{-2}$, so no $\log(1/r)$ or reciprocal
+radial loss is introduced. Thus the incoming constants are fixed
+before the outgoing sections.
+
+If $c_n^\lambda\le\lambda_n\le C_n^\lambda$ and
+$|(\log\lambda_n)_u|\le L_n\varepsilon^{-2}$, the identities
+give
+\[
+ c_n^\lambda/128\le\lambda_o\le128C_n^\lambda,\qquad
+ |(\log\lambda_o)_u|
+       \le(L_n+129C_n^\lambda)\varepsilon^{-2}.
+\]
+These bounds hold for arbitrarily small $s>0$. The outgoing map
+$T_+(s)$, its derivative $M=\partial_sT_+$, the departure derivative $N$,
+and the collision amplitude $A(s)$ still use the same physical source
+$\kappa^2(\beta+s)$, selected outgoing graph, and target. The derivative
+ratio is therefore
+\[
+ R=\frac{M|s_u|}{j}
+  =\frac{M\varepsilon^{-2}\lambda_ow_o}{j}
+  =\frac{M\varepsilon^{-2}\lambda_nw_n}{j}.
+\]
+Equation~\eqref{eq:incoming-reference-cancellation} also gives
+$(\log\lambda_n)_u-\varepsilon^{-2}\lambda_n
+ =(\log\lambda_o)_u-\varepsilon^{-2}\lambda_o$.
+Thus both references give the same logarithmic derivative of $R$,
+including its large terms. The outgoing distance is always
+$W_{\rm out}(0)=\kappa^2s$, while $\kappa^2w_n$ is used only to estimate
+incoming distortion. The separator and finite-event comparison are
+therefore preserved.
+
+
+\subsection{Departure from the slow region}
+
+We next estimate the derivative from a moving departure point to the
+fixed outgoing target. The logarithmic derivative of this map, combined
+with the departure equation, will give the curvature required by
+Lemma~\ref{lem:pc-ratio}.
+
+Write $d=-m$ and $\nu=\kappa^3m$. First suppose that
+\begin{equation}
+\label{eq:pc-separated-polynomial}
+ P(z)\asymp r^2+z^2\quad(z\ge0),\qquad -2+\delta_a\le a<0.
+\end{equation}
+There is a unique positive solution $y_\sigma$ of $y_z=H=(zy-\nu)/F$
+on this side with
+\begin{equation}
+\label{eq:pc-boundary-tail}
+ y_\sigma(z)=\frac{\nu}{(1+\varepsilon^2)z}+O(\nu z^{-2})
+ \quad(z\longrightarrow\infty).
+\end{equation}
+To construct it, use the backward Green kernel
+\[
+ K(\zeta,t)=\exp\left(-\int_\zeta^t\frac{x}{\mathsf A(x)}\,dx\right).
+\]
+Writing $\mathcal N(q)=(\zeta q-m)(V^{-1}-\mathsf A^{-1})$,
+the integral equation is
+$q(\zeta)=m\int_\zeta^\infty K(\zeta,t)/\mathsf A(t)\,dt
+          -\int_\zeta^\infty K(\zeta,t)\mathcal N(q)(t)\,dt$.
+The comparison $\mathsf A\asymp1+\varepsilon^2\zeta^2$ gives
+$\int_\zeta^\infty K/\mathsf A\le C/(1+\zeta)$, by splitting at
+$1$ and $\varepsilon^{-1}$. On the ball
+$\sup(1+\zeta)|q|\le Cm$, the second integral has Lipschitz norm
+$O(m)$ in this weighted space: use
+$|V-\mathsf A|\le C(1+\kappa\zeta)|q|+\kappa^2q^2$ in the same
+two ranges. Contraction therefore gives the solution. The coefficient
+$1/(1+\varepsilon^2)$ is the balance at infinity. A first zero would
+cross downward and could not lead to the positive terminal behavior.
+Likewise, at a zero of $zy_\sigma-\nu$ its derivative with respect
+to $z$ is $y_\sigma>0$. Hence $y_\sigma>0$ and
+$zy_\sigma-\nu<0$ throughout. Scalar order shows that the value
+$\beta=y_\sigma(0)/\kappa^2$ separates the outgoing solutions from
+those hitting $y=0$. The threshold itself does not reach the outgoing
+fast part of the fixed section.
+For its size, write $\sigma(\zeta)=y_\sigma(\kappa\zeta)/\kappa^2$.
+The strict sign above gives $0<\sigma(1)<m$. On $0\le\zeta\le1$,
+$\mathsf A\ge3/4$ after shrinking $\varepsilon$. The graphs zero and
+$(3-2\zeta)m$ are reverse-time lower and upper barriers: at the upper
+graph the scalar right-hand side is at least $-2m$, its derivative is
+$-2m$, and the denominator stays above $1/2$ for small $m$.
+Therefore $0<\beta\le3m$, and Lemma~\ref{lem:pc-entry} gives
+$0<w_\beta=\beta-q_c(0)\le7m$.
+
+Fix two positive sections $\xi_{\rm in}<\xi_{\rm out}$. Choose their
+ratio sufficiently large, then their physical positions, and finally the
+parameter neighborhood. Retained cycles meet the fast part of the inner
+section and continue through the outer section to the common target.
+For each pair fixed in this order, we will bound the logarithmic
+derivative of the outgoing continuation uniformly in the final
+parameter neighborhood; its right-tail version will also apply near
+a double root.
+For a small fixed $\theta>0$, let $N(z)>0$ be the derivative with
+respect to vertical height of this continuation from
+\[
+ y=y_\sigma(z)+\theta S(z),\qquad S=\varepsilon^2P.
+\]
+
+\paragraph{The outgoing logarithmic derivative.}
+The key estimate comes from differentiating the exact energy defect as
+the starting point moves along the departure curve. The first assertion
+below remains under assumption~\eqref{eq:pc-separated-polynomial}; the
+last assertion requires that comparison only on its stated right tail.
+In both cases the continuation starts at $z_0$ and ends at the common
+target, with the field fixed. This right-tail estimate is what the
+collision through passage will use.
+
+\begin{lemma}
+\label{lem:pc-normal-derivative}
+Assume $d=-m<0$ lies in the exponential wedge
+\eqref{eq:pc-exponential-wedge} supplied by Lemma~\ref{lem:pc-entry}.
+Fix a sufficiently small $\theta>0$.  Choose the ratio
+\(R_\xi=\xi_{\rm out}/\xi_{\rm in}>1\) first (large enough for the
+post-hit contraction below), then choose the two physical sections, and
+only afterward choose the parameter neighborhood.  With these choices
+there is an $L>0$ such that, for every admissible parameter in that
+neighborhood and every starting point
+\[
+ z_0\in[L\kappa,\xi_{\rm in}],\qquad
+ y_0=y_\sigma(z_0)+\theta S(z_0),
+\]
+the complete continuation from the inner section through the outer
+section to the common target is defined and its vertical derivative
+\(N(z_0)>0\) satisfies
+\begin{equation}
+\label{eq:pc-normal-bound}
+ |z_0\,\partial_{z_0}\log N(z_0)|\le C,
+ \qquad L\kappa\le z_0\le\xi_{\rm in}.
+\end{equation}
+Here $\partial_{z_0}$ differentiates the dependence on the
+starting-section coordinate $z_0$ while the vector field, normalized
+parameters, section positions, and target section are held fixed.  In
+the proof, derivatives in the logarithmic phase variable are likewise
+field-fixed; whenever $t=\log\lambda$ is used, the radial derivative is
+taken at fixed $\lambda$ (fixed $t$), as indicated by the subscript in
+$(z\partial_z)_\lambda$.  The same estimate holds with this starting
+interval replaced by $[z_*,\xi_{\rm in}]$ whenever $z_*\ge rZ_b$ and
+the interval lies on that right tail (in particular, take
+$z_*=rZ_b$ when nonempty), where $Z_b$ ranges in a fixed compact
+interval lying to the right of all possible positive roots and
+\eqref{eq:pc-separated-polynomial} is required only on that tail.  The
+constant in this right-tail assertion depends on the fixed tail and
+section data, but not on a positive lower bound for $P$ (or $F$) in the
+collision strip to the left of the tail.
+\end{lemma}
+
+\begin{proof}
+\medskip\noindent\textit{Boundary graph.}\quad
+We estimate the flight from its moving starting point through the fixed
+outer section to the common target; the two distinct physical sections
+leave room for departure and subsequent contraction. Put $x=\log z$,
+$Z=z/r$, and $y_\sigma=\nu v/z$. For
+\[
+ \rho=\varepsilon^2\frac{p_a(Z)}{Z^2},\qquad
+ \omega=\frac{\nu v(1+bz-\nu v/z)}{z^3},\qquad w=1-v,
+\]
+the boundary equation becomes
+\[
+ w_x=(1+c)w-1,\qquad c=(\rho+\omega)^{-1}.
+\]
+Here $0<v<1$, $\rho\asymp\varepsilon^2(1+Z^{-2})$ and
+the first two Euler derivatives of $\rho$ are $O(\rho)$.
+Also $\nu/(zS)$ and its first two Euler derivatives are $O(m)$ for
+$Z\ge L\varepsilon$. Although $1+bz$ is unbounded at infinity,
+its product with $\nu/(zS)$ is still $O(m)$.
+The bounded solution has the exact representation
+\[
+ w(x)=\int_x^\infty
+       \exp\left(-\int_x^t(1+c(s,w(s)))\,ds\right)dt.
+\]
+At fixed $w$, $|\partial_x\log c|\le C$ and
+$|\partial_w\log c|\le Cm$. Since initially
+$|w_x|\le1+c\le C\varepsilon^{-2}$, the same bound for
+$|d\log c/dx|$ holds along the solution by
+\eqref{eq:pc-exponential-wedge}. Splitting the integral after a fixed
+short interval gives $|w|\le C/(1+c)$. Differentiating the equation,
+\[
+ (w_x)_x=(1+c+c_ww)w_x+c_xw,
+\]
+the first coefficient is at least $1+c/2$ and the last term is bounded.
+The same backward kernel gives $|w_x|\le C/(1+c)$, and the equation
+then gives $|w_{xx}|\le C$. We have proved
+\begin{equation}
+\label{eq:pc-boundary-euler}
+ \sum_{j=0}^2\frac{|(z\partial_z)^jy_\sigma|}{S}
+                   +\frac\nu{zS}\le Cm.
+\end{equation}
+
+\medskip\noindent\textit{Energy defect before departure.}\quad
+Let $H_0=z/(1+bz-y)$. The fast first integral of
+Lemma~\ref{lem:fast-energy} gives the exact cancellation, for
+$J_z=H_yJ$,
+\begin{equation}
+\label{eq:pc-energy-defect}
+ \begin{gathered}
+ \frac d{dz}\log((E_b)_yJ)=\mathcal C,\qquad
+ \mathcal C=\left(\partial_y+\frac{(E_b)_{yy}}{(E_b)_y}\right)(H-H_0),\\
+ H-H_0=-\frac{\nu h+zS}{Fh},\qquad h=1+bz-y.
+ \end{gathered}
+\end{equation}
+We estimate the change of this integral when its starting point moves.
+Set $W=y-y_\sigma$, $R=W/S$, $\lambda=W/P$, and
+$D=(\log R)_z$.
+Write $y_0(z_0)=y_\sigma(z_0)+\theta S(z_0)$ and let
+$y(z;z_0)$ be the solution starting there. With $\ell_0=\log z_0$,
+the derivative $\mathcal V=\partial_{\ell_0}y(z;z_0)$ at fixed $z$
+satisfies
+\[
+ \mathcal V_z=H_y\mathcal V,\qquad
+ \mathcal V(z_0)=z_0(y_0'-H(z_0,y_0))=-z_0\theta S(z_0)D(z_0).
+\]
+Choose $c_f<1/4$ and then decrease $\varepsilon_0$ so that
+$\varepsilon^2+c_f<1/3$. Before the first hit $\lambda=c_f$, exact
+subtraction gives, with $A_*=-a\ge0$,
+\[
+ \mathfrak a(z,W)=
+ \frac{zF_\sigma-G_\sigma(1+bz-2y_\sigma-W)}
+      {F_\sigma F_{\sigma+W}},\qquad
+ D=\mathfrak a-\frac{P'}P,
+\]
+where $F_\sigma=F(z,y_\sigma)$,
+$F_{\sigma+W}=F(z,y_\sigma+W)$, and
+$G_\sigma=zy_\sigma-\nu$.  Equation
+\eqref{eq:pc-boundary-euler}, $z\ge Lr\varepsilon$, and
+$W=\lambda P$ imply, at fixed $\lambda$,
+\[
+ F_\sigma=S(1+e_\sigma),\qquad
+ F_{\sigma+W}=P(\varepsilon^2+\lambda)
+       (1+e_+),
+\]
+where
+\[
+ |e_\sigma|+|z\partial_ze_\sigma|\le Cm,\qquad
+ |e_+|+|z\partial_ze_+|\le C(z+W+m).
+\]
+The quotient of
+$G_\sigma(1+bz-2y_\sigma-W)$ by $zF_\sigma$, and its fixed-$\lambda$
+Euler derivative, are likewise $O(m)$.
+The corresponding principal expression is
+\[
+ D_0=\frac{z}{P(\varepsilon^2+\lambda)}-\frac{P'}P,\qquad
+ zD_0=\frac{Z\{A_*v_*+(1-2v_*)Z\}}
+                 {v_*p_a(Z)},\qquad v_*=\varepsilon^2+\lambda.
+\]
+Since $v_*<1/3$ and
+$A_*v_*+(1-2v_*)Z\ge A_*v_*+Z/3$, the principal difference cannot
+be lost through cancellation.  Dividing the exact error by $D_0$
+therefore yields
+\begin{equation}
+\label{eq:pc-growing-ratio}
+ zD=\frac{Z\{A_*v_*+(1-2v_*)Z\}}
+                {v_*p_a(Z)}(1+e_1),\qquad
+ v_*=\varepsilon^2+\lambda,\quad
+ |e_1|+|\partial_xe_1|\le C(z+W+m).
+\end{equation}
+The Euler derivative holds at fixed $\lambda$. In particular
+$D>0$, $D\ge cz/[P(\varepsilon^2+\lambda)]$, and
+$|z\partial_z\log D|\le C$. Division of
+\eqref{eq:pc-energy-defect}, using $\partial_y=S^{-1}\partial_R$,
+gives, for $j=0,1$ at fixed $R$,
+\begin{equation}
+\label{eq:pc-defect-quotient}
+ \left|(z\partial_z)^j\frac{\mathcal C}{D}\right|
+             \le C((1+R)^{-1}+S+m).
+\end{equation}
+For completeness, $H-H_0=-z(1+R)^{-1}\Phi_0$. The function $\Phi_0$
+has bounded derivatives in each of its four arguments
+\[
+ (1+R)^{-1},\qquad h,\qquad y_\sigma/S,\qquad \nu/(zS).
+\]
+Vertical differentiation therefore bounds $|\mathcal C|$ by
+$Cz(1+R)^{-1}\{[S(1+R)]^{-1}+1\}$, while
+$D\ge cz/[S(1+R)]$.  Division gives
+$C\{(1+R)^{-1}+S\}$; derivatives of the two boundary ratios contribute
+the displayed additional $Cm$.  The same calculation after one fixed-$R$
+Euler derivative proves the second estimate in
+\eqref{eq:pc-defect-quotient}.
+
+\medskip\noindent\textit{The moving departure point.}\quad
+To control the moving starting point, use $t=\log\lambda$. The
+endpoints are $t_0=\log(\theta\varepsilon^2)$ and $t_f=\log c_f$,
+independent of $z_0$. The equation for $x$ is $x_t=B=(zD)^{-1}$;
+thus $\mathcal X=\partial_{\ell_0}x$ satisfies
+$\mathcal X_t=B_x\mathcal X$, $\mathcal X(t_0)=1$.
+Here $B_x$ is taken at fixed $t$. With $e_1=0$,
+\[
+ B_0=\frac{v_*p_a(Z)}{Z\{A_*v_*+(1-2v_*)Z\}},\quad
+ (B_0)_x=
+ \frac{v_*\{A_*Z^2(1-v_*)-A_*v_*-2Z(1-2v_*)\}}
+ {Z\{A_*v_*+(1-2v_*)Z\}^2}.
+\]
+If the numerator is positive, $A_*Z\ge c$ and
+$((B_0)_x)_+\le Cv_*$. Equation \eqref{eq:pc-growing-ratio} thus
+implies
+\[
+ (B_x)_+\le Cv_*+C(z+W+m)B.
+\]
+Both terms have bounded integral in $t$. Indeed
+$\int v_*dt=\varepsilon^2\log[c_f/(\theta\varepsilon^2)]+O(c_f)$;
+also integration of the lower bound for $D$ gives
+$z_f\le C(r+z_0)$, $z_f/z_0\le C/\varepsilon$ at the first hit
+$\lambda=c_f$. Since $y_z\le Cz$ and $y_\sigma>0$,
+$W(z)\le C\varepsilon^2P(z_0)+Cz^2$. In particular
+\[
+ \int_{z_0}^{z_f}\frac{z+W+m}{z}\,dz
+ \le C\{z_f+z_f^2+
+       [\varepsilon^2P(z_0)+m]\log(C/\varepsilon)\}\le C.
+\]
+This uses \eqref{eq:pc-exponential-wedge}, but no comparison of $r$
+with $\varepsilon$. Consequently $0<\mathcal X\le C$.
+The hit occurs before $C_*(r+z_0)$: otherwise the integral of $z/P$
+would exceed the available finite integral of
+$(\varepsilon^2+\lambda)d\lambda/\lambda$.  More explicitly,
+$D=(\log\lambda)_z$ and the lower bound for $D$ give
+\[
+ c\int_{z_0}^{z_f}\frac{z\,dz}{P(z)}
+ \le\int_{\theta\varepsilon^2}^{c_f}
+           \frac{\varepsilon^2+\lambda}{\lambda}\,d\lambda
+ \le C.
+\]
+Since $P(z)\asymp r^2+z^2$ on this side, the left member controls
+$\log[(r+z_f)/(r+z_0)]$, proving the asserted bound with a constant
+independent of both small parameters.
+Choosing $\xi_{\rm out}/\xi_{\rm in}>2C_*$ and then shrinking $r$
+puts the hit before the outer section. For the energy defect before
+the hit, the physical-coordinate Leibniz formula is exactly
+\[
+ \partial_{\ell_0}\int_{z_0}^{z_f}\mathcal C(z,y(z;z_0))\,dz
+ =\mathcal C_f\partial_{\ell_0}z_f-z_0\mathcal C_0
+       +\int_{z_0}^{z_f}\mathcal C_y\mathcal V\,dz.
+\]
+Changing to $t$ incorporates both endpoint terms and the variational
+integral into
+\[
+ \partial_{\ell_0}\int_{t_0}^{t_f}\frac{\mathcal C}{D}\,dt
+ =\int_{t_0}^{t_f}\mathcal X
+       (z\partial_z)_{\lambda}\left(\frac{\mathcal C}{D}\right)dt.
+\]
+Indeed, along a fixed $t$ level,
+$\mathcal V=-zWD\mathcal X$. By \eqref{eq:pc-defect-quotient}, the
+absolute value of the last integral is at most
+\[
+ C\int_{t_0}^{t_f}[(1+R)^{-1}+S+m]dt
+ \le C\log(1+\theta^{-1})+
+ C[\varepsilon^2(r^2+\xi_{\rm out}^2)+m]
+       \log\frac{c_f}{\theta\varepsilon^2}\le C.
+\]
+We have therefore proved
+\[
+ |\partial_{\log z_0}\log z_f|\le C,\qquad
+ \left|\partial_{\log z_0}\int_{z_0}^{z_f}\mathcal C\,dz\right|\le C.
+\]
+
+\medskip\noindent\textit{After departure.}\quad
+At this hit $z_f\ge c_r r$. Otherwise its height is at least
+$cc_fr^2$, whereas $y_z\le Cz$ bounds it by
+$C\varepsilon^2r^2+Cz_f^2$, a contradiction. Now set
+\[
+ \lambda=\frac yP,\qquad \pi=\frac P{z^2}=\frac{p_a(Z)}{Z^2},
+ \qquad \delta_Z=\frac\nu{z^3}=m\varepsilon^3Z^{-3},
+ \qquad \tau=\log(z/z_f).
+\]
+Its initial value is
+$\lambda(0)=c_f+y_\sigma(z_f)/P(z_f)$, whose Euler derivative is
+$O(m\varepsilon^2)$ by \eqref{eq:pc-boundary-euler}.  Direct division of
+$y_z=(zy-\nu)/F$ gives the exact equation
+\begin{equation}\label{eq:pc-post-exact}
+ \lambda_\tau=
+ \frac{\lambda-\delta_Z/\pi}{\pi(\lambda h+\varepsilon^2)}
+ -\lambda\frac{Zp_a'(Z)}{p_a(Z)},\qquad
+ h=1+bz-\lambda P.
+\end{equation}
+We first control the transition from bounded $Z$ to a stable strip.
+Fix \(\lambda_-=c_f/2\) and \(\lambda_+=3/4\), with the earlier choice
+\(c_f<1/4\). After shrinking the parameter neighborhood, the hit value
+satisfies
+\[
+ \lambda(0)=c_f+O(m\varepsilon^2)\in(\lambda_-,\lambda_+).
+\]
+At this hit \(G=zy-\nu>0\), since
+\(G=zP\lambda-\nu=zP(\lambda-\delta_Z/\pi)\) and
+\(\delta_Z/\pi\ll c_f\).  If \(G\) had a first zero afterward, then
+at that point \(G_z=y+zy_z=y>0\), a contradiction; hence
+\(y_z=G/F>0\) as long as the orbit stays in the outgoing phase box.
+A small fixed outer section closes the bootstrap $h\in[1/2,3/2]$:
+$y_z\le2z$ gives $y\le C(r^2+z^2)$, hence $0<\lambda\le B$.
+Decrease that section and then $r$ to obtain
+$h\in[1-\eta,1+\eta]$, with $\eta<1/10$.
+On $Z\ge c_r$, both $\pi$ and $Zp_a'/p_a$ are bounded and $\pi$ is a
+positive unit. Choose
+$\lambda_*<\min(\lambda_-,c_f/2)$ so small that
+\eqref{eq:pc-post-exact} points upward there, and then require
+$\varepsilon^2+\delta_Z/\pi\ll\lambda_*$. Thus
+$\lambda\in[\lambda_*,B]$. For a fixed sufficiently large $Q$,
+$\pi\to1$ and $Zp_a'/p_a\to2$ give
+\[
+ \lambda_\tau\ge c_1>0\quad(\lambda_*\le\lambda\le\lambda_-),\qquad
+ \lambda_\tau\le-c_1<0\quad(\lambda_+\le\lambda\le B),
+ \qquad Z\ge Q.
+\]
+The band $[\lambda_-,\lambda_+]$ is therefore invariant once $Z\ge Q$
+and is reached within a bounded additional time. Let $\tau_Q$ be the
+first time both conditions hold, or the outer-section time $\tau_o$
+if that occurs first. Its preceding interval has length at most
+$\max(0,\log(Q/c_r))+B/c_1$ and common coefficient, defect and
+variation bounds on $\lambda\in[\lambda_*,B]$.
+
+For the subsequent variation estimate, separate the large-$Z$ equation
+into its limiting part and an integrable remainder. Put
+\[
+ f_\varepsilon(\lambda)=\frac{\lambda}{\lambda+\varepsilon^2}-2\lambda,
+\]
+and define $\mathcal R_1$ to be the difference between the right-hand
+side of \eqref{eq:pc-post-exact} and $f_\varepsilon$.  Equivalently,
+\[
+ \mathcal R_1=
+ \frac{\lambda-\delta_Z/\pi}{\pi(\lambda h+\varepsilon^2)}
+ -\frac{\lambda}{\lambda+\varepsilon^2}
+ -\lambda\left(\frac{Zp_a'}{p_a}-2\right).
+\]
+For the energy defect put $e_b=(E_b)_{yy}/(E_b)_y$.  In these variables
+the exact expression in \eqref{eq:pc-energy-defect} is
+\[
+ \mathcal K:=H-H_0
+ =-z\frac{\varepsilon^2\pi+\delta_Zh}
+             {\pi h(\lambda h+\varepsilon^2)},\qquad
+ \mathcal C=(P^{-1}\partial_\lambda+e_b)\mathcal K.
+\]
+Thus, with $\mathcal E=Z\partial_Z+z\partial_z$ acting at fixed
+$\lambda$, define $\mathcal R_2$ by
+\begin{equation}
+\label{eq:pc-post-remainders}
+ \lambda_\tau=f_\varepsilon(\lambda)+\mathcal R_1,\qquad
+ z\mathcal C=\frac{\varepsilon^2}{(\lambda+\varepsilon^2)^2}
+          +\mathcal R_2.
+\end{equation}
+On $\lambda_-\le\lambda\le\lambda_+$ and $Z\ge Q$, the denominator
+factors are positive units.  The three elementary estimates
+\[
+ \pi-1=O_{\mathcal E}(Z^{-1}),\qquad
+ \frac{Zp_a'}{p_a}-2=O_{\mathcal E}(Z^{-1}),\qquad
+ h-1=O_{\mathcal E,\partial_\lambda}(z)
+\]
+follow directly from the exact formulas
+\[
+ \pi-1=\frac aZ+\frac1{Z^2},\qquad
+ \frac{Zp_a'}{p_a}-2=-\frac{aZ+2}{p_a(Z)},\qquad
+ h-1=bz-\lambda\pi z^2,\qquad
+ \frac{\delta_Z}{\pi}=\frac{m\varepsilon^3}{Zp_a(Z)}.
+\]
+The function $e_b$ and its required derivatives are bounded because
+$(E_b)_y$ is a positive analytic unit on the fixed energy rectangle.
+Substitution in the displayed exact formulas for $\mathcal R_1$ and
+$\mathcal K$, followed by the two operations
+$P^{-1}\partial_\lambda$ and multiplication by $z$, gives, including
+all mixed derivatives actually used,
+\begin{equation}\label{eq:pc-post-remainder-jets}
+ \begin{aligned}
+ \sum_{i=0}^1\sum_{j=0}^2
+  |\mathcal E^i\partial_\lambda^j\mathcal R_1|
+  &\le C q_1, & q_1&=Z^{-1}+z+m\varepsilon^3Z^{-3},\\
+ \sum_{i=0}^1\sum_{j=0}^2
+  |\mathcal E^i\partial_\lambda^j\mathcal R_2|
+  &\le C q_2, & q_2&=\varepsilon^2(Z^{-1}+z)
+                         +m\varepsilon^3Z^{-3}.
+ \end{aligned}
+\end{equation}
+These bounds do not expand in $\varepsilon^2\log Z$. Increasing $Q$
+and decreasing the fixed outer section makes the full field inward
+pointing at the two fixed band boundaries and gives
+\[
+ f_\varepsilon'+\partial_\lambda\mathcal R_1\le-c_0<0
+\]
+throughout the interval.
+
+At fixed $\tau$ and fixed field, differentiation in
+$\ell_f=\log z_f$ acts on the coefficients as $\mathcal E$. Thus
+$Z_1=\partial_{\ell_f}\lambda(\tau;z_f)$ solves
+\[
+ (Z_1)_\tau=(f_\varepsilon'+\partial_\lambda\mathcal R_1)Z_1
+                    +\mathcal E\mathcal R_1.
+\]
+Its initial value is $O(m\varepsilon^2)$. With $\tau_Q$ defined and
+truncated as above, the preceding transition interval has bounded length and bounded
+variational coefficients, so
+$\sup_{[0,\tau_Q]}|Z_1|+\int_0^{\tau_Q}|Z_1|\,d\tau\le C$.
+On the remaining interval, when nonempty, variation of constants
+gives explicitly
+\[
+ |Z_1(\tau)|\le Ce^{-c_0(\tau-\tau_Q)}
+   +C\int_{\tau_Q}^{\tau}e^{-c_0(\tau-s)}q_1(s)\,ds.
+\]
+Moreover, with $\tau_o=\log(\xi_{\rm out}/z_f)$,
+\[
+ \int_0^{\tau_o}q_1\,d\tau
+ \le \int_{Z_f}^{\infty}\frac{dZ}{Z^2}
+      +\int_{z_f}^{\xi_{\rm out}}dz
+      +m\varepsilon^3\int_{Z_f}^{\infty}\frac{dZ}{Z^4}\le C,
+\]
+because $Z_f\ge c_r$.  Fubini's theorem in the preceding stable-kernel
+formula now yields
+\begin{equation}\label{eq:pc-post-variation-bound}
+ \sup_{[0,\tau_o]}|Z_1|+\int_0^{\tau_o}|Z_1|\,d\tau\le C.
+\end{equation}
+
+Put $\psi=z\mathcal C$. The full post-hit derivative, including
+the moving terminal point, is
+\[
+ \partial_{\ell_f}\int_0^{\tau_o}\psi\,d\tau
+ =-\psi(\tau_o)+\int_0^{\tau_o}
+              (\psi_\lambda Z_1+\mathcal E\psi)d\tau.
+\]
+On the stable interval,
+$\psi_\lambda=-2\varepsilon^2(\lambda+\varepsilon^2)^{-3}
++\partial_\lambda\mathcal R_2$ and
+$\mathcal E\psi=\mathcal E\mathcal R_2$.
+Equations \eqref{eq:pc-post-remainder-jets} and
+\eqref{eq:pc-post-variation-bound} bound the integral; its truncated
+pre-stable part has bounded length and smooth coefficients. A moving intermediate
+endpoint appears with opposite signs in the two parts and cancels.
+At the terminal section the normalized ordinate has derivative
+$Z_1(\tau_o)-\lambda_\tau(\tau_o)$, and hence
+\[
+ \partial_{\ell_f}y(\xi_{\rm out};z_f)
+ =P(\xi_{\rm out})[Z_1(\tau_o)-\lambda_\tau(\tau_o)].
+\]
+
+\medskip\noindent\textit{Completion on the returning interval.}\quad
+Finally \eqref{eq:pc-energy-defect} gives the exact factorization
+\[
+ N(z_0)=(E_b)_y(z_0,y_0(z_0))
+  \exp\left(\int_{z_0}^{\xi_{\rm out}}\mathcal C\,dz\right)
+  U_{\rm reg}(y(\xi_{\rm out};z_0),p),
+\]
+where $U_{\rm reg}>0$ is the derivative of the remaining regular
+holonomy in the $E_b$ coordinate.  The entrance factor has bounded
+logarithmic $\log z_0$ derivative.  The pre-hit calculation bounds both
+the defect derivative and $\partial_{\log z_0}\log z_f$; the post-hit
+calculation above bounds the remaining defect derivative and terminal
+ordinate derivative.  For the already fixed pair of physical sections,
+$U_{\rm reg}$ is a positive $C^2$ unit after the final parameter
+shrinking.  These bounds prove \eqref{eq:pc-normal-bound}.  Constants may
+depend on the fixed sections; $L$ and the final parameter neighborhood
+are chosen afterward, so no reciprocal section size is absorbed into
+the small factor used below.
+
+Every integral in this proof starts at the current point and proceeds
+rightwards, except the boundary kernel, which also uses only its
+right-hand tail. If $z\ge rZ_b$ lies beyond all roots, the comparisons
+and Euler estimates used above hold on that tail. In particular
+$p_a'\le2Z$ and the positive sum in \eqref{eq:pc-growing-ratio} are
+unchanged. No margin to the left of $rZ_b$ is required. This proves
+the second assertion.
+\end{proof}
+
+The curvature follows from a moving departure section, not from a
+uniform bound for $N$ itself. Put $W=y-y_\sigma$, $K=sW_s/W$.
+The divided coefficient relative to this boundary solution is
+\[
+ \mathfrak a(z,W)=\int_0^1H_y(z,y_\sigma+tW)\,dt,
+ \qquad W_z=\mathfrak a(z,W)W.
+\]
+Here $W(0)=\kappa^2s$, so $K(0)=1$.
+Before the first hit $W=\theta S$, exact differentiation gives
+\[
+ (\log K)_z=W\mathfrak a_W,\quad
+ D=\mathfrak a-P'/P\asymp\frac z{\varepsilon^2P},\quad
+ |W\mathfrak a_W|+|W^2\mathfrak a_{WW}|\le C(W/S)D
+\]
+on $z\ge L\kappa$. The bounded initial $\zeta$-interval has the
+same integrated bound. In particular $K=1+O(\theta)$ before the hit.
+Differentiating its integral equation gives the exact total derivative
+\[
+ s\partial_s\log K_g
+ =s(z_g)_s[W\mathfrak a_W]_g+
+   \int_0^{z_g}K(W\mathfrak a_W+W^2\mathfrak a_{WW})\,dz.
+\]
+The integral is $O(\theta)$ since $(W/S)_z=(W/S)D$, and the endpoint term
+has the same bound by the differentiated hitting equation. Thus
+\begin{equation}
+\label{eq:pc-gate-identities}
+ K_g=1+O(\theta),\quad |s(\log K_g)_s|\le C\theta,\quad
+ (z_g)_s=-\frac{K_g}{sD_g},\quad
+ M(s)=N(z_g)\theta S(z_g)\frac{K_g}{s}.
+\end{equation}
+The last identity uses the tangent to the first-intersection curve,
+$y_g'-H(z,y_g)=-\theta SD$ and therefore includes the change of
+hit time. Lemma~\ref{lem:pc-normal-derivative} now gives
+\[
+ -s(\log M)_s
+ =1-s(\log K_g)_s+
+     \frac{K_g}{D_g}\left((\log N)_z+\frac{P'}P\right)_{z_g}.
+\]
+Here $(z_gD_g)^{-1}\le
+C(\varepsilon^2+\varepsilon/L+L^{-2})$. First choose $\theta$ small,
+then $L$ large and $\varepsilon$ small. The last display is at least
+$3/4$.
+An inner hit $z_g\le L\kappa$ implies $s\ge c_L\theta$ by the
+bounded inner difference equation, so it is absent when $s\le s_0$
+for a sufficiently small fixed $s_0$.
+
+To obtain the weighted bound, write $q=\sigma+\eta$, $J=q_s$,
+$D_0=\mathsf B-\mathsf C(q+\sigma)>c$. Direct subtraction gives
+\begin{equation}
+\label{eq:pc-signed-cancellation}
+ \frac d{d\zeta}\log\frac{sJV(\zeta,q)}{\eta V(\zeta,\sigma)}
+ =\frac{\eta}{V(\zeta,q)}(\mathsf B'-\mathsf C\sigma')
+ -\frac{D_0\eta}{V(\zeta,q)}(\log V(\zeta,\sigma))'.
+\end{equation}
+The first term has bounded integral; the coefficient of the second
+belongs to $(0,1)$. Under \eqref{eq:pc-separated-polynomial} the
+negative variation of $\log V(\zeta,\sigma)$ is bounded, because
+$\mathsf A$ stays positive and $\sigma$ decreases. The initial
+quotient is a positive bounded unit by $q_0\le Q_0$. At the outer
+section,
+\[
+ sJ\le C V(\zeta,\sigma)/D_0\le C(1+\xi_{\rm out}^2/r^2),
+ \qquad sM\le C\varepsilon^2(r^2+\xi_{\rm out}^2).
+\]
+The signed-cancellation identity therefore gives the size bound on the
+whole actual returning interval $I$. Fix the incoming and short-map
+constants and choose a tolerance $\delta=\delta_*>0$ satisfying both
+inequalities in~\eqref{eq:pc-ratio-smallness}. Then choose the two sections
+sufficiently small with their fixed ratio and shrink $r$ to make the size
+coefficient below $\delta_*$. The short-map constants can be fixed in advance
+as explained in Lemma~\ref{lem:pc-event-gluing}. After these sections
+fix $L$ and $s_0$, use $w_\beta\le7m$ and the exponential wedge
+\eqref{eq:pc-exponential-wedge} to shrink $\varepsilon$ until
+\eqref{eq:pc-ratio-localization} holds, so that
+$R\ge1/2$ implies $s\le C\delta w_\beta<s_0$.
+Lemma~\ref{lem:pc-ratio} now applies with both sections fixed before $s_0$. It bounds the total isolated multiplicity by two in this
+separated root-free case.
+
+\subsection{Two separated positive roots}
+
+For separated slow roots, we use an exact saddle passage and estimate
+its complete complement. The comparison then counts every retained
+return of a fixed field on the common physical source interval.
+
+Suppose $-M\le a\le-2-\delta_a$. Put
+\[
+ A=|a|r,\quad c=a^{-2},\quad n=Ac,\quad
+ e=\varepsilon/\sqrt c,\qquad
+ X=z/n,\quad Y=y/(n^2e^2).
+\]
+Here $c$ lies in a compact subinterval of $(0,1/4)$, and
+\begin{equation}
+\label{eq:pc-two-root-system}
+ X'=e^2(YQ+1-X+cX^2),\qquad Y'=XY-em,\qquad
+ Q=1+bnX-n^2e^2Y.
+\end{equation}
+Write $p_c(X)=1-X+cX^2$. Its smaller reference root $X_s$ is a positive unit,
+$p_c'(X_s)=-\sqrt{1-4c}$ is a negative unit, and the other root
+$X_2$ is separated from it. The actual equilibria instead satisfy
+\[
+ Y=em/X,\qquad
+ Q_e(X):=p_c(X)+\frac{em(1+bnX)}X
+                      -\frac{n^2e^4m^2}{X^2}=0.
+\]
+On this compact $c$-interval the implicit function theorem gives
+$X_i^{\rm eq}=X_i+O(em)$, with common finite phase bounds.
+Their separation is at least half the reference gap after shrinking,
+and $Q_e'(X_s^{\rm eq})$ remains a negative unit. All saddle-centred
+coordinates and eigenvalues below refer to this actual equilibrium.
+Fix a small collar width $\sigma$ below
+one tenth of their minimum gap. Apply the graph construction in
+Lemma~\ref{lem:small-ratio-saddle} on this fixed saddle collar.
+The normal eigenvalue is a positive unit, all base derivatives contain
+$e^2$, and $p_c'(X_s)$ stays away from zero. Thus
+Lemma~\ref{lem:uniform-normal-product} and its simple-root scalar
+change give, at fixed incoming and outgoing sections, the exact $C^j$
+Dulac map
+\begin{equation}
+\label{eq:pc-two-root-power}
+ D(s)=\xi_0(s/\omega_0)^{\rho_s},\qquad
+ \rho_s=e^2\beta_s,\quad 0<c_s\le\beta_s\le C_s.
+\end{equation}
+The fixed spectral and root gaps give this adaptation of the
+small-$c$ construction uniformly on the present compact $c$-interval.
+
+The smallness of $c$ used near a simple contact must here be replaced
+by smallness of $A$. For $x=-z\ge Ln$,
+\[
+ P(-x)=x^2+Ax+A^2c\asymp x(x+A),\qquad
+ T_A=\log\frac{x_g+A}{A(1+Lc)}=\log(1/A)+O(1).
+\]
+On the upper barrier, the negative graph derivative satisfies
+$H_y\le-\gamma/[\varepsilon^2(x+A)]$. Its integrated contraction
+is at most $-\gamma T_A/(ce^2)$. By making $A$ small, this absorbs
+any fixed loss $C/e^2$ from a bounded scaled interval. It absorbs
+polynomial scaling losses too: for every fixed $j$,
+\[
+ A^{-j}\left(\frac{A(1+Lc)}{x_g+A}\right)^{\gamma/(ce^2)}
+\]
+is increasing on $0<A\le A_0$ once $e$ is sufficiently small.
+There is no lower bound on $A$.
+Since $d<0$, the incoming scaled height is consequently less than
+$e^{-B/e^2}$ for any fixed $B$, after $A_0$ is chosen. It decreases
+on the negative half and grows by at most $e^{C_\sigma/e^2}$ up to
+$X_s-\sigma$. Thus every positive returning trajectory reaches the
+saddle section below its fixed positive normal outlet; an earlier
+hit of $Y=0$ is terminal. There is no early bypass in this case.
+Only $s>0$ in \eqref{eq:pc-two-root-power} reaches the positive
+outlet: $s=0$ lies on the stable separatrix, whereas for $s<0$ the
+expanding negative normal deviation crosses $Y=0$ while the
+separatrix height remains $O(em)$.
+
+The outgoing trajectory must still pass the second-root region. From
+the positive saddle outlet use $Y$ as phase:
+\[
+ \frac{dX}{dY}=\frac{e^2(YQ+p_c(X))}{XY-em},\qquad
+ \frac{d(X^2)}{dY}\le Ce^2(1+1/Y)+Cce^2X^2/Y.
+\]
+These inequalities bound $X$ up to $Y=e^{-2}$. Before a fixed large
+$Y_0$, its change is $O(e^2(1+|\log Y_0|))$, so it stays to the
+left of $X_2$. Choose $Y_0$ above four times the bound for $X$;
+then $YQ+p_c\ge Y/4$. A first zero of this speed is impossible:
+at such a zero its $Y$-derivative is $1+bnX-2n^2e^2Y>0$.
+Thus the orbit reaches $y=n^2$ with $z/n$ in a fixed positive
+interval. The invariant-interval argument for $y/z^2$ in
+\eqref{eq:pc-cone-equation} below gives its positive parabolic
+continuation, independently of either polynomial root.
+
+Let $C_+$ be this whole outgoing map, and $N_-$ the remaining fast
+arc, decreasing-height entrance, negative passage and incoming section
+conversion. The proof of Lemmas~\ref{lem:positive-transition} and
+\ref{lem:negative-transition}, with the replacements just given,
+yields
+\[
+ C_+'>0,\quad C_+'\le Cn^{3/2},\quad |C_+''/C_+'|\le C,\qquad
+ N_-'>0,\quad |N_-''/N_-'|\le C\varepsilon^{-2}.
+\]
+Indeed the positive $Y$-phase derivatives through order three have
+majorant $Ce^2(1+1/Y)$; the later relative-normal equation is unchanged.
+On the negative side the first and second variations have a polynomial
+scaling loss times $e^{-\gamma T_A/(ce^2)}$, followed by at most
+$e^{C/e^2}$. The displayed negative action absorbs both. Hence, for
+the full complement $H=N_-\circ C_+$,
+\[
+ \rho_s|H''/H'|\le Ce^2+CA^{3/2}\sqrt c=o(1).
+\]
+Lemma~\ref{lem:small-ratio-saddle} now gives total isolated
+multiplicity at most two for $D\circ H$ on its complete return interval.
+
+\subsection{The positive double root}
+
+Near the positive double root, we need coordinates that remain uniform
+as the slow roots coalesce. We first select the boundary graph and
+control its phase derivatives, then straighten its normal flow. The
+resulting product retains the full passage multiplier for the weighted
+comparison.
+
+It remains to treat $a$ in a fixed small neighborhood of $-2$.
+In $z=rZ$, $y=r^2\varepsilon^2Y$, put $w=Y-\varepsilon m/Z$ and
+rescale time by the positive factor $r$; this changes neither trajectories
+nor return maps.  In this rescaled time variable,
+\begin{equation}
+\label{eq:pc-collision-system}
+ \dot Z=\varepsilon^2F_s(Z,w),\qquad
+ \dot w=Zw+\frac{\varepsilon^3m}{Z^2}F_s(Z,w),\qquad
+ F_s=Q_\varepsilon+A_\varepsilon w-r^2\varepsilon^2w^2,
+\end{equation}
+where
+\[
+ Q_\varepsilon=p_a(Z)+\frac{\varepsilon m(1+brZ)}Z
+               -\frac{r^2\varepsilon^4m^2}{Z^2},\qquad
+ A_\varepsilon=1+brZ-\frac{2r^2\varepsilon^3m}{Z}.
+\]
+Choose fixed bases $Z_-<1-2\delta<1+2\delta<Z_+$ in the positive
+half-plane, with fixed buffers on either side. All possible roots
+of $Q_\varepsilon$ in this strip lie strictly between the bases.
+Write $Z_b=Z_+$ for the right exterior base below.
+Lemma~\ref{lem:uniform-normal-product} requires a chosen invariant
+graph with finite phase bounds. On the no-root side we must obtain those
+bounds for the solution selected by the physical boundary condition,
+even when the slow speed has an arbitrarily small minimum.
+
+\begin{lemma}[No-root tail and collision continuation]
+\label{lem:pc-no-root-tail}
+Fix a finite phase order $k$ (at least $2j+11$ for the subsequent
+full normal-product output of order $j+2$) and choose fixed numbers
+
+\[
+ 0<Z_-<Z_b<Z_1<Z_2
+\]
+
+and a fixed $\delta_0>0$ with $Z_\ell:=Z_--\delta_0>0$, so that
+$Q_\varepsilon$ is a positive unit on $[Z_\ell,Z_-]$, every possible
+root in the collision strip lies in $(Z_-,Z_b)$, and
+$P(rZ)/(r^2Z^2)$ is a positive unit for $Z\ge Z_b$.  There are constants
+$q_*>0$, $K_k>0$, and one parameter shrinking, independent of the minimum
+of $Q_\varepsilon$, such that on the no-root side
+
+\[
+ Q_\varepsilon>0\quad\hbox{on }[Z_\ell,Z_2],\qquad
+ Q_\varepsilon\ge q_*\quad\hbox{on }[Z_b,Z_2],
+\]
+
+the physical boundary solution $y_\sigma$ from
+\eqref{eq:pc-boundary-tail} induces a unique graph $w=h(Z)$ on
+$[Z_\ell,Z_1]$ and
+
+\[
+ -K_k\varepsilon^3m\le h(Z)<0,\qquad
+ \max_{0\le i\le k}\|\partial_Z^ih\|_{L^\infty[Z_\ell,Z_1]}
+ \le K_k\varepsilon^3m .
+\]
+
+At $m=0$ the graph is $h\equiv0$.  No constant in this statement uses a
+positive lower bound for $Q_\varepsilon$ on $[Z_-,Z_b]$.
+\end{lemma}
+
+\begin{proof}
+The case $m=0$ is immediate, so assume $m>0$.
+Put $\tau=\varepsilon^2$, $n=\varepsilon^3m$, and
+$\nu=r^3n$.  On the physical right tail $z\ge rZ_b$ consider
+\[
+ U(z)=\frac{\nu}{z},\qquad
+ L(z)=(1-M\varepsilon^2)\frac{\nu}{z},
+\]
+where $M$ is fixed large before $\varepsilon$ is decreased.  Since
+$P(rZ)/(r^2Z^2)$ is a positive unit there, the strip $L\le y\le U$
+satisfies, uniformly in $r/\varepsilon$,
+\[
+ c\varepsilon^2z^2\le
+ y(1+bz-y)+\varepsilon^2P(z)\le C\varepsilon^2z^2.
+\]
+For the scalar equation $y_z=H:=(zy-\nu)/F_{\rm ph}$, the reverse-flow
+boundary expression $-H+J'$ is negative at $J=U$ and positive at
+$J=L$ once $M>2C$.  Thus the strip is reverse invariant.  Terminal
+solutions at $z=T$ with
+$y(T)=\nu/((1+\varepsilon^2)T)$ remain in the strip; on it
+\[
+ (H)_y=
+ \frac{z(y^2+\varepsilon^2P)+\nu(1+bz-2y)}{F_{\rm ph}^2}
+ \ge\frac{c}{\varepsilon^2z}.
+\]
+The scalar mean-value equation therefore gives, for $T'>T$ and fixed
+$z<T$,
+\[
+ |y_{T'}(z)-y_T(z)|\le \frac{\nu}{T}(z/T)^{c/\varepsilon^2}.
+\]
+The terminal solutions converge on every compact tail interval to a unique
+positive solution. To identify its boundary condition, set $\ell=\log z$
+and $v=zy/\nu$. The strip bounds $v$, and, with the field fixed,
+$F_{\rm ph}/z^2=\varepsilon^2+O(e^{-\ell})$ gives
+\[
+ v_\ell=(1+\varepsilon^{-2})v-\varepsilon^{-2}+O(e^{-\ell}).
+\]
+Variation of constants for the bounded solution yields
+$v=(1+\varepsilon^2)^{-1}+O(e^{-\ell})$, so this limit is
+$y_\sigma$ in~\eqref{eq:pc-boundary-tail}. On the fixed right buffer
+$F_{\rm ph}\ge c\varepsilon^2z^2$, so for each fixed finite $k$ the
+differentiated scalar variational equations are regular and give $C^k$
+convergence with the finite-order majorants recorded below.  Hence the
+terminal jets of $y_\sigma$ exist and graph differentiation below is
+justified.  Its pullback to the
+collision coordinates satisfies
+\[
+h(Z)=\frac{y_\sigma(rZ)}{r^2\varepsilon^2}-\frac{\varepsilon m}{Z},
+ \qquad -K n/Z\le h(Z)<0
+\]
+on the right buffer.  Enlarge $K$ by the fixed factor $1/Z_\ell$ if
+necessary, so that this bound also implies $h\ge-Kn$ on the collision
+rectangle below.
+
+It remains to continue the graph through the possibly small slow speed.
+In reverse time $s=-t$, the horizontal boundaries of the strip
+\[
+ Z_\ell\le Z\le Z_2,\qquad -Kn\le w\le0
+\]
+point inward while $F_s>0$, and the base coordinate decreases towards
+$Z_\ell$.  Shrink the fixed tube once so that
+$F_w\ge c_*>0$ there.  At $w=0$ one has
+$w_s=-nF_s/Z^2<0$, while at $w=-Kn$ one has
+$w_s\ge n(KZ_\ell-C/Z_\ell^2)>0$. On $F_s=0$ with $w<0$,
+\[
+ (F_s)_s=-F_wZw>0.
+\]
+The corner $F_s=w=0$ is impossible because there
+$F_s=Q_\varepsilon>0$.  Thus the tail remains in the rectangle and
+$Z_s=-\tau F_s<0$. If it did not reach $Z_\ell$ in finite reverse time,
+compactness and monotonicity would give a nonempty invariant limit set on
+$F_s=0$; the equation for $w$ then forces $w=0$, contradicting
+$F_s=Q_\varepsilon>0$.  This proves continuation as a graph without any
+bound on the crossing time.
+
+On the right buffer, where $Q_\varepsilon\ge q_*$ and $|h|\le K n/Z_b$,
+shrink the parameter box once more so that
+\[
+ |A_\varepsilon h|+r^2\varepsilon^2h^2\le q_*/2.
+\]
+Consequently $F_s\ge q_*/2$ throughout this buffer.  The graph equation
+\[
+ \tau F_s h_Z=Zh+\frac{n}{Z^2}F_s
+\]
+then gives the crude terminal bounds
+\[
+ |h^{(i)}(Z)|\le C_i n\tau^{-i}
+       \qquad(Z\in[Z_1,Z_2],\ 0\le i\le k):
+\]
+the case $i=1$ follows directly, and differentiating the equation
+successively gives the induction step because $F_s\ge q_*/2$ and all
+coefficients on the fixed buffer are bounded.  Since $F_s$ is also
+uniformly bounded above there, a reverse traversal of any fixed subinterval
+of the right buffer takes at least a fixed positive multiple of
+$\tau^{-1}$.  Fix the required finite order $k\ge1$ and partition this
+buffer by
+\[
+ \zeta_j=Z_2-\frac{j}{k}(Z_2-Z_1),\qquad 0\le j\le k.
+\]
+Every subbuffer $[\zeta_j,\zeta_{j-1}]$ has reverse crossing time at
+least $c_k/\tau$.  For $p=h_Z$, differentiation and
+conversion to reverse time give
+\[
+ p_s=-\left(Z+\frac{nF_w}{Z^2}-\tau F_Z-\tau F_wp\right)p
+      -h-n\left(\frac{F_Z}{Z^2}-\frac{2F}{Z^3}\right).
+\]
+On the first subbuffer the crude bound gives $\tau F_wp=O(n)$.
+Thus the coefficient in parentheses is $Z+O(n+\tau)\ge Z_\ell/2$
+after shrinking. Variation of constants across this subbuffer, whose
+crossing time is at least $c_k/\tau$, gives $|p(\zeta_1)|\le K_1n$.
+The interval $|p|\le K_1n$ is then inward pointing in reverse time,
+so the good first-jet bound holds on $[Z_\ell,\zeta_1]$.
+
+For $i\ge2$, differentiate the graph equation $i$ times and collect the
+highest derivative.  With $p_i=h^{(i)}$ one obtains
+\[
+ \tau F_s(p_i)_Z=L_i p_i+R_i,\qquad
+ L_i=Z+\frac{nF_w}{Z^2}
+       -\tau\{iF_Z+(i+1)F_wh_Z\}.
+\]
+Every term in $R_i$ contains $n$, $h$, or a lower jet.
+Inductively, suppose the jets through order $i-1$ have their good bounds
+on $[Z_\ell,\zeta_{i-1}]$. Then $|R_i|\le C_i n$ throughout the next
+subbuffer $[\zeta_i,\zeta_{i-1}]$ and $L_i\ge Z_\ell/2$.
+At its right endpoint the crude estimate is still
+$|p_i|\le C_i n\tau^{-i}$.  Variation of constants in reverse time
+over this subbuffer gives
+\[
+ |p_i(\zeta_i)|\le C_i n\tau^{-i}
+       e^{-c_kZ_\ell/(2\tau)}+C_i'n\le K_i n.
+\]
+The reverse barriers $|p_i|\le K_i n$ propagate this bound on
+$[Z_\ell,\zeta_i]$. Thus each jet order uses its own subbuffer after
+the lower-jet estimates have become available there.  After finitely
+many steps all jets through order $k$ have the claimed bounds on
+$[Z_\ell,Z_1]$.
+This proves the stated $C^k$ estimate without dividing by the vanishing
+minimum of $Q_\varepsilon$.
+\end{proof}
+
+On the rooted side, normal hyperbolicity supplies a graph across the
+strip. For $m>0$, dividing the normal variable by $\varepsilon^3m$
+retains the forcing factor in its phase bounds; the incoming separatrix
+selects the
+part needed by the return.
+
+\begin{lemma}\label{lem:pc-selected-graph}
+On the no-root side, the tail solution
+\eqref{eq:pc-boundary-tail} continues through the fixed extended strip
+$[Z_\ell,Z_1]$ as a graph $w=h(Z)$. On the rooted side there is such an
+invariant graph whose incoming restriction is the stable separatrix
+of the first simple root, or the incoming parabolic separatrix at
+a double root. For every prescribed finite $k$, these graphs satisfy
+$\|h\|_{C^k}\le K_k\varepsilon^3m$, uniformly as the roots coalesce.
+The bounds concern phase derivatives; joint parameter differentiability
+across the discriminant is not asserted.
+\end{lemma}
+
+\begin{proof}
+Put
+\[
+ \tau=\varepsilon^2,\qquad \alpha=\varepsilon m,\qquad
+ n=\varepsilon^3m=\tau\alpha,\qquad
+ \varepsilon^4m^2=\tau\alpha^2.
+\]
+The last identity is needed in the coefficient of $Q_\varepsilon$.
+Write also $\nu_s:=n$ and abbreviate $F:=F_s$.
+For $n>0$ write $w=n\psi$.  The exact auxiliary system is
+\begin{equation}\label{eq:pc-graph-auxiliary}
+ \dot Z=\tau F(Z,n\psi),\qquad
+ \dot\psi=Z\psi+Z^{-2}F(Z,n\psi),
+\end{equation}
+where
+\[
+ Q_\varepsilon=p_a(Z)+\frac{\alpha(1+brZ)}Z
+                   -\frac{r^2\tau\alpha^2}{Z^2},\qquad
+ A_\varepsilon=1+brZ-\frac{2r^2\tau\alpha}{Z}.
+\]
+Because $n=\tau\alpha$, \eqref{eq:pc-graph-auxiliary} extends smoothly
+to $n=0$.  Freeze $(\alpha,a,b,r)$ in a compact box and let $\tau$ tend
+to zero.  At $\tau=0$ its critical graph is
+\[
+ \psi_0(Z)=-\frac{Q_0(Z)}{Z^3},\qquad
+ Q_0(Z)=p_a(Z)+\frac{\alpha(1+brZ)}Z.
+\]
+With $u=\psi-\psi_0$, the equations on the working strip are exactly
+\begin{equation}\label{eq:pc-graph-auxiliary-shift}
+ \dot Z=\tau F_\tau,\qquad
+ \dot u=Zu+Z^{-2}(F_\tau-Q_0)-\tau\psi_0'F_\tau,\qquad
+ F_\tau=F(Z,n(\psi_0+u)).
+\end{equation}
+Thus their $C^N$ distance from $(\dot Z,\dot u)=(0,Zu)$ is
+$O_N(\tau)$ on one fixed tube, with no inverse power of $n$ and no
+root-separation constant.
+
+Choose a fixed cutoff equal to one on a larger collision strip, extend
+$\psi_0$ by a fixed extension operator, and close the base into a circle.
+Choose a positive function $a_0$, equal to $Z$ on the working strip and bounded below by a positive constant on
+the circle, and extend \eqref{eq:pc-graph-auxiliary-shift} there as
+\[
+ \dot\theta=\chi\tau F_\tau,\qquad
+ \dot u=a_0u+\chi\{Z^{-2}(F_\tau-Q_0)-\tau\psi_0'F_\tau\}.
+\]
+At $\tau=0$ the invariant circle $u=0$ has zero tangential rate and a
+fixed normal gap. Fix the desired phase order $k$ first and choose
+the source order at least $k+1$. Fenichel's
+finite-order persistence theorem
+\cite[Theorem~3, p.~215]{Fenichel1971} gives an invariant
+$C^{k+1}$ graph $u=\phi$ close to zero. The common phase bounds are
+obtained from its invariance equation. Write the extended field as
+$\dot\theta=\mathcal A(\theta,u)$ and
+$\dot u=\mathcal B(\theta,u)$; then
+$\mathcal A=O_{C^{k+1}}(\tau)$ and
+$\mathcal B=a_0u+O_{C^{k+1}}(\tau)$.
+At a maximum of $|\phi|$, the equation
+$\mathcal A(\theta,\phi)\phi'=\mathcal B(\theta,\phi)$ gives
+$\|\phi\|_{C^0}\le C\tau$. Differentiate successively through
+order $k$ and evaluate at a maximum of each derivative's absolute
+value. The next derivative vanishes there; the coefficient of the
+highest retained derivative is
+$\mathcal B_u+O_k(\tau)\ge\min a_0/2$ after shrinking. The first
+step uses the close graph's bounded first derivative, and all later
+steps use the preceding bounds. The remaining terms are $O_k(\tau)$,
+so induction gives $\|\phi\|_{C^k}\le C_k\tau$. Hence
+$\psi=\psi_0+\phi$ has a common $C^k$ bound after one common
+shrinking of $\tau$. Reconstructing $h=n\psi$ yields
+\begin{equation}\label{eq:pc-graph-sharp-size}
+ \|h\|_{C^k}\le K_kn=K_k\varepsilon^3m.
+\end{equation}
+For $n=0$ take $h=0$, which solves the original equation exactly.
+The circle, the finite order, and $K_k$ are chosen before the parameter
+shrinking, so \eqref{eq:pc-graph-sharp-size} remains uniform when
+$\varepsilon^3m$ is smaller than every exponential in
+$1/\varepsilon$.  Restricting the graph back to the original strip
+removes all dependence on the auxiliary extension from the equations
+used below.
+
+For any such graph, invariance gives the exact factorization
+\begin{equation}\label{eq:pc-graph-unit}
+ \begin{gathered}
+ Zh=(\varepsilon^2h_Z-\nu_s/Z^2)F(Z,h),\qquad
+ F(Z,h)=UQ_\varepsilon,\\
+ U=\left(1-\frac{(A_\varepsilon-r^2\varepsilon^2h)
+                     (\varepsilon^2h_Z-\nu_s/Z^2)}Z\right)^{-1}>0.
+ \end{gathered}
+\end{equation}
+In particular it contains the equilibria at the roots of
+$Q_\varepsilon$. Its incoming orbit approaches the first root in
+positive time. Every nonzero displacement from the graph grows at a
+uniform positive normal rate while it stays in the tube. Hence this
+incoming orbit is precisely the stable separatrix at a simple first
+root, and the incoming parabolic separatrix at a double root. This
+restriction is independent of the auxiliary extension. The rest of
+the graph is used only to define coordinates on the strip.
+
+On the no-root side, apply Lemma~\ref{lem:pc-no-root-tail} with the
+same right buffer and collision bases. It continues the physical tail
+\eqref{eq:pc-boundary-tail} with its sign and prescribed phase jets,
+without dividing by the minimum of $Q_\varepsilon$. The factorization
+\eqref{eq:pc-graph-unit} therefore holds for this graph, which is the
+one used in the through passage. On the rooted side, the incoming
+stable or parabolic separatrix is intrinsic; the remaining weak graph
+may depend on the circle extension and serves only to define product
+coordinates. It need not agree with a separately prescribed outgoing
+tail. The rooted fibre-exit estimates use its finite phase jets and the
+same incoming threshold.
+\end{proof}
+
+On an incoming branch the selected graph has the exact formula
+\begin{equation}
+\label{eq:pc-canonical-graph}
+ h(Z)=-\varepsilon m\int_Z^{Z_T}
+ \exp\left(-\int_Z^t\frac{x}{\varepsilon^2F_s(x)}\,dx\right)
+                                  \frac{dt}{t^2},
+\end{equation}
+where $Z_T$ is the first root or infinity and $F_s(x)$ is evaluated on
+the selected graph. The kernel is strictly between zero and one, so
+$-\varepsilon m/Z<h<0$ there.
+The positive trace $Y_\sigma=h+\varepsilon m/Z$ pulls back uniquely
+to $q_0=\beta>0$. On the no-root side it is exactly the same
+trajectory as \eqref{eq:pc-boundary-tail}, not another choice of slow
+manifold. Hence the two definitions of $\beta$ agree on their overlap.
+On the outgoing side of this threshold, the physical displacement is
+$W=y-y_\sigma>0$, with $W(0;s)=\kappa^2s$. On the collision strip,
+this is $W=\kappa^2(w-h)$, not the nullcline offset $w$.
+
+Translate this graph by $u=w-h(Z)$. The base equation is
+$\dot Z=\varepsilon^2v(Z)+\varepsilon^2c(Z,u)u$, and the divided
+normal coefficient is
+\[
+ B(Z,u)=Z+\left(\frac{\varepsilon^3m}{Z^2}
+                    -\varepsilon^2h_Z\right)c(Z,u)\ge c_*>0.
+\]
+Fix nested compact intervals
+\[
+ [Z_-,Z_b]\Subset I_0\Subset I_1\Subset I_2\Subset(Z_\ell,Z_1).
+\]
+They and the physical bases $Z_-,Z_b$ are fixed before the finite-order
+parameter shrinking. The selected graph and its phase jets are already
+defined on the larger interval $[Z_\ell,Z_1]$, so the product is taken
+over $I_0$ with both physical bases in its interior.
+Lemma~\ref{lem:pc-selected-graph} supplies the finite jet bounds
+required in Lemma~\ref{lem:uniform-normal-product}, with
+$\tau=\rho=\varepsilon^2$. Fix the full output order $J=j+2$ first;
+the selected graph is constructed once with $k\ge2j+11$, leaving
+$C^{2j+10}$ coefficients after $h_Z$. The product is then taken
+at order $J$, with its section losses already reserved. The lower
+order $2j+9$ sufficient for the fibre comparison alone is not used
+for this full normal construction. Its exact coordinates give
+\begin{equation}
+\label{eq:pc-collision-product}
+ \dot\theta=\varepsilon^2v(\theta),\qquad
+ \dot\eta=b_n(\theta)\eta,\qquad b_n\ge c>0.
+\end{equation}
+The normal coordinate is tangent to the identity and both coordinate
+maps have uniformly bounded finite derivatives. At either exterior
+base $v$ is a positive unit. The first section consequence of that
+lemma gives conversion to a fixed $Z$-section in time $O(\eta)$,
+with bounded derivatives, after cancelling the common
+$\varepsilon^2$ in the hitting equation. No such cancellation at a
+base root is needed.
+
+To apply one return comparison, we must first place every counted cycle
+in the same small source interval before the collision. The next lemma
+obtains this from contraction along the preceding negative segment.
+
+\begin{lemma}[Localization of the collision source]
+\label{lem:pc-collision-localization}
+Fix the collision coefficient interval, the exterior bases with their
+buffers, and a forcing bound $m_0>0$, with $0<m\le m_0$. For every fixed
+$B>0$ there are $r_0,\varepsilon_0>0$ such that every counted cycle
+satisfies
+\begin{equation}
+\label{eq:pc-collision-localization}
+ 0<Y(Z_-)\le e^{-B/\varepsilon^2}
+ \qquad(0<r<r_0,\ 0<\varepsilon<\varepsilon_0).
+\end{equation}
+For a fixed sufficiently small fiber height $\eta_0$, all these cycles
+belong to one open interval $I_{\rm ret}$ of actual physical returning
+sources on which the canonical left-base amplitude $A$ is defined and
+$0<A<\eta_0$. They lie in its smaller part $A<\eta_0/2$.
+\end{lemma}
+\begin{proof}
+Choose a fixed large $L$ and keep the left exterior base and its buffer
+strictly to the left of the collision roots. After decreasing the fixed
+coefficient interval, $p_a\ge p_*>0$ on $[-L,Z_-]$. The constants in
+the negative-entry estimate of Lemma~\ref{lem:pc-entry} are common on
+this coefficient box and the fixed range $0<m\le m_0$; thus
+\[
+ y(-Lr)\le K\varepsilon^3(Lr/x_g)^{\gamma/\varepsilon^2}.
+\]
+Here $K,\gamma,x_g>0$ and all sections are fixed before $r$ and
+$\varepsilon$ are decreased. In the physical scaled variables the exact
+orbit equation is
+\[
+ Y_Z=\frac{ZY-\varepsilon m}
+ {\varepsilon^2\{p_a(Z)+(1+brZ-r^2\varepsilon^2Y)Y\}}.
+\]
+In a provisional fixed tube $0<Y<h_*$ the denominator in braces is
+at least $p_*/2$. The height decreases for $Z\le0$, and for
+$0\le Z\le Z_-$ it satisfies $Y_Z\le CY/\varepsilon^2$. Consequently,
+before any first exit from the tube,
+\[
+ Y(Z)\le K\varepsilon r^{-2}
+ \exp\left(-\frac{\gamma\log(x_g/(Lr))-C_+}{\varepsilon^2}\right)
+ \qquad(-L\le Z\le Z_-),
+\]
+where $C_+$ is fixed. First choose $r_0<x_g/L$ so that
+$\gamma\log(x_g/(Lr_0))>C_++B+1$. For
+$N=\gamma/\varepsilon^2>2$, the function
+$r^{-2}(Lr/x_g)^N$ increases with $r$. Hence the displayed bound is at
+most
+\[
+ K\varepsilon r_0^{-2}e^{-(B+1)/\varepsilon^2}
+ \le e^{-B/\varepsilon^2}
+\]
+after decreasing $\varepsilon_0$. Decrease it also so that this bound
+is less than $h_*/2$. This puts the entrance inside the tube and excludes
+a first upward exit. A counted cycle cannot hit $Y=0$, by
+Lemma~\ref{lem:sections}. Since $\dot Z\ge\varepsilon^2p_*/2$ in the
+rescaled time, it reaches $Z_-$ in finite physical time at most
+$2(L+Z_-)/(r\varepsilon^2p_*)$. This proves
+\eqref{eq:pc-collision-localization} without a relation between $r$ and
+$\varepsilon$.
+
+We now restrict the actual source interval. Let $I_{\rm phys}$ be the
+positive contact-passage interval supplied by Lemma~\ref{lem:sections},
+with the prescribed upper source core and common outgoing target core.
+Every such passage has $F>0$, so its physical height $Y_-(s)$ at
+$Z=Z_-$ is defined. The scalar variational equation gives
+$\partial_sY_->0$ for the incoming height coordinate $s=q_0-\beta$
+and each fixed field. The selected graph has physical trace
+$Y_\sigma(Z_-)>0$, and its pullback to $z=0$ is $q_0=\beta$.
+Thus $Y_--Y_\sigma(Z_-)>0$ is equivalent to $s>0$. On the no-root
+side the selected tail stays below the outgoing fast core, and scalar
+order excludes sources at or below it. On the root side the selected
+incoming graph tends to the first equilibrium. The absolute value of a
+negative normal difference grows at a positive rate by
+\eqref{eq:pc-collision-product}, whereas the graph height is
+$O(\varepsilon m)$; such a positive passage
+hits $Y=0$ before leaving the fixed normal tube. The equality source
+remains on the selected graph. Hence a counted cycle must have $s>0$.
+
+Use the same selected graph, exterior base, and buffers as in
+\eqref{eq:pc-collision-product}. The change from the physical section
+$Z=Z_-$ to the canonical section $\theta=\theta_-$ gives a function
+$\phi_p$ of the normal difference $u=Y_--Y_\sigma(Z_-)$, with
+\[
+ A=\phi_p(u),\qquad \phi_p(0)=0,\qquad c\le\phi_p'\le C
+\]
+on one common interval about zero. Indeed, $u=\eta+\eta^2L_2$ there;
+the phase shear is $O(\varepsilon^2\eta)$ and the exterior base speed
+is $\varepsilon^2$ times a positive unit. The first section consequence
+of Lemma~\ref{lem:uniform-normal-product} gives an $O(\eta)$ flight
+with bounded derivatives. It preserves the selected graph, so its normal
+multiplier is a positive unit. Choose $\eta_0$ small enough to lie in
+the common positive image of $\phi_p$, and put
+$u_*(p)=\phi_p^{-1}(\eta_0)$. Define
+\begin{equation}
+\label{eq:pc-localized-source}
+ I_{\rm ret}=\{s\in I_{\rm phys}:
+       0<Y_-(s)-Y_\sigma(Z_-)<u_*(p)\}.
+\end{equation}
+This is an open interval, possibly empty, because $Y_-$ is strictly
+increasing; the target restriction is already included in $I_{\rm phys}$.
+On it $0<A<\eta_0$ and $A_s>0$. Every counted cycle is on the outgoing
+side of the selected boundary and satisfies
+\[
+ 0<A\le C(Y_--Y_\sigma(Z_-))\le CY_-
+       \le Ce^{-B/\varepsilon^2}<\eta_0/2
+\]
+after one further decrease of $\varepsilon_0$. Thus all its source
+values lie inside $I_{\rm ret}$. The artificial boundary $A=\eta_0$
+contains no counted zero. The boundary $A=0$ is the selected invariant
+trajectory and does not reach the outgoing fast core.
+\end{proof}
+
+On this actual source interval the difference equation before the left
+base, where $p_a$ has a fixed positive margin, gives
+\begin{equation}
+\label{eq:pc-left-elasticity}
+ K_A:=sA_s/A=1+O(\eta_0),\qquad
+ |s(\log K_A)_s|\le C\eta_0.
+\end{equation}
+To see both bounds, use this positive displacement and its divided
+coefficient $\mathfrak a$. Integrate
+$(\log(sW_s/W))_z=W\mathfrak a_W$ and its $\log s$ derivative; their
+majorants are $C\eta\,d\log\eta$, whose integral is $O(\eta_0)$.
+The final amplitude coordinate is tangent to the identity, so it
+preserves these estimates.
+
+A fiber exit near a root still has to reach the regular outgoing arc.
+We first follow the entire positive fiber to the height $y=r^2$, with
+bounds uniform as the roots coalesce. Only then does the parabolic
+coordinate $y/z^2$ enter a fixed contracting interval.
+
+\begin{lemma}[Finite fibre-to-parabolic transition]
+\label{lem:pc-finite-fibre-transition}
+Fix a sufficiently small $\eta _0>0$ and a compact interval
+$I_Z=[Z_-,Z_+]\Subset(0,\infty)$ containing the collision bases.  Let
+$\eta=\eta _0$ denote the fibre in the exact product coordinates
+\eqref{eq:pc-collision-product}.  Write $x=Z$ on its physical image and
+$\Theta(x)$ for the corresponding product phase.  The physical fibre graph
+is
+\[
+ w_0(x)=h(x)+\eta _0+\eta _0^2L_2(\Theta(x),\eta _0),
+ \qquad
+ \frac{\eta _0}{2}\le w_0(x)\le\frac{3\eta _0}{2},
+\]
+after decreasing $\eta _0$ once, with
+$\|w_0-\eta _0\|_{C^3}\le C(\eta _0^2+\varepsilon^3m)$.
+There are a coefficient neighbourhood $|a+2|<\delta_a$, a number
+$r_0>0$, and $\varepsilon _0>0$ such that, for
+
+\[
+ |a+2|<\delta_a,\quad 0<r<r_0,\quad 0<\varepsilon<\varepsilon _0,
+ \quad 0\le m\le m_0,
+\]
+
+every solution of the collision equations starting on this fibre with
+$x=Z\in I_Z$ has a unique graph representation $Z=Z(Y)$ up to
+$Y=\varepsilon^{-2}$.  On this interval
+
+\[
+ Y_{\rm in}(x)=w_0(x)+\frac{\varepsilon m}{x},\qquad
+ c_0\le Z(Y)\le C_0,\qquad
+ F_s(Z,Y-\varepsilon m/Z)\ge c_0\eta _0,
+ \qquad ZY-\varepsilon m\ge c_0Y .
+\]
+
+The terminal graph $Z_t(x)$, parameterised by its initial fibre coordinate
+$x=Z(Y_{\rm in}(x))$, satisfies
+
+\[
+ 0<c_1\le (Z_t)_x\le C_1,
+ \qquad |\partial_x^j Z_t|\le C_1\quad (j=2,3),
+ \qquad c_1\le Z_t\le C_1,
+\]
+
+with constants independent of $r,\varepsilon,m$ and of the distance from
+$a$ to the double-root value.
+\end{lemma}
+
+\begin{proof}
+Write $Y$ for the phase and put
+\[
+ H=1+brZ-r^2\varepsilon^2Y,
+ \qquad N=YH+p_a(Z),
+ \qquad D=ZY-\varepsilon m.
+\]
+On the fibre, $w=Y-\varepsilon m/Z=w_0(Z)$.  Since
+
+\[
+ p_a(Z)=(Z-1)^2+(a+2)Z,
+\]
+
+we may choose $\delta_a$ and then $r_0$ so that, uniformly on the fixed
+bootstrap strip,
+$H\ge3/4$, $A_\varepsilon\ge3/4$, and
+$F_y=1+brZ-2r^2\varepsilon^2Y\ge1/2$ on the whole phase strip.
+Choose a fixed $B>Z_+$ with $B^2-Z_+^2>3$. The same identity allows
+us to decrease $\delta_a$ once more so that
+$p_a(Z)\ge-\eta _0/8$ on the enlarged bootstrap interval
+$[Z_-/2,B]$.  Then the exact cancellation after
+substitution of $w=Y-\varepsilon m/Z$ gives
+\[
+ F_s=N=YH+p_a(Z)\ge Y/2\qquad(Y\ge\eta _0/2).
+\]
+Choose $\varepsilon _0$ so that $\varepsilon m_0\le Z_-\eta _0/8$.
+Then $D=Zw_0(Z)\ge Z\eta _0/2$ at the initial fibre.  In the region
+$Z\in[Z_-/2,B]$, $Y\in[\eta _0/2,\varepsilon^{-2}]$, and
+$D\ge ZY/2$, direct substitution in the collision equations gives
+\[
+ \frac{dZ}{dY}=f(Y,Z):=\varepsilon^2\frac{N}{D},
+ \qquad \dot Z=\varepsilon^2F_s,
+ \qquad \mathcal G:=D=ZY-\varepsilon m,
+ \qquad G_{\rm original}=r^3\varepsilon^2\mathcal G.
+\]
+The preceding choices give $F_s=N\ge Y/2$ and
+$D=ZY-\varepsilon m\ge ZY/2$ on this region, so $Z_Y>0$ and both
+physical speeds are positive.
+
+For $0\le k\le3$, the rational equation has
+\[
+ |\partial_Z^k f(Y,Z)|\le C_k\varepsilon^2(1+Y^{-1}),
+\]
+with constants depending only on the fixed strip, coefficient box and
+$\eta_0$.
+Moreover
+\[
+ (Z^2)_Y=2\varepsilon^2
+ \frac{H+p_a(Z)/Y}{1-\varepsilon m/(ZY)}
+ \le \frac{2\varepsilon^2(1+|b|rB)}{1-\chi_m}
+       +\frac{2P_B\varepsilon^2}{(1-\chi_m)Y},
+ \qquad
+ \chi_m:=\frac{4\varepsilon m_0}{Z_-\eta _0}<\frac12,
+\]
+where $P_B=\sup_{|a+2|<\delta_a,\,Z\in[Z_-/2,B]}|p_a(Z)|$.
+Choose a margin $\sigma>0$ with
+$2+\sigma<B^2-Z_+^2$.  First decrease $r_0$ so that the contribution of
+$|b|rB$ to the first numerator is at most $\sigma/4$, and then decrease
+$\varepsilon_0$ so that $\chi_m$ is small enough and the logarithmic term
+below is at most $\sigma/2$.  Before these final choices, integration up to
+$Y=\varepsilon^{-2}$ gives
+\[
+ Z^2(Y)\le Z_+^2+
+ \frac{2(1+|b|r_0B)}{1-\chi_m}
+ +\frac{2P_B\varepsilon^2}{1-\chi_m}
+   \log\frac{2\varepsilon^{-2}}{\eta_0}.
+\]
+Choose first $r_0$ and then $\varepsilon_0$ so that the last bound is
+at most $Z_+^2+2+\sigma<B^2$. This closes the upper boundary;
+$Z_Y>0$ closes the lower one, and $D\ge c_0Y$ follows from
+$\varepsilon m_0\ll Z_-\eta_0$.
+This proves existence through $Y=\varepsilon^{-2}$.
+
+It remains to control the fibre dependence.  The initial graph is
+$Y_{\rm in}(x)=w_0(x)+\varepsilon m/x$, so its first three derivatives
+are uniformly bounded on $I_Z$ and
+$Y_{\rm in}'=O(\eta _0^2+\varepsilon^3m+\varepsilon m)$.
+At fixed $Y$, the first variation obeys
+\[
+ V_Y=f_ZV,\qquad
+ V(Y_{\rm in}(x))=1-f(Y_{\rm in}(x),x)Y_{\rm in}'(x).
+\]
+The initial value lies in $[1/2,3/2]$, while
+\[
+ \int_{\eta _0/2}^{\varepsilon^{-2}}
+ \varepsilon^2\left(1+\frac1Y\right)dY\le C.
+\]
+Thus $c_1\le V\le C_1$.  The second and third differentiated equations have the same linear
+coefficient $f_Z$ and forcing $f_{ZZ}V^2$ and
+$3f_{ZZ}VV^{(2)}+f_{ZZZ}V^3$, respectively. The displayed integrable
+majorant and bounded initial jets therefore give
+$|V^{(2)}|+|V^{(3)}|\le C_1$.
+The terminal bounds follow.
+\end{proof}
+
+The terminal graph from the finite transition supplies the initial
+conditions for parabolic contraction. The next lemma continues the
+whole fiber to the target and controls its first two derivatives.
+
+\begin{lemma}
+\label{lem:pc-fast-cone}
+After $\eta_0$ is fixed, the coefficient neighborhood of $a=-2$
+can be chosen so that every point of the entire fixed fiber
+$\eta=\eta_0$, $\theta_-\le\theta\le\theta_+$, reaches the same
+regular outgoing target. In the coordinate $x=Z=z/r$ restricted to
+this fiber, its target map $\Phi$ satisfies
+\begin{equation}
+\label{eq:pc-fiber-target}
+ 0<|\Phi_x|\le C_\xi r^\alpha,\qquad
+ |\Phi_{xx}/\Phi_x|\le C,\qquad \alpha>0.
+\end{equation}
+The target section $\xi$ is fixed before shrinking $r,\varepsilon$.
+\end{lemma}
+
+\begin{proof}
+Choose the coefficient interval and small parameters as in
+Lemma~\ref{lem:pc-finite-fibre-transition}.
+Lemma~\ref{lem:pc-finite-fibre-transition}, with fiber coordinate
+$x=Z$, gives $F,G>0$, a fixed compact positive $Z$-interval, and three
+terminal derivatives at $Y=\varepsilon^{-2}$, uniformly up to the
+double root. Its phase equation is
+\[
+ Z_Y=\varepsilon^2\frac{Y(1+brZ-r^2\varepsilon^2Y)+p_a(Z)}
+                              {ZY-\varepsilon m}.
+\]
+The terminal bounds are therefore
+\[
+ z_t=rZ_t(x),\quad y_t=r^2,\qquad
+ c\le (Z_t)_x\le C,\quad
+ |\partial_x^jZ_t|\le C\ (j=2,3),\quad c\le Z_t\le C.
+\]
+
+From there put $u_f=y/z^2$, $\ell=\log z$,
+$\pi=P/z^2$, and $\delta_z=\nu/z^3$. The exact equation is
+\begin{equation}
+\label{eq:pc-cone-equation}
+ (u_f)_\ell=\Psi(\ell,u_f)
+   =\frac{u_f-\delta_z}
+            {u_f(1+bz-u_fz^2)+\varepsilon^2\pi}-2u_f.
+\end{equation}
+The terminal height $Y=\varepsilon^{-2}$ gives $y_t=r^2$ and
+$u_f(\ell_t)=1/Z_t^2$, uniformly separated from zero. This transition
+from the original fiber height $y=O(r^2\varepsilon^2)$ puts the orbit
+in the region where the parabolic contraction applies. For $z\ge cr$,
+the first two Euler derivatives of $\pi$ are bounded; roots of $P$ occur only in
+the additive term $\varepsilon^2\pi$. Choose a fixed interval
+$I=[u_-,u_+]$ containing all $1/Z_t^2$, with
+$0<u_-<1/2<u_+$. After first fixing $I$ and then choosing the target
+$\xi$ small, the faces of $I$ point inward, since uniformly on $I$
+\[
+ \Psi=\frac1{1+bz-u_fz^2}+O(\varepsilon^2+\varepsilon^3)-2u_f.
+\]
+Writing $D=u_f(1+bz-u_fz^2)+\varepsilon^2\pi$ and retaining the
+$u_f$-dependence of its denominator gives the exact identity
+\[
+ \Psi_{u_f}
+ =\frac{\varepsilon^2\pi+\delta_z(1+bz-2u_fz^2)
+       +u_f^2z^2}{D^2}-2.
+\]
+Here $1+bz-u_fz^2\ge c>0$ and $D\ge c>0$ on the forward invariant
+collar. Since $\pi$ is bounded and $\delta_z=O(\varepsilon^3)$ there,
+we may shrink $\xi$ and then the parameters so that
+$\Psi_{u_f}\le-c<0$ uniformly. All derivatives needed through order
+three are bounded. Thus the orbit reaches $z=\xi$ with $F\ge c y>0$.
+
+If $J$ is the vertical variation of \eqref{eq:pc-cone-equation}, then
+$0<J(\ell_\xi,\ell_t)\le(z_t/\xi)^\alpha$.
+The moving initial point must also be included. Its transverse factor is
+\[
+ (u_t)_x-\Psi(\ell_t,u_t)(\ell_t)_x
+ =-\frac{u_t-\delta_{z_t}}
+              {u_t(1+bz_t-u_tz_t^2)+\varepsilon^2\pi(z_t)}
+                                  \frac{(Z_t)_x}{Z_t}.
+\]
+It is a negative unit with bounded two derivatives. The formula for
+the initial-time derivative of the flow, and
+$J_\ell=\Psi_{u_f}J$, therefore give the first inequality in
+\eqref{eq:pc-fiber-target}. Logarithmic differentiation of the
+variational exponential has an endpoint term bounded by
+$|\Psi_{u_f}(\ell_t,u_t)|$ and an integral with factor
+$\Psi_{u_fu_f}J$; its absolute integral is bounded by the stable
+kernel. The first logarithmic derivative of the transverse factor is
+also bounded. This proves the second inequality. The final fixed
+holonomy in energy coordinates preserves both estimates.
+\end{proof}
+
+On the interval which exits through $\eta=\eta_0$, write $x=Z=z/r$
+at this hit. The change from the canonical
+$\theta$ to $x$ on that fixed fiber is a $C^3$ diffeomorphism with
+positive unit derivative. Write $\widetilde v$ for $v$ multiplied by
+this derivative and $\widetilde b_n$ for $b_n$ composed with the inverse
+change; both and their first derivatives remain bounded.
+Let $x_-$ be the image of $\theta_-$
+under this change. The backward incoming amplitude is
+\[
+ \mathcal D(x)=\eta_0\exp\left(-\int_{x_-}^x
+             \frac{\widetilde b_n(t)}{\varepsilon^2\widetilde v(t)}\,dt\right).
+\]
+The base speed is positive along the fibre-exit branch before its first
+root. Thus $\mathcal D$ decreases in the physical coordinate $x=Z$,
+and differentiation of $A(s)=\mathcal D(x(s))$ gives
+\[
+ |sx_s|=\varepsilon^2|\widetilde v|K_A/\widetilde b_n,\qquad
+ M=|\Phi_x|\varepsilon^2|\widetilde v|K_A/(\widetilde b_n s).
+\]
+By Lemma~\ref{lem:pc-fast-cone},
+$sM\le C_\xi\varepsilon^2r^\alpha$ uniformly on the whole
+fiber-exit returning interval. Moreover
+\[
+ \begin{aligned}
+ -s(\log M)_s
+ &=1-s(\log K_A)_s-sx_s\partial_x\log|\widetilde v\Phi_x/\widetilde b_n|\\
+ &\ge1-C\eta_0-C\varepsilon^2\ge1/2.
+ \end{aligned}
+\]
+There is no division by a root separation in this estimate:
+$sx_s\,\widetilde v_x/\widetilde v=O(\varepsilon^2\widetilde v_x)$.
+With the target fixed, shrink $r$ so that $C_\xi r^\alpha$ is below
+the tolerance required by Lemma~\ref{lem:pc-ratio}. These are the size
+and curvature bounds for the fiber-exit piece in the common comparison
+below, uniformly up to the double root.
+
+\subsection{Passage through the double-root region without a fiber exit}
+
+We now treat the through passages across the collision strip and join them
+to the fiber exits on the localized source interval of
+Lemma~\ref{lem:pc-collision-localization}.
+
+On the no-root side, sufficiently small amplitudes cross the whole
+strip before reaching the fiber. Between the fixed bases, the exact
+product~\eqref{eq:pc-collision-product} gives
+\begin{equation}
+\label{eq:pc-through-multiplier}
+ B=m_b A(s),\qquad
+ m_b=\exp\left(\int_{\theta_-}^{\theta_+}
+                         \frac{b_n(t)}{\varepsilon^2v(t)}\,dt\right).
+\end{equation}
+The multiplier is finite for each such field, but has no uniform upper
+bound. Passage from $\theta_-$ to $\theta_+$ occurs for $0<A<\eta_0/m_b$.
+We keep \eqref{eq:pc-through-multiplier} in the complete map.
+Figure~\ref{fig:collision-passages} places this interval beside the
+fiber-exit interval. Their possible common boundary is included in the
+same complete return map.
+
+
+
+At the right base $z_b=rZ_b$ all possible roots are to the left and
+$P\asymp r^2+z^2$, $P'>0$ for $z\ge z_b$.
+The canonical graph is the same positive decreasing solution
+$y_\sigma$ constructed from the right-hand boundary condition.
+The change from the canonical base to $z=z_b$ is
+\[
+ t=\frac{y-y_\sigma}{\kappa^2}=\Psi_b(B),\quad
+ \Psi_b(0)=0,\quad c\le\Psi_b'\le C,\quad
+ |\Psi_b''/\Psi_b'|+|\Psi_b'''/\Psi_b'|\le C.
+\]
+The strong-fiber displacement is $O(\varepsilon^2B)$ and the exterior
+base speed is $\varepsilon^2$ times a positive unit. Dividing the
+implicit hit equation by $\varepsilon^2$ proves these bounds without
+inverting the long passage.
+
+Start \eqref{eq:pc-signed-cancellation} at $z_b$ with initial
+difference $t$. Its initial quotient is a bounded positive unit.
+On this right tail $\mathsf A=P/r^2$ increases and the total variation
+of $\mathsf B\sigma-\mathsf C\sigma^2$ is bounded by $C\sigma(z_b)$.
+Hence its negative logarithmic variation is bounded independently of
+the earlier polynomial minimum. For the complete target derivative
+$M_t$ this gives
+\[
+ tM_t\le C\varepsilon^2(r^2+\xi_{\rm out}^2).
+\]
+Take $\eta_0$ sufficiently small so that the initial ratio $W/S$ is
+less than $\theta/2$. Retained cycles have that ratio larger than
+$\theta$ at $\xi_{\rm in}$, so they first meet $W=\theta S$
+before the inner section. Lemma~\ref{lem:pc-normal-derivative} applies
+on this exterior tail, with room to complete the flight before
+$\xi_{\rm out}$. In \eqref{eq:pc-gate-identities}, now with initial
+variable $t$, the last logarithmic term is bounded by
+$C/(z_gD_g)\le C\varepsilon^2$, because $z_g\ge rZ_b$.
+It follows that
+\[
+ -t(\log M_t)_t\ge3/4.
+\]
+This is why the two physical sections cannot be identified: a departure
+point arbitrarily close to its final target need not have a bounded
+logarithmic normal derivative.
+
+Since $B\Psi_b'/\Psi_b=1+O(B)$, conversion to $B$ yields
+\[
+ BM_B\le C\varepsilon^2(r^2+\xi_{\rm out}^2),\qquad
+ -B(\log M_B)_B\ge2/3.
+\]
+For the complete map from $s$, $M=M_B(m_bA)m_bA_s$; the field is
+fixed when $s$ is differentiated. Thus, exactly,
+\begin{align*}
+ sM&=(BM_B)K_A,\\
+ -s(\log M)_s
+ &=\{-B(\log M_B)_B\}K_A-(K_A-1)-s(\log K_A)_s\ge1/2.
+\end{align*}
+The unbounded multiplier has canceled. Choosing the fixed sections
+small and then $r,\varepsilon$ small gives both estimates in
+\eqref{eq:pc-outgoing-conditions} throughout $0<A<\eta_0/m_b$.
+We now combine them with the fiber-exit estimates on the same returning
+source interval.
+
+For a fixed field, the returning source has the following partition.
+
+\begin{lemma}[Source partition]
+\label{lem:pc-source-partition}
+On the actual source interval $I_{\rm ret}$ of
+Lemma~\ref{lem:pc-collision-localization}, $A$ is a diffeomorphism from the
+source coordinate $s$ onto an interval
+$\mathcal A_{\rm actual}\subset(0,\eta_0)$. On the no-root side the
+ordered open pieces are
+\begin{equation}
+\label{eq:pc-source-partition}
+ \begin{aligned}
+ \mathcal I_{\rm through}
+   &=A^{-1}\!\left(\mathcal A_{\rm actual}
+                    \cap(0,\eta_0/m_b)\right),\\
+ \mathcal I_{\rm fiber}
+   &=A^{-1}\!\left(\mathcal A_{\rm actual}
+                    \cap(\eta_0/m_b,\eta_0)\right).
+ \end{aligned}
+\end{equation}
+Either piece may be empty. There is at most one finite event value,
+$A=\eta_0/m_b$, when it belongs to the actual source interval. On the
+root side every source in $I_{\rm ret}$ exits through the fiber and
+there is no internal event value. All counted cycles are in this
+interval, and its artificial boundary $A=\eta_0$ contributes no counted
+zero.
+\end{lemma}
+\begin{proof}
+The construction \eqref{eq:pc-localized-source} and the positive section
+conversion give $A_s>0$; \eqref{eq:pc-left-elasticity} gives its
+quantitative form. On the no-root side the product equation
+\eqref{eq:pc-through-multiplier} has $m_b>1$, so the only change of
+exit is $m_bA=\eta_0$. Pulling back the two amplitude intervals gives
+\eqref{eq:pc-source-partition}. At equality the trajectory meets the
+right base and fiber at the same point, in finite time. If the threshold
+is outside the actual amplitude image, it is omitted. The target-core
+preimage remains an interval by scalar order and $F_y>0$, as in
+Lemma~\ref{lem:sections}.
+
+On the root side the scalar base tends to its first root in infinite
+time, whereas $\dot\eta=b_n\eta$, $b_n\ge c>0$, takes every $A>0$ to
+$\eta_0$ in finite time. Hence only the fiber exit occurs. The selected
+boundary $A=0$ is excluded from the returning interval. Finally,
+Lemma~\ref{lem:pc-collision-localization} places every counted cycle
+strictly below $A=\eta_0/2$, so the upper artificial boundary introduces
+no counted event zero. The ordering in Figure~\ref{fig:collision-passages} is
+increasing $s$, or equivalently increasing $A$; it is opposite to the
+original $u_{\rm up}$-order because $s_{u_{\rm up}}<0$.
+\end{proof}
+
+\paragraph{The complete return across the finite junction.}
+On $I_{\rm ret}$, write $X(u)$ for the upper-section point and
+$\phi_p$ for the fixed-field flow. The target hit
+$\pi_z\phi_p(t,X(u))=\xi$ is transverse, with $F_p(\xi,y)\ge c_\xi>0$.
+It defines one $C^2$ target map
+$\widehat T_+(u)=E_b(\pi_y\phi_p(\tau(u),X(u)))$.
+At $A=\eta_0/m_b$ the orbit meets the right base and fiber at their
+common point in finite time; there $v>0$, $b_n\ge c>0$ and $A_s>0$.
+Thus the two formulas are restrictions of this same map, and the
+physical section diffeomorphisms give $M=\partial_s\widehat T_+>0$.
+Its first two derivatives agree at the event, which is counted once.
+A base root has infinite flight time and is never such a junction.
+These are the flow and continuity hypotheses of
+Lemma~\ref{lem:pc-event-gluing}; on the root side there is only fiber exit.
+
+The through and fiber estimates hold on their whole respective returning
+intervals. Fix the common positive curvature lower bound and the incoming
+and short-map constants first, and choose $\delta_*>0$ satisfying both
+inequalities in~\eqref{eq:pc-ratio-smallness} with these common bounds. The short
+map constants can be fixed before the outgoing section: its limiting
+energy map is independent of that section, and for each fixed section a
+parameter shrinking bounds its $C^2$ error. Likewise the through size
+constant is uniform in the fixed small energy rectangle; after fixing
+the section, its final regular holonomy derivative is bounded by two.
+Choose the fixed section ratio, then $\xi_{\rm out}$ sufficiently small,
+and then $r$ so that the through coefficient
+$C(r^2+\xi_{\rm out}^2)$ is below $\delta_*$. With this target fixed,
+decrease $r$ further so that the fiber coefficient $C_\xi r^\alpha$
+is below the same tolerance. Their curvature lower constants have a
+common positive minimum, independently of $m_b$ and the root gap.
+The localization lemma only decreases the final positive thresholds;
+it changes none of these physical sections or coefficient intervals.
+
+Taking the maximum size constant and minimum curvature constant, the
+two passage estimates therefore give
+\[
+ sM\le\varepsilon^2\delta,\qquad
+ -s(\log M)_s\ge c_M>0
+\]
+on both open pieces. The incoming and short-map estimates also hold on
+$I_{\rm ret}$. These are precisely the hypotheses of
+Lemma~\ref{lem:pc-event-gluing}; the continuity just proved includes the
+possible junction. Its total actual multiplicity bound two therefore
+holds on this interval, which contains every counted cycle.
+
+\begin{proof}[Completion of Proposition~\ref{prop:positive-constant}]
+For negative forcing, cover the coefficient set by the three intervals
+$a\ge-2+\delta_a$, $a\le-2-\delta_a$, and $|a+2|<2\delta_a$.
+For each fixed field choose one applicable interval. In either of the
+first two, the preceding complete-return comparison gives the bound two.
+In the third, Lemma~\ref{lem:pc-collision-localization} places every
+counted cycle inside one actual source interval with $A<\eta_0/2$.
+On the root side only the fiber exit remains. On the no-root side,
+Lemma~\ref{lem:pc-source-partition} gives the through and fiber pieces
+and at most one finite junction. Lemma~\ref{lem:pc-event-gluing}
+therefore gives total multiplicity at most two on this common interval.
+
+Every comparison counts the complete return from the single signed
+source section to the common target. Fix the collision fiber before
+shrinking its coefficient interval; this also fixes the gaps in the
+separated-root regimes. Then fix the physical sections before the final
+parameter bounds. A compact coefficient set requires only finitely many
+such choices, whose minima give common positive thresholds
+$r_0,\varepsilon_0$ and a common positive Hausdorff radius. Together
+with the nonnegative-forcing comparison on the entire passing interval,
+this proves the proposition.
+\end{proof}

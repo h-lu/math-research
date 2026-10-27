@@ -1,0 +1,81 @@
+\subsection{Whole-carrier coefficient synthesis}
+\label{sharp:upper-section}
+\label{sec:whole-carrier-applications}
+
+% Compatibility inputs; the proofs are in the regional owners.
+\input{sharp-upper-degenerate}
+\input{sharp-upper-local}
+
+\begin{proposition}\label{sharp:upper-coefficient-bounds}
+With the coefficient thresholds of Lemma~\ref{lem:pure-coefficient-cover}
+and the common receiver
+\(I_\theta(h_c)\) of Lemma~\ref{lem:common-raw-receiver}, the following
+whole-carrier bounds hold after one raw coefficient and multiplier
+restriction. Isolated zeros are counted with multiplicity.
+\[
+\begin{array}{c|c}
+ \text{coefficient alternative}&\text{number of roots}\\ \hline
+ \alpha_0\ge0&2\\
+ \alpha_0<0,\ p\le0&1\\
+ \alpha_0<0,\ 0<p\le p_*&3\\
+ \alpha_0<0,\ p_*/2\le p\le2P_*&2\\
+ \alpha_0<0,\ p\ge P_*&2
+\end{array}
+\]
+Here \(p=\alpha_1/\sqrt{-\alpha_0}\) when \(\alpha_0<0\).
+The alternatives cover every sufficiently small raw coefficient and each
+controls its whole phase fibre. Their maximum is three.
+\end{proposition}
+\begin{proof}
+Use the fixed coefficient cover of Lemma~\ref{lem:pure-coefficient-cover}
+and the raw budgets of Proposition~\ref{prop:regional-raw-budgets}.
+Lemma~\ref{lem:common-raw-receiver} has already placed every regional estimate
+on the same connected interval \(I_\theta(h_c)\), with the final
+coefficient and multiplier restrictions in force.
+
+If \(\alpha_0>0\), the determinant chart applies when
+\(|\alpha_1|\le P_D\sqrt{\alpha_0}\), and signed trace applies
+otherwise. The exact trace dictionary gives
+\(0<a_L<a_*/4\). Propositions~\ref{sharp:upper-determinant}
+and \ref{sharp:upper-trace} give two zeros on determinant or positive
+trace, and one on negative trace. If \(\alpha_0=0\) and
+\(\alpha_1\ne0\), the trace opening is zero. At
+\(\alpha_0=\alpha_1=0\), every positive height is in the signed high
+region of Corollary~\ref{rew:cor-high-derivative-signed}; the final
+multiplier bound makes the return contractive. Zero height is stopped.
+
+For \(\alpha_0<0\) and \(p\le0\),
+Lemma~\ref{deg:lem-raw-jacobian} gives at most one zero.
+For \(0<p\le p_*\), the coefficient alternatives place each whole
+fibre in a bounded-gamma, far-root, compact-cubic or degree-loss receiver.
+Propositions~\ref{sharp:upper-gamma} and \ref{sharp:upper-cubic}
+give at most three.
+The remaining original cubic and bounded-positive quadratic ghost tails
+have \(F'>1/2\) by Proposition~\ref{rawpair:prop-original-tails},
+with both full gains and their original admissions retained.
+The positive far-root budget
+\eqref{deg:far-negative-budget}, physical cover
+\eqref{deg:far-physical-cover}, and the degree-loss carrier and count
+of Propositions~\ref{p2:prop-unified-carrier-cover} and
+\ref{p2:prop-physical-degree-count} give two in their alternatives.
+Their independent rectangles and overlap reserves are those fixed by
+Lemma~\ref{lem:pure-coefficient-cover}, before \(h_c\) was selected.
+The two three-root arguments bound the zeros of the actual lower \(F'\)
+by two and have \(F'>0\) on the overlapping upper continuation.
+Lemmas~\ref{sharp:upper-curvature-count} and
+\ref{sharp:upper-critical-count} therefore count the same connected
+lower/core/high interval. Both nonlinear section maps and all three
+terms of the physical curvature identity remain in these estimates.
+
+For \(p\ge P_*\), the exact large-source dictionary
+\eqref{deg:large-trace-dictionary} has \(p_L=1\) and
+\(a_L=-p^{-2}\); Proposition~\ref{sharp:upper-trace} gives two
+uniformly on this whole sector. On \([p_*/2,2P_*]\),
+Lemma~\ref{ann:lem-compact-positive-domains} and
+Proposition~\ref{sharp:upper-annulus} give two on the whole receiver.
+The three positive ranges overlap strictly. At every coefficient one
+covering argument counts all of \(I_\theta(h_c)\), including its
+intervening nonroot inputs and admitted equality dividers. The maximum
+of the five whole-fibre bounds is three. Proposition~\ref{prop:central-bound}
+then applies geometric capture to this already counted receiver.
+\end{proof}

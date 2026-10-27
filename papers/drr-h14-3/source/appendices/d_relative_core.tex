@@ -1,0 +1,250 @@
+\subsection{Mixed variations and a disappearing exit}
+\label{rw:app:relative-variations}
+
+The proof of Proposition~\ref{rw:relative-core} has two parts.  Normal
+variational equations give decay of mixed jets at fixed time; the
+fixed transverse exit then controls the hitting-time jets.  Normal
+decay dominates their growth, so differentiated endpoint terms vanish
+at a lost exit and the relative integral extends to infinite time.
+We work on one common real domain and choose the derivative order
+before reducing it.  Retaining $N+2$ joint derivatives of the
+triangular field, initial sections and coefficient changes gives
+relative jets through total order $N$.  Any two derivatives spent
+later on a logarithmic rate must already be included in $N$ here.
+
+Let $w(t;a,\mathbf b)$ be the scalar solution starting at $a$ and
+let $Z(t;z,a,\mathbf b)$ be its normal solution. A selected derivative
+means a product of ordinary $a,z,\mathbf b$ derivatives and, in the
+lower case, $E_\epsilon$. Euler derivatives obey the same product
+rule as ordinary derivatives; when commuting them through the vector
+field, derivatives of $q=\epsilon$ retain its factor $\epsilon$.
+In the upper case $q=1$.  Differentiation in frozen parameters gives
+inhomogeneous variational equations and hence polynomial factors in
+time.  We estimate these equations directly, using the scalar-flow
+bounds.
+
+For a normal jet of positive total order, differentiating
+$\dot Z=-g(w,Z)$ gives
+\begin{equation}\label{rw:app:normal-induction}
+ \frac{\dd}{\dd t}D^\alpha Z
+ =-g_Z(w,Z)D^\alpha Z+\mathcal R_\alpha(t).
+\end{equation}
+Terms in $\mathcal R_\alpha$ containing only scalar and coefficient
+variations still contain $Z$: all derivatives of $g(w,0)$ in those
+variables vanish. Every other term contains a lower normal variation.
+The scalar variations satisfy
+\eqref{rw:relative:slow-growth}. At order one, variation of constants
+in \eqref{rw:app:normal-induction} gives a polynomial time factor
+times $e^{-(b_*-c_1\varpi)t}$. At order $k$, products of previously
+bounded variations have the same form with a larger polynomial and
+a larger constant multiplying $\varpi$. The convolution estimate
+\[
+ \int_0^t e^{-b_*(t-s)}(1+s)^m
+                 e^{-(b_*-c\varpi)s}\,\dd s
+ \le C(1+t)^{m+1}e^{-(b_*-c\varpi)t}
+\]
+closes the induction. Include the finitely many constants needed
+through order $N+1$ in $c_N$ before choosing $\varpi$. We obtain
+\begin{equation}\label{rw:app:normal-jets}
+ |D^\alpha Z(t)|\le
+ C_N(1+t)^{M_N}e^{-(b_*-c_N\varpi)t},\qquad |\alpha|\le N+1.
+\end{equation}
+For $\alpha=0$, the stronger estimate
+$|Z(t)|\le|z|e^{-b_*t}$ holds. At normal input zero, normal-input
+variations in \eqref{rw:app:normal-jets} need not vanish; they still
+decay.  Their decay makes the relative integral differentiable at zero
+normal input as well.
+
+The identity
+\[
+ \beta(w,Z)-\beta(w,0)
+ =Z\int_0^1\beta_Z(w,\theta Z)\,\dd\theta
+\]
+and \eqref{rw:app:normal-jets} now bound every derivative of its
+left-hand side by \eqref{rw:relative:majorant}. Replacing $\beta$
+by $g_Z$ proves the corresponding estimate for the logarithm of the
+normal derivative.  The estimate is uniform through $z=0$.
+
+Write the fixed-exit equation as
+$H(T,\theta)=\phi_T(a(\theta);\mathbf b(\theta))-v_R(\theta)=0$.
+Its time derivative has magnitude at least $cq$.
+At order $k$, the chain rule separates $H_tD^\alpha T$ from
+products
+$(\partial_t^mD^\gamma H)(T)\prod_{\ell=1}^mD^{\beta_\ell}T$,
+where $|\gamma|+\sum|\beta_\ell|=k$ and every remaining time jet
+has order below $k$. Mixed time derivatives of the flow follow
+from its equation with the same finite-order slow-growth bounds.
+Dividing by the fixed-exit velocity proves
+\eqref{rw:relative:time-jets} by induction. Regular parameter
+dependence of either section is included in $H$. The identity
+$\partial_a\phi_T=f(v_R)/f(a)$ already places any reciprocal
+entry speed in the scalar variational bound; no entry-speed margin
+is required.
+
+For a quadratic passage from $-v_R$ to $v_R$, the more explicit
+calculation is useful. With $f(v)=\mu+v^2$ and $\mu>0$,
+\[
+ T=q^{-1}\int_{-v_R}^{v_R}\frac{\dd v}{\mu+v^2},\qquad
+ |\partial_\mu^jT|\le C_jq^{-1}\mu^{-j-1/2}
+ \le C_jq^{2j}(1+T)^{2j+1}.
+\]
+Thus a vanishing interior gap costs only a fixed power of the transit
+time in this case. At a split root, the preceding implicit-flow
+argument supplies the appropriate slow exponential bound instead.
+
+At total order $k$, differentiating an integral with endpoint $T$
+gives its fixed-time differentiated integral and a finite sum of terms
+\begin{equation}\label{rw:app:endpoint-term}
+ (\partial_t^{m-1}D^\gamma\mathcal I)(T)
+       \prod_{\ell=1}^mD^{\beta_\ell}T,
+ \qquad m\ge1,\quad |\beta_\ell|\ge1,\quad
+ |\gamma|+\sum_\ell|\beta_\ell|=k.
+\end{equation}
+The integrand in each product uses total order at most $k-1$.
+Its normal factor, the time-jet bounds, and the combined slow exponent
+reserved before choosing $\varpi$ bound every term by
+$C_Nq^{-M_N}(1+T)^{M_N}e^{-(b_*-2c_N\varpi)T}$.
+When $q\to0$, separated sections give $q^{-1}\le T/c$; the
+remaining polynomial is absorbed by the positive normal margin.
+Thus all endpoint terms vanish uniformly at a disappearing exit.
+
+For the absolute factor $L=e^{-I_0}$, differentiate
+$I_0=\int_0^T\beta(w(t),0)\,\dd t$ only at finite $T$.
+Its derivatives have polynomial and slow-exponential bounds from the
+same flow and time equations. The chain rule for $e^{-I_0}$ then
+multiplies finite products of these derivatives by
+$L\le e^{-b_*T}$. This proves absolute exponential bounds for all
+selected derivatives of $L$.  The action $I_0$ itself may diverge.
+
+At the separated-section slow-root boundaries of
+Proposition~\ref{rw:relative-core}, the transit time tends to infinity.
+On the complete auxiliary flow define
+$j_\infty=-\int_0^\infty\mathcal I(t)\,\dd t$.
+The integrable majorant permits differentiation through the integral.
+The difference $j_T-j_\infty$ is a tail, and its selected derivatives,
+including \eqref{rw:app:endpoint-term}, tend to zero. Define $j=j_T$
+on the passing side and $j=j_\infty$ on the nonpassing side. These
+derivatives agree at the lost-exit boundary; induction on derivative
+order, or the one-variable fundamental theorem along coordinate
+segments, proves the resulting $C^N$ extension in the selected ordinary
+variables, together with the selected Euler scale bounds. Define the absolute
+factor to be zero on the nonpassing side. Its jets tend to zero by
+the absolute estimate, giving a separate extension in the same derivative
+class.  Both extensions are defined on the prescribed auxiliary domain.
+Their restriction to real passing orbits gives the transition maps
+used in the comparison.
+
+\subsection{The central kernel on a real coefficient domain}
+\label{rw:app:relative-core}
+
+The central connection requires a different estimate: the reference
+is controlled with a Gaussian weight rather than by ordinary
+high-order state derivatives.  We prove the mixed bounds asserted in
+Proposition~\ref{rw:transitions:central-core}.  All integrals may be
+rescaled by $X=Ry$ to the fixed interval $0\le y\le1$. Write
+$F_\epsilon=F_++\epsilon\bar m$ and split the exact graph field as
+\[
+ \mathfrak f(X,z)=a_0(X)z+\frac{\nu}{F_\epsilon(X)}+\mathcal N(X,z),
+ \qquad a_0=\frac{X}{\epsilon F_\epsilon}-\frac{\bar c}{F_\epsilon}.
+\]
+Direct differentiation of \eqref{rw:relative:core-field} on its
+signed tube gives
+\begin{equation}\label{rw:app:core-nonlinearity}
+ |\mathcal N_z(X,z)|\le C[(X/\epsilon+1)|z|+|\nu|],
+ \qquad \mathcal N(X,0)=0.
+\end{equation}
+The backward kernel
+$K(X,S)=\exp[-\int_X^S a_0(u)\,\dd u]$ satisfies
+\begin{equation}\label{rw:app:gaussian-kernel}
+ |K(X,S)|\le Ce^{-c(S^2-X^2)/\epsilon},\qquad
+ \int_X^R|K(X,S)|\,\dd S
+          \le\frac{C\epsilon}{X+\sqrt\epsilon}.
+\end{equation}
+For the last inequality, split at $X=\sqrt\epsilon$ and use
+$S^2-X^2\ge(S-X)^2$ in the first case and
+$S^2-X^2\ge X(S-X)$ in the second. The terminal term
+$K(X,R)\epsilon\nu h_b$ has the same weight, since $R\ge R_0$.
+
+In the norm
+$\|z\|_*:=\sup_X(X+\sqrt\epsilon)|z(X)|/\epsilon$,
+the integral of the forcing in the backward equation has size
+$C|\nu|$. On $\|z\|_*\le C_0|\nu|$,
+$(X/\epsilon)|z|\le C_0|\nu|$; hence
+\eqref{rw:app:core-nonlinearity} and
+\eqref{rw:app:gaussian-kernel} make its nonlinear part a contraction
+after $|\nu|$ and the tube have been reduced. This proves existence,
+uniqueness and the first bound in
+\eqref{rw:relative:reference-weight} for the continuation of the
+given terminal graph. Its uniqueness identifies it with that graph
+on the overlap with the lower phase construction.
+
+For each selected coefficient or Euler derivative, differentiating
+the kernel introduces at most a fixed polynomial in
+$(S^2-X^2)/\epsilon$; the differentiated $R$ endpoint is treated
+in the fixed $y$ coordinate. Such polynomials are absorbed by a
+smaller positive Gaussian exponent. The terminal data retain their
+$\epsilon$ weight, as do their Euler derivatives. Differentiate the
+contracting equation. Its highest unknown derivative occurs through
+the same integral operator of norm less than $1/2$, while its other
+terms involve lower reference jets and the differentiated kernels.
+Induction yields the second bound in
+\eqref{rw:relative:reference-weight}. The identity $z_b=0$ at
+$\nu=0$ and one additional $\nu$ derivative restore its $\nu$
+factor whenever no $\nu$ derivative was prescribed. Accordingly,
+retain one extra coefficient order when that divided bound is needed.
+All of these arguments use real differentiation and the weighted
+integral norm.
+
+The linear coefficient about this reference is
+$a=\mathfrak f_z(X,z_b)$. The exact identity
+\[
+ D-zD_z=F_\epsilon-\epsilon\bar m z^2
+\]
+shows that
+$a-X/(\epsilon F_+)$ and its selected coefficient and Euler
+jets are bounded pointwise. The term $F_\epsilon-F_+=\epsilon\bar m$
+removes the apparent inverse scale in that difference; every remaining
+dangerous term contains $(X/\epsilon)z_b$, which the weighted bound
+controls. Taylor division of the nonlinear difference gives
+\[
+ B_c(X,v)=\int_0^1(1-\theta)
+           \mathfrak f_{zz}(X,z_b+\theta v)\,\dd\theta.
+\]
+Its ordinary $v$ derivatives and selected coefficient derivatives
+have bounds $C_N(X/\epsilon+1)$ on the fixed signed input tube.
+Retaining $N+2$ derivatives of the graph field supplies these $N$
+orders; the reference construction may retain $N+3$ when its divided
+$\nu$ bound is also used.
+
+The exact kernel $E(X)=\exp[-\int_X^R a]$ has the same Gaussian
+bound. Its selected derivatives have that bound times a fixed
+polynomial in $(R^2-X^2)/\epsilon$. Consequently,
+\begin{equation}\label{rw:app:normalized-kernel-bound}
+ \int_0^R (X/\epsilon+1)|D^\alpha E(X)|\,\dd X\le C_N.
+\end{equation}
+For the principal term, the substitution
+$u=(R^2-X^2)/\epsilon$ evaluates the integral with weight
+$X/\epsilon$ directly; the remaining term follows from the same
+Gaussian estimate and $R\ge R_0$.
+
+Equation \eqref{rw:relative:normalized-volterra} is therefore a
+contraction for $Q$ in a fixed small ball and for $W$ in a fixed
+interval independent of the scale. Differentiate it successively in
+$W$, the coefficients and $E_\epsilon$. The highest $Q$ jet always
+appears with its original contracting linearization. All other terms
+are integrals of products of lower jets, derivatives of $B_c$, and
+at least one kernel factor $E$. Equation
+\eqref{rw:app:normalized-kernel-bound} bounds them. Solving at each
+order by the inverse of $I-\mathcal T_Q$, whose norm is at most two,
+proves the required mixed bounds. This argument works at $W=0$ as
+well as at nonzero input. Finally $a_r$ has bounded selected jets,
+so its integral supplies the bounds for $\log a_c$ and its positive
+upper and lower margins.
+
+These estimates hold at any finite order chosen in advance, with
+constants that may depend on that order.  They control ordinary
+section and coefficient derivatives and Euler scale derivatives of
+the integrated relative functions.  At the Gaussian center the
+reference has the stated weighted bound; uniform high-order
+$X$ derivatives and ordinary $\epsilon$ derivatives of the final
+relative maps remain outside these estimates.

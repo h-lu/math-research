@@ -1,0 +1,133 @@
+\section{Three hyperbolic cycles approaching the marked graphic}
+\label{sharp:lower-section}
+
+The complete organizing gain tends to zero as \(c\downarrow1\).
+We first construct three hyperbolic cycles at fixed \(c>1\) by
+balancing this gain against the central transition slope, then pass
+diagonally to \(c=1\) and transfer the cycles to the original marked
+graphic.
+
+\begin{theorem}\label{sharp:lower-theorem}
+For every neighborhood \(\mathcal V\) of \(F_*\) in the full space
+\(\mathcal Q_2\) of real quadratic vector fields and every
+\(\delta>0\), there is \(F\in\mathcal V\) with three geometrically
+distinct hyperbolic periodic orbits \(\gamma_1,\gamma_2,\gamma_3\)
+satisfying
+\[
+ d_{\rm H}\bigl(\iota_*(\gamma_j),\Gamma_{I4}\bigr)<\delta,
+ \qquad j=1,2,3.
+\]
+The cycles follow both marked branches in the positive-time order
+\(q_*\to p_*\to q_*\). In particular,
+\(\operatorname{Cycl}_{\mathcal Q_2}(\Gamma_{I4},F_*)\ge3\).
+\end{theorem}
+
+Use \(H_c,\Gamma_c\) from \eqref{intro:eq-i21-family};
+\(H_1=H_0\) and \(\Gamma_1=\Gamma\).
+For \(c>1\), this organizing family appears in
+\cite[(1.1)--(1.3), p.~2]{Lu26I21}, with its variables \((x,y,C_0)\)
+written here as \((X,Y,c)\).
+
+All coefficient norms below are taken in a fixed norm on the twelve
+quadratic coefficients, and \(d_{\rm H}\) uses the fixed smooth metric
+of this paper.
+
+\input{p4-internal-construction}
+
+\subsection{Endpoint attainment}
+
+\begin{lemma}[Endpoint attainment]\label{rew:lem-endpoint-attainment}
+There are fields \(F_n\) in \eqref{eq:slice}, with
+\(F_n\to H_0\) in quadratic coefficients, and three geometrically
+distinct hyperbolic periodic orbits \(\gamma_{j,n}\) of each
+\(F_n\), \(j=1,2,3\), such that
+\[
+ \max_{1\le j\le3}
+ d_{\rm H}\bigl(\iota_0(\gamma_{j,n}),\Gamma\bigr)\longrightarrow0.
+\]
+For every fixed choice of admissible windows in
+Lemma~\ref{lem:loc-capture}, all three orbits eventually follow the
+same marked positive-time circuit \(q\to p\to q\), meeting its
+return section once in their prime periods.
+Their positive first-return multipliers $M_{j,n}$ satisfy
+\[
+ M_{j,n}\longrightarrow L(r_j^0),\qquad j=1,2,3,
+\]
+with the notation of Corollary~\ref{p4:multiplier-limits}.
+\end{lemma}
+\begin{proof}
+Set \(c_n=1+K_0/(2n)\), with \(K_0\) from
+Theorem~\ref{p4:fixed-c}. For each \(n\), first fix \(c_n\), then
+choose \(0<\rho_n\le1/n\) so that the theorem applies and the same field
+\(F_n:=F_{c_n,\rho_n}\) and its three hyperbolic orbits
+\(\gamma_{j,n}:=\gamma_{j,c_n,\rho_n}\) satisfy
+\begin{equation}\label{rew:eq-endpoint-diagonal-selection}
+ \begin{gathered}
+ \|F_n-H_{c_n}\|<\frac1n,\qquad
+ \max_{1\le j\le3}
+ d_{\rm H}\bigl(\iota_0(\gamma_{j,n}),\Gamma_{c_n}\bigr)<\frac1n,\\
+ \max_{1\le j\le3}
+ |M_j(c_n,\rho_n)-\mu_j(c_n)|<\frac1n.
+ \end{gathered}
+\end{equation}
+This choice may depend on \(c_n\) and controls the actual coefficient
+\(C_{c_n,\rho_n}-c_n\). The last condition is available by
+Corollary~\ref{p4:multiplier-limits} after \(c_n\) is fixed; its
+second limit gives the asserted convergence of
+$M_{j,n}=M_j(c_n,\rho_n)$ on this same diagonal.
+Continuity of \(H_c\) gives
+\begin{equation}\label{rew:eq-endpoint-coefficients}
+ \|F_n-H_0\|\le\frac1n+\|H_{c_n}-H_1\|\longrightarrow0.
+\end{equation}
+
+Pair the organizing parabolas at the same \(X\); their heights differ
+by \((c_n-1)/2\). Bounded \(D\iota_0\) and comparability of the fixed
+metric to the spherical metric give one constant \(M_\Gamma\) with
+\begin{equation}\label{rew:eq-endpoint-graphics}
+ d_{\rm H}(\Gamma_{c_n},\Gamma)\le M_\Gamma(c_n-1)
+ \longrightarrow0.
+\end{equation}
+Both closures have the same endpoint \(q=(0,1,0)\) and no equatorial
+arc. The triangle inequality gives
+\begin{equation}\label{rew:eq-endpoint-cycles}
+ \max_{1\le j\le3}
+ d_{\rm H}\bigl(\iota_0(\gamma_{j,n}),\Gamma\bigr)
+ \le\frac1n+M_\Gamma(c_n-1)\longrightarrow0.
+\end{equation}
+
+The same pairing gives convergence of the marked parts \(X\le-1\)
+and \(X\ge-1\), whose cut is \(p_{c_n}=(-1,(1-c_n)/2)\to(-1,0)\).
+The positive speed \eqref{intro:eq-parabola-speed} orders them as
+\(q\to p_{c_n}\to q\). For any fixed admissible windows, speed bounds,
+and inner height, \eqref{rew:eq-endpoint-coefficients} and
+\eqref{rew:eq-endpoint-cycles} admit all three cycles to
+Lemma~\ref{lem:loc-capture} for all sufficiently large \(n\).
+It gives their marked circuit, transverse hits, and prime return.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{sharp:lower-theorem}]
+The inverse coefficient isomorphism \(\mathscr C_0^{-1}\) from
+\eqref{eq:fixed-coefficient-transport} transports the fields of
+Lemma~\ref{rew:lem-endpoint-attainment} to fields converging to \(F_*\),
+hence eventually into \(\mathcal V\). The projective inverse \(S^{-1}\) in
+\eqref{eq:fixed-projective-map} is Lipschitz on the compact hemisphere,
+with constant \(L_-\), and sends \(\Gamma\) to \(\Gamma_{I4}\).
+The transported cycles therefore have distances at most
+\[
+ L_-\max_{1\le j\le3}
+ d_{\rm H}\bigl(\iota_0(\gamma_{j,n}),\Gamma\bigr),
+\]
+Choose \(n\) so that this is less than \(\delta\), the field lies in
+\(\mathcal V\), and capture holds. The fixed coordinate change and
+positive time factor preserve hyperbolicity, distinctness, and the
+marked order \(q_*\to p_*\to q_*\).
+\end{proof}
+
+The strengthened diagonal in
+\eqref{rew:eq-endpoint-diagonal-selection} realizes
+Theorem~\ref{sharp:lower-theorem} with first-return multipliers converging
+to \(L(r_1^0),L(r_2^0),L(r_3^0)\). For all sufficiently large \(n\),
+these multipliers lie in \((0,1/2),(3/2,2),(0,1/2)\), respectively.
+The fixed coordinate change and positive time factor preserve the
+return multipliers, giving attracting, repelling and attracting cycles
+in order of increasing \(r\).

@@ -1,0 +1,72 @@
+\section{Coefficient scales}
+\label{app:coordinates}
+
+The parameter cover is expressed in boundary coefficients, so we need
+both a local coordinate change from \(\mu_1,\mu_2,\mu_3\) to
+\(q_0,q_1,q_2\) and a comparison of their weighted scales. We compute
+the coordinate change first and then prove the scale bounds directly.
+
+On \(z=0\), let \(v_{\rm bd}\) be the small root of
+\(\mu_3+v_{\rm bd}+v_{\rm bd}^2=0\), and put
+\(t=1+2v_{\rm bd}\). Writing \(v=v_{\rm bd}+u\) gives
+\[
+ \eta=tu+u^2,\qquad
+ u=\eta/t-\eta^2/t^3+O(\eta^3).
+\]
+The boundary identity
+\eqref{eq:boundary-drift-conjugacy-new} reads
+\[
+ q(\eta)=(t+2u)\{P(v_{\rm bd})+P'(v_{\rm bd})u-3v_{\rm bd}u^2-u^3\}.
+\]
+It follows that
+\begin{equation}
+\label{eq:direct-coefficient-bridge}
+ q_0=tP(v_{\rm bd}),\qquad q_1=P'(v_{\rm bd})+2P(v_{\rm bd})/t,\qquad
+ q_2=-3v_{\rm bd}/t+q_1/t^2-4q_0/t^4.
+\end{equation}
+Differentiating \eqref{eq:direct-coefficient-bridge} at the organizing
+point gives the Jacobian and its inverse:
+\[
+ D_{\mu}(q_0,q_1,q_2)\big|_0
+ =\begin{pmatrix}1&0&0\\[1mm]2&1&0\\[1mm]-2&1&3\end{pmatrix},
+ \qquad
+ D_q(\mu_1,\mu_2,\mu_3)\big|_0
+ =\begin{pmatrix}1&0&0\\[1mm]-2&1&0\\[1mm]4/3&-1/3&1/3\end{pmatrix}.
+\]
+Thus the coefficient change is locally invertible.
+
+Set
+\[
+ H=\max\{|q_0|^{1/3},\sqrt{|q_1|},|q_2|\},\qquad
+ H_\mu=\max\{|\mu_1|^{1/3},\sqrt{|\mu_2|},|\mu_3|\}.
+\]
+These scales are comparable on a fixed neighborhood.
+Indeed \eqref{eq:direct-coefficient-bridge} gives \(|v_{\rm bd}|\le CH\)
+when \(1/2<t<3/2\), and the inverse identities
+\[
+ \mu_2=q_1-2q_0/t^2+3v_{\rm bd}^2,\qquad
+ \mu_1=q_0/t-\mu_2v_{\rm bd}+v_{\rm bd}^3,\qquad
+ \mu_3=-v_{\rm bd}-v_{\rm bd}^2
+\]
+give \(H_\mu\le CH\). Conversely \(v_{\rm bd}=O(H_\mu)\),
+\(P(v_{\rm bd})=O(H_\mu^3)\), \(P'(v_{\rm bd})=O(H_\mu^2)\), and
+\eqref{eq:direct-coefficient-bridge} imply \(H\le CH_\mu\).
+
+\begin{samepage}
+For \(H>0\), put \(\bar q_j=q_j/H^{3-j}\). Uniformly on this
+compact normalized coefficient set,
+\[
+ \frac {v_{\rm bd}}H=-\frac{\bar q_2}{3}+O(H),\qquad
+ \frac{\mu_3}{H}=\frac{\bar q_2}{3}+O(H),\qquad
+ \frac{\mu_2}{H^2}=\bar q_1+\frac{\bar q_2^2}{3}+O(H),
+\]
+\[
+ \frac{\mu_1}{H^3}
+   =\bar q_0+\frac{\bar q_1\bar q_2}{3}+\frac{2\bar q_2^3}{27}+O(H),\qquad
+ H^{-3}q(HX)=\bar q_0+\bar q_1X+\bar q_2X^2-X^3+O_{C^k}(H).
+\]
+\end{samepage}
+The last estimate, for every fixed \(k\) on every fixed \(X\)-interval,
+follows from analyticity and the fact that the boundary drift depends only on
+\((\mu_1,\mu_2,\mu_3)\); \(A,C\) remain independent parameters
+in the positive-height coefficient \(B\).

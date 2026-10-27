@@ -1,0 +1,289 @@
+\subsection{An incoming loss and two matched lower roots}
+
+An incoming lower loss can have unbounded transit time. To compare
+its central derivative with that of a regular outgoing arc, we use
+negative divergence on the outer arc and contraction through a fixed
+Gaussian core. This argument also allows an incoming endpoint at
+infinity. When both lower roots are lost, neither derivative provides
+a regular reference; we instead compare their logarithmic rates in
+the two moving deficits.
+
+\begin{lemma}[Incoming contraction]\label{rw:finite:incoming-contraction}
+Suppose the outgoing lower data are compact and regular, with
+$A_+(p)\le A_{\rm out}$. Choose a fixed incoming crosscut $R>0$
+with $F_->f_*>0$ on $[0,R]$ and entries $q>R+2\zeta$, where
+$\zeta>0$ is fixed. On the actual common positive-central passing
+set, for either sign of $\ell$, the incoming map $\mathcal I(q)$
+satisfies
+\begin{equation}\label{rw:finite:incoming-bound}
+ 0<-\mathcal I'(q)\le\frac C\epsilon e^{-A_-(R)/\epsilon}
+        \left(\frac{1+R^2}{1+q^2}\right)^{1/(24\epsilon)}.
+\end{equation}
+If $A_-(R)>A_{\rm out}+3$ and the upper derivative is bounded,
+then $K<0$ on that set. The closing function is strictly monotone
+on each of its intervals. Every closing zero there is simple and
+has return multiplier less than one.
+\end{lemma}
+\begin{proof}
+In the incoming coordinates $W=-X$, the forward divergence on
+$W\ge R$, $0<z<1$ is
+\[
+ -(1+2\epsilon\bar B)W
+ +\epsilon\{\bar a+\bar c(2z-1)\}
+                      -2\rho\ell(1-z)\le-W/2.
+\]
+The normal component satisfies
+$z'\le-(R/2)z+\rho\max(\ell,0)$.
+On the fixed strip $R\le W\le R+\zeta$ the horizontal speed
+has magnitude at most $M\epsilon$. Any passing arc therefore
+reaches $W=R$ with
+\begin{equation}\label{rw:finite:height-at-crosscut}
+ z_R\le e^{-R\zeta/(2M\epsilon)}
+                          +2\rho\max(\ell,0)/R.
+\end{equation}
+An arc that has already reached $z=0$ is outside the stated domain.
+
+The fixed core from this crosscut to the center has denominator
+\[
+ D_-=F_-+\epsilon\bar m-(1+2\epsilon\bar m)z
+                                      +\epsilon\bar m z^2>f_*/2
+\]
+on a small height strip, and its graph equation is
+\[
+ z_W=\frac{Wz+\epsilon\bar c z(1-z)-\rho\ell(1-z)^2}
+                  {\epsilon D_-}=:f(W,z,\ell).
+\]
+Let its signed output be $\mathcal C_R(z_R,\ell)$.
+The Gaussian estimate gives
+\[
+ 0\le\mathcal C_R(z_R,0)\le Cz_Re^{-A_-(R)/\epsilon}.
+\]
+For this bound, integrate
+$\partial_W\log z=W/(\epsilon F_-)+O(1+(W/\epsilon+1)z)$;
+the nonlinear integral is bounded by $Cz_R$.
+For $\ell<0$ with positive central output, the solutions for
+$\theta\ell$, $0\le\theta\le1$, lie between this positive
+solution and the unforced one by scalar comparison. At fixed $z_R$,
+variation of constants gives
+\[
+ \partial_\ell\mathcal C_R(z_R,\theta\ell)
+ =\int_0^R e^{-\int_0^u f_z(v,z(v),\theta\ell)\,\dd v}
+       \frac{(1-z(u))^2}{\rho D_-(u,z(u))}\,\dd u\ge c>0.
+\]
+To obtain the positive lower bound, restrict the integral to
+$0\le u\le\rho$. Its prefactor is at least $c/\rho$, and
+$|f_z|\le C(W/\epsilon+1+|\ell|/\rho)$ bounds the exponent
+there. Positivity of the final output consequently implies
+$|\ell|\le Cz_Re^{-A_-(R)/\epsilon}$.
+For $\ell\ge0$, positivity of the outgoing regular map instead
+gives $\ell\le CZ_+(p)$. Thus $\ell$ is exponentially small
+on either part of the common passing set. Equation
+\eqref{rw:finite:height-at-crosscut} now makes $z_R$ exponentially
+small as well.
+
+Set $\Phi(W)=\log(1+W^2)/(12\epsilon)$.
+Since $W'=-\epsilon D_-$ and
+$D_-\le2+W+W^2\le3(1+W^2)$, its time derivative is at least
+$-W/2$, hence at least the divergence. The determinant formula
+from $(q,1)$ to $W=R$ therefore bounds the transverse derivative
+by
+\[
+ \frac{Cq}{\epsilon}
+      \left(\frac{1+R^2}{1+q^2}\right)^{1/(12\epsilon)}.
+\]
+Half this power absorbs $q$ uniformly even for unbounded entries.
+On the core, its normal variational exponent is
+$A_-(R)/\epsilon+O(1)$, because
+\[
+ f_z=\frac{W}{\epsilon(F_-+\epsilon\bar m)}
+       +\frac{\bar c}{F_-+\epsilon\bar m}
+       +O((W/\epsilon+1)|z|+|\ell|/\rho),
+\]
+and the last two quantities have the bounds just proved.
+Composition gives \eqref{rw:finite:incoming-bound}.
+The outgoing relative amplitude has
+$-L_+'(p)\ge(c/\epsilon)e^{-A_{\rm out}/\epsilon}$ on the
+same compact regular tube, including the small forcing just bounded.
+Thus the ratio of incoming and outgoing central derivatives is
+less than $1/2$ when $A_-(R)>A_{\rm out}+3$ and the upper
+derivative is bounded. This proves $K<0$ and the remaining claims.
+The estimate uses divergence integrated along the actual passing arc
+and remains valid for arbitrarily long residence near the incoming root.
+\end{proof}
+
+At a first finite simple or double incoming root, $A_-(R)\to\infty$
+as $R$ approaches the root from below. If the outgoing arc and upper
+return remain regular, choose $R$ so that the preceding lemma applies.
+The resulting terminal part is monotone even though its incoming
+transit time diverges.
+
+For simultaneous finite lower losses,
+Lemma~\ref{rw:finite:lower-cones} gives $\bar B=-\beta<0$ and
+simple roots $p_l,q_l$ with $p_lq_l=1/\beta$. The next lemma
+determines when a regular upper return joins these roots and supplies
+the transverse parameter needed to measure their splitting.
+
+\begin{lemma}[The regular two-root match]
+\label{rw:finite:two-root-geometry}
+For fixed $\beta>0$, $\bar a$ and $\bar m$, the equation
+$\mathcal U_0(p_l;\bar m,\bar c)=q_l$ has a unique regular
+solution in $\bar c$ exactly when $\bar m<\beta$.
+At that solution the derivative with respect to $\bar c$ is
+strictly positive. If $\bar a\ne0$, then
+\begin{equation}\label{rw:finite:two-root-signs}
+ \bar a\bar c<0,\qquad
+ \operatorname{sign}(\bar a+\bar c)=\operatorname{sign}\bar c,
+ \qquad |\bar c|>|\bar a|.
+\end{equation}
+For $\bar a=0$ the solution is $\bar c=0$.
+\end{lemma}
+\begin{proof}
+On a returning upper arc $\bar mY-1<0$. Indeed the first
+maximum of $Y$ must have $Y''=\bar mY-1<0$; the region below
+that nullcline contains the complete arc. Its graph equation is
+$Y_X=(X+\bar cY)/(\bar mY-1)$. Differentiation in $\bar c$,
+with integration from $X=p_l$ in the decreasing direction, has
+positive forcing after reversing the integration direction, because
+$Y>0$ and $\bar mY-1<0$. It gives $Y_{\bar c}>0$ at the
+exit and hence $\partial_{\bar c}\mathcal U_0>0$.
+For $\bar m>0$, the formulas for $S,I$ show that the range at
+fixed $p_l$ is $(0,1/(\bar mp_l))$: as the input approaches its
+saddle threshold, the exit approaches the reflected threshold and
+their product is $1/\bar m$. For $\bar m\le0$ that range is
+$(0,\infty)$, by the same exponential, repeated and trigonometric
+formulas, or their limits as $\bar c$ varies. Thus $q_l=1/(\beta p_l)$
+belongs to the range exactly when $\bar m<\beta$.
+
+To determine the coefficient signs at the match, put
+$M=\beta-\bar m>0$ and $\tau=\bar a+\bar c$.
+The endpoint identities from the solution $pS-I$ give
+\[
+ p_l+q_l=S(T)p_l(Mp_l-\tau)
+       =e^{-\bar cT}S(T)q_l(Mq_l+\tau),
+\]
+and hence
+\begin{equation}\label{rw:finite:matching-tau}
+ \tau=M\frac{e^{\bar cT}p_l^2-q_l^2}
+                      {e^{\bar cT}p_l+q_l}.
+\end{equation}
+The mechanical equation $Y''-\bar cY'-\bar mY=-1$ has energy
+$\frac12(Y')^2+Y-\frac12\bar mY^2$ with derivative
+$\bar c(Y')^2$. Thus $q_l-p_l$ has the sign of $\bar c$.
+For the sign of \eqref{rw:finite:matching-tau}, write
+$S(t)=e^{\bar ct/2}S_0(t)$. The positive fundamental solution
+$S_0$ is hyperbolic, linear or trigonometric. For $T/2<u<T$
+one has $S_0(u)>S_0(T-u)$: in the trigonometric case use
+$T<\pi/\sqrt{-\bar m-\bar c^2/4}$ and the sine difference
+formula. Pairing $u$ and $T-u$ then shows that
+\[
+ \int_0^T e^{\bar cu/2}S_0(u)\,\dd u
+       -e^{\bar cT/2}\int_0^T e^{-\bar cu/2}S_0(u)\,\dd u
+\]
+has sign $\bar c$.
+Since $q_l/p_l=e^{\bar cT}I_{-\bar c}(T)/I_{\bar c}(T)$,
+this is precisely the sign of $e^{\bar cT}p_l^2-q_l^2$.
+It proves the sign of $\tau$. Finally $p_l-q_l=\bar a/\beta$
+gives \eqref{rw:finite:two-root-signs} and its zero case.
+\end{proof}
+
+Use the actual strong intersections of the two lower roots, their
+positive regular power inputs, and the regular upper map. Common
+finite-jet convergence preserves the preceding transverse derivative,
+so their splitting is a coefficient coordinate $\delta$. The connector
+then has the form $g(t)=(t-\delta)k(t)$, with $k,g'>c>0$ and
+bounded selected jets on larger signed intervals. The deficit comparison
+interval is $t>0$, $g(t)>0$; an actual return also requires positive
+complete central outputs. As in Section~5, extend each absolute map by
+zero on its own nonpassing side.
+
+\begin{proposition}[Two-root local count]
+\label{rw:finite:two-root-count}
+Near every regular two-root match there are common coefficient
+and section neighborhoods and a scale cutoff such that the closing
+function has at most three isolated zeros, including multiplicity,
+on its positive central passing interval. The corresponding
+logarithmic ratio has at most two zeros and its derivative at most
+one. These assertions include either sign of splitting and the
+reversible match.
+\end{proposition}
+\begin{proof}
+The exact function is
+\[
+ F=D_+(t)-D_-(g(t))-\rho\nu H,\qquad
+ D_\pm(x)=K_\pm x^{h_\pm/\epsilon}e^{j_\pm(x)},
+\]
+where $h_+=p_l/\Delta+O(\epsilon)$,
+$h_-=q_l/\Delta+O(\epsilon)$ and $\Delta=\sqrt{\bar a^2+4\beta}$.
+All reference terms are input independent. Put
+\[
+ R_\pm=j_\pm'+\epsilon
+       \frac{j_\pm'+xj_\pm''}{h_\pm+\epsilon xj_\pm'}.
+\]
+The denominator has a positive margin. Thus
+$D_\pm''/D_\pm'=(h_\pm/\epsilon-1)/x+R_\pm$
+and the exact cleared numerator is
+\begin{equation}\label{rw:finite:two-root-numerator}
+ M=tgK'=(h_--\epsilon)tg'-(h_+-\epsilon)g
+        +\epsilon tg\{g'R_-(g)-R_+(t)+g''/g'\}.
+\end{equation}
+The multiplier $tg$ is positive on the whole passing interval.
+Away from $\bar a=0$,
+$h_--h_+=-\bar a/(\beta\Delta)+O(\epsilon)$ has a nonzero
+margin. Differentiating \eqref{rw:finite:two-root-numerator} gives
+\[
+ M'=(h_--h_+)g'+(h_--\epsilon)tg''+O(\epsilon(t+g)).
+\]
+First choosing the section radius small, then the coefficient
+neighborhood and scale small, makes $M'$ have a fixed nonzero
+sign. Thus $M$ has at most one simple zero there.
+
+Near the reversible match use the independent transverse variables
+$(\bar a,\delta,\nu)$. The inverse coefficient chart follows
+from the strict splitting derivative just proved; its finite jets
+are bounded on common boxes. At their zero, the reflected power
+coordinates may be chosen equal, giving $D_+=D_-$ and $g=t$.
+The relative coefficients extend by the common linear rule of
+Section~5, so the required coefficient segments are legitimate.
+At zero scale the columns of the numerator are
+\[
+ M_{\bar a}=-\frac{t}{2\beta^{3/2}}+O(t^2),\qquad
+ M_\delta=\frac1{2\beta}+O(t^2).
+\]
+Indeed $p_l=q_l=1/\sqrt\beta$, $\Delta=2\sqrt\beta$ and
+$(h_--h_+)_{\bar a}=-1/(2\beta^{3/2})$; differentiating
+$g=(t-\delta)k$ with the common reflected unit $k(0)=1$
+gives the constant column. The same formulas hold after a common
+positive normalization if a different reflected unit was used.
+Consequently the second column has a positive margin and the
+derivative of their quotient is strictly negative on a short
+interval including zero. One coefficient Hadamard integral now
+gives
+\[
+ M=\bar a A_\epsilon+\delta B_\epsilon+\nu C_\epsilon,
+ \qquad B_\epsilon>c,\quad (A_\epsilon/B_\epsilon)'<-c.
+\]
+The finite-order preparations reserve two ordinary input derivatives
+for each logarithmic rate and one coefficient derivative for this
+division, which gives the displayed derivative bounds.
+
+On the common small lower input intervals, the two large powers
+and their required absolute coefficient derivatives are bounded
+by $C\epsilon^{-N}e^{-b/\epsilon}$ with a fixed $b>0$.
+Their exact reversible equality and the signed extensions give,
+at any closing zero, $|\nu|=o(1)(|\bar a|+|\delta|)$ by
+Lemma~\ref{rw:centers:relative-forcing}. If the latter two
+parameters vanish, the fibre is a center and has no isolated zero.
+Otherwise the strict quotient margin and relative $C^1$ forcing bound
+give at most one simple zero of $M$ by
+Lemma~\ref{rw:atlas:two-columns}.
+Two Rolle steps give the claimed bounds for $K$ and $F$.
+Both full central outputs increase with $t$, so their positivity
+truncates the deficit interval to one interval. Excluded endpoints
+contribute no formal closing zero.
+\end{proof}
+
+With a finite transverse upper limit, the lower possibilities are now
+exhausted: both arcs are regular, the incoming arc alone loses
+positivity, or both arcs lose positivity.
+Lemma~\ref{rw:finite:action-order} excludes an outgoing loss alone.
+The remaining finite upper limit is a saddle and is treated next.

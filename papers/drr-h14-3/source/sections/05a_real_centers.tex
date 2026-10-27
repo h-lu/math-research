@@ -1,0 +1,354 @@
+\subsection{The two center branches and their real period domains}
+
+The center identities used below are identities of actual return maps
+on specified real domains. In original coefficients the two branches
+are
+\[
+ \mathcal C_r=\{a=c=d=0\},\qquad
+ \mathcal C_c=\{m=-B,\ a=-c,\ d=c\}.
+\]
+For $\rho>0$ these become, respectively,
+\[
+ (\bar a,\bar c,\nu)=(0,0,0),\qquad
+ (\bar m,\bar a,\nu)=(-\bar B,-\bar c,0).
+\]
+Their union is exactly the algebraic set
+$\nu=\tau_1=\sigma_1=0$, because
+$\tau_1=\bar a+\bar c$ and
+$\sigma_1=\bar c(\bar B+\bar m)$.
+We construct their real period domains by explicit first integrals with
+compact level sets, fixing $\epsilon>0$ throughout this subsection.
+These domains supply the actual center returns used in division.
+The transition estimates of Section~\ref{rw:transitions} supply the
+uniform finite jets as a gap or the scale vanishes.
+
+\begin{proposition}[Real separated center]\label{rw:real-centers}
+On $\mathcal C_c$, assume
+\[
+ b=1-\epsilon\bar B>0,\qquad a_0=1-\epsilon\bar c^2>0.
+\]
+Let $I_C$ be the component containing zero of
+$\{\chi:A_C(\chi)>0\}$, where
+\begin{equation}\label{rw:centers:separated-polynomial}
+ A_C(\chi)=a_0+\bar c(1-2\epsilon\bar B)\chi
+                       +b\bar B\chi^2,
+\end{equation}
+and let
+\[
+ J_C=\begin{cases}
+ (-\epsilon,\infty),&\bar B\ge0,\\
+ (-\epsilon,-1/\bar B),&\bar B<0.
+ \end{cases}
+\]
+The change of state coordinates
+\begin{equation}\label{rw:centers:separated-coordinate}
+ \chi=-\frac{X+\bar cY}{1+\bar BY},\qquad
+ X=-\bar cY-\chi(1+\bar BY)
+\end{equation}
+is a diffeomorphism on $1+\bar BY>0$. The inverse image
+$\Omega_C$ of $I_C\times J_C$ is filled by the origin and periodic
+ovals of the original field. More precisely,
+\begin{equation}\label{rw:centers:separated-energy}
+ \mathcal E_C(\chi,Y)
+ =\int_0^\chi\frac{s}{A_C(s)}\,\dd s
+   +\int_0^Y\frac{y}{(y+\epsilon)(1+\bar By)}\,\dd y
+\end{equation}
+is a real analytic first integral on this domain. It has one critical
+point, a nondegenerate minimum at the origin, and compact sublevel
+sets. Every level $\mathcal E_C=h>0$ is one smooth connected oval,
+and the vector field is nonzero on it.
+The construction includes $\bar B=0$ and both signs of the
+quadratic discriminant. On the positive axis $Y=0$, membership in
+this domain is precisely $-p\in I_C$.
+\end{proposition}
+
+\begin{proof}
+The original scaled equations on this branch are exactly
+\[
+ X_\xi=-Y(1+\bar BY)+\epsilon(\bar BX^2-\bar cX),
+ \qquad Y_\xi=(Y+\epsilon)(X+\bar cY).
+\]
+The change \eqref{rw:centers:separated-coordinate} is regular since
+$1+\bar BY>0$; its $X$ derivative is
+$-(1+\bar BY)^{-1}\ne0$. Differentiating its quotient and substituting
+$X=-\bar cY-\chi(1+\bar BY)$ gives, without a time change,
+\begin{equation}\label{rw:centers:separated-field}
+ \chi_\xi=Y A_C(\chi),\qquad
+ Y_\xi=-(Y+\epsilon)(1+\bar BY)\chi.
+\end{equation}
+The derivatives of the two potentials in
+\eqref{rw:centers:separated-energy} are
+$\chi/A_C(\chi)$ and $Y/((Y+\epsilon)(1+\bar BY))$.
+Their Lie derivatives along \eqref{rw:centers:separated-field}
+are $\chi Y$ and $-\chi Y$. Thus the first integral is exact.
+
+Each potential decreases strictly towards zero from its left endpoint
+and increases strictly from zero towards its right endpoint; its
+minimum is zero. We verify divergence at all endpoints.
+For the $Y$ potential the lower endpoint is $-\epsilon$ and
+$1+\bar BY\to b>0$. Its derivative is asymptotic to
+$-\epsilon/[b(Y+\epsilon)]$, so the potential tends to infinity.
+If $\bar B<0$, the upper endpoint $-1/\bar B>0$ is a simple zero
+of the other denominator factor and gives logarithmic divergence.
+If $\bar B>0$, the potential at infinity is
+$\bar B^{-1}\log Y+O(1)$; if $\bar B=0$, it is
+$Y-\epsilon\log((Y+\epsilon)/\epsilon)$ and again diverges.
+
+A finite endpoint of $I_C$ is a simple or double zero of $A_C$
+and is not zero, because $A_C(0)=a_0>0$.
+On the selected side its integrand has the sign of that endpoint
+and absolute size bounded below by a positive constant times the
+inverse distance to it. Integration from zero, in the appropriate
+direction, therefore tends to positive infinity. At an infinite
+endpoint with $\bar B>0$, the integrand is
+$1/(b\bar B\chi)+O(\chi^{-2})$, giving logarithmic divergence.
+With $\bar B=0$ and $\bar c\ne0$, its infinite-end asymptotic is
+$1/\bar c$, giving linear growth of the potential in the outward
+direction. With $\bar B=\bar c=0$ the potential is $\chi^2/2$.
+Finally, if $\bar B<0$, the concave quadratic $A_C$ has two finite
+roots of opposite signs, already covered above. These cases exhaust
+the endpoints. Since both potentials are nonnegative and diverge at
+their endpoints, every sublevel is compact in $I_C\times J_C$.
+
+The only critical point is $(\chi,Y)=(0,0)$. In $(X,Y)$ its Hessian
+is
+\begin{equation}\label{rw:centers:separated-hessian}
+ D^2\mathcal E_C(0,0)=\frac1{1-\epsilon\bar c^2}
+       \begin{pmatrix}1&\bar c\\\bar c&1/\epsilon\end{pmatrix}>0.
+\end{equation}
+Write the potentials as $U(\chi),V(Y)$. For $h>0$, the two roots
+$\chi_-<0<\chi_+$ of $U=h$ bound two graphs
+$V(Y)=h-U(\chi)$, one on either side of $Y=0$.
+They join at $(\chi_\pm,0)$ with nonzero gradient, forming one
+smooth embedded oval. The field has its only equilibrium at the
+origin, so its nonzero tangent field on each compact oval has a
+finite positive period. At $Y=0$, $\chi=-X=-p$, giving the axis criterion.
+\end{proof}
+
+\begin{proposition}[The reversible well]\label{rw:centers:reversible}
+On $\mathcal C_r$, assume $1+\epsilon\bar m>0$ and
+$|\epsilon\bar B|<1/4$. Put $\theta=\epsilon\bar B$,
+$Z=Y+\epsilon>0$ and
+\begin{equation}\label{rw:centers:reversible-energy}
+ \mathcal E_r(X,Y)=X^2 Z^{-2\theta}+V_r(Y),\qquad
+ V_r(Y)=2\int_0^Y u(1-\bar m u)(u+\epsilon)^{-1-2\theta}\,\dd u.
+\end{equation}
+Let $Y_s=1/\bar m$ if $\bar m>0$, and $Y_s=\infty$ otherwise.
+On $J_r=(-\epsilon,Y_s)$ define
+\[
+ h_- =\lim_{Y\downarrow-\epsilon}V_r(Y),\qquad
+ h_+ =\lim_{Y\uparrow Y_s}V_r(Y),\qquad h_* =\min(h_-,h_+).
+\]
+Both limits are positive or infinite. The set
+$\{Y\in J_r,\ 0<\mathcal E_r<h_*\}$ is a period annulus:
+every level in this range is one compact periodic oval. If
+$\bar B\ge0$ and $\bar m\le0$, then $h_*=\infty$ and this
+annulus fills the half-plane $Y> -\epsilon$, apart from its center.
+If $\bar B=0$ and $\bar m>0$, its upper boundary is the
+homoclinic loop through $(0,1/\bar m)$.
+\end{proposition}
+
+\begin{proof}
+Here the field is
+$X_\xi=Y(\bar mY-1)+\theta X^2$,
+$Y_\xi=(Y+\epsilon)X$.
+Differentiating $X^2Z^{-2\theta}$ cancels its cubic terms and gives
+$2X Y(\bar mY-1)Z^{-2\theta}$; the derivative of $V_r$
+is its negative. This proves the first integral.
+On $J_r$ the factor $1-\bar mY$ is positive. Thus $V_r$ decreases
+strictly from its left endpoint to its minimum zero at $Y=0$ and
+increases strictly thereafter. Its second derivative at zero is
+$2\epsilon^{-1-2\theta}>0$.
+At the lower boundary its derivative has a negative nonzero multiple
+of $(Y+\epsilon)^{-1-2\theta}$ as its leading term. Hence
+$h_- =\infty$ when $\theta\ge0$; when $\theta<0$ the finite
+limit is positive. If $\bar m>0$, $h_+$ is finite and positive.
+If $\bar m\le0$, the restriction $|\theta|<1/4$ makes the
+positive-end integral divergent, both for the linear and quadratic
+numerator.
+
+For $0<h<h_*$, the regular coordinate $u=XZ^{-\theta}$ changes
+the energy into $u^2+V_r(Y)$. Its level is one smooth compact oval,
+by the same two-graph construction as above. The field vanishes only
+at the origin in $J_r$, so the oval is periodic. The restriction
+$h<h_*$ retains compactness when $\bar B<0$ or $\bar m>0$.
+
+When $\bar B=0$ and $\bar m>0$, $h_- =\infty$ and the upper
+critical point of $V_r$ at $Y_s$ is a nondegenerate maximum.
+The energy $h_+=V_r(Y_s)$ has a negative turning point and two
+arcs meeting at the saddle $(0,Y_s)$. The field has no other zero
+on those arcs. They form the bounding homoclinic loop of the central
+well. For $\bar B\ge0$, $\bar m\le0$, both limiting energies
+are infinite, proving the full half-plane assertion.
+\end{proof}
+
+\subsection{The three-saddle triangle and the signed weak boundary}
+
+The separated integral covers either sign of $\bar B$. We now extract
+two boundary descriptions needed later: exact upper power coordinates
+on the three-saddle triangle, and a common finite strong and upper weak
+intersection through $\bar B=0$.
+
+\begin{lemma}[The triangle and its upper saddle]\label{rw:centers:triangle}
+On $\mathcal C_c$ write $\bar B=-\beta<0$,
+$\bar m=\beta$, $\bar c=-\bar a$, and assume
+$1-\epsilon\bar a^2>0$. Set
+\[
+ b=1+\epsilon\beta,\qquad
+ \Delta=\sqrt{\bar a^2+4\beta b},\qquad
+ k_\pm=\frac{\bar a\pm\Delta}{2b},
+ \qquad
+ p_+=\frac{\bar a-k_-}{\beta},\quad
+ p_- =\frac{k_+-\bar a}{\beta}.
+\]
+Then $p_\pm>0$ and the period domain $\Omega_C$ is the triangle
+\begin{equation}\label{rw:centers:triangle-domain}
+ \mathcal T=\{L_0=Y+\epsilon>0,\quad
+ L_+=p_+-X+k_-Y>0,\quad
+ L_-=p_-+X-k_+Y>0\}.
+\end{equation}
+Its vertices are
+$((\bar a\pm\Delta)/(2\beta),-\epsilon)$ and
+$(\bar a/\beta,1/\beta)$.
+The positive function
+\begin{equation}\label{rw:centers:triangle-integral}
+ \mathcal H=L_0L_+^{\lambda_+}L_-^{\lambda_-},\qquad
+ \lambda_\pm=\frac{\Delta\pm\bar a(1+2\epsilon\beta)}
+                         {2\epsilon\beta\Delta}
+\end{equation}
+is a first integral on $\mathcal T$.
+Near the upper vertex the analytic coordinates
+\[
+ U=L_+L_0^{\epsilon\beta},\qquad
+ V=L_-L_0^{\epsilon\beta}
+\]
+have a regular inverse and give the exact orbital equation
+\begin{equation}\label{rw:centers:triangle-power}
+ \frac{\dd V}{\dd U}=-r\frac VU,
+ \qquad r=\frac{\lambda_+}{\lambda_-}=\frac{p_+}{p_-}>0.
+\end{equation}
+On compact $\beta$ intervals bounded away from zero, these local
+coordinate changes have bounded finite jets for small scales and
+bounded $\bar a$.
+\end{lemma}
+
+\begin{proof}
+The identity
+\[
+ \Delta^2-\bar a^2(1+2\epsilon\beta)^2
+       =4\beta b(1-\epsilon\bar a^2)>0
+\]
+proves positivity of $p_\pm$ and $\lambda_\pm$.
+The lines in \eqref{rw:centers:triangle-domain} meet at the stated
+vertices. In the separated coordinate the roots of $A_C$ are
+$-p_+$ and $p_-$; its leading coefficient is negative.
+For $Y<1/\beta$, the inequalities
+$-p_+<\chi<p_-$ translate exactly into $L_+>0,L_->0$.
+Thus the triangle agrees with $\Omega_C$.
+
+Direct differentiation of its three affine factors gives their
+cofactors
+\[
+ X-\bar aY,\qquad
+ -\epsilon\beta X-bk_-Y,\qquad
+ -\epsilon\beta X-bk_+Y.
+\]
+The identities
+$\lambda_++\lambda_-=1/(\epsilon\beta)$ and
+$\lambda_+k_-+\lambda_-k_+=-\bar a/b$
+make their weighted sum zero. This proves the first integral.
+Its logarithm is strictly concave and tends to negative infinity
+at the boundary. At the origin
+\[
+ \frac{\lambda_+}{p_+}=\frac{\lambda_-}{p_-}
+                  =\frac{b}{\epsilon\Delta},
+\]
+so both components of its gradient vanish. The energy
+$-\log(\mathcal H/\mathcal H(0,0))$ is consequently proper and
+strictly convex on the triangle. Its positive levels give the same
+periodic ovals described by Proposition~\ref{rw:real-centers}.
+
+At the upper vertex $L_0=\epsilon+1/\beta>0$ and the two other
+factors have independent gradients. Multiplication by the positive
+analytic unit $L_0^{\epsilon\beta}$ preserves their invertible
+Jacobian. Since $\epsilon\beta(\lambda_++\lambda_-)=1$,
+\[
+ \mathcal H=U^{\lambda_+}V^{\lambda_-}.
+\]
+Differentiation along the nonzero saddle orbit gives
+\eqref{rw:centers:triangle-power}. The ratio equals $p_+/p_-$ by
+the preceding gradient identity. Near this finite positive-height
+vertex, $L_0$ is bounded away from zero on each stated compact block;
+all finite derivatives of the units and their inverses are bounded.
+\end{proof}
+
+\begin{lemma}[A common real weak boundary]\label{rw:centers:weak-boundary}
+Fix $\bar c>c_*>0$ in a compact interval and let $\bar B$ vary
+in a neighborhood of zero on $\mathcal C_c$. For sufficiently
+small $\epsilon>0$ define
+\begin{equation}\label{rw:centers:weak-intersection}
+ \Delta_b=\sqrt{\bar c^2-4b\bar B},\qquad
+ k_s=\frac{-\bar c-\Delta_b}{2b},\qquad
+ \widehat p_C=\frac{2(1-\epsilon\bar c^2)}
+                 {\bar c(1-2\epsilon\bar B)+\Delta_b}.
+\end{equation}
+These are regular through $\bar B=0$ and
+$\bar B\widehat p_C=\bar c+k_s$.
+The invariant line
+$L=\widehat p_C-X+k_sY=0$ is the boundary of $\Omega_C$
+met by its positive finite axis inputs. Thus inputs
+$p=\widehat p_C-t$, $0<t\ll1$, belong to the period domain.
+In the reversed upper chart $R=1/Y$, $y=X/Y-k_s$, the same line
+is $y=\widehat p_CR$, and its restricted equation is
+\begin{equation}\label{rw:centers:weak-restricted}
+ \dot R=\widehat p_CR(R+\bar B)(1+\epsilon R),\qquad
+ \gamma_C=\bar B\widehat p_C.
+\end{equation}
+In particular $\partial_{\bar B}\gamma_C>c_1>0$ on a common
+smaller block. The finite strong and upper weak intersections on
+this center are the same actual point $p=\widehat p_C$.
+\end{lemma}
+
+\begin{proof}
+The discriminant of $A_C$ is
+$\bar c^2-4b\bar B$. Rationalizing its root nearest zero on the
+negative side gives $-\widehat p_C$. The displayed denominator
+has a fixed positive margin. Substitution in
+$bk_s^2+\bar c k_s+\bar B=0$ proves
+$\bar B\widehat p_C=\bar c+k_s$, including its continuous
+value at $\bar B=0$. The equation $\chi=-\widehat p_C$
+from \eqref{rw:centers:separated-coordinate} is precisely $L=0$.
+Its cofactor is $\epsilon\bar BX-bk_sY$, so the line is
+invariant under the original field.
+
+The first positive zero on $Y=-\epsilon$ of the horizontal field
+is
+\[
+ p_\epsilon=\frac{2b}{\bar c+\Delta_b}.
+\]
+The identity $p_\epsilon-\epsilon\bar c=b\widehat p_C$
+shows that this zero lies on $L=0$. Its branch up to $Y=0$
+is the same finite strong boundary just identified by the scalar
+center domain. In the reversed upper chart substitute
+$y=\widehat p_CR$ in the exact projective field and use
+$\bar c+k_s=\bar B\widehat p_C$. This gives
+\eqref{rw:centers:weak-restricted} on the actual weak face. At $\bar B=0$,
+\[
+ \partial_{\bar B}\gamma_C=\widehat p_C
+                =\frac{1-\epsilon\bar c^2}{\bar c}>0.
+\]
+Continuity on the compact block proves the uniform positive margin.
+The actual invariant line can be preserved in any auxiliary extension
+used to construct its weak graph, so the two constructions retain this
+same intersection.
+\end{proof}
+
+For any oval in either of the stated domains, the two paths from its
+axis intersections meet at the same original central height
+$z=1+Y/\epsilon>0$. Their complete central maps therefore agree
+on every common section interval parametrizing these ovals.
+This identity holds throughout each stated real period domain. The
+constructions below provide the signed extensions and coefficient
+segments needed for division. The triangle gives an exact local saddle
+power, while the reversible well retains its own period annulus; the
+separated domain remains the one used across signed $\bar B$ faces.

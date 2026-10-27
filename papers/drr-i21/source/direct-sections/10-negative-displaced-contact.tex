@@ -1,0 +1,59 @@
+\subsection{Negative displaced contact: the weak root on the linear scale}
+\label{sec:direct-negative-displaced}
+
+The preceding estimate loses its normalized constant-coefficient
+margin when that coefficient becomes small. If
+\(q_2/\sqrt{q_1}\) remains bounded, the approaching positive boundary
+root gives the weak-root scale. \Cref{prop:weak-root-passage} reduces
+the count to an estimate for the negative branch beyond the weak-root
+radius. We verify this estimate on the linear scale.
+
+\begin{proposition}[Negative displaced contact]
+\label{prop:direct-negative-displaced}
+For every fixed \(A_0<\infty\), there are fixed
+\(a_{\rm w},\kappa_{\rm w}>0\) such that the return displacement has
+at most two distinct zeros on
+\[
+ q_1=\rho_1^2>0,\quad q_2=\bar c\rho_1,\quad |\bar c|\le A_0,\quad
+ q_0=-a\rho_1^3,\quad 0<a\le a_{\rm w},\quad
+ 0<\kappa=\rho_1/a\le\kappa_{\rm w} ,
+\]
+for all sufficiently small \(\rho_1\) and original parameters.
+\end{proposition}
+
+\begin{proof}
+To apply \cref{prop:weak-root-passage}, set
+\(\ell=\rho_1a=|q_0|/q_1\). Then
+\eqref{eq:weak-root-scales} holds with \(\hat r=1\) and
+\(\epsilon_2=-\bar c a\), \(|\epsilon_2|\le A_0a\), and the common
+logarithmic height coordinate is \(T=-\rho_1\log h=-\kappa a\log h\).
+At the radius \(\ell_d=\rho_1d\) the negative drift is
+\[
+ K_d(x)=a_d+x-\bar c dx^2+d^2x^3R_q(-\ell_dx),
+\]
+so \eqref{eq:weak-root-negative-drift} holds for a small fixed
+\(d_{\max}=d_0\) depending on \(A_0\).
+
+It remains to verify \eqref{eq:weak-root-outer} for the negative graphs
+with \(z<Y_b|\eta|^2\) at \(|\eta|=\rho_1d_0\). Return to the linear
+scale \(\rho_1\), with \(|\eta|=\rho_1X\). Since \(\ell/a=\rho_1\),
+the negative drift on this scale is \(K_1\) from
+\cref{cor:weak-root-negative-first-root}:
+\[
+ K_-^{\rho_1}(X)=a+X-\bar c X^2+X^3R_q(-\rho_1 X).
+\]
+Its first positive root \(\beta\) stays in a fixed compact interval.
+At \(a=\rho_1=0\), it is the positive root of
+\(1-\bar c X-X^2=0\); the bound \(|\bar c|\le A_0\) gives uniform
+separation and a simple-root margin. On \([d_0/2,\beta]\),
+\((K_-^{\rho_1})'(X)/X\ge-C_{A_0,d_0}\).
+
+Apply \cref{cor:weak-root-negative-first-root} with
+\(d_{\max}=d_0\) and with \(\beta^*\) the right end of that compact
+interval. It gives \(\mathfrak H_-\ge-C_{A_0,d_0}-1\) and
+\(|I_{-,T}|=o(1)\) for these graphs, including the limiting negative
+root. Thus \eqref{eq:weak-root-outer} holds.
+\Cref{prop:weak-root-passage} now gives at most two distinct zeros
+of \(\Delta_p\), with \(a_{\rm w}\) and \(\kappa_{\rm w}\) equal to
+the constants \(a_\circ\) and \(\kappa_\circ\) of that proposition.
+\end{proof}

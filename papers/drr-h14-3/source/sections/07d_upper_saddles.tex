@@ -1,0 +1,460 @@
+\subsection{A finite upper saddle above regular lower arcs}
+\label{rw:finite:upper-saddle-section}
+
+Suppose $\bar m>0$ and put
+\[
+ p_c=\frac2{\bar c+\sqrt{\bar c^2+4\bar m}},\qquad
+ q_c=\frac2{-\bar c+\sqrt{\bar c^2+4\bar m}}.
+\]
+We first assume $F_+>0$ on $[0,p_c]$ and $F_->0$ on
+$[0,q_c]$. The perturbed separatrices meet $Y=0$ at
+$P_s,Q_s$, and the returning quadrant of Section~\ref{rw:upper-resonance}
+has regular outer coordinates
+\[
+ p=P_s-\psi_+(t),\qquad q=Q_s-\psi_-(v),
+ \qquad \psi_\pm(0)=0,\quad\psi_\pm'>c>0.
+\]
+Retain the actual exponent $r$ of the saddle passage $v=v(t)$.
+With weak references fixed independently of input,
+Lemma~\ref{rw:finite:regular-lower} gives complete central maps
+$s_++U(t)$, $s_-+V(v)$ and closing function
+\begin{equation}\label{rw:finite:saddle-closing}
+ F(t)=U(t)-V(v(t))-\rho\nu H,\qquad H>h_*>0,
+ \qquad U',V'>0.
+\end{equation}
+The gap $H$ is independent of $t$. On a larger common domain the
+regular rates
+\[
+ \mathsf A_+(t)=\epsilon U''/U',\qquad \mathsf A_-(v)=\epsilon V''/V'
+\]
+have positive margins and the finite mixed jets used below.
+A physical input must traverse the chosen quadrant and both regular
+outer legs, and both central outputs must be positive. These conditions
+restrict a single interval; positivity of each central output is a
+one-sided restriction because both maps are increasing.
+
+The same scalar comparison will be used at secondary scale.
+
+\begin{lemma}[Saddle logarithms and their zero count]
+\label{rw:finite:saddle-counting}
+Let $\epsilon,r>0$, $D=t\partial_t$, $\kappa=r-1$, and let $K$
+be real analytic on $0<t<t_0$. Fix positive constants $c,C,c_1$.
+$K_c,R_*,T,W$ are independent of $t$. With common bounds and
+implied constants, each preparation gives, for sufficiently small
+$\epsilon$, uniform section cutoffs and the stated bound with multiplicity.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item Suppose
+\[
+\begin{gathered}
+ K=K_c+\epsilon\kappa\log t+\mathcal E(t),\qquad
+ |K_c|\ge cR_*,\\
+ |\mathcal E|+|D\mathcal E|\le CR_*\sqrt t,
+ \quad R_*\ge c_1|\kappa|,\quad R_*>0.
+\end{gathered}
+\]
+Then $Z(K)\le1$. If $\kappa=0$ there is no zero; otherwise
+every zero is simple and $K'$ has sign $\kappa$ there.
+\item Suppose $\kappa\ne0$ and, with the compensator of
+\eqref{rw:upper:comp-map},
+\[
+\begin{gathered}
+ DK=\epsilon\kappa+Tt-Wt\omega(t;\kappa)+R(t),\\
+ W/\kappa\ge c,\quad |T|\le C|\kappa|,\quad
+ |R'|\le C|\kappa|\sqrt t .
+\end{gathered}
+\]
+First choosing $t_0$ small and then $|\kappa|$ small gives
+$(DK)'/\kappa<0$, hence $Z(K)\le2$.
+\item Suppose $r$ belongs to a compact positive interval with
+$|r-1|\ge\delta>0$, $A,B,k_0$ have common positive upper and
+lower bounds, and
+\[
+ (DK)'=r^2k_0At^{r-1}-B
+       +O(t+t^{r-1}(t+t^r))+O(\epsilon[1+t^{r-1}]).
+\]
+Then $(DK)'$ is positive for $r<1$ and negative for $r>1$,
+and $Z(K)\le2$.
+\end{enumerate}
+The bounds persist on subintervals, without using a value at $t=0$.
+\end{lemma}
+\begin{proof}
+In \textup{(i)}, choose $t_0$ so $C\sqrt{t_0}<c/2$.
+For $\kappa=0$ the constant fixes the sign. Otherwise, a zero requires
+\[
+ t\le e^{-cR_*/(2\epsilon|\kappa|)},\qquad
+ \frac{|D\mathcal E|}{\epsilon|\kappa|}
+ \le\frac{CR_*}{\epsilon|\kappa|}
+          e^{-cR_*/(4\epsilon|\kappa|)}<1/2 .
+\]
+The last inequality is uniform since
+$R_*/(\epsilon|\kappa|)\ge c_1/\epsilon$. Thus every zero is simple
+and crosses with sign $\kappa$, giving at most one.
+
+For \textup{(ii)}, put $\phi=(t\omega)'$. Then
+$\phi'=-rt^{\kappa-1}<0$ and
+$\phi(t_0,\kappa)\to-\log t_0-1$ as $\kappa\to0$.
+Choose $t_0$ so the latter exceeds $4C/c+1$, and then choose
+the ratio neighborhood so this margin persists. Throughout the interval,
+\[
+ (DK)'/\kappa=T/\kappa-(W/\kappa)\phi+R'/\kappa<0 .
+\]
+Thus $DK$ has at most one zero. In \textup{(iii)}, $t^{r-1}$
+dominates for $r<1$ and tends uniformly to zero for $r>1$;
+choose the section and then the scale to absorb the errors.
+Rolle's inequality and $Z(K')=Z(DK)$ give both two-zero bounds.
+\end{proof}
+
+\begin{proposition}[The regular-lower upper-saddle chart]
+\label{rw:finite:regular-saddle}
+On common coefficient and section neighborhoods of these data, for all
+sufficiently small positive scales, the actual closing function has at
+most three isolated zeros, including multiplicity. This bound is uniform
+through the actual ratio $r=1$. Its critical function
+\begin{equation}\label{rw:finite:saddle-critical}
+ K=\epsilon\log\frac{V'(v)v'}{U'}
+\end{equation}
+has at most two zeros on any nonidentity fibre containing a closing
+zero. More generally the critical-function bound holds whenever
+\eqref{rw:finite:saddle-relative-forcing} is supplied on the fixed
+fibre. It holds on the whole common comparison interval $0<t<t_0$,
+including inputs where a complete central output is nonpositive;
+central positivity only restricts this interval when actual returns
+are counted. The reversible identity fibre contributes no isolated zero.
+\end{proposition}
+\begin{proof}
+By \ref{rw:zero-calculus} it suffices to bound $Z(K)$ by two.
+Put $D=t\partial_t$ and
+$E=t v''/v'-(r-1)$. The exact differentiated critical function is
+\begin{equation}\label{rw:finite:saddle-M}
+ M=DK=\epsilon(r-1)+\mathsf A_-(v)tv'-t\mathsf A_+(t)+\epsilon E.
+\end{equation}
+The outer coefficients have bounded jets through $t=v=0$.
+
+First keep $r$ a fixed distance from one. Axis normalization as in
+\eqref{rw:upper:axis-equation}, without its subsequent resonant
+shears, gives $v=k_0t^r e^w$ with a bounded positive unit $k_0$.
+The reciprocal integral there implies
+$|D^jw|\le C\epsilon(t+t^r)$ for the finitely many input orders
+needed here. Indeed
+$t^r\int_t^1s^{-r}\,ds=(t-t^r)/(r-1)$; the same estimate for
+its Euler derivatives follows from the integral equation and bounded
+state derivatives on the rectangle. The ratio separation bounds the
+denominator. Thus Lemma~\ref{rw:finite:saddle-counting}\textup{(iii)}
+applies with $A=\mathsf A_-(0)$ and
+$B=\mathsf A_+(0)$, proving the count on this ratio range.
+
+Near ratio one, use the compensator preparation
+\eqref{rw:upper:comp-map}, with $\kappa=r-1$ and $|\kappa|\le1/64$.
+Reserve eight total orders there, so the curvature formula retains
+four Euler and two coefficient orders. The actual ratio is a legal
+coefficient coordinate: at the reversible face
+$\partial_{\bar c}\kappa=-1/\sqrt{\bar m}+O(\epsilon)$.
+Integrating the regular rates gives the exact identity
+\begin{equation}\label{rw:finite:saddle-log}
+\begin{aligned}
+ K&=K_c+\epsilon\kappa\log t+\mathcal E(t),\qquad
+ K_c=\epsilon\log\frac{rV'(0)}{U'(0)},\\
+ \mathcal E(t)&=\int_0^{v(t)}\mathsf A_-(z)\,dz-\int_0^t\mathsf A_+(z)\,dz
+       +\epsilon\left[w+\log\frac{r+Dw}{r}\right].
+\end{aligned}
+\end{equation}
+The passage estimates imply
+$|\mathcal E|+|D\mathcal E|\le Ct^{1/2}$.
+No restriction is placed on $|\kappa\log t|$.
+
+To compare the constant with the logarithmic term, write
+$U=\alpha_U(p)e^{-A_+(p)/\epsilon}$ and
+$V=\alpha_V(q)e^{-A_-(q)/\epsilon}$ here with the action notation
+of Section~\ref{rw:finite:geometry}, and put
+$r_U=A_+'-\epsilon(\log\alpha_U)'$, and similarly $r_V$.
+These factors are positive. At the separatrix inputs one obtains
+\begin{equation}\label{rw:finite:saddle-constant}
+ K_c=A_+(P_s)-A_-(Q_s)
+  +\epsilon\log\frac{r\alpha_V(Q_s)r_V(Q_s)\psi_-'(0)}
+                          {\alpha_U(P_s)r_U(P_s)\psi_+'(0)}.
+\end{equation}
+The logarithmic factors have positive margins and bounded required jets.
+On $\nu=0$ the regular connections give
+$K_c=A_+(p_c)-A_-(q_c)+O_N(\epsilon(1+|\log\epsilon|))$.
+At a limiting ratio-one point with $\bar a\ne0$ this limit is
+\[
+ -2\bar a\int_0^{1/\sqrt{\bar m}}
+                       \frac{X^2}{F_+(X)F_-(X)}\,dX\ne0.
+\]
+It stays bounded away from zero in a smaller neighborhood.
+
+The coordinates of Section~\ref{rw:upper-resonance} satisfy
+$v=t$ and $U=V$ on $\bar a=\kappa=\nu=0$. Choose the coefficient
+contractions within the same quadrant and enlarged regular lower
+tubes, so these exact identities can be used for division. With
+$n=|\bar a|+|\kappa|+|\nu|$, division along these contractions gives
+\begin{equation}\label{rw:finite:saddle-center-estimates}
+ |\mathcal E|+|D\mathcal E|\le Cnt^{1/2},\qquad
+ K_c=\bar a A_c+\kappa B_c+\nu C_c,
+ \quad A_c<-c,\quad |B_c|+|C_c|\le C.
+\end{equation}
+To see the strict sign, differentiate \eqref{rw:finite:saddle-constant}
+at fixed actual $\kappa$; there
+$\partial_{\bar a}\bar c=O(\epsilon)$ and
+\[
+ A_c\longrightarrow-2\int_0^{1/\sqrt{\bar m}}
+                         \frac{X^2}{(1+\bar BX^2)^2}\,dX<0.
+\]
+Coefficient derivatives of $t^r$ only add fixed powers of $|\log t|$,
+absorbed by the gap between $t^{1-1/64}$ and $t^{1/2}$.
+
+On these regular lower tubes the actions have a common positive
+lower bound $S_*>0$. The absolute quantities $U,V$ and their
+finite coefficient derivatives are bounded by
+$C\epsilon^{-M}e^{-S_*/\epsilon}$; composition with
+$t^r$ and its coefficient derivatives preserves this bound uniformly
+on the section. The center identity and coefficient division therefore
+give the hypothesis of Lemma~\ref{rw:centers:relative-forcing} with
+$I=|\bar a|+|\kappa|$. Every fibre containing a closing zero satisfies
+\begin{equation}\label{rw:finite:saddle-relative-forcing}
+ |\nu|\le\eta(\epsilon)(|\bar a|+|\kappa|),
+ \qquad\eta(\epsilon)\longrightarrow0.
+\end{equation}
+If both generators vanish, this forces the exact identity fibre.
+
+For a nonzero limiting $\bar a$, the constant and remainder estimates
+satisfy Lemma~\ref{rw:finite:saddle-counting}\textup{(i)} with $R_*=1$.
+Near the reversible face fix a large $K_0$. In the cone
+$|\bar a|>K_0|\kappa|$, the divided constant and relative forcing
+give the same hypotheses with $R_*=|\bar a|$.
+
+In the remaining cone $|\bar a|\le K_0|\kappa|$, the compensator
+controls the derivative. A nonidentity fibre has $\kappa\ne0$ and
+$n\le C_{K_0}|\kappa|$.
+Set $A=\mathsf A_-(0)$ and $B_0=\mathsf A_+(0)$. Using
+$t^r=t-\kappa t\omega(t;\kappa)$ in
+\eqref{rw:finite:saddle-M} and the curvature formula gives
+\begin{equation}\label{rw:finite:saddle-compensator}
+\begin{aligned}
+ M&=\epsilon\kappa+Tt-Wt\omega+R,\\
+ T&=rA-B_0+\epsilon\sigma(2+1/r),\qquad
+ W=r(A\kappa+2\epsilon\sigma).
+\end{aligned}
+\end{equation}
+The prepared coefficients vanish at zero scale and on the reversible
+face, so $|\sigma|\le C\epsilon n$.
+All remaining terms vanish on that face as well. The reserved mixed
+jets of the passage and the regular rates, followed by one coefficient
+division, give $|D^jR|\le Cnt^{3/2}$, $j\le2$.
+Explicitly, the undivided products have powers at least
+$t^{2-2/64}$ times fixed logarithmic powers; their coefficient
+variations retain a power strictly larger than $3/2$.
+Also $|T|\le Cn$, and the positive margin of $A$ gives
+$W/\kappa\ge c>0$ for small scale. Hence
+$|R'|\le C_{K_0}|\kappa|\sqrt t$.
+Lemma~\ref{rw:finite:saddle-counting}\textup{(ii)} now gives
+$Z(K)\le2$ in the remaining cone. Together with the separated-ratio
+case this proves the critical-function bound; \ref{rw:zero-calculus}
+gives $Z(F)\le3$ on the physical subinterval.
+\end{proof}
+
+\begin{lemma}[Coefficient and endpoint signs]
+\label{rw:finite:saddle-entry-signs}
+On a regular-lower saddle fibre with
+\eqref{rw:finite:saddle-relative-forcing}, suppose an incoming regular
+overlap supplies
+\[
+ \tau\sigma_1<0,\quad |\tau|\le C|\sigma_1|,
+ \qquad\operatorname{sign}K=-\operatorname{sign}\sigma_1,
+ \qquad \tau=\bar a+\bar c,\quad
+ \sigma_1=\bar c(\bar B+\bar m).
+\]
+Then $\bar a\bar c<0$, $|\bar a|\le C_1|\bar c|$,
+$\operatorname{sign}\kappa=-\operatorname{sign}\bar c$, and
+$K(0+)$ has sign $\bar c$, opposite to the supplied overlap sign.
+The approach toward this saddle is increasing $p$, hence decreasing
+$t$. The endpoint limit refers to the same relative critical function
+on its common extension $0<t<t_0$; if a central-output condition cuts
+off that interval, it does not assert a positive central return at
+the excluded endpoint. These are entrance data for the interval
+argument of Section~12.
+\end{lemma}
+\begin{proof}
+Regular lower positivity gives the identity and inequality
+\[
+ 0< F_+(p_c)/p_c+F_-(q_c)/q_c
+                  =(\bar B+\bar m)(p_c+q_c).
+\]
+Thus $\sigma_1$ has the sign of $\bar c$. The asserted coefficient
+cone follows from the two hypotheses on $\tau$.
+For the actual saddle, $\kappa=-\operatorname{tr}/\lambda_u$.
+The zero-scale divided field has trace $\bar c+\nu$, so near the
+reversible face the expansion is
+\[
+ \kappa=-\bar c/\sqrt{\bar m}
+ +O(\bar c^2+\epsilon|\bar c|+\epsilon|\bar a|+|\nu|).
+\]
+The coefficient cone and the relative forcing absorb the error,
+first giving $|\kappa|\le C|\bar c|$ and then its opposite sign.
+Away from $\bar c=0$ the limiting formula
+$\kappa_0=-2\bar c/(\sqrt{\bar c^2+4\bar m}+\bar c)$
+has a fixed nonzero margin, preserved at small scale and forcing.
+Finally \eqref{rw:finite:saddle-log} has bounded remainder and
+$\epsilon\kappa\log t$ has sign $-\kappa$ as $t\downarrow0$.
+The coefficient cone and the supplied overlap sign therefore give
+the required endpoint sign on the comparison continuation.
+\end{proof}
+
+\subsection{An upper saddle with one incoming lower loss}
+\label{rw:finite:upper-loss-section}
+
+Keep the outgoing lower arc regular and let the incoming arc lose
+positivity. A simple first incoming root must coincide with $q_c$;
+a double root can also occur before it. In both cases use the
+whole-interval nonnegativity required by
+Section~\ref{rw:finite:geometry}, rather than only the value at $q_c$.
+
+\begin{proposition}[The incoming-loss upper-saddle chart]
+\label{rw:finite:upper-loss}
+On common neighborhoods of either such configuration, the actual
+closing function has at most three isolated zeros, with multiplicity.
+For the actual ratio $r\ge1$, its critical function is strictly
+negative and the closing function is strictly increasing, so its bound
+is one. For $r<1$ the multiplied critical numerator below is strictly
+increasing, giving at most two critical zeros and three closing zeros.
+These assertions hold on the entire actual passing interval, even
+when its boundary moves away from the upper separatrix input.
+\end{proposition}
+\begin{proof}
+For a simple incoming root, Proposition~\ref{rw:lower-preparation} gives
+$V(v)=D_-(g(v))$, where $g'>c>0$ and passage requires $g(v)>0$.
+Write $\lambda=h_-/\epsilon$, $L=\epsilon\lambda$ and
+\[
+ \frac{D_-''(g)}{D_-'(g)}=\frac{\lambda-1}{g}+R_-(g),
+ \qquad C(v)=R_-(g(v))g'(v)+g''(v)/g'(v).
+\]
+The remainder and its needed ordinary jets are bounded, by the
+power preparation and the positive large-exponent factor in $D_-'$.
+The critical function remains
+$K=\epsilon\log(V'(v)v'/U')$. Its exact numerator, multiplied
+by the positive factor $tg$, is
+\begin{equation}\label{rw:finite:upper-simple-numerator}
+ M_s=(L-\epsilon)tg'v'+\epsilon g(\kappa+E)
+                 +\epsilon tgv'C-\mathsf A_+(t)tg.
+\end{equation}
+
+For a double root, use the increasing Morse slow entry $g(v)$,
+$g'>c>0$, and write $f(v)=\mu+g(v)^2$. If the root precedes
+$q_c$, choose one phase interval containing both the minimum and
+the compact upper-entry range. The bound $F_I\!{}^{\prime\prime}>1$
+and the positive finite horizontal coordinate
+give one increasing Morse coordinate and one bounded positive time
+unit on that entire interval. Fixed regular pieces may be included
+in the connections. The moving-entry relative formula,
+including any regular normal input as part of its relative amplitude,
+gives
+\[
+ \frac{V''(v)}{V'(v)}
+ =\frac{\mathsf A_-(g(v))g'(v)}{\epsilon f(v)}+\frac{g''(v)}{g'(v)}.
+\]
+Here $\mathsf A_-$ has a positive margin and bounded jets by
+Lemma~\ref{rw:transitions:moving-rate}. Put
+$J=\mathsf A_-(g)g'$ and $C=g''/g'$. The exact numerator, now with
+positive factor $tf$, is
+\begin{equation}\label{rw:finite:upper-double-numerator}
+ M_d=Jtv'+\epsilon f(\kappa+E)+\epsilon ftv'C-\mathsf A_+(t)tf.
+\end{equation}
+Passage requires $\mu+s^2>0$ at every point between $g(v)$ and
+the fixed exit. Since $g$ and $v$ increase, the permitted inputs form
+an interval. The physical interval is its intersection with the upper
+quadrant, regular connection domains and positive central-output
+conditions. An excluded $t=0$ supplies no physical endpoint value.
+
+For $r\ge1$ choose a fixed incoming section $R$ before its limiting
+first root such that $A_-(R)>A_{\rm out}+3$. The incoming action
+diverges at either a simple or double root, whereas the outgoing
+action stays bounded. Choose a positive section gap and shrink the
+neighborhood so that every incoming endpoint lies beyond $R$ by
+that gap. The upper derivative
+$v'=t^{r-1}e^w(r+Dw)$ is uniformly bounded for $r\ge1$, including
+$r=1$; the regular outer derivatives are bounded too.
+Lemma~\ref{rw:finite:incoming-contraction} therefore gives
+$V'(v)v'<U'(t)$ on the whole passing interval, hence $K<0$.
+It applies to the actual incoming arc and its reference difference;
+no derivative estimate on its long transit time is required.
+
+For $r<1$ separated from one, the first term in the derivative of
+either numerator is at least $ct^{r-1}$. The other terms are
+$O(1)+o(t^{r-1})+O(\epsilon t^{r-1})$ by the reciprocal upper
+estimate used above. Choosing section and then scale proves $M'>0$.
+As $r\uparrow1$, this argument needs the sign of the resonant
+curvature term. We compute that sign in the original field.
+At a limiting ratio-one configuration, $\bar c=0$ and $p_c=q_c$.
+Incoming loss with outgoing positivity implies $\bar a>0$.
+For a simple loss this follows from
+$F_+(p_c)-F_-(p_c)=2\bar ap_c>0$; for a double loss its positive
+root has $\bar a=2\sqrt{\bar B}>0$.
+Appendix~\ref{rw:app:upper-resonant-sign} derives from the original
+field and its exact zero-trace equation
+\[
+ \sigma|_{\kappa=\nu=0}
+  =-\chi_{\rm loc}^2\epsilon\bar a
+                       [\bar m^{5/2}+O(\epsilon)].
+\]
+Consequently $\sigma<-c\epsilon$ on fixed smaller ratio and
+coefficient neighborhoods of this loss configuration.
+The actual curvature formula is therefore
+$E=-\sigma Q+R_E$, where $Q,Q'>0$ and
+$|D^jR_E|\le C\epsilon t^{7/4}$ for the orders used here.
+
+For the simple numerator, group its differentiated terms as
+\[
+ M_s'=(rL-\epsilon)g'v'-\mathsf A_+(0)g(0)
+       +Lg'v'E+\epsilon gE'+\mathcal R_s,
+\]
+where
+$|\mathcal R_s|\le Ct^{r-1}(v+t+\epsilon)$ on the smaller
+near-resonant section. This bound follows directly by differentiating
+\eqref{rw:finite:upper-simple-numerator}: the additional quadratic
+velocity terms contain $tv'=O(v)$, and $g(v)-g(0)=O(v)$.
+Terms with $C$ carry $\epsilon$; terms with its extra factor $E$
+use $|E|\le C\epsilon t^{1-1/64}(1+|\log t|)$.
+The first term is at least $ct^{r-1}$, whereas $g(0)$ tends to zero
+at the limiting simple loss. The principal parts of the two displayed
+curvature terms are nonnegative because $g>0$ on passage. Their
+remainders are bounded by $C\epsilon t^{3/4}(1+v')$ and are
+absorbed by the positive margin. Thus $M_s'>0$.
+
+For the double numerator the same differentiation gives
+\[
+ M_d'=r^2J(0)t^{r-1}-\mathsf A_+(0)f(0)
+ +(J+\epsilon f_v)Ev'+\epsilon fE'+\mathcal R_d,
+ \qquad |\mathcal R_d|\le Ct^{r-1}(v+t+\epsilon).
+\]
+Here $f(0)$ need not tend to zero when the double root precedes the
+upper endpoint, so compare the two constant terms together.
+At zero scale and ratio one the incoming phase is
+$g=1/q-\bar a/2$, $\mu=\bar B-\bar a^2/4$.
+Put $k_0=g'(0)>0$. The symmetric upper connections then have
+$p_t(0)=q_v(0)=-k_0p_c^2$. Division of the lower slow time by
+$x=1/q$ makes its limiting normal rate $1/x=q$.
+Consequently
+\[
+ J(0)=p_ck_0,\qquad \mathsf A_+(0)=\frac{k_0p_c^3}{F_+(p_c)},
+ \qquad f(0)=\frac{F_-(p_c)}{p_c^2}.
+\]
+Their exact limiting difference is
+\begin{equation}\label{rw:finite:upper-double-gap}
+ J(0)-\mathsf A_+(0)f(0)
+       =\frac{2\bar a k_0p_c^2}{F_+(p_c)}>0.
+\end{equation}
+For nearby $r<1$, the factor $t^{r-1}\ge1$ preserves a fixed
+positive margin after reducing the ratio neighborhood; if $f(0)<0$
+the estimate improves. Thus this argument includes a double root
+before the limiting upper endpoint. Since $J+\epsilon f_v>c$
+and $f>0$ on the actual interval, the principal curvature terms are
+again nonnegative. Their remainder and $\mathcal R_d$ are smaller
+than this margin after fixed section and scale restrictions. Hence
+$M_d'>0$ on the entire passing interval.
+
+In both cases $M$ is a positive multiple of $K'$ and is strictly
+increasing. Thus \ref{rw:zero-calculus} gives at most two critical
+zeros and three closing zeros on the entire physical interval, including
+multiplicities and analytic endpoint germs. The entrance argument in
+Section~12 joins this interval to its preceding regular part.
+\end{proof}

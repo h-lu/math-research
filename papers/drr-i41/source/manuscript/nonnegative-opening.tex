@@ -1,0 +1,305 @@
+\section{Nonnegative opening: determinant and trace faces}
+\label{sec:nonnegative-opening}
+\label{subsec:deg-nonnegative}
+
+The high-height estimate reduces the remaining problem to bounded
+rescaled heights. At their lower boundary, the determinant chart has a
+hyperbolic saddle, while the trace chart includes its saddle--node limit.
+The determinant count requires the absolute first variation, including
+both tail gains. The trace count also requires the additional outgoing
+saddle. We treat
+both passages in the affine input and with the divided closing of
+Lemma~\ref{lem:closing}.
+
+\begin{lemma}[Finite coefficient--phase atlas]
+\label{deg:lem-positive-atlas}
+Fix the signed high-height constant \(K_H\) and put \(K=2K_H\).
+For \(\alpha_0\ge0\), below \(z(\gamma)\le K(\alpha_0+\alpha_1^2)\),
+the nonzero coefficients have the overlapping descriptions
+\begin{align}
+ &\alpha_0=r_D^2>0,\qquad \alpha_1=r_DA_D,\qquad |A_D|\le P_D,
+ \label{deg:determinant-chart}\\
+ &\alpha_0=r_L^2a_L,\qquad \alpha_1=\sigma r_L,\qquad
+ 0\le a_L\le a_*,\quad \sigma\in\{-1,1\},
+ \label{deg:trace-chart}
+\end{align}
+where \(P_D>2/\sqrt{a_*}\). The determinant and signed-trace
+receivers below cover every low-height through input, including regular
+continuations, by overlapping stopped and compact strict intervals.
+Their cuts precede a displacement zero. If \(\alpha_0=\alpha_1=0\),
+every positive-height through input is in the signed high-height range.
+\end{lemma}
+
+\begin{proof}
+Use \eqref{deg:determinant-chart} when
+\(|\alpha_1|\le P_D\sqrt{\alpha_0}\); otherwise set
+\(r_L=|\alpha_1|\), so \(a_L<a_*/4\). The face
+\(\alpha_0=0\), \(\alpha_1\ne0\), has \(a_L=0\).
+These are whole-coefficient alternatives with a strict overlap and no
+restriction on either \(\gamma/r_D\) or \(\gamma/r_L\).
+Their bounded normalized heights are respectively \(K(1+P_D^2)\)
+and \(K(1+a_*)\). Their physical phase covers are constructed in
+Lemma~\ref{deg:lem-determinant-preparation} and
+Proposition~\ref{deg:prop-stopped-trace}. For the trace limiting field
+\(X'=a_L+\sigma X-Y\), \(Y'=-XY\), at \(a_L=0\) its centre
+manifold has \(Y=\sigma X+O(X^2)\), hence
+\(\dot Y=-\sigma X^2+O(X^3)\); its weak quadratic coefficient is
+nonzero. The double-zero coefficient face has no positive low-height
+input, and is covered by Corollary~\ref{rew:cor-high-derivative-signed}.
+\end{proof}
+
+\subsection{Preparation on the actual determinant sections}
+
+\begin{lemma}[Determinant section preparation]
+\label{deg:lem-determinant-preparation}
+Fix \(P_D<\infty\), the passive compact coefficient block, and the
+original buffered windows. For independent sufficiently small
+\(r=r_D>0\) and \(|\gamma|\), \(\alpha_0=r^2\),
+\(\alpha_1=rp\), \(|p|\le P_D\), choose a fixed positive unscaled
+raw-height cap \(z_*\). On the actual interval
+\begin{equation}\label{deg:det-actual-receiver}
+ \mathcal I_\theta=\{x:a_\theta+x\in J_\theta^{\rm out},\quad
+       0<H_\theta(x)<z_*\},\qquad
+ H_\theta(x)=z_\theta(\gamma;a_\theta+x),
+\end{equation}
+the stopped transition has the exact composition
+\eqref{sharp:upper-det-composition}, with the two absolute positive
+gains \eqref{sharp:upper-det-scales} and actual cut gap
+\eqref{deg:det-actual-gap}. The normalized end maps and their inverses
+have common ordinary \(C^3\) bounds and derivative units. The incoming
+and outgoing local chords are independent. The compact-spectrum saddle
+estimate \eqref{sharp:upper-det-dulac} and the complete absolute
+variation \eqref{sharp:upper-det-absolute} hold, including saddle ratio
+one. Every phase derivative fixes all coefficients and the actual \(m\).
+
+The low stopped and compact strict receivers, their full regular
+continuations, and the signed high receiver cover \(\mathcal I_\theta\)
+as in \eqref{deg:det-height-cover}. On the strict and high pieces the
+full \(\Pi'\), including divided closing, is uniformly bounded.
+Retain intervening inputs, equality dividers and all original clips;
+exclude natural stopped endpoints. The parameters \(m,r,\gamma\)
+and the two local chord lengths are independent.
+\end{lemma}
+
+\begin{proof}
+We construct the two section maps with their absolute gains before
+estimating the stopped derivative. Keep \(x=h-a_\theta\), \(\Pi=\mathcal C_{\theta,m}\circ
+T_\theta(a_\theta+\cdot)\), and all original finite-side factors.
+The original domain is
+\[
+ J_\theta^{\rm out}=\mathcal T_\theta\cap\operatorname{int}K_+^\sharp
+ \cap T_\theta^{-1}(\operatorname{int}K_-^\sharp)
+ \cap\{\sigma_\theta<d_{\rm out}\}.
+\]
+Order of the raw passage and central height makes
+\eqref{deg:det-actual-receiver} an interval, before capture is invoked.
+With \(v=\gamma+rX\), \(z=r^2Y\), a positive time scaling gives
+\begin{equation}\label{deg:det-field}
+ \begin{split}
+ X'&=1+pX-3\gamma X^2-rX^3-\ell(\gamma+rX)Y,\\
+ Y'&=-Y\{q_\gamma X+rX^2+Cr(\gamma+rX)Y\},\qquad q_\gamma=1+2\gamma.
+ \end{split}
+\end{equation}
+At \(r=\gamma=0\), the saddle \((0,1)\) has eigenvalues
+\((p\pm\sqrt{p^2+4})/2\). Their uniform nonzero moduli give common
+saddle boxes, transverse cuts \(X=\pm L_c\), and persistent branch
+intersections for independent small \(r,\gamma\).
+The incoming gap is exactly
+\begin{equation}\label{deg:det-actual-gap}
+ \xi_D=Y(L_c)-Y_b^+(L_c)>0.
+\end{equation}
+For a limiting through graph starting at \(Y(0)>1\), put
+\(D=Y-1-pX\). The identity \(\dot D|_{D=0}=-XY\) excludes a
+first exit from \(D>0\) on the negative half-axis; reverse time treats
+the positive half-axis. Thus every such graph is strict with quadratic
+tails. The gap is continuous, strictly increasing, and tends uniformly
+to zero at the stopped boundary. A fixed larger strict graph bounds the
+cut heights by order. On any bounded central-height range, the complement
+\(\xi_D\ge\xi_*/2\) therefore has a finite compact strict cover with
+positive finite-cut height and speed margins.
+
+Choose enlarged tail cuts \(\pm L_t\) and buffered auxiliary ports
+with \(0<d_\epsilon<d_+\), joined exactly to the original sections.
+For \(X=\epsilon R\), \(\epsilon=\pm1\), the outward equation is
+exactly \eqref{eq:parabolic-tail} with \((a,s)=(1,r)\):
+\begin{equation}\label{deg:det-tail-graph}
+ Y_R=F^\epsilon(R,Y):=F_\epsilon(R,Y)|_{a=1,s=r}.
+\end{equation}
+The enlarged corridor has \(Y\) and its denominator comparable to
+\(R^2\) up to \(d_\epsilon/r<d_+/r\). Choose
+\(|\lambda_\gamma|<\nu_0<1\). The intrinsic tail estimates with
+reference graph \(Y_*\) and first variation \(j\) give
+\begin{equation}\label{deg:det-tail-action}
+ F_Y=\lambda_\gamma/R+O(r+|p|R^{-2}+R^{-3+\nu_0}),\qquad
+ j=(R/L_t)^{\lambda_\gamma}U_\epsilon,\quad U_\epsilon^{\pm1}\le C,
+\end{equation}
+\begin{equation}\label{deg:det-rational-derivatives}
+ |F_{Y^h}|\le C_h\{rR^{-2h+2}+|\gamma|R^{-2h+1}
+              +|p|R^{-2h}+R^{-2h-1}\},\qquad h=2,3.
+\end{equation}
+The first remainder has bounded integral to the actual endpoint.
+Use the normalization of Lemma~\ref{lem:scalar-normalization},
+\begin{equation}\label{deg:det-normalized-tail}
+ \eta=(Y-Y_*)/j,\qquad
+ \eta_R=N=\{F(R,Y_*+j\eta)-F(R,Y_*)-jF_Y(R,Y_*)\eta\}/j.
+\end{equation}
+Its changed kernel weight is
+\begin{equation}\label{deg:det-normalized-kernel}
+ \|N\|_{C^3}\le C\{rR^{-2+\nu_0}+|\gamma|R^{-3+\nu_0}
+                      +P_DR^{-4+\nu_0}+R^{-5+\nu_0}\}.
+\end{equation}
+Choose \(L_t\) large, then shrink \(r,|\gamma|\) independently.
+The lemma with \(k=2\) supplies enlarged chords and smaller inverse
+images, remaining in the corridor, with
+\begin{equation}\label{deg:det-phase-variations}
+ \|\mathcal T_\epsilon\|_{C^3}
+ +\|\mathcal T_\epsilon^{-1}\|_{C^3}\le C,\qquad
+ 0<c\le\mathcal T_\epsilon'\le C.
+\end{equation}
+
+At the actual port the raw centre and gain are
+\(z_{\rm ref}=r^2Y_*(d_\epsilon/r)\), \(d=r^2j(d_\epsilon/r)>0\), with
+\(d\le Cr^{2-\nu_0}\). The fixed-port proof of
+Lemma~\ref{ann:p0-fixed-tail-ports} admits the whole raw images:
+choose the auxiliary abscissa ratio from the window reserve, then shrink
+the coefficients on the remaining compact bridges. That proof uses only
+the common quadratic corridors just established. On these images
+Lemma~\ref{phys:lem-c3-adapters}
+gives the exact ordinary \(C^3\) normalization
+\begin{equation}\label{deg:det-adapter-normalization}
+ \widehat G(u)=\frac{G(z_{\rm ref}+du)-G(z_{\rm ref})}
+ {G'(z_{\rm ref})d}=u+O_{C^3}(d),
+\end{equation}
+with common inverse bounds. Its divided-closing rows
+\eqref{phys:eq-closing-jets} give, including \(m=0\),
+\begin{equation}\label{deg:det-divided-closing}
+ \|\mathcal C_{\theta,m}\|_{C^3}\le C,
+ \qquad 0<c\le\mathcal C_{\theta,m}'\le C.
+\end{equation}
+
+Finite composition, with the positive-tail inverse on the incoming
+side, now gives the two exact absolute embedding gains
+\begin{equation}\label{sharp:upper-det-scales}
+ \sigma_\pm=r^{2-\lambda_\gamma}V_\pm,\qquad
+ \lambda_\gamma=\frac{12\gamma}{1+2\gamma},\qquad 0<c\le V_\pm\le C,
+\end{equation}
+and the complete stopped transition
+\begin{equation}\label{sharp:upper-det-composition}
+ x=x_b+\sigma_+\delta,\qquad
+ \Pi(x)=y_b+\sigma_-O_\theta(D_\theta(I_\theta(\delta))),
+ \quad I_\theta(\delta)=\xi_D,\quad 0<\delta\le\delta_*<1.
+\end{equation}
+The exact centres, cut factors, bridges and divided closing remain in
+these maps. \(I,O\) vanish at zero, have derivative units, and are
+ordinary \(C^3\) with bounded inverses. The incoming and outgoing saddle
+chords have separate buffers. Their common power makes the quotient of
+the two absolute gains a unit; the individual gains need no positive
+lower bound.
+
+The saddle of \eqref{deg:det-field} belongs to a compact analytic
+family: its two rates have uniform positive moduli and
+\(\wp\in[\wp_0,\wp_1]\Subset(0,\infty)\). Reduce the independent
+incoming and outgoing chords separately to common compatible local
+sections; their actual gap holonomies are ordinary \(C^3\) with
+positive derivative units. Lemma~\ref{lem:uniform-positive-dulac}
+therefore gives a local map \(cz^\wp e^{\mathcal R}\), with two
+Euler remainder rows uniform through \(\wp=1\). Differentiation
+replaces its remainder by
+\(\Psi=\mathcal R+\log(1+z\mathcal R'/\wp)\).
+The actual holonomies add \(O(z)+O(z^{\wp_0})\) to its value and
+first Euler row. Thus, for fixed
+\(0<\alpha<\min\{1,\wp_0\}\), the actual gap-to-gap map satisfies
+\begin{equation}\label{sharp:upper-det-dulac}
+ D_\theta'(z)=C_\theta\wp z^{\wp-1}e^{\Psi_\theta(z)},\qquad
+ C_\theta^{\pm1}\le C,\qquad
+ |\Psi_\theta|+|z\Psi_\theta'|\le Cz^\alpha(1+|\log z|).
+\end{equation}
+The estimate remains uniform at ratio one because it uses no division
+by \(\wp-1\).
+
+Put \(i_0=I'(0)>0\), \(o_0=O'(0)>0\). Differentiating the
+complete composition in its original affine input gives exactly
+\begin{equation}\label{sharp:upper-det-absolute}
+ \begin{gathered}
+ \Pi'(x_b+\sigma_+\delta)
+ =\frac{\sigma_-}{\sigma_+}O'(D(I(\delta)))D'(I(\delta))I'(\delta)
+ =\mathcal A_\theta\delta^{\wp-1}e^{R_\theta(\delta)},\\
+ \mathcal A_\theta=\frac{\sigma_-}{\sigma_+}o_0C_\theta\wp i_0^\wp,
+ \quad 0<c\le\mathcal A_\theta\le C,\qquad
+ |R_\theta|+|\delta R_\theta'|\le C\delta^\alpha(1+|\log\delta|).
+ \end{gathered}
+\end{equation}
+Here the full remainder is
+\[
+ R=\Psi(I(\delta))+(\wp-1)\log\frac{I(\delta)}{i_0\delta}
+       +\log\frac{I'(\delta)}{i_0}
+       +\log\frac{O'(D(I(\delta)))}{o_0}.
+\]
+The ordinary \(C^3\) bounds give \(I/(i_0\delta)=1+O(\delta)\)
+in the required Euler rows, while \(D(I)\) and its first Euler row
+are \(O(\delta^{\wp_0})\). Thus every term has the stated bound.
+The common power in \eqref{sharp:upper-det-scales} cancels exactly,
+without restricting \(\gamma\log r\); at \(\wp=1\) this full
+remainder is still used.
+
+Finally put \(S_D=r^2(1+p^2)\). The actual set cover is
+\begin{equation}\label{deg:det-height-cover}
+ \begin{gathered}
+ \mathcal I_{\rm lo}=\{x\in\mathcal I_\theta:H_\theta\le2K_HS_D\},\qquad
+ \mathcal I_{\rm hi}=\{x\in\mathcal I_\theta:H_\theta>K_HS_D\},\\
+ \mathcal I_\theta=\mathcal I_{\rm lo}\cup\mathcal I_{\rm hi},\qquad
+ \mathcal I_{\rm lo}\subset\{0<\xi_D<\xi_*\}\cup
+ \{\xi_D\ge\xi_*/2\text{ in compact strict receivers}\}.
+ \end{gathered}
+\end{equation}
+The low bound \(Y(0)\le2K_H(1+P_D^2)\) gives the finite
+strict cover above; shrink \(\xi_*\) so its stopped part lies in
+\eqref{sharp:upper-det-composition}. On strict cores the finite-cut
+variations are units, and the common raw power
+\eqref{sharp:upper-det-scales} cancels before the actual bridges and
+divided closing bound \(\Pi'\). The signed high-height corollary
+bounds the same derivative above.
+
+The physical overlaps are \(\xi_*/2<\xi_D<\xi_*\) and
+\(K_HS_D<H_\theta<2K_HS_D\). Gap equality faces belong to the
+adjoining receiver, and both height equality faces are low. Window,
+speed and cap clips preserve the cover and all intervening inputs;
+a removed overlap places the connected retained interval in one
+adjoining receiver. All these choices are made before selecting a
+displacement root.
+\end{proof}
+
+\input{trace-passage}
+
+\begin{lemma}[Nonnegative-opening domains]
+\label{deg:lem-nonnegative-domain}
+On every coefficient fibre with \(\alpha_0\ge0\), the coefficient
+alternatives and phase intervals of
+Lemma~\ref{deg:lem-positive-atlas} cover the connected captured
+physical interval, with their regular continuations and all points
+between captured roots. The compact strict and regular portions have
+bounded complete raw derivative. The common high-height interval is
+contractive after the multiplier shrink of
+Corollary~\ref{rew:cor-high-derivative-signed}, including the
+positive-height equality face \(\alpha_0=\alpha_1=0\).
+The only remaining stopped portions are the determinant passage of
+Lemma~\ref{deg:lem-determinant-preparation} and the signed trace
+passages of Proposition~\ref{deg:prop-stopped-trace}.
+\end{lemma}
+
+\begin{proof}
+For each whole coefficient fibre use the alternative of
+Lemma~\ref{deg:lem-positive-atlas}. The actual determinant cover
+\eqref{deg:det-height-cover} and signed trace receiver
+\eqref{deg:trace-actual-receiver} retain its stopped, strict, regular
+and high pieces, including the original clips and every intervening
+input. Their two absolute tail gains have a common power, which cancels
+before the complete raw derivative is bounded on the strict and regular
+pieces. The signed high-height estimate bounds that same derivative
+above, including when both opening coefficients vanish. Choosing the
+finite multiplier last makes these bounded pieces contractive.
+The gap-zero completion is excluded. The whole-fibre sharp counts are
+Propositions~\ref{sharp:upper-determinant} and \ref{sharp:upper-trace};
+Corollary~\ref{sharp:upper-local-coefficient-ranges} takes the maximum
+across coefficient alternatives.
+\end{proof}

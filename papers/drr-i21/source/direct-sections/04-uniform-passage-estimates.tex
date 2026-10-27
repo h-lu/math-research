@@ -1,0 +1,1002 @@
+\section{Uniform passage estimates}
+\label{sec:direct-passage-estimates}
+
+Two degeneracies govern the endpoint comparison. At exponentially small
+incoming heights, the quadratic boundary coefficient can produce an
+unbounded power-law multiplier in each endpoint derivative. Near a
+boundary root, the drift and the leading curvature both tend to zero,
+so an unweighted error estimate cannot preserve the curvature sign.
+We retain the common tail multiplier explicitly, remove the
+height-dependent term by a boundary-flow coordinate, and fix the phase
+of both projected orbits using the same central height. After a fixed
+positive boundary-time advance, the phase error carries arbitrarily
+high powers of the drift. These estimates give
+the curvature criterion of \cref{lem:curvature-criterion}, including
+the exterior contribution, and the one-sided slope comparison in the
+weak-root range of \cref{cor:direct-weak-root-comparison}.
+
+In all passage estimates below, derivatives are taken in the stated state
+variables, with parameters and all parameter-only scales and actions
+fixed. Bounds are uniform on the indicated parameter regions, and each
+finite order \(k\) is fixed before choosing the small parameter threshold.
+
+\subsection{Weighted tail estimates}
+
+We first estimate the map from an incoming height \(t\) to the fixed
+section \(z=z_*\), keeping its power-law multiplier explicit.
+Write \(\mathcal G_\sigma(U,z)=B(\sigma\sqrt{2U},z)
+-q(\sigma\sqrt{2U})/z\), as in
+\eqref{eq:physical-graph-equation-new}. Fix a compact interval of
+positive incoming energies \(\mathcal U=U(t)/t\). For a sufficiently small
+fixed \(z_*\), the conditions
+\begin{equation}
+\label{eq:direct-tail-smallness}
+ \frac{|q_0|}{t}+\frac{|q_1|}{\sqrt t}+|q_2|
+ \quad\hbox{sufficiently small},\qquad 0<t<z_*,
+\end{equation}
+put all those solutions in a slightly enlarged invariant cone
+\(c_-z\le U(z)\le c_+z\). Indeed, on this cone,
+\[
+ \frac{|q(\sigma\sqrt{2U})|}{z}
+ \le C\left(\frac{|q_0|}{z}+\frac{|q_1|}{\sqrt z}
+                  +|q_2|+\sqrt z\right).
+\]
+Choose \(c_-<b_0/4\) and \(c_+>4\sup B\), containing the incoming
+energies in their interior. Reduction of \(z_*\) and
+\eqref{eq:direct-tail-smallness} makes
+\(b_0/2<\mathcal G_\sigma<2\sup B\). The vector field points into the
+cone along both boundary lines.
+This proves continuation to \(z_*\), also for nearby incoming
+energies needed for differentiation.
+
+To make the coefficient of \(\sqrt{z_*}\) independent of later scaled
+height thresholds, fix a common cone using coefficient bounds on a
+preliminary box in \((\eta,z)\). Enlarge it once to contain the
+moving-entrance energy \(1/(2m_{\rm land})\) used in the adaptive and
+annular landings, with \(m_{\rm land}\) fixed before the coefficient
+and height thresholds. A scaled entrance with a larger energy-to-height
+ratio is first continued to this cone. Constants for this finite
+continuation may depend on the thresholds; the coefficient
+\(C_{\rm cone}\) remains independent of them.
+
+For a fixed positive scaled entrance outside the common cone, put
+\(z=\ell^2Z,\ U=\ell^2\mathcal U\),
+with fixed \(Z_0>0\) and \(\mathcal U(Z_0)=\mathcal U_0\) in a compact positive
+interval, and set
+\[
+ \epsilon_{\rm in}=\ell+|q_0|/\ell^2+|q_1|/\ell+|q_2|.
+\]
+Write \(B_0=B(0,0,p)\). On any fixed positive-height interval the graph
+equation is
+\(\mathcal U_Z=B_0+O_{C^k}(\epsilon_{\rm in})\) on a fixed enlarged
+positive energy interval. Integration and the finite variational
+equations give
+\begin{equation}
+\label{eq:direct-finite-common-cone-entry}
+ \mathcal U(Z_1;\mathcal U_0)=\mathcal U_0+B_0(Z_1-Z_0)
+                +O_{C^k}(\epsilon_{\rm in}).
+\end{equation}
+Choose \(Z_1\) large after the entrance interval, and then
+\(\epsilon_{\rm in}\) small; the ratio \(\mathcal U(Z_1)/Z_1\) lies
+in the common cone. The constants in this finite continuation may
+depend on \(Z_0,Z_1\) and the entrance interval. Its derivative with
+respect to \(\mathcal U_0\) is \(1+O(\epsilon_{\rm in})\), and replacing the tail multiplier
+based at \(\ell^2Z_0\) by that based at \(\ell^2Z_1\) introduces
+only \((Z_1/Z_0)^{2q_2}=1+O(|q_2|)\), with \(Z_0\) and \(Z_1\) fixed.
+
+\begin{lemma}[Weighted tail]
+\label{lem:direct-weighted-tail}
+For every fixed \(k\), set
+\[
+ \varpi_t(z)=(z/t)^{-2q_2},\qquad \varpi_t=\varpi_t(z_*),\qquad
+ e(t)=\sqrt t+|q_1|/\sqrt t .
+\]
+If \(|q_2|<1/8\) and \eqref{eq:direct-tail-smallness} holds, then
+the centered endpoint map satisfies
+\begin{equation}
+\label{eq:direct-centered-tail}
+ \frac{U(z_*;t\mathcal U)-U(z_*;t\mathcal U_\circ)}{t\varpi_t}
+ =a_{t,p}(\mathcal U-\mathcal U_\circ)+R_{t,p}(\mathcal U),\qquad
+ c<a_{t,p}<C,\quad \|R_{t,p}\|_{C^k}\le C_ke(t).
+\end{equation}
+Its inverse in these centered coordinates has uniformly bounded
+derivatives through order \(k\). If the incoming energies lie in the
+common cone, then
+\begin{equation}
+\label{eq:direct-tail-first-slope}
+ \left|\log a_{t,p}\right|
+       \le C_{\rm cone}\left(\sqrt{z_*}+\frac{|q_1|}{\sqrt t}\right).
+\end{equation}
+Here \(C_{\rm cone}\) depends only on the common cone and the
+uniform bounds for \(B\), \(R_q\) and their first derivatives
+on the preliminary normal-rate box. The same constant applies
+for all admissible \(t,z_*\) in that box, independently of the
+later coefficient and height thresholds. For another fixed cone
+the same bound holds with a constant depending on that cone.
+For a moving entrance \(U(t)=ct\), with fixed
+\(c>4\sup B\), let \(U_{\rm end}(t)\) be its energy at \(z_*\).
+Then
+\begin{equation}
+\label{eq:direct-moving-tail}
+ \begin{gathered}
+ U_{\rm end}'(t)=\varpi_t a(t),\qquad
+ c_1<a(t)<C_1,\\
+ |(t\partial_t)^j a(t)|+|(t\partial_t)^j\log a(t)|
+ \le C_j\left(e(t)+\frac{|q_0|}{t}\right),\quad 1\le j\le k .
+ \end{gathered}
+\end{equation}
+Here the cone is enlarged to contain \(c\) before the smallness
+constants are chosen.
+\end{lemma}
+
+\begin{proof}
+We separate the quadratic term in the first energy derivative from the
+coefficients that control the higher variations. On the cone,
+\begin{align}
+\label{eq:direct-tail-coefficients}
+ \mathcal G_U&=-2q_2/z+R_1,\qquad
+ |R_1|\le C(z^{-1/2}+|q_1|z^{-3/2}),\\
+ |\mathcal G_{U^j}|&\le C_j(z^{1/2-j}+|q_1|z^{-j-1/2}),
+ \qquad j\ge2.\nonumber
+\end{align}
+The constant drift disappears on differentiation, and the constant in
+the first line depends only on the stated cone and coefficient bounds.
+Hence the first variation is
+\begin{equation}
+\label{eq:direct-tail-variation}
+ J(z;t)=\varpi_t(z)
+     \exp\int_t^z R_1(U(\zeta),\zeta)\,d\zeta .
+\end{equation}
+Its quotient by \(\varpi_t(z)\) is positive and bounded; integrating the
+bound for \(R_1\) in \eqref{eq:direct-tail-coefficients} bounds its
+logarithm by the right side of \eqref{eq:direct-tail-first-slope}.
+
+To estimate the higher variations, factor out the same multiplier. Put
+\(V_j=t^{-1}\partial_{\mathcal U}^jU=\varpi_t(z)W_j\).
+Here \(W_1(t)=1\) and \(W_j(t)=0\) for \(j\ge2\).
+After cancellation of the quadratic linear term, their equations are
+\[
+ (W_j)_z=R_1W_j+
+ \sum_{m=2}^j t^{m-1}\varpi_t(z)^{m-1}\mathcal G_{U^m}
+ \sum_{\substack{i_1+\cdots+i_m=j\\i_\ell\ge1}}
+       c_{i_1,\ldots,i_m}W_{i_1}\cdots W_{i_m}.
+\]
+Every variation in the inner sum has order less than \(j\), so it remains
+to bound the coefficients of these products. The two required integrals obey
+\begin{align}
+\label{eq:direct-weighted-integrals}
+ t^{m-1}\int_t^{z_*}z^{1/2-m}(z/t)^{2|q_2|(m-1)}\,dz
+       &\le C_m\sqrt t,\\
+ |q_1|t^{m-1}\int_t^{z_*}z^{-m-1/2}
+                       (z/t)^{2|q_2|(m-1)}\,dz
+       &\le C_m|q_1|/\sqrt t.\nonumber
+\end{align}
+After \(z=t\zeta\), the first integral has decay margin
+\(m-3/2-2|q_2|(m-1)\ge1/4\); the second has a larger margin.
+Variation of constants and induction give bounded \(W_1\) and
+\(W_j=O(e(t))\) for \(j\ge2\). Choose \(a_{t,p}\) as the first
+normalized derivative at \(\mathcal U_\circ\) and integrate the second
+derivative bound. Constructing one extra derivative if necessary
+proves \eqref{eq:direct-centered-tail}. Positivity of the first
+derivative gives the inverse bounds.
+
+For the moving entrance, differentiation includes the change of initial
+height as well as that of initial energy. It gives
+\[
+ U_{\rm end}'(t)=J(z_*;t)\,f_c(t),\qquad
+ f_c(t)=c-\mathcal G_\sigma(ct,t)>c/2.
+\]
+Thus \(a(t)=f_c(t)J(z_*;t)/\varpi_t\). To justify its derivatives,
+write \(\mathcal E_t=t\partial_t\), holding \(z\) fixed inside the flow.
+The differentiated equations and
+\eqref{eq:direct-weighted-integrals} give
+\begin{equation}
+\label{eq:direct-moving-flow-jets}
+ |\mathcal E_t^jU(z;t)|\le C_jt\varpi_t(z),\qquad j\ge1.
+\end{equation}
+For \(j=1\) this is \(\mathcal E_tU=tJf_c\). To compute higher moving
+boundary data, set \(\mathcal B_j(t)=(\mathcal E_t^jU)(t;t)\). Then
+\[
+ \mathcal B_0=ct,\qquad
+ \mathcal B_j=t\frac{d\mathcal B_{j-1}}{dt}
+       -t(\partial_z\mathcal E_t^{j-1}U)(t;t).
+\]
+In the local variables \(z=t\zeta,\ U=tW\), near
+\((\zeta,W)=(1,c)\), the equation has bounded finite jets in
+\(\sqrt t,q_1/\sqrt t,q_0/t,q_2\). The positive-order Euler
+derivatives of these quantities are bounded under
+\eqref{eq:direct-tail-smallness}, so \(\mathcal B_j=O_j(t)\).
+The same triangular induction then proves
+\eqref{eq:direct-moving-flow-jets}.
+
+These moving-flow bounds allow us to differentiate the logarithm in
+\eqref{eq:direct-tail-variation}. The lower-boundary terms are
+\(O(e(t))\). At order \(j\), the chain rule gives a finite sum
+of terms with \(m\) flow variations, \(1\le m\le j\).
+By \eqref{eq:direct-weighted-integrals} with \(m+1\) in place of
+\(m\), each is bounded by \(C_je(t)\).
+Repeated boundary differentiation has the same estimate.
+Finally \(\mathcal E_t^jf_c=O(e(t)+|q_0|/t)\) for \(j\ge1\).
+In particular its quadratic contribution \(2q_2c\) is constant
+in \(t\). These estimates bound the Euler derivatives of \(a\); since
+\(a\) has a positive lower bound, they also bound those of \(\log a\).
+This proves \eqref{eq:direct-moving-tail}.
+\end{proof}
+
+For \(|q_2|<1/8\) and \(0<t\le z_*\), the tail amplitude satisfies
+\begin{equation}
+\label{eq:direct-tail-amplitude}
+ t\varpi_t=z_*^{1/4}t^{3/4}(t/z_*)^{1/4+2q_2}\le z_*^{1/4}t^{3/4}.
+\end{equation}
+
+When the scaled entrance height also tends to zero, we first continue the
+graph to a fixed scaled height where the weighted-tail estimate applies.
+The following lemma supplies this continuation and the resulting endpoint
+expansion. Its additional symbols and those of its proof are local.
+
+\begin{lemma}[Continuation from a small scaled height]
+\label{lem:direct-small-height-continuation}
+Suppose \(0<\ell\le\delta\) and
+\(|q_0|/(\delta\ell^2)+|q_1|/(\delta\ell)+|q_2|/\delta\le C\).
+Put \(z=\ell^2Z\), \(U=\ell^2\mathcal U\) and
+\(K_\sigma(x)=-q(\sigma\ell x)/(\delta\ell^2)\). Let a graph enter at
+\(Z=\delta\zeta_0\) with \(\mathcal U=\mathcal U_0\in[0,\mathcal U_{\max}]\), where
+\(0<c\le\zeta_0\le C\) and \(K_\sigma(\sqrt{2\mathcal U_0})\ge k_0>0\).
+For every fixed \(Z_1>0\) and sufficiently small \(\delta\), it continues
+with positive flux to
+\[
+ \mathcal U(Z_1)=\mathcal U_0+B_0Z_1+O(\delta(1+|\log\delta|)).
+\]
+A large fixed \(Z_1\), chosen after \(\mathcal U_{\max}\) and before \(\delta\),
+puts \(\mathcal U(Z_1)/Z_1\) in the common cone.
+If \(\mathcal U_0=x^2/2\), with \(x\) in a fixed compact positive interval and
+\(\|\zeta_0(x)\|_{C^3}\le C\), set
+\(t=\ell^2Z_1\), \(E=\ell^2\varpi_t\) and
+\[
+ b_\sigma=z_*-U(z_*;t,B_0t),\qquad
+ A_\sigma=\varpi_t^{-1}
+       \left.\partial_uU(z_*;t,u)\right|_{u=B_0t}.
+\]
+Then the endpoint satisfies
+\begin{equation}
+\label{eq:direct-small-height-endpoint}
+ I_\sigma(x)=b_\sigma-\tfrac12EA_\sigma x^2+Ee_\sigma(x),\qquad
+ c<A_\sigma<C,\quad
+ \|e_\sigma\|_{C^3}\le C\delta(1+|\log\delta|).
+\end{equation}
+For two branches with the same \(\ell,Z_1\),
+\(|\log(A_-/A_+)|\le2C_{\rm cone}\sqrt{z_*}+C\delta\).
+The constants depend only on the displayed bounds, the compact radius
+interval and \(Z_1\).
+\end{lemma}
+
+\begin{proof}
+We first prove continuation, then retain the radius derivatives needed
+for the endpoint expansion. The coefficient bounds and \(\ell\le\delta\)
+bound all radius derivatives
+of \(K_\sigma\) on compact intervals. Choose
+\(\mathcal U_1>\mathcal U_{\max}+2Z_1\sup B\), then \(\zeta_1>\sup\zeta_0\) so large that
+\(|K_\sigma|\le b_0\zeta_1/2\) for \(0\le \mathcal U\le \mathcal U_1\).
+In \(Z=\delta\zeta\), the graph equation is
+\[
+ \mathcal U_\zeta=\delta\{B(\sigma\ell\sqrt{2\mathcal U},\delta\ell^2\zeta)
+                       +K_\sigma(\sqrt{2\mathcal U})/\zeta\}.
+\]
+Up to \(\zeta_1\), the energy changes by \(O(\delta)\) and the radius by
+\(O(\sqrt\delta)\), preserving \(K_\sigma\ge k_0/2\) and positive flux.
+For \(Z\ge\delta\zeta_1\), \(|\delta K_\sigma/Z|\le b_0/2\) while
+\(\mathcal U\le \mathcal U_1\), so \(b_0/2\le \mathcal U_Z\le2\sup B\), and this energy interval
+persists to \(Z_1\). Integrating \(B-B_0=O(\ell)\) and
+\(\delta K_\sigma/Z\) gives the displayed continuation estimate.
+Since \(B_0\) is interior to the common cone, large \(Z_1\) gives entry.
+
+For the radius-dependent entrance, the energies stay bounded away from
+zero, so the preceding continuation can be differentiated in the entrance
+radius. The flow in \(\zeta\) has uniformly bounded finite jets;
+composition with \((\zeta_0(x),x^2/2)\) gives an \(O_{C^3}(\delta)\)
+change up to \(\zeta_1\). Thereafter the coefficient error and its energy
+derivatives are bounded by \(C_j(\delta+\delta/Z)\). Integration of the
+finite variational equations gives the same continuation estimate in
+\(C^3\). At \(t\), the smallness expression in
+\eqref{eq:direct-tail-smallness} and \(e(t)\) are \(O(\delta)\).
+Apply \eqref{eq:direct-centered-tail} with center
+\(\mathcal U_\circ=B_0\) to the incoming energy \(\mathcal U(Z_1;x)/Z_1\).
+The coefficient of this centered map is \(A_\sigma\), the normalized center derivative,
+and \(t\varpi_t=Z_1E\); this proves
+\eqref{eq:direct-small-height-endpoint}.
+Finally \eqref{eq:direct-tail-first-slope}, with
+\(|q_1|/\sqrt t=O(\delta)\), gives the slope-ratio bound.
+\end{proof}
+
+\subsection{A coordinate following the boundary flow}
+
+The passage to a fixed scaled height combines boundary motion with a
+height-dependent term. Dividing by the boundary drift would be singular
+at its roots. We instead construct a coordinate that absorbs the
+height-dependent term and follows the boundary flow, uniformly through
+those roots. On a fixed positive radius interval, write
+the scaled height equation as
+\begin{equation}
+\label{eq:direct-height-system}
+ \frac{dX}{d\log Y}=\delta F(X)+YG(X,Y),\qquad \delta>0,
+\end{equation}
+where \(F\) has bounded derivatives through the required order and
+\(G(X,Y)=B_0/X+O_{C^k}(\delta)\), with \(B_0\) in a compact
+positive interval.
+
+\begin{lemma}[Boundary-flow coordinate]
+\label{lem:direct-boundary-flow}
+On a smaller positive radius interval and \(0\le Y\le Y_0\),
+for every fixed finite \(k\) and all sufficiently small \(\delta\),
+there is a uniformly \(C^k\) coordinate
+\[
+ \mathcal W(X,Y)=X+Y\mathcal W_1(X,Y),\qquad
+ \mathcal W_X>0,\quad \mathcal W_Y<0,
+\]
+which satisfies \(\mathcal W_{\log Y}=\delta F(\mathcal W)\) along
+\eqref{eq:direct-height-system}. Its inverse \(X=\chi(w,Y)\)
+has
+\begin{equation}
+\label{eq:direct-projection-energy}
+ \frac{\chi(w,Y)^2}{2}
+   =\frac{w^2}{2}+B_0Y+\delta YE_\chi(w,Y),\qquad
+ \|E_\chi\|_{C^k}\le C_k,\quad \chi_Y>0.
+\end{equation}
+The construction is uniform through simple or multiple zeros of \(F\).
+The height bound \(Y_0\) depends only on the bounds for \(B_0\) and on the
+lower ends of the two radius intervals; the threshold for \(\delta\) and
+the constants \(C_k\) may depend on the whole interval.
+\end{lemma}
+
+\begin{proof}
+We construct the coordinate by following the full passage backwards and
+then undoing the boundary motion. Extend the coefficients smoothly to a
+larger interval and then to bounded functions, preserving positive \(G\). Let \(\phi^u\)
+be the flow of \(\delta F\). Follow
+\eqref{eq:direct-height-system} backward for logarithmic time \(u\),
+writing its radius as \(X_b(u)\) and its height as \(Y\e^{-u}\).
+Define
+\[
+ \mathcal W(X,Y)=\lim_{u\to\infty}\phi^u(X_b(u)).
+\]
+The derivative of the expression inside this limit is
+\begin{equation}
+\label{eq:direct-projection-integrand}
+ -Y\e^{-u}(\phi^u)'(X_b(u))G(X_b(u),Y\e^{-u}).
+\end{equation}
+To differentiate the limit, we compare growth of the flow derivatives
+with the height decay in this integrand. For each fixed order,
+boundary-flow derivatives grow at most as
+a polynomial in \(u\) times \(\e^{C_k\delta u}\).
+The backward equation is
+\[
+ \partial_uX_b=-\delta F(X_b)-Y\e^{-u}G(X_b,Y\e^{-u}).
+\]
+Its state variations have linear coefficient
+\(O(\delta)+O(Y\e^{-u})\). In each higher variational equation,
+the remaining terms contain lower variations; coefficients from
+\(F\) carry \(\delta\), and those from \(G\) carry \(\e^{-u}\).
+Variation of constants therefore gives the same
+polynomial-times-exponential bounds at every fixed order.
+Consequently
+\[
+ \mathcal W=X-Y\int_0^\infty \e^{-u}
+       (\phi^u)'(X_b(u))G(X_b(u),Y\e^{-u})\,du.
+\]
+Every prescribed derivative of this integral is bounded by an
+integrable function
+\(C_k(1+u)^{N_k}\e^{-(1-C_k\delta)u}\), after reducing
+\(\delta\). This proves convergence and \(\mathcal W=X+Y\mathcal W_1\)
+with uniform derivative bounds for \(\mathcal W_1\).
+The flow identity gives \(\mathcal W_{\log Y}=\delta F(\mathcal W)\).
+
+The signs and the inverse energy expansion follow by comparison with
+\(\delta=0\). At that parameter, the energy identity is
+\(\mathcal W_0^2=X^2-2B_0Y\). Choose \(Y_0\) so that this backward
+graph remains inside the positive interval; since \(\mathcal W_0\le X\), this
+constrains only the lower ends of the intervals. Write
+\(G=B_0/X+\delta g\), and interpolate by
+\(\lambda\delta F,\ B_0/X+\lambda\delta g\), \(0\le\lambda\le1\),
+using compatible extensions. A \(\lambda\)-variation has
+forcing of size \(\delta\) and introduces only additional
+polynomials in \(u\). Differentiating the preceding integral
+therefore gives
+\[
+ \mathcal W-\mathcal W_0=\delta YR(X,Y),\qquad \|R\|_{C^k}\le C_k.
+\]
+The construction gives two additional derivatives whenever needed.
+Since \(\mathcal W_{0,X}>c>0\) and
+\(\mathcal W_{0,Y}<-c<0\), the same signs and uniform inverse bounds
+hold for \(\mathcal W\). If \(\chi_0=(w^2+2B_0Y)^{1/2}\), the identity
+\[
+ \mathcal W_0(\chi,Y)-\mathcal W_0(\chi_0,Y)=-\delta YR(\chi,Y)
+\]
+and the positive lower bound on \(\mathcal W_{0,X}\) give
+\(\chi-\chi_0=\delta YO_{C^k}(1)\).
+Squaring proves \eqref{eq:direct-projection-energy}, while
+\(\chi_Y=-\mathcal W_Y/\mathcal W_X>0\).
+\end{proof}
+
+\begin{remark}[Continuation of the projected state]
+\label{rem:direct-projected-continuation}
+If the projected orbit starts in a component where \(F>0\), it
+cannot cross the first zero of \(F\) in finite boundary-flow time.
+Its inverse is an outward graph of \eqref{eq:direct-height-system}, since
+\begin{equation}
+\label{eq:direct-inverse-flux}
+ X_{\log Y}=\delta F(w)\chi_w+Y\chi_Y>0.
+\end{equation}
+This remains valid as the projected state approaches a double root.
+\end{remark}
+
+The projected state moves with bounded speed in the boundary-flow time
+\(\delta\log Y\). This bounds the height at which a fixed radial advance
+can start.
+
+\begin{lemma}[Height before a radial advance]
+\label{lem:direct-radial-advance}
+In \cref{lem:direct-boundary-flow}, let \(|F|\le C_F\),
+\(\delta\sup|E_\chi|\le B_0\) and \(X_1<X_2\). Suppose a solution of
+\eqref{eq:direct-height-system} lies in the domain of \(\mathcal W\) at
+the heights \(Y_1\le Y\le Y_2\), with radius at most \(X_1\) at \(Y_1\)
+and at least \(X_2\) at \(Y_2\). If \(8B_0Y_2\le X_2^2-X_1^2\), then
+\[
+ Y_1\le Y_2\exp\Bigl(-\frac{X_2-X_1}{2C_F\delta}\Bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+At a point of the solution with radius \(X\), height \(Y\) and projected
+state \(w\), \eqref{eq:direct-projection-energy} gives
+\(0\le X^2-w^2=2Y\{B_0+\delta E_\chi(w,Y)\}\le4B_0Y\).
+Hence \(w\le X_1\) at \(Y_1\). At \(Y_2\) the hypothesis gives
+\(w^2\ge(X_1^2+X_2^2)/2\), so \(w\ge(X_1+X_2)/2\). Since
+\(w_{\log Y}=\delta F(w)\) along the solution, \(w\) changes by at most
+\(C_F\delta\log(Y_2/Y_1)\) between the two heights, and this change is at
+least \((X_2-X_1)/2\).
+\end{proof}
+
+\subsection{Contracting height coordinates and the exact phase}
+
+The projected boundary-flow times must now be expressed in the common
+central height \(h\). We first linearize the height equation over a
+possibly multidimensional base flow. We then normalize the passage from
+the central section and use that normalization to fix the phase of each
+projected orbit.
+The following height normalization uses contraction in backward
+\(\tau\)-time.
+
+\begin{lemma}[Contracting height coordinate]
+\label{lem:direct-contracting-height-coordinate}
+Consider a skew system
+\[
+ x_\tau=g(x),\qquad y_\tau=\mathfrak a(x)y+y^2\mathcal N(x,y)
+\]
+on a base domain \(\mathcal O\) and \(|y|\le2y_0\), with \(\mathfrak a,\mathcal N\) and
+their \(C^{k+1}\) derivatives bounded for a prescribed finite
+\(k\). Suppose \(\partial_y(\mathfrak a y+y^2\mathcal N)\ge2c_y>0\) there. Fix a set
+of initial base points \(\mathcal O_0\subset\mathcal O\), and suppose
+that for \(x\) in a neighborhood of \(\mathcal O_0\) the backward base
+flow \(x_b(t;x)\) stays in \(\mathcal O\) with uniform bounds
+\[
+ |D_x^j x_b(t;x)|\le C_j(1+t)^{M_j}\e^{jc_x t},
+ \qquad 1\le j\le k+1,
+\]
+where \((k+1)c_x<c_y\). After reducing \(y_0\), the
+function
+\[
+ \Theta(x,y)=-\int_0^\infty
+      y_b(t;x,y)\mathcal N(x_b(t;x),y_b(t;x,y))\,dt
+\]
+is uniformly \(C^{k+1}\) on \(\mathcal O_0\times[-y_0,y_0]\), is divisible
+by \(y\) with a bounded
+\(C^k\) quotient, and
+\(\Psi(x,y)=y \e^{\Theta(x,y)}\) has positive height derivative and
+uniformly bounded inverse height derivatives through order \(k\).
+Along the system, \(\Psi_\tau=\mathfrak a(x)\Psi\).
+\end{lemma}
+
+\begin{proof}
+The backward height satisfies \(|y_b(t)|\le |y|\e^{-2c_y t}\).
+In its variational equations the highest height jet has a negative
+coefficient bounded away from zero. Each pure base derivative of
+\(\mathfrak a y+y^2\mathcal N\) contains the decaying height; the other forcings are
+products of lower height jets and base-flow jets. Variation of
+constants and induction therefore bound every derivative of the
+integrand through order \(k+1\) by
+\(C_j(1+t)^{m_j}\e^{-(2c_y-jc_x)t}\), after a
+reduction of the decay margin. The stated inequality makes these
+bounds integrable. Differentiation under the integral gives
+\(\Theta=O(y)\) and its uniform derivatives; one additional derivative
+gives the bounded quotient \(\Theta/y\). Thus \(\Psi_y>c>0\) on a
+smaller height interval, with the asserted inverse bounds.
+Finally the flow property gives \(\Theta_\tau=-y\mathcal N\), and hence
+\(\Psi_\tau=\mathfrak a\Psi\).
+\end{proof}
+
+For the passage from the central section, we next normalize the height
+at a fixed regular radius. On a regular central prefix, the scaled
+height equation is
+\begin{equation}
+\label{eq:direct-source-prefix}
+ y_x=\frac{xy}{\delta(K(x)+B(x,y)y)},\qquad
+ y(0)=h/Q,\qquad K(x)\ge k_0>0
+\end{equation}
+on a fixed interval. Here \(Q>0\) depends only on parameters.
+The required derivatives of \(K,B\) are uniformly bounded.
+Use \(t=\delta^{-1}\mathcal A(x)\), where
+\(\mathcal A(x)=\int_0^x u/K(u)\,du\). The height equation becomes
+\[
+ y_t=y+y^2\mathcal N_t(y),\qquad
+ \mathcal N_t(y)=-B/(K+By).
+\]
+The inverse of \(x\mapsto t\) is continuous at zero; the normalization below
+differentiates only the height.
+
+\begin{lemma}[Exact central-height normalization]
+\label{lem:direct-source-height}
+At each fixed terminal radius \(x_i>0\), on a sufficiently
+small fixed height interval there is a coordinate
+\[
+ \Psi_i(y)=y\exp \Theta_i(y),\quad \Theta_i(0)=0,\quad
+ \Psi_i'(y)>c,\quad
+ \|\Psi_i\|_{C^k}+\|\Psi_i^{-1}\|_{C^k}\le C_k
+\]
+such that
+\begin{equation}
+\label{eq:direct-prefix-action}
+ \Psi_i(y(x_i))=\e^{\mathcal A(x_i)/\delta}h/Q .
+\end{equation}
+These bounds hold on arbitrarily long intervals of boundary time.
+The same conclusion holds if
+\(K(x)\asymp K_*+x\), \(K'(x)\ge c\), \(K_*/\delta\ge1\),
+with \(0<K_*\le K_{\max}\) and fixed \(K_{\max}\),
+and the other coefficient derivative bounds are uniform.
+\end{lemma}
+
+\begin{proof}
+Let \(T_i=\mathcal A(x_i)/\delta\), and let \(x_b(u)\) and \(y_b(u;y)\)
+be the radius and height at backward time \(u\).
+Set
+\[
+ Z(u)=\e^uy_b(u;y),\qquad
+ a_\delta(u)=\frac{\e^{-u}}{K(x_b(u))}.
+\]
+The backward height equation becomes
+\[
+ Z'=\frac{a_\delta(u)Z^2B(x_b(u),\e^{-u}Z)}
+           {1+a_\delta(u)ZB(x_b(u),\e^{-u}Z)}
+       =:\mathcal N_u(Z).
+\]
+The long-time estimate reduces to a uniform bound on this coefficient
+and its integral. In both cases of the lemma,
+\[
+ \sup_{0\le u\le T_i}a_\delta(u)
+       +\int_0^{T_i}a_\delta(u)\,du\le C.
+\]
+For \(K\ge k_0\), this follows from \(a_\delta\le \e^{-u}/k_0\).
+For \(K\asymp K_*+x\), let \(u_\delta\) be the backward
+time to \(x_i/2\). The fixed terminal segment gives
+\(u_\delta\ge c/\delta\) and \(K(x_b)\ge c_i>0\) before
+that time. Afterwards \(K\ge cK_*\ge c\delta\), so
+\[
+ \sup_{u\ge u_\delta}a_\delta(u)
+       +\int_{u_\delta}^{T_i}a_\delta(u)\,du
+       \le C\delta^{-1}\e^{-c/\delta}.
+\]
+These bounds are independent of the positive lower endpoint
+of the allowed \(K_*\)-range.
+
+On a sufficiently small fixed \(Z\)-interval the denominator
+in \(\mathcal N_u\) is at least \(1/2\), and
+\[
+ |\mathcal N_u(Z)|\le Ca_\delta|Z|^2,\qquad
+ |\partial_Z\mathcal N_u(Z)|\le Ca_\delta|Z|,\qquad
+ |\partial_Z^j\mathcal N_u(Z)|\le C_ja_\delta\quad(j\ge2).
+\]
+Gr\"onwall's inequality and the finite variational equations, with
+the uniform integral bound for \(a_\delta\), give \(|Z(u;y)|\le2|y|\)
+and uniform height derivatives of every prescribed finite order on a
+smaller fixed interval. The first variation is positive and bounded
+above and below. Set \(\Psi_i(y)=Z(T_i;y)\); then
+\(y_b(T_i;y)=h/Q\) gives \eqref{eq:direct-prefix-action}, and
+\[
+ \Theta_i(y)=\log\frac{\Psi_i(y)}y
+ =\int_0^{T_i}
+   \frac{a_\delta ZB(x_b,\e^{-u}Z)}
+        {1+a_\delta ZB(x_b,\e^{-u}Z)}\,du .
+\]
+The same bounds, with one extra derivative, give \(\Theta_i=O(y)\)
+with uniformly bounded derivatives. Thus \(\Psi_i'(0)=1\), and the
+inverse function theorem gives the asserted inverse bounds.
+\end{proof}
+
+The preceding normalization fixes the terminal radius. We next control
+the dependence of the central height on that radius.
+Suppose \(x\) ranges in a fixed compact positive
+interval with \(K\ge k_0\), and fix a small terminal height \(y_f>0\).
+Then the corresponding central height satisfies
+\begin{equation}
+\label{eq:direct-terminal-radius-jets}
+ \delta\log(h(x)/Q)=-\mathcal A(x)+\delta M_p(x),\qquad
+ \|M_p\|_{C^k}\le C_k .
+\end{equation}
+Choose a smaller fixed \(x_0>0\) with a positive action gap to
+all terminal radii. On \(x\ge x_0\), use time \(\tau=x/\delta\).
+The system is
+\[
+ x_\tau=\delta,\qquad
+ y_\tau=\mathfrak a(x)y+y^2\mathcal N(x,y),\qquad \mathfrak a(x)=x/K(x)>c.
+\]
+Extend the coefficients by fixed smooth cutoffs preserving the positive
+rate, and reduce the height box to preserve its derivative margin.
+The backward base \(x_b(u)=x-\delta u\) has bounded state derivatives,
+so \cref{lem:direct-contracting-height-coordinate} applies with
+\(c_x=0\). It gives a uniformly regular coordinate
+\(\Phi(x,y)=y\e^{\Theta(x,y)}\), with the required state derivative
+and inverse bounds, satisfying \(\Phi_\tau=\mathfrak a(x)\Phi\).
+Compose it at \(x_0\) with
+\cref{lem:direct-source-height}, whose coordinate there is
+\(\Psi_0\). The unit
+\[
+ W_p(\xi)=\frac{\Phi(x_0,\Psi_0^{-1}(\xi))}{\xi},
+ \qquad W_p(0)=1,
+\]
+has uniform derivative bounds, using one extra order at zero.
+The composition gives
+\[
+ \Phi(x,y_f)=\e^{\mathcal A(x)/\delta}\frac hQ\,W_p(\xi_0),\qquad
+ \xi_0=\e^{\mathcal A(x_0)/\delta}h/Q,\qquad W_p(0)=1.
+\]
+Rearrange this as
+\[
+ \xi_0W_p(\xi_0)=
+ \e^{-[\mathcal A(x)-\mathcal A(x_0)]/\delta}\Phi(x,y_f).
+\]
+The positive action gap bounds the right side and its \(j\)-th
+terminal-radius derivative by \(C_j\delta^{-j}\e^{-c/\delta}\).
+The uniformly regular inverse of \(\xi\mapsto\xi W_p(\xi)\) preserves
+these finite-order bounds. Taking logarithms gives
+\eqref{eq:direct-terminal-radius-jets} with
+\(M_p=\log\Phi(x,y_f)-\log W_p(\xi_0)\).
+
+The central-height normalization and the boundary-flow coordinate now
+give the phase of the projected orbit. At a fixed regular entry
+\(x_L\), combine \cref{lem:direct-source-height,lem:direct-boundary-flow}.
+In the notation \(Y_i=\delta y_i\), let
+\(\xi=\e^{\mathcal A(x_L)/\delta}h/Q\), so that
+\(Y_i=\delta\xi \Upsilon(\xi)\), where \(\Upsilon(0)=1\) and \(\Upsilon\) has
+uniform derivative bounds. Because \(F(x_L)>c>0\), the
+coordinate shift at entry corresponds to the boundary-flow time
+\[
+ \alpha_i(\xi)
+ =\int_{x_L}^{\mathcal W(x_L,\delta\xi \Upsilon(\xi))}\frac{dx}{F(x)}
+ =\delta O(\xi).
+\]
+The integral lies in a regular entry collar. At a fixed
+terminal height \(Y_o\), the resulting formula is
+\begin{equation}
+\label{eq:direct-common-phase}
+ w=\Phi_F^{\tau(T)}(x_L),\quad
+ \tau=T+C_p+\delta\Xi(\xi),\quad
+ T=-\delta\log(h/Q),\quad
+ C_p=\delta\log(Y_o/\delta)-\mathcal A(x_L).
+\end{equation}
+Here \(\Xi=\alpha_i/\delta-\log \Upsilon\) vanishes at zero and has
+uniform derivative bounds. Both phase origins are now fixed by the same
+central height \(h\). Near a boundary root, \(F(w)\) may tend to zero;
+the next lemma bounds the derivatives of the phase correction relative
+to this drift.
+
+\begin{lemma}[Phase error at a boundary root]
+\label{lem:direct-weighted-phase}
+Suppose the phase in \eqref{eq:direct-common-phase} satisfies
+\(\tau\ge\tau_0>0\), its orbit has \(F>0\), and
+\(F(x_L)\ge f_0>0\), \(|F'|\le L_F\).
+For every fixed \(N,j\ge0\), writing \(\theta=\tau_T\), one has
+\begin{equation}
+\label{eq:direct-phase-weight}
+ |\theta-1|+\sum_{\ell=1}^j|\partial_T^\ell\theta|
+       \le\varepsilon_{N,j}(\delta)F(w)^N,\qquad
+ \varepsilon_{N,j}(\delta)\longrightarrow0 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+In terms of \(\xi\), \eqref{eq:direct-common-phase} gives
+\[
+ \xi=(Y_o/\delta)\exp[-\tau/\delta+\Xi(\xi)],\qquad
+ \xi_T=-\xi/\delta,\qquad \theta=1-\xi\Xi'(\xi).
+\]
+The left side of \eqref{eq:direct-phase-weight} is at most
+\(C_j\delta^{-j}\xi\). To compare this bound with the drift, use
+\(d\log F/d\tau=F'\) along the boundary flow; hence
+\(F(w)\ge f_0\e^{-L_F\tau}\).
+After division by \(F(w)^N\), the error is bounded by
+\[
+ C_{N,j}\delta^{-j-1}
+       \exp[-(1/\delta-NL_F)\tau]
+ \le C_{N,j}\delta^{-j-1}\e^{-\tau_0/(2\delta)}.
+\]
+Reduction of \(\delta\) proves the assertion, uniformly up to
+simple or multiple boundary roots.
+\end{proof}
+
+For a no-root bottleneck, we also need height derivatives that remain
+uniform as its action grows. On a fixed interval
+\([x_L,x_R]\) suppose
+\(F>0\), with positive margins only in fixed collars of its
+endpoints. Define
+\[
+ \alpha_j(Y)=\int_{x_j}^{\mathcal W(x_j,Y)}\frac{dx}{F(x)},\qquad
+ \Psi_j(y)=y\exp[-\alpha_j(\delta y)/\delta],\quad j=L,R.
+\]
+These are uniformly regular height coordinates, since
+\(\alpha_j(Y)=Y\mathcal A_j(Y)\). The exact identity is
+\begin{equation}
+\label{eq:direct-bottleneck-action}
+ \Psi_R(y_R)=
+ \exp\left(\frac1\delta\int_{x_L}^{x_R}\frac{dx}{F(x)}\right)
+ \Psi_L(y_L).
+\end{equation}
+For a small outgoing height, the backward projected flow and
+\eqref{eq:direct-inverse-flux} reconstruct the outward passage.
+Let \(\mathcal A_L\) be the action of the preceding
+regular prefix and write its inverse height coordinate as
+\(y_L=P_p(\zeta)\), where
+\(\zeta=\e^{\mathcal A_L/\delta}h/Q\). By
+\cref{lem:direct-source-height}, \(P_p(0)=0\), \(P_p'(0)=1\),
+and its derivatives through the prescribed order are uniformly
+bounded on a fixed small interval. Put
+\[
+ \begin{gathered}
+ \mathcal A_f=\int_{x_L}^{x_R}\frac{dx}{F(x)},\qquad
+ \beta=\e^{-\mathcal A_f/\delta}\in(0,1],\\
+ \xi=\e^{(\mathcal A_L+\mathcal A_f)/\delta}h/Q,
+ \qquad \mathcal C_p=\Psi_L\circ P_p.
+ \end{gathered}
+\]
+Thus \(\zeta=\beta\xi\) and
+\(\mathcal C_p(x)=x\Upsilon_p(x)\), with \(\Upsilon_p(0)=1\).
+Composition with the prefix gives
+\begin{equation}
+\label{eq:direct-bottleneck-inverse-composition}
+ \begin{aligned}
+ \Psi_R(y_R)&=\beta^{-1}\mathcal C_p(\beta\xi)
+             =\xi \Upsilon_p(\beta\xi),\\
+ y_R&=\Psi_R^{-1}\bigl(\xi \Upsilon_p(\beta\xi)\bigr).
+ \end{aligned}
+\end{equation}
+The factor \(\beta^{-1}\) can be large, but differentiation of the
+argument \(\beta\xi\) contributes powers of \(\beta\). With \(\beta\)
+fixed, the derivatives in the expanded height \(\xi\) are
+\[
+ \partial_\xi^j[\beta^{-1}\mathcal C_p(\beta\xi)]
+       =\beta^{j-1}\mathcal C_p^{(j)}(\beta\xi),\qquad j\ge1.
+\]
+Its first derivative has a uniform positive lower bound, and
+all prescribed higher derivatives are bounded because \(\beta\le1\).
+Choose a fixed \(\xi_* >0\) so that \(\beta\xi\) lies in the
+prefix domain and \(\xi \Upsilon_p(\beta\xi)\) lies in the common
+domain of \(\Psi_R^{-1}\) for \(0\le\xi\le\xi_*\).
+The resulting map \(\xi\mapsto y_R\) has a uniformly positive
+first derivative; its image contains a fixed small terminal-height interval,
+and its inverse has uniformly bounded derivatives there.
+Constructing one extra derivative before dividing by \(\xi\) gives
+\(y_R=\xi V_p(\xi)\), where \(V_p(0)=1\), and both \(V_p\)
+and its reciprocal have uniform derivatives through the prescribed
+order. These bounds for derivatives in the expanded height \(\xi\)
+are uniform in \(\mathcal A_f\).
+
+\subsection{Endpoint derivatives and the logarithmic slope ratio}
+
+We now transfer the drift estimates to the endpoints. Composing the
+inverse boundary projection with the weighted tail gives the derivative
+in the projected radius; the phase formula then converts it to a
+derivative in \(T\). Keeping the drift factor through this conversion
+allows comparison with the exterior contribution to the logarithmic
+slope ratio.
+
+\pagebreak[3]
+\begin{lemma}[Endpoint after a boundary-flow passage]
+\label{lem:boundary-flow-endpoint}
+Let \(\ell>0\), and write \(|\eta|=\ell X\) and \(z=\ell^2Y\) on one
+branch. Suppose that on a fixed positive radius interval the height
+equation has the form \eqref{eq:direct-height-system} with small
+parameter \(\delta\), and let \(w\) be the projected state of
+\cref{lem:direct-boundary-flow}. Fix a small height \(Y_o>0\) and a
+compact interval \(J_w\subset(0,\infty)\) on which
+\eqref{eq:direct-projection-energy} holds at \(Y=Y_o\), and put
+\[
+ t=\ell^2Y_o,\qquad
+ \varepsilon_o=\ell+\frac{|q_0|}t+\frac{|q_1|}{\sqrt t}+|q_2|,\qquad
+ E=\ell^2\Bigl(\frac{z_*}{t}\Bigr)^{-2q_2}.
+\]
+For \(\delta\) and \(\varepsilon_o\) sufficiently small, the endpoint
+\(I\) of the graph whose projected state at height \(t\) is
+\(w\in J_w\) satisfies
+\begin{equation}
+\label{eq:boundary-flow-endpoint}
+ -I_w=EA_p w\,U_p(w),\qquad c<A_p<C,\qquad
+ U_p=1+O_{C^3}(\delta+\varepsilon_o),
+\end{equation}
+where \(A_p\) depends only on the parameters and \(U_p\) is a
+dimensionless positive unit factor. The constants depend on
+\(J_w\), \(Y_o\) and the fixed boundary-flow data. If the two branches
+use the same \(\ell\) and \(Y_o\), then
+\begin{equation}
+\label{eq:boundary-flow-amplitude-ratio}
+ \left|\log\frac{A_-}{A_+}\right|
+ \le2C_{\rm cone}\sqrt{z_*}+O(\delta+\varepsilon_o),
+\end{equation}
+where \(A_\pm\) are the values of \(A_p\) on the negative and positive
+branches, respectively.  The branch labels are fixed throughout the
+passage; later contraction estimates use only the upper one-sided
+consequence of this absolute comparison.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:direct-projection-energy}, the energy at height \(t\) is
+\(U(t)=\ell^2\{w^2/2+B_0Y_o+\delta Y_oE_\chi(w,Y_o)\}\), and its
+\(w\)-derivative is \(\ell^2w\{1+O_{C^3}(\delta)\}\) on \(J_w\). The
+normalized energies \(U(t)/t\) lie in a fixed compact positive
+interval. If this interval is not inside the common cone, continue the
+graphs first by \eqref{eq:direct-finite-common-cone-entry} from \(Y_o\)
+to a fixed larger \(Y_1\), whose energies lie in that cone. There the
+error is \(O_{C^k}(\varepsilon_o)\) and the first derivative is
+\(1+O(\varepsilon_o)\), since \(\varepsilon_{\rm in}\le C\varepsilon_o\)
+for fixed \(Y_o,Y_1\). \Cref{lem:direct-weighted-tail} at
+\(t_1=\ell^2Y_1\) gives a centered endpoint map with slope
+\(t_1(z_*/t_1)^{-2q_2}a\), where \(c<a<C\) and, by
+\eqref{eq:direct-tail-first-slope},
+\(|\log a|\le C_{\rm cone}(\sqrt{z_*}+|q_1|/\sqrt{t_1})\), and with a
+relative \(C^3\) error \(O(e(t_1))=O(\varepsilon_o)\). Since
+\((t_1/t)^{2q_2}=(Y_1/Y_o)^{2q_2}=1+O(\varepsilon_o)\), the chain rule gives
+\eqref{eq:boundary-flow-endpoint}. The factors \(\ell^2\),
+\((z_*/t)^{-2q_2}\) and \((Y_1/Y_o)^{2q_2}\) are common to the two
+branches, which gives the bound for \(A_-/A_+\).
+\end{proof}
+
+To compute the logarithmic rate in the common height coordinate,
+consider an endpoint map on a projected-radius interval contained in a
+fixed compact subset of \((0,\infty)\), of the form
+\begin{equation}
+\label{eq:direct-endpoint-unit}
+ -I_w=EA_p w\,U_p(w),\qquad
+ c<A_p<C,\quad U_p=1+O_{C^3}(\delta),\quad 0<E\longrightarrow0 ,
+\end{equation}
+as given by \cref{lem:boundary-flow-endpoint} when
+\(\varepsilon_o=O(\delta)\); its amplitude satisfies
+\(E\le C\ell^{3/2}\) by \eqref{eq:direct-tail-amplitude} with
+\(t=\ell^2Y_o\). Here \(E=E(p)\) and \(A_p\) are independent of the
+central height.
+Use the phase \eqref{eq:direct-common-phase}, so that
+\(w_T=\theta F(w)\), with \(\theta=\tau_T\) and \(F=K/w>0\).
+Put \(m=hI_h=-\delta I_T\),
+\(\mathfrak H=\partial_T\log m\).
+In the identities below, primes on \(\theta,\mathfrak H\)
+denote \(T\)-derivatives, and primes on \(K,F,\log U_p,\mathfrak H_0\) denote
+\(w\)-derivatives:
+\begin{align}
+\label{eq:direct-rate-identities}
+ m&=\delta EA_pK(w)\theta U_p(w),\\
+ \mathfrak H&=\theta\mathfrak H_0(w)+\theta'/\theta,\qquad
+ \mathfrak H_0=K'/w+F(\log U_p)',\nonumber\\
+ \mathfrak H'&=\theta^2F\mathfrak H_0'+\theta'\mathfrak H_0
+                 +\theta''/\theta-(\theta'/\theta)^2,\nonumber\\
+ \mathfrak H_0'&=(wK''-K')/w^2+F'(\log U_p)'+F(\log U_p)''.\nonumber
+\end{align}
+By \cref{lem:direct-weighted-phase}, these identities imply
+\begin{equation}
+\label{eq:direct-rate-curvature}
+ \mathfrak H'=F(w)\left\{\frac{wK''-K'}{w^2}+o(1)\right\},\qquad
+ |I_T|+|I_{TT}|\le CEF(w).
+\end{equation}
+The errors are uniform up to a limiting boundary root, with the drift
+factor retained in both estimates.
+
+For the two endpoints use the same logarithmic height coordinate
+\(T=-\delta\log(h/Q)\) in the logarithmic slope ratio
+\eqref{eq:direct-completed-log-ratio}.
+The exterior contribution is
+\begin{equation}
+\label{eq:direct-exterior-curvature}
+ \partial_T^2[(\log\Pi_p')(I_-)]
+       =(\log\Pi_p')''(I_-)I_{-,T}^2+(\log\Pi_p')'(I_-)I_{-,TT}.
+\end{equation}
+By \eqref{eq:direct-rate-curvature}, this term is
+\(O(EF_-+E^2F_-^2)\).
+
+The exterior contribution has the same drift weight as the negative
+endpoint estimate and carries the vanishing amplitude \(E\). This leaves
+the coefficients \(Q_\sigma=(wK_\sigma''-K_\sigma')/w^2\) of the two
+drifts to determine the principal curvature of \(\mathcal L\).
+
+\begin{lemma}[Curvature criterion]
+\label{lem:curvature-criterion}
+On an interval of central heights, suppose that both endpoints have the
+form \eqref{eq:direct-endpoint-unit} in the common logarithmic height
+coordinate \(T=-\delta\log(h/Q)\), that their phases satisfy the
+hypotheses of \cref{lem:direct-weighted-phase}, and that the negative
+projected state stays in a fixed compact subset of \((0,\infty)\). If
+\(Q_-\le-c\) and \(Q_+\ge c\) there, then \(\mathcal L''<0\) for all
+sufficiently small parameters, uniformly up to simple or multiple
+boundary roots.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:direct-rate-curvature},
+\(\mathfrak H_\sigma'=F_\sigma(w_\sigma)\{Q_\sigma+o(1)\}\). The exterior
+term \eqref{eq:direct-exterior-curvature} is \(O(EF_-+E^2F_-^2)=o(1)F_-\),
+since \(F_-\) is bounded and \(E\to0\). Hence
+\[
+ \mathcal L''=\mathfrak H_-'-\mathfrak H_+'+\partial_T^2[(\log\Pi_p')(I_-)]
+ \le-\tfrac c2(F_-+F_+)<0.\qedhere
+\]
+\end{proof}
+
+For a drift
+\(K(w)=K(0)+K'(0)w+\tfrac12K''(0)w^2+w^3R_K(w)\), direct
+differentiation gives
+\begin{equation}
+\label{eq:direct-curvature-coefficient-cubic}
+ \frac{wK''-K'}{w^2}
+ =-\frac{K'(0)}{w^2}+3R_K(w)+5wR_K'(w)+w^2R_K''(w).
+\end{equation}
+
+In the weak-root range, the first rate identity gives a one-sided slope
+comparison. The next result expresses it in the common height coordinate,
+retaining the change of scale from the positive branch's coordinate.
+
+\begin{corollary}[Weak-root slope comparison]
+\label{cor:direct-weak-root-comparison}
+Let \(I_\pm(h)\) be the \(C^2\) endpoint maps on one interval of
+central heights, with \(I_{\pm,h}>0\), and let \(a,\kappa>0\).
+Suppose the positive endpoint map satisfies
+\(-I_{+,w}=EA_pwU_p(w)\) with \(E>0\), \(c<A_p<C\) and
+\(U_p=1+O_{C^2}(\kappa)\), where \(E,A_p\) are independent of the
+central height. The radius
+interval satisfies \(0<w_*\le w_a\le w<\alpha\le w^*<\infty\), with
+fixed \(w_*,w^*\), and its exact phase uses \(\widehat T=-\kappa\log h\).
+Assume the weighted-phase lemma
+applies there, \(F=K/w>0\), the \(C^2\) bounds for \(K\) are
+uniform, and \(K'(w)/w\le-c_0<0\).
+In the common logarithmic height coordinate \(T=a\widehat T\), put
+\(\mathfrak H_\sigma=\partial_T\log(hI_{\sigma,h})\).
+Then, for sufficiently small \(\kappa\),
+\begin{equation}
+\label{eq:direct-weak-root-rate}
+ \mathfrak H_+\le-\frac{c_0}{2a}.
+\end{equation}
+If also \(\mathfrak H_-\ge-C_n\), \(|I_{-,T}|\le\varepsilon_p\to0\),
+and the \(C^2\) exterior map on these endpoint windows has positive slope with
+\(|(\log\Pi_p')'|\le M\), then, for sufficiently small \(a\),
+\(\mathcal L_T>0\) on this interval, and the return displacement has at
+most two zeros there.
+All bounds, the phase-lemma constants, and the convergence
+\(\varepsilon_p\to0\) are uniform on a fixed preliminary parameter region
+with small \(a\).
+\end{corollary}
+
+\begin{proof}
+With \(\theta=\partial_{\widehat T}\tau\),
+\eqref{eq:direct-rate-identities} gives
+\[
+ a\mathfrak H_+
+ =\theta\{K'/w+F(\log U_p)'\}
+                   +\theta_{\widehat T}/\theta.
+\]
+The bounded radius interval and the stated phase estimates make
+the error \(o(1)\), proving \eqref{eq:direct-weak-root-rate}.
+In the coordinate \(T\),
+\[
+ \mathcal L_T
+ =(\log\Pi_p')'(I_-)I_{-,T}
+                      +\mathfrak H_--\mathfrak H_+
+ \ge \frac{c_0}{2a}-C_n-M\varepsilon_p>0.
+\]
+Fix the constants on the preliminary region, reduce \(a\),
+and then choose the phase, tail, and parameter thresholds.
+Since \(\mathcal L_T>0\), \eqref{eq:direct-completed-log-ratio} gives the
+two-zero count.
+\end{proof}

@@ -1,0 +1,285 @@
+\subsection{One comparison center on the original input interval}
+\label{rw:comparison-domains}
+
+We seek a coefficient path ending at one real center valid for every
+input of the original passing interval. On separated strips the mean
+gap can stay fixed. At a contact we increase it so that the root retreats
+faster than the entry moves; at a weak boundary we increase $\bar B$.
+The inverse boxes of Proposition~\ref{rw:center-coordinates} bound
+the corresponding variations of the original coefficients.
+
+Fix the normalization, inverse charts, phases and regular connections
+on larger domains $\mathcal B^+$, including the signed central and
+relative and absolute extensions of Section~\ref{rw:transitions}.
+Take $\mathcal B\Subset\mathcal B^+$ so that all the coefficient
+paths below stay there for every original input. Physical passages
+also impose the scalar whole-path tests, regular arc conditions and
+positive original central heights. We verify that each center endpoint
+lies in the real period domain of Proposition~\ref{rw:real-centers}.
+
+\begin{proposition}[Fixed mean gap on the separated side]
+\label{rw:domains:separated}
+Use the joint coordinates
+$\mathbf b=(\bar B,\delta,\tau,\zeta,\nu)$ from
+Proposition~\ref{rw:center-coordinates}, with exact normalized gaps
+\[
+ \mu_L=\delta-\zeta,\qquad \mu_U=\delta+\zeta.
+\]
+Choose both slow blocks between fixed sections on opposite sides of
+their respective minima. Let the section inputs range in a smaller
+prepared separated patch whose regular connections reach these
+sections. This includes finite entries separated from the joint
+threshold and the fixed horizontal section used at the infinite end.
+If $\delta>|\zeta|$, the single coefficient path
+\begin{equation}\label{rw:domains:separated-path}
+ \mathbf b_\alpha=
+ (\bar B,\delta,(1-\alpha)\tau,(1-\alpha)\zeta,
+                      (1-\alpha)\nu),\qquad0\le\alpha\le1,
+\end{equation}
+preserves both slow passages for every original input. It stays in
+the common construction domain. Its endpoint
+$\mathbf b_c=(\bar B,\delta,0,0,0)$ is one center, independent of
+the input, and its two complete central deviations agree on the
+whole represented input interval.
+\end{proposition}
+
+\begin{proof}
+Choose fixed sections on both sides of each minimum, with the outer
+sections between the threshold and the compact separated entry patch.
+The limiting regular arcs reach them transversally in finite time.
+The lower-layer and upper low-height estimates of Section
+\ref{rw:transitions} preserve these margins on larger domains, before
+the slow gaps vanish. At infinity use the fixed horizontal crosscut
+of Lemma~\ref{rw:transitions:lower-sections} and its regular positive
+overlap. A smaller input patch gives the required product domains.
+
+At every point of \eqref{rw:domains:separated-path},
+\[
+ \mu_L(\alpha),\mu_U(\alpha)
+ \ge\delta-(1-\alpha)|\zeta|
+ \ge\delta-|\zeta|>0.
+\]
+Both full scalar blocks pass for arbitrary transit times and ratios
+of the two positive gaps. The regular connections stay in their fixed
+larger domains. Thus every point of the coefficient path retains the
+original prepared input interval.
+
+The common gaps and sections give the same center on overlapping
+finite and horizontal patches. Hold the chosen common input fixed
+along each coefficient path; its original section point is recovered
+by the bounded regular inverse. Identities at the radial endpoint
+refer to continuous extensions; positive inputs represent finite orbits.
+
+At the endpoint $\tau=\zeta=\nu=0$ the coefficient inverse gives
+$\bar a=-\bar c$, $\bar m=-\bar B$, and
+$4\bar B(1-\epsilon\bar B)-\bar c^2=4(1-\epsilon\bar B)^2\delta>0$.
+The real center polynomial of Proposition~\ref{rw:real-centers} is
+then positive on the full real axis. Every finite section input
+represented above belongs to its period annulus. Its lower arcs meet
+at the same positive original central height. The fixed references
+are zero at $\nu=0$, so the complete central deviations agree.
+Continuity gives the same identity at an auxiliary infinite input.
+\end{proof}
+
+The endpoint analysis will join these separated patches through their
+common input coordinates. Near a contact, however, a gap may be
+nonpositive, so we must also control the motion of its root.
+
+\begin{proposition}[A lifted contact path]
+\label{rw:domains:contact}
+Near the joint threshold, use the same coefficient coordinates and the
+center-calibrated entry functions $e_L(p;\mathbf b)$ and
+$e_U(p;\mathbf b)$ from Proposition~\ref{rw:center-coordinates}.
+Their scalar equations have factors $s^2+\mu_i$, $i=L,U$,
+and fixed positive exits, while their entries lie in a small
+neighborhood of zero. Let $\mathcal I(\mathbf b)$ be their common
+original passing interval in the unchanged finite section coordinate
+$p$. Set
+\[
+ A=|\tau|+|\zeta|+|\nu|.
+\]
+After fixed restrictions of the coefficient and entry neighborhoods,
+the single straight path
+\begin{equation}\label{rw:domains:contact-path}
+ \mathbf b_\alpha=(\bar B,\delta+3\alpha A,
+ (1-\alpha)\tau,(1-\alpha)\zeta,(1-\alpha)\nu),
+ \qquad0\le\alpha\le1,
+\end{equation}
+stays in the larger construction domain and preserves both whole-path
+passing conditions at every $p\in\mathcal I(\mathbf b)$.
+The endpoint $\mathbf b_c=(\bar B,\delta+3A,0,0,0)$ is a center
+whose actual period annulus contains every one of these section
+inputs. The complete central deviations agree there, for either sign
+or zero value of $\delta+3A$.
+\end{proposition}
+
+\begin{proof}
+The entry derivatives $\partial_p e_L,\partial_p e_U$ have the
+same negative sign and a nonzero margin on the common finite section
+neighborhood. For a nonpositive gap each passing set is therefore
+the interval $e_i(p)>\sqrt{-\mu_i}$; for a positive gap it is the
+whole entry neighborhood. Their intersection is the interval
+$\mathcal I(\mathbf b)$ used in the statement.
+
+Fix the gap-independent entry Lipschitz constant $L$ on the larger
+inverse box, including the path-length factor, and choose $r$ with
+\[
+ Lr<\tfrac12,
+\]
+and less than half either positive exit. Reduce the original domains
+so that $|e_i|<r$, the paths and entries stay in their larger domains,
+and the gap magnitudes are less than a quarter of the squared exits.
+This fixes the exit margins before selecting a fibre.
+
+Along its path $A$ is a fixed number. The two gaps satisfy
+\begin{equation}\label{rw:domains:gap-increase}
+ \mu_i(\alpha)-\mu_i(0)\ge2\alpha A,\qquad
+ |e_i(p;\mathbf b_\alpha)-e_i(p;\mathbf b)|\le L\alpha A.
+\end{equation}
+If $\mu_i(\alpha)>0$, its entire scalar path passes. Otherwise
+$\mu_i(0)\le\mu_i(\alpha)\le0$. The original strict passing
+condition is
+$e_i(p;\mathbf b)>\sqrt{-\mu_i(0)}$. Both nonnegative roots
+are smaller than $r$, and therefore
+\begin{align*}
+ \sqrt{-\mu_i(0)}-\sqrt{-\mu_i(\alpha)}
+ &=\frac{\mu_i(\alpha)-\mu_i(0)}
+         {\sqrt{-\mu_i(0)}+\sqrt{-\mu_i(\alpha)}}
+ \ge\frac{\alpha A}{r}.
+\end{align*}
+For $\alpha A>0$, combining this with
+\eqref{rw:domains:gap-increase} gives
+\[
+ e_i(p;\mathbf b_\alpha)>
+ \sqrt{-\mu_i(\alpha)}+\alpha A(1/r-L)
+ >\sqrt{-\mu_i(\alpha)}.
+\]
+The case $\alpha=0$ is the original strict passage; if $A=0$, the
+fibre already is the required center. This proves the assertion for
+both slow blocks, for every $\alpha$ and for all original inputs
+with the same constants. The regular connecting pieces stay in their
+preselected larger domains, and the central connections use their
+fixed signed references.
+
+To identify the center endpoint with an actual period annulus, put
+$b=1-\epsilon\bar B$ and
+$\Xi=\bar c(1-2\epsilon\bar B)/(2b)$ there. The calibrated
+entry of either block on that center is
+\[
+ U_c(p)=\Xi-\bar Bp.
+\]
+If $\delta_c:=\delta+3A>0$, its center polynomial is everywhere
+positive. If $\delta_c\le0$, the just proved passing condition
+gives $U_c(p)>\sqrt{-\delta_c}$. More explicitly, write
+$\chi_C=-p$ for the value of the real center coordinate of
+Proposition~\ref{rw:real-centers} on this section. Its polynomial
+factors as
+\[
+ A_C(\chi_C)=\frac b{\bar B}
+              \bigl[(\Xi+\bar B\chi_C)^2+\delta_c\bigr].
+\]
+Since $\Xi>\sqrt{-\delta_c}$ at $\chi_C=0$, the condition places
+$\chi_C=-p$ in its positive component containing zero. Proposition
+\ref{rw:real-centers} therefore supplies one actual periodic oval
+through each of these inputs and its positive central height.
+Its two central deviations agree, since both references vanish on
+this center. The same reasoning includes $\delta_c=0$ at every
+strictly passing input; no limiting orbit on the root is added.
+\end{proof}
+
+The contact lift works because the root retreat $\alpha A/r$ exceeds
+the entry motion $L\alpha A$. At the weak boundary, positive
+$\bar B$ derivatives of the two slow factors will play the same role.
+
+\begin{proposition}[One center across the weak boundary]
+\label{rw:domains:weak}
+Use the weak coefficient coordinates
+\[
+ \mathbf b=(\bar B,\bar c,d_s,\varsigma,\nu),\qquad
+ d_s=P_L-\widehat p,\qquad\varsigma=\bar B+\bar m,
+\]
+from Proposition~\ref{rw:center-coordinates}, in a neighborhood of
+$\bar B=\bar m=0$, $\bar c=c_0>0$, $\bar a=-c_0$.
+Let $u$ be the positive weak input, $t(u)>0$ the upper displacement
+on its passing side and $\chi(u)$ the incoming horizontal phase.
+In this neighborhood the original prepared passing interval is
+\begin{equation}\label{rw:domains:weak-conditions}
+ \mathcal I(\mathbf b)=\{0<u<u_0:
+ \gamma(\mathbf b)+u>0,\quad
+ F_I(\chi(u;\mathbf b);\mathbf b)>0,\quad
+ d_s+t(u;\mathbf b)>0\}.
+\end{equation}
+There is a constant $K>0$, fixed before the original fibre, such
+that, with $A=|d_s|+|\varsigma|+|\nu|$, the single center
+\begin{equation}\label{rw:domains:weak-center}
+ \mathbf b_c=(\bar B+KA,\bar c,0,0,0)
+\end{equation}
+belongs to the larger coefficient domain and satisfies all conditions
+in \eqref{rw:domains:weak-conditions} for every original passing
+$u$. Its complete central deviations agree on that whole interval.
+The straight coefficient segment from $\mathbf b$ to $\mathbf b_c$
+lies in the common auxiliary domain used for finite-order division.
+No assertion that all its intermediate points are physical returns
+is required.
+\end{proposition}
+
+\begin{proof}
+The upper factor is $u(\gamma+u)$ with fixed positive exit. Since
+$\bar a<0$, $F_I'>c$ on the retained horizontal interval, so its
+entry positivity is the whole-path test. The simple lower deficit is
+$d_s+t(u)=P_L-p$. Increasing $t,\chi,F_I\circ\chi$ makes the
+intersection in \eqref{rw:domains:weak-conditions} one interval.
+
+Set $H(\mathbf b,u)=F_I(\chi(u;\mathbf b);\mathbf b)$ and write
+the subscript $c$ for restriction to $d_s=\varsigma=\nu=0$.
+The coefficient and inverse-chart estimates preceding this subsection
+give constants $L_\gamma,L_H$ on the larger domain such that
+\[
+ |\gamma(\mathbf b)-\gamma_c(\bar B,\bar c)|\le L_\gamma A,
+ \qquad
+ |H(\mathbf b,u)-H_c(\bar B,\bar c,u)|\le L_H A.
+\]
+The regular horizontal entry $\chi$ makes these constants uniform
+down to $u=0$, including where $t$ is flat.
+The margins \eqref{rw:coordinates:gamma-center} and
+\eqref{rw:coordinates:horizontal-B-margin} give on a common smaller box
+\begin{equation}\label{rw:domains:weak-margins}
+ \partial_{\bar B}\gamma_c\ge g_*>0,\qquad
+ \partial_{\bar B}H_c\ge h_*>0.
+\end{equation}
+
+Choose $K$ so that $Kg_*>L_\gamma$ and $Kh_*>L_H$.
+If $A>0$, integration of \eqref{rw:domains:weak-margins} gives
+\[
+ \gamma(\mathbf b_c)+u>\gamma(\mathbf b)+u>0,
+ \qquad H(\mathbf b_c,u)>H(\mathbf b,u)>0
+\]
+at every original passing input. If $A=0$, these inequalities are
+the original strict ones. The upper center passage therefore exists
+and has $t_c(u)>0$. Its lower deficit is $0+t_c(u)$, which verifies
+the last condition as well. The original $u>0$ is unchanged.
+
+Choose the original box so that the displacement $KA$ and transverse
+contraction stay in $\mathcal B^+$. Convexity keeps the segment
+there. The absolute zero and relative extensions of Section
+\ref{rw:transitions}, with fixed signed central references, give its
+common Taylor domain even at nonpassing intermediate coefficients.
+
+It remains to check that the comparison center represents the desired
+real center component. Its invariant affine branch has intersection
+$\widehat p_c=P_{L,c}>0$ with $Y=0$, and the point used above is
+$p=\widehat p_c-t_c(u)$. The input radius ensures $p>0$.
+The center polynomial $A_C$ has its adjacent negative root
+at $\chi_C=-\widehat p_c$, with a nonzero derivative, for either sign
+of small $\bar B$. Thus $-p\in(-\widehat p_c,0)$ is in the
+positive component containing zero. Proposition~\ref{rw:real-centers}
+gives the real periodic oval through this point. Its central height
+is positive and the two complete central deviations agree.
+\end{proof}
+
+At each strictly passing center input, passage persists under small
+passive center variations. A vanishing comparison expression therefore
+has zero passive $\delta$ or $\bar B$ derivative there. Together
+with the larger-domain jet bounds, this local identity controls Taylor
+remainders even when the gaps have no uniform positive lower bound
+on the interval.

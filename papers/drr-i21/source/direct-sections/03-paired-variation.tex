@@ -1,0 +1,179 @@
+\subsection{Paired variations of the central passage}
+\label{sec:paired-variation}
+
+The two graphs start at the same central height. Pairing their variations
+at equal \(z\)-levels cancels the quadratic boundary term from the
+endpoint derivative ratio. We use the remaining terms to prove
+contraction when \(q_1\le0\), and then at sufficiently large central
+heights when \(q_1>0\).
+
+Reduce the capture data of \cref{prop:isolation-capture-new} so that
+\begin{equation}
+\label{eq:small-central-height-new}
+ 0<h<h_0<\frac{z_*}{2}.
+\end{equation}
+This is possible because the central crossing of the organizing graphic is
+$(\eta,z)=(0,0)$.
+
+Let $L_p$ denote the local map from the positive endpoint window to the
+negative endpoint window obtained by following the central passage.
+Expressing both endpoints in terms of the same central height gives,
+in the coordinate $I=z_*-\eta^2/2$,
+\begin{equation}
+\label{eq:local-map-derivative-new}
+ L_p'(I_+(h))=\frac{I_-'(h)}{I_+'(h)}>0.
+\end{equation}
+
+\begin{lemma}[Paired-variation identity]
+\label{lem:paired-variation-identity-new}
+Let $U_\pm$ be the graph solutions in
+\eqref{eq:physical-graph-equation-new}.  Define
+\begin{equation}
+\label{eq:J-sigma-new}
+ J_\sigma(z)=B_\eta(\eta_\sigma,z,p)-\frac{q_1}{z}
+ -\frac{\eta_\sigma^2}{z}
+  \bigl(3R_q(\eta_\sigma,p)
+       +\eta_\sigma\partial_\eta R_q(\eta_\sigma,p)\bigr).
+\end{equation}
+Then
+\begin{equation}
+\label{eq:paired-log-derivative-new}
+ \log L_p'(I_+(h))
+ =-\int_h^{z_*}
+ \left(\frac{J_-(z)}{\sqrt{2U_-(z;h)}}
+       +\frac{J_+(z)}{\sqrt{2U_+(z;h)}}\right)\dd z.
+\end{equation}
+The integral is improper only at $z=h$ and is convergent.
+\end{lemma}
+
+\begin{proof}
+Differentiate the right-hand side of
+\eqref{eq:physical-graph-equation-new} with respect to $U$.  Since
+$\eta_\sigma=\sigma\sqrt{2U}$, direct differentiation of
+\eqref{eq:q-expansion-new} gives
+\begin{equation}
+\label{eq:F-U-derivative-new}
+ \partial_U\mathcal G_{\sigma,p}
+ =-\frac{2q_2}{z}
+ +\frac{\sigma}{\sqrt{2U}}\left\{
+ B_\eta-\frac{q_1}{z}
+ -\frac{\eta^2}{z}(3R_q+\eta R_{q,\eta})\right\}.
+\end{equation}
+We compare the endpoint variations using
+\eqref{eq:moving-height-variation-new}. Their initial factor $f_p(h)/h$
+is common to both signs and cancels in the quotient. The term $-2q_2/z$
+in \eqref{eq:F-U-derivative-new} cancels at each common \(z\)-level.
+Subtracting the two remaining integrands gives
+\eqref{eq:paired-log-derivative-new}. As in
+\eqref{eq:moving-height-variation-new}, the singularity at \(z=h\)
+is integrable.
+\end{proof}
+
+\begin{proposition}[Signed contraction]
+\label{prop:signed-contraction-new}
+If $q_1\le0$, then
+\begin{equation}
+\label{eq:signed-local-contraction-new}
+ 0<L_p'<1
+\end{equation}
+on the whole central return interval. The return is strictly
+contracting in the endpoint coordinate $I$, and $\Delta_p$ is strictly
+decreasing in $h$. In particular, $\Delta_p$ has at most one zero.
+\end{proposition}
+
+\begin{proof}
+The sign conditions \eqref{eq:normal-sign-margins-new} and $q_1\le0$ give
+$J_\sigma\ge b_1$ along both halves. The right-hand side of
+\eqref{eq:paired-log-derivative-new} is therefore strictly negative,
+which proves \eqref{eq:signed-local-contraction-new}. Composing with
+the exterior transition in the endpoint coordinate and using
+\eqref{eq:exterior-uniform-contraction-new} gives
+$0<(\Pi_p\circ L_p)'<1$. In terms of the central height, this is
+\[
+ \Delta_p'(h)=I_+'(h)
+   \left\{\Pi_p'(I_-(h))\frac{I_-'(h)}{I_+'(h)}-1\right\}<0.
+\]
+Thus the displacement has at most one zero.
+\end{proof}
+
+For $q_1>0$, the term $-q_1/z$ in \eqref{eq:J-sigma-new} may reverse
+the sign of $J_\sigma$ near the central crossing. The next lemma controls
+this contribution at central heights that are large relative to the
+boundary coefficients.
+
+\begin{lemma}[Large central heights]
+\label{lem:relative-height-paired-new}
+After fixing $z_*$ sufficiently small, there are constants
+$\theta_0,c_*>0$ such that the following holds.  Suppose $q_1>0$,
+$0<h<h_0$, and
+\begin{equation}
+\label{eq:relative-height-paired-condition-new}
+ \frac{|q_0|}{h}+\frac{q_1}{\sqrt h}+|q_2|\le\theta_0.
+\end{equation}
+Then both halves through $(0,h)$ reach the endpoint windows and
+\begin{equation}
+\label{eq:relative-height-local-bound-new}
+ 0<L_p'\le\exp(-c_*\sqrt{z_*})<1.
+\end{equation}
+The return is strictly contracting in $I$, and $\Delta_p'(h)<0$ if
+$h\in\mathcal H_p$.
+\end{lemma}
+
+\begin{proof}
+We first continue both graphs in a cone, then place their endpoints in
+the windows, and finally estimate the derivative ratio. A first-contact
+comparison in
+\eqref{eq:physical-graph-equation-new}, first in a provisional fixed box
+and then in the resulting cone, gives constants $c,C>0$ such that
+\begin{equation}
+\label{eq:large-height-cone-new}
+ c(z-h)\le U_\sigma(z;h)\le C(z-h),\qquad
+ \mathcal G_{\sigma,p}(U_\sigma,z)\ge c,
+ \qquad h\le z\le z_*.
+\end{equation}
+Indeed, in this cone the constant, linear, quadratic, and cubic parts of
+$q/z$ are bounded, respectively, by
+\[
+ \frac{|q_0|}{h},\qquad
+ C\frac{q_1}{\sqrt h},\qquad
+ C|q_2|,\qquad C\sqrt{z_*}.
+\]
+Choose $z_*$ and then $\theta_0$ so that these quantities fit the strict
+cone margins. This proves continuation to $z=z_*$ and
+\eqref{eq:large-height-cone-new}.
+
+To place the endpoints in the prescribed windows, choose a fixed
+intermediate height \(\zeta\ll z_*\), then reduce \(h_0\) so that
+\(h_0<\zeta/2\). The cone gives \(U_\sigma(\zeta)=O(\zeta)\),
+and the organizing boundary graph has the same bound. On
+\([\zeta,z_*]\), continuous dependence and the first-variation
+estimate show that the endpoint difference between these graphs is
+\(O(\zeta)+o_p(1)\). The organizing variational coefficient on its
+positive cone is \(O(z^{-1/2})\), whose integral is uniformly bounded;
+for fixed \(\zeta\), the perturbed coefficients converge uniformly on
+this interval. Choose \(\zeta\) small relative to the fixed window
+widths, and then reduce the parameter neighborhood.
+
+With continuation and the endpoint windows established, we return to
+the derivative ratio. The sign margins \eqref{eq:normal-sign-margins-new} give
+$J_\sigma\ge b_1-q_1/z$.
+In \eqref{eq:paired-log-derivative-new}, use the upper cone bound for
+the negative contribution and the lower cone bound for the positive
+contribution. Since
+\[
+ \int_h^{z_*}\frac{\dd z}{\sqrt{z-h}}=2\sqrt{z_*-h},
+ \qquad
+ \int_h^{z_*}\frac{\dd z}{z\sqrt{z-h}}
+ \le\frac{\pi}{\sqrt h},
+\]
+we obtain
+\begin{equation}
+\label{eq:relative-height-log-bound-new}
+ \log L_p'
+ \le-c\sqrt{z_*-h}+C\frac{q_1}{\sqrt h}
+ \le-c'\sqrt{z_*}+C\theta_0,
+\end{equation}
+where $h<h_0<z_*/2$. Decreasing $\theta_0$ absorbs the positive term and proves
+\eqref{eq:relative-height-local-bound-new}.  Composition with
+\eqref{eq:exterior-uniform-contraction-new} proves the last assertion.
+\end{proof}

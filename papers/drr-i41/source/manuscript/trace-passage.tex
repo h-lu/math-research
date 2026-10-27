@@ -1,0 +1,521 @@
+\subsubsection{The stopped trace passage}
+\label{subsec:trace-passage}
+
+The trace chart contains a central saddle--node and an additional
+equatorial saddle in the same shrinking neighbourhood. The central
+normal form alone does not describe the return: its outgoing height
+must also pass through this saddle. We include both passages in the
+order of Figure~\ref{fig:trace-extra-saddle}.
+
+\begin{proposition}[Uniform stopped-trace estimate]
+\label{deg:prop-stopped-trace}
+Fix \(0<p_0<p_1<\infty\), the passive compact coefficient block,
+and the original buffered raw windows. There are independent bounds
+\(r_*,\gamma_*>0\), an opening bound \(a_*>0\), a fixed positive
+unscaled raw-height cap \(h_*\), and a final multiplier bound \(m_*\)
+such that, for
+\[
+ \alpha_0=r^2a_L,\qquad \alpha_1=rp_L,\qquad
+ 0<r<r_*,\quad |\gamma|<\gamma_*,\quad |a_L|\le a_*,\quad
+ p_0\le|p_L|\le p_1,
+\]
+the single original receiver
+\begin{equation}\label{deg:trace-actual-receiver}
+ \mathcal I_\theta=\mathcal I_\theta(h_*)
+ =\{x:a_\theta+x\in J_\theta^{\rm out},\quad
+       0<H_\theta(x)<h_*\},\qquad H_\theta(x)=z_\theta(\gamma;a_\theta+x),
+\end{equation}
+has \(F'>1/2\) everywhere for \(p_L<0\), and
+\(F'=0\Rightarrow F''>0\) for \(p_L>0\), where
+\(F(x)=x-m\Pi(x)\), \(0<m\le m_*\).
+It consequently has at most one or two isolated zeros, respectively,
+counted with total multiplicity. These conclusions apply to every
+retained interval with the original window, speed and height clips,
+including all intervening nonroot inputs and artificial equality
+dividers. Both signs of \(a_L\), \(a_L=0\), the closed trace endpoints
+and empty receivers are included; natural stopped endpoints are excluded.
+The positive trace has a concave terminal receiver overlapping its
+compact strict complement. No relation among \(m,r,\gamma\) is imposed.
+\end{proposition}
+
+\input{figures/trace-geometry}
+
+\begin{proof}
+For positive trace, we first estimate the outgoing equatorial passage
+in its actual height coordinate. We then join it to the inverse central
+passage and the incoming section map. Their logarithmic derivatives,
+together with the regular connectors, give concavity near the stopped
+orbit. A compact strict comparison and the high-height estimate extend
+the count over the whole receiver. For negative trace, a direct
+first-variation identity suffices.
+
+Put \(v=\gamma+rX\), \(z=r^2Y\), and
+\(\ell(v)=1-Av+Cv^2\), \(q_\gamma=1+2\gamma\). A positive time change gives
+\begin{equation}\label{deg:trace-field}
+\begin{split}
+ X'&=a_L+p_LX-3\gamma X^2-rX^3-\ell(\gamma+rX)Y,\\
+ Y'&=-Y\{(1+2\gamma)X+rX^2+Cr(\gamma+rX)Y\}.
+\end{split}
+\end{equation}
+Keep the original affine \(x=h-a_\theta\) and
+\(\Pi=\mathcal C_{\theta,m}\circ T_\theta(a_\theta+\cdot)\).
+Lemma~\ref{phys:lem-c3-adapters} bounds divided closing through
+ordinary order three, including \(m=0\). Phase derivatives fix all
+coefficients and the actual multiplier. The two window admissions,
+height and speed clips in \eqref{loc:nested-buffers} make
+\eqref{deg:trace-actual-receiver} an interval before capture.
+
+Choose the finite normal-form order and an initial \(|a_L|\le a_0\).
+Take the signed high-height constant, increase \(K_H\) so that
+\(|\bar a|\le a_0/K_H\), \(|\bar p|\le p_1/\sqrt{K_H}\),
+\(\bar Y(0)=1\) lies inside its compact source block, and put
+\(K_L=2K_H\). Fix \(X=L_c\) beyond the central equilibria.
+The barrier estimate \eqref{sharp:upper-trace-barrier} below fixes a
+bounded actual gap range before the terminal chords are selected.
+Retain each auxiliary cut's exact continuation, centre and gain to
+the original port. First take \(p_L\in[p_0,p_1]\).
+
+\paragraph{The outgoing equatorial saddle.}
+Set \(q=-X\).  The exact equations are
+\begin{equation}\label{deg:trace-negative-field}
+\begin{aligned}
+ q'&=M(q)+L_-(q)Y,&M(q)&=-a_L+p_Lq+3\gamma q^2-rq^3,\\
+ Y'&=Y\{qB(q)+\zeta(q)Y\},&B(q)&=1+2\gamma-rq,\\
+ L_-(q)&=\ell(\gamma-rq),&\zeta(q)&=Cr(rq-\gamma).
+\end{aligned}
+\end{equation}
+Fix \(w_0=1/8\), \(w_1=3/4\), and an auxiliary raw width
+\(\delta\) inside the original ports, sufficiently small for this
+fixed band. Choose a small \(a_0\) and a large \(Q\); then shrink
+\(r,|\gamma|\), initially with \(|a_L|\le a_0\).
+There is exactly one root \(R>Q\) of \(M\): \(M(Q)>0\),
+\(M'(Q)>0\), and \(M'\) has exactly one positive root, beyond
+which \(M\) decreases to \(-\infty\).  At \(R\),
+\[
+ rR^2=p_L+3\gamma R-a_L/R,\qquad
+ \kappa=-M'(R)=p_L+rR^2-2a_L/R\ge p_0/2.
+\]
+Evaluating \(M\) on fixed compact intervals shows that \(R\to\infty\).
+The identity \(rR=3\gamma+p_L/R-a_L/R^2\) then gives \(rR\to0\),
+uniformly in the retained parameters.  The tangent and normal
+eigenvalues are \(-\kappa\) and \(RB(R)>0\).  Thus the root is a
+saddle, its incoming equatorial branch points from \(Q\) towards \(R\),
+and its characteristic number satisfies
+\[
+ \beta_R=\frac{\kappa}{RB(R)}\longrightarrow0.
+\]
+
+Put
+\[
+ \begin{gathered}
+ h(q)=\frac{M(q)}{q^2B(q)},\quad b(q)=qh(q),\quad
+ \mathcal A(s)=\int_Q^s\frac{dq}{b(q)},\\
+ \mathcal D=b(s)\partial_s,\qquad
+ \epsilon=|a_L|/Q^2+p_1/Q+|\gamma|+rR.
+ \end{gathered}
+\]
+This is the outgoing construction of
+Lemmas~\ref{ann:lem-global-action-preparation} and
+\ref{ann:lem-negative-gate}, with
+\[
+ (s,p,1)\quad\hbox{in their axis polynomial replaced by}\quad
+ (r,p_L,-a_L).
+\]
+We verify the changed inputs. The first five Euler derivatives of
+\(h=(-a_L/q^2+p_L/q+3\gamma-rq)/B(q)\) are \(O(\epsilon)\)
+on \(Q/2\le q\le2R\) and its fixed logarithmic collars; the same
+holds for \(L_-/B-1\) and \(\zeta q/B\). Moreover
+\(b>0\) up to \(R\), \(|b'|\le C\epsilon\), and
+\(\mathcal A\to\infty\) at \(R\). On the fixed entrance interval,
+\[
+ M(q)/q\ge p_0-2a_0/Q-3|\gamma|Q-rQ^2\ge p_0/2
+ \qquad(Q/2\le q\le Q).
+\]
+After choosing \(R_0>2Q\), the bound \(b\le Cp_1\) on
+\([Q,R_0]\) follows by an independent shrink of \(r,|\gamma|\).
+
+For clarity, the two equations used in that construction are
+\begin{equation}\label{deg:trace-normal-field}
+ \begin{gathered}
+ u'=h+cw,\qquad w'=w\{1-2h+(k-2c)w\},\\
+ u=\log q,\quad w=Y/q^2,\quad c=L_-/B,\quad k=\zeta q/B,
+ \end{gathered}
+\end{equation}
+in positive normal time \(d\tau_n=qB(q)\,dT\), and
+\begin{equation}\label{deg:trace-graph}
+ \frac{dw}{d\log q}=F(\log q,w)
+ =w\left\{\frac{1+2\gamma-rq+Crq(rq-\gamma)w}
+ {L_-(q)w+3\gamma-rq+p_L/q-a_L/q^2}-2\right\}.
+\end{equation}
+The first is unchanged in form, so
+Lemmas~\ref{lem:normal-time-projection} and
+\ref{lem:normal-time-action-height} give the strong footpoint and
+its actual fixed-cut height on \(R_0\le s<R\):
+\begin{equation}\label{deg:trace-height}
+ \log y=-\mathcal A(s)+2\log s+\log U(s)+E_Q(y),\qquad
+ 0<y\le e_0=C_QR_0^2e^{-c(R_0-Q)/p_1}.
+\end{equation}
+Here \(U\) and its reciprocal and logarithmic derivatives are bounded,
+\(E_Q(0)=0\), \(\|E_Q\|_{C^3}\le C_Q\), and
+\begin{equation}\label{deg:trace-height-derivative}
+ \mathcal D\log y=-K,\qquad
+ |K-1|+|\mathcal DK|\le C\epsilon+C_Qe_0,\qquad K\ge\tfrac12.
+\end{equation}
+The passage stays in \(Q/2<q<2R\), and \(y\downarrow0\) at \(R\).
+
+For the continuation, fix \(|\gamma|<\delta/2\). The strong-section
+abscissa is \(q_s(s)=sU_s(s)\), with \(q_s'\asymp1\) and
+three bounded logarithmic derivatives of \(U_s\). On
+\(w_0\le w\le w_1\), the denominator in
+\eqref{deg:trace-graph} is bounded below,
+\(F(w_0)>c\), \(F(w_1)<-c\), \(F_w\le-1\), and its required
+state and logarithmic-radius derivatives are bounded. Since
+\(q_s(R)<q_H=(\delta+\gamma)/r\), the same invariant-strip and
+moving-entrance argument as in
+\eqref{ann:repair-moving-variation}--\eqref{ann:repair-completed-log-jets}
+gives a unique raw exit and bounded logarithmic phase derivatives.
+Only their first row is needed here. The new term
+\(-a_L/q^2\) has the same integrable weight as the former \(q^{-2}\),
+with bounded coefficient; no reciprocal \(\beta_R\) is introduced.
+
+The full raw image is admitted before composing the closing. Indeed,
+choose \(0<d_{\rm r}\ll\delta\), then require \(2rR<d_{\rm r}\).
+Comparison from \(rq=d_{\rm r}\) to the raw exit with
+\(w_\Gamma(\xi)=(\sqrt{1+\xi^2}+1)^{-1}\) gives, uniformly in \(s\),
+\[
+ |W_H(s)-w_\Gamma(\delta+\gamma)|
+ \le C d_{\rm r}/\delta+
+ C_{d_{\rm r},\delta}(|A-1|+|C-1|+|\gamma|+rp_L+|a_L|r^2).
+\]
+This is the raw comparison in the negative-gate proof with the same
+changed polynomial. Choose \(d_{\rm r}/\delta\) from the original
+window reserve, then shrink the coefficients; the raw height is
+\((\delta+\gamma)^2W_H\), with organizing-height translation
+\(O(\delta|\gamma|)\). The compact bridge and divided closing are
+therefore defined on the whole image. Their ordinary \(C^3\) bounds
+give the completed output \(\Gamma_-(s)\) with
+\[
+ \Gamma_-'<0,\qquad
+ |s\partial_s\log(-\Gamma_-')|\le C,\qquad
+ |\mathcal D\log(-\Gamma_-')|\le C\epsilon.
+\]
+The two physical radii \((\delta\pm\gamma)/r\) remain distinct in
+their absolute gains.
+
+Define \(O(y(s))=\Gamma_-(s)\). The same logarithmic chain rule as
+in Proposition~\ref{ann:prop-endpoint-curvature} now gives
+\begin{equation}\label{deg:trace-extra-saddle}
+ \begin{split}
+ O'(y)&=\frac{(-\Gamma_-')b}{yK}>0,\\
+ y\frac{O''}{O'}
+ &=-1-\frac{\mathcal D\log(-\Gamma_-')+b'-\mathcal D\log K}{K}
+ =-1+O(\epsilon+C_Qe_0)<-\tfrac12.
+ \end{split}
+\end{equation}
+It holds on the actual height interval \(0<y<y(R_0)\), uniformly
+as \(\beta_R\to0\); no derivative at the excluded endpoint is used.
+
+\paragraph{The central passage and its connectors.}
+At \(a_L=r=\gamma=0\) the central eigenvalues are \(p_L,0\),
+with the nonzero weak quadratic coefficient of
+Lemma~\ref{deg:lem-positive-atlas}. Apply the finite-smooth
+multiparameter orbital normal form of
+\cite[Theorem~3 and formula~(2.2), October 2000 author copy p.~6]{DIR02}
+to the reversed field, at the preselected joint order \(N\ge12\).
+Its positive orbital factor gives the inverse physical passage, with
+no scalar-opening rank condition.
+
+The axis branch has \(X_{\rm ax}=-a_L/p_L+O(a_L^2)\), \(Y=0\),
+and the interior branch satisfies
+\[
+ \left.\partial_{a_L}Y_{\rm int}\right|_{a_L=0}
+ =\frac{1+2\gamma}
+ {\ell(\gamma)(1+2\gamma)+p_LCr\gamma}>c>0.
+\]
+Their weak separation is \(a_L\) times a positive unit; the strong
+rate stays nonzero. A finite compact cover gives common boxes and phase
+bounds across \(a_L=0\). The physical boundary is the interior saddle
+for \(a_L>0\), the axis saddle for \(a_L<0\), and their common root
+at zero. Center this weak root at \(x_+(d)\), with the other at
+\(x_+(d)-d\), \(d\asymp|a_L|\). Only signed-side phase derivatives
+are needed.
+
+In reversed normal-form time take \(x'=g_d(x)\), \(\eta'=-\eta\),
+a fixed strong entrance \(\eta=\eta_0>0\), and a fixed weak exit
+\(x=\rho\). The orbit from \((x_+(d)+t,\eta_0)\) reaches it at
+height \(\eta_0M_d(t)\). With bounded normal-form coefficient
+\(\mathfrak a\), the two weak factors give
+\begin{equation}\label{deg:trace-stopped-map}
+ \begin{gathered}
+ G_d(t)=\frac{t(t+d)}{1+\mathfrak a(x_+(d)+t)},\qquad
+ g_d(x_+(d)+t)=G_d(t),\\
+ M_d(t)=\exp\!\left[-\int_{x_+(d)+t}^{\rho}\frac{dx}{g_d(x)}\right].
+ \end{gathered}
+\end{equation}
+For small \(d\ge0\), \(t>0\),
+\begin{equation}\label{deg:trace-stopped}
+ M_d'=\frac{M_d}{G_d},\qquad
+ \frac{M_d''}{M_d'}=\frac{1-G_d'}{G_d},\qquad
+ 1-G_d'\ge\delta_G>0,\quad G_d\asymp t(t+d).
+\end{equation}
+The quantities \(G_d\) and \(M_d\) are uniformly small on a short
+terminal interval: \(G_d\le Ct(t+d_*)\) for \(0\le d\le d_*\),
+while the lower action bound \(c\int_t^{\rho/2}du/[u(u+d_*)]\),
+with fixed small \(d_*>0\), diverges at zero.
+Keeping the two coalescing factors together makes this estimate
+uniform as their separation vanishes.
+
+Absorb the fixed factor \(\eta_0\) into the incoming section map.
+From the central strong exit to \(q=Q\), the flight has fixed
+finite length and \(q'\ge cq>0\).  Ordinary graph variations give
+\begin{equation}\label{deg:trace-height-connector}
+ \begin{gathered}
+ \mathfrak H_\theta(t)=b_\theta+B_\theta(t),\qquad B_\theta(0)=0,\\
+ 0<c_Q\le B_\theta'\le C_Q,\qquad
+ |\mathfrak H_\theta''/\mathfrak H_\theta'|\le C_Q,\qquad
+ 0\le b_\theta\le C_Q|a_L|.
+ \end{gathered}
+\end{equation}
+Here \(b_\theta=0\) for \(a_L\le0\). For \(a_L>0\), the
+interior saddle's strong branch has a uniform spectral gap; its
+smooth finite flight to \(Q\) gives the positive offset. Retain this
+offset in \(O\), using phase regularity on each signed side.
+
+After \(Q,R_0\) are fixed, \(y_\theta(R_0)\) has a uniform
+positive lower bound.  At \(r=\gamma=0\) it is the height of a
+finite regular passage on a compact parameter block, and continuity
+preserves positivity.  Choose \(y_*>0\) below this bound.  Only
+now shrink \(a_*,t_*\) so that
+\begin{equation}\label{deg:trace-domain-inclusion}
+ \mathfrak H_\theta([0,2t_*])<y_*/2<y_\theta(R_0).
+\end{equation}
+Thus every strict terminal orbit, including those with positive
+offset, lies in the domain of \eqref{deg:trace-extra-saddle}.
+
+For the incoming connector, at \(r=\gamma=0\) the boundary branch
+beyond the positive local cut satisfies \(X,Y>0\) and
+\(D=Y-a_L-p_LX>0\).  At \(D=0\), reverse time points into
+\(D>0\), since \(\dot D=p_LD-XY\).  Also \(Y_X\le2X\)
+for large \(Y\) on bounded \(X\)-intervals.  These facts continue
+the branch to every fixed positive cut without loss of its graph
+or finite-\(X\) blow-up.  At large fixed \(X\),
+\[
+ \frac{dW}{d\log X}=\frac{W}{W-p_L/X-a_L/X^2}-2W,
+ \qquad W=Y/X^2.
+\]
+Choose the cut so that \(0<p_L/X+a_L/X^2<1/4\).  The right
+side is at least \(1/2\) for \(0<W\le1/4\) with \(D>0\),
+and is negative for \(W\ge1\).  The compact family enters a
+common quadratic corridor at a fixed cut \(L_t\), as does a small
+chord of strict incoming orbits for nearby coefficients.
+For nearby coefficients the rational tail equation has
+\(F_W\le-1\) and bounded \(F_{WW}\). Its first variation decays
+exponentially, so the relative-jet argument
+\eqref{tail:relative-jet-equations} bounds the pre-Schwarzian uniformly.
+The same fixed raw comparison as on the negative side admits the whole
+chord into the positive window. After the finite connector and original
+bridges, the actual input adapter therefore satisfies
+\begin{equation}\label{deg:trace-input-adapter}
+ x=A_\theta(M_d(t)),\qquad A_\theta'>0,\qquad
+ |A_\theta''/A_\theta'|\le C_Q.
+\end{equation}
+Its absolute first derivative needs no lower bound.
+
+\paragraph{Curvature and the overlap of actual phase intervals.}
+The three constructed maps refer to the same orbit by flow uniqueness:
+\(A_\theta\) continues to the actual input, \(\mathfrak H_\theta\)
+to \(q=Q\), and \(O_\theta\) through the extra saddle and closing.
+Thus
+\[
+ x=A_\theta(M_d(t)),\qquad \Pi(x)=O_\theta(\mathfrak H_\theta(t)).
+\]
+All factors are increasing. Put \(H=\mathfrak H_\theta(t)\).
+Differentiation in \(t\), keeping the
+affine input \(x\) in the displacement, gives
+\begin{equation}\label{deg:trace-composition}
+ \begin{split}
+ G_d\frac{d}{dt}\log\Pi'(x(t))
+ ={}&G_d\frac{O''(H)}{O'(H)}H'+G_d\frac{H''}{H'}\\
+ &-M_d\frac{A''(M_d)}{A'(M_d)}-(1-G_d').
+ \end{split}
+\end{equation}
+The first term is nonpositive by \eqref{deg:trace-extra-saddle}
+and \eqref{deg:trace-domain-inclusion}.  The next two are bounded
+by \(C_Q(G_d+M_d)\), whereas the last is at most \(-\delta_G\).
+Shorten the terminal interval so that the whole expression is at
+most \(-\delta_G/2\).  Since \(G_d>0\) and \(x'(t)>0\),
+this proves \(\Pi''<0\) in the original affine input.
+
+Fix a positive local cut \(X=L_c\) beyond the nearby central
+equilibria, and let \(Y_b^+(L_c)\) be the incoming boundary
+height.  The normalized actual gap is
+\begin{equation}\label{deg:trace-actual-gap}
+ \xi=Y(L_c)-Y_b^+(L_c)
+ =\frac{z(\gamma+rL_c)-r^2Y_b^+(L_c)}{r^2}.
+\end{equation}
+Thus \(r^2\xi\) is the actual raw gap on this section, with the
+same zero, ordering and orientation as \(\xi\).
+Order and the compact local connector make \(\xi(t)\) strictly
+increasing. More precisely, the connector on the fixed local cuts
+gives \(\xi(t)=\psi_\theta(M_d(t))-\psi_\theta(0)\), with
+\(0<c\le\psi_\theta'\le C\). Since \(G_d(u)\ge cu^2\),
+the action in \eqref{deg:trace-stopped-map} at \(t=t_*/2\) is
+at most \(C/t_*\). Consequently
+\(\xi_\theta(t_*/2)\ge c\exp(-C/t_*)>0\), uniformly on the
+completed coefficient block, including \(d=0\). Choose
+\begin{equation}\label{deg:trace-overlap}
+ 0<2\xi_0<\inf_\theta\xi_\theta(t_*/2).
+\end{equation}
+Then \(0<\xi\le2\xi_0\) lies in the terminal interval.
+The whole lower range \(Y_0=H_\theta(x)/r^2\le K_L\) reaches this
+same cut. Indeed its exact scalar graph is
+\begin{equation}\label{sharp:upper-trace-barrier}
+ Y_X=\frac{Y\{(1+2\gamma)X+rX^2+Cr(\gamma+rX)Y\}}
+ {\ell(\gamma+rX)Y-a_L-p_LX+3\gamma X^2+rX^3}.
+\end{equation}
+The through denominator is positive. Above a fixed \(M_0>K_L+1\)
+it is at least \(\ell_0Y/2\), and on \(0\le X\le L_c\)
+\(Y_X\le C_{L_c}+Y\). Comparison after the first crossing of \(M_0\)
+and Gronwall give the previously fixed bound
+\begin{equation}\label{sharp:upper-trace-bounded-gap}
+ 0<\xi=Y(L_c)-Y_b^+(L_c)\le B.
+\end{equation}
+Only original through admission is used here. The divider height is
+nonnegative and is subtracted on the same section.
+
+On \(\xi\ge\xi_0\) the limiting passage is uniformly separated from
+its stopped graph. To obtain this separation before constructing a strict
+cover, let \(t_{\rm ref}\) be the unique phase with \(\xi=\xi_0\).
+The uniform vanishing of \(M_d(t)\) bounds \(t_{\rm ref}\) away from
+zero. The standing normal form gives a nonbroken physical passage at
+every such positive phase: for \(a_L>0\) it crosses above the interior
+saddle with \(Y_0>a_L\), and for \(a_L\le0\) with \(Y_0>0\).
+Take the positive minimum over the compact reference-phase and
+coefficient block at \(r=\gamma=0\); scalar order then gives
+\[
+ Y_0-\max\{a_L,0\}\ge\eta_0>0\qquad(\xi\ge\xi_0).
+\]
+For \(D=Y-a_L-p_LX\), \(D(0)>0\) and
+\(\dot D=p_LD-XY\) excludes a first zero in either relevant half-axis
+orientation. The bound \(Y_X\le C+Y\) excludes finite-\(X\) blow-up.
+Thus the bounded complement has a compact strict-family cover with
+positive core height and speed margins. At large \(|X|\), its
+\(W=Y/X^2\) equation points upward below \(1/4\) and downward above
+\(1\), so both half-tails enter quadratic corridors at a common fixed
+cut. Their actual outward continuations and fixed raw comparison give
+both original-window margins. In particular
+\(\xi_0\le\xi\le2\xi_0\) is a physical terminal/strict overlap.
+
+For a strict limiting graph, Proposition~\ref{ann:prop-source-curvature}
+with \(a=a_L\), \(p=p_L\), \(b=B_+\), and
+\(\sigma=\partial_bY>0\) gives
+\begin{equation}\label{deg:trace-strict-curvature}
+ \frac{S''}{S'}=-2\int_{\mathbb R}\frac{X(a_L+p_LX)\sigma}{D^3}\,dX
+              =-p_L\int_{\mathbb R}\frac{\sigma}{D^2}\,dX<0.
+\end{equation}
+The compact strict cover bounds \(\sigma\) below and \(D\) above
+on a common core; \(p_L\ge p_0\) gives a uniform negative margin.
+
+To transfer this margin, use the exact normalization
+\eqref{deg:det-normalized-tail}. The changed coefficient \(a_L\)
+gives the weight
+\[
+ \|N\|_{C^3}\le C\{rR^{-2+\nu_0}+|\gamma|R^{-3+\nu_0}
+                  +|p_L|R^{-4+\nu_0}+|a_L|R^{-5+\nu_0}\},
+ \qquad 0<\nu_0<1.
+\]
+The argument of Proposition~\ref{prop:source-normalization}, with this
+integrable weight and the admitted enlarged chords, gives phase \(C^3\)
+convergence independently in \(r,\gamma\). Exterior factors normalized
+by their exact value and slope converge to the identity by
+\eqref{deg:det-adapter-normalization}--\eqref{deg:det-divided-closing}.
+Use the actual maps \(h(b),k(b)\) and their normalization
+\eqref{eq:reference-normalization}, with
+\(c_h=h'(b_*)>0\), \(c_k=k'(b_*)>0\). Let
+\(\beta=b_*+(x+a_\theta-h(b_*))/c_h\). As in
+\eqref{ann:p0-two-actual-adapters},
+\begin{equation}\label{deg:trace-physical-curvature}
+ \Pi''(x)=\frac{c_k}{c_h^2}\Phi''(\beta)<0.
+\end{equation}
+Both raw first variations are \(r^{2-\lambda_\gamma}\) times
+positive units. Their quotient, the actual bridges and divided closing
+bound \(\Pi'\) on the strict pieces and their regular finite-flight
+ends; the individual gains may vanish.
+
+At every actual point with \(Y_0>K_H\), freeze the dilation at that
+point before a phase derivative. The exact normalized parameters are
+\begin{equation}\label{sharp:upper-trace-high-dilation}
+ (\bar a,\bar p,\bar\gamma,\bar s)=
+ (a_L/Y_0,p_L/\sqrt{Y_0},\gamma,r\sqrt{Y_0}),\qquad \bar Y(0)=1.
+\end{equation}
+The fixed unscaled cap \(h_*\) gives \(\bar s<\sqrt{h_*}\).
+The signed compact source block of
+Corollary~\ref{rew:cor-high-derivative-signed} receives these parameters.
+Its two absolute original-port variations have the same
+\(\bar s^{2-\lambda_\gamma}\) power, including every bridge and
+\eqref{deg:det-divided-closing}. Their quotient bounds the derivative
+of this same physical \(\Pi\) at every high input, including nonroots.
+
+Thus the original set cover is
+\[
+ \mathcal I_\theta=\{Y_0\le K_L\}\cup\{Y_0>K_H\},\qquad
+ \{Y_0\le K_L\}\subset\{0<\xi\le2\xi_0\}\cup\{\xi\ge\xi_0\}.
+\]
+Each set is restricted to \(\mathcal I_\theta\). The physical overlaps
+are \(K_H<Y_0<K_L\) and \(\xi_0<\xi<2\xi_0\). Enlarged chords
+receive both positive gap equality faces; the height equality faces are
+low. Original window, speed or height clipping preserves this cover,
+including all intervening inputs, and excludes the broken \(t=0\).
+On the terminal and strict pieces \(\Pi''<0\); on the high and
+regular pieces \(\Pi'\le C\). Choose \(m_*\) last so that the latter
+have \(F'>1/2\). Every zero of \(F'\) has \(F''=-m\Pi''>0\).
+Lemma~\ref{sharp:upper-critical-count} gives the whole positive-trace
+bound.
+
+\paragraph{The negative trace.}
+Now take \(\alpha_1=-rp\), \(p\in[p_0,p_1]\), and
+\(\alpha_0=r^2a_L\), \(|a_L|\le a_*\). Let \(\delta_{\rm raw}\)
+bound \(|v-\gamma|\) on the original small raw chart. In the raw coordinate
+\(u=v-\gamma\), put
+\[
+ \begin{gathered}
+ \mathcal M=-r^2a_L+rpu+3\gamma u^2+u^3,\qquad
+ \mathscr D=\mathcal M+\ell(v)z>0,\\
+ \nu=\frac{6\gamma}{1+2\gamma},\qquad N=rp+(3-\nu)u^2\ge rp+2u^2.
+ \end{gathered}
+\]
+The graph equation
+\(z_v=f=z\{(1+2\gamma)u+u^2+Cvz\}/\mathscr D\)
+satisfies \eqref{deg:raw-log-jacobian} with these \(\mathcal M,N\).
+\begin{equation}\label{deg:trace-jacobian}
+ f_z=\frac d{dv}\log\frac{z^{1+\nu}}{\mathscr D}
+   +\frac{N+\{\ell'(v)+(1-\nu)Cv\}z}{\mathscr D}.
+\end{equation}
+On \(\mathcal M<0\),
+\[
+ |\mathcal M|\le a_*r^2+rp|u|+3|\gamma|u^2+|u|^3
+ \le C(a_*r+\delta_{\rm raw}+|\gamma|)N.
+\]
+Let \(\kappa_0=\tfrac12\inf\ell>0\).  Where
+\(\mathscr D\ge\kappa_0z\), the last quotient in
+\eqref{deg:trace-jacobian} is uniformly bounded below.
+On the complement, \(\mathcal M<0\) and
+\(z\le|\mathcal M|/(\ell-\kappa_0)\); the displayed estimate
+makes its numerator at least \(N/2\) on the standing small raw chart
+after the independent coefficient shrink.  It is therefore nonnegative there.
+Integrating from the positive raw section to the negative one
+reverses the orientation of the interval and gives
+\begin{equation}\label{deg:trace-negative-derivative}
+ 0<T'\le C\frac{(z^{1+\nu}/\mathscr D)_-}
+ {(z^{1+\nu}/\mathscr D)_+}\le C_0.
+\end{equation}
+The endpoint ratio is bounded on the fixed actually admitted raw
+windows: endpoint heights are positive units and graph speeds have
+fixed positive lower bounds. No lower central speed is used. The
+estimate holds on the full receiver \eqref{deg:trace-actual-receiver},
+including its speed clip and every intervening nonroot input.
+The ordinary divided closing has bounded positive derivative, so
+\(0<\Pi'\le C_{\rm neg}\). Add \(m_*C_{\rm neg}<1/2\) to the final
+multiplier choice; then \(F'>1/2\) throughout, giving at most one
+simple zero. The positive-phase estimates remain uniform at \(a_L=d=0\).
+\end{proof}
