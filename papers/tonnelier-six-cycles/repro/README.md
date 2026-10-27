@@ -2,7 +2,10 @@
 
 These files derive from Supplement S1 v1.0.0. The candidate retains all
 mathematical inputs; one machine-name provenance field was removed for
-portable distribution. The checker sources and reference output are unchanged.
+portable distribution. The checker sources and reference output are unchanged. A fresh output will
+record a different `candidate_sha256` because that field hashes the entire
+JSON file, including provenance; this packaging change leaves every
+mathematical input unchanged.
 The original frozen attachment remains available at https://doi.org/10.5281/zenodo.23113416.
 
 Reference environment: Python 3.14.4, python-flint 0.9.0, FLINT 3.6.0,

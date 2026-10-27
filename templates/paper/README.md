@@ -1,6 +1,6 @@
 # Replace with exact manuscript title
 
-[Paper](paper.pdf) · [Author source](source/) · [Metadata](paper.json)
+Add paper.pdf and the source/ directory, then link them here. Metadata is in paper.json.
 
 State the version,  conclusions, limitations, build
 requirements, citation, rights, and exact validation scope. Retain the
