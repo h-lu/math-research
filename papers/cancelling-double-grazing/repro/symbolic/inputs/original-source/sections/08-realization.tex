@@ -1,0 +1,449 @@
+\section{Realization in fields and a harvesting model}
+\label{sec:sharpness}
+
+The observed controls can be varied independently by local perturbations
+through every permitted reference field. We first construct these
+perturbations in the original time, then obtain the same rank from natural
+parameters in a two-tier harvesting model. A fixed full-rank observation inverse
+transfers the configurations proved above to both realizations.
+
+\subsection{Local controls through a specified reference field}
+\label{subsec:specified-field}
+
+Fix a nonstationary reference cycle \(\mathcal C\) satisfying the geometric
+hypotheses of Section~\ref{sec:passage}, with transported strengths
+\(A_{1,0}=-A_{2,0}\ne0\) and actual closing jets
+\[
+ R_0(0)=0,\qquad R_0'(0)=1,\qquad
+ c_0=\tfrac12R_0''(0)\ne0.
+\]
+Both contacts use positive penetration, and the smooth connectors have
+no additional seam event. Choose a second-contact box \(U_2\) and a
+smooth closing-arc flow box \(U_3\), with disjoint closures away from
+the first contact and return section.
+Let \(\mathcal L_{\mathcal C}(U_2,U_3)\) be the finite-dimensional
+jointly smooth parameter germs through this field with seam changes
+supported in \(\operatorname{int}U_2\), inactive branch fixed there,
+and active difference \(h_\lambda B_\lambda\) with smooth
+\(B_\lambda\). In \(\operatorname{int}U_3\), which stays away
+from the seam, a common smooth field may be added to both branches.
+All other data are fixed. The contact controls \(\delta,m\) and
+closing controls \(a,b\) have disjoint supports, but their observation
+Jacobian retains the couplings below.
+
+\begin{proposition}[Four local controls through every reference field]
+\label{prop:specified-rank}
+Every such reference field admits a four-parameter unfolding in
+\(\mathcal L_{\mathcal C}(U_2,U_3)\) with
+\(D_\lambda(a,b,m,\delta)\) invertible at zero. At zero parameters
+it recovers the specified field, including its original physical time.
+The perturbations preserve matching, embedded regular seams, quadratic
+contacts and one common one-turn first-return interval. Every
+finite-parameter germ in the allowed class has these common-domain
+properties after its own fixed reduction.
+\end{proposition}
+
+\begin{proof}
+Transport the first inactive integral along the unchanged first
+connector. Clock Morse normalization near the second contact gives
+\[
+ X_0^-=v(t,q)\partial_t,\qquad
+ X_0^+=v(t,q)\{[1+(q-t^2)\alpha(t,q)]\partial_t
+                    +(q-t^2)\beta(t,q)\partial_q\},\quad v>0.
+\]
+For a positive smooth \(e\),
+\(h_0=e(q-t^2)\) and
+\(eB_0=v(\alpha\partial_t+\beta\partial_q)\).
+Choose compactly supported cutoffs \(\psi,\zeta\) in \(U_2\),
+equal to one on a smaller contact core, and set
+\begin{equation}\label{eq:specified-contact-controls}
+ h_d=h_0-de\psi,\qquad
+ X_{\kappa,d}^+=X_0^++(h_d-h_0)B_0
+                  +\kappa h_dv\zeta e^{-1}\partial_q,
+ \qquad X_{\kappa,d}^-=X_0^-.
+\end{equation}
+These changes extend by zero, recover \(X_0^\pm\) at zero, and satisfy
+\[
+ X_{\kappa,d}^+-X_0^-
+ =h_d(B_0+\kappa v\zeta e^{-1}\partial_q).
+\]
+Thus the traces agree on the moving seam in the original time.
+In the core, \(z=q-d\) gives the normalized seam \(z=t^2\) and
+coefficients \(v(t,z+d),\alpha(t,z+d),\beta(t,z+d)+\kappa\).
+The contact is \((0,d)\), with inactive second seam derivative
+\(-2v(0,d)^2<0\) in the normalized defining function, and the
+active clock stays positive. Proposition~\ref{prop:quadratic-passage}
+therefore gives \(A_2(\kappa,d)=\tfrac43[\beta(0,d)+\kappa]\).
+The first passage and connector are unchanged, so
+\begin{equation}\label{eq:specified-strength-jacobian}
+ \delta=d,\quad m=A_{1,0}+\tfrac43[\beta(0,d)+\kappa],\qquad
+ D_{(\kappa,d)}(m,\delta)(0)=
+ \begin{pmatrix}4/3&(4/3)\beta_q(0,0)\\0&1\end{pmatrix}.
+\end{equation}
+The second strength is already transported; its incoming threshold is
+\(\Gamma_1^{-1}(d)\).
+
+In \(U_3\), use actual base flow time \(s\) and the second out-port
+coordinate transported by that flow as \(z\). Then
+\(X_0^-=\partial_s\), the entrance holonomy is \(q\mapsto z=q\),
+and the remaining transition is \(R_0\). Add to both branches
+\[
+ Y_\eta=\chi(s)\xi(z)(\eta_0+\eta_1z)\partial_z,
+ \qquad \chi\ge0,\qquad \int\chi(s)\,ds=1,
+\]
+with compact support and \(\xi=1\) on a fixed transverse interval.
+Small inputs and controls stay in that interval, so the exact box
+holonomy and closing transition are
+\[
+ H_\eta(z)=e^{\eta_1}z+\eta_0\phi(\eta_1),\qquad
+ \phi(w)=\int_0^1e^{wt}\,dt,\qquad R_\eta=R_0\circ H_\eta.
+\]
+Consequently
+\begin{equation}\label{eq:specified-four-jacobian}
+ D_{(\eta_0,\eta_1,\kappa,d)}(a,b,m,\delta)(0)=
+ \begin{pmatrix}
+ 1&0&0&0\\2c_0&1&0&0\\
+ 0&0&4/3&(4/3)\beta_q(0,0)\\0&0&0&1
+ \end{pmatrix},\qquad \det=4/3.
+\end{equation}
+Disjoint supports make the closing leg independent of \((\kappa,d)\).
+The inverse function theorem gives smooth original-field coordinates
+\((a,b,m,\delta)\), with the higher profiles still coupled.
+
+The seam $q-t^2-d\psi(t,q)=0$ has $q$ derivative greater than $1/2$
+for small $d$ and agrees with the old seam on a boundary collar. The
+reference has a positive angular clock on a fixed tube; matching gives
+common local Lipschitz bounds for the perturbed physical fields.
+Choose cores where the cutoffs are one, ports with strict transverse margins,
+and strictly inactive connecting arcs, including the cutoff collars.
+Proposition~\ref{prop:quadratic-passage} gives the first entry and moving
+first exit in each core, with second penetration $\Gamma_1(q)-d$.
+Lemma~\ref{lem:common-tube} therefore gives the actual one-turn return
+\[
+ P_\lambda(q)=R_\eta\{d+
+       \Gamma_{2,\kappa,d}(\Gamma_1(q)-d)\}.
+\]
+For any finite-parameter germ in the allowed class, matching, smooth
+parameter dependence and the contact implicit function theorem preserve
+these same strict clock, core and port margins after a germ-dependent
+reduction. The common-return conclusion needs no observation rank.
+\end{proof}
+
+\begin{corollary}[Cyclicity in the allowed local perturbation class]
+\label{cor:specified-cyclicity}
+The cyclicity of every reference cycle of
+Proposition~\ref{prop:specified-rank}, relative to
+\(\mathcal L_{\mathcal C}(U_2,U_3)\), is exactly six: it is the
+supremum, over finite-parameter germs in that class, of the numbers
+of distinct isolated periodic orbits approaching \(\mathcal C\)
+at parameters tending to zero.
+Its constrained cyclicities on $m=0$, on $\delta=0$, and on their
+intersection are respectively four, four and two.
+\end{corollary}
+
+\begin{proof}
+Each germ has the common actual geometry after its own reduction,
+so Proposition~\ref{prop:common-count}, restricted to its observations,
+gives at most six fixed points.
+Every periodic orbit approaching \(\mathcal C\) meets that section
+interval. An increasing return has no nontrivial finite-period orbit:
+if \(P(q)>q\) or \(P(q)<q\), its successive iterates are strictly
+ordered. Thus fixed points count these cycles. Conversely,
+Proposition~\ref{prop:specified-rank} and
+Proposition~\ref{prop:single-scale-six} give six simple cycles
+approaching \(\mathcal C\).
+Restricting the same observation inverse to the three indicated slices,
+Proposition~\ref{prop:sharp-slice-attainment} attains their bounds from
+Corollary~\ref{cor:four-slices}.
+\end{proof}
+The reduction is per finite-parameter germ. A prescribed model or
+fixed-seam subfamily can lack the seam-height direction and requires
+its own rank calculation.
+
+\subsection{A two-tier escapement-harvesting model}
+\label{sec:harvesting}
+
+The continuous policy of Bohn, Rebaza and Speer
+\cite[Model~Two, equation~(17)]{bohn2011} stops prey harvest below
+a lower threshold, increases it linearly between two thresholds,
+and caps it above the upper one. Onana Ndzana et al.
+\cite[equations~(5)--(6)]{onana2019} use it in a delayed
+Leslie--Gower model with prey refuge. We intensify harvest above
+the upper threshold, using the normalized smooth
+predator-harvesting core of Huang, Gong and Ruan
+\cite[equation~(9) and Theorem~3.6]{huang2013}:
+\begin{equation}\label{eq:harvesting:model}
+ \dot x=x(1-x-y)-u(x-L)_+-v(x-U)_+,\qquad
+ \dot y=y\left(d-\beta\frac yx\right)-h.
+\end{equation}
+Here \(x,y>0\) are prey and predator densities,
+\(\beta,d,h,u,v>0\), and \(0<L<U<1\).
+Here \(h\) denotes predator harvest; the multiplier defect in the
+preceding analysis is \(-b\). The predator parameters \(d,\beta,h\) describe growth, density
+limitation relative to prey abundance, and constant-yield harvest.
+The marginal prey efforts are \(0,u,u+v\). We work in a compact
+subset of the positive quadrant. The middle smooth extension is
+\begin{equation}\label{eq:harvesting:middle}
+ F_c=x(1-x-y)-u(x-L),\qquad
+ G=y(d-\beta y/x)-h,\qquad X_c=(F_c,G),
+\end{equation}
+and the exterior extensions are
+\[
+ X_\ell=(x(1-x-y),G),\qquad X_r=(F_c-v(x-U),G).
+\]
+They agree on the whole seams \(x=L,U\). The middle extension is
+inactive at both contacts, with active sides outside \(L\le x\le U\).
+The branches are analytic for \(x>0\) and the physical field is
+locally Lipschitz.
+
+\begin{theorem}[Natural harvesting realization]
+\label{thm:harvesting-realization}
+There exists \(\rho_0>0\) such that, for every fixed
+\(0<\rho<\rho_0\), there exists \(u_0(\rho)>0\) with the following
+property. For every fixed \(0<u<u_0(\rho)\), positive parameters
+\(\beta,d,h,v\) and \(0<L<U<1\) give an embedded neutral reference
+cycle \(\mathcal C\) of \eqref{eq:harvesting:model}, with exactly two
+quadratic contacts at its minimum and maximum prey densities. In one
+transported ordinary return coordinate the contact levels agree and
+\[
+ A_1=A_0=-A_2\ne0,\qquad
+ R(0)=0,\qquad R'(0)=1,\qquad c_0=\tfrac12R''(0)<0.
+\]
+The observation map \((a,b,m,\delta)\) has rank four in the natural
+family \((\beta,d,h,u,v,L,U)\). The local cyclicity is exactly six,
+with constrained cyclicities four, four and two on \(m=0\), on
+\(\delta=0\), and on their intersection. For each fixed \(\rho,u\),
+the fixed full-rank observation inverse also gives the main-scale
+saturation and actual quartic conclusions of
+Corollary~\ref{cor:realization-transfer}.
+All constants and scale reductions may depend on that reference.
+\end{theorem}
+
+We construct a smooth cyclic fold, fit the thresholds to its prey
+extrema, and cancel the transported strengths with a positive effort
+ratio. The directions \((\nu,L,v,U)\), with \(\beta,u\) fixed,
+then give the observation inverse. The scale \(\varepsilon\) is
+introduced only after fixing this reference and differs from the
+effort \(u\).
+
+\subsection{Threshold fitting, cancellation and closing curvature}
+
+Appendix~\ref{app:harvesting-fold} constructs actual cyclic folds of
+the smooth core, for every sufficiently small fixed radius \(\rho>0\).
+The fold is embedded and nonstationary, lies in the positive quadrant,
+and has exactly one nondegenerate prey minimum and maximum. In radial
+coordinates its displacement satisfies
+\eqref{eq:harvesting:fold-data}, with \(\ell<0\), and the
+\((\beta,\nu)\) Jacobian of \((D,D_r)\) is invertible.
+These strict properties allow the thresholds and positive efforts to be
+fitted to a fixed fold.
+
+For positive \(u\), use
+\begin{equation}\label{eq:harvesting:perturbed-chart}
+ y_e=\tfrac45-u(1-5L),\qquad
+ d=8\beta+\tfrac15+\nu,\qquad h=y_e(d-5\beta y_e).
+\end{equation}
+The middle field vanishes at \((1/5,y_e)\). At \(u=0\) the chart
+reduces to \eqref{eq:harvesting:core-chart} and is independent of
+\(L\). Fix a positive fold radius in
+\eqref{eq:harvesting:fold-data}. The invertible \((\beta,\nu)\)
+Jacobian of \((D,D_r)\) continues a fold \(\mathcal C(u,L)\)
+for small \(u,L-L_0\), where \(L_0\) is the unperturbed prey
+minimum. Its curvature and two nondegenerate extrema persist.
+For its minimum \(\lambda_-(u,L)\),
+\(\partial_L\lambda_-(0,L_0)=0\), so
+\begin{equation}\label{eq:harvesting:threshold-fit}
+ L=\lambda_-(u,L),\qquad U=\max_x\mathcal C(u,L(u))
+\end{equation}
+has a unique local smooth solution with \(0<L(u)<U(u)<1\).
+After reducing \(u\), all parameters in
+\eqref{eq:harvesting:perturbed-chart} remain positive. The fitted
+orbit stays in the closed middle strip, touching its boundary only
+at the extrema, and is a physical orbit for every \(v\). There
+\(F_c=0\), \(F_{c,y}=-x\), and nonstationarity gives \(G\ne0\),
+so
+\begin{equation}\label{eq:harvesting:quadratic-contact}
+ \ddot x=F_{c,y}G=-xG\ne0.
+\end{equation}
+
+Figure~\ref{fig:harvesting-orbit} illustrates this fitted threshold geometry.
+\begin{figure}[tb]
+ \centering
+ \includegraphics[width=90mm]{figures/harvesting-orbit.pdf}
+ \caption{Computed geometry of \eqref{eq:harvesting:model} for
+ \(u=10^{-6}\), \(\beta\simeq0.031443254\),
+ \(d\simeq0.451546877\), and \(h\simeq0.260619080\).
+ The floating-point middle orbit touches the fitted vertical
+ thresholds \(L\simeq0.191154841\) and \(U\simeq0.210000000\)
+ at its prey extrema. Open circles mark the contacts \(p_1,p_2\),
+ arrows show increasing physical time, and the dot marks the middle
+ equilibrium. This computed picture illustrates the fitted geometry;
+ it does not certify the neutral reference or its six-cycle unfolding.}
+ \label{fig:harvesting-orbit}
+\end{figure}
+
+Positive penetration is outward, into \(x<L\) or \(x>U\).
+Transport one inactive first integral \(I\) from the first box through
+the connector to the second, with outward direction positive. These are
+local first-integral charts joined along the selected connecting tube;
+no single-valued first integral around the full periodic orbit is assumed. At
+\(p_i=(\xi_i,y_i)\), put \(\sigma_1=-1\), \(\sigma_2=1\),
+\(s_i=I_x(p_i)\). Then \(I_y(p_i)=0\) and
+\(\sgn s_i=\sigma_i\). Clock Morse normalization of
+\(\mathfrak h_i=\sigma_i(x-\xi_i)\), preserving \(I\), gives
+\begin{equation}\label{eq:harvesting:clock}
+ \mathfrak h_i=e_i(t,I)(I-t^2),\qquad
+ e_i(0,0)=\frac{\sigma_i}{s_i}>0,\qquad
+ \dot t(0,0)=\omega_i
+ =\sqrt{-s_iF_{c,y}(p_i)G(p_i)/2}>0.
+\end{equation}
+These clocks differ from the core frequency \(\omega\). For active
+difference \(\mathfrak h_iB_i\), the normalized transverse coefficient is
+\[
+ \beta_{i,\mathrm{pass}}(0,0)
+ =\frac{e_i(0,0)}{\omega_i}dI(B_i)
+ =\frac{\sigma_i(B_i)_x}{\omega_i}.
+\]
+Here \(B_1=-u\partial_x\), \(B_2=-v\partial_x\); thus
+\eqref{eq:passage:strength-jet} gives
+\begin{equation}\label{eq:harvesting:strengths}
+ A_1=K_1u=\frac{4u}{3\omega_1}>0,\qquad
+ A_2=-K_2v=-\frac{4v}{3\omega_2}<0.
+\end{equation}
+The opposing passage signs come from the opposite outward directions at
+the two thresholds; both harvesting efforts are positive.
+The inactive clocks and transport are independent of \(v\), so
+the exact positive ratio
+\begin{equation}\label{eq:harvesting:effort-relation}
+ v=u\frac{K_1}{K_2}=u\frac{\omega_2}{\omega_1}
+\end{equation}
+cancels the strengths in the same transported coordinate.
+Both contacts lie on one inactive orbit, so their levels agree.
+Their passage derivatives equal one at the touch and the middle fold
+has multiplier one. Lemma~\ref{lem:passage:finite-inverse} gives
+\(Q(q)=q+q_+^{5/2}\mathcal L(\sqrt{q_+})\), with zero ordinary
+quadratic defect. The regular map \(R\) is the inactive monodromy.
+
+Its curvature is negative in the outward-positive coordinate. First
+set \(u=0\) and fix the cyclic-fold parameters at a small radius
+\(\rho\). Vary the initial radial coordinate \(r\) with these
+parameters fixed. Smooth finite-time normal-form flow has prey component
+\[
+ x(r,\theta)=\tfrac15+rp(\theta)+O(r^2+\rho^2r),
+\]
+where \(p\) is a nonzero first harmonic and the \(r\)-derivative
+of the remainder is \(O(r+\rho^2)\). Its unique nearby prey minimum
+\(M(r)\) satisfies \(M'(\rho)=-\gamma+O(\rho)<0\), \(\gamma>0\).
+The minimum locus \(F_c=0\) is transverse, since its derivative
+along the orbit is \(\ddot x\ne0\). If \(H(r)\) is the
+transported inactive integral there, \(I_y=0\), \(I_x<0\) give
+\(H'(\rho)=I_xM'(\rho)>0\). For the radial core return \(P_c\)
+at these fixed parameters,
+\(R=H\circ P_c\circ H^{-1}\). At the neutral fixed point,
+\[
+ R''(0)=\frac{P_c''(\rho)}{H'(\rho)}<0
+\]
+by \eqref{eq:harvesting:fold-data} and \(\ell<0\).
+Continuation to fitted small positive \(u\) preserves this strict
+sign and \(H'>0\). The cancelling composition has zero quadratic
+defect, so \(c_0<0\) for the physical reference as well.
+
+\subsection{Natural rank and the actual first return}
+
+Use \((\nu,L,v,U)\) in \eqref{eq:harvesting:perturbed-chart}, with
+\(\beta,u\) fixed. Choose the first incoming coordinate from the
+middle extension and lower seam only. The regular monodromy \(R\)
+is independent of \(v,U\): changes of the upper ports alter the
+intermediate inactive holonomies but preserve their middle-return
+composition. The level difference \(\delta\) is independent of
+\(v\). At the upper tangency \(F_c(U,y_2(U))=0\) and \(I_y=0\),
+so
+\begin{equation}\label{eq:harvesting:upper-rank}
+ \delta_U=I_x(p_2)\ne0,\qquad m_v=-K_2\ne0.
+\end{equation}
+Hence
+\begin{equation}\label{eq:harvesting:rank-matrix}
+ D_{(\nu,L,v,U)}(a,b,m,\delta)=
+ \begin{pmatrix}
+ a_\nu&a_L&0&0\\ b_\nu&b_L&0&0\\
+ *&*&-K_2&*\\ *&*&0&\delta_U
+ \end{pmatrix}.
+\end{equation}
+For the upper-left minor first set \(u=0\) at the fixed core fold.
+The lower tangency is \(p_1(L)=(L,1-L)\); its level in an unchanged
+core transverse coordinate has derivative
+\begin{equation}\label{eq:harvesting:lower-level}
+ \zeta_L=dI(p_1'(L))=I_x(p_1)\ne0.
+\end{equation}
+Choose this coordinate to agree with the incoming one at the base,
+and center the contact by \(T_L(\zeta(L))=0\). Then
+\(R_L=T_L\circ P_c\circ T_L^{-1}\). Since at the fold
+\(P_c(\zeta)=\zeta\) and \(P_c'(\zeta)=1\),
+\begin{equation}\label{eq:harvesting:lower-rank}
+ a_L=0,\qquad b_L=P_c''(\zeta)\zeta_L
+                   =2c_0\zeta_L\ne0.
+\end{equation}
+Coordinate-motion terms cancel at the fixed point and unit multiplier;
+another transverse scaling supplies only a nonzero factor. Contact
+motion leaves the offset derivative in \(\nu\) unchanged because
+\(D_r=0\), and \eqref{eq:harvesting:scaled-return} gives
+\(a_\nu\ne0\). The minor is therefore
+\(a_\nu\,2c_0\zeta_L\ne0\). These objects extend smoothly to
+\(u=0\), so at each fixed radius the minor persists for small
+positive \(u\), with fitted thresholds and
+\eqref{eq:harvesting:effort-relation}. All couplings remain in
+\eqref{eq:harvesting:rank-matrix}, whose determinant is the minor
+times \((-K_2)\delta_U\ne0\). The chart directions embed in
+\((\beta,d,h,u,v,L,U)\), proving natural rank four.
+
+The fitted cycle is compact, embedded and nonstationary. On a fixed tube,
+the vertical seams stay regular and the matched model has common local
+Lipschitz bounds. The positive angular clock, transverse ports and strictly
+inactive connectors persist under small parameter changes. In each core,
+\eqref{eq:harvesting:clock} and the smooth active difference satisfy the
+actual passage hypotheses, including first entry and first moving exit.
+Lemma~\ref{lem:common-tube} gives the chronological first return on one
+common interval. This verifies the geometric assumptions independently
+of the rank computation.
+
+\subsection{Transfer to physical parameters}
+
+\begin{corollary}[One observation inverse for the core results]
+\label{cor:realization-transfer}
+Fix a rank-four reference constructed above and fix its remaining physical
+coordinates. Use the fixed full-rank observation inverse and the common
+physical return interval \(I\). The sharp bounds \(6,4,4,2\) of
+Theorem~\ref{thm:six-main} hold in that family. In the sector
+$A_1(0)=B>0$, $c_0=-C<0$, including every harvesting reference,
+Theorem~\ref{thm:main-saturation-summary} gives weighted necessity,
+the \(\mathcal K_4\) cluster restriction, realization of every compact
+subset of \(\operatorname{int}\mathcal K_4\), and Hausdorff convergence.
+Theorem~\ref{thm:actual-quartic} and Proposition~\ref{quartic:strata}
+give the actual quadruple cycle and its local quartic strata, with ordinary
+multiplicities. Off the multiple-root set, the total count in \(I\)
+is two, four or six, and each count occurs on a nonempty open set.
+Exactly two simple negative-state companions persist throughout this
+quartic neighbourhood; at the quadruple point there are three distinct cycles.
+All harvesting parameters remain positive and $0<L<U<1$; constants and
+scale thresholds may depend on the fixed ecological reference.
+\end{corollary}
+
+\begin{proof}
+The inverse function theorem applied to the Jacobians
+\eqref{eq:specified-four-jacobian} and \eqref{eq:harvesting:rank-matrix}
+gives a smooth observation inverse; Lemma~\ref{lem:common-tube}
+gives the common return interval. In the harvesting family the inverse maps
+\((a,b,m,\delta)\) to \((\nu,L,v,U)\), with \(\beta,u\) fixed.
+Fix this full-rank observation inverse before introducing the scale.
+Every compact scaled control box enters its domain for sufficiently small
+scale, while positivity and threshold ordering persist.
+Theorem~\ref{thm:six-main} gives the sharp counts, including their
+attainment on the three slices. Theorem~\ref{thm:main-saturation-summary}
+applies to this fixed inverse. Theorem~\ref{thm:actual-quartic} localizes
+all roots in \(I\) and prepares the positive cluster; its two negative
+companions and Proposition~\ref{quartic:strata} give the stated local counts
+and ordinary multiplicities.
+Since the increasing return has no nontrivial finite-period orbit, these
+are precisely the local cycle counts. This completes
+Theorem~\ref{thm:harvesting-realization}.
+\end{proof}

@@ -1,0 +1,11 @@
+rotation-coordinate identities: PASS (2 exact zero residuals)
+degree 3 homological equation: PASS (4 exact zero residuals)
+degree 4 homological equation: PASS (5 exact zero residuals)
+degree 5 homological equation: PASS (6 exact zero residuals)
+degree 6 homological equation: PASS (7 exact zero residuals)
+k4(beta) = 25*beta*(2000*beta**2 + 160*beta - 7)/(4*(80*beta - 1))
+k4(beta0) = 0
+k4_prime(beta0) = 17/2 + 4*sqrt(51)
+k6(beta0) = -155/48 - 235*sqrt(51)/576
+focus frequency squared > 0, k4_prime > 0, k6 < 0: PASS (exact signs)
+all finite-algebra checks: PASS; no floating-point arithmetic

@@ -1,0 +1,45 @@
+% Discriminant of the prepared cubic y^3+uy+v.
+% Curve parameter: (u,v)=(-3t^2,2t^3).
+% The homogeneous rescaling (u,v)=(eta^2 U,eta^3 V)
+% puts this drawing inside an arbitrarily small prepared-control chart.
+% Source and independent polynomial checks: scripts/check-secondary.py.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=7.7cm,y=3.6cm,font=\small,
+  boundary/.style={black,line width=.75pt},
+  guide/.style={black!55,line width=.35pt},
+  leader/.style={black,line width=.4pt,-{Stealth[length=1.4mm]}},
+  region/.style={fill=white,inner sep=2pt,font=\normalsize}]
+  \begin{scope}
+    \clip (-1.25,-.50) rectangle (.42,.50);
+    \fill[black!9]
+      plot[domain=-.67:.67,variable=\t,samples=181]
+        ({-3*(\t)^2},{2*(\t)^3}) -- cycle;
+    \draw[boundary]
+      plot[domain=-.67:.67,variable=\t,samples=181]
+        ({-3*(\t)^2},{2*(\t)^3});
+  \end{scope}
+  \draw[guide,-{Stealth[length=1.5mm]}]
+    (-1.25,0)--(.47,0) node[right,black] {$u$};
+  \draw[guide,-{Stealth[length=1.5mm]}]
+    (0,-.50)--(0,.55) node[above,black] {$v$};
+  \node[region,fill=black!9] at (-.88,.015) {$6$};
+  \node[region] at (.26,.25) {$4$};
+  \node[region] at (-.72,.44) {$4$};
+  \node[anchor=west,font=\scriptsize] (fold) at (-.49,.34) {fold: $5$};
+  \draw[leader] (fold.west)--(-.633,.196);
+  \fill (0,0) circle[radius=1.8pt];
+  \node[anchor=west,font=\scriptsize] (cusp) at (.11,-.20) {cusp: $4$};
+  \draw[leader] (cusp.west)--(.008,-.008);
+\end{tikzpicture}
+\caption{The cusp in the prepared coordinates of
+$y^3+uy+v=0$. The boundary is $4u^3+27v^2=0$:
+the shaded region has six simple cycles and the other region has four,
+including the three simple cycles outside the local cluster.
+An ordinary fold has five different cycles, one double; the cusp has four,
+one triple. A sufficiently small weighted rescaling of $(u,v)$ places the
+diagram inside the common local parameter neighbourhood.
+The pullback of the discriminant to $(\alpha,d)$ is the local bifurcation
+curve, including its cusp.}
+\label{fig:cusp-local-diagram}
+\end{figure}

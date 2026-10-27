@@ -1,0 +1,138 @@
+\section{Setting and results from the companion paper}\label{sup:setting}
+
+We recall the setting of~\cite{main2026} and the estimates used below.
+
+\subsection{Hypotheses and return-map controls}
+
+We use the admissible families
+of~\cite[Definition~\ref*{main-def:admissible-family}]{main2026}, with their
+two matched quadratic contact boxes, transverse ports and inactive regular
+connections; both active sides agree after transport to one transverse section.
+The regular transitions are increasing in positive penetration coordinates,
+with common positive derivative margins.
+On a fixed interval $I=(-q_0,q_0)$ the composition is the first
+return map: it makes one turn, with no additional seam crossing or earlier
+section hit. Its common open domains include the grazing thresholds and the
+closure of a slightly larger interval. The return tube and the transport
+through nonidentity connections are given
+in~\cite[Lemma~\ref*{main-lem:common-tube} and
+Proposition~\ref*{main-prop:field-recognition}]{main2026}.
+
+In the transported transverse coordinate, put
+\begin{equation}\label{sup:return}
+ Q(q)=\delta+\Gamma_2(\Gamma_1(q)-\delta),\qquad
+ P(q)=R(Q(q)),\qquad D(q)=P(q)-q.
+\end{equation}
+The passages are increasing $C^1$ diffeomorphisms and
+\begin{equation}\label{sup:passage}
+ \Gamma_\nu(q)=q+A_\nu q_+^{3/2}
+       +\tfrac34A_\nu^2q_+^2
+       +q_+^{5/2}L_\nu(\sqrt{q_+},\lambda),\qquad q_+=\max(q,0),
+\end{equation}
+with smooth signed-root profiles. More precisely,
+$\Gamma_\nu(r^2)=g_\nu(r)^2$ for $r>0$,
+$g_\nu(0)=0$, $g_\nu'(0)=1$ and
+$\iota g_\nu\iota=g_\nu^{-1}$, where $\iota(r)=-r$.
+Set
+\[
+ T_\nu(r)=g_\nu(r)/r,\qquad
+ \ell_\nu(r)=T_\nu(r)^2+\tfrac r2(T_\nu^2)'(r).
+\]
+These profiles extend smoothly through zero and
+$\Gamma_\nu'(r^2)=\ell_\nu(r)=1+\tfrac32A_\nu r+O(r^2)$.
+The return-map controls and the reference signs are
+\begin{equation}\label{sup:observations}
+ \begin{gathered}
+ a=R(0),\qquad b=R'(0)-1,\qquad m=A_1+A_2,\qquad\delta;\\
+ a=b=m=\delta=0,\qquad A_1=-A_2=B>0,\qquad
+ \tfrac12R''(0)=-C<0.
+ \end{gathered}
+\end{equation}
+We write $p_0$ for the reference value of the remaining parameters.
+Here $B,C$ are fixed reference constants, whereas $c(\lambda)=R''_\lambda(0)/2$
+and the individual passage strengths retain all parameter dependence.
+
+For necessary estimates, the original parameters are denoted by $p$.
+\cite[Lemma~\ref*{main-lem:auxiliary-controls}]{main2026} supplies
+independent auxiliary $m,\delta$, with the same closing map, smooth bounded
+profiles and the strength identity
+$A_1(p,m,\delta)+A_2(p,m,\delta)=m$; restriction gives
+the original family. Write $A(p)=A_1(p,0,0)$,
+$k(p)=R'_{p,0,0}(0)=1+b>0$ and $c_0(p)=R''_{p,0,0}(0)/2$.
+When the controls are independent we write $p=(a,b,\xi)$; the closing
+jets $R(0)=a$ and $R'(0)=1+b$ are fixed as $m,\delta$ vary, although
+higher closing terms may depend on these controls.
+
+Realization requires the map $\lambda\mapsto(a,b,m,\delta)$ to be a
+submersion~\cite[(\ref*{main-eq:rank})]{main2026}. We then use the standard
+unfolding $\Lambda(a,b,m,\delta)=\lambda(a,b,m,\delta;\xi_0)$
+of~\cite{main2026}, defined on a neighbourhood $\mathcal V\subset\R^4$ of
+zero, and the same interval $I$. Write
+$N_\lambda(I)=\#\{q\in I:D_\lambda(q)=0\}$. Families with this property are
+constructed in~\cite[Proposition~\ref*{main-prop:specified-rank} and
+Theorem~\ref*{main-thm:harvesting-realization}]{main2026}. We follow the
+conventions of~\cite[Section~2]{main2026}: state
+derivatives are taken at fixed parameters, and all profile bounds hold on
+common compact reductions.
+
+\subsection{Divisions, curvature and saturation}
+
+We record the results of~\cite{main2026} used below. The closing expansion
+is
+\begin{equation}\label{sup:closing}
+ R(y)=a+(1+b)y+c(\lambda)y^2+y^3S(y,\lambda).
+\end{equation}
+After one common reduction, choose $r_0>0$ and $v_0=1/4$.
+For $0<r\le r_0$, $|v|\le v_0$ and $(m,p)$ in the common small
+neighbourhood, put $q=r^2$ and $\delta=r^2v$. Both passages are active,
+and \cite[Lemma~\ref*{main-lem:exact-value-division}]{main2026} gives
+profiles smooth in signed $(r,m,v,p)$ with
+\begin{equation}\label{sup:root-division}
+ Q-q=mr^3+\tfrac34m^2r^4+r^5L_0+\delta rH(r,m,v,p),
+ \qquad H(0,0,0,p)=\tfrac32A(p).
+\end{equation}
+For either sign of $q$ and $\delta$, including the thresholds, the same lemma
+gives
+\begin{equation}\label{sup:global}
+ |Q-q-mq_+^{3/2}|\leq K\{m^2q_+^2+q_+^{5/2}
+       +|\delta|\sqrt{q_++|\delta|}+|\delta|q_+^{3/2}\}.
+\end{equation}
+By~\cite[Lemma~\ref*{main-lem:curvature-profile} and
+Proposition~\ref*{main-prop:one-fold-graph}]{main2026}, the zeros of $P''$ in
+the outer region lie on the separation graph \eqref{corner:curvature-division}.
+Its derivative is
+$\Delta_r=r\mathcal W$, with $\mathcal W_r$ having a uniform nonzero
+margin of sign $c_0/A$;
+thus it has at most one positive critical point, which is nondegenerate.
+At fixed parameters the curvature factorization is
+\[
+ P''(r^2)=r^{-3}\mathcal U(r,m,\delta/r^2,p)
+                  [\delta-\Delta(r,m,p)],\qquad \sgn\mathcal U=-\sgn A.
+\]
+For $A>0,c_0<0,m>0$, the critical point satisfies
+$r_{\rm c}=-km/(4c_0)+O(m^2)$.
+\cite[Lemma~\ref*{main-lem:event-layer}]{main2026} covers the threshold
+layer, uniformly up to the thresholds. For positive separation the thresholds
+are $0$ and $a_\delta=\Gamma_1^{-1}(\delta)$; in the threshold layer the signs
+of $P''$ where no passage, only the first passage, and both passages are
+active are $-,+,-$. For any fixed $L\geq2$, these signs hold for
+$q\leq L\delta$ away from the thresholds. In the active regions,
+$|Q''|\geq\kappa_L\delta^{-1/2}$, uniformly in the one-sided approach to
+each threshold. Together with the
+graph, they give the bound of six fixed points on
+$I$~\cite[Proposition~\ref*{main-prop:common-count}]{main2026}.
+
+If the bound is attained, \cite[Lemma~\ref*{main-sat:saturation}]{main2026}
+gives $m,\delta,h=-b>0$, two simple zeros $\zeta_1<\zeta_2$ of $P''$ in the
+outer region, and the slopes recorded in \eqref{corner:saturation-slopes}.
+The five curvature blocks have signs $-,+,-,+,-$ and each contains one
+zero $t_j$ of $D_q$, with successive extremal values of signs
+$+,-,+,-,+$. Every fixed point is simple as a $C^1$ zero.
+Finally \cite[Proposition~\ref*{main-sat:weighted-confinement}]{main2026}
+gives the weighted confinement
+\begin{equation}\label{sup:confinement}
+ 0<h\leq Km^2,\qquad 0<\delta\leq Km^3,\qquad
+ |a|\leq Km^4,\qquad \max_{D(q)=0}|q|\leq Km^2.
+\end{equation}
+The next section refines this confinement by evaluating the slope on the
+separation graph.

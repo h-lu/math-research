@@ -1,0 +1,154 @@
+\section{Optimal positive closing offset and its realization}\label{sup:positive}
+
+Here positive offset means $a=R(0)>0$.
+The constructions below use the finer offset scale $a=\eta h^3$, with
+$\alpha=\eta\mu^2>0$ and $\alpha\to0$; the limiting cubic region
+$\mathcal C_B$ has $\alpha\le0$.
+Two positive roots precede the second threshold and two persist on the
+secondary scale.
+The realization below adds the outer negative and positive roots to these
+two clusters; the bound of six then excludes further roots in $I$.
+
+\begin{proposition}[Positive-offset six-cycle returns]
+\label{corner:positive-offset-realization}
+\label{thm:positive-offset-six}
+Assume~\cite[(\ref*{main-eq:rank})]{main2026} and use the standard
+unfolding on $I$.
+Put
+\[
+ \eta_*=\frac{4}{27B^2},\qquad d_*=\frac{1}{6B}.
+\]
+For every compact
+$\mathcal K\Subset(0,\eta_*)\times(0,d_*)$, there are
+$\mu_0,\sigma_0>0$ such that the parameters
+\begin{equation}\label{corner:positive-offset-weights}
+ m=\mu,\qquad h=\mu^2\sigma,\qquad b=-h,\qquad
+ \delta=\mu^3\sigma^2d,\qquad a=\eta h^3
+\end{equation}
+give exactly one negative and five positive simple fixed points in $I$
+for every
+\[
+ 0<\mu<\mu_0,\qquad0<\sigma<\sigma_0,\qquad
+ (\eta,d)\in\mathcal K.
+\]
+
+Let $u_-(\eta)<u_+(\eta)$ be the two positive roots of
+$\eta-z^2+Bz^3$, and put
+\[
+ r_\pm(d)=\frac{1\pm\sqrt{1-6Bd}}2.
+\]
+The six states satisfy, uniformly on $\mathcal K$,
+\begin{align}
+ q_N&=-\frac hC(1+o(1)),\notag\\
+ q_{F,\pm}&=h^2\bigl(u_\pm(\eta)^2+o(1)\bigr),\notag\\
+ q_{S,\pm}&=\mu^2\sigma^2\bigl(r_\pm(d)^2+o(1)\bigr),\notag\\
+ q_O&=\frac{\mu^2}{C^2}(1+o(1)).
+                                  \label{corner:positive-offset-roots}
+\end{align}
+Here $o(1)\to0$ as $\mu+\sigma\to0$, with the positive scales
+independent. The constants $\eta_*$ in
+\eqref{corner:sharp-positive-offset-limsup} and $d_*$ in
+\eqref{corner:nonnegative-offset-bound} are sharp: both are approached
+simultaneously by a sequence of these positive-offset returns.
+\end{proposition}
+
+\begin{proof}
+Uniform convergence of \eqref{corner:positive-offset-weights} to zero
+on $\mathcal K$ lets the standard unfolding realize them on one
+product of scale intervals.
+
+Below the second threshold $a_\delta=\Gamma_1^{-1}(\delta)$, the passage
+and closing expansions give
+\begin{equation}\label{corner:positive-first-only-identity}
+ D(r^2)=a-hr^2+kA_1(\lambda)r^3+r^4T(r,\lambda),
+ \qquad k=1-h,
+\end{equation}
+where $T$ is jointly smooth on a common signed-root domain.
+For $r=hz$ on a compact positive $z$ interval,
+\[
+ \frac{\Gamma_1(h^2z^2)}{\delta}
+   =\frac{\mu z^2}{d}\{1+O(h)\}.
+\]
+Thus only the first passage is active at these states for all sufficiently
+small $\mu$,
+uniformly on $\mathcal K$ and independently of $\sigma$. Their
+normalized displacement satisfies
+\begin{equation}\label{corner:positive-first-only-limit}
+ \frac{D(h^2z^2)}{h^3}
+ =\eta-z^2+kA_1(\lambda)z^3+hz^4T(hz,\lambda)
+ =\eta-z^2+Bz^3+O_{C^1}(\mu).
+\end{equation}
+Indeed the standard unfolding gives $A_1(\lambda)-B=O(\mu)$ on a bounded
+rectangle of scales, and the smooth root formula controls the displayed
+remainder and its $z$ derivative.
+
+The limiting polynomial is positive at zero and at infinity.
+Its positive critical point at $2/(3B)$ is a minimum, with value
+$\eta-\eta_*<0$.
+It therefore has two positive simple roots $u_\pm(\eta)$.
+
+The secondary weights \eqref{corner:weights} now have
+$\alpha=\eta\mu^2>0$. Substitution in the joint quotient
+\eqref{corner:joint-limit} gives, on compact positive $z$ intervals,
+\begin{equation}\label{corner:positive-secondary-limit}
+ \frac{D(\mu^2\sigma^2z^2)}{\mu^4\sigma^3}
+ =z\bigl(z^2-z+\tfrac32Bd\bigr)+O_{C^1}(\mu+\sigma).
+\end{equation}
+For $0<d<d_*$, its two nonzero limiting roots $r_\pm(d)>0$ have
+derivatives $r_\pm(2r_\pm-1)\ne0$. Both passages are active on their
+isolating intervals because
+\[
+ \frac{a_\delta}{\mu^2\sigma^2z^2}
+   =\frac{\mu d}{z^2}\{1+o(1)\}\longrightarrow0
+\]
+uniformly on their isolating intervals.
+
+Finally apply the outer charts
+\eqref{corner:negative-large-chart} and
+\eqref{corner:positive-large-chart} with $\alpha=\eta\mu^2$.
+Their $C^1$ limits $X-X^2$ and $X^{3/2}-CX^2$ have simple roots at
+$1$ and $1/C^2$.
+
+All four joint $C^1$ chart limits have compact isolating intervals with uniform
+derivative margins on $\mathcal K$. Simple-root continuation gives the
+six roots in \eqref{corner:positive-offset-roots} for common
+thresholds $\mu_0,\sigma_0$, without a relation between the positive
+scales. The windows where only the first passage is active have size
+$h^2=\mu^4\sigma^2$, the secondary windows size $\mu^2\sigma^2$,
+and the positive outer window size $\mu^2$. Their successive ratios
+are $O(\mu^2)$ and $O(\sigma^2)$; the negative window is separated
+by sign. The second threshold lies strictly between the first-passage and
+secondary windows. All six windows lie in $I$ for small scales,
+and~\cite[Proposition~\ref*{main-prop:common-count}]{main2026} excludes
+additional fixed points there. The charts also give
+\eqref{corner:positive-offset-roots}.
+
+For sharpness choose interior pairs $(\eta_j,d_j)$ tending to
+$(\eta_*,d_*)$. Apply the result to each singleton pair and choose
+positive $\mu_j,\sigma_j<1/j$ below its two existence thresholds.
+The resulting returns have exactly
+\[
+ \frac{a_j}{h_j^3}=\eta_j\longrightarrow\eta_*,
+ \qquad
+ \frac{m_j\delta_j}{h_j^2}=d_j\longrightarrow d_*.
+\]
+\end{proof}
+
+\begin{corollary}[Six-cycle regions with positive offset]
+\label{corner:open-six-cycle-region}
+\label{cor:six-open}
+By~\cite[Corollary~\ref*{main-cor:six-open}]{main2026}, in every admissible
+family the parameters giving six simple fixed points in $I$ form an open
+set. Under~\cite[(\ref*{main-eq:rank})]{main2026}, this set contains open
+subsets with $a>0$, one negative fixed point and five positive fixed points,
+accumulating at the reference.
+\end{corollary}
+
+\begin{proof}
+The openness assertion
+is~\cite[Corollary~\ref*{main-cor:six-open}]{main2026}.
+For the returns of Proposition~\ref{corner:positive-offset-realization},
+shrink the neighbourhood to preserve $a>0$ and the signs of the six
+simple roots. An interior parameter pair with both scales tending to zero
+gives accumulation at the reference.
+\end{proof}

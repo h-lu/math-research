@@ -1,0 +1,82 @@
+% SCHEMATIC: no numerical trajectory, metric scale, or stability is encoded.
+% Top: the reference cycle at delta=0, oriented by time.
+% Bottom: a perturbed incoming-state axis for delta>0, not phase-plane distance.
+\begin{figure}[!htbp]
+  \centering
+  \begin{tikzpicture}[x=1cm,y=1cm,font=\small,
+      orbit/.style={line width=.85pt},
+      flow/.style={line width=.85pt,-{Stealth[length=1.8mm]}},
+      seam/.style={line width=.65pt,densely dashed,black!65},
+      box/.style={line width=.5pt,densely dotted,black!60},
+      port/.style={line width=.75pt},
+      axis/.style={line width=.55pt,-{Stealth[length=1.8mm]}}]
+    \begin{scope}[yshift=2.9cm]
+      \node[anchor=west] at (0,3.85)
+        {(a) Reference itinerary, $\delta=0$};
+
+      \draw[box] (1.5,1.45) rectangle (4.1,3.12);
+      \draw[box] (6.0,1.45) rectangle (8.6,3.12);
+      \node at (2.8,3.35) {$U_1:\ \Gamma_1$};
+      \node at (7.3,3.35) {$U_2:\ \Gamma_2$};
+      \draw[seam] (1.75,2.71625) parabola bend (2.8,2) (3.85,2.71625);
+      \draw[seam] (6.25,2.71625) parabola bend (7.3,2) (8.35,2.71625);
+      \node[anchor=west] at (3.75,2.95) {$\Sigma_1$};
+      \node[anchor=west] at (8.25,2.95) {$\Sigma_2$};
+
+      \draw[orbit] (.6,2) -- (4.1,2);
+      \draw[flow] (4.1,2)
+        .. controls (4.4,2) and (4.55,2.25) .. (5.05,2.25)
+        .. controls (5.55,2.25) and (5.7,2) .. (6.0,2);
+      \draw[orbit] (6.0,2) -- (8.6,2);
+      \draw[flow] (8.6,2) .. controls (10.1,2) and (10.1,.3) .. (8.6,.3);
+      \draw[orbit] (8.6,.3) -- (1.0,.3)
+        .. controls (-.35,.3) and (-.35,2) .. (.6,2);
+      \draw[flow] (.85,2) -- (1.25,2);
+      \draw[flow] (3.2,2) -- (3.62,2);
+      \draw[flow] (7.65,2) -- (8.07,2);
+      \draw[flow] (6.0,.3) -- (5.15,.3);
+      \node[align=center,text width=1.65cm] at (5.05,2.83)
+        {regular\\connection};
+      \node at (5.0,.7) {closing leg $R$};
+      \node at (5.05,1.35) {$\mathcal C$};
+
+      \draw[port] (.6,1.55) -- (.6,2.65);
+      \draw[axis] (.2,2.12) -- (.2,2.62) node[above] {$q$};
+      \node[anchor=east] at (.42,1.5) {$\mathcal S$};
+      \draw[port] (1.75,1.87) -- (1.75,2.13);
+      \draw[port] (3.85,1.87) -- (3.85,2.13);
+      \draw[port] (6.25,1.87) -- (6.25,2.13);
+      \draw[port] (8.35,1.87) -- (8.35,2.13);
+      \node[below] at (1.75,1.4) {$\Pi_1^{\rm in}$};
+      \node[below] at (3.85,1.4) {$\Pi_1^{\rm out}$};
+      \node[below] at (6.25,1.4) {$\Pi_2^{\rm in}$};
+      \node[below] at (8.35,1.4) {$\Pi_2^{\rm out}$};
+      \draw[fill=white,line width=.8pt] (2.8,2) circle[radius=1.8pt];
+      \draw[fill=white,line width=.8pt] (7.3,2) circle[radius=1.8pt];
+      \node[below] at (2.8,1.93) {$p_1$};
+      \node[below] at (7.3,1.93) {$p_2$};
+    \end{scope}
+
+    \node[anchor=west] at (0,2.2)
+      {(b) Incoming-state activation, $\delta>0$};
+    \draw[axis] (.5,1.05) -- (10.25,1.05) node[right] {$q$};
+    \draw[port] (3.0,.94) -- (3.0,1.16);
+    \draw[port] (6.5,.94) -- (6.5,1.16);
+    \node[below] at (3.0,.9) {$0$};
+    \node[below] at (6.5,.9) {$a_\delta=\Gamma_1^{-1}(\delta)$};
+    \node at (1.5,1.5) {no excursion};
+    \node at (4.75,1.5) {first only};
+    \node at (8.55,1.5) {both excursions};
+    \node at (5.25,.12) {second local input: $\Gamma_1(q)-\delta$};
+  \end{tikzpicture}
+  \caption{Schematic return geometry. Top: the reference itinerary at
+    $\delta=0$, with dotted contact boxes $U_1,U_2$, dashed switching seams
+    $\Sigma_1,\Sigma_2$, transverse ports and the return section
+    $\mathcal S$. Arrows on the cycle show the direction of time; the
+    section arrow orients $q$. Bottom:
+    activation on the incoming state axis for $\delta>0$. The second
+    passage is active when $\Gamma_1(q)-\delta>0$, so its threshold is
+    $a_\delta$. For $\delta<0$, $a_\delta=\delta<0$ lies to the left of
+    $0$, and only the second excursion occurs between them.}
+  \label{fig:actual-return-geometry}
+\end{figure}

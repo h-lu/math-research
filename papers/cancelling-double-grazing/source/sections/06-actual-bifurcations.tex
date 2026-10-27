@@ -1,0 +1,293 @@
+\section{Limit cycles of multiplicity four and their unfolding}
+\label{sec:actual-bifurcations}
+
+We continue the fourfold limiting root to a limit cycle of multiplicity four
+for small $m>0$ and describe its unfolding together with the two simple fixed
+points with $q<0$. We use the standard unfolding in the sign case
+$A_1(\lambda_0)=B>0$, $c_0=-C<0$. The proof has three steps: location of all
+zeros in $I$, including near the thresholds; construction of the multiple
+root; and preparation of the positive cluster in a chart where $D$ is smooth
+in $q$.
+
+\begin{lemma}[Values across the thresholds]
+\label{mainloc:cross-event}
+Set
+\begin{equation}\label{mainloc:weights}
+ a=\frac{m^4A}{C^3},\qquad b=-\frac{m^2S}{C},\qquad
+ \delta=\frac{2m^3T}{3BC^2},\qquad q=\frac{m^2\zeta}{C^2},
+ \qquad m>0.
+\end{equation}
+For every compact set of $(A,S,T)$ and every bounded $\zeta$-interval,
+uniformly on their product,
+\begin{equation}\label{mainloc:full-limit}
+ \frac{C^3}{m^4}D\left(\frac{m^2\zeta}{C^2}\right)
+ =A-S\zeta-\zeta^2+\zeta_+^{3/2}
+                 +T\sqrt{\zeta_+}+O(\sqrt m).
+\end{equation}
+This is a $C^0$ estimate, uniform across both thresholds.
+\end{lemma}
+
+\begin{proof}
+Hold $a,b,m$ fixed and integrate in the separation $t$ from $0$
+to $\delta$. Put $y=\Gamma_1(q,t)-t$. The passage
+jet and its parameter derivatives give
+\[
+ \Gamma_{\nu,q}(x)=1+\tfrac32A_\nu\sqrt{x_+}+O(x_+),\qquad
+ \Gamma_{\nu,t}(x)=O(x_+^{3/2}),\qquad
+ |y-q|\le K(q_+^{3/2}+|t|).
+\]
+These estimates include zero inputs. Along the integration segment,
+$A_2=-B+O(m)$ and $|t|=O(m^3)$. The square-root inequality
+$|\sqrt{y_+}-\sqrt{q_+}|\le\sqrt{|y-q|}$ and the total derivative
+\eqref{eq:quartic-total-detuning} therefore give
+\begin{align*}
+ \left|Q_t-\tfrac32B\sqrt{q_+}\right|
+ \le K\{&q_+^{3/4}+\sqrt{|t|}+m\sqrt{q_+}+q_++|t|\\
+        &+q_+^{3/2}+(q_++|t|)^{3/2}\}=O(m^{3/2}).
+\end{align*}
+This bound uses $|t|$ and remains valid for $q<0$, so both signs
+of separation are included. Integration and the aligned identity
+\eqref{eq:passage:aligned-jet} yield
+\[
+ Q-q=mq_+^{3/2}+\tfrac32B\delta\sqrt{q_+}+O(m^{9/2}),
+ \qquad Q-q=O(m^4).
+\]
+In \eqref{eq:quartic-closing-division}, $c=-C+O(m)$ because the
+remaining parameters are fixed at $\xi_0$. Replacing $Q$ by $q$
+in $bQ+cQ^2$ changes these terms by $O(m^6)$, while
+$(c+C)q^2=O(m^5)$ and $Q^3S=O(m^6)$. Thus
+\[
+ D=a+bq-Cq^2+mq_+^{3/2}
+                    +\tfrac32B\delta\sqrt{q_+}+O(m^{9/2}).
+\]
+Substitution of \eqref{mainloc:weights} proves the assertion.
+\end{proof}
+
+With \eqref{mainloc:weights}, set $\Theta=(A,S,T)$ and
+\begin{equation}\label{quartic:centre}
+ \Theta_0=\left(-\frac1{256},\frac38,\frac1{16}\right),\qquad
+ x_0=\frac14.
+\end{equation}
+To count cycles on both sides of this bifurcation, we first locate
+all zeros near the fourfold configuration.
+
+\begin{lemma}[All roots near the quadruple configuration]
+\label{mainloc:all-roots}
+There are a neighbourhood $\mathcal O$ of $\Theta_0$, $m_0>0$
+and three disjoint compact state intervals $J_{N,-},J_{N,+},J_Q$
+about, respectively,
+\[
+ \zeta_{N,\pm}=\frac{-3\pm2\sqrt2}{16}<0,\qquad
+ \zeta_Q=\frac1{16}>0,
+\]
+such that, for every $\Theta\in\mathcal O$ and $0<m<m_0$, all zeros in
+$I$ lie in $(m^2/C^2)(J_{N,-}\cup J_{N,+}\cup J_Q)$.
+Each negative interval contains exactly one simple zero. Both passages are
+active on the positive interval, which contains all remaining zeros.
+The three intervals can be chosen arbitrarily small about their
+respective centres, by reducing $\mathcal O$ and $m_0$.
+\end{lemma}
+
+\begin{proof}
+Bounded parameters satisfy the hypotheses of Lemma~\ref{mainloc:tail}.
+Thus all zeros have $|\zeta|\le L$ for a fixed $L$.
+At $\Theta_0$, the full-state limit in
+\eqref{mainloc:full-limit} is
+\[
+ -\left(\zeta-\zeta_{N,-}\right)
+       \left(\zeta-\zeta_{N,+}\right)\quad(\zeta<0),\qquad
+ -\left(\sqrt\zeta-\tfrac14\right)^4\quad(\zeta\ge0).
+\]
+Its only root positions are the three stated centres, and its value
+at zero is $-1/256$. Choose the three small intervals with each centre
+in its interval's interior. The complement of their interiors in
+$[-L,L]$ is compact and contains no limiting root, so the absolute value
+of the limiting function has a positive minimum there. First reducing
+$\mathcal O$, then $m_0$, preserves that gap by
+Lemma~\ref{mainloc:cross-event}. This excludes all zeros outside the interval
+interiors, including their boundaries and the threshold layer.
+
+Take $\mathcal O$ so that $T>0$. For $q<0$ both passages are inactive, so
+the closing expansion gives on either negative interval
+\[
+ \frac{C^3}{m^4}D(m^2\zeta/C^2)
+ =A-S\zeta-\zeta^2+O_{C^1}(m).
+\]
+The limiting derivatives at $\zeta_{N,-},\zeta_{N,+}$ are
+$\sqrt2/4,-\sqrt2/4$. Their strict signs and the opposite endpoint
+values persist uniformly. The intermediate value theorem and strict
+monotonicity give one simple root in each interval. In particular,
+their scaled locations are
+\[
+ \frac{-S\pm\sqrt{S^2+4A}}2+O(m).
+\]
+Finally the second threshold is
+$a_\delta=\Gamma_1^{-1}(\delta)=O(m^3)$, whereas the positive interval
+has $q\ge \kappa m^2$ for a fixed $\kappa>0$. Hence that entire interval
+lies beyond both thresholds.
+\end{proof}
+
+The localization fixes the two negative zeros and places the positive
+cluster beyond both thresholds. It remains to meet the four zero conditions
+simultaneously and identify the local unfolding. The following theorem refines
+Theorem~\ref{thm:actual-quartic-summary}.
+
+\begin{theorem}[Limit cycles of multiplicity four]
+\label{thm:actual-quartic}
+After a reduction of $\mathcal O$ and $m_0$ in
+Lemma~\ref{mainloc:all-roots}, there is a unique smooth branch
+$m\mapsto(\Theta_*(m),x_*(m))$, $0\le m<m_0$, equal to $(\Theta_0,x_0)$ at
+$m=0$, such that for every $0<m<m_0$ the displacement has a zero of
+multiplicity four at $q_*(m)=m^2x_*(m)^2/C^2$ for the parameters
+$\Theta_*(m)$. Its parameters and state satisfy
+\begin{equation}\label{quartic:physical-branch}
+ \begin{aligned}
+ a_*(m)&=-\frac{m^4}{256C^3}+O(m^5),&
+ b_*(m)&=-\frac{3m^2}{8C}+O(m^3),\\
+ \delta_*(m)&=\frac{m^3}{24BC^2}+O(m^4),&
+ q_*(m)&=\frac{m^2}{16C^2}+O(m^3).
+ \end{aligned}
+\end{equation}
+Set $p_*(m)=(a_*(m),b_*(m),\xi_0)$. Then
+\begin{equation}\label{quartic:curvature-turn-identities}
+ q_*(m)=r_{\rm c}(m,p_*(m))^2,\qquad
+ \delta_*(m)=\delta_{\rm c}(m,p_*(m)).
+\end{equation}
+For $0<m<m_0$ there are smooth coordinates $(u,v,w)$ on the parameters
+$(a,b,\delta)$, centred on this branch, and a smooth state coordinate $y$,
+in which the local zero equation is, up to a nonvanishing smooth factor,
+\begin{equation}\label{quartic:preparation}
+ \mathfrak p(y)=y^4+uy^2+vy+w=0.
+\end{equation}
+In the normalized variables $(m,x,A,S,T)$, the changes and the
+nonzero factor extend jointly smoothly through $m=0$. Off the multiple-root
+set, the number of fixed points in $I$ is two, four or six; each count occurs
+on a nonempty open set of parameters. At the fourfold point there are exactly
+three fixed points in $I$: the fourfold one and two simple ones with $q<0$.
+\end{theorem}
+
+By~\eqref{quartic:curvature-turn-identities}, the fourfold zero lies at the
+positive critical point of the separation graph, where $D''=D'''=0$ by
+Proposition~\ref{prop:cubic-curvature-window}; the conditions $D=D'=0$ are
+additional. The normalized fourfold-root equations construct the branch, and
+preparation then gives three independent unfolding parameters on the positive
+interval isolated above.
+
+\begin{proof}
+Lemma~\ref{lem:weighted-quartic}, after constant rescaling, gives the
+jointly smooth auxiliary function
+\begin{equation}\label{quartic:joint-quotient}
+ F(m,x;\Theta)=\frac{C^3}{m^4}D(m^2x^2/C^2)
+ =A-Sx^2+x^3-x^4+Tx+mE_4(m,x,\Theta)
+\end{equation}
+near $(0,x_0,\Theta_0)$, with all prescribed finite mixed derivatives
+bounded. It equals the rescaled displacement for $m>0$.
+For $H=(F,F_x,F_{xx},F_{xxx})$, differentiation at that point,
+in columns $(A,S,T,x)$, gives
+\[
+ D_{(A,S,T,x)}H=
+ \begin{pmatrix}
+ 1&-1/16&1/4&0\\
+ 0&-1/2&1&0\\
+ 0&-2&0&0\\
+ 0&0&0&-24
+ \end{pmatrix},\qquad \det D_{(A,S,T,x)}H=-48.
+\]
+The implicit function theorem gives the unique local branch
+$\Theta_* =\Theta_0+O(m)$, $x_*=x_0+O(m)$, with
+$F_{xxxx}=-24+O(m)\ne0$. Substituting the weights gives
+\eqref{quartic:physical-branch}. Lemma~\ref{mainloc:all-roots}
+places this zero where both passages are active. For each fixed $m>0$,
+$q=m^2x^2/C^2$ is a local diffeomorphism there, so its
+multiplicity in $q$ is four.
+
+Put $r_*=\sqrt{q_*}$ and $p_*=(a_*,b_*,\xi_0)$. By
+\eqref{quartic:physical-branch},
+\[
+ r_*=\frac{m}{4C}+O(m^2),\qquad
+ \frac{\delta_*}{q_*}=\frac{2m}{3B}+O(m^2).
+\]
+After reducing $m_0$, this point lies in the outer region of
+\eqref{eq:curvature-factor}. At fixed $(m,p,\delta)$, set
+$K(r)=r^{-3}\mathcal U(r,m,\delta/r^2,p)\ne0$. That factorization
+and differentiation at fixed parameters give
+\[
+ \begin{aligned}
+ D''(r^2)&=K(r)[\delta-\Delta(r,m,p)],\\
+ 2rD'''(r^2)&=K'(r)[\delta-\Delta(r,m,p)]-K(r)\Delta_r(r,m,p).
+ \end{aligned}
+\]
+At the quadruple point $D''=D'''=0$, hence
+$\delta_*=\Delta(r_*,m,p_*)$ and $\Delta_r(r_*,m,p_*)=0$.
+Since $r_*>0$ and $c_0(p_*)<0$,
+Proposition~\ref{prop:cubic-curvature-window} identifies this critical
+point as $r_*=r_{\rm c}(m,p_*)$, proving
+\eqref{quartic:curvature-turn-identities}.
+
+The Malgrange preparation theorem~\cite[Chapter~IV, Section~2, Theorem~2.1 and Note~(1), p.~95]{golubitsky1973} in $t=x-x_0$,
+with parameters $(m,\Theta)$, followed by a translation removing the cubic term,
+gives \eqref{quartic:preparation}. At $m=0$, $\Theta=\Theta_0$, the unit
+is $-1$ and the lower coefficients vanish. Writing $\Delta\Theta=\Theta-\Theta_0$,
+comparison modulo $t^3$ at $m=0$ gives
+\[
+ \begin{aligned}
+ u&=\Delta S+O(|\Delta\Theta|^2),\\
+ v&=2x_0\Delta S-\Delta T+O(|\Delta\Theta|^2),\\
+ w&=-\Delta A+x_0^2\Delta S-x_0\Delta T
+                                    +O(|\Delta\Theta|^2).
+ \end{aligned}
+\]
+The determinant in $(\Delta A,\Delta S,\Delta T)$ is $1$; equivalently,
+$\det D_{(A,S,T)}(F,F_x,F_{xx})=2+O(m)\ne0$ on the branch.
+Thus $(m,\Theta)\mapsto(m,u,v,w)$ is a local smooth coordinate change in the
+normalized variables through $m=0$, centred on the branch. For each fixed
+$m>0$, $(u,v,w)$ are local coordinates on the slice of parameters with this
+value of $m$; preparation preserves multiplicities.
+
+Choose the positive interval of Lemma~\ref{mainloc:all-roots} inside this
+preparation chart. A common reduction of the parameters confines every real
+quartic root there, since the coefficients vanish at the centre. The whole positive
+cluster therefore has $0$, $2$ or $4$ simple roots off the multiple-root set.
+The polynomials
+\[
+ y^4+\eta^4,\qquad y^4-\eta^4,\qquad
+ (y^2-\eta^2)(y^2-4\eta^2),\qquad 0<\eta\ll1,
+\]
+realize all three counts on open coefficient sets. The parameter
+diffeomorphism and the two simple negative roots give the stated counts,
+including three fixed points at the origin.
+\end{proof}
+
+\begin{proposition}[Local quartic strata]\label{quartic:strata}
+In the coordinates $(u,v,w)$ of \eqref{quartic:preparation},
+the multiple-root set is parametrized by
+\begin{equation}\label{quartic:double-surface}
+ v=-4t^3-2ut,\qquad w=3t^4+ut^2.
+\end{equation}
+Its triple-root curve, its two-double-root curve and its quadruple
+point are respectively
+\[
+ \begin{aligned}
+ (u,v,w)&=(-6t^2,8t^3,-3t^4),&&t\ne0,\\
+ (u,v,w)&=(-2t^2,0,t^4),&&t\ne0,\\
+ (u,v,w)&=(0,0,0).
+ \end{aligned}
+\]
+The ordinary fold part of \eqref{quartic:double-surface} excludes
+both the triple-root curve and a simultaneous second double root.
+\end{proposition}
+
+\begin{proof}
+Solving $\mathfrak p(t)=\mathfrak p'(t)=0$ gives \eqref{quartic:double-surface}.
+On this surface, $\mathfrak p''(t)=0$ gives $\mathfrak p=(y-t)^3(y+3t)$,
+and the additional equation $\mathfrak p'''(t)=0$ forces $t=0$.
+Two distinct double roots must be $t,-t$, since the cubic coefficient
+vanishes, so $\mathfrak p=(y^2-t^2)^2$.
+\end{proof}
+
+Figure~\ref{fig:quartic-local-diagram} displays the local root counts in these
+coordinates; the coordinate change depends on $m$. These strata describe a
+neighbourhood of the fourfold cycle at each fixed small $m>0$.
+\input{figures/quartic-local-diagram}
+
+\FloatBarrier

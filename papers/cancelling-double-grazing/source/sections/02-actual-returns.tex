@@ -1,0 +1,587 @@
+\section{The return map and uniform estimates}
+\label{sec:passage}
+
+The two contact boxes and their regular connections determine a return map on
+one transverse section. We first establish its itinerary and the reversible
+passage law, then derive the cancellation and the value estimates used in the
+fixed-point count.
+
+\emph{Conventions.} A family is fixed throughout. All domains and bounds are
+chosen on compact reductions that are common to the whole family and do not
+depend on how the parameters approach the reference; derivative orders are
+prescribed in advance. Derivatives in the state are taken at fixed parameters,
+and derivatives and multiplicities refer to the transverse coordinate $q$. A
+function of $\sqrt q$ that extends smoothly through $\sqrt q=0$ is called a
+\emph{root profile}; smoothness of a root profile does not imply smoothness in
+$q$. The letters $K$ and $C_j$ denote constants that may change from line to
+line, and letters for smooth remainders, such as $L,M,N,S,E$, are local to the
+statement or proof in which they appear.
+
+\subsection{Geometry and a common first return}
+\label{subsec:observed-controls}
+
+\begin{definition}[Admissible family]\label{def:admissible-family}
+A finite-dimensional smooth family of continuously matched planar fields,
+parametrized by $\lambda$, is \emph{admissible} if the following hold near
+its reference parameter $\lambda_0$.
+\begin{enumerate}
+\item The branch fields, switching curves, marked contacts and transverse
+sections are jointly smooth. In each of two disjoint contact boxes,
+\begin{equation}\label{eq:matched}
+ X^+_\lambda=X^-_\lambda\quad\hbox{on }\{h_\lambda=0\},
+ \qquad X^+_\lambda-X^-_\lambda=h_\lambda Z_\lambda.
+\end{equation}
+The switching function $h_\lambda$ has nonzero differential, the inactive
+field $X^-_\lambda$ does not vanish, and its marked orbit has a persistent
+quadratic contact: at each marked contact,
+\[
+ X^-_\lambda h_\lambda=0,\qquad
+ (X^-_\lambda)^2h_\lambda\le-\kappa_0<0
+\]
+for one common $\kappa_0>0$. The active region is $\{h_\lambda>0\}$, where
+$X^+_\lambda$ is used; near each marked contact the marked orbit lies in
+$\{h_\lambda\le0\}$.
+
+\item Each contact box has an incoming and an outgoing transverse section
+(its ports), with closures in the interior of the box, and consecutive boxes
+are joined by orbit arcs of $X^-_\lambda$ along which $h_\lambda<0$. On a
+common neighbourhood of states and parameters, an orbit that enters a box with
+positive penetration (the local input $z$ defined below) crosses the seam into
+the active region, stays there, and leaves through the seam before reaching
+the outgoing port; an orbit with nonpositive penetration touches the seam at
+most once and otherwise stays in $\{h_\lambda<0\}$. On one fixed incoming
+interval $I=(-q_0,q_0)$, including its grazing thresholds, every orbit follows
+this itinerary, meets no seam along the connecting arcs, and does not return
+to the incoming section before completing one turn. All intermediate port
+images lie in common open domains.
+The local penetration coordinates are positive towards the active regions.
+The regular transition from the first outgoing port to the second incoming
+port is increasing in these coordinates, with a common positive derivative
+margin. Thus both active sides agree after transport to the incoming section.
+\item At $\lambda_0$ there is a compact embedded nonstationary periodic orbit
+$\mathcal C$ through the two marked contacts. Its return-map controls, passage
+strengths and closing curvature, defined in~\eqref{eq:net-strength}
+and~\eqref{eq:regular-jets} below, satisfy
+\[
+ a=b=\delta=0,\qquad A_1=-A_2\ne0,\qquad c_0\ne0.
+\]
+\end{enumerate}
+\end{definition}
+
+We transport the inactive first integrals along the regular connections to
+one smooth transverse coordinate $q$, with contact levels $\tau_1=0$ and
+$\tau_2=\delta$; Proposition~\ref{prop:field-recognition} below shows that
+this is possible for nonidentity connecting maps. In the $\nu$th box put
+$z=q-\tau_\nu$. An inactive flow box gives the seam $z=s^2\gamma(s,\lambda)$
+with $\gamma>0$; the signed clock coordinate $t=s\sqrt{\gamma(s,\lambda)}$
+leaves $z$ unchanged and normalizes the seam. After a positive time change,
+matching and smooth division give
+\begin{equation}\label{eq:passage:local-geometry}
+ X^-=\partial_t,\qquad \Sigma=\{z=t^2\},\qquad
+ X^+=(1+h\alpha)\partial_t+h\mu\partial_z,
+ \qquad h=z-t^2.
+\end{equation}
+The functions $\alpha,\mu$ are jointly smooth and the active clock is
+positive on a common smaller box. This normalization preserves oriented
+orbits and section maps, so it does not change the return map.
+Figure~\ref{fig:actual-return-geometry} shows the reference itinerary and the
+grazing thresholds on the incoming section.
+\input{figures/actual-return-geometry}
+
+\begin{lemma}[A common one-turn return tube]\label{lem:common-tube}
+Let a compact embedded nonstationary reference cycle admit fixed tubular
+coordinates $(\theta,w)$, with $\theta\in\R/\mathbb Z$, reference $w=0$
+and section $\theta=0$. Suppose a finite smooth family of matched fields
+has common local Lipschitz bounds on the tube and differs from the
+reference field at $\lambda_0$ by $O(|\lambda-\lambda_0|)$. Fix contact cores and transverse ports with
+strict margins, and strictly inactive connecting arcs. In every core,
+assume that orbits with positive penetration enter the active region, stay
+there and leave through the seam inside the core, and that the other orbits
+touch the seam at most once.
+If the angular clock remains positive and these local and port margins
+persist, one can choose a common input interval and a parameter neighbourhood
+on which the chronological composition is the first return map. It makes one
+whole turn, with no further seam crossing or earlier section hit.
+\end{lemma}
+
+\begin{proof}
+The matched form $X^-_\lambda+(h_\lambda)_+Z_\lambda$ has common
+Lipschitz bounds. Compactness gives $\dot\theta\ge v_*>0$ on a smaller
+tube; division by this clock and Gronwall comparison with $w=0$ give,
+up to a first exit,
+\[
+ \begin{aligned}
+ \left|\frac{dw}{d\theta}\right|&\le L|w|+K|\lambda-\lambda_0|,\\
+ |w(\theta)|&\le e^L(|w(0)|+K|\lambda-\lambda_0|),\quad0\le\theta\le1.
+ \end{aligned}
+\]
+Choose one input interval and parameter neighbourhood keeping this bound
+strictly inside the tube, core and port margins. First-exit continuation
+gives a full turn; the assumed core passages and inactive arcs exclude
+further seam crossings, including for tangent inputs. The ports join on common
+domains, and strict angular advance makes $\theta=1$ the next section hit.
+The return image need not lie in the input interval.
+\end{proof}
+
+Lemma~\ref{lem:common-tube} gives a geometric criterion for the first-return
+itinerary in item~2 of Definition~\ref{def:admissible-family}; Section~\ref{sec:sharpness} applies it
+to the constructed families.
+
+\begin{remark}[Cycles and fixed points]\label{rem:cycle-fixed-point}
+After a common reduction, every periodic orbit sufficiently close to
+$\mathcal C$ in the return tube meets the transverse section in $I$.
+The first return is increasing and has no nontrivial finite-period orbit
+whose iterates remain in the common local domain: if $P(q)>q$ or $P(q)<q$,
+its successive iterates are strictly ordered. Thus these periodic orbits
+correspond to fixed points in $I$, and isolation of the fixed point is
+equivalent to isolation of the cycle in this tube.
+\end{remark}
+
+\subsection{Reversible passages and cancellation}
+\label{sec:neutral-reference}\label{sec:center-multiplicity}
+
+An active leaf pairs its two seam intersections by a decreasing
+involution. We use it to identify the entry and exit of the passage.
+The resulting relation between its first two coefficients determines
+cancellation in the two-passage composition.
+
+\begin{proposition}[Passage map near a quadratic grazing]
+\label{prop:quadratic-passage}\label{prop:passage:quadratic}
+For a local passage with the quadratic geometry~\eqref{eq:passage:local-geometry}
+and fixed local transverse ports, there is a jointly smooth
+signed companion $g(t,\lambda)$ on a two-sided interval such that
+\begin{equation}\label{eq:passage:reversal}
+ g(0,\lambda)=0,\qquad g_t(0,\lambda)=1,\qquad
+ \iota g\iota=g^{-1},\qquad \iota(t)=-t.
+\end{equation}
+The passage in the inactive coordinate is
+\begin{equation}\label{eq:passage:physical}
+ \Gamma(q,\lambda)=q\quad(q\leq0),\qquad
+ \Gamma(r^2,\lambda)=g(r,\lambda)^2\quad(r>0).
+\end{equation}
+Its first entry is $t=-r$ and its first moving exit is $g(r,\lambda)$.
+On a common domain,
+\begin{equation}\label{eq:passage:quadratic-jet}
+ \Gamma(q,\lambda)
+ =q+C_1(\lambda)q_+^{3/2}
+       +\frac34C_1(\lambda)^2q_+^2
+       +q_+^{5/2}L(\sqrt{q_+},\lambda),
+\end{equation}
+where $L$ is the restriction of a jointly smooth function, and
+\begin{equation}\label{eq:passage:strength-jet}
+ C_1(\lambda)=\frac43\mu(0,0,\lambda).
+\end{equation}
+The passage is an orientation-preserving $C^1$ local diffeomorphism, and the
+companion, its inverse and the root profiles satisfy uniform bounds of every
+prescribed order.
+\end{proposition}
+
+\begin{proof}
+Divide the active field by its positive $t$ component. Let
+$K(t,z,\lambda)$ be the $z$ coordinate where its orbit meets $t=0$.
+Smooth finite-time ODE dependence gives $K(0,z,\lambda)=z$ and $K_z>0$
+on a common smaller box. Since the active orbit equation has zero
+$z$ component on the seam, $K_t(t,t^2,\lambda)=0$. Hence the seam
+restriction $\widehat K(t,\lambda)=K(t,t^2,\lambda)$ satisfies
+\[
+ \begin{gathered}
+ \widehat K_t=2tE(t,\lambda),\qquad
+ E(t,\lambda)=K_z(t,t^2,\lambda)>0,\\
+ \widehat K=t^2M(t,\lambda),\qquad
+ M(t,\lambda)=2\int_0^1 sE(st,\lambda)\,ds.
+ \end{gathered}
+\]
+Here $E(0,\lambda)=M(0,\lambda)=1$, so
+$\mathcal N(t,\lambda)=t\sqrt{M(t,\lambda)}$ is a smooth increasing
+local diffeomorphism. The active leaf pairs its seam intersections by
+\[
+ J=\mathcal N^{-1}\iota\mathcal N,\qquad
+ J(0)=0,\quad J'(0)=-1,\quad J^2=\mathrm{id}.
+\]
+
+For input $q=r^2>0$, the inactive orbit first reaches the seam at $-r$.
+Its active leaf has value $\widehat K(-r)>0$ and second intersection
+$e=J(-r)>0$. The seam restriction decreases for $t<0$ and increases
+for $t>0$; since $K_z>0$, the leaf $K=\widehat K(-r)$ lies strictly above the seam
+precisely between $-r$ and $e$. The positive clock makes them the first
+entry and first exit. In the normalized clock, $dh/dt=-2t$ on the seam, so the entry and exit
+derivatives are exactly $2r$ and $-2e$. In the original physical time
+they are multiplied by the positive clock factor. After exit the inactive orbit has $z=e^2$
+and lies below the seam; port localization excludes further seam crossings.
+Inputs $q<0$ stay below it and $q=0$ only touches it, giving the identity
+passage on $q\le0$.
+
+Set $g=J\iota$. Then $J^2=\iota^2=\mathrm{id}$ gives
+$\iota g\iota=g^{-1}$ and $g'(0)=1$, while $e=g(r)$ proves
+\eqref{eq:passage:physical}. For negative $t$, reversal gives
+\begin{equation}\label{eq:passage:negative-companion}
+ g(t,\lambda)=-\sqrt{\Gamma^{-1}(t^2,\lambda)}\qquad(t<0).
+\end{equation}
+This signed continuation records backward active travel; the forward
+passage on negative $q$ is the identity.
+
+Writing $g(t)=t+\rho t^2+\sigma t^3+O(t^4)$ and comparing cubic
+coefficients in $(g\iota)^2=\mathrm{id}$ gives $\sigma=\rho^2$, the
+classical jet relation for reversible maps~\cite{ofarrell2008,novaessilva2021}.
+Taylor's integral remainder therefore gives
+\[
+ g(t)=t+\rho t^2+\rho^2t^3+t^4G(t,\lambda)
+\]
+with $G$ jointly smooth. Squaring at $t=\sqrt q>0$ gives
+$C_1=2\rho$ and $C_2=3\rho^2=3C_1^2/4$, proving
+\eqref{eq:passage:quadratic-jet}. Its parameter derivatives also give
+joint $C^1$ regularity and $\Gamma_q\to1$ at zero.
+
+For~\eqref{eq:passage:strength-jet}, note that $dz/dt=f(t,z)=h\mu/(1+h\alpha)$
+and $K_t=-fK_z$. On the seam $f=0$ and $f_z=\mu$, so $E'(0)=-\mu(0,0)$.
+Thus $\mathcal N(t)=t-\mu(0,0)t^2/3+O(t^3)$, and
+$\mathcal N^{-1}\iota\mathcal N\iota$ has quadratic coefficient $2\mu(0,0)/3$;
+squaring gives~\eqref{eq:passage:strength-jet}. Compactness, smooth dependence
+on initial data and a common shrinking give uniform positivity and the
+prescribed derivative bounds.
+\end{proof}
+
+Since $\partial_q=(2r)^{-1}\partial_r$, the $j$th state derivative of
+$q^{5/2}L(\sqrt q,\lambda)$ is bounded by $C_jq^{5/2-j}$ on $q>0$, for every
+fixed $j$ and after finitely many parameter derivatives. Its zero extension to
+$q\le0$ is jointly $C^2$ in state and parameters.
+
+Write $\Gamma_1,\Gamma_2$ for the two normalized passages.
+The inactive connections preserve $q$, so chronological continuation gives
+\begin{equation}\label{eq:passage:two-contact-map}
+ \begin{aligned}
+ Q_{m,\delta}(q,p)&=\delta+
+ \Gamma_2\bigl(\Gamma_1(q,p,m,\delta)-\delta,p,m,\delta\bigr),\\
+ P_{m,\delta}&=R_{p,m,\delta}\circ Q_{m,\delta},
+ \end{aligned}
+\end{equation}
+where $R$ is the smooth orientation-preserving transition along the rest of
+the cycle, the \emph{closing map}. Write $D=P-q$ and
+$A_\nu(\lambda)=C_{1,\nu}(\lambda)$, the \emph{passage strengths}. When the
+controls are independent we write $p=(a,b,\xi)$ and
+$\lambda=(a,b,m,\delta,\xi)$, with $\xi$ in a fixed compact set. Throughout,
+$m$ denotes the strength sum:
+\begin{equation}\label{eq:net-strength}
+ A_1(p,m,\delta)+A_2(p,m,\delta)=m,\qquad A(p)=A_1(p,0,0).
+\end{equation}
+The individual strengths and all higher profiles may depend on every
+parameter. After reduction, $A$ has fixed sign with
+$|A(p)|\ge A_*>0$, and the two passage strengths have opposite signs. The jets of the closing map are
+\begin{equation}\label{eq:regular-jets}
+ a=R(0),\qquad b=R'(0)-1,\qquad c=\tfrac12R''(0).
+\end{equation}
+In particular, the aligned multiplier is $k(p)=R'_{p,0,0}(0)=1+b>0$.
+Taylor division gives
+\begin{equation}\label{eq:quartic-closing-division}
+ R(y)=a+(1+b)y+c(\lambda)y^2+y^3S(y,\lambda).
+\end{equation}
+At the reference $a=b=m=\delta=0$. The aligned curvature
+$c_0(p)=\tfrac12R''_{p,0,0}(0)$ has fixed nonzero sign and a uniform
+strict margin; after shrinking, $R''$ retains that sign at every relevant
+input. Its value may vary with the parameters. The attainment results use
+the condition
+\begin{equation}\label{eq:rank}
+ \operatorname{rank}D_\lambda(a,b,m,\delta)=4
+ \quad\hbox{at the reference field},
+\end{equation}
+which makes $(a,b,m,\delta,\xi)$ local parameter coordinates.
+
+\begin{lemma}[Cancellation at aligned thresholds]
+\label{lem:passage:finite-inverse}
+On $\delta=0$, the composition has the root-profile form
+\begin{equation}\label{eq:passage:aligned-jet}
+ Q_{m,0}(q)=q+mq_+^{3/2}+\frac34m^2q_+^2
+                  +q_+^{5/2}L_0(\sqrt{q_+},a,b,m,\xi).
+\end{equation}
+Consequently, on the whole slice $m=\delta=0$,
+\begin{equation}\label{eq:passage:finite-cancellation}
+ Q_{0,0}(q)=q+q_+^{5/2}L_0(\sqrt{q_+},a,b,0,\xi)
+\end{equation}
+is jointly $C^2$. Only the leading strengths have to cancel.
+\end{lemma}
+
+\begin{proof}
+On a common smaller domain positive inputs and intermediate images stay
+positive. The cubic companion jets and $A_1+A_2=m$ give
+\[
+ g_2g_1(t)=t+\frac m2t^2+\frac{m^2}{4}t^3
+                      +t^4G_0(t,a,b,m,\xi),
+\]
+with $G_0$ jointly smooth. Squaring proves
+\eqref{eq:passage:aligned-jet}; for $q\le0$ both passages are identity.
+At $m=0$ the remaining $q_+^{5/2}$ profile has the joint $C^2$
+extension proved above.
+\end{proof}
+
+The grazing thresholds on the incoming section are
+\begin{equation}\label{eq:passage:true-thresholds}
+ 0\quad\hbox{and}\quad a_\delta=\Gamma_1^{-1}(\delta,\lambda).
+\end{equation}
+Here $a_\delta$ labels the second threshold; it does not denote a
+parameter derivative. The second local input is
+$I_2=\Gamma_1(q,\lambda)-\delta$.
+The increasing first passage has derivative near one, so its inverse
+exists on a common interval and
+\begin{equation}\label{eq:passage:threshold-formula}
+ a_\delta=\delta\quad(\delta\le0),\qquad
+ a_\delta=\bigl[g_1^{-1}(\sqrt\delta,\lambda)\bigr]^2
+                                                \quad(\delta>0).
+\end{equation}
+Thus $a_\delta$ has the sign of $\delta$, $|a_\delta|\le2|\delta|$,
+and for positive separation
+$a_\delta=\delta-C_{1,1}(\lambda)\delta^{3/2}+O(\delta^2)$ with a
+smooth positive-root profile. It is jointly $C^1$; as a function of the
+independent separation variable $\delta$, it is not $C^2$ at $\delta=0$
+when $C_{1,1}\ne0$.
+For $\delta>0$, the intervals $q<0$, $0<q<a_\delta$, $q>a_\delta$
+have respectively no excursion, only the first, and both excursions.
+For $\delta<0$, the corresponding intervals are $q<\delta$,
+$\delta<q<0$, $q>0$, with only the second excursion in the middle.
+At either endpoint its excursion becomes a tangency touch. At alignment,
+negative inputs are inactive, zero touches both contacts and positive
+inputs make both excursions.
+
+On the aligned cancelling slice, the closing expansion gives
+\begin{equation}\label{eq:center-displacement}
+ D_{0,0}(q,p)=a+bq+c_0(p)q^2
+       +q_+^{5/2}M(\sqrt{q_+},p)+q^3S(q,p),
+ \qquad c_0(p)=\tfrac12R_{p,0,0}''(0)\ne0.
+\end{equation}
+The root remainder is jointly $C^2$, with bounds
+$|\partial_q^j\partial_p^\beta(q^{5/2}M)|\le C_{j,\beta}q^{5/2-j}$
+for $j\le2$. At $a=b=0$ the reference displacement consequently has
+$D(0)=D_q(0)=0$ and $D_{qq}(0)=2c_0\ne0$.
+The return map is jointly $C^1$ in state and parameters. Since both strengths
+are nonzero, $P_\lambda$ is $C^2$ at both thresholds if and only if
+$m(\lambda)=\delta(\lambda)=0$; otherwise a nonzero coefficient of order
+$q^{3/2}$ survives at one of the thresholds. For the counting bounds, fixed points at thresholds are counted as distinct
+zeros; no smooth multiplicity is used at a non-$C^2$ threshold.
+
+A smooth increasing change of transverse coordinate $x=\phi(q)$, $\phi(0)=0$,
+$\phi'(0)=s>0$, changes the reference coefficients to $\widetilde c_0=c_0/s$
+and $\widetilde A_\nu=A_\nu(\lambda_0)/\sqrt{s}$; the terms involving $\phi''(0)$
+cancel at a fixed point with unit multiplier. In particular $c_0/A_1(\lambda_0)^2$
+does not depend on the coordinate. The odd root lift $t\sqrt{\phi(t^2)/t^2}$
+preserves reversal, and nonlinear terms of $\phi$ first affect the order
+$5/2$, so the coefficient law of Proposition~\ref{prop:quadratic-passage} is
+preserved. These invariants let us check the sign conditions in any such
+section coordinate and compare the constants in the weighted limits.
+
+\subsection{Regular connections and auxiliary parameters}
+
+We now show how regular connecting maps lead to this form, and how families
+with dependent controls are handled.
+
+\begin{proposition}[Return map through regular connections]
+\label{prop:field-recognition}\label{prop:passage:field-recognition}
+In the common geometry above, let $S_1,S_2$ be the regular transitions in
+positive penetration coordinates, with all intermediate images in their
+common domains. They are smooth and increasing, with common positive
+derivative margins. If the second local level is $\delta_2$, then
+\begin{equation}\label{eq:passage:unreduced-return}
+ P=S_2\circ\Pi_2\circ S_1\circ\Gamma_1,
+ \qquad\Pi_2(z)=\delta_2+\Gamma_{2,\mathrm{loc}}(z-\delta_2)
+\end{equation}
+has the transported form
+\begin{equation}\label{eq:passage:recognized-return}
+ P(q)=R\{\delta+\Gamma_2(\Gamma_1(q)-\delta)\},
+ \qquad\delta=S_1^{-1}(\delta_2),\quad R=S_2\circ S_1.
+\end{equation}
+The second passage retains reversal and the coefficient law. The four
+controls are smooth functions of $\lambda$, and under~\eqref{eq:rank} they
+give a chart $(a,b,m,\delta,\xi)$ with $m=C_{1,1}+C_{1,2}$.
+\end{proposition}
+
+\begin{proof}
+The first transition is increasing by admissibility. The inactive reference
+monodromy preserves transverse orientation, so $S_2'>0$ at the reference as
+well; smooth dependence gives common positive derivative margins after
+reduction.
+Set $T(x)=S_1(\delta+x)-\delta_2$ and
+$\Gamma_2=T^{-1}\Gamma_{2,\mathrm{loc}}T$.
+Then $T(0)=0$, $T'>0$, and
+$S_1^{-1}\Pi_2S_1(y)=\delta+\Gamma_2(y-\delta)$, proving the formula.
+The signed root lift is
+\[
+ H(t)=t\sqrt{T(t^2)/t^2},\qquad
+ T(t^2)/t^2=\int_0^1T'(st^2)\,ds,\qquad
+ g_2=H^{-1}g_{2,\mathrm{loc}}H.
+\]
+The quotient is smooth, positive and even. Thus $H$ is odd, increasing,
+with a smooth bounded inverse on a common root interval; conjugation
+preserves reversal. Squaring for $t>0$ gives the transported passage.
+For $\ell=T'(0)$ its first coefficients are
+$C_{1,2}=\sqrt\ell\,C_{1,2,\mathrm{loc}}$ and
+$C_{2,2}=\ell C_{2,2,\mathrm{loc}}$, so $C_{2,2}=3C_{1,2}^2/4$.
+Nonlinear terms in $T$ first enter the order-$5/2$ remainder.
+The transported first integral is $S_1^{-1}$ of the old one; its level,
+first entry and moving first exit follow the same trajectories.
+The common itinerary therefore gives the chronological first return.
+Smooth parameter dependence gives the four control functions, and
+under~\eqref{eq:rank} the submersion theorem gives the asserted chart.
+\end{proof}
+
+Within an admissible family, finite-time dependence and the implicit
+function theorem for hitting times give smooth regular transitions with
+common clock, derivative and domain margins. The opposite strength signs
+and nonzero closing curvature persist in a neighbourhood; cancellation is
+imposed only at the reference.
+
+For dependent controls we introduce independent auxiliary parameters for
+the estimates.
+
+\begin{lemma}[Independent auxiliary strength and separation]
+\label{lem:auxiliary-controls}
+Let a jointly smooth finite-parameter family have the normalized return
+\[
+ \begin{gathered}
+ P_\lambda(q)=R_\lambda\bigl(\widehat\delta(\lambda)+
+ \Gamma_{2,\lambda}(\Gamma_{1,\lambda}(q)
+                              -\widehat\delta(\lambda))\bigr),\\
+ \widehat m(\lambda)=C_{1,1}(\lambda)+C_{1,2}(\lambda),
+ \end{gathered}
+\]
+with the signed companions of Proposition~\ref{prop:quadratic-passage}.
+Near a reference with $\widehat m=\widehat\delta=0$, there is a jointly
+smooth root-profile family with independent auxiliary parameters
+$(m,\delta)$, the same coefficient law and the identity
+$C_{1,1}+\widetilde C_{1,2}=m$ for all auxiliary $(m,\delta)$,
+whose return satisfies
+\[
+ \widetilde P_{\lambda,\widehat m(\lambda),
+                       \widehat\delta(\lambda)}=P_\lambda.
+\]
+The closing map remains $R_\lambda$, and all profiles satisfy uniform
+bounds.
+\end{lemma}
+
+\begin{proof}
+Put $\iota(t)=-t$, $J_2=g_{2,\lambda}\iota$ and
+$\mathcal N_2(t,\lambda)=(t-J_2(t,\lambda))/2$.
+Since $J_2^2=\id$, $\mathcal N_2J_2=\iota\mathcal N_2$ and
+$\mathcal N_2'(0)=1$, so $\mathcal N_2$ is a jointly smooth increasing
+local normalizer. For $s=m-\widehat m(\lambda)$ set
+\[
+ \mathcal N_s(t,\lambda)=\mathcal N_2(t,\lambda)-\frac s4t^2,
+ \qquad \widetilde g_2=\mathcal N_s^{-1}\iota\mathcal N_s\iota.
+\]
+A common shrinking keeps $\mathcal N_s'>0$, and the parameter inverse
+function theorem gives its joint smooth inverse. Thus $\widetilde g_2$
+is tangent to the identity, satisfies
+$\iota\widetilde g_2\iota=\widetilde g_2^{-1}$, and equals $g_{2,\lambda}$
+when $s=0$. If $\mathcal N_2=t+d_2t^2+O(t^3)$, the quadratic coefficient
+of $\mathcal N_2^{-1}\iota\mathcal N_2\iota$ is $-2d_2$.
+The change therefore raises the quadratic coefficient of $\widetilde g_2$
+by $s/2$.
+Define $\widetilde\Gamma_2(x)=x$ for $x\le0$ and
+$\widetilde\Gamma_2(t^2)=\widetilde g_2(t)^2$ for $t>0$.
+Its second-passage strength is $\widetilde C_{1,2}=C_{1,2}+s$, so
+$C_{1,1}+\widetilde C_{1,2}=\widehat m+s=m$.
+Reversibility gives its coefficient law and smooth root remainder.
+Replace the second passage in the return by $\widetilde\Gamma_2$ and
+use the independent translation $\delta$. This recovers the original
+return at $(m,\delta)=(\widehat m(\lambda),\widehat\delta(\lambda))$. Joint
+smoothness on compact reductions gives the uniform bounds.
+\end{proof}
+
+For the estimates below, a family with dependent controls is first treated
+in this auxiliary root-profile family and then restricted to
+$(m,\delta)=(\widehat m(\lambda),\widehat\delta(\lambda))$.
+This convention concerns estimates of return maps; it asserts no field
+realization of the auxiliary profiles.
+
+\subsection{Divisions and estimates up to the thresholds}
+
+Where both passages are active, the return admits a division in root
+profiles. To cover the thresholds as well, we also estimate the difference
+from the aligned return in the coordinate $q$.
+
+\begin{lemma}[Division and estimates up to the thresholds]
+\label{lem:exact-value-division}
+There are common $r_0>0$, $v_0=1/4$ and a small parameter neighbourhood
+in $(m,p)$
+such that, for $0<r\le r_0$, $|v|\le v_0$, $q=r^2$ and $\delta=r^2v$,
+both passages are active and the return has the expression
+\begin{equation}\label{eq:actual-both-active-division}
+ Q-q=mr^3+\tfrac34m^2r^4+r^5L_0+\delta rH,
+ \qquad H(0,0,0,p)=\tfrac32A(p),
+\end{equation}
+where $L_0,H$ are restrictions of jointly smooth functions of $(r,m,v,p)$
+on the signed box $|r|\le r_0$, $|v|\le v_0$, with the same parameter
+neighbourhood. For arbitrary relative sizes and either sign of
+$q$ and $\delta$ in the common local domain, including the thresholds,
+\begin{equation}\label{eq:quartic-global-value}
+ |Q-q-mq_+^{3/2}|
+ \le K\{m^2q_+^2+q_+^{5/2}
+       +|\delta|\sqrt{q_++|\delta|}+|\delta|q_+^{3/2}\}
+\end{equation}
+with a common constant.
+\end{lemma}
+
+\begin{proof}
+Write $g_\nu(t,\lambda)=tT_\nu(t,\lambda)$ with $T_\nu$ jointly smooth
+and $T_\nu(0,\lambda)=1$. For signed $r$ and $\delta=r^2v$, put
+\[
+ U=T_1(r,\lambda)^2,\quad W=U-v,\quad s_2=r\sqrt W,
+ \qquad K_0=v+WT_2(s_2,\lambda)^2.
+\]
+Since $T_1(0,\lambda)=1$, one common reduction gives $T_1^2>3/4$.
+For $|v|\le v_0=1/4$ this implies $W=T_1^2-v>1/2$. These expressions are smooth and
+$Q(r^2)=r^2K_0$ exactly for $r>0$. Since $K_0(0,m,v,p)=1$,
+joint Hadamard division gives $K_0-1=r\mathcal Q$. Aligned cancellation gives
+$\mathcal Q(r,m,0,p)=m+\tfrac34m^2r+r^2L_0(r,m,p)$; division in the independent
+variable $v$ then gives the exact identity
+\begin{equation}\label{eq:quartic-Hadamard}
+ \mathcal Q=m+\tfrac34m^2r+r^2L_0+vH(r,m,v,p),
+ \qquad H(0,0,0,p)=\tfrac32A(p).
+\end{equation}
+Indeed, the first root jet at $r=0$ is
+$A_1+A_2(1-v)^{3/2}$, whose $v$ derivative at cancellation is
+$-3A_2/2=3A(p)/2$. The profile arguments contain $\delta=r^2v$.
+Multiplication by $r^3$ proves
+\eqref{eq:actual-both-active-division}.
+
+Under~\eqref{eq:rank}, hold $(a,b,m,\xi)$ fixed. For dependent controls,
+write $p$ for the original physical parameters and hold $(p,m)$ fixed in
+the auxiliary family of Lemma~\ref{lem:auxiliary-controls}, varying only
+its auxiliary separation $\delta$. After integration, restrict to the
+observed controls as agreed above. Put $y=\Gamma_1(q)-\delta$. The total
+derivative is
+\begin{equation}\label{eq:quartic-total-detuning}
+ Q_\delta=1-\Gamma_{2,q}(y)
+ +\Gamma_{2,q}(y)\Gamma_{1,\delta}(q)+\Gamma_{2,\delta}(y).
+\end{equation}
+The profile parameter derivatives are $O(x_+^{3/2})$. Integrate \eqref{eq:quartic-total-detuning} from zero to $\delta$,
+with the indicated quantities held fixed. At an intermediate separation $t$,
+$y_+=(\Gamma_1(q,t)-t)_+\le Kq_++|t|$. Joint $C^1$ regularity
+and the smooth profiles give, including at active arguments equal to zero,
+\[
+ |\Gamma_{\nu,q}(x)-1|\le K\sqrt{x_+},\qquad
+ |\Gamma_{\nu,t}(x)|\le Kx_+^{3/2}.
+\]
+Thus $|Q_t|\le K[\sqrt{q_++|t|}+q_+^{3/2}]$, and
+\begin{equation}\label{eq:quartic-global-detuning}
+ |Q_{m,\delta}-Q_{m,0}|
+ \le K|\delta|[\sqrt{q_++|\delta|}+q_+^{3/2}].
+\end{equation}
+Together with \eqref{eq:passage:aligned-jet} this proves
+\eqref{eq:quartic-global-value}.
+\end{proof}
+
+\begin{remark}[Checking the hypotheses]\label{cor:field-criterion}
+With the prescribed contact geometry, transverse coorientation and
+common first-return itinerary, the remaining conditions involve finitely
+many jets. The transported strengths are $A_\nu=\tfrac43\mu_\nu(0,0)$;
+transport from an initial second-port coordinate multiplies its strength by
+$\sqrt{S_1'(\delta)}$, as in Proposition~\ref{prop:field-recognition}.
+At the reference, check $A_1=-A_2\ne0$, $R(0)=0$, $R'(0)=1$ and
+$c_0=R''(0)/2\ne0$. These conditions give admissibility and the upper
+bounds of Theorem~\ref{thm:six-main} and part~1 of
+Theorem~\ref{thm:main-saturation-summary}. Attainment additionally uses
+\eqref{eq:rank}; the saturation and fourfold-cycle conclusions use the
+sign sector specified in Theorems~\ref{thm:main-saturation-summary}
+and~\ref{thm:actual-quartic-summary}.
+\end{remark}
+
+The curvature of this composition gives the count in the next section, and
+the value estimates locate the six-cycle configurations.

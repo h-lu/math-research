@@ -1,0 +1,745 @@
+\section{The two-scale secondary saturation domain}\label{corner:section}
+
+We determine the coefficient region reached when three roots of the
+principal quartic collapse to zero. A division of the slope gives the finer
+necessary scales; the joint return quotient and root charts then identify
+the region and realize its interior.
+Throughout this section we use the setting and conventions of
+Section~\ref{sup:setting}.
+
+\subsection{The quartic corner and its cubic limit}
+
+The principal-scale coordinates
+of~\cite[Section~\ref*{main-subsec:four-root-limit}]{main2026} are
+\[
+ A_4=\frac{C^3a}{m^4},\qquad S_4=\frac{Ch}{m^2},\qquad
+ T_4=\frac{3BC^2\delta}{2m^3},\qquad x=\frac{C\sqrt q}{m},
+ \qquad h=-b.
+\]
+Write $e_j$ for the elementary symmetric polynomial of degree $j$, and set
+\[
+ \Phi_{A,S,T}(x)=A-Sx^2+x^3-x^4+Tx,\qquad
+ \mathcal K_4=\{(-e_4,e_2,e_3):r_i\geq0,\ \textstyle\sum_{i=1}^4r_i=1\}.
+\]
+Thus $\Phi_{A_4,S_4,T_4}=-\prod_{i=1}^4(x-r_i)$ for a point in
+$\mathcal K_4$. We abbreviate this polynomial by $\Phi$.
+The corner $S_4\to0$ of $\mathcal K_4$ explains the next scale.
+Order the four roots and write $u=r_1+r_2+r_3$, $v=r_1r_2+r_1r_3+r_2r_3$,
+$w=r_1r_2r_3$. Since $r_4=1-u$,
+\[
+ S_4=(1-u)u+v,\qquad T_4=(1-u)v+w,\qquad -A_4=(1-u)w.
+\]
+Along any sequence with $S_4\to0^+$, the largest root tends to one and
+$u/S_4\to1$. After passing to a subsequence, $r_i/S_4\to z_i\ge0$ for
+$i=1,2,3$, with $\sum_{i=1}^3z_i=1$. Along this subsequence,
+$(A_4/S_4^3,T_4/S_4^2)\to(-e_3(z),e_2(z))$.
+Conversely, taking small roots $t z_i$ with $\sum z_i=1$
+and large root $1-t$ realizes every such limit; here
+$S_4=t-t^2(1-e_2(z))\sim t$.
+
+Set $\sigma_4=S_4$ and write $A_4=\sigma_4^3\alpha$,
+$T_4=\sigma_4^2T_3$, and $x=\sigma_4z$. Then
+\[
+ \Phi(\sigma_4z)/\sigma_4^3
+ =\alpha-z^2+z^3+T_3 z-\sigma_4z^4.
+\]
+The polynomial identity identifies a candidate cubic. Transferring it to
+the return map when $h=-b=o(m^2)$ requires a division before either scale
+vanishes: an additive error $o(m^2)$ in the slope would not control $h$.
+The necessary estimates use sequences whose original parameters, including
+all remaining parameters, tend to the reference of Section~\ref{sup:setting}.
+
+\subsection{Slope division and necessary bounds}
+
+The finer scales are forced by the slope at the first zero of $P''$ in the
+outer region and by the extrema of the displacement. We begin with a division
+of the slope on the separation graph.
+
+For a return with six fixed points, let $a_\delta=\Gamma_1^{-1}(\delta)$ be the
+second threshold. By~\cite[Lemma~\ref*{main-sat:saturation}]{main2026} each
+open curvature block contains one zero $t_j$ of $D_q$, with extremal signs
+$+,-,+,-,+$, and
+\begin{equation}\label{corner:saturation-slopes}
+ D_q(0)<0,\quad D_q(a_\delta)>0,\quad D_q(\zeta_1)<0,\quad D_q(\zeta_2)>0.
+\end{equation}
+Here \(\zeta_1<\zeta_2\) are the two zeros of \(P''\) in the outer region; in
+particular
+\(m,\delta,h=-b\) are positive.
+
+The separation graph of~\cite[Section~3]{main2026} is
+\begin{equation}\label{corner:curvature-division}
+ \begin{aligned}
+ \delta=\Delta(r,m,p)&=r^2\{mH_\Delta(r,m,p)+rB_\Delta(r,p)\},\\
+ H_\Delta(0,0,p)&=\frac2{A(p)},\qquad
+ B_\Delta(0,p)=\frac{16c_0(p)}{3k(p)A(p)}.
+ \end{aligned}
+\end{equation}
+Here $B_\Delta,H_\Delta$ are smooth profiles.
+
+\begin{lemma}[Slope on the separation graph]
+\label{corner:graph-slope}
+After a common reduction there are jointly smooth profiles $H_D,B_D$
+such that
+\begin{equation}\label{corner:exact-graph-slope}
+ \left.D_q(r^2,p,m,\delta)\right|_{\delta=\Delta(r,m,p)}
+ =b+r\{mH_D(r,m,p)+rB_D(r,p)\},
+\end{equation}
+with
+\begin{equation}\label{corner:graph-slope-coefficients}
+ H_D(0,0,p)=3k(p),\qquad B_D(0,p)=6c_0(p).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Use the signed-root profiles
+of~\cite[Section~3]{main2026}.
+With $\delta=r^2v$, the expression
+\[
+ D_q(r^2)=R'(Q)\ell_2(r\sqrt{T_1(r)^2-v})\ell_1(r)-1
+\]
+extends smoothly in $(r,m,v,p)$ on a common box.  At $r=0$ it equals
+$b$ for all small $m,v$.  Hadamard division in $r$ therefore gives a
+smooth function $\mathcal T$ such that $D_q-b=r\mathcal T$.
+The first passage derivatives give
+\[
+ \ell_\nu(u)=1+\tfrac32 A_\nu u+O(u^2).
+\]
+Consequently, at the root boundary,
+\[
+ \mathcal T(0,m,v,p)
+ =\tfrac32 k(p)
+   \{A_1(p,m,0)+A_2(p,m,0)\sqrt{1-v}\}.
+\]
+The aligned strength identity yields the linear terms
+$\tfrac32km+\tfrac34kAv$.  On $m=v=0$, finite cancellation gives
+$D_q-b=2c_0r^2+O(r^3)$.  Joint Taylor division thus gives
+\begin{equation}\label{corner:fixed-control-slope-expansion}
+ \mathcal T
+ =2c_0r+\tfrac32km+\tfrac34kAv
+       +O\bigl((|r|+|m|+|v|)^2\bigr),
+\end{equation}
+with a uniform smooth remainder.
+
+Now substitute the graph
+$v=V(r,m,p)=mH_\Delta+rB_\Delta$ in $\mathcal T$, and call the resulting
+smooth function $\mathcal T_\Delta(r,m,p)$. Formula
+\eqref{corner:fixed-control-slope-expansion} gives
+\[
+ \mathcal T_\Delta(0,0,p)=0,\qquad
+ \partial_m\mathcal T_\Delta(0,0,p)=3k,\qquad
+ \partial_r\mathcal T_\Delta(0,0,p)=6c_0.
+\]
+Define $B_D(r,p)=\mathcal T_\Delta(r,0,p)/r$ by smooth division and
+\[
+ H_D(r,m,p)=\int_0^1\partial_m\mathcal T_\Delta(r,sm,p)\,ds.
+\]
+Thus $\mathcal T_\Delta=rB_D+mH_D$, proving
+\eqref{corner:exact-graph-slope}--\eqref{corner:graph-slope-coefficients}.
+\end{proof}
+
+For $\delta>0$, $q\geq0$, the global passage estimate
+\eqref{sup:global} gives
+\begin{align}
+ |D(q)-a|\leq K\{&
+ hq+q^2+mq^{3/2}+m^2q^2+q^{5/2}\notag\\
+ &+\delta\sqrt{q+\delta}+\delta q^{3/2}\},
+ \qquad h=-b>0.                         \label{corner:global-comparison}
+\end{align}
+Indeed $0\leq Q(q)\leq Kq$ uniformly.  Below $a_\delta$ this follows from
+$Q=\Gamma_1(q)$; above $a_\delta$, positivity and a common bound
+$\Gamma_2(y)\leq Ky$, with $K\geq1$, give
+$\delta+\Gamma_2(\Gamma_1(q)-\delta)\leq K\Gamma_1(q)$.
+Insert this bound in the closing expansion
+\eqref{sup:closing} and apply
+\eqref{sup:global}.
+
+\begin{proposition}[Secondary necessary bounds]
+\label{corner:secondary-bounds}
+\label{corner:sharp-positive-offset}
+\label{corner:positive-offset-bound}
+There is a constant $K$ such that, for parameters sufficiently close to the
+reference in this sign case, every return with six fixed points satisfies,
+with $h=-b$,
+\begin{equation}\label{corner:strong-bounds}
+ 0<h\leq Km^2,\qquad
+ 0<\delta\leq K\frac{h^2}{m},\qquad
+ -K\frac{h^3}{m^2}\leq a\leq Kh^3.
+\end{equation}
+More precisely, with $k=1-h$ and the current first passage strength
+$A_1(\lambda)$,
+\begin{equation}\label{corner:finite-positive-offset-bound}
+ a<\frac{4h^3}{27k^2A_1(\lambda)^2}+Kh^4.
+\end{equation}
+Along every six-fixed-point sequence tending to the reference, this gives
+\begin{equation}\label{corner:sharp-positive-offset-limsup}
+ \limsup\frac{a}{h^3}\leq\frac{4}{27B^2}.
+\end{equation}
+\end{proposition}
+
+The leading term in~\eqref{corner:finite-positive-offset-bound} agrees with
+Simpson and Meiss's fold value $4(1-\Xi)^3/(27\gamma^2)$ for the truncated
+return~\cite[arXiv version, Eq.~(72)]{simpsonmeiss2008}, with $h=1-\Xi$ and
+$\gamma=kA_1(\lambda)$. Here the bound retains $Kh^4$ and is necessary for
+arbitrary six-cycle configurations; Proposition~\ref{corner:positive-offset-realization}
+proves sharpness by sequences approaching the endpoint.
+
+\begin{proof}
+\cite[Proposition~\ref*{main-sat:weighted-confinement}]{main2026} gives
+\(h\le Km^2\).
+Put \(\rho_i=\sqrt{\zeta_i}\).
+
+The root coordinate $\rho_1$ of the first curvature zero lies below the
+graph's unique positive critical point, whose expansion is
+\[
+ \rho_1<r_{\rm c}
+ =-\frac{k(p)m}{4c_0(p)}+O(m^2).
+\]
+Uniformly for $0<r\leq r_{\rm c}$, the slope profiles satisfy
+\[
+ mH_D+rB_D\geq c_*m,\qquad c_*>0.
+\]
+To check the margin, divide by $m$ and use
+\eqref{corner:graph-slope-coefficients}: the limiting minimum on this
+interval is
+$3k+6c_0[-k/(4c_0)]=3k/2>0$.
+The negative slope at $\zeta_1$ therefore yields
+\[
+ \rho_1\leq K\frac hm,\qquad
+ \zeta_1\leq K\frac{h^2}{m^2}.
+\]
+Using \eqref{corner:curvature-division} at $\rho_1$, where
+$mH_\Delta+\rho_1B_\Delta=O(m)$, proves
+$\delta\leq Kh^2/m$.
+
+For the upper offset bound, the negative minimum $t_2=r_2^2$ lies
+where only the first passage is active, so that $Q=\Gamma_1(q)$. Uniform
+passage and closing expansions at fixed parameters give
+\[
+ D(r^2)=a-hr^2+(1-h)A_1r^3+O(r^4),\qquad
+ D_q(r^2)=-h+\tfrac32(1-h)A_1r+O(r^2).
+\]
+The coefficient $\tfrac32(1-h)A_1$ has a uniform positive lower bound.
+After reducing the state interval, the $O(r_2^2)$ term is absorbed in
+that linear term. Thus $D_q(t_2)=0$ first gives $r_2=O(h)$ and then
+\[
+ r_2=\frac{2h}{3kA_1(\lambda)}+O(h^2).
+\]
+The value expansion therefore yields
+\begin{equation}\label{corner:first-minimum-sharp}
+ D(t_2)=a-\frac{4h^3}{27k^2A_1(\lambda)^2}+O(h^4).
+\end{equation}
+Its strict negativity proves \eqref{corner:finite-positive-offset-bound}
+and the coarse upper bound in \eqref{corner:strong-bounds}.
+Since $k\to1$ and $A_1(\lambda)\to B$ along a converging sequence,
+it also proves \eqref{corner:sharp-positive-offset-limsup}.
+Thus $a\leq4h^3/(27B^2)+o(h^3)$.
+
+For the lower bound use the third extremum $t_3\in(a_\delta,\zeta_1)$.
+It has $D(t_3)>0$ and $t_3\leq Kh^2/m^2$.  Substitute this and
+$\delta\leq Kh^2/m$ in \eqref{corner:global-comparison}.
+The terms $ht_3$ and $mt_3^{3/2}$ are $O(h^3/m^2)$.
+The term $t_3^2$ is bounded by that size times $h/m^2$, which is
+bounded by the first estimate.  The higher aligned terms are smaller.
+Finally,
+\[
+ \delta\sqrt{t_3+\delta}
+ \leq K\left(\frac{h^3}{m^2}+\frac{h^3}{m^{3/2}}\right).
+\]
+The remaining separation term is smaller as well. Thus
+$|D(t_3)-a|\leq Kh^3/m^2$, proving the lower offset bound.
+
+\end{proof}
+
+
+\subsection{The joint secondary quotient}
+
+In the standard unfolding introduce
+\begin{equation}\label{corner:weights}
+ m=\mu,\qquad b=-\mu^2\sigma,\qquad
+ \delta=\mu^3\sigma^2d,\qquad a=\mu^4\sigma^3\alpha,
+ \qquad \mu,\sigma>0.
+\end{equation}
+These weights give $\sigma_4=S_4=C\sigma$ and $T_3=3Bd/2$.
+The weight map has determinant $-\mu^9\sigma^5$ with rows
+$(m,b,a,\delta)$ and columns $(\mu,\sigma,\alpha,d)$.
+Here $h=\mu^2\sigma$ and the secondary positive state coordinate is
+\[
+ q=\mu^2\sigma^2z^2.
+\]
+The threshold layer has relative size $\delta/q=\mu d/z^2$, so on fixed
+positive $z$-intervals both passages are active for small $\mu$, even when
+$\sigma$ tends to zero independently.
+
+\begin{definition}[Secondary saturation domain]
+\label{def:actual-secondary-domain}
+Use the neighbourhood $\mathcal V$, the standard unfolding $\Lambda$ and the
+count $N_\lambda(I)$ of Section~\ref{sup:setting}.
+Let $w_{\mu,\sigma}(\alpha,d)=(a,b,m,\delta)$ be given by
+\eqref{corner:weights}. The secondary saturation domain is
+\[
+ \mathscr S_{\mu,\sigma}
+ =\{(\alpha,d)\in\R^2:w_{\mu,\sigma}(\alpha,d)\in\mathcal V,
+       N_{\Lambda(w_{\mu,\sigma}(\alpha,d))}(I)=6\}.
+\]
+\end{definition}
+
+Define the compact set
+\begin{equation}\label{corner:CB}
+ \mathcal C_B=
+ \left\{\left(-r_1r_2r_3,\,
+       \frac{2(r_1r_2+r_1r_3+r_2r_3)}{3B}\right):
+       r_i\geq0,\quad r_1+r_2+r_3=1\right\}.
+\end{equation}
+
+We use Euclidean distance for the Hausdorff distance $d_H$ between compact
+coefficient sets. The quotient below connects the cubic region to the return
+map, with no relation between $\mu$ and $\sigma$. Further charts and
+estimates of critical points then account for the remaining roots and the
+boundary.
+
+\begin{lemma}[Joint secondary quotient]
+\label{corner:joint-quotient}
+On every compact positive $z$-interval and bounded set of rescaled
+parameters, the function
+\[
+ \mathcal F_{\mu,\sigma}(z;\alpha,d)
+ =\frac{D(\mu^2\sigma^2z^2)}{\mu^4\sigma^3}
+\]
+extends jointly smoothly to signed $(\mu,\sigma)$ near $(0,0)$. There is a
+jointly smooth profile $E$ such that
+\begin{equation}\label{corner:joint-limit}
+ \mathcal F_{\mu,\sigma}
+ =\alpha-z^2+z^3+\tfrac32 Bdz-C\sigma z^4
+       +\mu E(\mu,\sigma,z,\alpha,d).
+\end{equation}
+Every prescribed finite collection of mixed derivatives is bounded on
+closed reductions. The extension equals the rescaled displacement for
+$\mu,\sigma>0$.
+\end{lemma}
+
+\begin{proof}
+The root-profile division
+\eqref{sup:root-division}, before any weights are imposed, gives
+\begin{equation}\label{corner:exact-Q-division}
+ Q-q=mr^3+\tfrac34m^2r^4+r^5L_0+\delta rH(r,m,v,p),
+ \qquad v=\delta/r^2,\qquad H(0,0,0,p_0)=\tfrac32B.
+\end{equation}
+Set $r=\mu\sigma z$ and $v=\mu d/z^2$.  Define
+\begin{align}
+ V&=z^3+dzH+\mu\sigma^2z^5L_0
+                    +\tfrac34\mu^2\sigma z^4,\notag\\
+ Y&=z^2+\mu^2\sigma V.                  \label{corner:VY}
+\end{align}
+These are jointly smooth for positive $z$ in a compact interval,
+including signed auxiliary $\mu,\sigma$, and satisfy
+$Q-q=\mu^4\sigma^3V$, $Q=\mu^2\sigma^2Y$ for positive scales.
+The closing expansion gives
+\begin{equation}\label{corner:exact-residual}
+ \mathcal F_{\mu,\sigma}
+ =\alpha+V-Y+c(\lambda)\sigma Y^2
+       +\mu^2\sigma^3Y^3S(\mu^2\sigma^2Y,\lambda).
+\end{equation}
+At $\mu=0$, all four controls in
+\eqref{corner:weights} vanish, for every small $\sigma$.
+Because $\xi$ is fixed, $c=-C$ and $H=3B/2$ there.  The restriction of
+\eqref{corner:exact-residual} to $\mu=0$ is therefore exactly
+$\alpha-z^2+z^3+(3B/2)dz-C\sigma z^4$.
+Taylor integral division in $\mu$ proves \eqref{corner:joint-limit}
+and the mixed bounds.
+\end{proof}
+
+For a dependent family whose original parameters tend to the reference,
+if $\mu_n,\sigma_n\to0^+$ and $(\alpha_n,d_n)$ stay bounded, the same
+identity gives, on every compact positive $z$ interval,
+\begin{equation}\label{corner:sequence-limit}
+ \frac{D_n(\mu_n^2\sigma_n^2z^2)}
+           {\mu_n^4\sigma_n^3}
+ -\{\alpha_n-z^2+z^3+\tfrac32Bd_nz\}\longrightarrow0
+\end{equation}
+in every prescribed finite state derivative.  Indeed
+\eqref{corner:exact-Q-division} and \eqref{corner:exact-residual} still
+hold along the sequence, with its original remaining parameters retained.
+Their profiles converge to their reference values, and all their
+$z$ derivatives are controlled by the same smooth root expressions.
+
+\subsection{Charts for the remaining roots}
+
+The following charts supply the remaining roots both in the secondary
+interior and in the positive-offset configurations of
+Section~\ref{sup:positive}.
+
+\begin{lemma}[Charts for the remaining roots]
+\label{corner:realization-charts}
+In the standard unfolding, for bounded $\alpha,d$ with $d>0$, the following
+limits hold in $C^1$ on the indicated compact
+state intervals as $\mu,\sigma\to0^+$ independently:
+\begin{align}
+ \frac{D(\mu^2\sigma^2x)}{\mu^4\sigma^3}
+     &\longrightarrow\alpha-x,
+       &&x\Subset(-\infty,0),                         \label{corner:negative-small-chart}\\
+ \frac{D(-hX/C)}{h^2/C}
+     &\longrightarrow X-X^2,
+       &&X\Subset(0,\infty),                          \label{corner:negative-large-chart}\\
+ \frac{D(\mu^2X)}{\mu^4}
+     &\longrightarrow X^{3/2}-CX^2,
+       &&X\Subset(0,\infty).                          \label{corner:positive-large-chart}
+\end{align}
+Convergence is uniform when the rescaled parameters range over a compact
+set.
+\end{lemma}
+
+\begin{proof}
+For $q<0$ both passages are exactly inactive because $\delta>0$.
+Thus \eqref{sup:closing} gives
+$D(q)=a+bq+c(\lambda)q^2+q^3S(q,\lambda)$.
+Substituting $q=\mu^2\sigma^2x$ and $q=-hX/C$, using
+\eqref{corner:weights}, $h=\mu^2\sigma$ and $c(\lambda)\to-C$,
+proves \eqref{corner:negative-small-chart} and
+\eqref{corner:negative-large-chart}.
+
+For the positive outer chart set $r=\mu\sqrt X$ and
+$v=\mu\sigma^2d/X$ in the root division
+\eqref{corner:exact-Q-division}. Here $v\to0$ uniformly on the prescribed
+positive compact intervals, so both passages are active in this chart. The division gives
+$(Q-q)/\mu^4\to X^{3/2}$ and $Q/\mu^2\to X$ in $C^1$.
+In \eqref{sup:closing}, $a/\mu^4=\sigma^3\alpha$,
+$b/\mu^2=-\sigma$, $c(\lambda)\to-C$, and the cubic closing remainder
+divided by $\mu^4$ tends to zero. This proves
+\eqref{corner:positive-large-chart}. Smooth profiles give the stated
+$C^1$ uniformity on compact sets of states and rescaled parameters as
+$\mu,\sigma\to0^+$ independently.
+\end{proof}
+
+\subsection{Critical points and the limiting cubic}
+
+For the necessary limits we again allow dependent controls.
+For $d\ge0$, write $T_3=3Bd/2$ and
+\[ F_{\alpha,d}(z)=z^3-z^2+T_3 z+\alpha. \]
+
+Necessity requires control at the left endpoint of the positive root
+chart. We first place the third and fourth extrema on the secondary
+scale. For a positive limit of $d$, separated passage slopes exclude
+the threshold layer; when $d\to0$, the third maximum supplies the missing
+value estimate.
+
+\begin{lemma}[Limiting critical points]
+\label{corner:limiting-critical-states}
+Let a sequence in an admissible family tend to its reference,
+with six distinct fixed points, $\mu=m\to0^+$ and
+$\sigma=-b/m^2\to0^+$. Pass to a subsequence on which the bounded
+normalized parameters satisfy $(\alpha,d)\to(\alpha_0,d_0)$.
+If $d_0>0$, the third and fourth displacement extrema satisfy
+\[
+ \frac{\sqrt{t_3}}{\mu\sigma}\longrightarrow
+ z_-=\frac{1-\sqrt{1-3T_{3,0}}}3,\qquad
+ \frac{\sqrt{t_4}}{\mu\sigma}\longrightarrow
+ z_+=\frac{1+\sqrt{1-3T_{3,0}}}3,
+ \qquad T_{3,0}=\tfrac32Bd_0,
+\]
+where $0<T_{3,0}\leq1/3$.  Moreover,
+\begin{equation}\label{corner:critical-value-inequalities}
+ F_{\alpha_0,d_0}(z_-)\geq0,\qquad
+ F_{\alpha_0,d_0}(z_+)\leq0,\qquad \alpha_0\leq0.
+\end{equation}
+If $d_0=0$, then $\alpha_0=0$.
+\end{lemma}
+
+\begin{proof}
+Proposition~\ref{corner:secondary-bounds} gives
+\[
+ -K\leq\alpha\leq K\mu^2,\qquad 0<d\leq K.
+\]
+Write $\rho_1=\mu\sigma z_c$.  The same bounds control $z_c$.
+The graph and slope identities yield
+\begin{equation}\label{corner:normalized-curvature}
+ d=z_c^2\{H_\Delta+\sigma z_cB_\Delta\}
+       =\frac2Bz_c^2+o(1),\qquad
+ \frac{D_q(\zeta_1)}h=-1+z_cH_D+\sigma z_c^2B_D
+       =-1+3z_c+o(1).
+\end{equation}
+The strict negative slope gives $\limsup z_c\leq1/3$ and therefore
+$d_0\leq2/(9B)$.
+
+We already have $0<t_3<\zeta_1=O(\mu^2\sigma^2)$.
+To obtain the same bound for $t_4$, first note that
+\begin{equation}\label{corner:larger-curvature-radius}
+ \rho_2/\mu\longrightarrow\frac3{8C}.
+\end{equation}
+In fact $\rho_2=O(\mu)$ by the curvature graph, it is beyond the
+positive critical point $r_{\rm c}/\mu\to1/(4C)$ of the graph, and
+$\delta/\mu^3=\sigma^2d\to0$.  Dividing
+\eqref{corner:curvature-division} by $\mu^3$ shows that every limit
+$w$ of $\rho_2/\mu$ satisfies
+\[
+ 0=w^2\left(\frac2B-\frac{16C}{3B}w\right).
+\]
+The lower bound supplied by this critical point selects $w=3/(8C)$.
+Choose a fixed $Z$ larger than the bound for $z_c$ and large enough
+that $-1+3Z/2>0$.  By \eqref{corner:sequence-limit} and the chain rule in the state,
+\[
+ \frac{D_q(\mu^2\sigma^2Z^2)}h
+ =-1+\tfrac32Z+\frac{3Bd}{4Z}+o(1)>0.
+\]
+For small scales this state lies in $(\zeta_1,\zeta_2)$, by
+\eqref{corner:larger-curvature-radius}.  The derivative is strictly
+increasing on that interval, so its unique zero $t_4$ lies before
+the test state.  Thus both normalized critical states are bounded.
+
+Suppose now that $d_0>0$. We exclude a zero of $D_q$ at
+$q=\mu^2\sigma^2z^2$ with $z\to0$ where both passages are active.
+Put $y=\Gamma_1(q)-\delta\geq0$. Along this sequence the parameters
+and state lie in the common small domain, $A_1\ge B/2$, and $m,\delta>0$.
+Since
+\[
+ \frac{q^{3/2}}{\delta}=\frac{\sigma z^3}{d}\longrightarrow0,
+\]
+the estimate of~\cite[(\ref*{main-sat:threshold-slope-exclusion})]{main2026} applies and gives
+$D_q(q)\geq\kappa\delta/\sqrt q-K(h+q)$.
+With the exact substitutions
+\[
+ \frac{\delta}{\sqrt q\,h}=\frac dz,\qquad
+ \frac qh=\sigma z^2,
+\]
+we obtain, for a constant $c_*>0$,
+\begin{equation}\label{corner:event-layer-slope-exclusion}
+ \frac{D_q(q)}h\geq-K+c_*\frac dz-K\sigma z^2.
+\end{equation}
+The right side tends to $+\infty$, which contradicts a zero of $D_q$. The
+estimate also holds as $y\to0$, at the second threshold.
+
+The two normalized critical points now remain in a compact subset of
+$(0,\infty)$.  Their limits are zeros of
+$F'_{\alpha_0,d_0}=3z^2-2z+T_{3,0}$, by
+\eqref{corner:sequence-limit}.  Their order on either side of $z_c$,
+whose limit is $\sqrt{Bd_0/2}=\sqrt{T_{3,0}/3}$,
+selects $z_-,z_+$, respectively; at $T_{3,0}=1/3$ the two
+limits agree.  The signs $D(t_3)>0$, $D(t_4)<0$ give
+\eqref{corner:critical-value-inequalities}.  The upper offset bound
+already gives $\alpha_0\leq0$.
+
+If $d_0=0$, \eqref{corner:normalized-curvature} instead gives
+$z_c\to0$, so $z_M=\sqrt{t_3}/(\mu\sigma)\leq z_c\to0$.
+At this state \eqref{corner:global-comparison}, divided by
+$\mu^4\sigma^3$, gives the explicit bound
+\begin{align*}
+ \frac{|D(t_3)-a|}{\mu^4\sigma^3}\leq K\{&
+ z_M^2+z_M^3+\sigma z_M^4+\mu^2\sigma z_M^4
+       +\mu\sigma^2z_M^5\\
+ &+dz_M+\sqrt\mu\,d^{3/2}
+       +\mu^2\sigma^2d z_M^3\}.
+\end{align*}
+Every term tends to zero.  Positivity of $D(t_3)$ implies
+$\alpha_0\geq0$, and $\alpha\leq K\mu^2$ implies
+$\alpha_0\leq0$.  Therefore $\alpha_0=0$.
+\end{proof}
+
+\subsection{The complete corner domain}
+
+The limits of the critical points give necessity, while the joint quotient
+and the charts of Lemma~\ref{corner:realization-charts} give interior
+realization.
+The interior of $\mathcal C_B$ consists precisely of parameters for which
+$F_{\alpha,d}$ has three distinct positive roots.  Equivalently,
+\begin{equation}\label{corner:discriminant}
+ \mathcal C_B=
+ \left\{(\alpha,d):
+ \begin{array}{l}
+ \alpha\leq0,\quad d\geq0,\\
+ T_3^2-4T_3^3+4\alpha-18T_3\alpha-27\alpha^2\geq0
+ \end{array}\right\}.
+\end{equation}
+
+\begin{proposition}[Secondary corner domain]
+\label{corner:complete-cluster-set}
+\label{thm:saturation-geometry}
+\label{cor:saturation-domain-limit}
+In the fixed sign sector the following statements hold.
+\begin{enumerate}
+\item
+Let parameters in an admissible family tend to the reference.  Suppose each return has six distinct fixed points and
+\[
+ m\longrightarrow0^+,\qquad
+ \sigma=\frac{-b}{m^2}\longrightarrow0^+.
+\]
+Then the normalized parameters
+\begin{equation}\label{corner:normalized-observations}
+ \alpha=\frac{a}{m^4\sigma^3}
+        =\frac{am^2}{h^3},
+ \qquad
+ d=\frac{\delta}{m^3\sigma^2}
+   =\frac{m\delta}{h^2},\qquad h=-b,
+\end{equation}
+are bounded, and every cluster point belongs to $\mathcal C_B$.
+In particular
+\begin{equation}\label{corner:sharp-cluster-bounds}
+ \liminf\alpha\geq-\frac1{27},\qquad
+ \limsup\alpha\leq0,\qquad
+ 0\leq\liminf d\leq\limsup d\leq\frac2{9B}.
+\end{equation}
+If $a\geq0$ eventually, the last upper bound improves to
+\begin{equation}\label{corner:nonnegative-offset-bound}
+ \limsup d\leq\frac1{6B}.
+\end{equation}
+
+\item
+Assume~\cite[(\ref*{main-eq:rank})]{main2026} and use the standard
+unfolding. For every compact
+$\mathcal K\Subset\operatorname{int}\mathcal C_B$, there exist
+$\mu_0,\sigma_0>0$ such that, for every
+\[
+ 0<\mu<\mu_0,\qquad 0<\sigma<\sigma_0,\qquad
+ (\alpha,d)\in\mathcal K,
+\]
+the parameters \eqref{corner:weights} give exactly six simple fixed points
+in $I$.  If $r_1<r_2<r_3$ are the positive roots of
+$F_{\alpha,d}$, their states are, uniformly on $\mathcal K$,
+\begin{align}
+ q_{N,1}&=-\frac hC(1+o(1)),&
+ q_{N,2}&=\mu^2\sigma^2(\alpha+o(1)),\notag\\
+ q_{P,j}&=\mu^2\sigma^2(r_j^2+o(1)),\quad 1\leq j\leq3,&
+ q_{P,4}&=\frac{\mu^2}{C^2}(1+o(1)).
+                                      \label{corner:interior-roots}
+\end{align}
+Here $o(1)\to0$ as $\mu+\sigma\to0$, with the two positive scales
+independent.
+
+\item
+Every point of $\mathcal C_B$, including every boundary point, is
+the limit of normalized parameters along a sequence of returns with six
+fixed points in the standard unfolding.
+
+The unrestricted bounds in \eqref{corner:sharp-cluster-bounds} are sharp.
+At the top endpoint $d_0=2/(9B)$, necessarily
+$\alpha_0=-1/27$, and the limiting cubic is $(z-1/3)^3$.
+
+For the standard unfolding, $\mathscr S_{\mu,\sigma}$ has nonempty compact
+closure in one common rectangle for all sufficiently small independent
+positive $\mu,\sigma$, and
+\begin{equation}\label{eq:main-Hausdorff}
+ d_H(\overline{\mathscr S_{\mu,\sigma}},\mathcal C_B)\longrightarrow0
+ \quad(\mu+\sigma\to0).
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+Figure~\ref{fig:corner-limit-set} depicts $\mathcal C_B$.
+
+\begin{figure}[htbp]
+\centering
+\input{figures/corner-limit-set}
+\caption{The secondary corner of the principal-scale saturation domain, in coordinates \((\alpha,Bd)\).
+The shaded interior corresponds to three distinct positive roots of
+\(z^3-z^2+(3Bd/2)z+\alpha\). The solid boundary has a repeated root;
+the dashed segment has a zero root. The dot at
+\((-1/27,2/9)\) has three equal roots. The solid curve is
+\((\alpha,Bd)=(-t^2(1-2t),2(2t-3t^2)/3)\), \(0\le t\le1/2\).
+}
+\label{fig:corner-limit-set}
+\end{figure}
+
+\begin{proof}[Proof of Proposition~\ref{corner:complete-cluster-set}]
+Boundedness of $\alpha,d$ follows from
+Proposition~\ref{corner:secondary-bounds}, so consider any cluster point.
+For $d_0>0$, Lemma~\ref{corner:limiting-critical-states} gives
+a cubic with positive critical states $z_-\leq z_+$,
+nonnegative maximum, nonpositive minimum, and
+$F_{\alpha_0,d_0}(0)=\alpha_0\leq0$.  Hence it has three
+nonnegative real roots, counted with multiplicity.  This conclusion
+includes equality of critical values or $\alpha_0=0$ by continuity,
+or directly by the intermediate value theorem on the intervals
+$[0,z_-]$, $[z_-,z_+]$, and $[z_+,\infty)$.
+At $T_{3,0}=1/3$ the two critical states coincide; their two
+value inequalities force a triple root there.
+For $d_0=0$ the limiting polynomial is $z^2(z-1)$.
+In every case Vieta's identities give membership in $\mathcal C_B$.
+
+The discriminant of $z^3-z^2+T_3 z+\alpha$ is the expression
+in \eqref{corner:discriminant}.  Conversely, that discriminant and
+$\alpha\leq0$, $T_3\geq0$ give three real roots with sum one,
+nonnegative product, and nonnegative pair sum.  If a root were
+negative, the product condition would allow us to write the two
+nonpositive roots as $-u,-v$, with $u>0$, $v\geq0$, and the third
+as $1+u+v$.  Their pair sum would be
+$-u^2-uv-v^2-u-v<0$, a contradiction.  This proves
+\eqref{corner:discriminant}.  Strict positivity and distinctness
+characterize the interior; a zero root or a repeated root is on its
+boundary.
+
+For nonnegative $r_i$ with sum one,
+$r_1r_2r_3\leq1/27$ and
+$r_1r_2+r_1r_3+r_2r_3\leq1/3$.
+These inequalities prove \eqref{corner:sharp-cluster-bounds}.
+Equality in the second requires $r_1=r_2=r_3=1/3$ and gives the
+stated top endpoint.  If $a\geq0$ eventually, every cluster point
+has $\alpha_0=0$.  Its polynomial is
+$z(z^2-z+T_{3,0})$, whose two remaining roots are real and
+nonnegative only if $T_{3,0}\leq1/4$.  This proves
+\eqref{corner:nonnegative-offset-bound}.
+
+For the interior converse, fix a compact
+$\mathcal K\Subset\operatorname{int}\mathcal C_B$. The ordered positive
+roots $r_j$ have uniform positive lower bounds, pairwise
+separation, and nonzero derivative margins.  Lemma
+\ref{corner:joint-quotient} transfers them to three simple roots on
+disjoint positive $z$-intervals for every independently small positive
+$\mu,\sigma$, uniformly on $\mathcal K$. The other three roots follow from the
+charts of Lemma~\ref{corner:realization-charts}.  The first chart has its
+negative root at $x=\alpha$, the second at $X=1$, and the third at
+$X=1/C^2$, all with strict uniform derivative margins.
+The negative secondary root and the three positive secondary roots
+have size $\mu^2\sigma^2$, whereas the outer negative root has size
+$\mu^2\sigma$ and the outer positive root size $\mu^2$. The six isolating
+intervals are therefore disjoint for small $\sigma$.
+All their states belong to $I$ for small scales.
+
+The standard unfolding realizes \eqref{corner:weights} on one product
+$(0,\mu_0)\times(0,\sigma_0)$ for $\mathcal K$,
+and~\cite[Proposition~\ref*{main-prop:common-count}]{main2026} makes the six
+simple roots exhaustive; the same charts give \eqref{corner:interior-roots}.
+
+For any boundary point, convexly perturb its ordered root triple toward
+$(1/6,1/3,1/2)$ to obtain interior parameters $(\alpha_j,d_j)$ tending
+to it. For the $j$th interior parameter choose
+positive $\mu_j,\sigma_j<1/j$ below the two existence thresholds
+just proved.  The corresponding return map has six simple roots,
+and its normalized parameters are exactly $(\alpha_j,d_j)$.
+This proves the diagonal assertion and, together with necessity,
+identifies the full cluster set as $\mathcal C_B$.
+It also proves sharpness of the unrestricted cluster bounds.
+
+\end{proof}
+
+\subsection{Hausdorff convergence}
+
+To obtain convergence of the full domains, we first place the normalized
+parameters of all six-cycle returns in one common rectangle.
+For the standard unfolding and the $\mathcal V,I$ of
+Definition~\ref{def:actual-secondary-domain},
+Proposition~\ref{corner:secondary-bounds} bounds the full local domain by
+$-K\le\alpha\le K\mu^2$ and $0<d\le K$. Choose
+$\mathcal B=[-M,M]^2$, $M>K$, containing $\mathcal C_B$ in its interior.
+The weighted parameters~\eqref{corner:weights} tend uniformly
+to zero on this rectangle for independently small positive scales. Thus
+$\Lambda\circ w_{\mu,\sigma}$ is defined throughout $\mathcal B$ after
+one common reduction, and
+$\mathscr S_{\mu,\sigma}\subset\operatorname{int}\mathcal B$.
+The rectangle therefore contains the normalized parameters of every six-cycle
+return in $\mathcal V$, including those with positive offset.
+
+\begin{proof}[Completion of Proposition~\ref{thm:saturation-geometry}]
+We apply the compactness and finite-net argument that completes the proof
+of~\cite[Theorem~\ref*{main-thm:main-saturation-summary}]{main2026} in
+\cite[Section~\ref*{main-subsec:four-root-limit}]{main2026}. The common rectangle above makes
+every closure compact. An interior singleton of $\mathcal C_B$ is realized
+by part~2 of
+Proposition~\ref{corner:complete-cluster-set} for every sufficiently small
+independent scale pair, so these closures are nonempty.
+
+For the upper inclusion, the weighted parameters tend uniformly to the fixed
+reference on $\mathcal B$, so part~1 applies along arbitrary sequences
+$\mu_n,\sigma_n\to0^+$. For the lower inclusion, the root perturbation
+above gives interior density. Every finite interior net is compact, so
+part~2 realizes it in the standard unfolding on one product of positive
+scale intervals, with no relation between the scales. These are the
+two-scale inputs to the cited argument, which gives both Hausdorff inclusions.
+\end{proof}

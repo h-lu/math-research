@@ -14,15 +14,24 @@
     "evidence": null
   },
   "validation": {
-    "analytic_proof": "author manuscript",
-    "computational": "none recorded",
-    "formal_verification": "none recorded"
+    "scope": "Describe the exact checks and their limitations.",
+    "formal_verification": false
   },
   "artifacts": [
     {
       "path": "paper.pdf",
       "role": "author-manuscript",
-      "sha256": "REPLACE"
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "path": "source/README.md",
+      "role": "author-source",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "path": "source/main.tex",
+      "role": "author-source",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   ]
 }

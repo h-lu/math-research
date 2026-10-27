@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "slug": "cancelling-double-grazing",
+  "title": "Cyclicity Six and Saturation Geometry at Cancelling Double Grazing",
+  "authors": [
+    "Haibo Lu"
+  ],
+  "version": "2026-10-27",
+  "abstract": "Sharp cyclicity six and saturation geometry for a semistable cycle with two cancelling quadratic grazings; secondary saturation and cusp geometry in the mathematical supplement.",
+  "topics": [
+    "piecewise smooth systems",
+    "grazing bifurcations",
+    "limit cycles"
+  ],
+  "doi": null,
+  "rights": {
+    "license": null,
+    "note": "Manuscripts and other content: copyright 2026 Haibo Lu, all rights reserved unless individually stated. Certification code retains its MIT license."
+  },
+  "validation": {
+    "scope": "Main and supplement rebuilt; source changes limited to non-mathematical edition text. Frozen symbolic inputs, programs and expected outputs retained; interval certificates not rerun in this packaging pass.",
+    "formal_verification": false
+  },
+  "artifacts": [
+    {
+      "path": "paper.pdf",
+      "role": "author-manuscript",
+      "sha256": "4817006e4a9704e154aa81a749b35e4cef6f385246a4e1816f44cbd7abc574e9"
+    },
+    {
+      "path": "repro/interval/LICENSE.txt",
+      "role": "reproducibility",
+      "sha256": "6a7e61073c285cc07f9d4295ea31e069114940ff02162716fbb109816ceb651a"
+    },
+    {
+      "path": "repro/interval/README.md",
+      "role": "reproducibility",
+      "sha256": "69c4a87f2f2f4a102f311ca00ead6a29091df13c2dff7b5d45de0fb7b290dc66"
+    },
+    {
+      "path": "repro/interval/candidate.json",
+      "role": "reproducibility",
+      "sha256": "ffcb3b9d5d76264e8693ed583f5e033e52e3685d8c04926f39859b641c19b2d3"
+    },
+    {
+      "path": "repro/interval/certify_candidate.py",
+      "role": "reproducibility",
+      "sha256": "d8df4246b2d973bfd8befd103062190d98ede1af7be208149b639f2143957b53"
+    },
+    {
+      "path": "repro/interval/certify_secondary.py",
+      "role": "reproducibility",
+      "sha256": "971666ccf127332801fbeb06fbeed576179a73c3b7b250f13db87fa43b67b573"
+    },
+    {
+      "path": "repro/interval/interval-certificate.json",
+      "role": "reproducibility",
+      "sha256": "6a6d53143f5b8f450465584303cded5a080aa0608e24403b02831382c5891e4c"
+    },
+    {
+      "path": "repro/interval/requirements.txt",
+      "role": "reproducibility",
+      "sha256": "5be9a86f986a8cb7e861e2e6d3cf6186a09092f4b85e3965a564d858d2a49c75"
+    },
+    {
+      "path": "repro/interval/secondary-candidate.json",
+      "role": "reproducibility",
+      "sha256": "c296e85d562b9f541c0ce415be1c2f18e4573a7a4f180464ce41bbfd11affbf6"
+    },
+    {
+      "path": "repro/interval/secondary-interval-certificate.json",
+      "role": "reproducibility",
+      "sha256": "49857c14c4a96024b58db7e4acdbf073f428b5102aa71227878721a48d0153b8"
+    },
+    {
+      "path": "repro/interval/validated_return.py",
+      "role": "reproducibility",
+      "sha256": "76dcfa04ffbd690e115bdd38a590a43a48366f34faa20c7cdaaf039d421cca91"
+    },
+    {
+      "path": "repro/symbolic/README.md",
+      "role": "reproducibility",
+      "sha256": "9f0e3427565c598284edad16fc4c9c82b90fcef396eebe2e26e1416ba57d84d9"
+    },
+    {
+      "path": "repro/symbolic/inputs/MANIFEST.json",
+      "role": "reproducibility",
+      "sha256": "170e0d8f068e67e1f241c1b769195345c2bfbcd79b97677fb92ccb0e5b94656f"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/figures/quartic-local-diagram.tex",
+      "role": "reproducibility",
+      "sha256": "7d7b2fd097181cd37a328bb36e07484896c52728c9f8f0273974f9363d1f74d7"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/scripts/FOCUS-README.md",
+      "role": "reproducibility",
+      "sha256": "17d5e0b46a4e142cba09f46d92cef885c5a345340bdcb672810fc9e28704004c"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/scripts/check-focus.py",
+      "role": "reproducibility",
+      "sha256": "4f0ed75e8df8777c41070e7e3286337542f705f75e4110486d0b3434750851da"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/scripts/check-local-diagrams.py",
+      "role": "reproducibility",
+      "sha256": "053d03b09431fbca135bf9cd45562c1ad41c0846c8935c8d35da854e440f2fa6"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/scripts/focus-expected.txt",
+      "role": "reproducibility",
+      "sha256": "f0a65d3816f1c218eebe9e8fbe6142d3db6879c1ea1f8002d683d2bd722e35ab"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/scripts/local-diagrams-expected.json",
+      "role": "reproducibility",
+      "sha256": "b7f56219efda7d07e0e56bce4fd05a8f0173a8628b83c399cc047cb14a3d1580"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/sections/02-actual-returns.tex",
+      "role": "reproducibility",
+      "sha256": "828cba6d3a547a2ccaa7efe7c7ec59c8215ac594219669799e3913a40188e556"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/sections/03-sharp-cyclicity.tex",
+      "role": "reproducibility",
+      "sha256": "2cabfdc6c56df854cd6ed453f82533935f9dfbe04b305bd6138a2b5faa2eb76f"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/sections/04-saturation-necessity.tex",
+      "role": "reproducibility",
+      "sha256": "bcce62e5d19a36f130bb4df1f69ebf31dc67c8e5da09905b0535426b2fdd2ecb"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/sections/06-actual-bifurcations.tex",
+      "role": "reproducibility",
+      "sha256": "719f4b95ffcd9233b5c5649c4d12f2df09e06d25bf3bf9045f97ae8c8e27ee04"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/sections/08-realization.tex",
+      "role": "reproducibility",
+      "sha256": "028671abd70828499ad0657e32dfd0d145c354baffc4d38972ed0d98e8f7defc"
+    },
+    {
+      "path": "repro/symbolic/inputs/original-source/sections/09-focus-appendix.tex",
+      "role": "reproducibility",
+      "sha256": "37c027542b087428639e2b2c9958aba3e86a04de6982fe61fe326ca1892fabf0"
+    },
+    {
+      "path": "repro/symbolic/outputs/focus-complex.json",
+      "role": "reproducibility",
+      "sha256": "0d25d27d94c74cca4c82530aa00baa8b6cfa20582f50b2876c99ee4dc53edd00"
+    },
+    {
+      "path": "repro/symbolic/outputs/harvesting-diagnostic.json",
+      "role": "reproducibility",
+      "sha256": "85da60a5b48706850e16a1193faf745c660c14d9dd4c7a114947dbace6b0487e"
+    },
+    {
+      "path": "repro/symbolic/outputs/harvesting-orbit.csv",
+      "role": "reproducibility",
+      "sha256": "4b9b1457a9ae9b1f5c67b9c2d8617841f5660b0c66b9abf65a7c00d1564128ca"
+    },
+    {
+      "path": "repro/symbolic/outputs/passage-rank.json",
+      "role": "reproducibility",
+      "sha256": "a1f827dfe567309278ecc6a73bd24748a69340942ed3d5f95bcd403b95b9b19f"
+    },
+    {
+      "path": "repro/symbolic/outputs/quartic-curvature.json",
+      "role": "reproducibility",
+      "sha256": "a526f2bdc07764b147206b03d3117a81834cc4afc756f7f5fe357d40fa5858bc"
+    },
+    {
+      "path": "repro/symbolic/requirements.txt",
+      "role": "reproducibility",
+      "sha256": "a8afef43c04cc294ebde4a6ffcac827c8c0318be194f26cf805011ecd9b6db27"
+    },
+    {
+      "path": "repro/symbolic/scripts/check_original.py",
+      "role": "reproducibility",
+      "sha256": "7790b946b4c7a9ef1e17995076334be56898ec5585e2f9ac7bb8be208cbd9ec7"
+    },
+    {
+      "path": "repro/symbolic/scripts/check_passage_rank.py",
+      "role": "reproducibility",
+      "sha256": "298d1816b60e595f98841ecab57e3a3ff7f3906574d37368dce6a434ae14efda"
+    },
+    {
+      "path": "repro/symbolic/scripts/check_quartic_curvature.py",
+      "role": "reproducibility",
+      "sha256": "ba7f88485b7229e2b709442325f583688c7ab912af6c9a5e92d0f90c1b1685e9"
+    },
+    {
+      "path": "repro/symbolic/scripts/diagnose_harvesting.py",
+      "role": "reproducibility",
+      "sha256": "c80c1dccfea95670fa84bf1cc668ea602df59d14a09570a3142dea0a9382f9bc"
+    },
+    {
+      "path": "repro/symbolic/scripts/focus_complex_normal_form.py",
+      "role": "reproducibility",
+      "sha256": "f8aff8495cae6a2dbe2cb82048532c192bdfafce4ab811a580ebc97aef05a307"
+    },
+    {
+      "path": "source/README.md",
+      "role": "author-source",
+      "sha256": "a415c5f4a58a404b31073751963766ea80f3364e3c913d93b79fec0c3f0a5962"
+    },
+    {
+      "path": "source/build.sh",
+      "role": "author-source",
+      "sha256": "a40ab8460352204162378aeb7c9e98fb141982343cf932700295bd5aa522f0e3"
+    },
+    {
+      "path": "source/figures/actual-return-geometry.tex",
+      "role": "author-source",
+      "sha256": "9cf6ea45031c185eb0e99a67adb8ca8e040d9004789970f7ecd89b56a79cc075"
+    },
+    {
+      "path": "source/figures/curvature-graph.tex",
+      "role": "author-source",
+      "sha256": "983aee954ab740846a6c70fbfb0adda09c8f66686f07b7511197c2cf9319d055"
+    },
+    {
+      "path": "source/figures/harvesting-orbit.pdf",
+      "role": "author-source",
+      "sha256": "d764c6d4affa275856b7a309a6346f9543b813e82bd3f63f5c2646515fce8c7b"
+    },
+    {
+      "path": "source/figures/main-saturation-sections.pdf",
+      "role": "author-source",
+      "sha256": "fc0b271f0999259ff959f2d536b1d10ee077dac175a97d9ea98be8c9d979f125"
+    },
+    {
+      "path": "source/figures/quartic-local-diagram.tex",
+      "role": "author-source",
+      "sha256": "e9f20b896bcfa825e10c6b986ca93c7f93a30a570abc5f70d3985a42affaf3e0"
+    },
+    {
+      "path": "source/main.tex",
+      "role": "author-source",
+      "sha256": "1ed5d66247513e422c75de9056b67b3a0c07e87f2779fa628cf032b708284ca4"
+    },
+    {
+      "path": "source/scripts/FOCUS-README.md",
+      "role": "author-source",
+      "sha256": "17d5e0b46a4e142cba09f46d92cef885c5a345340bdcb672810fc9e28704004c"
+    },
+    {
+      "path": "source/scripts/check-focus.py",
+      "role": "author-source",
+      "sha256": "4f0ed75e8df8777c41070e7e3286337542f705f75e4110486d0b3434750851da"
+    },
+    {
+      "path": "source/scripts/check-local-diagrams.py",
+      "role": "author-source",
+      "sha256": "053d03b09431fbca135bf9cd45562c1ad41c0846c8935c8d35da854e440f2fa6"
+    },
+    {
+      "path": "source/scripts/focus-actual.txt",
+      "role": "author-source",
+      "sha256": "f0a65d3816f1c218eebe9e8fbe6142d3db6879c1ea1f8002d683d2bd722e35ab"
+    },
+    {
+      "path": "source/scripts/focus-expected.txt",
+      "role": "author-source",
+      "sha256": "f0a65d3816f1c218eebe9e8fbe6142d3db6879c1ea1f8002d683d2bd722e35ab"
+    },
+    {
+      "path": "source/scripts/local-diagrams-actual.json",
+      "role": "author-source",
+      "sha256": "b7f56219efda7d07e0e56bce4fd05a8f0173a8628b83c399cc047cb14a3d1580"
+    },
+    {
+      "path": "source/scripts/local-diagrams-expected.json",
+      "role": "author-source",
+      "sha256": "b7f56219efda7d07e0e56bce4fd05a8f0173a8628b83c399cc047cb14a3d1580"
+    },
+    {
+      "path": "source/sections/01-introduction.tex",
+      "role": "author-source",
+      "sha256": "aba02ed2303d66c549681c05f0e21b78fd86997654e39009c76861d4738572a3"
+    },
+    {
+      "path": "source/sections/02-actual-returns.tex",
+      "role": "author-source",
+      "sha256": "79755ffd085fd65b6dd0d7420281029b913616d72d12d0c95f83b22d11dccf44"
+    },
+    {
+      "path": "source/sections/03-sharp-cyclicity.tex",
+      "role": "author-source",
+      "sha256": "9a32b4e05f6137761e6b03225f17e9423cb99f1660d9c7608504ef1e174aa6b7"
+    },
+    {
+      "path": "source/sections/04-saturation-necessity.tex",
+      "role": "author-source",
+      "sha256": "e0bab93c007d4b7246faae1b4872525913df4da4717d15e92202bd7f8966206d"
+    },
+    {
+      "path": "source/sections/06-actual-bifurcations.tex",
+      "role": "author-source",
+      "sha256": "2851a6700d10a045232ab19e69bc39b0e7a50bec41c5f4927b5d31b0fe347005"
+    },
+    {
+      "path": "source/sections/08-realization.tex",
+      "role": "author-source",
+      "sha256": "f43fddec2af09b5bc9ec0ac32c6aadc427d6184f2e40a7ffb87cc5c580e2d225"
+    },
+    {
+      "path": "source/sections/09-focus-appendix.tex",
+      "role": "author-source",
+      "sha256": "2cc3d11745452b5195928eddfc29b056f8a49310a2fe1cc093cc7e034eac1355"
+    },
+    {
+      "path": "source/sections/10-declarations.tex",
+      "role": "author-source",
+      "sha256": "be6c79f17dbad4e1ba20e8db701328b0a5239c12db2f37816ff086f3418ad650"
+    },
+    {
+      "path": "source/sections/12-references.tex",
+      "role": "author-source",
+      "sha256": "962e16133f1185c1b6bf0991fe725c3ff64d4d7b202f68a574de9c59f2aeb7b2"
+    },
+    {
+      "path": "supplement/paper.pdf",
+      "role": "mathematical-supplement",
+      "sha256": "5bc564bc91fa899e8747080e52fe44d830e724daf77ced738a91fd341857919c"
+    },
+    {
+      "path": "supplement/source/README.md",
+      "role": "author-source",
+      "sha256": "bdaf890f25464e614abff9183959c9d239fcc5567187d3baa88cf8c68715e760"
+    },
+    {
+      "path": "supplement/source/build.sh",
+      "role": "author-source",
+      "sha256": "a40ab8460352204162378aeb7c9e98fb141982343cf932700295bd5aa522f0e3"
+    },
+    {
+      "path": "supplement/source/figures/corner-limit-set.tex",
+      "role": "author-source",
+      "sha256": "f5906f1177679d2d754ddefa43419216ae59da0c12007b4f6215f20098cc8f7d"
+    },
+    {
+      "path": "supplement/source/figures/cusp-local-diagram.tex",
+      "role": "author-source",
+      "sha256": "7158ae54d515a1b26c8fda74381a75736883eb23e38f6ba84bff4cde46a82cca"
+    },
+    {
+      "path": "supplement/source/main-reference-labels.aux",
+      "role": "author-source",
+      "sha256": "26e62874e46a22f88615ed6065cf2f5728ea92bbdc4a0bd4783306c078f1a44c"
+    },
+    {
+      "path": "supplement/source/main.tex",
+      "role": "author-source",
+      "sha256": "e703d089d0840135ccec70ea16a089695e2ba4bfb1376d2b6000f440a4c56390"
+    },
+    {
+      "path": "supplement/source/scripts/check-secondary.py",
+      "role": "author-source",
+      "sha256": "d360f0c80272c928347ecc48a0ed32af7ac95527dba7816617de15cd43976e5f"
+    },
+    {
+      "path": "supplement/source/scripts/secondary-actual.json",
+      "role": "author-source",
+      "sha256": "093a85d96daf8f077103205f9f3156bf35c1f0fcda7cb1d2c388161268aaced3"
+    },
+    {
+      "path": "supplement/source/scripts/secondary-expected.json",
+      "role": "author-source",
+      "sha256": "093a85d96daf8f077103205f9f3156bf35c1f0fcda7cb1d2c388161268aaced3"
+    },
+    {
+      "path": "supplement/source/sections/01-introduction.tex",
+      "role": "author-source",
+      "sha256": "4d79ae15f158ed99e94295b9495ca73c06f55112bc35fe963d378880efce655a"
+    },
+    {
+      "path": "supplement/source/sections/02-setting.tex",
+      "role": "author-source",
+      "sha256": "152f12f8f7bf678bd41606fc194ae9c6bf45de02649927b0644b9be37fb77733"
+    },
+    {
+      "path": "supplement/source/sections/03-secondary-domain.tex",
+      "role": "author-source",
+      "sha256": "22ee928a32b3937ee186e1b747edccb5102d1ef2492b021fcb3a1bad33545fc1"
+    },
+    {
+      "path": "supplement/source/sections/04-positive-displacement.tex",
+      "role": "author-source",
+      "sha256": "ff7fe1ae6689183815c2f3365dc1302eecf2a069188b679779253079299dd9cf"
+    },
+    {
+      "path": "supplement/source/sections/05-secondary-cusp.tex",
+      "role": "author-source",
+      "sha256": "89edac038725ff9db06706b219d076c2de37bdfae903f6833d0fe22e281efbe1"
+    },
+    {
+      "path": "supplement/source/sections/06-declarations.tex",
+      "role": "author-source",
+      "sha256": "94e212231c9d3afe7d65ae82de4fed677c17fd8880dba632572a1357fcf43994"
+    },
+    {
+      "path": "supplement/source/sections/07-references.tex",
+      "role": "author-source",
+      "sha256": "0584d02a4fa2b29d57fb9b4d65dc42a1c208676c7bacd78274d1e7bd3489f57a"
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+\section{The main-scale saturation domain}\label{sec:main-saturation}
+\label{sat:section}
+
+Six zeros force one derivative crossing before the events, one between
+them and three after them. Their alternating values constrain the controls
+and states. We work in each fixed permitted family, without a rank
+assumption and with common reductions independent of relative rates.
+First record the tail estimate that will complete weighted confinement.
+
+\begin{lemma}[A tail bound from weighted controls]\label{mainloc:tail}
+For every fixed $K_0>0$, there are common constants $M,m_0>0$ such
+that, whenever $0<|m|<m_0$ and
+\[
+ |a|\le K_0m^4,\qquad |b|\le K_0m^2,\qquad
+ |\delta|\le K_0|m|^3,
+\]
+every zero of the actual displacement in the common physical interval
+$I$ satisfies $|q|<Mm^2$. On the two complementary tails, $D$ has
+the sign of $c$. No observation-rank or root-count hypothesis is needed.
+\end{lemma}
+
+\begin{proof}
+Write $v=Q-q$. For $q\ge Mm^2$, reduce $m_0$ so that
+$|\delta|/q\le K_0|m|/M\le1$. Equation~\eqref{eq:quartic-global-value}
+gives
+\[
+ \frac{|v|}{q^2}\le K\{M^{-1/2}+M^{-3/2}+m^2+\sqrt{q_0}
+                                      +m^2M^{-1/2}\}.
+\]
+In particular, the mismatch and separation terms use respectively
+$|m|/\sqrt q\le M^{-1/2}$ and
+$|\delta|\sqrt{q+|\delta|}/q^2\le KM^{-3/2}$.
+For small $q_0$, this also gives $|v|/q<1/2$. The exact closing
+expansion yields
+\[
+ D-cq^2=a+bq+(1+b)v+c(2qv+v^2)+Q^3S(Q,\lambda).
+\]
+Consequently
+\begin{equation}\label{sat:tail-estimate}
+ \frac{|D(q)-c(\lambda)q^2|}{q^2}
+ \le K\{M^{-2}+M^{-1}+M^{-1/2}+M^{-3/2}
+                              +\sqrt{q_0}+|m|\}.
+\end{equation}
+The first two terms bound $a/q^2$ and $b/q$; the remaining closing
+terms follow from $|Q|\le2q$ and the bound for $v$.
+For $q\le-Mm^2$, both passage inputs are negative once $m_0$ is
+small: $q<\min(0,\delta)$. Thus $Q=q$ exactly, and the same estimate
+follows directly from the closing expansion. Choose $M$ large, then
+$q_0$ small and $m_0$ small so that the right-hand side is less than
+half the common lower bound for $|c|$.
+
+These estimates can be made on a smaller inner interval without losing
+the original common $I$. At the reference, \eqref{eq:center-displacement}
+gives $D(0)=D'(0)=0$ and strict curvature of sign $c_0$ throughout
+the already reduced common interval. Hence $D$ has that sign at every
+nonzero reference state. A closed outer annulus has a nonzero value
+margin; joint continuity in the parameters preserves it after one common
+parameter reduction. The common domains are chosen to contain
+$\overline I$, so this argument covers the whole original interval.
+All choices precede the choice of a control path.
+\end{proof}
+
+\begin{lemma}[Saturation of the curvature count]
+\label{sat:saturation}\label{corner:saturated-geometry}
+\label{cor:six-necessary-window}
+If the actual displacement has six distinct zeros in the common interval,
+then
+\[
+ mc_0(p)<0,\qquad \delta A(p)c_0(p)<0,\qquad
+ 0<\delta/\delta_{\rm c}(m,p)<1.
+\]
+In particular $0<|\delta|<|\delta_{\rm c}|\le K|m|^3$ uniformly.
+Put $s=-\sgn c_0$, $E=sD$, and denote the events by $e_1<e_2$.
+There are two simple outer curvature zeros $\zeta_1<\zeta_2$, and
+\begin{equation}\label{sat:curvature-signs}
+ \begin{array}{c|ccccc}
+ q&(-q_0,e_1)&(e_1,e_2)&(e_2,\zeta_1)&
+       (\zeta_1,\zeta_2)&(\zeta_2,q_0)\\ \hline
+ \sgn E''&-&+&-&+&-
+ \end{array}
+\end{equation}
+The continuous $E'$ has exactly one zero in each open interval, none
+at its shared junctions, and
+\begin{equation}\label{sat:junction-slopes}
+ E'(e_1)<0,\quad E'(e_2)>0,\quad
+ E'(\zeta_1)<0,\quad E'(\zeta_2)>0.
+\end{equation}
+All six zeros are simple $C^1$ zeros, including any at a threshold.
+The extremal values have signs $+,-,+,-,+$; the first is an inactive
+positive maximum and the second a negative minimum between the events.
+The window is necessary, not a sufficient chamber. On
+$\delta=\delta_{\rm c}$, $mc_0<0$, the distinct-point bound is four.
+\end{lemma}
+
+\begin{proof}
+The four-point slices exclude $m=0$ and $\delta=0$.
+The event signs~\eqref{eq:event-signs} give
+$s_E=1+\mathbf1_{\{\delta Ac_0<0\}}$ threshold curvature changes;
+there are at most $s_O=2$ outer changes. Joining same-sign pieces
+through isolated zeros and events gives at most $s_E+s_O+1\le5$
+strict monotonicity blocks for the continuous $D'$. Each block,
+with its finite endpoints, contains at most one zero. Six zeros of
+$D$ give five distinct derivative zeros in their open gaps by $C^1$
+Rolle, so $s_E=s_O=2$. Proposition~\ref{prop:cubic-curvature-window}
+gives the stated window and cubic bound. The event signs and outer
+factorization~\eqref{eq:curvature-factor} give~\eqref{sat:curvature-signs}.
+
+Retain every shared finite junction in both adjacent blocks of $E'$.
+A derivative zero there would occupy both blocks, leaving room for at
+most four distinct derivative zeros. Hence all five lie in the five
+respective interiors, and strict monotonicity gives
+\eqref{sat:junction-slopes}. A stationary fixed point would supply a
+sixth derivative zero distinct from the five open-gap zeros. Thus none
+occurs, including at an event, without assigning it a smooth multiplicity.
+The extrema interlace the six roots, giving all five strict value signs.
+At $\delta=\delta_{\rm c}$ the single double outer curvature zero does
+not change sign, leaving at most three blocks and four distinct fixed
+points. Truncating at the ends of the common interval removes blocks
+but cannot add them.
+\end{proof}
+
+\begin{proposition}[Weighted confinement]
+\label{sat:weighted-confinement}
+For every fixed family satisfying the hypotheses of
+Theorem~\ref{thm:six-main}, there are a further common reduction of
+the actual return interval and parameter neighbourhood and a constant
+\(K>0\) with the following property. If a member has six distinct
+fixed points \(q_1,\ldots,q_6\), then
+\begin{equation}\label{sat:weighted-bounds}
+ 0<|\delta|\le K|m|^3,\qquad
+ |b|\le K|m|^2,\qquad |a|\le K|m|^4,\qquad
+ \max_j|q_j|\le K|m|^2.
+\end{equation}
+The interval, parameter bounds and constant are independent of the
+relative rates of the observations. No rank condition on those
+observations is required. In the rank-free recognition formulation,
+the same bounds hold with the canonical observed strength
+\(\widehat m=C_{1,1}(\lambda)+C_{1,2}(\lambda)\) in place of
+the independent chart variable \(m\).
+\end{proposition}
+
+\begin{proof}
+Use Lemma~\ref{lem:auxiliary-controls} when strength and separation
+are dependent observations, and restrict back to the original family
+at \(m=\widehat m\) at the end. All estimates concern smooth root profiles on common
+compact reductions. The regular jets \(a,b\) are always the exact
+observations \eqref{eq:regular-jets}.
+
+Lemma~\ref{cor:six-necessary-window} already gives the first
+bound in \eqref{sat:weighted-bounds}. At a curvature zero write
+\(q=r^2\). The exact division \eqref{eq:V-division} gives
+\begin{equation}\label{sat:curvature-state}
+ \delta=r^2\{mH(r,m,p)+rB(r,p)\}.
+\end{equation}
+Here \(H\) has sign \(A\), and \(B\) has sign \(c_0/A\),
+with uniform nonzero margins. In the sector forced by six zeros,
+\(mH\) has the sign of \(\delta\), whereas \(rB\) has the
+opposite sign. Equation~\eqref{sat:curvature-state} consequently
+implies
+\begin{equation}\label{sat:curvature-scale}
+ r\le K|m|,\qquad
+ |v|=|\delta|/r^2=|mH+rB|\le K|m|
+\end{equation}
+at both curvature zeros. This argument does not require a lower
+bound for either positive root \(r\).
+
+The actual derivative \(Q'\), differentiated at fixed controls,
+has the smooth root expression \eqref{eq:Q-outer}. It equals one
+at \(r=0\), so \(Q'-1=rU_1(r,m,v,p)\) with \(U_1\) smooth.
+The aligned strength cancellation gives \(U_1(0,0,0,p)=0\).
+Hence
+\begin{equation}\label{sat:outer-slope-bound}
+ |Q'-1|\le K r(r+|m|+|v|).
+\end{equation}
+At \(\zeta_2\), equations~\eqref{sat:curvature-scale} and
+\eqref{sat:outer-slope-bound}, together with \(Q=O(r^2)\), yield
+\(D'(\zeta_2)=b+O(m^2)\). At the first event \(Q'=1\).
+For positive separation that event is zero and \(Q=0\), giving
+\(D'(e_1)=b\); for negative separation it is \(\delta\), with
+\(Q=\delta\), giving \(D'(e_1)=b+O(|\delta|)\).
+The first and last inequalities in \eqref{sat:junction-slopes}
+therefore imply
+\[
+ -Km^2\le sb\le K|\delta|.
+\]
+The cubic separation bound proves \(|b|\le K|m|^2\).
+
+For the offset and the states, use the event-uniform value bound
+\eqref{eq:quartic-global-value} from Lemma~\ref{lem:exact-value-division}.
+
+On the inactive side the exact closing expansion gives
+\[
+ E(q)=sa+sbq+sc(\lambda)q^2+O(|q|^3).
+\]
+After shrinking the state interval, its last two terms are bounded
+above by \(-\gamma q^2\) for one \(\gamma>0\). Completing the
+square gives \(E(q)\le sa+Kb^2\). The positive inactive maximum
+from Lemma~\ref{sat:saturation} therefore implies
+\begin{equation}\label{sat:offset-lower-coarse}
+ sa\ge-Kb^2.
+\end{equation}
+The next, negative minimum lies between the two actual events, where
+\(|q|\le K|\delta|\). Equation~\eqref{eq:quartic-global-value} and the
+closing expansion give there
+\[
+ |D(q)-a|\le K\{ |b\delta|+|\delta|^{3/2}+\delta^2\}.
+\]
+Consequently
+\begin{equation}\label{sat:offset-upper-coarse}
+ sa\le K\{ |b\delta|+|\delta|^{3/2}+\delta^2\}
+       \le K|m|^{9/2}.
+\end{equation}
+Together with \eqref{sat:offset-lower-coarse}, this proves
+\(|a|\le K|m|^4\).
+
+The three parameter bounds just proved satisfy the hypotheses of
+Lemma~\ref{mainloc:tail}, which confines every zero to $|q|<Mm^2$.
+Restricting the auxiliary controls to the original observations proves
+the assertion for the original family.
+\end{proof}
+
+\subsection{The four-root limit}
+
+Fix the sign sector $A_1(0)=B>0$ and $c(0)=-C<0$, and put $h=-b$.
+We use the canonical transported strength sum for $m$.
+Define
+\[
+ A_4=C^3a/m^4,\qquad S_4=Ch/m^2,\qquad
+ T_4=3BC^2\delta/(2m^3),\qquad x=C\sqrt q/m.
+\]
+The constants $B,C$ are those of the reference system and are not varied
+with the parameters. Write
+\[
+ \Phi_{A,S,T}(x)=A-Sx^2+x^3-x^4+Tx,
+ \qquad
+ \mathcal K_4=\{(-e_4(r),e_2(r),e_3(r)):r_i\ge0,\ \sum_i r_i=1\}.
+\]
+
+Fix one actual observation inverse $\lambda(a,b,m,\delta;\xi_0)$ on
+a neighbourhood $V\subset\mathbb R^4$ of the zero observations, with
+the remaining coordinates fixed. Write
+\[
+ N_\lambda(I)=\#\{q\in I:D_\lambda(q)=0\},\qquad
+ v_m(A,S,T)=\left(\frac{m^4A}{C^3},-\frac{m^2S}{C},m,
+                         \frac{2m^3T}{3BC^2}\right).
+\]
+Choose a compact coefficient box $\mathcal B$, independent of $m$,
+containing $\mathcal K_4$ in its interior and every normalized local
+six-cycle control in $V$. Proposition~\ref{sat:weighted-confinement}
+provides such a box after shrinking $V$. The actual main-scale domain is
+\begin{equation}\label{def:actual-main-domain}
+ \mathscr T_m=\{(A,S,T)\in\mathcal B:v_m(A,S,T)\in V,
+                    N_{\lambda(v_m(A,S,T);\xi_0)}(I)=6\}.
+\end{equation}
+The actual domain, its realization and the local bifurcations use this
+inverse. The sequential necessity arguments below allow arbitrary
+permitted families and converging background parameters.
+
+For $x>0$ put $F_m(x)=C^3m^{-4}D(m^2x^2/C^2)$. At fixed controls,
+\[
+ D_q=\frac{m^2}{2Cx}F_m',\qquad
+ D_{qq}=\frac{C}{4x^3}(xF_m''-F_m').
+\]
+Thus the limiting curvature equation is
+$x\Phi''-\Phi'=3x^2-8x^3-T=0$, with positive turn $x=1/4$,
+turning value $T=1/16$, and nonzero root $x=3/8$ when $T=0$.
+
+\begin{lemma}[Sequential main-scale convergence]\label{lem:k4-sequence}
+Let parameters tend to the reference, let $m>0$ tend to zero, and assume
+that $(A_4,S_4,T_4)$ stays bounded. If these triples converge to $(A,S,T)$,
+then
+\[
+ \frac{C^3}{m^4}D(m^2x^2/C^2)\longrightarrow\Phi_{A,S,T}(x)
+\]
+in $C^k$ on every compact subset of $x>0$, for every fixed finite $k$.
+No rank condition or prescribed rate of convergence of the background
+parameters is required.
+\end{lemma}
+\begin{proof}
+Put $r=mx/C$ and $v=\delta/r^2=2mT_4/(3Bx^2)$. On a positive compact
+$x$-interval, $r,m,v\to0$ uniformly with all fixed-order $x$ derivatives.
+The exact value division gives
+\[
+ Q-q=mr^3+\tfrac34m^2r^4+r^5L_0+\delta rH,
+ \qquad H(0,0,0,p)=\tfrac32A_1(p,0,0).
+\]
+Consequently $C^3(Q-q)/m^4\to x^3+Tx$ in every such $C^k$ norm.
+In the closing expansion
+\[
+ D=a+bQ+(Q-q)+c(\lambda)Q^2+Q^3S_R,
+\]
+we have $Q=q+O_{C^k}(m^4)$, $b=-m^2S_4/C$, and $c(\lambda)\to-C$.
+The four remaining terms therefore converge respectively to
+$A$, $-Sx^2$, $-x^4$, and zero after multiplication by $C^3/m^4$.
+All smooth profiles are evaluated in one common compact neighborhood.
+Smooth dependence controls the state derivatives even when the background
+parameters converge arbitrarily slowly relative to $m$.
+\end{proof}
+
+\begin{lemma}[The event end of a saturated sequence]\label{lem:k4-event}
+Let parameters tend to the reference through returns with six fixed points,
+and let their normalized coefficients converge to $(A,S,T)$. Denote the five successive critical points of $D$
+by $t_1,\ldots,t_5$, and put $x_j=C\sqrt{t_j}/m$ for $j=3,4,5$.
+If $T>0$, all three $x_j$ stay in a compact subset of $(0,\infty)$.
+If $T=0$, then $x_3\to0$, $A=0$, and every limit of $x_5$ is at least
+$3/8$.
+\end{lemma}
+\begin{proof}
+The critical points interlace the six zeros, so their upper bounds follow
+from \eqref{sat:weighted-bounds}. The existing offset estimate gives
+$a\le K m^{9/2}$, hence $A\le0$.
+
+Suppose first that $T>0$ and that $x_3\to0$ along a subsequence.
+At $q=t_3$ both channels are active. Let $y=\Gamma_1(q)-\delta\ge0$.
+Since $q^{3/2}/\delta$ is a fixed positive constant times $x_3^3/T_4$,
+this ratio tends to zero. Thus
+\[
+ q-y\ge\delta/2,\quad 0\le y<q,\quad
+ \sqrt q-\sqrt y\ge\delta/(4\sqrt q).
+\]
+The actual derivative expansion, with all coefficients evaluated at the
+same physical parameter, is
+\[
+ Q_q-1=\tfrac32A_1(\sqrt q-\sqrt y)
+       +\tfrac32(A_1+A_2)\sqrt y+O(q).
+\]
+Here $A_1\ge B/2$ and $A_1+A_2=m>0$. Also $Q=O(q)$,
+$Q_q=1+O(\sqrt q)$, and $R'(Q)-1=-h+O(q)$. It follows that
+\[
+ D_q(q)\ge k\delta/\sqrt q-K(h+q).
+\]
+After multiplying by $C/m^2$, the right-hand side is bounded below by
+$k_1T_4/x_3-K_1-K_2x_3^2$, which tends to $+\infty$. This contradicts
+$D_q(t_3)=0$. The ordering $x_3<x_4<x_5$ proves the first assertion.
+
+Now suppose $T=0$. Write $r_-<r_+$ for the square roots of the two outer
+curvature zeros. They lie on opposite sides of the unique positive
+turning point $r_c$, and the actual curvature graph gives
+\[
+ \begin{aligned}
+ \delta&=r^2\{mH_g(r,m,p)+rB_g(r,p)\},\\
+ H_g(0,0,p)&=\frac{2}{A_1(p,0,0)},&
+ B_g(0,p)&=\frac{16c_0(p)}{3(1+b)A_1(p,0,0)}.
+ \end{aligned}
+\]
+For bounded $x=Cr/m$, this equation becomes
+\[
+ T_4=3x^2-8x^3+o(1),\qquad Cr_c/m\longrightarrow1/4.
+\]
+The error is uniform down to $x=0$, because this is an identity between
+smooth graph profiles, not an expansion of the singular curvature.
+Both $Cr_\pm/m$ are bounded by the critical-point confinement. A limit
+of $Cr_-/m$ lies in $[0,1/4]$ and solves $x^2(3-8x)=0$, hence is zero.
+A limit of $Cr_+/m$ is at least $1/4$ and solves the same equation, hence
+is $3/8$. Since $t_3<r_-^2$ and $t_5>r_+^2$, the location assertions follow.
+
+The event-uniform value estimate yields
+\[
+ |D(q)-a|\le K\{hq+q^2+mq^{3/2}+m^2q^2+q^{5/2}
+                +\delta\sqrt{q+\delta}+\delta q^{3/2}\}.
+\]
+At $q=t_3$, division by $m^4$ bounds this by a constant times
+\[
+ x_3^2+x_3^3+x_3^4+m^2x_3^4+mx_3^5
+ +T_4x_3+\sqrt m\,T_4^{3/2}+m^2T_4x_3^3,
+\]
+which tends to zero. Since $D(t_3)>0$, this gives $A\ge0$, and therefore
+$A=0$.
+\end{proof}
+
+\begin{proposition}[Necessary four-root geometry]\label{prop:k4-necessary}
+For every allowed family, each cluster point of the normalized
+coefficients of a six-fixed-point sequence tending to the reference
+belongs to $\mathcal K_4$.
+\end{proposition}
+\begin{proof}
+Take a convergent coefficient subsequence, using \eqref{sat:weighted-bounds}.
+In this sector \eqref{sat:junction-slopes} gives $b=D'(0)<0$ on every
+saturated return, so $S_4=-Cb/m^2>0$ and its limit satisfies $S\ge0$.
+If $T>0$, Lemmas~\ref{lem:k4-sequence} and~\ref{lem:k4-event} give three
+positive limiting critical points $u\le v\le w$ of $\Phi$, with
+\[
+ \Phi(u)\ge0,\qquad\Phi(v)\le0,\qquad\Phi(w)\ge0.
+\]
+If $k\le3$ critical points converge to the same positive point $z$,
+repeated Rolle gives zeros of $F_m^{(j)}$ tending to $z$ for
+$1\le j\le k$. The $C^3$ convergence yields $\Phi^{(j)}(z)=0$ for
+those $j$, so $z$ is a zero of $\Phi'$ of multiplicity at least $k$.
+If $u<v<w$, the four successive intervals
+$[0,u],[u,v],[v,w],[w,\infty)$ each contain a zero, since $\Phi(0)=A\le0$
+and $\Phi$ tends to $-\infty$. A zero at a shared critical endpoint has
+multiplicity at least two, so the four interval allocations are valid
+when counted with multiplicity. If $u=v<w$, then $\Phi(u)=0$ and the
+double derivative zero gives a triple polynomial zero at $u$; a fourth
+zero lies in $[w,\infty)$. The case $u<v=w$ is analogous. If all three
+merge, the common value is zero and the root has multiplicity four.
+Thus all four roots are nonnegative and their sum is one.
+
+If $T=0$, the event lemma gives $A=0$. After subselection $x_5\to w\ge3/8$,
+and positive-compact convergence gives $\Phi(w)\ge0$. Therefore
+$-S+w-w^2\ge0$, so $0\le S\le1/4$. The factorization
+$\Phi=x^2(-x^2+x-S)$ again gives four nonnegative roots with sum one.
+\end{proof}
+
+\begin{proof}[Completion of Theorem~\ref{thm:main-saturation-summary}]
+The interior of $\mathcal K_4$ consists exactly of coefficient triples
+with four distinct positive roots. Such triples are open by simple-root
+continuation. A zero root or a multiple root is a boundary point: a
+small constant-term perturbation gives respectively a negative root or
+violates one of the necessary critical-value signs for four real roots.
+Triples with distinct positive roots are dense, by perturbing the root
+vector inside the simplex while preserving its sum.
+
+For four distinct positive roots $r_i$, the positive limiting return is
+$-\prod_i(x-r_i)$. On the negative scaled state $y=C^2q/m^2$, the limiting
+return is $-(y^2+e_2y+e_4)$. The six pair products satisfy
+$e_2\ge6\sqrt{e_4}$ by AM--GM; hence this quadratic has two distinct
+negative roots. On a compact subset of the interior, all six roots have
+uniform isolation and nonzero derivative margins. The existing mixed
+$C^1$ weighted convergence and the fixed observation inverse continue
+these roots to actual simple fixed points, uniformly in the compact
+coefficient set. The common six-root upper bound excludes additional
+fixed points in the physical interval.
+
+For the Hausdorff upper inclusion, a contrary sequence of closure points
+can be approximated within $1/n$ by true points of $\mathscr T_{m_n}$.
+Compactness of $\mathcal B$ and Proposition~\ref{prop:k4-necessary} then
+force its limit into $\mathcal K_4$. For the lower inclusion, approximate
+compact $\mathcal K_4$ by a finite net of interior points and realize all
+of them at every sufficiently small $m$. The fixed coarse box is chosen
+using \eqref{sat:weighted-bounds} and enlarged to contain $\mathcal K_4$ in its
+interior. The box also includes the normalized controls of any saturated
+sequence with small positive offset; \eqref{sat:offset-upper-coarse}
+forces their offset coordinate to tend to zero.
+\end{proof}
+
+\subsection{Boundary geometry of the limiting domain}
+
+Figure~\ref{fig:main-saturation-sections} displays two sections of the
+limiting coefficient region; the critical-value criterion below describes
+their boundaries.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/main-saturation-sections.pdf}
+\caption{Sections of the limiting four-root domain at $S_4=0.2$ and
+$S_4=0.35$, with separate axis ranges and the displayed ordinate scaling.
+The boundaries are drawn from the critical-value interval described below. In the
+left panel the segment $A_4=0$ represents a zero root. The remaining boundary
+arcs have repeated roots; the change of lower arc occurs when the two local
+maxima have equal value. These plots illustrate the algebraic limiting set,
+not the corrected bifurcation boundary of a nonzero-scale actual return.}
+\label{fig:main-saturation-sections}
+\end{figure}
+
+The symmetric mean inequalities give
+\[
+ -\frac1{256}\le A_4\le0,\qquad
+ 0\le S_4\le\frac38,\qquad 0\le T_4\le\frac1{16}.
+\]
+All three nonzero extrema occur at $r_i=1/4$, where
+$\Phi=-(x-1/4)^4$. At the opposite face, $e_3=0$ forces at least two
+roots to vanish, and therefore
+\[
+ \mathcal K_4\cap\{T_4=0\}
+ =\{(0,S_4,0):0\le S_4\le1/4\}.
+\]
+These are exact bounds for the limiting set, and hence asymptotic bounds
+along saturated sequences. The finite-scale domain retains its actual
+boundary corrections.
+
+For fixed $S_4,T_4$ with three positive critical points $u<v<w$, put
+$f(x)=-S_4x^2+x^3-x^4+T_4x$. The admissible offset interval is
+\[
+ \max\{-f(u),-f(w)\}\le A_4\le\min\{0,-f(v)\}.
+\]
+It is nonempty precisely when these critical-value inequalities are
+compatible. Their closures include merged critical points.

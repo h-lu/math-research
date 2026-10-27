@@ -1,0 +1,97 @@
+\documentclass[11pt]{article}
+% Suppress the output-path-dependent pdfTeX trailer identifier.
+% SOURCE_DATE_EPOCH fixes the metadata dates for portable byte reproduction.
+\pdftrailerid{}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{microtype,booktabs,array,graphicx,placeins,flafter}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\usepackage{xr}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\urlstyle{same}
+\hypersetup{pdftitle={Secondary Saturation and Cusp Geometry at Cancelling Double Grazing},pdfauthor={Haibo Lu}}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\externaldocument[main-]{main-reference-labels}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\R}{\mathbb R}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Fl}{\operatorname{Fl}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\bsc}{\widehat{\beta}}
+\newcommand{\dsc}{\widehat d}
+\newcommand{\smallO}{\mathrm{o}}
+\newcommand{\bigO}{\mathrm{O}}
+\title{Secondary Saturation and Cusp Geometry\\at Cancelling Double Grazing}
+\author{Haibo Lu\\[2pt]
+\small Shanghai Institute of Technology, Shanghai 201418, China\\
+\small Corresponding author: \href{mailto:luhaibo1985@gmail.com}{luhaibo1985@gmail.com}\\
+\small ORCID: \href{https://orcid.org/0009-0000-2717-5968}{0009-0000-2717-5968}}
+\date{}
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \begin{center}
+    {\Large Secondary Saturation and Cusp Geometry\\
+    at Cancelling Double Grazing\par}
+    \vspace{5pt}
+    {\normalsize Supplement to\\
+    \emph{Cyclicity Six and Saturation Geometry at Cancelling Double Grazing}\par}
+    \vspace{5pt}
+    {\normalsize Haibo Lu\par}
+    {\small Shanghai Institute of Technology, Shanghai 201418, China\par}
+    {\small Corresponding author:
+    \href{mailto:luhaibo1985@gmail.com}{luhaibo1985@gmail.com}\par}
+    {\small ORCID: \href{https://orcid.org/0009-0000-2717-5968}{0009-0000-2717-5968}\par}
+    \vspace{5pt}
+    {\small Mathematical supplement\par}
+  \end{center}
+  \vspace{6pt}}
+\makeatother
+\begin{document}
+\maketitle
+\begin{abstract}
+This supplement resolves the corner of the principal-scale saturation
+domain where three of the four limiting roots tend to zero. We consider
+a semistable limit cycle with two cancelling quadratic grazings whose active
+sides agree under transverse transport, with positive first passage strength
+$B$ and negative closing curvature.
+The strength sum and a secondary scale tend to zero independently.
+Necessary bounds hold in every admissible family. In a fixed full-rank
+unfolding, the closures of the rescaled six-cycle domains converge in
+Hausdorff distance to the coefficient set of cubics with three nonnegative
+roots of sum one; every compact subset of its interior is realized
+uniformly for all sufficiently small independent scale pairs.
+For positive closing offset $a=R(0)$, six-cycle sequences tending to the
+reference satisfy the sharp bound $\limsup a/(-b)^3\le4/(27B^2)$, where
+$b$ is the multiplier defect. For positive offset we realize six simple
+cycles, with one negative and five positive fixed points on the transverse
+section. The triple-root endpoint continues to an ordinary cusp.
+Near this cusp, the common return interval contains four or six simple cycles
+off the fold curves, five distinct cycles on the fold arcs away from the
+cusp, one double, and four distinct cycles at the cusp, one triple.
+\end{abstract}
+\noindent\textbf{Keywords.} Grazing bifurcation; Poincar\'e return maps;
+cyclicity; multiple limit cycles; cusp bifurcations.
+\par\smallskip
+\noindent\textbf{Mathematics Subject Classification.}
+Primary 34C23; Secondary 34A36, 34C25, 37G15.
+\par\smallskip
+\input{sections/01-introduction}
+\input{sections/02-setting}
+\input{sections/03-secondary-domain}
+\input{sections/04-positive-displacement}
+\input{sections/05-secondary-cusp}
+\input{sections/06-declarations}
+\input{sections/07-references}
+\end{document}

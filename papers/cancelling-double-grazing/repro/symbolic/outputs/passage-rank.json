@@ -1,0 +1,309 @@
+{
+  "checks": [
+    "entry condition w_1(-1)=0",
+    "entry condition w_2(-1)=0",
+    "entry condition w_3(-1)=0",
+    "scaled ODE coefficient r^0",
+    "scaled ODE coefficient r^1",
+    "scaled ODE coefficient r^2",
+    "scaled ODE coefficient r^3",
+    "ODE-derived root quadratic coefficient",
+    "ODE-derived root cubic coefficient",
+    "ODE-derived root quartic coefficient",
+    "moving-exit equation coefficient r^0",
+    "moving-exit equation coefficient r^1",
+    "moving-exit equation coefficient r^2",
+    "moving-exit equation coefficient r^3",
+    "strength from the ODE",
+    "forced ordinary quadratic passage coefficient",
+    "inverse signed companion agrees with reversal through degree four",
+    "activation inverse leading correction",
+    "activation inverse quadratic correction",
+    "composed root quadratic coefficient",
+    "composed root cubic coefficient",
+    "aligned strength sum",
+    "aligned forced quadratic coefficient",
+    "opposite strengths leave a free fifth-half coefficient",
+    "explicit opposite-strength noninverse example",
+    "special constant-beta exact time-reversal symmetry",
+    "closing-box affine ODE",
+    "closing-box entrance",
+    "closing-box phi(0)",
+    "controlled seam matching in original time t component",
+    "controlled seam matching in original time q component",
+    "controlled normalized active transverse component",
+    "local control Jacobian (1,1)",
+    "local control Jacobian (1,2)",
+    "local control Jacobian (1,3)",
+    "local control Jacobian (1,4)",
+    "local control Jacobian (2,1)",
+    "local control Jacobian (2,2)",
+    "local control Jacobian (2,3)",
+    "local control Jacobian (2,4)",
+    "local control Jacobian (3,1)",
+    "local control Jacobian (3,2)",
+    "local control Jacobian (3,3)",
+    "local control Jacobian (3,4)",
+    "local control Jacobian (4,1)",
+    "local control Jacobian (4,2)",
+    "local control Jacobian (4,3)",
+    "local control Jacobian (4,4)",
+    "local control determinant",
+    "lower branch matched difference",
+    "upper branch matched difference",
+    "lower traces agree",
+    "upper traces agree",
+    "perturbed chart F equilibrium",
+    "perturbed chart G equilibrium",
+    "u=0 core harvest chart",
+    "u=0 core linear trace",
+    "u=0 core linear determinant",
+    "canonical linear one-turn radial rate derivative",
+    "physical chart embedding minor (d,L,v,U)",
+    "contact clock second-derivative identity",
+    "physical-to-clock transverse coefficient",
+    "lower effort strength",
+    "upper effort strength",
+    "positive effort cancellation ratio",
+    "upper effort sensitivity",
+    "upper contact chain-rule sensitivity",
+    "lower contact chain-rule sensitivity",
+    "moving lower coordinate offset sensitivity",
+    "moving lower coordinate multiplier sensitivity",
+    "natural structural observation determinant",
+    "u=0 natural observation determinant",
+    "retained radial fold parameter determinant",
+    "retained radial fold eta1",
+    "retained radial fold eta2",
+    "retained radial fold curvature",
+    "scaled limiting fold determinant"
+  ],
+  "checks_passed": 77,
+  "harvesting_rank_algebra": {
+    "actual_rank_status": "Conditional algebra verified. Actual-return sensitivities, existence, signs and persistence are analytic obligations, not values computed by this script.",
+    "canceling_effort_v": "omega2*u/omega1",
+    "canonical_linear_one_turn_radial_rate_nu_derivative_at_hopf": "5*pi/sqrt(80*beta - 1)",
+    "embedding_minor_rows_d_L_v_U": "1",
+    "equilibrium_y": "(25*L*u - 5*u + 4)/5",
+    "linear_rate_scope": "A canonical linear angular normalization; nonzero for beta>1/80. It does not bound the actual return sensitivity at a positive fold radius.",
+    "natural_control_order": [
+      "nu",
+      "L",
+      "v",
+      "U"
+    ],
+    "natural_observation_jacobian": [
+      [
+        "a_nu",
+        "a_L",
+        "0",
+        "0"
+      ],
+      [
+        "b_nu",
+        "b_L",
+        "0",
+        "0"
+      ],
+      [
+        "m_nu",
+        "m_L",
+        "-4/(3*omega2)",
+        "m_U"
+      ],
+      [
+        "delta_nu",
+        "delta_L",
+        "0",
+        "s2"
+      ]
+    ],
+    "physical_chart_d": "(40*beta + 5*nu + 1)/5",
+    "physical_chart_embedding_jacobian_rows_beta_d_h_u_v_L_U": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "(25*L*u - 5*u + 4)/5",
+        "-u*(250*L*beta*u - 50*beta*u - 5*nu - 1)",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "physical_chart_h": "-(25*L*u - 5*u + 4)*(125*L*beta*u - 25*beta*u - 20*beta - 5*nu - 1)/25",
+    "required_analytic_nonzero_factors": [
+      "a_nu",
+      "c0",
+      "s1=zeta_L",
+      "s2=delta_U",
+      "K2=4/(3*omega2)"
+    ],
+    "strengths": [
+      "4*u/(3*omega1)",
+      "-4*v/(3*omega2)"
+    ],
+    "structural_determinant": "4*s2*(a_L*b_nu - a_nu*b_L)/(3*omega2)",
+    "u_0_fold_determinant": "-8*a_nu*c0*s1*s2/(3*omega2)",
+    "upper_contact_y": "(L*u - U**2 - U*u + U)/U"
+  },
+  "limitations": [
+    "No existence or uniform bounds for the active ODE, moving-exit branch, signed companion or inverse are certified.",
+    "No common first-return tube, first entry/exit, strict activity, no extra seam event or port admissibility is certified.",
+    "Finite Taylor identities do not certify equality or inversion of complete generic passage germs.",
+    "The existence and orientation of transported inactive first integrals and positive contact clocks remain analytic assumptions.",
+    "No actual numerical fold or actual sensitivities a_nu, c0, I_x(p1), I_x(p2) are computed.",
+    "Rank-four persistence from u=0 to fixed sufficiently small positive u uses smooth dependence and a nonzero-margin argument not certified here.",
+    "Positive ecological parameters, threshold ordering, compact positive-quadrant containment and fitted threshold existence are not certified.",
+    "Normal-form validity, derivative-controlled remainder estimates, parameter smoothness and the IFT step for an actual cyclic fold are not certified.",
+    "No uniformity as rho or u tends to zero is claimed; the manuscript fixes a small positive rho, then a small positive u before the unfolding scale."
+  ],
+  "local_control_rank": {
+    "control_order": [
+      "eta0",
+      "eta1",
+      "kappa",
+      "d"
+    ],
+    "controlled_contact_beta_at_touch": "beta0 + beta_q*d_control + k",
+    "determinant": "4/3",
+    "jacobian": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "2*c0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "4/3",
+        "4*beta_q/3"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "observation_order": [
+      "a",
+      "b",
+      "m",
+      "delta"
+    ]
+  },
+  "method": "Exact symbolic polynomial, rational, differential and chain-rule identities; no numerical sampling",
+  "passage": {
+    "C1": "4*b/3",
+    "C2": "4*b**2/3",
+    "activation_inverse_in_root_delta_through_degree_5": "-t**2*(2*A**3*t**3 - 3*A**2*t**2 + 2*A*t + 2*C*t**3 - 1)",
+    "activation_scope": "The second physical threshold is Gamma1^{-1}(delta), not generally delta. For delta<=0 it is delta; positive-delta inverse jet above uses t=sqrt(delta), A=C1/2.",
+    "aligned_composition_root_through_degree_4": "t*(3*A**2*B*t**3 + A**2*t**2 + 3*A*B**2*t**3 + 2*A*B*t**2 + A*t + B**2*t**2 + B*t + C*t**3 + E*t**3 + 1)",
+    "exit_s_coefficients_r_1_to_3": [
+      "2*b/3",
+      "4*b**2/9",
+      "-2*(36*a*b - 22*b**3 - 9*b*b_t - 9*b_tt - 45*b_z)/135"
+    ],
+    "input": "dz/dt=(z-t^2)*beta(t,z)/(1+(z-t^2)*alpha(t,z))",
+    "inverse_root_through_degree_4": "-t*(-A**2*t**2 + A*t + C*t**3 - 1)",
+    "jet_convention": "beta=b+b_t*t+b_z*z+b_tt*t^2+terms of higher weighted degree; alpha=a+terms of positive weighted degree; weight(t)=1, weight(z)=2",
+    "noninverse_example": {
+      "composition_q_5_over_2_coefficient": "4*kappa/15",
+      "first_field": "dt/dtime=1; dz/dtime=(z-t^2)*(b+kappa*t^2)",
+      "opposite_leading_strengths": [
+        "4*b/3",
+        "-4*b/3"
+      ],
+      "second_field": "dt/dtime=1; dz/dtime=(z-t^2)*(-b)"
+    },
+    "physical_Gamma_r_squared_through_r_5": "-r**2*(48*a*b*r**3 - 56*b**3*r**3 - 60*b**2*r**2 - 12*b*b_t*r**3 - 60*b*r - 12*b_tt*r**3 - 60*b_z*r**3 - 45)/45",
+    "scaled_initial_value_problem": "dw/ds=r*(w-s^2)*beta(r*s,r^2*w)/(1+r^2*(w-s^2)*alpha(r*s,r^2*w)); w(-1,r)=1",
+    "special_symmetry": "For alpha=0 and constant beta=b, f_{-b}(t,z)=-f_b(-t,z); time reversal pairs full local passages. This extra symmetry is not assumed by finite cancellation.",
+    "w_coefficients_r_1_to_3": [
+      "-b*(s - 2)*(s + 1)**2/3",
+      "-(s + 1)**2*(b**2*s**2 - 2*b**2*s - 3*b**2 + 3*b_t*s**2 - 6*b_t*s + 3*b_t)/12",
+      "-(s + 1)**2*(12*a*b*s**3 - 24*a*b*s**2 - 4*a*b*s + 32*a*b + b**3*s**3 - 2*b**3*s**2 - 7*b**3*s - 4*b**3 + 7*b*b_t*s**3 - 14*b*b_t*s**2 - 9*b*b_t*s + 12*b*b_t + 12*b_tt*s**3 - 24*b_tt*s**2 + 16*b_tt*s - 8*b_tt + 20*b_z*s - 40*b_z)/60"
+    ]
+  },
+  "retained_radial_fold": {
+    "curvature": "8*ell*rho**3",
+    "drift": "radial*(ell*radial**4 + eta_one + eta_two*radial**2)",
+    "eta1": "ell*rho**4",
+    "eta2": "-2*ell*rho**2",
+    "parameter_determinant": "2*radial**3",
+    "scaled_limiting_parameter_determinant": "2",
+    "scope": "Finite polynomial algebra, not the actual-return remainder estimate or actual fold existence"
+  },
+  "software": {
+    "python": "3.14.4",
+    "sympy": "1.14.0"
+  },
+  "source_anchors": {
+    "source/sections/02-actual-returns.tex": [
+      "eq:passage:local-geometry",
+      "eq:passage:quadratic-jet",
+      "eq:passage:strength-jet",
+      "lem:passage:finite-inverse",
+      "eq:passage:threshold-formula"
+    ],
+    "source/sections/08-realization.tex": [
+      "eq:specified-contact-controls",
+      "eq:specified-four-jacobian",
+      "eq:harvesting:model",
+      "eq:harvesting:perturbed-chart",
+      "eq:harvesting:clock",
+      "eq:harvesting:strengths",
+      "eq:harvesting:effort-relation",
+      "eq:harvesting:rank-matrix",
+      "eq:harvesting:lower-rank"
+    ],
+    "source/sections/09-focus-appendix.tex": [
+      "eq:harvesting:core-chart",
+      "eq:harvesting:weighted-flow",
+      "eq:harvesting:scaled-return",
+      "eq:harvesting:fold-data"
+    ]
+  },
+  "source_commit": "31515b525a12ff95a1e84875e42ad9b7fe28d76c",
+  "status": "PASS"
+}

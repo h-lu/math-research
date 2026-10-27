@@ -1,0 +1,362 @@
+{
+  "arithmetic": "exact symbolic and rational; no numerical approximation",
+  "checks": [
+    "pinned input hash: sections/03-sharp-cyclicity.tex",
+    "source anchor: eq:J-exact",
+    "source anchor: eq:V-boundary",
+    "source anchor: eq:W-boundary",
+    "source anchor: eq:cubic-critical-value",
+    "source anchor: eq:quartic-Vieta",
+    "pinned input hash: sections/04-saturation-necessity.tex",
+    "source anchor: sec:main-saturation",
+    "source anchor: prop:k4-necessary",
+    "pinned input hash: sections/06-actual-bifurcations.tex",
+    "source anchor: quartic:centre",
+    "source anchor: quartic:joint-quotient",
+    "source anchor: quartic:preparation",
+    "source anchor: quartic:double-surface",
+    "pinned input hash: scripts/check-local-diagrams.py",
+    "source anchor: sp.discriminant",
+    "source anchor: sample_labels",
+    "Vieta offset from coefficient matching",
+    "Vieta multiplier from coefficient matching",
+    "Vieta separation from coefficient matching",
+    "Vieta root sum constraint",
+    "full physical quartic after root sum constraint",
+    "normalized coefficient: A",
+    "normalized coefficient: S",
+    "normalized coefficient: T",
+    "normalized root sum",
+    "unique algebraic quadruple configuration",
+    "quadruple centre: A",
+    "quadruple centre: S",
+    "quadruple centre: T",
+    "quadruple centre: x",
+    "quadruple four-equation determinant",
+    "three-observation unfolding determinant",
+    "quartic fourth derivative",
+    "depressing translation",
+    "exact limiting preparation map: u",
+    "exact limiting preparation map: v",
+    "exact limiting preparation map: w",
+    "prepared control determinant",
+    "derived double-root surface v",
+    "derived double-root surface w",
+    "discriminant vanishes on double surface",
+    "derived triple-root factorization",
+    "triple curve becomes quadruple only at zero",
+    "two double roots are opposite after depression",
+    "derived two-double coefficient degree 2",
+    "derived two-double coefficient degree 1",
+    "derived two-double coefficient degree 0",
+    "K4 repeated-root boundary: A",
+    "K4 repeated-root boundary: S",
+    "K4 repeated-root boundary: T",
+    "K4 repeated-root full factorization",
+    "remaining-root admissibility discriminant",
+    "K4 triple-root curve",
+    "K4 two-double curve",
+    "equal-maxima critical-value identity",
+    "equal maxima middle critical point",
+    "equal-maxima coefficient plane",
+    "rational K4 interior example",
+    "rational interior example has two distinct negative companions",
+    "quadruple negative companion centre",
+    "quadruple negative companion centre",
+    "six-pair-product AM-GM witness",
+    "S upper-bound sum-of-squares witness",
+    "simplex stationary difference e2 pair 12",
+    "simplex stationary difference e2 pair 13",
+    "simplex stationary difference e2 pair 14",
+    "simplex stationary difference e2 pair 23",
+    "simplex stationary difference e2 pair 24",
+    "simplex stationary difference e2 pair 34",
+    "simplex stationary difference e3 pair 12",
+    "simplex stationary difference e3 pair 13",
+    "simplex stationary difference e3 pair 14",
+    "simplex stationary difference e3 pair 23",
+    "simplex stationary difference e3 pair 24",
+    "simplex stationary difference e3 pair 34",
+    "simplex stationary difference e4 pair 12",
+    "simplex stationary difference e4 pair 13",
+    "simplex stationary difference e4 pair 14",
+    "simplex stationary difference e4 pair 23",
+    "simplex stationary difference e4 pair 24",
+    "simplex stationary difference e4 pair 34",
+    "simplex exact maximum e2",
+    "simplex exact maximum e3",
+    "simplex exact maximum e4",
+    "additional K4 invariant sum-of-squares",
+    "T=0 face root representation",
+    "T=0 face offset",
+    "T=0 face S parameter",
+    "T=0 face S upper bound",
+    "T=A=0 face factorization",
+    "first passage derivative from signed-root identity",
+    "second passage derivative from signed-root identity",
+    "passage derivative boundary",
+    "passage curvature boundary from strength coefficient",
+    "actual nested-passage first chain rule at fixed delta",
+    "actual nested-passage second chain rule at fixed delta",
+    "closing-leg curvature chain rule at fixed delta",
+    "root curvature exact formula after fixed-control differentiation",
+    "root curvature boundary",
+    "root curvature v transversality sign and coefficient",
+    "root curvature independent-strength derivative",
+    "curvature-zero boundary graph",
+    "boundary graph strength derivative with moving strengths",
+    "aligned curvature boundary cancellation",
+    "aligned curvature linear coefficient",
+    "implicit graph Vm from independent curvature derivatives",
+    "implicit graph Vr from independent curvature derivatives",
+    "turn factor strength derivative",
+    "turn factor root derivative",
+    "signed turn location leading coefficient",
+    "cubic separation critical-value coefficient",
+    "physical graph main-scale normalization",
+    "main-scale first physical state derivative",
+    "main-scale second physical state derivative",
+    "independent quartic and graph curvature agreement",
+    "unique positive turn of limiting cubic",
+    "limiting turning value",
+    "limiting turn nondegeneracy",
+    "zero-separation nonzero curvature root"
+  ],
+  "checks_passed": 120,
+  "curvature": {
+    "J_boundary": "3*k*(A1*sqrt(1 - v) + A2)/(4*sqrt(1 - v))",
+    "J_exact": "(H1*Rp*sqrt(W)*ell2 + H2*Rp*ell1**2 + Rpp*sqrt(W)*ell1**2*ell2**2*r)/sqrt(W)",
+    "J_first_derivatives_at_cancellation": {
+      "m": "3*k/4",
+      "r": "2*c",
+      "v": "-3*A*k/8"
+    },
+    "V_boundary": "(A1 - A2)*(A1 + A2)/A1**2",
+    "V_m": "2/A",
+    "V_r": "16*c/(3*A*k)",
+    "delta_c_over_m_cubed_at_zero": "k**2/(24*A*c**2)",
+    "normalization": "q=r**2; delta=r**2*v only AFTER physical state differentiation",
+    "normalized_curvature_graph": "-x**2*(8*x - 3)",
+    "passage_boundary": {
+      "H(0)": "3*A_nu/4",
+      "ell(0)": "1"
+    },
+    "positive_turn": "1/4",
+    "quartic_curvature_numerator": "-T4 - 8*x**3 + 3*x**2",
+    "reference_specialization": "k=1, c=-C, A=B; B>0, C>0",
+    "rho_over_m_at_zero": "-k/(4*c)",
+    "turn_factor_derivatives": {
+      "m": "4/A",
+      "r": "16*c/(A*k)"
+    },
+    "turning_value": "1/16",
+    "zero_separation_nonzero_root": "3/8"
+  },
+  "existing_check_inventory": {
+    "extension": "coefficient reconstruction, K4 witnesses, quadruple unfolding, and curvature normalization",
+    "scope": "exact prepared-quartic strata/discriminant and five exact rational root-count labels",
+    "script": "scripts/check-local-diagrams.py"
+  },
+  "not_certified": [
+    "actual first-return domain, positivity margins and field/model admissibility",
+    "uniform common boxes, event-layer estimates and all-parameter remainder bounds",
+    "implicit-function existence/uniqueness, Hadamard division and smooth preparation hypotheses",
+    "weighted confinement, actual six-cycle existence or all-rate counting",
+    "finite-scale saturation boundary corrections and Hausdorff convergence"
+  ],
+  "original_source_inputs": {
+    "scripts/check-local-diagrams.py": {
+      "anchors": [
+        "sp.discriminant",
+        "sample_labels"
+      ],
+      "sha256": "053d03b09431fbca135bf9cd45562c1ad41c0846c8935c8d35da854e440f2fa6"
+    },
+    "sections/03-sharp-cyclicity.tex": {
+      "anchors": [
+        "eq:J-exact",
+        "eq:V-boundary",
+        "eq:W-boundary",
+        "eq:cubic-critical-value",
+        "eq:quartic-Vieta"
+      ],
+      "sha256": "2cabfdc6c56df854cd6ed453f82533935f9dfbe04b305bd6138a2b5faa2eb76f"
+    },
+    "sections/04-saturation-necessity.tex": {
+      "anchors": [
+        "sec:main-saturation",
+        "prop:k4-necessary"
+      ],
+      "sha256": "bcce62e5d19a36f130bb4df1f69ebf31dc67c8e5da09905b0535426b2fdd2ecb"
+    },
+    "sections/06-actual-bifurcations.tex": {
+      "anchors": [
+        "quartic:centre",
+        "quartic:joint-quotient",
+        "quartic:preparation",
+        "quartic:double-surface"
+      ],
+      "sha256": "719f4b95ffcd9233b5c5649c4d12f2df09e06d25bf3bf9045f97ae8c8e27ee04"
+    }
+  },
+  "python_version": "3.14.4",
+  "quartic": {
+    "K4_repeated_root_admissibility": "0 <= t <= 1/2; 0 <= z <= (1-2*t)**2/4",
+    "K4_repeated_root_boundary": {
+      "A": "-t**2*z",
+      "S": "-3*t**2 + 2*t + z",
+      "T": "t*(-2*t**2 + t + 2*z)"
+    },
+    "K4_triple_curve": {
+      "A": "t**3*(3*t - 1)",
+      "S": "-3*t*(2*t - 1)",
+      "T": "-t**2*(8*t - 3)"
+    },
+    "K4_triple_root_range": "0 <= t <= 1/3",
+    "K4_two_double_curve": {
+      "A": "-t**2*(2*t - 1)**2/4",
+      "S": "-(8*t**2 - 4*t - 1)/4",
+      "T": "-t*(2*t - 1)/2"
+    },
+    "K4_two_double_root_range": "0 <= t <= 1/2",
+    "depressed_discriminant": "16*u**4*w - 4*u**3*v**2 - 128*u**2*w**2 + 144*u*v**2*w - 27*v**4 + 256*w**3",
+    "double_surface": {
+      "v": "-2*t*(2*t**2 + u)",
+      "w": "t**2*(3*t**2 + u)"
+    },
+    "equal_maxima_plane": "T = S/2 - 1/8; three distinct positive critical points assumed",
+    "equal_maxima_value_difference": "-(cu - cw)**3*(cu - 2*cv + cw)/3",
+    "normalized_map": {
+      "A": "-e4",
+      "S": "e2",
+      "T": "e3",
+      "root_sum": "1"
+    },
+    "physical_vieta_controls": {
+      "alpha4": "-C*e4",
+      "beta4": "-C*e2",
+      "d4": "2*C*e3/(3*B)",
+      "root_sum": "1/C"
+    },
+    "prepared_coordinate_determinant": "1",
+    "prepared_coordinates": {
+      "u": "(8*S - 3)/8",
+      "v": "(4*S - 8*T - 1)/8",
+      "w": "-(256*A - 16*S + 64*T + 3)/256"
+    },
+    "quadruple_centre": {
+      "A": "-1/256",
+      "S": "3/8",
+      "T": "1/16",
+      "x": "1/4"
+    },
+    "quadruple_determinant": "-48",
+    "quadruple_matrix": [
+      [
+        "1",
+        "-1/16",
+        "1/4",
+        "0"
+      ],
+      [
+        "0",
+        "-1/2",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "-2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-24"
+      ]
+    ],
+    "quadruple_matrix_columns": [
+      "A",
+      "S",
+      "T",
+      "x"
+    ],
+    "quadruple_negative_companions": [
+      "-(2*sqrt(2) + 3)/16",
+      "(-3 + 2*sqrt(2))/16"
+    ],
+    "rational_interior_example": {
+      "coefficients": {
+        "A": "-3/1250",
+        "S": "7/20",
+        "T": "1/20"
+      },
+      "negative_companions": [
+        "-(sqrt(1129) + 35)/200",
+        "(-35 + sqrt(1129))/200"
+      ],
+      "positive_roots": [
+        "1/10",
+        "1/5",
+        "3/10",
+        "2/5"
+      ]
+    },
+    "triple_curve": {
+      "u": "-6*t**2",
+      "v": "8*t**3",
+      "w": "-3*t**4"
+    },
+    "two_double_curve": {
+      "u": "-2*t**2",
+      "v": "0",
+      "w": "t**4"
+    }
+  },
+  "simplex": {
+    "AM_GM_consequence": "e2 >= 6*sqrt(e4); e2**2-4*e4 >= 32*e4 > 0 when all r_i>0",
+    "T_zero_face": "A=0; 0<=S<=1/4; roots=(t,1-t,0,0), 0<=t<=1",
+    "additional_consistency_inequality": "S**2-3*T-12*A >= 0",
+    "additional_inequality_status": "exact SOS consequence, not a claimed characterization of K4",
+    "assumptions": "r_i >= 0; sum(r_i) = 1",
+    "extrema": {
+      "A_max": "0",
+      "A_min": "-1/256",
+      "S_max": "3/8",
+      "T_max": "1/16"
+    },
+    "face_stationary_values_by_support_size": {
+      "e2": {
+        "1": "0",
+        "2": "1/4",
+        "3": "1/3",
+        "4": "3/8"
+      },
+      "e3": {
+        "1": "0",
+        "2": "0",
+        "3": "1/27",
+        "4": "1/16"
+      },
+      "e4": {
+        "1": "0",
+        "2": "0",
+        "3": "0",
+        "4": "1/256"
+      }
+    },
+    "inequality_reasoning": "nonnegative roots, compact simplex, face stationarity, and six-term AM-GM; see note",
+    "maximizing_root_vector": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "pair_product_identity": "product_{i<j}(r_i*r_j) = e4**3"
+  },
+  "source_commit": "31515b525a12ff95a1e84875e42ad9b7fe28d76c",
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

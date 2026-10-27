@@ -1,0 +1,54 @@
+{
+  "commit": "31515b525a12ff95a1e84875e42ad9b7fe28d76c",
+  "files": {
+    "original-source/figures/quartic-local-diagram.tex": {
+      "repository_path": "source/figures/quartic-local-diagram.tex",
+      "sha256": "7d7b2fd097181cd37a328bb36e07484896c52728c9f8f0273974f9363d1f74d7"
+    },
+    "original-source/scripts/FOCUS-README.md": {
+      "repository_path": "source/scripts/FOCUS-README.md",
+      "sha256": "17d5e0b46a4e142cba09f46d92cef885c5a345340bdcb672810fc9e28704004c"
+    },
+    "original-source/scripts/check-focus.py": {
+      "repository_path": "source/scripts/check-focus.py",
+      "sha256": "4f0ed75e8df8777c41070e7e3286337542f705f75e4110486d0b3434750851da"
+    },
+    "original-source/scripts/check-local-diagrams.py": {
+      "repository_path": "source/scripts/check-local-diagrams.py",
+      "sha256": "053d03b09431fbca135bf9cd45562c1ad41c0846c8935c8d35da854e440f2fa6"
+    },
+    "original-source/scripts/focus-expected.txt": {
+      "repository_path": "source/scripts/focus-expected.txt",
+      "sha256": "f0a65d3816f1c218eebe9e8fbe6142d3db6879c1ea1f8002d683d2bd722e35ab"
+    },
+    "original-source/scripts/local-diagrams-expected.json": {
+      "repository_path": "source/scripts/local-diagrams-expected.json",
+      "sha256": "b7f56219efda7d07e0e56bce4fd05a8f0173a8628b83c399cc047cb14a3d1580"
+    },
+    "original-source/sections/02-actual-returns.tex": {
+      "repository_path": "source/sections/02-actual-returns.tex",
+      "sha256": "828cba6d3a547a2ccaa7efe7c7ec59c8215ac594219669799e3913a40188e556"
+    },
+    "original-source/sections/03-sharp-cyclicity.tex": {
+      "repository_path": "source/sections/03-sharp-cyclicity.tex",
+      "sha256": "2cabfdc6c56df854cd6ed453f82533935f9dfbe04b305bd6138a2b5faa2eb76f"
+    },
+    "original-source/sections/04-saturation-necessity.tex": {
+      "repository_path": "source/sections/04-saturation-necessity.tex",
+      "sha256": "bcce62e5d19a36f130bb4df1f69ebf31dc67c8e5da09905b0535426b2fdd2ecb"
+    },
+    "original-source/sections/06-actual-bifurcations.tex": {
+      "repository_path": "source/sections/06-actual-bifurcations.tex",
+      "sha256": "719f4b95ffcd9233b5c5649c4d12f2df09e06d25bf3bf9045f97ae8c8e27ee04"
+    },
+    "original-source/sections/08-realization.tex": {
+      "repository_path": "source/sections/08-realization.tex",
+      "sha256": "028671abd70828499ad0657e32dfd0d145c354baffc4d38972ed0d98e8f7defc"
+    },
+    "original-source/sections/09-focus-appendix.tex": {
+      "repository_path": "source/sections/09-focus-appendix.tex",
+      "sha256": "37c027542b087428639e2b2c9958aba3e86a04de6982fe61fe326ca1892fabf0"
+    }
+  },
+  "repository": "h-lu/cancelling-double-grazing"
+}

@@ -1,0 +1,383 @@
+\section{Introduction and main results}\label{sec:introduction}
+
+In a jointly $C^2$ unfolding, a periodic orbit whose return displacement
+has an ordinary double zero has at most two nearby cycles: the second
+derivative keeps its sign, and Rolle's theorem applies~\cite{roussarie1998}.
+We study a continuous piecewise smooth planar system in which the reference
+displacement has such a double zero, but the sharp local cyclicity is six.
+
+The reference orbit has two spatially separated quadratic grazings, with both
+active sides agreeing after transport to one transverse section. Each
+passage contributes a term of order $q^{3/2}$ in a transported transverse
+coordinate $q$~\cite{dibbc2001,nordmark2002}, and their nonzero leading
+coefficients cancel. The quadratic defect of the composed passages cancels
+as well, as the expansion below shows. The reference displacement is therefore $C^2$, with
+its nonzero quadratic term supplied by the smooth closing map. Under
+perturbation, the strength sum can become nonzero and the activation
+thresholds can separate, so the family need not be jointly $C^2$.
+Together with the closing offset and multiplier defect, these give four
+scalar return-map controls. We answer three questions.
+\begin{enumerate}
+\item[(Q1)] What is the cyclicity of the reference cycle?
+\item[(Q2)] What parameter scales are necessary for six limit cycles,
+and what is the limiting shape of the six-cycle parameter set?
+\item[(Q3)] Does a fourfold root of the limiting polynomial continue
+to a cycle of multiplicity four, and what is its local unfolding?
+\end{enumerate}
+Theorems~\ref{thm:six-main}, \ref{thm:main-saturation-summary}
+and~\ref{thm:actual-quartic-summary} below answer these questions.
+
+\subsection{The return map}
+
+In each of the two grazing boxes, the planar equation has the local form
+\[
+ \dot{\mathbf{x}}=X^-_\lambda(\mathbf{x})
+ +(h_\lambda(\mathbf{x}))_+Z_\lambda(\mathbf{x}),
+ \qquad \mathbf{x}\in\R^2,\qquad u_+=\max\{u,0\}.
+\]
+The local data are jointly smooth in state and parameters and may differ
+between the boxes. The active branch
+$X^+_\lambda=X^-_\lambda+h_\lambda Z_\lambda$ agrees with $X^-_\lambda$
+on the seam $\{h_\lambda=0\}$, so the field is continuous there.
+The boxes are joined by regular flow arcs; Definition~\ref{def:admissible-family}
+gives the precise admissibility conditions. The threshold-harvesting family
+of Theorem~\ref{thm:harvesting-realization} realizes these conditions.
+
+In a transverse coordinate $q$ constructed in Section~\ref{sec:passage}, the
+return map and the displacement have the form
+\[
+ P(q)=R\{\delta+\Gamma_2(\Gamma_1(q)-\delta)\},
+ \qquad D(q)=P(q)-q.
+\]
+Here $\Gamma_1,\Gamma_2$ are the passage maps near the two tangencies, $R$ is
+the smooth transition along the rest of the cycle, and parameter dependence is
+suppressed. The second passage is activated by the intermediate input
+$\Gamma_1(q)-\delta$, so the two grazing thresholds on the section are $0$ and
+$\Gamma_1^{-1}(\delta)$. Section~\ref{sec:passage} derives this composition
+from the vector field and shows that it is the first return on a fixed
+interval.
+
+We use four return-map controls,
+\[
+ a=R(0),\qquad b=R'(0)-1,\qquad m=A_1+A_2,\qquad\delta,
+\]
+namely the offset, the multiplier defect, the strength sum and the threshold
+separation. They are smooth functions of the physical parameters and need not
+be independent. All four vanish at the reference parameter, where $A_1=-A_2\ne0$
+and $c_0=R''(0)/2\ne0$. Writing $q_+=\max\{q,0\}$, the correction
+$\Gamma_\nu(q)-q$ begins with $A_\nu q_+^{3/2}$, and the reversibility of the
+quadratic passage fixes its next coefficient at $3A_\nu^2/4$
+(Proposition~\ref{prop:quadratic-passage}). Consequently, when the thresholds
+are aligned,
+\[
+ \Gamma_2(\Gamma_1(q))-q
+ =mq_+^{3/2}+\tfrac34m^2q_+^2+O(q_+^{5/2})
+ \qquad(\delta=0).
+\]
+Both displayed terms vanish when $m=0$, so the quadratic term of the reference
+displacement comes from $R$ (Lemma~\ref{lem:passage:finite-inverse}). For
+$\delta\ne0$, the two $q^{3/2}$ contributions start at different thresholds.
+Their singular curvatures have opposite signs and compete. Neither an outer
+expansion nor the number of active intervals controls the fixed-point count
+on the whole return interval; estimates relative to the moving thresholds
+are needed.
+
+We use the standard notion of cyclicity~\cite{roussarie1998}.
+
+\begin{definition}[Cyclicity]\label{def:cyclicity}
+Let $(X_\lambda)$ be a family of planar vector fields and let $\mathcal C$ be a
+periodic orbit of $X_{\lambda_0}$. Let $N(\lambda,\varepsilon)$ be the number
+of limit cycles of $X_\lambda$ at Hausdorff distance less than $\varepsilon$
+from $\mathcal C$. The cyclicity of $\mathcal C$ in $(X_\lambda)$ is
+\[
+ \operatorname{Cycl}\bigl((X_\lambda),\mathcal C\bigr)
+=\inf_{\varepsilon,\eta>0}\ \sup_{|\lambda-\lambda_0|<\eta}N(\lambda,\varepsilon).
+\]
+For a class $\mathfrak F$ of families through
+$X_{\lambda_0}$, $\operatorname{Cycl}(\mathfrak F,\mathcal C)$ denotes the supremum
+over the families in $\mathfrak F$.
+\end{definition}
+
+The families we consider are the admissible families of
+Definition~\ref{def:admissible-family}: finite-dimensional smooth families of
+continuously matched fields that preserve regular switching curves, the two
+quadratic tangencies, their transported active side and the one-turn itinerary
+of $\mathcal C$, with
+$a=b=\delta=0$, $A_1=-A_2\ne0$ and $c_0\ne0$ at the reference parameter.
+When the map $\lambda\mapsto(a,b,m,\delta)$ is a submersion at
+$\lambda_0$, we fix a local inverse
+\[
+ \Lambda(a,b,m,\delta)=\lambda(a,b,m,\delta;\xi_0),
+\]
+with the remaining parameters fixed at $\xi_0$, and call the resulting
+fixed four-parameter family the \emph{standard unfolding}.
+
+\subsection{Sharp cyclicity}
+
+\begin{theorem}[Cyclicity]\label{thm:six-main}
+Let $\mathfrak F$ be the class of admissible families through the reference
+field.
+\begin{enumerate}
+\item For every family in $\mathfrak F$ there are a neighbourhood $U$ of
+$\lambda_0$ and an interval $I=(-q_0,q_0)$ on the transverse section such
+that, for every $\lambda\in U$, the return map $P_\lambda$ has at most six
+fixed points in $I$; at most four if $m(\lambda)=0$ or $\delta(\lambda)=0$;
+and at most two if $m(\lambda)=\delta(\lambda)=0$.
+\item If $\lambda\mapsto(a,b,m,\delta)$ is a submersion at $\lambda_0$,
+all four bounds are attained by hyperbolic fixed points along smooth
+parameter paths in the corresponding slices that tend to $\lambda_0$.
+For every sufficiently small $m$ with $mc_0<0$, the standard unfolding
+has six hyperbolic fixed points of order $m^2$ in $I$ whenever
+$(a/m^4,b/m^2,\delta/m^3)$ belongs to a fixed nonempty open set.
+Three cycles are attracting and three repelling.
+\item Consequently $\operatorname{Cycl}(\mathfrak F,\mathcal C)=6$. The
+corresponding suprema over admissible families contained in $\{m=0\}$, in
+$\{\delta=0\}$ and in $\{m=\delta=0\}$ are four, four and two.
+\end{enumerate}
+\end{theorem}
+
+The proof controls curvature before counting fixed points. With the other
+controls fixed, the outer equation $P''(q)=0$ is represented exactly by a
+separation graph $\delta=\Delta(r)$, $r=\sqrt q$. This graph has at most one
+positive critical point, and hence at most two intersections with a fixed
+separation level. Estimates relative to the moving thresholds exclude
+further curvature zeros outside the outer region. The two possible
+curvature zeros and the two thresholds divide the continuous derivative
+$P'$ into at most five strictly monotone pieces. Thus $P'-1$ has at most
+five zeros, and Rolle's theorem gives at most six fixed points, including
+those at the thresholds.
+
+Theorem~\ref{thm:six-main} is proved in Section~\ref{sec:curvature-graph}
+(Proposition~\ref{prop:common-count}, Corollary~\ref{cor:four-slices} and
+Propositions~\ref{prop:single-scale-six}--\ref{prop:sharp-slice-attainment})
+and Section~\ref{subsec:specified-field}. Proposition~\ref{prop:specified-rank}
+constructs, through every reference field, an admissible family for which
+$\lambda\mapsto(a,b,m,\delta)$ is a submersion; Corollary~\ref{cor:specified-cyclicity}
+gives the same cyclicity in the smaller class of local perturbations used there.
+
+\subsection{The saturation domain}
+
+For an admissible family we call the set of parameters $\lambda\in U$ for
+which $P_\lambda$ has six fixed points in $I$ the \emph{saturation domain},
+and a sequence of such parameters tending to $\lambda_0$ a \emph{saturated
+sequence}. Describing this set requires estimates that remain valid when the
+parameters tend to the reference at arbitrary relative rates, including
+configurations whose fixed points approach the thresholds. Six zeros of $D$
+force five alternating extrema, and their locations and values constrain the
+parameters.
+
+Consider the sign case $A_1(\lambda_0)=B>0$, $c_0=-C<0$. Saturation forces
+$m>0$, $\delta>0$ and $b<0$. Beyond both thresholds, the balance of
+$mq^{3/2}$ and $-Cq^2$ suggests $q$ of order $m^2$. At this scale, $bq$, the
+separation term $\tfrac32B\delta\sqrt q$ and the offset $a$ have the same order
+when $b,\delta,a$ have weights $2,3,4$ relative to $m$.
+Theorem~\ref{thm:main-saturation-summary} shows that every six-cycle
+configuration obeys upper bounds with these weights.
+
+Define the normalized parameters and the normalized positive state by
+\[
+ A_4=\frac{C^3a}{m^4},\qquad S_4=-\frac{Cb}{m^2},\qquad
+ T_4=\frac{3BC^2\delta}{2m^3},\qquad x=\frac{C\sqrt q}{m}.
+\]
+The limiting polynomial is
+\[
+ \Phi_{A,S,T}(x)=A-Sx^2+x^3-x^4+Tx.
+\]
+With $e_j$ denoting the elementary symmetric polynomials of
+$r=(r_1,r_2,r_3,r_4)$, set
+\[
+ \mathcal K_4=
+ \left\{(-e_4(r),e_2(r),e_3(r)):
+ r_i\ge0,\ \sum_{i=1}^4r_i=1\right\}.
+\]
+This is the compact set of coefficients for which $\Phi_{A,S,T}$ has four
+nonnegative real roots, counted with multiplicity. For the standard unfolding
+and $m>0$, let $\mathscr T_m$ be the set of $(A,S,T)$ in a fixed compact box
+$\mathcal B$ for which the parameters
+$(a,b,m,\delta)=(m^4A/C^3,\,-m^2S/C,\,m,\,2m^3T/(3BC^2))$ give six fixed points
+in $I$; the box $\mathcal B$ contains all normalized six-cycle parameters
+(see~\eqref{def:actual-main-domain}). We write $d_H$ for the Hausdorff distance
+in $\R^3$.
+
+\begin{theorem}[Saturation at the principal scale]\label{thm:main-saturation-summary}
+\label{thm:k4-domain}
+\begin{enumerate}
+\item For every admissible family, after shrinking $U$ and $I$ if necessary,
+there is $K>0$ such that, whenever
+$\lambda\in U$ and $P_\lambda$ has six fixed points $q_1,\dots,q_6$ in $I$,
+\[
+ 0<|\delta|\le K|m|^3,\quad |b|\le K|m|^2,
+ \quad |a|\le K|m|^4,\quad \max_j|q_j|\le K|m|^2.
+\]
+\item For every admissible family in the sign case $A_1(\lambda_0)=B>0$,
+$c_0=-C<0$, every accumulation point of $(A_4,S_4,T_4)$ along a saturated
+sequence belongs to $\mathcal K_4$.
+\item In the same sign case, for the standard unfolding,
+\[
+ d_H(\overline{\mathscr T_m},\mathcal K_4)\longrightarrow0\quad(m\to0^+).
+\]
+For every compact set $E\subset\operatorname{int}\mathcal K_4$ there is
+$m_E>0$ such that $E\subset\mathscr T_m$ for $0<m<m_E$, and the six fixed
+points are simple.
+\end{enumerate}
+\end{theorem}
+
+For $0<m<m_E$, a point of $E$ gives four fixed points beyond both thresholds
+and two with $q<0$, where both passages are inactive. Boundary points of
+$\mathcal K_4$ correspond to zero or repeated roots of $\Phi_{A,S,T}$.
+Theorem~\ref{thm:actual-quartic-summary} continues the fourfold limiting root
+to a nearby parameter branch with one cycle of multiplicity four and two
+simple cycles. Theorem~\ref{thm:main-saturation-summary} is proved in
+Section~\ref{sec:main-saturation}: part~1 is
+Proposition~\ref{sat:weighted-confinement}, part~2 is
+Proposition~\ref{prop:k4-necessary}, and part~3 is completed at the end of
+Section~\ref{subsec:four-root-limit}.
+
+\subsection{Limit cycles of multiplicity four}
+
+The boundary point
+\[
+ (A,S,T)=\left(-\frac1{256},\frac38,\frac1{16}\right)
+\]
+has four roots equal to $1/4$, so $\Phi_{A,S,T}(x)=-(x-1/4)^4$. The next
+theorem continues this configuration to the vector field for every small
+positive $m$ and counts all nearby limit cycles.
+
+\begin{theorem}[Limit cycles of multiplicity four]\label{thm:actual-quartic-summary}
+Consider the standard unfolding in the sign case $A_1(\lambda_0)=B>0$,
+$c_0=-C<0$. For every sufficiently small $m>0$ there are parameters
+$(a_*(m),b_*(m),\delta_*(m))$ at which $P_\lambda$ has a fixed point of
+multiplicity four beyond both thresholds and two simple fixed points with
+$q<0$. Near these parameters, with $m$ fixed, smooth changes of the state and
+of $(a,b,\delta)$ reduce the fixed-point equation near the fourfold fixed
+point, up to a nonvanishing factor, to
+\[
+ y^4+uy^2+vy+w=0.
+\]
+Off the set where this quartic has a multiple root, $P_\lambda$ has two, four
+or six fixed points in $I$, and each count occurs on a nonempty open set of
+parameters. At the fourfold point $P_\lambda$ has exactly three fixed points
+in $I$.
+\end{theorem}
+
+The proof first locates all zeros of $D$ in $I$
+(Lemma~\ref{mainloc:all-roots}): two simple zeros with $q<0$ and a cluster
+beyond both thresholds, at distance of order $m^2$ from them. On this cluster
+$D$ is smooth in $q$, so the Malgrange preparation theorem applies once the
+fourfold zero has been constructed in normalized variables
+(Theorem~\ref{thm:actual-quartic}). The exact identities $q_*=r_{\rm c}^2$
+and $\delta_*=\delta_{\rm c}$ in that theorem place the constructed cycle at
+the critical point of the separation graph. The fold surface, the curve of triple roots
+and the curve of two double roots are then explicit
+(Proposition~\ref{quartic:strata}). Theorem~\ref{thm:actual-quartic-summary}
+follows from Lemma~\ref{mainloc:all-roots} and Theorem~\ref{thm:actual-quartic}.
+
+\subsection{Realization and further results}
+
+Section~\ref{sec:sharpness} shows that the hypotheses hold in two ways: for
+local perturbations of an arbitrary reference field
+(Proposition~\ref{prop:specified-rank}), and for the natural parameters of a
+predator--prey model with continuous threshold harvesting
+(Theorem~\ref{thm:harvesting-realization}). The model combines the smooth core
+of Huang, Gong and Ruan~\cite{huang2013} with continuous threshold
+policies~\cite{bohn2011,leardrebaza2011,rebaza2012,onana2019}. In this model
+the reference cycle, the cancellation, the negative closing curvature and the
+submersion condition are all obtained with positive ecological parameters.
+
+Online Resource~1 treats the corner $S_4\to0$ of $\mathcal K_4$, where three
+roots tend to zero, at a secondary scale. It identifies the limiting cubic
+coefficient region, constructs six limit cycles with positive offset $a>0$,
+and unfolds a cusp at the triple root. The proofs in the present paper do not
+use these results.
+
+\subsection{Relation to previous work}\label{sec:boundaries}
+
+The $q^{3/2}$ correction for continuous fields and the composition of
+successive grazing maps belong to the established theory of grazing
+bifurcations~\cite{nordmark1991,dibbc2001,nordmark2002,dibernardo2008,colombo2012}. For a
+periodically forced oscillator with a continuous piecewise-linear restoring
+force, Liu and Yue compose two such passages with regular transitions and test
+the second activation at the intermediate state~\cite{liuyue2023}. For
+bilateral impacts, Li, Wei, Tan and Xi compose two local impact maps and give a
+necessary existence condition~\cite[Theorem~1]{liweitanxi2014}; related
+compositions occur in~\cite{lilimeng2021,miao2023}. Two-parameter grazing
+bifurcations, including simultaneous contacts at separated points, are
+classified in~\cite{kowalczyk2006}. We take the composition rule as known and
+determine the cyclicity of the resulting return map.
+
+Translated-power compositions, studied by Dumortier and
+Roussarie~\cite{dumortierroussarie2008}, provide a related approach to
+counting return-map zeros. Panazzolo's generalized derivation--division
+algorithm gives root bounds for these compositions and parameter-analytic
+compensator expansions~\cite[arXiv version, Theorem~2.2, Sections~3--4 and
+Proposition~5.2]{panazzolo2024}. That explicit function class has not been
+matched here to the actual return, with its smooth profiles, remainders and
+closing map, across moving activation thresholds. We count its curvature
+zeros through the exact separation graph and uniform threshold estimates.
+
+Bifurcations of periodic orbits in planar piecewise smooth systems have been
+classified in low codimension~\cite{kuznetsov2003,guardia2011}, and limit
+cycles of continuous piecewise linear systems are studied
+in~\cite{freire1998}; see also~\cite{simpson2010}. A related configuration is
+a periodic orbit tangent to two switching lines in a discontinuous
+system with sliding, whose bifurcations resemble those of double and triple
+cycles~\cite{roitenberg2025}. Here the field is continuous, there is no
+sliding, and we prove cyclicity six for a semistable cycle with cancelling
+leading passage coefficients.
+
+Nonhyperbolic cycles and cancellations also occur in other grazing problems.
+For one continuous planar grazing contact, Simpson and Meiss obtain a return
+with a $q^{3/2}$ term, a nearby fold and a sixth-order separation of the fold
+and grazing curves~\cite[Theorem~1]{simpsonmeiss2008}. Colombo and
+Dercole~\cite{colombodercole2010} study discontinuity-induced bifurcations of
+nonhyperbolic cycles, including a fold with multiplier one. In resonant impact
+grazing, a singular transport contribution is suppressed while the local
+square-root correction remains nonzero~\cite[Theorems~2.4--2.5]{simpsonghosh2026}.
+T.~Matsuhisa (\emph{Induced-contact stability and activation thresholds near
+double compliant grazing}, preprint dated 3~October 2026,
+\href{https://doi.org/10.2139/ssrn.7556610}{SSRN:7556610}) studies
+height-resolved corrections and paths cancelling the direct second-gap height
+against the transmitted first-contact height. The continuation of the matched
+periodic branch uses the assumption that $D_zP_f-I$ is invertible (Theorem~2).
+Here two nonzero transported passage strengths cancel at a reference cycle
+with multiplier one, so this continuation argument is unavailable.
+
+Large numbers of limit cycles at discontinuous tangencies arise from a
+different local geometry. Novaes, Teixeira and Zeli study a cycle through a
+visible two-fold point~\cite{novaesteixeirazeli2018}. Novaes and Silva
+construct five hyperbolic limit cycles near one monodromic tangential
+singularity of a quadratic Filippov family, with a sixth created by a
+pseudo-Hopf perturbation~\cite[Example~3 and Remark~1]{novaessilva2021}; further constructions appear
+in~\cite{novaessilva2025}. These tangencies occur at a single point of a
+Filippov system, whereas the two contacts here are separated and the fields
+are continuously matched. For Sotomayor--Teixeira regularization,
+Bonet-Rev\'es and M-Seara treat an identity-return centre and hyperbolic
+grazing cycles~\cite[Theorems~2.3--2.4]{bonetseara2016}, and prove a unique
+saddle-node for repelling hyperbolic grazing
+\cite[Theorems~2.4 and~2.10]{bonetseara2022}.
+
+Two preprints of the author treat related nonhyperbolic returns: an
+invariant-line entry--exit followed by a separated quadratic grazing
+(H.~Lu, \emph{Neutral Entry--Exit Cycles with Quadratic Grazing: Uniform
+Return Reduction and Local Two-Parameter Bifurcations}, preprint, 2026,
+\href{https://arxiv.org/abs/2607.27464v4}{arXiv:2607.27464v4}), and a single
+high-order grazing with multiwell passages (H.~Lu, \emph{Neutral Returns at
+High-Order Grazing: Sharp Cyclicity, Physical Codimension, and Weighted
+Crossover}, preprint, 2026,
+\href{https://arxiv.org/abs/2608.01447v3}{arXiv:2608.01447v3}). In the
+high-order case the active curvature contributions have the same sign and
+reinforce each other; here they have opposite signs and compete.
+
+\subsection{Organization}
+
+Section~\ref{sec:passage} constructs the return map, derives the passage law
+and proves the estimates used throughout. Section~\ref{sec:curvature-graph}
+proves the bounds of Theorem~\ref{thm:six-main} and their attainment.
+Section~\ref{sec:main-saturation} proves
+Theorem~\ref{thm:main-saturation-summary}. Section~\ref{sec:actual-bifurcations}
+constructs the limit cycles of multiplicity four and proves
+Theorem~\ref{thm:actual-quartic-summary}. Section~\ref{sec:sharpness} realizes
+the hypotheses by local perturbations and in a harvesting model, and
+Section~\ref{sec:concluding} lists open problems.
+Appendix~\ref{app:harvesting-fold} constructs the smooth-core fold used in the
+harvesting model.

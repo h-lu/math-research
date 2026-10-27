@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+% Suppress the output-path-dependent pdfTeX trailer identifier.
+% SOURCE_DATE_EPOCH fixes the metadata dates for portable byte reproduction.
+\pdftrailerid{}
+\pdfminorversion=7 % Match the version of the retained PDF figure assets.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{microtype,booktabs,array,graphicx,placeins,flafter}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\urlstyle{same}
+\hypersetup{pdftitle={Cyclicity Six and Saturation Geometry at Cancelling Double Grazing},pdfauthor={Haibo Lu}}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\R}{\mathbb R}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Fl}{\operatorname{Fl}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\bsc}{\beta_4}
+\newcommand{\dsc}{d_4}
+\newcommand{\smallO}{\mathrm{o}}
+\newcommand{\bigO}{\mathrm{O}}
+\title{Cyclicity Six and Saturation Geometry\\at Cancelling Double Grazing}
+\author{Haibo Lu\\[2pt]
+\small Shanghai Institute of Technology, Shanghai 201418, China\\
+\small Corresponding author: \href{mailto:luhaibo1985@gmail.com}{luhaibo1985@gmail.com}\\
+\small ORCID: \href{https://orcid.org/0009-0000-2717-5968}{0009-0000-2717-5968}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the sharp cyclicity of a semistable limit cycle with two
+separated quadratic grazings in a continuous piecewise smooth planar system.
+The active sides agree under transverse transport, two nonzero passage
+strengths cancel, and the smooth closing curvature is nonzero. The reference
+displacement is $C^2$ with an ordinary double zero, yet the cyclicity is six.
+Changes in the strength sum and activation thresholds prevent joint $C^2$
+regularity of the unfolding.
+
+An exact curvature-zero graph and threshold estimates give this upper bound
+in every fixed admissible family preserving the prescribed grazing geometry,
+at arbitrary relative rates of four controls: closing offset, multiplier
+defect, strength sum and threshold separation. The bounds are four when the
+strength sum vanishes or the thresholds align, and two when both hold.
+Full-rank unfoldings attain all four bounds. Six-cycle configurations force
+weighted bounds on the controls and cycle locations. For positive first
+passage strength and negative closing curvature, the closures of the
+rescaled six-cycle domains in a fixed full-rank unfolding converge in
+Hausdorff distance to a quartic coefficient region with four nonnegative
+roots, counted with multiplicity.
+
+In this sign case, a fourfold boundary root continues to a cycle of
+multiplicity four for every small positive strength sum. With two simple
+companion cycles, its local unfolding gives complete counts of two, four or
+six simple cycles on the common return interval, off the multiple-root set.
+A predator--prey model with continuous threshold harvesting realizes the
+four controls through its natural parameters.
+\end{abstract}
+\noindent\textbf{Keywords.} Continuous piecewise smooth planar systems;
+grazing bifurcation; cyclicity; Poincar\'e return maps;
+multiple limit cycles.
+\par\smallskip
+\noindent\textbf{Mathematics Subject Classification.}
+Primary 34C23; Secondary 34A36, 34C25, 37G15.
+\par\smallskip
+\input{sections/01-introduction}
+\input{sections/02-actual-returns}
+\input{sections/03-sharp-cyclicity}
+\input{sections/04-saturation-necessity}
+\input{sections/06-actual-bifurcations}
+\input{sections/08-realization}
+\appendix
+\input{sections/09-focus-appendix}
+\input{sections/10-declarations}
+\input{sections/12-references}
+\end{document}
+

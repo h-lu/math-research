@@ -1,0 +1,7 @@
+# Versions tested in the initial research environment; no validated solver implied.
+numpy==2.5.2
+scipy==1.18.0
+mpmath==1.3.0
+sympy==1.14.0
+matplotlib==3.11.1
+python-flint==0.9.0

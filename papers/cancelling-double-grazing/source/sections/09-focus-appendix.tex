@@ -1,0 +1,155 @@
+\section{Smooth-core folds and finite focus equations}
+\label{app:harvesting-fold}
+
+Threshold fitting uses a smooth-core cyclic fold with negative return
+curvature and a nonsingular two-parameter fold equation. We derive these
+inputs from finite focus equations and control the one-turn remainder
+with the required state and parameter derivatives.
+
+\subsection{The core chart and its focus coefficients}
+
+At \(u=0\), use the equilibrium-preserving chart
+\begin{equation}\label{eq:harvesting:core-chart}
+ d=8\beta+\tfrac15+\nu,\qquad
+ h=\tfrac{16}{5}\beta+\tfrac4{25}+\tfrac45\nu.
+\end{equation}
+The equilibrium is \((1/5,4/5)\), with
+\[
+ J=\begin{pmatrix}-1/5&-1/5\\16\beta&1/5+\nu\end{pmatrix},
+ \qquad \operatorname{tr}J=\nu,\qquad
+ \det J=\frac{80\beta-1-5\nu}{25}.
+\]
+The multiplicity-two weak focus of
+\cite[Theorem~3.6]{huang2013} occurs at
+\begin{equation}\label{eq:harvesting:bautin-point}
+ \beta_0=\frac{\sqrt{51}-4}{100},\qquad
+ d_0=\frac{-3+2\sqrt{51}}{25},\qquad
+ h_0=\frac{4(1+\sqrt{51})}{125},\qquad \nu=0.
+\end{equation}
+The finite homogeneous equations below construct \(V=\mathcal R^2/2+\bigO(\mathcal R^3)\) in rotation
+coordinates of radius \(\mathcal R\), and give
+\begin{equation}\label{eq:harvesting:focus-data}
+ k_4=\ell_1(\beta)
+ =\frac{25\beta(2000\beta^2+160\beta-7)}{4(80\beta-1)},
+ \qquad k_6\big|_{\beta=\beta_0}
+ =-\frac{155}{48}-\frac{235\sqrt{51}}{576}<0.
+\end{equation}
+Thus \(\ell_1(\beta_0)=0\) and
+\(\ell_1'(\beta_0)=17/2+4\sqrt{51}>0\). At the focus,
+\(\dot V=k_6\mathcal R^6+\bigO(\mathcal R^7)\), so
+\(\sqrt{2V}\) has nonzero negative quintic drift. The angular
+velocity tends to
+\(\omega_0=\sqrt{(-21+4\sqrt{51})/125}>0\); positive radial
+scaling and angular clock therefore give \(\ell<0\) below.
+The conjugate eigenvalues of \(J\) have real part \(\nu/2\), and
+\((\nu,\beta)\mapsto(\nu/2,\ell_1(\beta))\) has rank two at
+\((0,\beta_0)\).
+
+At \(u=\nu=0\), put
+\(\omega^2=(80\beta-1)/25\), \(X=x-1/5\), and
+\(Z=(x-1/5+y-4/5)/(5\omega)\). Direct substitution gives
+\begin{equation}\label{eq:harvesting:rotation}
+ \dot X=-\omega Z+\Phi,\qquad
+ \dot Z=\omega X+\Psi,\qquad \Phi=-5\omega XZ,
+\end{equation}
+where
+\[
+ \Psi=-\frac{
+ 80\omega X^2Z+(125\omega^2+5)X^2
+ +(6\omega-250\omega^3)XZ
+ +(125\omega^4+5\omega^2)Z^2}
+ {16\omega(5X+1)}.
+\]
+Expand \((1+5X)^{-1}\) through the degrees needed below and denote
+homogeneous terms by subscripts. For
+\(\mathcal R^2=X^2+Z^2\), seek
+\(V=\mathcal R^2/2+V_3+\cdots+V_6\). The equations are
+\begin{equation}\label{eq:harvesting:homological}
+ \mathcal L V_n=k_n\mathcal R^n-H_n,\qquad
+ \mathcal L=\omega(-Z\partial_X+X\partial_Z),\qquad
+ H_n=\sum_{j=2}^{n-1}
+ \bigl(\partial_XV_j\,\Phi_{n-j+1}
+       +\partial_ZV_j\,\Psi_{n-j+1}\bigr).
+\end{equation}
+Here \(V_2=\mathcal R^2/2\). On homogeneous polynomials of odd degree
+\(n\), \(\mathcal L\) is invertible and \(k_n=0\); for even \(n\), take
+the radial obstruction
+\[
+ k_n=\frac1{2\pi}\int_0^{2\pi}
+ H_n(\cos\theta,\sin\theta)\,d\theta
+\]
+and set the \(X^n\) coefficient of \(V_n\) to zero to fix the radial
+kernel. Solving \eqref{eq:harvesting:homological} successively in the
+monomial basis for $n=3,4,5,6$ gives
+$k_3=k_5=0$ and the coefficients~\eqref{eq:harvesting:focus-data}.
+A program in Online Resource~2, also included with the source files,
+reconstructs the rotated field and checks every coefficient residual of these
+finite equations in exact arithmetic.
+
+\subsection{Normal form and cyclic folds}
+
+The focus coefficients supply the generalized Hopf unfolding. Its
+weighted return turns the limiting fold into a periodic orbit with the
+geometry required at the thresholds.
+
+Take the finite normal form through degree
+seven in a parameter-dependent complex coordinate. Its nonresonant
+divisors stay bounded away from zero near the positive frequency
+\(\omega_0\); hence the transformations and their required parameter
+derivatives are smooth. The retained resonant degrees are one,
+three, five and seven. Division by the positive angular speed and
+normalization of one turn give smooth coefficients \(\eta_1,\eta_2\)
+for the first two radial terms, with invertible
+\((\nu,\beta)\mapsto(\eta_1,\eta_2)\) Jacobian. The fifth-degree
+coefficient equals \(\ell\ne0\) at the focus. For the generalized Hopf normal
+form see~\cite{kuznetsov2023}; its coefficients for ordinary and delay
+equations are also derived by N.~A.~M.~Delmeire, M.~M.~Bosschaert and
+Yu.~A.~Kuznetsov (preprint, 2025,
+\href{https://arxiv.org/abs/2507.18469v1}{arXiv:2507.18469v1}).
+Normalize the angular clock to one turn and put
+\(r=\rho z\), \(\eta_1=\rho^4s_1\), \(\eta_2=\rho^2s_2\).
+Then
+\begin{equation}\label{eq:harvesting:weighted-flow}
+ \frac{dz}{d\theta}
+ =\rho^4(s_1z+s_2z^3+\ell z^5)+\bigO(\rho^6),\qquad \ell<0.
+\end{equation}
+On a fixed positive \(z\)-interval about one, the bound holds after
+two \(z\) derivatives and one derivative in \((s_1,s_2)\), including
+mixed derivatives. The quintic coefficient varies by \(\bigO(\rho^2)\),
+giving \(\bigO(\rho^6)\) in the scaled equation, as does the retained
+seventh-degree term; the smooth degree-eight field remainder gives
+\(\bigO(\rho^7)\). Taylor remainders preserve these state bounds,
+and scaled parameter differentiation introduces a factor \(\rho^4\)
+or \(\rho^2\). The angular speed retains a positive uniform margin.
+Integration over one turn and smooth finite-time flow dependence give
+the smooth-core displacement
+\begin{equation}\label{eq:harvesting:scaled-return}
+ \rho^{-5}D(\rho z;\rho^4s_1,\rho^2s_2)
+ =s_1z+s_2z^3+\ell z^5+\smallO(1)
+\end{equation}
+in the same norms, including angle-dependent remainders.
+At \(z=1\), the limiting fold equations
+\(s_1+s_2+\ell=0\), \(s_1+3s_2+5\ell=0\) have parameter
+determinant two. Hence for every sufficiently small positive \(\rho\)
+the implicit function theorem gives a cyclic fold with
+\begin{equation}\label{eq:harvesting:fold-data}
+ \eta_1=\ell\rho^4+\smallO(\rho^4),\qquad
+ \eta_2=-2\ell\rho^2+\smallO(\rho^2),\qquad
+ D_{rr}(\rho)=8\ell\rho^3+\smallO(\rho^3)\ne0.
+\end{equation}
+The \((D,D_r)\) parameter determinant is a nonzero
+coordinate factor times \(2\rho^3+\smallO(\rho^3)\). Moreover,
+\(\partial_\nu\eta_1\ne0\) at the generalized Hopf point and
+\[
+ \partial_\nu D(\rho)
+ =\rho\partial_\nu\eta_1+\smallO(\rho)\ne0.
+\]
+These margins are strict at each fixed positive radius.
+After division by \(\rho\), the fold orbit is \(C^2\)-close to a
+Hopf ellipse. Its prey derivative is close to a nonzero sinusoid,
+with strict sign away from two simple zeros and strict monotonicity
+near them. Thus the orbit is embedded and nonstationary, has exactly
+one nondegenerate prey minimum and maximum, and lies in a compact
+subset of \(x,y>0\).
+This is the fold used to fit the lower and upper thresholds in the
+harvesting model.

@@ -1,0 +1,63 @@
+% Exact discriminant of the prepared quartic, on u=-eps^2.
+% Similarity coordinates: y=eps Y, V=v/eps^3, W=w/eps^4.
+% Curve parameter: (V,W)=(2t-4t^3,3t^4-t^2).
+% Source and independent polynomial checks: scripts/check-local-diagrams.py.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=6.6cm,y=4.7cm,font=\small,
+  boundary/.style={black,line width=.75pt},
+  guide/.style={black!55,line width=.35pt},
+  leader/.style={black,line width=.4pt,-{Stealth[length=1.4mm]}},
+  region/.style={fill=white,inner sep=1.5pt,font=\normalsize}]
+  \begin{scope}
+    \clip (-.94,-.15) rectangle (.94,.56);
+    % The closed central chamber has four simple quartic roots.
+    \fill[black!9]
+      plot[domain=-.707106781186548:.707106781186548,
+        variable=\t,samples=181]
+      ({2*\t-4*(\t)^3},{3*(\t)^4-(\t)^2}) -- cycle;
+    \draw[boundary]
+      plot[domain=-.83:.83,variable=\t,samples=301]
+      ({2*\t-4*(\t)^3},{3*(\t)^4-(\t)^2});
+  \end{scope}
+  \draw[guide,-{Stealth[length=1.5mm]}]
+    (-.94,-.15)--(.99,-.15) node[right,black] {$V$};
+  \draw[guide,-{Stealth[length=1.5mm]}]
+    (-.94,-.15)--(-.94,.60) node[above,black] {$W$};
+  \foreach \x/\lab in {-.5/{-\tfrac12},0/0,.5/{\tfrac12}}{
+    \draw[guide] (\x,-.15)--(\x,-.164);
+    \node[below,font=\scriptsize] at (\x,-.164) {$\lab$};
+  }
+  \foreach \y/\lab in {0/0,.25/{\tfrac14},.5/{\tfrac12}}{
+    \draw[guide] (-.94,\y)--(-.955,\y);
+    \node[left,font=\scriptsize] at (-.955,\y) {$\lab$};
+  }
+  \node[region] at (0,.46) {$2$};
+  \node[region,fill=black!9] at (0,.12) {$6$};
+  \node[region] at (-.76,.13) {$4$};
+  \node[region] at (.76,.13) {$4$};
+  \node[region] at (0,-.105) {$4$};
+  % Two triple-root cusp points and the two-double-root crossing.
+  \draw[boundary,fill=white]
+    ({-4/(3*sqrt(6))},{-1/12}) circle[radius=1.6pt];
+  \draw[boundary,fill=white]
+    ({4/(3*sqrt(6))},{-1/12}) circle[radius=1.6pt];
+  \fill (0,.25) circle[radius=1.8pt];
+  \node[anchor=east,align=right,font=\scriptsize] (dd)
+    at (-.29,.30) {two double\\roots};
+  \draw[leader] (dd.east)--(-.015,.252);
+  \node[anchor=west,font=\scriptsize] (fold) at (.50,.44) {fold};
+  \draw[leader] (fold.west)--(.238,.424);
+  \node[anchor=east,font=\scriptsize] (triple) at (-.66,-.055) {triple};
+  \draw[leader] (triple.east)--(-.551,-.081);
+\end{tikzpicture}
+\caption{A slice of the prepared quartic
+$y^4+uy^2+vy+w$ at $u=-\varepsilon^2$, for any sufficiently small
+$\varepsilon>0$. In the similarity coordinates
+$V=v/\varepsilon^3$, $W=w/\varepsilon^4$, the multiple-root set is
+$(V,W)=(2t-4t^3,3t^4-t^2)$. Region labels are the total numbers of
+simple cycles, including the two simple fixed points with $q<0$.
+Open circles mark triple roots; the crossing has two double roots.
+This slice does not contain the quadruple-root point $u=v=w=0$.}
+\label{fig:quartic-local-diagram}
+\end{figure}

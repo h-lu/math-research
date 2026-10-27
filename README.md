@@ -9,6 +9,7 @@ the scope of any supporting computation recorded in metadata.
 
 | Paper | Version | Materials |
 | --- | --- | --- |
+| Cyclicity Six and Saturation Geometry at Cancelling Double Grazing | 2026-10-27 | [PDF](papers/cancelling-double-grazing/paper.pdf) · [Source](papers/cancelling-double-grazing/source/) · [Details](papers/cancelling-double-grazing/README.md) |
 | Mechanical renewal and D²(ln D)² lower bounds for Hilbert numbers | 2026-10-24 | [PDF](papers/mechanical-renewal-log2/paper.pdf) · [Source](papers/mechanical-renewal-log2/source/) · [Details](papers/mechanical-renewal-log2/README.md) · [DOI](https://doi.org/10.5281/zenodo.23603842) |
 | Common free-flight selection and contact-phase sensitivity in a compliant Painlevé oscillator | 2026-10-20 | [PDF](papers/painleve-path-selection/paper.pdf) · [Source](papers/painleve-path-selection/source/) · [Details](papers/painleve-path-selection/README.md) |
 | Beyond Tonnelier's conjectured bound: six cycles and uniform finiteness in continuous piecewise-affine Liénard systems | 2026-10-03 | [PDF](papers/tonnelier-six-cycles/paper.pdf) · [Source](papers/tonnelier-six-cycles/source/) · [Details](papers/tonnelier-six-cycles/README.md) · [DOI](https://doi.org/10.5281/zenodo.23113416) |

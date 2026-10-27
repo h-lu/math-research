@@ -1,0 +1,679 @@
+\section{Sharp cyclicity}
+\label{sec:curvature-graph}
+
+We count fixed points by following the zeros of $P''$, which we call the
+curvature of the return. Where both passages are active and the state is
+large compared with the separation (the outer region), these zeros lie on a
+separation graph with at most one positive critical point; estimates near the
+thresholds (the threshold layer) fix the sign of $P''$ there. Together they
+give the upper bounds on the whole interval $I$. We then construct
+configurations attaining the bounds under~\eqref{eq:rank}.
+
+An active three-halves term has curvature proportional to \(q^{-1/2}\).
+In the outer region, where both passages are active, \(q=r^2\) and \(J=rP''\) remove
+this singular factor, while \(v=\delta/q\) measures separation relative
+to the state. With the aligned multiplier \(k(p)=1+b>0\), their first-order balance is
+\[
+ J=2c_0r+\frac{3k}{4}m-\frac{3kA}{8}v
+       +O\bigl((r+|m|+|v|)^2\bigr).
+\]
+The strength $A\ne0$ makes the curvature equation transverse in $v$.
+Exact division then gives a separation graph $\Delta$ with
+$\Delta_r=r\mathcal W$; the closing curvature $c_0\ne0$ makes
+$\mathcal W$ strictly monotone. These two reductions give at most one
+positive critical point.
+
+\subsection{The exact curvature-zero graph}
+
+Let \(g_\nu\) be the signed-root companion in
+Proposition~\ref{prop:quadratic-passage}. Its dependence on
+\((p,m,\delta)\) is suppressed in the notation. Define smooth functions
+\begin{equation}\label{eq:root-profiles}
+ T_\nu(u)=g_\nu(u)/u,\quad
+ \ell_\nu(u)=T_\nu(u)^2+\tfrac{u}{2}(T_\nu^2)'(u),
+ \quad H_\nu(u)=\tfrac12\ell_\nu'(u).
+\end{equation}
+The quotient is filled in smoothly at \(u=0\), with \(T_\nu(0)=1\).
+For \(u>0\),
+\begin{equation}\label{eq:passage-derivatives}
+ \Gamma_\nu'(u^2)=\ell_\nu(u),\qquad
+ \Gamma_\nu''(u^2)=u^{-1}H_\nu(u),\qquad
+ \ell_\nu(0)=1,\quad H_\nu(0)=\tfrac34 A_\nu.
+\end{equation}
+These are exact identities obtained by differentiating
+\(\Gamma_\nu(u^2)=g_\nu(u)^2\).
+
+For \(r>0\), put
+\begin{equation}\label{eq:J-definition}
+ q=r^2,\quad \delta=r^2v,\quad
+ J(r,m,v,p)=rP_{m,r^2v}''(r^2,p).
+\end{equation}
+Choose a fixed small \(0<\eta\le v_0=1/4\), within the box of Lemma~\ref{lem:exact-value-division}. All profiles in the following
+calculation are evaluated at \(\delta=r^2v\).
+Write
+\[
+ U=T_1(r)^2,\qquad W=U-v,\qquad s_2=r\sqrt{W}.
+\]
+After a fixed common shrinking, \(W>1/2\) for \(|v|\le\eta\).
+The two excursions are then both active and the exact downstream
+penetration is \(y=r^2W>0\). Chain differentiation gives
+\begin{align}
+ Q&=r^2\{v+WT_2(s_2)^2\},&
+ Q'&=\ell_2(s_2)\ell_1(r),\label{eq:Q-outer}\\
+ Q''&=r^{-1}\{\ell_2(s_2)H_1(r)
+       +W^{-1/2}H_2(s_2)\ell_1(r)^2\}.\label{eq:Q-curvature}
+\end{align}
+Consequently
+\begin{align}\label{eq:J-exact}
+ J={}&rR''(Q)[\ell_2(s_2)\ell_1(r)]^2\\
+ &+R'(Q)\{\ell_2(s_2)H_1(r)
+               +W^{-1/2}H_2(s_2)\ell_1(r)^2\}.\notag
+\end{align}
+Every expression on the right is a root profile, jointly smooth through
+\(r=0\).
+
+\begin{lemma}[Root curvature and its zero graph]\label{lem:curvature-profile}
+The function \(J\) has a joint smooth extension on a common box
+in \((r,m,v,p)\). At its root boundary,
+\begin{equation}\label{eq:J-boundary}
+ J(0,m,v,p)
+ =\tfrac34 R'_{p,m,0}(0)
+     \{A_1(p,m,0)+A_2(p,m,0)(1-v)^{-1/2}\}.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:J-transverse}
+ J_v(0,0,0,p)=-\tfrac38 R'_{p,0,0}(0)A(p)\ne0.
+\end{equation}
+There is exactly one smooth graph \(v=V(r,m,p)\), with
+\(|V|<\eta\), on which \(J=0\) in this box.
+\end{lemma}
+
+\begin{proof}
+Formula~\eqref{eq:J-exact} proves smoothness, and
+\eqref{eq:passage-derivatives} at \(r=s_2=0\) gives
+\eqref{eq:J-boundary}. Differentiation in \(v\) gives
+\eqref{eq:J-transverse}. First choose \(\eta\) so that \(J_v\) has
+the strict sign \(-A\) and a uniform nonzero margin on the root
+boundary. The signs of \(J(0,0,-\eta,p)\) and
+\(J(0,0,\eta,p)\) are opposite. Compactness in the remaining
+parameters permits one further shrinking of \(r,m\) on which these
+properties persist throughout the box. The implicit function theorem,
+existence by the endpoint signs, and strict monotonicity in \(v\)
+give the asserted unique graph.
+\end{proof}
+
+The boundary value of the graph is exact:
+\begin{equation}\label{eq:V-boundary}
+ V(0,m,p)=1-\left(\frac{-A_2(p,m,0)}{A_1(p,m,0)}\right)^2,
+ \qquad V_m(0,0,p)=\frac{2}{A(p)}.
+\end{equation}
+Indeed the ratio equals \(1-m/A_1(p,m,0)\); both individual strengths
+retain their dependence on \(m\).
+
+To bound the positive critical points of the separation graph
+\(r\mapsto r^2V(r,m,p)\) on a fixed interval, divide first along
+the cancelling slice and then in the independent strength variable.
+Finite cancellation gives
+\begin{equation}\label{eq:Q-aligned}
+ Q_{0,0}(q,p)=q+q_+^{5/2}L(\sqrt{q_+},p).
+\end{equation}
+For positive \(q=r^2\) it follows, by differentiation in \(q\),
+that
+\begin{equation}\label{eq:center-curvature}
+ P_{0,0}''(r^2,p)=2c_0(p)+rN(r,p),\qquad
+ c_0(p)=\tfrac12R_{p,0,0}''(0),
+\end{equation}
+where \(N\) is jointly smooth. The offset and linear jets are allowed
+to vary in \(p\) throughout this identity.
+
+Let \(V_0(r,p)=V(r,0,p)\). Since \(J(r,0,V_0,p)=0\), the mean-value
+identity in the independent variable \(v\) yields
+\[
+ 0=r\{2c_0+rN\}
+       +V_0\int_0^1J_v(r,0,tV_0,p)\,dt.
+\]
+The integral has a nonzero common margin. Therefore \(V_0=rB_\Delta(r,p)\)
+with \(B_\Delta\) smooth and
+\begin{equation}\label{eq:B-boundary}
+ B_\Delta(0,p)=\frac{16c_0(p)}{3R'_{p,0,0}(0)A(p)}.
+\end{equation}
+Hadamard division in \(m\) now gives the exact identity
+\begin{equation}\label{eq:V-division}
+ V(r,m,p)=mH_\Delta(r,m,p)+rB_\Delta(r,p),\qquad
+ H_\Delta(0,0,p)=\frac{2}{A(p)}.
+\end{equation}
+
+Define the separation graph
+\begin{equation}\label{eq:Delta-definition}
+ \Delta(r,m,p)=r^2V(r,m,p).
+\end{equation}
+Its derivative factors exactly:
+\begin{equation}\label{eq:Delta-derivative}
+ \Delta_r=r\mathcal W,\qquad \mathcal W=2V+rV_r.
+\end{equation}
+The boundary coefficients in \eqref{eq:V-division} give
+\begin{equation}\label{eq:W-boundary}
+ \mathcal W_m(0,0,p)=\frac4{A(p)},\qquad
+ \mathcal W_r(0,0,p)=3B_\Delta(0,p)
+   =\frac{16c_0(p)}{R'_{p,0,0}(0)A(p)}\ne0.
+\end{equation}
+Joint smoothness and compactness in \(p\) give a common smaller box
+on which \(\mathcal W_r\) has a uniform nonzero margin with sign
+\(c_0/A\).
+
+\begin{proposition}[At most one critical point of the separation graph]\label{prop:one-fold-graph}
+For fixed \((m,p)\), the graph \(r\mapsto\Delta(r,m,p)\) has at most
+one positive critical point on a common interval. Any such point
+is nondegenerate. In the outer region \(|\delta|/r^2\le\eta\),
+\begin{equation}\label{eq:curvature-factor}
+ P_{m,\delta}''(r^2,p)
+ =r^{-3}\mathcal U(r,m,\delta/r^2,p)
+                  [\delta-\Delta(r,m,p)],
+\end{equation}
+where \(\mathcal U\) is jointly smooth and nonzero, of sign \(-A\).
+For fixed parameters the zeros of \(P''\) in the outer region have total
+multiplicity at most two.
+\end{proposition}
+
+\begin{proof}
+For fixed \((m,p)\), \(\mathcal W\) is strictly monotone and has
+at most one positive zero. At that zero,
+\(\Delta_{rr}=r\mathcal W_r\ne0\). Hence \(\Delta\) has at most
+two monotone branches.
+
+For the factorization, define
+\[
+ \mathcal U(r,m,v,p)
+  =\int_0^1J_v(r,m,V+t(v-V),p)\,dt .
+\]
+The derivative bound from Lemma~\ref{lem:curvature-profile}
+gives its sign and nonvanishing. The exact mean-value identity is
+\(J=(v-V)\mathcal U\). Substituting
+\(v=\delta/r^2\) in \eqref{eq:J-definition} gives
+\eqref{eq:curvature-factor}.
+A horizontal line meets this graph in at most two transverse
+points, or at its sole positive critical point. Transverse intersections are simple;
+an intersection at the nondegenerate critical point has order two.
+Changing from \(r>0\) to \(q=r^2\) is a smooth local diffeomorphism,
+and the prefactor in \eqref{eq:curvature-factor} never vanishes.
+This proves the multiplicity assertion as well as the distinct count.
+\end{proof}
+
+We now treat the complement of the outer region, where an active input may
+be arbitrarily close to its threshold.
+
+\subsection{The count on the whole interval}\label{sec:inner}
+
+Use the thresholds $0$ and $a_\delta=\Gamma_1^{-1}(\delta)$
+from \eqref{eq:passage:true-thresholds}, with the active intervals determined
+there. All constants are uniform on the fixed parameter reduction.
+
+Where both passages are active in the threshold layer, compare the difference of the singular
+curvatures with their sum. Separation keeps the active inputs at a fixed
+relative distance; the difference then dominates both the relative error
+and the bounded closing curvature.
+
+Put \(\vartheta=|\delta|\), \(\sigma=\sgn\delta\), and let \(L\ge2\) be fixed.
+The strengths satisfy, uniformly,
+\[
+ A_1(p,m,\delta)=A(p)+O(|m|+\vartheta),\qquad
+ A_2(p,m,\delta)=-A(p)+O(|m|+\vartheta).
+\]
+The smooth root profiles in \eqref{eq:passage:quadratic-jet} yield
+\begin{align}
+ \Gamma_\nu'(x)
+  &=1+\tfrac32 A_\nu\sqrt{x}+O(x),\label{eq:inner-derivative}\\
+ \Gamma_\nu''(x)
+  &=\tfrac34 A_\nu x^{-1/2}+O(1),\qquad x>0.\label{eq:inner-curvature}
+\end{align}
+Differentiating the smooth root profiles gives these remainders and their
+required derivative bounds. Each $\Gamma_\nu'$ is uniformly positive and
+bounded, with active curvature of the sign of its strength.
+
+For \(0<q\le L\vartheta\),
+\begin{equation}\label{eq:first-correction}
+ |\Gamma_1(q)-q|\le Kq^{3/2}\le K L^{3/2}\vartheta^{3/2}.
+\end{equation}
+After reducing \(\vartheta\), this is at most \(\vartheta/2\).
+The inverse derivative estimates give \(\vartheta/2<a_\vartheta<2\vartheta\).
+Every positive penetration in this layer is at most \((L+2)\vartheta\).
+
+\begin{lemma}[Curvature signs in the threshold layer]\label{lem:event-layer}
+For every fixed \(L\ge2\), one may choose common sufficiently small
+bounds on \(|m|\) and \(\vartheta=|\delta|\) such that, for \(0<|\delta|\),
+the signs of \(P''\) are
+\begin{equation}\label{eq:event-signs}
+ \sgn P''=
+ \begin{cases}
+ \sgn c,&q<\min(0,a_\delta),\\
+ \sgn(\delta A),&\min(0,a_\delta)<q<\max(0,a_\delta),\\
+ \sgn(-\delta A),&
+       q>\max(0,a_\delta),\quad q\le L|\delta|.
+ \end{cases}
+\end{equation}
+Both passages are active on the last interval. There is no zero of \(P''\) in any
+of these open regions. In the active regions
+\(|Q''|\ge\kappa_L \vartheta^{-1/2}\) for a uniform \(\kappa_L>0\).
+The estimates are uniform up to the thresholds.
+\end{lemma}
+
+\begin{proof}
+Below both thresholds both passages are inactive, so \(Q=q\) and
+\(P''=R''\), with sign \(c\).
+
+If \(\delta=\vartheta>0\), the one-active interval is \(0<q<a_\vartheta\), where
+\(Q=\Gamma_1(q)\). Its curvature has sign \(A\), and
+\eqref{eq:inner-curvature} gives
+\(|Q''|\ge\kappa_L(2\vartheta)^{-1/2}\) after shrinking.
+If \(\delta=-\vartheta<0\), that interval is \(-\vartheta<q<0\), where
+\(Q=-\vartheta+\Gamma_2(q+\vartheta)\). Its curvature has sign \(-A\) and the same
+uniform lower bound.
+
+Where both passages are active, put
+\[
+ y=\Gamma_1(q)-\delta>0.
+\]
+The exact chain rule is
+\[
+ Q''=\Gamma_2'(y)\Gamma_1''(q)
+          +\Gamma_2''(y)\Gamma_1'(q)^2.
+\]
+Equations~\eqref{eq:inner-derivative}--\eqref{eq:first-correction}
+therefore give
+\begin{equation}\label{eq:relative-inner-error}
+ Q''=\tfrac34 A(q^{-1/2}-y^{-1/2})+E,\qquad
+ |E|\le C_L(\sqrt \vartheta+\vartheta+|m|)
+                 (q^{-1/2}+y^{-1/2}).
+\end{equation}
+Each error is measured relative to the sum of the two singular
+weights, so the formula remains uniform as either positive argument tends
+to zero.
+
+By \eqref{eq:first-correction},
+\(\sigma(q-y)\ge \vartheta/2\) and \(q,y\le(L+2)\vartheta\). Hence
+\[
+ -\sigma\frac{q^{-1/2}-y^{-1/2}}{q^{-1/2}+y^{-1/2}}
+ =\frac{|q-y|}{(\sqrt q+\sqrt y)^2}
+ \ge\frac1{8(L+2)}=:d_L>0.
+\]
+First reduce \(|m|\), and then \(\vartheta\), so the error in
+\eqref{eq:relative-inner-error} is less than half the principal bound.
+Thus \(\sgn Q''=\sgn(-\sigma A)\) and
+\(|Q''|\ge\kappa_L\vartheta^{-1/2}\), throughout the open two-active layer.
+
+Finally the exact closing-leg chain rule is
+\[
+ P''=R''(Q)(Q')^2+R'(Q)Q''.
+\]
+The first term is uniformly bounded, whereas \(R'\) has a positive
+margin and the preceding active curvature bound diverges as
+\(\vartheta\downarrow0\). A further fixed reduction proves
+\eqref{eq:event-signs}.
+\end{proof}
+
+\begin{proposition}[Upper bound on the whole interval]\label{prop:common-count}
+On a sufficiently small interval $I=(-q_0,q_0)$, common to the family, every
+return map $P_\lambda$, $\lambda\in U$, has at most six fixed points.
+\end{proposition}
+
+\begin{proof}
+First choose the outer box and its fixed \(\eta\) in
+Lemma~\ref{lem:curvature-profile}. Set \(L=1/\eta\ge2\), shrinking
+\(\eta\) if needed. Apply Lemma~\ref{lem:event-layer} with this one
+\(L\): reduce the common strength bound and then the separation bound.
+All further reductions are made inside the first-return domain of
+Definition~\ref{def:admissible-family}. Choose \(q_0,\delta_0\) so both thresholds remain
+strictly inside \(I=(-q_0,q_0)\), for example using
+\(\delta_0<q_0/4\) and the uniform inverse derivative bound.
+
+For \(\delta\ne0\), \(P''\) has no zeros in the three regions
+of~\eqref{eq:event-signs}. Any remaining zero of \(P''\) has
+\(q>L|\delta|>0\), so it lies in the outer region \(|\delta|/q<\eta\).
+Proposition~\ref{prop:one-fold-graph} exhausts this region and gives at most
+two zeros of \(P''\). At each threshold \(P''\) has a singularity with
+nonzero coefficient, so a threshold is not a zero of \(P''\).
+
+The derivative \(P'\) is continuous at the thresholds.
+It is strictly monotone on at most five consecutive pieces: the two
+thresholds and at most two zeros of \(P''\) are the only possible
+divisions. If the signs of \(P''\) on the two sides of a threshold agree,
+monotonicity extends through the threshold; if a zero of \(P''\) does not
+change sign, it adds no new piece. There is no interval on which \(P''\)
+vanishes. Thus \(P'-1\) has at most five zeros. Rolle's theorem for the
+\(C^1\) displacement \(D=P-q\), including at the thresholds, gives at most
+six zeros.
+
+The case \(\delta=0\) follows from the next corollary.
+\end{proof}
+
+\begin{corollary}[The four-point slices]\label{cor:four-slices}
+On the same interval the bound on the number of fixed points is four when
+\(\delta=0\) or \(m=0\), and two when \(m=\delta=0\).
+\end{corollary}
+
+\begin{proof}
+For \(\delta=0\), a positive zero of \(P''\) has \(V(r,m,p)=0\).
+Equations~\eqref{eq:B-boundary}--\eqref{eq:V-division} give
+\[
+ V_r(0,0,p)=B_\Delta(0,p)=\frac{16c_0(p)}{3k(p)A(p)}\ne0.
+\]
+Compactness in \(p\) gives a common nonzero margin for \(V_r\)
+on a smaller box. Thus, for fixed \(m,p\), there is at most one
+positive zero of \(V\), and it is simple. Formula~\eqref{eq:curvature-factor}
+and the local diffeomorphism \(q=r^2\), \(r>0\), preserve its order. Together with at most one sign change at the aligned threshold,
+this gives at most three monotonicity pieces for \(P'\) and four fixed points.
+
+For \(m=0,\delta\ne0\), the separation graph is
+\(\Delta=r^3B_\Delta(r,p)\), with sign \(c_0/A\) and nonzero derivative.
+It has at most one curvature intersection, necessarily simple, and
+one is possible only if \(c_0\delta A>0\).
+When this inequality holds, the first two signs in
+\eqref{eq:event-signs} agree, leaving one threshold change and
+at most one outer change. If \(c_0\delta A<0\), there is no outer
+intersection and at most two threshold changes. Again \(P'\)
+has at most three monotonicity pieces.
+
+At \(m=\delta=0\), equation~\eqref{eq:center-curvature} and the
+inactive closing map give the same strict sign \(c_0\) throughout
+the interval. The displacement is strictly convex or strictly
+concave, including across \(q=0\), and has at most two zeros.
+\end{proof}
+
+\begin{corollary}[Open six-cycle regions]\label{cor:six-open}
+In every admissible family, the parameters \(\lambda\in U\) for which
+\(P_\lambda\) has six simple fixed points in \(I\) form an open set.
+\end{corollary}
+
+\begin{proof}
+Choose six disjoint compact intervals isolating the simple zeros of \(D\).
+Joint \(C^1\) dependence, including at the thresholds, preserves the opposite
+endpoint signs and the nonzero derivative signs for nearby parameters, so each
+interval keeps one simple zero. Proposition~\ref{prop:common-count} excludes
+further zeros in \(I\).
+\end{proof}
+
+Propositions~\ref{prop:single-scale-six} and~\ref{prop:sharp-slice-attainment}
+below show that all four bounds are attained under~\eqref{eq:rank}.
+
+
+\subsection{The cubic critical value}
+
+When the separation graph has a positive critical point, its height determines the
+two-intersection window. We compute this height and its cubic separation
+scale for the saturation argument.
+
+\begin{proposition}[The critical value of the separation graph]
+\label{prop:cubic-curvature-window}
+After a common further reduction, the signed critical point of the separation
+graph is
+\[
+ r_{\rm c}(m,p)=-\frac{k(p)m}{4c_0(p)}+O(m^2),\qquad r_{\rm c}(0,p)=0.
+\]
+It is smooth through zero. A positive critical point exists exactly
+when \(mc_0(p)<0\), and then it equals \(r_{\rm c}(m,p)\).
+Its critical value has a smooth division
+\begin{equation}\label{eq:cubic-critical-value}
+ \delta_{\rm c}(m,p)=\Delta(r_{\rm c}(m,p),m,p)=m^3\kappa_{\rm c}(m,p),
+ \qquad \kappa_{\rm c}(0,p)=\frac{k(p)^2}{24A(p)c_0(p)^2}.
+\end{equation}
+The remainder and all reductions are uniform in \(p\).
+On a fixed interval \(0<r<\sqrt{q_0}\), reduced as below, \(P''\) has
+exactly two simple zeros in the outer region if and only if
+\begin{equation}\label{eq:curvature-window}
+ mc_0(p)<0,\qquad 0<\delta/\delta_{\rm c}(m,p)<1.
+\end{equation}
+At \(\delta=\delta_{\rm c}\), \(mc_0<0\), it instead has one double zero
+in the outer region.
+\end{proposition}
+
+\begin{proof}
+Apply the implicit function theorem to \(\mathcal W=0\).
+The boundary derivatives \eqref{eq:W-boundary} and the uniform margin
+give a unique smooth signed solution \(r_{\rm c}=m\gamma\), with
+\(\gamma(0,p)=-k/(4c_0)\). Its positive part exists precisely for
+\(mc_0<0\).
+Substitution into \(\Delta=r^2(mH_\Delta+rB_\Delta)\) gives the smooth quotient
+\[
+ \kappa_{\rm c}=\gamma^2\{H_\Delta(m\gamma,m,p)+\gamma B_\Delta(m\gamma,p)\}.
+\]
+The boundary coefficients yield \(\gamma B_\Delta=-4/(3A)\), hence
+\eqref{eq:cubic-critical-value}. Thus \(\kappa_{\rm c}\) has the sign of
+\(A\); when a positive critical point exists, the critical value has sign
+\(-c_0/A\).
+
+First fix \(r_0=\sqrt{q_0}\) inside the common root box. Then reduce
+\(|m|\), uniformly in \(p\), so \(0<r_{\rm c}<r_0/2\) when
+\(mc_0<0\), and
+\[
+ |mH_\Delta(r_0,m,p)|<\tfrac12r_0|B_\Delta(r_0,p)|.
+\]
+Thus \(\Delta(r_0,m,p)\) has sign \(c_0/A\), opposite to the
+nonzero critical value. Also require \(|\delta_{\rm c}|\) to lie
+within the common separation bound. The unique positive critical point and
+\(\Delta(0)=0\) give exactly two transverse intersections with the
+line \(\delta\) precisely for \eqref{eq:curvature-window}.
+At each intersection \(|\delta|/r^2=|V(r,m,p)|<\eta\), so both
+lie in the outer region. Conversely two distinct outer
+intersections force the unique positive critical point between them and place
+\(\delta\) strictly between zero and its critical value.
+The factorization \eqref{eq:curvature-factor} transfers their orders
+to \(P''\). At the critical value, the nondegenerate critical point gives
+\(D''=D'''=0\) and \(D''''\ne0\).
+\end{proof}
+
+On the curve \(\delta=\delta_{\rm c}\) the conditions \(D=D'=0\) are not
+imposed, so this curve is not a fold curve of periodic orbits.
+
+Figure~\ref{fig:curvature-graph} shows a separation graph with one
+positive critical point.
+\input{figures/curvature-graph}
+
+
+\subsection{Attainment of the bounds}\label{subsec:single-scale-sharpness}
+
+To attain six fixed points we choose a quartic with four simple positive
+roots; its coefficients determine a quadratic with two simple negative roots.
+We continue the two groups of roots in disjoint state intervals and then
+treat the slices \(m=0\) and \(\delta=0\).
+
+Assume~\eqref{eq:rank} and use the standard unfolding
+\(\lambda=\Lambda(a,b,m,\delta)\) of Section~\ref{sec:introduction}, with
+\(\lambda_0=\Lambda(0,0,0,0)\). Write
+\[
+ A_0=A_1(\lambda_0),\quad
+ c_0=\tfrac12R_{\lambda_0}''(0),\quad
+ B=|A_0|,\quad C=|c_0|,
+\]
+\[
+ s=-\sgn c_0,\qquad \tau=\sgn(sA_0).
+\]
+We first allow an arbitrary rescaled strength sum, including zero:
+\begin{equation}\label{eq:weighted-general-controls}
+ \lambda_\eps=\Lambda(\bar a\eps^4,\bar b\eps^2,
+                         \bar m\eps,\bar d\eps^3),\qquad
+ \theta=(\bar a,\bar b,\bar m,\bar d),\qquad \eps>0.
+\end{equation}
+
+\begin{lemma}[Rescaled displacement]\label{lem:weighted-quartic}
+Let \(\Omega_+\Subset(0,\infty)\), \(\Omega_-\Subset(-\infty,0)\), and let
+\(\theta\) range over a fixed compact set. For sufficiently small
+\(\eps>0\), the rescaled displacements satisfy, for \(z\in\Omega_+\)
+and \(x\in\Omega_-\),
+\begin{align}
+ \mathcal F_\eps(z)&:=\eps^{-4}D_{\lambda_\eps}(\eps^2z^2)
+ =F_\theta(z)+\eps E_+(\eps,z,\theta),\label{eq:quartic-limit}\\
+ F_\theta(z)&=\bar a+\bar bz^2+\bar mz^3+c_0z^4+\tfrac32A_0\bar dz,\notag\\
+ \mathcal G_\eps(x)&:=\eps^{-4}D_{\lambda_\eps}(\eps^2x)
+ =G_\theta(x)+\eps E_-(\eps,x,\theta),
+ \label{eq:quartic-negative-limit}\\
+ G_\theta(x)&=\bar a+\bar bx+c_0x^2.\notag
+\end{align}
+The remainders extend jointly smoothly to signed \(\eps\) near zero.
+For every prescribed finite integer \(n\), uniformly on these compacts,
+\begin{equation}\label{eq:quartic-mixed-norm}
+ \max_{j+|\gamma|\le n}
+ \left\|\partial_z^j\partial_\theta^\gamma
+                 (\mathcal F_\eps-F_\theta)\right\|_\infty\le C_n\eps,
+\end{equation}
+and similarly with \(x,\mathcal G_\eps\). The compact parameter set may
+contain points with \(\bar m=0\).
+\end{lemma}
+
+\begin{proof}
+Use the exact identities of Lemma~\ref{lem:exact-value-division}.
+Substitute \(r=\eps z\), \(v=\bar d\eps/z^2\) into
+\eqref{eq:quartic-Hadamard}; the profiles are evaluated at
+\(\delta=r^2v=\bar d\eps^3\). Then
+\[
+ Q-q=\eps^4\Xi,\qquad
+ \Xi=\bar mz^3+\bar dzH+\eps z^5L_0+\tfrac34\bar m^2\eps^2z^4.
+\]
+With \(Y=z^2+\eps^2\Xi\), the closing expansion gives
+\begin{equation}\label{eq:quartic-exact-residual}
+ \mathcal F_\eps=
+ \bar a+\bar bY+\Xi+c(\lambda_\eps)Y^2
+                   +\eps^2Y^3S(\eps^2Y,\lambda_\eps).
+\end{equation}
+Since \(z\) stays away from zero, all arguments remain in the common
+root box, whose positive square-root factor stays bounded away from zero.
+At \(\eps=0\), \(H=3A_0/2\) and \(c=c_0\), giving \(F_\theta\).
+Taylor integral division in \(\eps\) proves the joint remainder and
+every finite mixed estimate in \eqref{eq:quartic-mixed-norm}, without
+dividing by \(\bar m\). State derivatives are taken at fixed
+\((\eps,\theta)\), hence at fixed \(\lambda_\eps\); the variable
+\(v=\bar d\eps/z^2\) keeps the separation \(r^2v=\bar d\eps^3\) fixed.
+
+For negative \(x\) in a fixed compact set, \(q=\eps^2x\) is below
+both thresholds for small positive \(\eps\), since \(\delta=O(\eps^3)\) and
+\(|a_\delta|\le2|\delta|\). Thus \(Q=q\) exactly, and
+\eqref{eq:quartic-closing-division} gives
+\[
+ \mathcal G_\eps=\bar a+\bar b x+c(\lambda_\eps)x^2
+                   +\eps^2x^3S(\eps^2x,\lambda_\eps).
+\]
+This proves the negative formula and its joint smooth extension.
+\end{proof}
+
+For the six-point construction specialize to
+\(\bar a=s\alpha_4\), \(\bar b=s\bsc\), \(\bar m=s\) and
+\(\bar d=\tau\dsc\), giving
+\begin{equation}\label{eq:quartic-weights}
+ m=s\eps,\qquad \delta=\tau \dsc\eps^3,\qquad
+ b=s\bsc\eps^2,\qquad a=s\alpha_4\eps^4,\qquad \eps>0.
+\end{equation}
+Here \(\alpha_4,\bsc,\dsc\) are rescaled parameters.
+Multiplying the rescaled displacements by \(s\), and using
+\(s\tau A_0=B\), \(sc_0=-C\), gives
+\(\mathcal F_{4,\eps}:=s\mathcal F_\eps=F_0+O(\eps)\) and
+\(\mathcal G_{4,\eps}:=s\mathcal G_\eps=G_0+O(\eps)\), where
+\[
+ \begin{aligned}
+ F_0(z)&=\alpha_4+\bsc z^2+z^3-Cz^4+\tfrac32B\dsc z,\\
+ G_0(x)&=\alpha_4+\bsc x-Cx^2.
+ \end{aligned}
+\]
+These expansions have all the mixed estimates of
+Lemma~\ref{lem:weighted-quartic}.
+
+Take distinct positive numbers \(r_i\), \(1\le i\le4\), with
+\(\sum r_i=1/C\), and let \(e_j\) be their elementary symmetric
+functions. Choosing
+\begin{equation}\label{eq:quartic-Vieta}
+ \alpha_4=-Ce_4,\qquad \bsc=-Ce_2,\qquad \dsc=\frac{2C}{3B}e_3
+\end{equation}
+gives simultaneously
+\[
+ F_0(z)=-C\prod_{i=1}^4(z-r_i),\qquad
+ G_0(x)=-C(x^2+e_2x+e_4).
+\]
+The six pair products have product \(e_4^3\); AM--GM yields
+\(e_2\ge6\sqrt{e_4}\). Thus \(e_2^2-4e_4>0\), and the quadratic
+has two distinct negative roots. Hence the choice~\eqref{eq:quartic-Vieta}
+gives four simple positive roots of \(F_0\) and two simple negative roots
+of \(G_0\).
+
+\begin{proposition}[Six fixed points]
+\label{prop:single-scale-six}
+For every admissible family satisfying \eqref{eq:rank}, the standard
+unfolding has six simple fixed points of order $\eps^2$ for all parameters
+\eqref{eq:quartic-weights} with rescaled parameters in an open set and all
+sufficiently small $\eps>0$. Their stability alternates: three are attracting
+and three repelling.
+\end{proposition}
+
+\begin{proof}
+Choose any distinct positive $r_i$ with sum $1/C$ and the parameters
+\eqref{eq:quartic-Vieta}. The four roots of $F_0$ and the two negative
+roots of $G_0$ have strict derivative margins. Lemma~\ref{lem:weighted-quartic}
+continues them on six disjoint isolating intervals, uniformly over a small
+open set of rescaled parameters. The same joint estimates allow \(\bar m\) to
+vary near \(s\), so this set may be taken open in all four rescaled
+parameters. Fixed rescaled parameters give a smooth parameter path tending to
+the reference, and Proposition~\ref{prop:common-count} excludes additional
+fixed points. At these parameters, for negative states $D_q=s\eps^2G_0'(x)+O(\eps^3)$, and for positive
+states $D_q=s\eps^2F_0'(z)/(2z)+O(\eps^3)$. In state order these signs
+are $s(+,-,+,-,+,-)$. Since the return is increasing and close to the
+identity, they give three attracting and three repelling hyperbolic cycles;
+these signs persist on the open set of rescaled parameters.
+\end{proof}
+
+\begin{proposition}[Attainment on the slices]
+\label{prop:sharp-slice-attainment}
+For every admissible family satisfying \eqref{eq:rank}, the standard unfolding
+has four simple fixed points on \(\delta=0\), four on \(m=0\), and two on
+\(m=\delta=0\). Each configuration occurs in \(I\) for every sufficiently
+small \(\eps>0\) along a smooth parameter path tending to the reference, and
+persists on an open set of rescaled parameters within the corresponding slice.
+\end{proposition}
+
+\begin{proof}
+Use the weights \eqref{eq:weighted-general-controls}. The following table
+specifies the paths and the limiting simple roots; positive roots use the
+coordinate $z$, and negative roots the coordinate $x$:
+\begin{equation}\label{eq:sharp-slice-controls}
+ \begin{array}{c|c|c|c}
+ \text{slice}&(\bar a,\bar b,\bar m,\bar d)/(sC)&z>0&x<0\\ \hline
+ \delta=0&(36/11,-85/11,60/11,0)&1,2,3&x_\delta\\
+ m=0&(36,25,0,-40/A_0)&1,2,3&x_m\\
+ m=\delta=0&(1,0,0,0)&1&-1
+ \end{array}
+\end{equation}
+Here $x_\delta=(-85-\sqrt{8809})/22$ and
+$x_m=(25-\sqrt{769})/2$. For the first two rows, direct substitution in
+Lemma~\ref{lem:weighted-quartic} gives respectively
+\[
+ \begin{aligned}
+ F_\theta/(sC)&=-(z-1)(z-2)(z-3)(z+6/11),&
+ G_\theta/(sC)&=36/11-85x/11-x^2,\\
+ F_\theta/(sC)&=-(z-1)(z-2)(z-3)(z+6),&
+ G_\theta/(sC)&=36+25x-x^2.
+ \end{aligned}
+\]
+Only the positive roots of $F_\theta$ correspond to fixed points; the
+negative ones come from $G_\theta$. The estimates of
+Lemma~\ref{lem:weighted-quartic} include $\bar m=0$.
+
+For the third row, \eqref{eq:center-displacement} and the root-profile
+remainder estimates give, uniformly on compact $x$-intervals including zero,
+\[
+ \frac{D_{\lambda_\eps}(\eps^2x)}{sC\eps^4}
+ =1-x^2+O_{C^1}(\eps).
+\]
+
+Continue the listed simple roots by Lemma~\ref{lem:weighted-quartic} and
+the isolating argument in the proof of Proposition~\ref{prop:single-scale-six}
+on small relatively open sets of rescaled parameters with compact closures:
+$\bar d=0$ in the first row, $\bar m=0$ in the second, and $\bar m=\bar d=0$
+with $(\bar a,\bar b)$ near $(sC,0)$ in the third. The rescaled thresholds
+are $0$ and $a_\delta/\eps^2$, with
+$|a_\delta|/\eps^2\le2|\bar d|\eps$. One reduction of
+$\eps$ places the positive intervals where both passages are active, the
+negative ones below both thresholds, the parameters in the domain of
+$\Lambda$, and the rescaled intervals in $I$.
+Corollary~\ref{cor:four-slices} excludes other roots in $I$, including at the
+thresholds, and $\Lambda$ gives smooth parameter paths and relative
+persistence.
+\end{proof}
+
+The positive quartet in the six-cycle construction is the starting point for
+Section~\ref{sec:main-saturation}.

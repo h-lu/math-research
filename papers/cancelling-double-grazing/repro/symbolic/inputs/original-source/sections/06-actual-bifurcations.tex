@@ -1,0 +1,277 @@
+\section{Actual quadruple cycles and their local unfolding}
+\label{sec:actual-bifurcations}
+
+We use the fixed full-rank observation inverse with $\xi=\xi_0$,
+$A_1(0)=B>0$ and $c_0=-C<0$. The extremal quartic continues to an
+actual quadruple cycle at positive scales. To obtain its local
+unfolding, we first localize all roots on the common interval, including
+across the moving events, and then apply smooth preparation.
+
+\begin{lemma}[Main-scale values across the events]
+\label{mainloc:cross-event}
+Let $A_1(0)=B>0$, $c(0)=-C<0$, and set
+\begin{equation}\label{mainloc:weights}
+ a=\frac{m^4A}{C^3},\qquad b=-\frac{m^2S}{C},\qquad
+ \delta=\frac{2m^3T}{3BC^2},\qquad q=\frac{m^2\zeta}{C^2},
+ \qquad m>0.
+\end{equation}
+For every compact control set and every bounded $\zeta$ interval,
+uniformly on their product,
+\begin{equation}\label{mainloc:full-limit}
+ \frac{C^3}{m^4}D\left(\frac{m^2\zeta}{C^2}\right)
+ =A-S\zeta-\zeta^2+\zeta_+^{3/2}
+                 +T\sqrt{\zeta_+}+O(\sqrt m).
+\end{equation}
+This is a $C^0$ estimate, including both actual events.
+\end{lemma}
+
+\begin{proof}
+Hold $a,b,m,\xi_0$ fixed and integrate in the separation control
+$t$ from $0$ to $\delta$. Put $y=\Gamma_1(q,t)-t$. The passage
+jet and its parameter derivatives give
+\[
+ \Gamma_{\nu,q}(x)=1+\tfrac32A_\nu\sqrt{x_+}+O(x_+),\qquad
+ \Gamma_{\nu,t}(x)=O(x_+^{3/2}),\qquad
+ |y-q|\le K(q_+^{3/2}+|t|).
+\]
+These estimates include zero inputs. Along the integration segment,
+$A_2=-B+O(m)$ and $|t|=O(m^3)$. The square-root inequality
+$|\sqrt{y_+}-\sqrt{q_+}|\le\sqrt{|y-q|}$ and the total derivative
+\eqref{eq:quartic-total-detuning} therefore give
+\begin{align*}
+ \left|Q_t-\tfrac32B\sqrt{q_+}\right|
+ \le K\{&q_+^{3/4}+\sqrt{|t|}+m\sqrt{q_+}+q_++|t|\\
+        &+q_+^{3/2}+(q_++|t|)^{3/2}\}=O(m^{3/2}).
+\end{align*}
+This bound uses $|t|$ and remains valid for $q<0$, so both signs
+of separation are included. Integration and the aligned identity
+\eqref{eq:passage:aligned-jet} yield
+\[
+ Q-q=mq_+^{3/2}+\tfrac32B\delta\sqrt{q_+}+O(m^{9/2}),
+ \qquad Q-q=O(m^4).
+\]
+In \eqref{eq:quartic-closing-division}, $c=-C+O(m)$ because the
+fixed full-rank observation inverse has $\xi=\xi_0$. Replacing $Q$ by $q$
+in $bQ+cQ^2$ changes these terms by $O(m^6)$, while
+$(c+C)q^2=O(m^5)$ and $Q^3S=O(m^6)$. Thus
+\[
+ D=a+bq-Cq^2+mq_+^{3/2}
+                    +\tfrac32B\delta\sqrt{q_+}+O(m^{9/2}).
+\]
+Substitution of \eqref{mainloc:weights} proves the assertion.
+\end{proof}
+
+With \eqref{mainloc:weights}, set $\Theta=(A,S,T)$ and
+\begin{equation}\label{quartic:centre}
+ \Theta_0=\left(-\frac1{256},\frac38,\frac1{16}\right),\qquad
+ x_0=\frac14.
+\end{equation}
+To count cycles on both sides of this bifurcation, we first locate
+all zeros without a saturation assumption.
+
+\begin{lemma}[All roots near the quadruple configuration]
+\label{mainloc:all-roots}
+There are a fixed control neighbourhood $U$ of $\Theta_0$, $m_0>0$
+and three disjoint compact state intervals $J_{N,-},J_{N,+},J_Q$
+about, respectively,
+\[
+ \zeta_{N,\pm}=\frac{-3\pm2\sqrt2}{16}<0,\qquad
+ \zeta_Q=\frac1{16}>0,
+\]
+such that, for every $\Theta\in U$ and $0<m<m_0$, all zeros in
+$I$ lie in $(m^2/C^2)(J_{N,-}\cup J_{N,+}\cup J_Q)$.
+Each negative interval contains exactly one simple zero. The positive
+interval is both-active and contains all remaining zeros.
+The three intervals can be chosen arbitrarily small about their
+respective centres, by reducing $U$ and $m_0$.
+\end{lemma}
+
+\begin{proof}
+Bounded controls satisfy the hypotheses of Lemma~\ref{mainloc:tail}.
+Thus all zeros have $|\zeta|\le L$ for a fixed $L$.
+At $\Theta_0$, the full-state limit in
+\eqref{mainloc:full-limit} is
+\[
+ -\left(\zeta-\zeta_{N,-}\right)
+       \left(\zeta-\zeta_{N,+}\right)\quad(\zeta<0),\qquad
+ -\left(\sqrt\zeta-\tfrac14\right)^4\quad(\zeta\ge0).
+\]
+Its only root positions are the three stated centres, and its value
+at zero is $-1/256$. Choose the three small intervals. On their
+compact complement in $[-L,L]$, the absolute value of the limiting
+function has a positive minimum. First reducing $U$, then $m_0$,
+preserves that gap by Lemma~\ref{mainloc:cross-event}. This excludes
+all zeros outside the intervals, including the event layer.
+
+Take $U$ so that $T>0$. For $q<0$ both passages are inactive, so
+the closing expansion gives on either negative interval
+\[
+ \frac{C^3}{m^4}D(m^2\zeta/C^2)
+ =A-S\zeta-\zeta^2+O_{C^1}(m).
+\]
+The limiting derivatives at $\zeta_{N,-},\zeta_{N,+}$ are
+$\sqrt2/4,-\sqrt2/4$. Their strict signs and the opposite endpoint
+values persist uniformly. The intermediate value theorem and strict
+monotonicity give one simple root in each interval. In particular,
+their scaled locations are
+\[
+ \frac{-S\pm\sqrt{S^2+4A}}2+O(m).
+\]
+Finally the true second event is
+$e=\Gamma_1^{-1}(\delta)=O(m^3)$, whereas the positive interval
+has $q\ge k m^2$ for a fixed $k>0$. Hence that entire interval
+lies beyond both events.
+\end{proof}
+
+\begin{theorem}[Actual quadruple-cycle bifurcation]
+\label{thm:actual-quartic}
+After a common reduction of the fixed control neighbourhood $U$ and
+$m_0$ in Lemma~\ref{mainloc:all-roots}, the following hold in $U$
+for every $0<m<m_0$. There is a unique local smooth
+branch $(\Theta_*(m),x_*(m))$ through $(\Theta_0,x_0)$ at $m=0$
+on which the actual displacement has a zero of ordinary multiplicity
+four. Its physical coordinates satisfy
+\begin{equation}\label{quartic:physical-branch}
+ \begin{aligned}
+ a_*(m)&=-\frac{m^4}{256C^3}+O(m^5),&
+ b_*(m)&=-\frac{3m^2}{8C}+O(m^3),\\
+ \delta_*(m)&=\frac{m^3}{24BC^2}+O(m^4),&
+ q_*(m)&=\frac{m^2}{16C^2}+O(m^3).
+ \end{aligned}
+\end{equation}
+There are smooth actual control coordinates $(u,v,w)$ centred on
+this branch, and a smooth state coordinate $y$, in which the local
+zero equation is, up to a nonvanishing smooth factor,
+\begin{equation}\label{quartic:preparation}
+ p(y)=y^4+uy^2+vy+w=0.
+\end{equation}
+In the normalized variables $(m,x,A,S,T)$, the changes and the
+nonzero factor extend jointly smoothly through $m=0$. Away from the multiple-root set, the total
+number of cycles in $I$ is two, four or six; each count occurs on
+a nonempty open set of actual controls. At the quadruple point
+there are exactly three distinct cycles: the quadruple cycle and
+two simple negative-state companions.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:weighted-quartic}, after constant rescaling, gives the
+jointly smooth auxiliary function
+\begin{equation}\label{quartic:joint-quotient}
+ F(m,x;\Theta)=\frac{C^3}{m^4}D(m^2x^2/C^2)
+ =A-Sx^2+x^3-x^4+Tx+mE_4(m,x,\Theta)
+\end{equation}
+near $(0,x_0,\Theta_0)$, with all prescribed finite mixed derivatives
+bounded. Physical equality holds for $m>0$.
+For $H=(F,F_x,F_{xx},F_{xxx})$, differentiation at that point,
+in columns $(A,S,T,x)$, gives
+\[
+ D_{(A,S,T,x)}H=
+ \begin{pmatrix}
+ 1&-1/16&1/4&0\\
+ 0&-1/2&1&0\\
+ 0&-2&0&0\\
+ 0&0&0&-24
+ \end{pmatrix},\qquad \det D_{(A,S,T,x)}H=-48.
+\]
+The implicit function theorem gives the unique local branch
+$\Theta_* =\Theta_0+O(m)$, $x_*=x_0+O(m)$, with
+$F_{xxxx}=-24+O(m)\ne0$. Substituting the weights gives
+\eqref{quartic:physical-branch}. Lemma~\ref{mainloc:all-roots}
+places this zero in the both-active window. For each fixed $m>0$,
+$q=m^2x^2/C^2$ is a local ordinary diffeomorphism there, so its
+multiplicity in $q$ is four.
+
+Apply the real scalar smooth preparation theorem
+\cite[Theorem~5.3]{dencker1993}, treating $(m,\Theta)$ as parameters,
+to $t=x-x_0$. It factors $F$ as a nonzero smooth function times
+\[
+ t^4+a_3(m,\Theta)t^3+a_2(m,\Theta)t^2
+                         +a_1(m,\Theta)t+a_0(m,\Theta).
+\]
+The translation $t=y-a_3/4$ gives \eqref{quartic:preparation}.
+At $m=0$, $\Theta=\Theta_0$, the factor is $-1$ and all
+$a_j$ vanish. At $m=0$, write $\Delta\Theta=\Theta-\Theta_0$;
+comparison of control derivatives modulo $t^3$ gives
+\[
+ \begin{aligned}
+ u&=\Delta S+O(|\Delta\Theta|^2),\\
+ v&=2x_0\Delta S-\Delta T+O(|\Delta\Theta|^2),\\
+ w&=-\Delta A+x_0^2\Delta S-x_0\Delta T
+                                    +O(|\Delta\Theta|^2).
+ \end{aligned}
+\]
+The determinant of these three linear forms in $(\Delta A,\Delta S,
+\Delta T)$ is $1$. Hence $(u,v,w)$ are actual local control
+coordinates, jointly with $m$; equivalently,
+$\det D_{(A,S,T)}(F,F_x,F_{xx})=2+O(m)\ne0$ on the branch.
+Their origin corresponds to the actual quadruple point by the
+uniqueness already proved. These changes identify zero equations
+and their multiplicities; they do not assert conjugacy of return maps.
+
+First fix this preparation neighbourhood and then choose the positive
+interval in Lemma~\ref{mainloc:all-roots} inside its state chart.
+Shrinking the common control neighbourhood makes every real root
+of the monic quartic lie in that chart, since all its coefficients
+vanish at the centre. Thus the prepared equation counts exactly
+the whole positive cluster. At nondegenerate controls its real
+simple-root count is $0$, $2$ or $4$. The polynomials
+\[
+ y^4+\eta^4,\qquad y^4-\eta^4,\qquad
+ (y^2-\eta^2)(y^2-4\eta^2),\qquad 0<\eta\ll1,
+\]
+realize all three possibilities on open coefficient sets. The actual
+control diffeomorphism transfers them to open sets in the family.
+Lemma~\ref{mainloc:all-roots} supplies exactly two additional simple
+cycles throughout. This gives the stated counts and, at the origin,
+the three distinct cycles.
+\end{proof}
+
+\begin{proposition}[Local quartic strata]\label{quartic:strata}
+In the actual preparation controls of \eqref{quartic:preparation},
+the multiple-root set is parametrized by
+\begin{equation}\label{quartic:double-surface}
+ v=-4t^3-2ut,\qquad w=3t^4+ut^2.
+\end{equation}
+Its triple-root curve, its two-double-root curve and its quadruple
+point are respectively
+\[
+ \begin{aligned}
+ (u,v,w)&=(-6t^2,8t^3,-3t^4),&&t\ne0,\\
+ (u,v,w)&=(-2t^2,0,t^4),&&t\ne0,\\
+ (u,v,w)&=(0,0,0).
+ \end{aligned}
+\]
+The ordinary fold part of \eqref{quartic:double-surface} excludes
+both the triple-root curve and a simultaneous second double root.
+These are exact local strata in the transformed actual controls.
+\end{proposition}
+
+\begin{proof}
+Solving $p(t)=p'(t)=0$ gives \eqref{quartic:double-surface}.
+On this surface, $p''(t)=0$ gives $p=(y-t)^3(y+3t)$,
+and the additional equation $p'''(t)=0$ forces $t=0$.
+Two distinct double roots must be $t,-t$, since the cubic coefficient
+vanishes, so $p=(y^2-t^2)^2$.
+\end{proof}
+
+Figure~\ref{fig:quartic-local-diagram} displays the local root counts
+in these preparation controls. The control change depends on $m$;
+the strata above describe a neighbourhood of the actual quadruple
+cycle, rather than the entire boundary of the main-scale domain.
+\input{figures/quartic-local-diagram}
+
+\FloatBarrier
+
+\begin{corollary}[Open six-cycle regions]\label{cor:six-open}
+Within every fixed permitted finite-dimensional family, the parameters
+giving six simple fixed points in $I$ form an open subset of the
+common parameter neighbourhood.
+\end{corollary}
+
+\begin{proof}
+Fix a return with six simple zeros in $I$. The displacement is jointly
+ordinary $C^1$ in state and parameters, including at its thresholds.
+Simple-root continuation in six disjoint subintervals compactly
+contained in $I$, together with the common six-point bound of
+Proposition~\ref{prop:common-count}, proves openness.
+\end{proof}

@@ -1,0 +1,40 @@
+{
+  "status": "all finite exact checks passed",
+  "scope": "secondary cubic discriminant and boundary; positive-displacement constants; cusp Jacobians and prepared figure counts",
+  "secondary_domain_discriminant": "-4*Lambda**3 + Lambda**2 - 18*Lambda*alpha - 27*alpha**2 + 4*alpha",
+  "triple_root_control": [
+    "-1/27",
+    "2/(9B)",
+    "1/3"
+  ],
+  "positive_displacement_endpoints": [
+    "4/(27B^2)",
+    "1/(6B)"
+  ],
+  "cusp_branch_determinant": "9B",
+  "fold_curve_determinant": "48/B",
+  "prepared_cubic_samples": [
+    {
+      "u": "-0.88",
+      "v": "0.015",
+      "real_roots": 3,
+      "total_simple_cycles": 6
+    },
+    {
+      "u": "0.26",
+      "v": "0.25",
+      "real_roots": 1,
+      "total_simple_cycles": 4
+    },
+    {
+      "u": "-0.72",
+      "v": "0.44",
+      "real_roots": 1,
+      "total_simple_cycles": 4
+    }
+  ],
+  "fold_total_distinct_cycles": 5,
+  "cusp_total_distinct_cycles": 4,
+  "sympy_version": "1.14.0",
+  "limitations": "does not verify analytic estimates, root localization, actual periodic orbits, or theorem correctness"
+}

@@ -1,0 +1,81 @@
+{
+  "status": "all retained quartic exact identities and root-count labels passed",
+  "scope": "Exact quartic discriminant identities and sample region labels for quartic-local-diagram.tex",
+  "geometry_status": "EXACT quartic discriminant in actual prepared controls",
+  "quartic_slice": {
+    "u": "-epsilon^2",
+    "similarity": "y=epsilon Y, V=v/epsilon^3, W=w/epsilon^4",
+    "fold": [
+      "2t-4t^3",
+      "3t^4-t^2"
+    ],
+    "triple_points": [
+      "(-4/(3sqrt(6)),-1/12)",
+      "(4/(3sqrt(6)),-1/12)"
+    ],
+    "two_double_point": "(0,1/4)",
+    "printed_region_labels_checked": 5,
+    "samples": {
+      "V=0,W=0.46": {
+        "different_real_roots": 0,
+        "total_simple_cycles": 2,
+        "isolated_roots": [],
+        "multiplicities": []
+      },
+      "V=0,W=0.12": {
+        "different_real_roots": 4,
+        "total_simple_cycles": 6,
+        "isolated_roots": [
+          -0.9276611059820512,
+          -0.3734231814575909,
+          0.3734231814575909,
+          0.9276611059820512
+        ],
+        "multiplicities": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "V=-0.76,W=0.13": {
+        "different_real_roots": 2,
+        "total_simple_cycles": 4,
+        "isolated_roots": [
+          0.144245092057354,
+          1.2367397623299023
+        ],
+        "multiplicities": [
+          1,
+          1
+        ]
+      },
+      "V=0.76,W=0.13": {
+        "different_real_roots": 2,
+        "total_simple_cycles": 4,
+        "isolated_roots": [
+          -1.2367397623299023,
+          -0.144245092057354
+        ],
+        "multiplicities": [
+          1,
+          1
+        ]
+      },
+      "V=0,W=-0.105": {
+        "different_real_roots": 2,
+        "total_simple_cycles": 4,
+        "isolated_roots": [
+          -1.0468136244850779,
+          1.0468136244850779
+        ],
+        "multiplicities": [
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "root_isolation": "SymPy exact rational polynomial real intervals, epsilon=1e-10",
+  "sympy_version": "1.14.0"
+}
